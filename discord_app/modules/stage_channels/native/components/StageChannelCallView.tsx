@@ -1,3 +1,7 @@
+// discord_app/modules/stage_channels/native/components/StageChannelCallView.tsx
+import "noop";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import { componentDidMount } from "../../../status_bar/native/components/StatusBar.android.tsx";
@@ -5,10 +9,6 @@ import { FocusedControlsHeader } from "../../../video_calls/native/components/Fo
 import { useStageActionBarAnimation } from "StageChannelAnimationUtils.tsx";
 import { StageChannelBackground } from "StageChannelBackground.tsx";
 import { StageChannelCallList } from "StageChannelCallList.tsx";
-// discord_app/modules/stage_channels/native/components/StageChannelCallView.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

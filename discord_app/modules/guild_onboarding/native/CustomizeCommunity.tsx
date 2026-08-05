@@ -1,6 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/guild_onboarding/native/CustomizeCommunity.tsx
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "initialize";
@@ -15,6 +12,9 @@ import { ReadStateTypes } from "ReadStateTypes";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 
 let c4;
 let c5;

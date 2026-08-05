@@ -1,11 +1,11 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { VideoComponent } from "../../../components_native/common/Video.tsx";
 // discord_app/modules/quests/native/BountiesBannerBackground.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { VideoComponent } from "../../../components_native/common/Video.tsx";
 
 let c3;
 let c4;

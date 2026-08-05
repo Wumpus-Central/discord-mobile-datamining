@@ -1,3 +1,8 @@
+// discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/10470_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
 import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
@@ -5,11 +10,6 @@ import { Stack } from "../../../../../design/components/Stack/native/Stack.nativ
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { styles } from "TwoWayLinkStyles.tsx";
-// discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

@@ -1,3 +1,12 @@
+// discord_app/modules/voice_panel/native/shared/VoicePanelTitleButton.tsx
+import importAllResult from "registerAsset";
+import { View } from "dismissPanel";
+import addApplication from "addApplication";
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { ParticipantTypes } from "ParticipantTypes";
+import jsxProd from "registerAsset";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/05324_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/07612_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/16052_registerAsset.js";
@@ -11,15 +20,6 @@ import { computeChannelName } from "../../../channel/useChannelName.tsx";
 import { QuestActivityButtonInner } from "../../../frames/panel/native/QuestActivityButton.tsx";
 import { useVoicePanelHeaderUserStateIcons } from "../header/VoicePanelHeaderUserState.tsx";
 import { dismissPanel } from "../VoicePanelStateContext.tsx";
-// discord_app/modules/voice_panel/native/shared/VoicePanelTitleButton.tsx
-import importAllResult from "registerAsset";
-import { View } from "dismissPanel";
-import addApplication from "addApplication";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ParticipantTypes } from "ParticipantTypes";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;

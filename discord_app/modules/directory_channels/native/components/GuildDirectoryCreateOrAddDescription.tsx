@@ -1,10 +1,10 @@
-import { GuildDirectoryEditDescriptionTemplate } from "GuildDirectoryEditDescriptionTemplate.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx
 import _createGuildFromTemplate from "_createGuildFromTemplate";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { GuildDirectoryEditDescriptionTemplate } from "GuildDirectoryEditDescriptionTemplate.tsx";
 
 let c4;
 let c5;

@@ -1,13 +1,13 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TwinButtons } from "../../../../../design/components/experimental/native.tsx";
-import { SolidCutout } from "../../../../../design/components/Icon/native/ClipView.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TwinButtons } from "../../../../../design/components/experimental/native.tsx";
+import { SolidCutout } from "../../../../../design/components/Icon/native/ClipView.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

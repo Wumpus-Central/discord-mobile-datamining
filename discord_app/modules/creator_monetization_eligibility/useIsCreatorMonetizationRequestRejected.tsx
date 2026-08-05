@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx
 import { CreatorMonetizationApplicationState as closure_2 } from "CreatorMonetizationApplicationState";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
 

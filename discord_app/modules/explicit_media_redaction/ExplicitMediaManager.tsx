@@ -1,6 +1,3 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
-import { getEligibleHarmTypesConfigsForContext } from "ObscuredMediaUtils.tsx";
 // discord_app/modules/explicit_media_redaction/ExplicitMediaManager.tsx
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
@@ -14,6 +11,9 @@ import handleSearchMessagesSuccess from "handleSearchMessagesSuccess";
 import { MessageTypesWithLazyLoadedReferences as closure_12 } from "ME";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import "initialize";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
+import { getEligibleHarmTypesConfigsForContext } from "ObscuredMediaUtils.tsx";
 
 const require = arg1;
 function resetManager() {

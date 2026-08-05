@@ -1,9 +1,9 @@
-import { transformUser } from "../../helpers/transformUser.tsx";
 // discord_app/modules/rpc/server/commands/users.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import { RPCCommands } from "ME";
 import createRPCCommand from "createRPCCommand";
+import { transformUser } from "../../helpers/transformUser.tsx";
 
 let RPC_EMBEDDED_APP_SCOPE;
 let RPC_LOCAL_SCOPE;

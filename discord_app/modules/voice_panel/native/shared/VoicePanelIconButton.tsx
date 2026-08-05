@@ -1,8 +1,8 @@
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
 // discord_app/modules/voice_panel/native/shared/VoicePanelIconButton.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
+import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
 
 const require = arg1;
 const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVariant, ref) => {

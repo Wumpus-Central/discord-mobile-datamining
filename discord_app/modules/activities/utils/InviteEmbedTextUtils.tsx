@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { messagesProxy } from "../../request_to_stream/RequestToStream.messages.js";
 // discord_app/modules/activities/utils/InviteEmbedTextUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ActivityActionTypes } from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { messagesProxy } from "../../request_to_stream/RequestToStream.messages.js";
 
 const require = arg1;
 function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {

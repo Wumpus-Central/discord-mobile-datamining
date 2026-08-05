@@ -1,4 +1,3 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/a11y/native/AccessibilityCallManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -6,6 +5,7 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
 import set from "upsertRelationship";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 let set = new Set();

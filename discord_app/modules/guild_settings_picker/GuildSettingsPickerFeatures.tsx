@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 let obj = { "server-subscriptions-onboarding": require("module_13145"), "server-subscriptions-create-tier-from-template": require("module_13146") };

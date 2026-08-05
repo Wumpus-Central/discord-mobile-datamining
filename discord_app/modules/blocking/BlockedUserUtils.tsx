@@ -1,6 +1,6 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/blocking/BlockedUserUtils.tsx
 import upsertRelationship from "upsertRelationship";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 const result = require("apply").fileFinishedImporting("modules/blocking/BlockedUserUtils.tsx");

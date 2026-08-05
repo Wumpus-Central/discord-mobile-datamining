@@ -1,10 +1,10 @@
+// discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
+import { MessageFailureState } from "Changeset";
+import { MessageEmbedTypes } from "ME";
 import { registerAsset } from "../../../../../_runtime/08067_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/08068_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { frozen } from "EmbedUtils.tsx";
-// discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
-import { MessageFailureState } from "Changeset";
-import { MessageEmbedTypes } from "ME";
 
 const result = require("frozen").fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
 

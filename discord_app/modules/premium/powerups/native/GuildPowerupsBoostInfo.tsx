@@ -1,12 +1,12 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BoostGemIcon } from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getGuildPowerupsBoostInfoText } from "../utils/getGuildPowerupsBoostInfoText.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx
 import { View } from "get ActivityIndicator";
 import { BoostInfoType } from "BoostedGuildTiers";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BoostGemIcon } from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getGuildPowerupsBoostInfoText } from "../utils/getGuildPowerupsBoostInfoText.tsx";
 
 let c5;
 let closure_6;

@@ -1,8 +1,8 @@
+// discord_app/modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx
 import { 03510__ } from "../../../_runtime/metro/03510__.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
 import { messagesProxy } from "FamilyCenter.messages.js";
-// discord_app/modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx
 const result = require("formatSingleCurrencyPrice").fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
 
 export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {

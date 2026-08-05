@@ -1,10 +1,10 @@
-import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import noop from "noop";
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes";
 import { HelpdeskArticles } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ image: { width: 230, height: 160 } });

@@ -1,8 +1,8 @@
+// discord_app/modules/icymi/ICYMIManager.tsx
+import "initialize";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { ICYMIActionCreators } from "ICYMIActionCreators.tsx";
 import { apexExperiment } from "ICYMIExperiment.tsx";
-// discord_app/modules/icymi/ICYMIManager.tsx
-import "initialize";
 
 const require = arg1;
 let c3 = null;

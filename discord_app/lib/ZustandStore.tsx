@@ -1,6 +1,6 @@
+// discord_app/lib/ZustandStore.tsx
 import { identity } from "../../_runtime/00700_identity.js";
 import { createJSONStorage } from "../../_runtime/04154_createJSONStorage.js";
-// discord_app/lib/ZustandStore.tsx
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
 }

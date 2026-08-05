@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { handleLanguageChange } from "../../language_and_time/native/UserSettingsLocale.tsx";
 // discord_app/modules/user_settings/defs/native/LanguageSetting.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { handleLanguageChange } from "../../language_and_time/native/UserSettingsLocale.tsx";
 
 const require = arg1;
 createToggle = {

@@ -1,6 +1,6 @@
+// discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { V6OrEarlierAPIError } from "../../../errors/index.tsx";
-// discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
 const result = require("useUserIdsForLinkStatus").fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {

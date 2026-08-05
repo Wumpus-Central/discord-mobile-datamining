@@ -1,6 +1,6 @@
+// discord_app/utils/UploadUtils.tsx
 import { cancel } from "../lib/uploader/Upload.tsx";
 import { getClipCreatedAt } from "../modules/clips/clipPayloadUtils.tsx";
-// discord_app/utils/UploadUtils.tsx
 const items = [
   {
     reName: /\.jpe?g$/i,

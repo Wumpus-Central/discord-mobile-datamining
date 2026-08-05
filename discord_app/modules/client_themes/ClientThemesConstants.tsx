@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/client_themes/ClientThemesConstants.tsx
 import { ThemeTypes } from "sum";
 import apply from "apply";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let obj = {
   type: require("ClientThemeType").ClientThemeType.BACKGROUND_GRADIENT_PRESET,

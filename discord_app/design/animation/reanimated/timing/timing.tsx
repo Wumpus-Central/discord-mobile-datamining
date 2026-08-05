@@ -1,7 +1,7 @@
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import { mutable } from "../AccessibilityPreferencesSharedValue.native.tsx";
 // discord_app/design/animation/reanimated/timing/timing.tsx
 import { CONFIG_NEVER_ANIMATE_TIMING } from "CONFIG_NEVER_ANIMATE";
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { mutable } from "../AccessibilityPreferencesSharedValue.native.tsx";
 
 function withTiming(value, timingStandard, fn, fn2) {
   let str = fn;

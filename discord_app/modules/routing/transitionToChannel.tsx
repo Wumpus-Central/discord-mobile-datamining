@@ -1,10 +1,10 @@
+// discord_app/modules/routing/transitionToChannel.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { Routes } from "ME";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { ChannelActionCreators } from "../../actions/ChannelActionCreators.tsx";
 import { transitionTo } from "router_utils.tsx";
 import { useGuildIdForChannelRoute } from "useGuildIdForChannelRoute.tsx";
-// discord_app/modules/routing/transitionToChannel.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Routes } from "ME";
 
 const require = arg1;
 const result = require("useGuildIdForChannelRoute").fileFinishedImporting("modules/routing/transitionToChannel.tsx");

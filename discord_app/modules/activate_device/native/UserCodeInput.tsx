@@ -1,9 +1,3 @@
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useUserCodeSubmit } from "../useUserCodeSubmit.tsx";
-import { innerContent } from "ActivateDeviceSharedStyles.tsx";
 // discord_app/modules/activate_device/native/UserCodeInput.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,6 +5,12 @@ import { View } from "get ActivityIndicator";
 import { OAuthConstants } from "OAuthConstants";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useUserCodeSubmit } from "../useUserCodeSubmit.tsx";
+import { innerContent } from "ActivateDeviceSharedStyles.tsx";
 
 let c9;
 let error;

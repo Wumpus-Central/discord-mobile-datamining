@@ -1,5 +1,3 @@
-import { createAutocompleterResultForChannelId } from "../autocompleter/createAutocompleterResultForChannelId.tsx";
-import { sortByMatchScore } from "../autocompleter/index.tsx";
 // discord_app/modules/share/formatResults.tsx
 import ALLOWED_TYPES from "ALLOWED_TYPES";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -8,6 +6,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { isAllowedType } from "ALLOWED_TYPES";
 import ME from "ME";
+import { createAutocompleterResultForChannelId } from "../autocompleter/createAutocompleterResultForChannelId.tsx";
+import { sortByMatchScore } from "../autocompleter/index.tsx";
 
 let c10;
 let c9;

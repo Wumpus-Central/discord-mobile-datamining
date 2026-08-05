@@ -1,8 +1,8 @@
-import { useSelectedDismissibleContent } from "../hooks/useSelectedDismissibleContent.tsx";
 // discord_app/modules/dismissible_content/native/SelectedDismissibleContent.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import jsxProd from "jsxProd";
+import { useSelectedDismissibleContent } from "../hooks/useSelectedDismissibleContent.tsx";
 
 let c3;
 let c4;

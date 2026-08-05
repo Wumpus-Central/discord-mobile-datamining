@@ -1,6 +1,3 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { useChatLayout } from "../modules/chat/native/useChatLayout.tsx";
-import { Notifications } from "common/Notifications.tsx";
 // discord_app/components_native/ChannelContainer.tsx
 import set from "set";
 import { View } from "AnnouncementChannelLurkerBar";
@@ -11,6 +8,9 @@ import { ChannelTypes } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { useChatLayout } from "../modules/chat/native/useChatLayout.tsx";
+import { Notifications } from "common/Notifications.tsx";
 
 let c10;
 let unpackModuleId;

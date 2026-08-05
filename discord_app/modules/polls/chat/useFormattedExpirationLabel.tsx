@@ -1,6 +1,6 @@
+// discord_app/modules/polls/chat/useFormattedExpirationLabel.tsx
 import { t } from "../../../../_runtime/03867_t.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-// discord_app/modules/polls/chat/useFormattedExpirationLabel.tsx
 function formatExpirationLabel(expiry) {
   const tmp2 = t();
   if (expiry > tmp2) {

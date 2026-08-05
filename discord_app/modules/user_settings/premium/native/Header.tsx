@@ -1,12 +1,12 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/premium/native/Header.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

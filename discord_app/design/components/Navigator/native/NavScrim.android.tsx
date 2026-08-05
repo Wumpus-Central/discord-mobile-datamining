@@ -1,9 +1,9 @@
-import { useSafeAreaInsetsKeyboardAware } from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/design/components/Navigator/native/NavScrim.android.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let StyleSheet;
 let obj1;

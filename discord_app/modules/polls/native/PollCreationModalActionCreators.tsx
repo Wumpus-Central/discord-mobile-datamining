@@ -1,6 +1,6 @@
+// discord_app/modules/polls/native/PollCreationModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/polls/native/PollCreationModalActionCreators.tsx
 let c3 = "create-poll-modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/native/PollCreationModalActionCreators.tsx");
 

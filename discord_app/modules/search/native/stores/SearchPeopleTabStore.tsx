@@ -1,9 +1,9 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { _toPropertyKey } from "../../../main_tabs_v2/native/shared_components/user_list/useUserListData.tsx";
 // discord_app/modules/search/native/stores/SearchPeopleTabStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleChannelSelect from "handleChannelSelect";
 import { Store } from "initialize";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { _toPropertyKey } from "../../../main_tabs_v2/native/shared_components/user_list/useUserListData.tsx";
 
 const require = arg1;
 let closure_5 = [];

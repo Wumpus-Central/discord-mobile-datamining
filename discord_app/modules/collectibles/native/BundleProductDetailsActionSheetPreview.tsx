@@ -1,5 +1,3 @@
-import { Directions } from "../../../../_runtime/05368_Directions.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,6 +5,8 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { ShopCtaEnum } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Directions } from "../../../../_runtime/05368_Directions.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c4;

@@ -1,10 +1,10 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getOrRefreshAdSession } from "../analytics_sessions/SessionAdGenerator.tsx";
 // discord_app/modules/quests/BountyActionCreators.tsx
 import AdCreativeType from "AdCreativeType";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import set from "set";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getOrRefreshAdSession } from "../analytics_sessions/SessionAdGenerator.tsx";
 
 const require = arg1;
 function fetchBountiesAndDispatch() {

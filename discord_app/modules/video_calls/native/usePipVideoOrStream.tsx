@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/native/usePipVideoOrStream.tsx
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
@@ -9,6 +8,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
 import ParticipantTypes from "ParticipantTypes";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let closure_12;
 let map1;

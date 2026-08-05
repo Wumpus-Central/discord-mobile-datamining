@@ -1,6 +1,6 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/applications/ApplicationAssetsStore.tsx
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {
   assets = assets.assets;

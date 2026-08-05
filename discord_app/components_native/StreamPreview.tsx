@@ -1,7 +1,3 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { PressableBase } from "../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { useFetchStreamPreview } from "../modules/go_live/useFetchStreamPreview.tsx";
 // discord_app/components_native/StreamPreview.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -9,6 +5,10 @@ import handleThemeChange from "handleThemeChange";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { PressableBase } from "../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { useFetchStreamPreview } from "../modules/go_live/useFetchStreamPreview.tsx";
 
 let StyleSheet;
 let c3;

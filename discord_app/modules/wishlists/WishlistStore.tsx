@@ -1,9 +1,9 @@
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { createUserWidgetFromServer } from "../user_profile/UserProfileStore.tsx";
 // discord_app/modules/wishlists/WishlistStore.tsx
 import fromServer from "fromServer";
 import closure_5 from "fromServer";
 import { Store } from "initialize";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
+import { createUserWidgetFromServer } from "../user_profile/UserProfileStore.tsx";
 
 let c3;
 let c4;

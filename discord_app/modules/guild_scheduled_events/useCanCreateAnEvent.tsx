@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useCanCreateAnEvent.tsx
 import _slicedToArray from "_slicedToArray";
 import comparator from "comparator";
@@ -6,6 +5,7 @@ import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_scheduled_events/useCanCreateAnEvent.tsx");

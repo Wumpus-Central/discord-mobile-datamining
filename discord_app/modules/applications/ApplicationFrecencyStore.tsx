@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/applications/ApplicationFrecencyStore.tsx
 import participantFromServer from "participantFromServer";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 function handleUserSettingsProtoStoreChange() {
   const applicationFrecency = obj.frecencyWithoutFetchingLatest.applicationFrecency;

@@ -1,13 +1,13 @@
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { recordChannelFetchStart } from "../../../../local_message_caching/MessageCacheStats.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx
 import { ScrollView } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { recordChannelFetchStart } from "../../../../local_message_caching/MessageCacheStats.tsx";
 
 let c5;
 let closure_6;

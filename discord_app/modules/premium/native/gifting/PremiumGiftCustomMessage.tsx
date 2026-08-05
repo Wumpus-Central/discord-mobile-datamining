@@ -1,10 +1,10 @@
-import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftCustomMessage.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { CUSTOM_GIFT_MESSAGE_MAX_LENGTH as closure_4 } from "GuildFeatures";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
 
 const require = arg1;
 class GiftCustomMessage {

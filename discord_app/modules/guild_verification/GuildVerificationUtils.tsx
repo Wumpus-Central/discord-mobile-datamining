@@ -1,9 +1,9 @@
-import { openMemberVerificationModal } from "../guild_member_verification/MemberVerificationModalActionCreators.tsx";
-import { MAX_RESULTS_PER_PAGE } from "../guild_member_verification/MemberVerificationTypes.tsx";
-import { transitionTo } from "../routing/router_utils.tsx";
 // discord_app/modules/guild_verification/GuildVerificationUtils.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import ME from "ME";
+import { openMemberVerificationModal } from "../guild_member_verification/MemberVerificationModalActionCreators.tsx";
+import { MAX_RESULTS_PER_PAGE } from "../guild_member_verification/MemberVerificationTypes.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
 
 let c3;
 let c4;

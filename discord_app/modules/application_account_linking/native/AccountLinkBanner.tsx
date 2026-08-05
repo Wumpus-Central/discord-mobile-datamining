@@ -1,4 +1,3 @@
-import { apexExperiment } from "../experiments/mobileAccountLinkingExperiment.tsx";
 // discord_app/modules/application_account_linking/native/AccountLinkBanner.tsx
 import get_ActivityIndicator from "Button";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -7,6 +6,7 @@ import jsxProd from "ExperimentalGameControllerLinkIcon";
 import createCacheKey from "createCacheKey";
 import importAllResult from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { apexExperiment } from "../experiments/mobileAccountLinkingExperiment.tsx";
 
 let c3;
 let c4;

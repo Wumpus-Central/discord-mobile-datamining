@@ -1,6 +1,6 @@
-import { shouldRun } from "native/channels/ZoomedInTelemetry.tsx";
 // discord_app/modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx
 import { AnalyticEvents } from "ME";
+import { shouldRun } from "native/channels/ZoomedInTelemetry.tsx";
 
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
 

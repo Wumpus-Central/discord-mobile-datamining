@@ -1,9 +1,9 @@
-import { getNextShownUpcomingEventNoticeType } from "GuildScheduledEventUtils.tsx";
 // discord_app/modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import scheduledEventSort from "scheduledEventSort";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { PersistedStore } from "initialize";
+import { getNextShownUpcomingEventNoticeType } from "GuildScheduledEventUtils.tsx";
 
 let c4;
 let c5;

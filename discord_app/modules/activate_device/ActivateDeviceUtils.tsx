@@ -1,6 +1,6 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
 // discord_app/modules/activate_device/ActivateDeviceUtils.tsx
 import { PlatformTypes } from "ME";
+import { set } from "../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activate_device/ActivateDeviceUtils.tsx");
 

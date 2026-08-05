@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 // discord_app/modules/collectibles/hooks/useDefaultVariantIndex.tsx
 import map from "map";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 
 const require = arg1;
 const result = require("getProductOrbPrice").fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");

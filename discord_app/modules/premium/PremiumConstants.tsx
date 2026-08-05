@@ -1,7 +1,7 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 // discord_app/modules/premium/PremiumConstants.tsx
 import ME from "ME";
 import set from "getSystemLocale";
+import { set } from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 
 let BITRATE_MAX;
 let BoostedGuildTiers;

@@ -1,7 +1,7 @@
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/launchpad/native/useLaunchPadType.tsx
 import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const result = require("create").fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
 

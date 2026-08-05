@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -7,6 +6,7 @@ import reset from "reset";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
 import { isActivityParticipant } from "ParticipantTypes";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function areParticipantStatesEqual(arg0, arg1) {

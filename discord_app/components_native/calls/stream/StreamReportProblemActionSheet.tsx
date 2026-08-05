@@ -1,3 +1,9 @@
+// discord_app/components_native/calls/stream/StreamReportProblemActionSheet.tsx
+import "noop";
+import sortActivity from "sortActivity";
+import { AnalyticEvents } from "ME";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { BottomSheetModal } from "../../../../_runtime/05340_BottomSheetModal.js";
 import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { ActionSheetRowIcon } from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
@@ -5,12 +11,6 @@ import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/S
 import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getStreamIssueReportOptions } from "../../../modules/go_live/utils/getStreamIssueReportOptions.tsx";
-// discord_app/components_native/calls/stream/StreamReportProblemActionSheet.tsx
-import "noop";
-import sortActivity from "sortActivity";
-import { AnalyticEvents } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 createCacheKey = { container: null };

@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/07870_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/StartEventModal.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +9,9 @@ import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY";
 import jsxProd from "SafeAreaPaddingView";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/07870_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let c9;

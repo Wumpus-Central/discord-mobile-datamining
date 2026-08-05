@@ -1,12 +1,12 @@
+// discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
 import { timingNone } from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import { PlusLargeIcon } from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-// discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 let closure_4 = { code: "function MediaKeyboardButtonIconTsx1(){const{keyboard,KeyboardTypes,chatInputFloating,withTiming,timingStandard}=this.__closure;const isActive=keyboard===KeyboardTypes.MEDIA||chatInputFloating&&keyboard===KeyboardTypes.APP_LAUNCHER;return{transform:[{rotate:withTiming(isActive?'45deg':'0deg',timingStandard)}]};}" };

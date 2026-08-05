@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import { usePremiumGroupPrimaryName } from "usePremiumGroupPrimaryName.tsx";
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx
 import reset from "reset";
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import { usePremiumGroupPrimaryName } from "usePremiumGroupPrimaryName.tsx";
 
 let c4;
 let c5;

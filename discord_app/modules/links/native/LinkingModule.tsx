@@ -1,6 +1,6 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx";
 // discord_app/modules/links/native/LinkingModule.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx";
 
 let result = require("enforcing").fileFinishedImporting("modules/links/native/LinkingModule.tsx");
 

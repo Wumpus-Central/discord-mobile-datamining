@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { usePremiumSince } from "useTenureBadging.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx
 import { TieredTenureBadge } from "GuildFeatures";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { usePremiumSince } from "useTenureBadging.tsx";
 
 const result = require("getTieredTenureBadgeData").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx");
 

@@ -1,5 +1,5 @@
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/user_profile/native/openUserContextMenuCommands.tsx
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 let result = require("navigationToRootTabHelper").fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
 
 export default function openUserContextMenuCommands(analyticsLocations) {

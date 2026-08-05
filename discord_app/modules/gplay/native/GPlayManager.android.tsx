@@ -1,5 +1,3 @@
-import { getPlanIdForProduct } from "../../../actions/native/GPlayActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/gplay/native/GPlayManager.android.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_5 from "usePremiumPlanPurchasedStore";
@@ -16,6 +14,8 @@ import ME from "ME";
 import { OrderStatus } from "CustomCheckoutFlow";
 import { SubscriptionPlanInfo } from "GuildFeatures";
 import { jsx } from "getOrders";
+import { getPlanIdForProduct } from "../../../actions/native/GPlayActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 let NativeEventEmitter;
 let NativeModules;

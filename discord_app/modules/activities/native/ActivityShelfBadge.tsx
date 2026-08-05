@@ -1,10 +1,10 @@
-import { PermissionOverwriteType } from "../../../flow/Server.tsx";
 // discord_app/modules/activities/native/ActivityShelfBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
 
 const require = arg1;
 createCacheKey = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };

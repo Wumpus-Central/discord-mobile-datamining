@@ -1,7 +1,7 @@
-import { apexExperiment } from "PrivateProfilesStrictExperiment.tsx";
-import { apexExperiment } from "PrivateProfilesStrictGbExperiment.tsx";
 // discord_app/modules/user_profile/PrivateProfilesExperiment.tsx
 import ApexExperiment from "ApexExperiment";
+import { apexExperiment } from "PrivateProfilesStrictExperiment.tsx";
+import { apexExperiment } from "PrivateProfilesStrictGbExperiment.tsx";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-private-profiles", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = require("apexExperiment").fileFinishedImporting("modules/user_profile/PrivateProfilesExperiment.tsx");

@@ -1,10 +1,10 @@
-import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 // discord_app/components_native/common/UntouchableAlert.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
+import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });

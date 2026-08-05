@@ -1,9 +1,9 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
-import { MessageRequestConsentStatusTypes } from "MessageRequestTypes.tsx";
 // discord_app/modules/message_request/MessageRequestActionCreators.tsx
 import handleLogout from "handleLogout";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
+import { MessageRequestConsentStatusTypes } from "MessageRequestTypes.tsx";
 
 const require = arg1;
 function _acceptMessageRequest() {

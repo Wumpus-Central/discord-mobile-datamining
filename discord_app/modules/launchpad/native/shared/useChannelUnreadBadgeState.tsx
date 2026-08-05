@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useOptInEnabledForGuild } from "../../../opt_in_channels/isOptInEnabled.tsx";
 // discord_app/modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx
 import guildHasCommunity from "guildHasCommunity";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useOptInEnabledForGuild } from "../../../opt_in_channels/isOptInEnabled.tsx";
 
 const require = arg1;
 const result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");

@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/channel/ChannelInfoActionCreators.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import handleConnectionReset from "handleConnectionReset";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("modules/channel/ChannelInfoActionCreators.tsx");
 

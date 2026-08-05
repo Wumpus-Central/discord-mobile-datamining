@@ -1,6 +1,6 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/message_request/hooks/useIsSpamMessageRequest.tsx
 import processChannel from "processChannel";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");

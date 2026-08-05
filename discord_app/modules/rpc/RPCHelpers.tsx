@@ -1,11 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Url } from "../../../_runtime/01469_Url.js";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
-import { transformUser } from "helpers/transformUser.tsx";
-import { prototype } from "RPCError.tsx";
 // discord_app/modules/rpc/RPCHelpers.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import addApplication from "addApplication";
@@ -24,6 +16,14 @@ import ME from "ME";
 import importDefaultResult from "isDiscordProxiedAssetUrl";
 import importDefaultResult1 from "set";
 import importDefaultResult2 from "set";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Url } from "../../../_runtime/01469_Url.js";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
+import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
+import { transformUser } from "helpers/transformUser.tsx";
+import { prototype } from "RPCError.tsx";
 
 let closure_15;
 let closure_16;

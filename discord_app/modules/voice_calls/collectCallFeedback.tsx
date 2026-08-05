@@ -1,5 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/voice_calls/collectCallFeedback.tsx
 import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +6,8 @@ import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleAudioRouteChanged from "handleAudioRouteChanged";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 const require = arg1;
 const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");

@@ -1,6 +1,3 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/user_settings/UserSettingsProtoActionCreators.tsx
 import importDefaultResult from "timestamp";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -8,6 +5,9 @@ import MAX_FAVORITES from "MAX_FAVORITES";
 import ME from "ME";
 import importDefaultResult1 from "dispatcher";
 import importDefaultResult2 from "dispatcher";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let c9;
 let error;

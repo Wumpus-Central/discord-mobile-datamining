@@ -1,6 +1,3 @@
-import { useChatLayout } from "../chat/native/useChatLayout.tsx";
-import { getInitialGuildState } from "../main_tabs_v2/native/getInitialNavigationState.tsx";
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/panels/isChannelFocused.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +5,9 @@ import getParticipants from "getParticipants";
 import getIdFromHistoryItem from "getIdFromHistoryItem";
 import { CHANNEL_PREFIX } from "getIdFromHistoryItem";
 import withEqualityFn from "withEqualityFn";
+import { useChatLayout } from "../chat/native/useChatLayout.tsx";
+import { getInitialGuildState } from "../main_tabs_v2/native/getInitialNavigationState.tsx";
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const require = arg1;
 function getFocusedChannelId() {

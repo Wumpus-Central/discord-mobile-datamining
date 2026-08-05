@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/billing/hooks/useSubscriptionPlansLoaded.tsx
 import handlePaymentSourceUpdate from "handlePaymentSourceUpdate";
 import addSubscriptionPlan from "addSubscriptionPlan";
 import reset from "reset";
 import { ACTIVE_PREMIUM_SKUS } from "GuildFeatures";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let require = arg1;
 function getSubscriptionPlansLoaded(items) {

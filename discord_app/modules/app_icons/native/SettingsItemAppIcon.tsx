@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
-import { AppIcon } from "AppIcon.tsx";
-import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 // discord_app/modules/app_icons/native/SettingsItemAppIcon.tsx
 import "noop";
 import { getIconById } from "items";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
+import { AppIcon } from "AppIcon.tsx";
+import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 
 const require = arg1;
 createCacheKey = { icon: null };

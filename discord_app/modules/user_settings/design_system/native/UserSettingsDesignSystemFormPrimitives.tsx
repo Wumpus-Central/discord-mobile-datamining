@@ -1,3 +1,10 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import { ScrollView } from "Stack";
+import { NOOP } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Checkbox } from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
 import { VoiceNormalIcon } from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import { VoiceXIcon } from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
@@ -10,13 +17,6 @@ import { TableRowInner } from "../../../../design/components/TableRow/native/Tab
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
-// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ScrollView } from "Stack";
-import { NOOP } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

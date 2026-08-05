@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/gplay/native/GPlayAnalyticsStore.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = Object.freeze({ analyticsByProductId: {} });
 let obj = keys.create(() => closure_2);

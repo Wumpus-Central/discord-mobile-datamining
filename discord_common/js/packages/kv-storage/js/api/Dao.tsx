@@ -1,6 +1,6 @@
+// discord_common/js/packages/kv-storage/js/api/Dao.tsx
 import { TableId } from "../types/index.tsx";
 import { fromDatabaseTransaction } from "Table.tsx";
-// discord_common/js/packages/kv-storage/js/api/Dao.tsx
 let Dao;
 class Dao {
   constructor(arg0, arg1, arg2) {

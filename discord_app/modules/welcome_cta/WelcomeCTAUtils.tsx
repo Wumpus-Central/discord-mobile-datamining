@@ -1,10 +1,10 @@
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/welcome_cta/WelcomeCTAUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { WELCOME_STICKERS } from "items";
 import { AnalyticEvents } from "ME";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 const result = require("ME").fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");
 

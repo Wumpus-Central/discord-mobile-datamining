@@ -1,9 +1,9 @@
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 // discord_app/design/components/TableRow/native/TableRowArrow.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 
 const require = arg1;
 createCacheKey = { icon: null, iconColor: null };

@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/favorites/hooks/useFavoritesGuildUnreads.tsx
 import rebuild from "rebuild";
 import storeThread from "storeThread";
@@ -7,6 +6,7 @@ import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildUnreads.tsx");

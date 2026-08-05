@@ -1,13 +1,13 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/user_settings/connections/native/ConnectionsEmptyStateUpsell.tsx
 import useSafeAreaInsets from "useSafeAreaInsets";
 import { View } from "Text";
 import { AnalyticsLocations } from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let closure_6;
 let error;

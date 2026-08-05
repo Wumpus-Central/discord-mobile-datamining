@@ -1,6 +1,6 @@
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/activities/useActivityShelfItemsSorting.tsx
 import noop from "noop";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
 const result = require("getPlatform").fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");

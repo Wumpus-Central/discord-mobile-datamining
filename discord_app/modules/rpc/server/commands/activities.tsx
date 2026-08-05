@@ -1,10 +1,10 @@
-import { activityInstanceConnectedParticipants } from "../../helpers/activityInstanceConnectedParticipants.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/activities.tsx
 import getApplicationFlags from "getApplicationFlags";
 import ME from "ME";
 import createRPCCommand from "createRPCCommand";
 import createRPCCommand from "createRPCCommand";
+import { activityInstanceConnectedParticipants } from "../../helpers/activityInstanceConnectedParticipants.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 let RPCCommands;
 let c4;

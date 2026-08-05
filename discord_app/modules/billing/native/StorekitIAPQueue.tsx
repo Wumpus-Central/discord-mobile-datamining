@@ -1,8 +1,8 @@
-import { CurrencyCodes } from "../../../../discord_common/js/shared/utils/PriceUtils.tsx";
 // discord_app/modules/billing/native/StorekitIAPQueue.tsx
 import closure_2 from "set";
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
 import set from "DEFAULT_COUNTRY_CODE_NAME";
+import { CurrencyCodes } from "../../../../discord_common/js/shared/utils/PriceUtils.tsx";
 
 const require = arg1;
 function productSK2ToIAPProduct(subscription) {

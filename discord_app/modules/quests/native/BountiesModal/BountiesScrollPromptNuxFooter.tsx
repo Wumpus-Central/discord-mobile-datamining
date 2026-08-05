@@ -1,9 +1,9 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollPromptNuxFooter.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c3;
 let c4;

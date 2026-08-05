@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_tag/utils/getGuildTagBadgeLabel.tsx
 import { GuildTagBadgeKind } from "items";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 const result = require("isDiscordFrontendDevelopment").fileFinishedImporting("modules/guild_tag/utils/getGuildTagBadgeLabel.tsx");
 

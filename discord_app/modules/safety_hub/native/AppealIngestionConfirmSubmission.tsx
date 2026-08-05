@@ -1,9 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
-import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
-import { AppealIngestionBreadcrumbs } from "AppealIngestionBreadcrumbs.tsx";
-import { AppealIngestionModal } from "AppealIngestionModal.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx
 import "set";
 import { View } from "AppealIngestionActivitySummary";
@@ -11,6 +5,12 @@ import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyH
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
+import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
+import { AppealIngestionBreadcrumbs } from "AppealIngestionBreadcrumbs.tsx";
+import { AppealIngestionModal } from "AppealIngestionModal.tsx";
 
 let closure_6;
 let error;

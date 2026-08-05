@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { VideoUploadQualityNitroUpsell } from "../../chat/native/SettingsChatScreen.tsx";
 // discord_app/modules/user_settings/defs/native/ChatSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { VideoUploadQualityNitroUpsell } from "../../chat/native/SettingsChatScreen.tsx";
 
 obj = {
   useTitle() {

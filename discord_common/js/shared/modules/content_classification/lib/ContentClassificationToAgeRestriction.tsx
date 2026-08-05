@@ -1,10 +1,10 @@
+// discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx
 import { AgeRestrictionSource } from "../../../shared-constants/AgeRestrictionSource.tsx";
 import { AgeRestrictionStatus } from "../../../shared-constants/AgeRestrictionStatus.tsx";
 import { set } from "../../../shared-constants/ContentRatingESRBRating.tsx";
 import { set } from "../../../shared-constants/ContentRatingGOPClassification.tsx";
 import { set } from "../../../shared-constants/ContentRatingPEGIRating.tsx";
 import { frozen } from "../../../shared-constants/DiscordContentClassificationFlags.tsx";
-// discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx
 function contentClassificationToAgeRestrictionConclusion(data) {
   if (null == data) {
     return obj;

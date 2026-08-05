@@ -1,13 +1,13 @@
-import { ActionSheet } from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { width } from "../GuildSettingsRoleTemplate.tsx";
 // discord_app/modules/guild_settings/roles/native/action_sheet/RolePermissionTemplatesActionSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ActionSheet } from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { width } from "../GuildSettingsRoleTemplate.tsx";
 
 let c5;
 let closure_6;

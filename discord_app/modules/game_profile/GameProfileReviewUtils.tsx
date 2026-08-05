@@ -1,5 +1,5 @@
-import { GameTheme } from "../game_detection/GameDetectionTypes.tsx";
 // discord_app/modules/game_profile/GameProfileReviewUtils.tsx
+import { GameTheme } from "../game_detection/GameDetectionTypes.tsx";
 const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
 export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreDescriptionColor(NO_USER_REVIEWS) {

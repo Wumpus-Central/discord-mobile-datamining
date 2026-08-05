@@ -1,7 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
-import { canBypassSlowmodeHelper } from "../chat/SlowmodeUtils.tsx";
 // discord_app/modules/forwarding/ForwardDestinationUtils.tsx
 import computeChannelName from "computeChannelName";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
@@ -11,6 +7,10 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
+import { canBypassSlowmodeHelper } from "../chat/SlowmodeUtils.tsx";
 
 let c5;
 let closure_12;

@@ -1,4 +1,3 @@
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -6,6 +5,7 @@ import getParticipants from "getParticipants";
 import { VoicePanelModes } from "VoicePanelModes";
 import { isActivityParticipant } from "ParticipantTypes";
 import { jsx } from "jsxProd";
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 
 const require = arg1;
 function VoiceControlsNuxActionSheetImporter() {

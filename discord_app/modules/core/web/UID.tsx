@@ -1,6 +1,6 @@
+// discord_app/modules/core/web/UID.tsx
 import { uniqueId } from "../../../../_runtime/04491_uniqueId.js";
 import { useInitialValue } from "../../../hooks/useInitialValue.tsx";
-// discord_app/modules/core/web/UID.tsx
 const result = require("set").fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {

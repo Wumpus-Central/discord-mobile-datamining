@@ -1,4 +1,3 @@
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 // discord_app/design/components/Menu/native/Menu.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CONFIG_NEVER_ANIMATE";
@@ -6,6 +5,7 @@ import get_ActivityIndicator from "generateBoxShadowStyle";
 import { NOOP } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 let StyleSheet;
 let c5;

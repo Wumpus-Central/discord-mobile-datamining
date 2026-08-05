@@ -1,7 +1,3 @@
-import { noop } from "../../../../discord_common/js/packages/flash-list/index.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestHomeOrbShopCarousel.tsx
 import _slicedToArray from "_slicedToArray";
 import Layer from "Layer";
@@ -9,6 +5,10 @@ import { View } from "getQuestContentName";
 import set from "set";
 import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import jsxProd from "jsxProd";
+import { noop } from "../../../../discord_common/js/packages/flash-list/index.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c9;
 let metroImportAll;

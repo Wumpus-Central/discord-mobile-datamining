@@ -1,4 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/core/native/SettingsNavigator.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getDeviceMetadata";
@@ -9,6 +8,7 @@ import ME from "ME";
 import jsxProd from "NavigationStack";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c10;
 let c9;

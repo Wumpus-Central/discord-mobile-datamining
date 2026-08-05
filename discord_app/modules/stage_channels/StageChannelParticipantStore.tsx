@@ -1,5 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { sortKey } from "StageChannelParticipants.tsx";
 // discord_app/modules/stage_channels/StageChannelParticipantStore.tsx
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
@@ -15,6 +13,8 @@ import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import { Store } from "initialize";
 import set from "ensureGuildLoaded";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { sortKey } from "StageChannelParticipants.tsx";
 
 const require = arg1;
 function getActiveStageChannelIds(guildId) {

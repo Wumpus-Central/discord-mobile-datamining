@@ -1,6 +1,6 @@
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
 // discord_app/modules/interaction_components/InteractionModalStore.tsx
 import { Store } from "initialize";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
 
 const require = arg1;
 let obj = { IN_FLIGHT: 0, [0]: "IN_FLIGHT", ERRORED: 1, [1]: "ERRORED", SUCCEEDED: 2, [2]: "SUCCEEDED" };

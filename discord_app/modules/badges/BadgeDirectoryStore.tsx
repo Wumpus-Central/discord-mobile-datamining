@@ -1,10 +1,10 @@
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { urlUserId } from "BadgeDirectoryActionCreators.tsx";
 // discord_app/modules/badges/BadgeDirectoryStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 import set from "set";
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { urlUserId } from "BadgeDirectoryActionCreators.tsx";
 
 const require = arg1;
 const HOUR = require("set").Millis.HOUR;

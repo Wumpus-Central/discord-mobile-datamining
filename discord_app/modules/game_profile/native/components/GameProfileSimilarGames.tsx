@@ -1,11 +1,11 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { useSimilarGames } from "../../hooks/useSimilarGames.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileSimilarGames.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { useSimilarGames } from "../../hooks/useSimilarGames.tsx";
 
 let c4;
 let c5;

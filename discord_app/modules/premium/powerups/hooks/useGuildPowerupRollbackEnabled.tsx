@@ -1,6 +1,6 @@
+// discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx
 import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import { experiment } from "../experiments/FileUpload250MbPowerupExperiment.tsx";
-// discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 
 export default function useGuildPowerupRollbackEnabled(guildId, skuId, location) {

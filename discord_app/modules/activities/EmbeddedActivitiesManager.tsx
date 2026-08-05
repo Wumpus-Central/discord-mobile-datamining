@@ -1,11 +1,3 @@
-import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { getShelfItemData } from "getShelfItemData.tsx";
-import { getPlatform } from "utils/getPlatform.tsx";
-import { stashPendingFrameLaunch } from "utils/pendingFrameLaunch.tsx";
 // discord_app/modules/activities/EmbeddedActivitiesManager.tsx
 import createRTCConnection from "createRTCConnection";
 import getParticipants from "getParticipants";
@@ -19,6 +11,14 @@ import initialize from "initialize";
 import participantFromServer from "participantFromServer";
 import ME from "ME";
 import "initialize";
+import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { getShelfItemData } from "getShelfItemData.tsx";
+import { getPlatform } from "utils/getPlatform.tsx";
+import { stashPendingFrameLaunch } from "utils/pendingFrameLaunch.tsx";
 
 let closure_14;
 let closure_15;

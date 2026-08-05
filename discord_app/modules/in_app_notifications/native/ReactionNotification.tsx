@@ -1,9 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
-import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
-import { extractMetadataFromNotification } from "InAppNotificationUtils.tsx";
 // discord_app/modules/in_app_notifications/native/ReactionNotification.tsx
 import PreviewIcon from "PreviewIcon";
 import { View } from "extractMetadataFromNotification";
@@ -15,6 +9,12 @@ import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
 import PlatformTypes from "PlatformTypes";
 import set from "maybeApplyNoTextColorForLightCustomTheme";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
+import { extractMetadataFromNotification } from "InAppNotificationUtils.tsx";
 
 let c10;
 let c9;

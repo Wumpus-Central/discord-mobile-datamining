@@ -1,15 +1,3 @@
-import { format } from "../../_runtime/04603_format.js";
-import { getInviteDynamicLinkTemplate } from "../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx";
-import { generateDynamicLink } from "../../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { isTablet } from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
-import { set } from "../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { CodedLinkActionCreators } from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
-import { readSnowflake } from "../modules/instant_invite/InviteCodeUtils.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/actions/InstantInviteActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import scheduledEventSort from "scheduledEventSort";
@@ -32,6 +20,18 @@ import { StaticChannelRoute } from "set";
 import { StreamTypes } from "StreamIssueReportReasons";
 import { InviteTargetTypes } from "InviteSendStates";
 import { STAGE_INVITE_STATE_KEY } from "MAX_STAGE_TOPIC_LENGTH";
+import { format } from "../../_runtime/04603_format.js";
+import { getInviteDynamicLinkTemplate } from "../../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx";
+import { generateDynamicLink } from "../../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { isTablet } from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
+import { set } from "../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { CodedLinkActionCreators } from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import { readSnowflake } from "../modules/instant_invite/InviteCodeUtils.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 
 let c10;
 let c9;

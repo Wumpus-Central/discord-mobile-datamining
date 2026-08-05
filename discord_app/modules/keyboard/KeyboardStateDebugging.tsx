@@ -1,5 +1,5 @@
-import { PlatformTypes } from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 // discord_app/modules/keyboard/KeyboardStateDebugging.tsx
+import { PlatformTypes } from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 const require = arg1;
 let obj = {
   channelSafeAreaBottomLayoutHeightChanged(arg0) {

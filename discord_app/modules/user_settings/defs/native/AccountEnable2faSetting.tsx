@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/AccountEnable2faSetting.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import createToggle from "createToggle";
 import { set } from "../../../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { TwoFASetupModalActionCreators } from "../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
 import { useIs2FAEnabled } from "../../account/native/SettingsAccountUtils.tsx";
-// discord_app/modules/user_settings/defs/native/AccountEnable2faSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

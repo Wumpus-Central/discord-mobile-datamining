@@ -1,5 +1,5 @@
-import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/GuildJoinRequestUtils.tsx
+import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
 
 export const isActionedApplicationStatus = function isActionedApplicationStatus(applicationStatus) {

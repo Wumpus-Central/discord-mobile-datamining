@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { SHARE_EVENT_DETAILS_LINK } from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
 // discord_app/modules/icymi/native/ICYMIShareModal.tsx
 import dispatcher from "dispatcher";
 import handleChanged from "handleChanged";
@@ -13,6 +11,8 @@ import { UserRowModes } from "UserRowModes";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
 import jsxProd from "getMixedGradientColor";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { SHARE_EVENT_DETAILS_LINK } from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
 
 let closure_14;
 let map1;

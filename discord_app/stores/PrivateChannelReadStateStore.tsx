@@ -1,4 +1,3 @@
-import { areArraysShallowlyEqual } from "../utils/FunctionUtils.tsx";
 // discord_app/stores/PrivateChannelReadStateStore.tsx
 import { isPrivate } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +6,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import makeSortedChannel from "makeSortedChannel";
 import { Store } from "initialize";
 import set from "generateOldThreadCutoff";
+import { areArraysShallowlyEqual } from "../utils/FunctionUtils.tsx";
 
 function rebuildUnreads() {
   const privateChannelIds = store2.getPrivateChannelIds();

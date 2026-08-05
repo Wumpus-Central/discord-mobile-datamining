@@ -1,8 +1,8 @@
-import { DEFAULT_BADGE_SIZE } from "Badge.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { DEFAULT_BADGE_SIZE } from "Badge.tsx";
 
 const require = arg1;
 createCacheKey = { maskStyle: { position: "relative", right: "alignItems" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };

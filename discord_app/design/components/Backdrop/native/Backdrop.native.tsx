@@ -1,10 +1,10 @@
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/design/components/Backdrop/native/Backdrop.native.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 
 let StyleSheet;
 let c4;

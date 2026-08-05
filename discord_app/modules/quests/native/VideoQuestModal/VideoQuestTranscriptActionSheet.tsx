@@ -1,10 +1,10 @@
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestTranscriptActionSheet.tsx
 import noop from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
 import _toPropertyKey from "_toPropertyKey";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c5;
 let closure_6;

@@ -1,7 +1,7 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
 // discord_app/modules/directory_channels/GuildDirectoryUtils.tsx
 import { DirectoryEntryTypes } from "DirectoryEntryTypes";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
 
 const result = require("apply").fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
 

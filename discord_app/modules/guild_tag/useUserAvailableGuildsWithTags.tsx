@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");

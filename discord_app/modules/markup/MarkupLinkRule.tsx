@@ -1,11 +1,11 @@
+// discord_app/modules/markup/MarkupLinkRule.tsx
+import _slicedToArray from "_slicedToArray";
 import { t } from "../../../_runtime/03984_t.js";
 import { error } from "../../../_runtime/04722_error.js";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
 import { AST_KEY } from "MarkupTypes.tsx";
 import { safelyPartiallyDecodeURIComponent } from "UnicodeSanitizationUtils.tsx";
-// discord_app/modules/markup/MarkupLinkRule.tsx
-import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
 function validateContentTypes(content, items, items2) {

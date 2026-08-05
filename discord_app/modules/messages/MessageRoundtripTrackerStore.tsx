@@ -1,12 +1,12 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
-import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
 // discord_app/modules/messages/MessageRoundtripTrackerStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import { AnalyticEvents } from "ME";
 import { Store } from "initialize";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
+import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
 
 const require = arg1;
 function trackRoundtrip(channelId) {

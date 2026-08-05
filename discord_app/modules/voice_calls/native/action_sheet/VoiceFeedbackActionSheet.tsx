@@ -1,11 +1,11 @@
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { messagesProxy } from "../../../feedback/intl/Feedback.messages.js";
-import { closeActionSheet } from "../../../feedback/native/FeedbackActionSheetV2.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx
 import "noop";
 import { AnalyticEvents } from "ME";
 import FeedbackRating from "FeedbackRating";
 import { jsx } from "jsxProd";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { messagesProxy } from "../../../feedback/intl/Feedback.messages.js";
+import { closeActionSheet } from "../../../feedback/native/FeedbackActionSheetV2.tsx";
 
 let c4;
 let c5;

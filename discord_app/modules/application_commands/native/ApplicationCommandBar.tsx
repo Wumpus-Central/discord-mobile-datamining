@@ -1,6 +1,3 @@
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandBar.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +5,9 @@ import get_ActivityIndicator from "DescriptionEllipsis";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let StyleSheet;
 let c10;

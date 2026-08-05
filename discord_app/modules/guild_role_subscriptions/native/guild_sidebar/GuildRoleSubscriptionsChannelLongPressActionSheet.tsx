@@ -1,3 +1,9 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsChannelLongPressActionSheet.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import { StaticChannelRoute } from "set";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/12042_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/15127_registerAsset.js";
 import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -5,12 +11,6 @@ import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/component
 import { Form } from "../../../../design/void/Form/native/index.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsChannelLongPressActionSheet.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { StaticChannelRoute } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

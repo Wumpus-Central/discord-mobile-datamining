@@ -1,8 +1,8 @@
+// discord_app/modules/quests/utils/QuestServerUtils.tsx
+import _slicedToArray from "_slicedToArray";
 import { t } from "../../../../_runtime/04484_t.js";
 import { QuestRewardTypes } from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import { questFromServerV2 } from "../types/v2/Quest.tsx";
-// discord_app/modules/quests/utils/QuestServerUtils.tsx
-import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
 function progressFromServer(progress) {

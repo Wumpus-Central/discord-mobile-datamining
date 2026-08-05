@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/directory_channels/useCanManageGuildDirectoryEntry.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/directory_channels/useCanManageGuildDirectoryEntry.tsx");

@@ -1,10 +1,10 @@
-import { _isNativeReflectConstruct } from "../../../_runtime/05602__isNativeReflectConstruct.js";
 // discord_app/components_native/common/SequencedLottieAnimationView.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
+import { _isNativeReflectConstruct } from "../../../_runtime/05602__isNativeReflectConstruct.js";
 
 let closure_2 = ["source", "style"];
 class SequencedLottieAnimationView extends PureComponent {

@@ -1,9 +1,9 @@
-import { set } from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/activities/utils/isVoiceEmbeddedActivity.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateVoiceState from "updateVoiceState";
+import { set } from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
 const require = arg1;
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");

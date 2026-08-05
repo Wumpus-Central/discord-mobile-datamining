@@ -1,8 +1,8 @@
-import { context } from "../../../voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx";
 // discord_app/modules/app_launcher/native/base_components/AppLauncherFlashList.tsx
 import importAllResult from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { context } from "../../../voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx";
 
 const require = arg1;
 let forwardRefResult = importAllResult.forwardRef((simultaneousHandlers) => {

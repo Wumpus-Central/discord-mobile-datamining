@@ -1,6 +1,6 @@
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/interaction_components/content_inventory_entry/utils.tsx
 import { MessageEmbedFlags } from "ME";
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");
 

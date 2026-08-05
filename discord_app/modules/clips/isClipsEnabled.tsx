@@ -1,8 +1,8 @@
+// discord_app/modules/clips/isClipsEnabled.tsx
+import _migrateDefaultStorage from "_migrateDefaultStorage";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { apexExperiment } from "ClipsExperiment.tsx";
 import { apexExperiment } from "ClipsSettingsRedesignExperiment.tsx";
-// discord_app/modules/clips/isClipsEnabled.tsx
-import _migrateDefaultStorage from "_migrateDefaultStorage";
 
 const require = arg1;
 let result = require("apexExperiment").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");

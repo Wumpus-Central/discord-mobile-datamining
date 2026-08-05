@@ -1,7 +1,7 @@
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 // discord_app/modules/client_themes/SavedCustomThemeStore.tsx
 import SystemThemeState from "SystemThemeState";
 import { PersistedStore } from "initialize";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 
 let PROTO_THEME_MAP_WEB_REFRESH;
 let obj1;

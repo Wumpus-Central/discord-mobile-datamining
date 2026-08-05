@@ -1,6 +1,6 @@
-import { MurmurHashV3 } from "../../../_runtime/01217_MurmurHashV3.js";
 // discord_app/lib/uploader/webpConversion.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { MurmurHashV3 } from "../../../_runtime/01217_MurmurHashV3.js";
 
 const require = arg1;
 function _shouldConvertToWebP() {

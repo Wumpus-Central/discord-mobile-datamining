@@ -1,6 +1,6 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
 // discord_app/modules/debug/getPushNotificationLogs.android.tsx
 import fetchFingerprint from "fetchFingerprint";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
 
 const result = require("set").fileFinishedImporting("modules/debug/getPushNotificationLogs.android.tsx");
 

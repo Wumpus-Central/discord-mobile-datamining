@@ -1,7 +1,7 @@
-import { timestamp } from "../../debug/Logger.tsx";
 // discord_app/modules/quests/lib/getQuestLogger.tsx
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import { NOOP } from "sum";
+import { timestamp } from "../../debug/Logger.tsx";
 
 const result = require("timestamp").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 

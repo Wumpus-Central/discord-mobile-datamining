@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { apexExperiment } from "../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
-import { set } from "GuildThemePresets.tsx";
 // discord_app/modules/guild_themes/GuildThemeResolver.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -9,6 +6,9 @@ import handleConnectionOpen from "handleConnectionOpen";
 import handleEnd from "handleEnd";
 import snapshotSelectedGuildId from "snapshotSelectedGuildId";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { apexExperiment } from "../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
+import { set } from "GuildThemePresets.tsx";
 
 const require = arg1;
 function resolveSavedActiveGuildTheme(enabled) {

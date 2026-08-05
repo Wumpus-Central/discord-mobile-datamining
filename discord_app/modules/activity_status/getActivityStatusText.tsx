@@ -1,7 +1,7 @@
-import { StatusDisplayTypes } from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
-import { isEmbeddedActivity } from "../activities/utils/isEmbeddedActivity.tsx";
 // discord_app/modules/activity_status/getActivityStatusText.tsx
 import { ActivityTypes } from "ME";
+import { StatusDisplayTypes } from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
+import { isEmbeddedActivity } from "../activities/utils/isEmbeddedActivity.tsx";
 
 const result = require("isEmbeddedActivity").fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
 

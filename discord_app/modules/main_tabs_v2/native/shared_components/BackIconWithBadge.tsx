@@ -1,14 +1,14 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { ArrowLargeLeftIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import { XLargeIcon } from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/BackIconWithBadge.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { ArrowLargeLeftIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
+import { XLargeIcon } from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 
 let closure_6;
 let error;

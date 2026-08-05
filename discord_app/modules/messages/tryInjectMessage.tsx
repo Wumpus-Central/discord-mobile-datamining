@@ -1,9 +1,9 @@
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { createMessage } from "createMessage.tsx";
-import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 // discord_app/modules/messages/tryInjectMessage.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { createMessage } from "createMessage.tsx";
+import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 
 let c4;
 let c5;

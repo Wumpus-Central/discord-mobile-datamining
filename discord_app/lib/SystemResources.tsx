@@ -1,6 +1,6 @@
-import { getHermesInstrumentedStatsSummary } from "../utils/ProcessUtils.native.tsx";
 // discord_app/lib/SystemResources.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { getHermesInstrumentedStatsSummary } from "../utils/ProcessUtils.native.tsx";
 
 const require = arg1;
 let result = require("getHermesInstrumentedStatsSummary").fileFinishedImporting("lib/SystemResources.tsx");

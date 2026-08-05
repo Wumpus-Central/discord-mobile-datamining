@@ -1,9 +1,9 @@
-import { messagesProxy } from "../../../report_to_mod/ReportToMod.messages.js";
 // discord_app/modules/in_app_reports/native/components/InAppReportsBottomButton.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { messagesProxy } from "../../../report_to_mod/ReportToMod.messages.js";
 
 let c4;
 let c5;

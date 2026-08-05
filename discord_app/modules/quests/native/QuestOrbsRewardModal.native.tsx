@@ -1,14 +1,3 @@
-import { Background } from "../../../../_runtime/05245_Background.js";
-import { metadata } from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
-import { metadata } from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js";
-import { metadata } from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { VideoComponent } from "../../../components_native/common/Video.tsx";
-import { OrbsIcon } from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestOrbsRewardModal.native.tsx
 import handleOrientationChange from "handleOrientationChange";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -24,6 +13,17 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../../../_runtime/05245_Background.js";
+import { metadata } from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
+import { metadata } from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js";
+import { metadata } from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { VideoComponent } from "../../../components_native/common/Video.tsx";
+import { OrbsIcon } from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let closure_14;
 let closure_15;

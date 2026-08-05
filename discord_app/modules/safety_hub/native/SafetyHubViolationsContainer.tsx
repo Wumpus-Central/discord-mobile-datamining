@@ -1,10 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { WarningIcon } from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
-import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
 // discord_app/modules/safety_hub/native/SafetyHubViolationsContainer.tsx
 import _slicedToArray from "_slicedToArray";
 import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
@@ -14,6 +7,13 @@ import SafetyHubView from "SafetyHubView";
 import { AnalyticEvents } from "ME";
 import jsxProd from "asyncRequireImpl";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { WarningIcon } from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
+import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
 
 let c5;
 let c9;

@@ -1,8 +1,8 @@
-import { handleOrientationChange } from "../../../device/native/DeviceOrientation.tsx";
 // discord_app/modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx
 import set from "set";
 import set from "set";
 import set from "DCDDeviceManager";
+import { handleOrientationChange } from "../../../device/native/DeviceOrientation.tsx";
 
 if (set.isAndroid()) {
   const _module1 = require("useIsWindowLarge");

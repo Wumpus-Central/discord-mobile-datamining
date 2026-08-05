@@ -1,8 +1,8 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/channel/ChannelStatusStore.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import { Store } from "initialize";
 import set from "set";
+import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
 const require = arg1;
 function handleConnectionReset() {

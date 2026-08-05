@@ -1,10 +1,10 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx
 import noop from "noop";
 import { View } from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 const require = arg1;
 function VerificationListItem(userId) {

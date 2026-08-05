@@ -1,8 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceUserItem.tsx
 import { View } from "HeadphonesSlashIcon";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -11,6 +6,11 @@ import createCacheKey from "createCacheKey";
 import getLayoutStyles from "getLayoutStyles";
 import merged from "MicrophoneDenyIcon";
 import importAllResult from "registerAsset";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 
 let c5;
 let closure_6;

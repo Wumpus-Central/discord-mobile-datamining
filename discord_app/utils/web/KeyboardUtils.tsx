@@ -1,7 +1,3 @@
-import { keyCode } from "../../../_runtime/13071_keyCode.js";
-import { isDiscordFrontendDevelopment } from "../GlobalUtils.tsx";
-import { set } from "../PlatformUtils.tsx";
-import { normalizeKey } from "KeyboardLayoutMapUtils.tsx";
 // discord_app/utils/web/KeyboardUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import items from "items";
@@ -11,6 +7,10 @@ import importDefaultResult1 from "apply";
 import importDefaultResult2 from "apply";
 import set from "set";
 import set from "set";
+import { keyCode } from "../../../_runtime/13071_keyCode.js";
+import { isDiscordFrontendDevelopment } from "../GlobalUtils.tsx";
+import { set } from "../PlatformUtils.tsx";
+import { normalizeKey } from "KeyboardLayoutMapUtils.tsx";
 
 let LinuxKeyToCode;
 let c5;

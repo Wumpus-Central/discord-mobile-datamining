@@ -1,10 +1,10 @@
-import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
 
 let c5;
 let closure_6;

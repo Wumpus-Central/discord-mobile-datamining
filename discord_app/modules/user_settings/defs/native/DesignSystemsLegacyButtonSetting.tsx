@@ -1,6 +1,6 @@
-import { ComparisonRow } from "../../design_system/native/UserSettingsDesignSystemLegacyButton.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsLegacyButtonSetting.tsx
 import createToggle from "createToggle";
+import { ComparisonRow } from "../../design_system/native/UserSettingsDesignSystemLegacyButton.tsx";
 
 obj = {
   useTitle() {

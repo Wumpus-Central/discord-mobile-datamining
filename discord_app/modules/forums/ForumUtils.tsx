@@ -1,11 +1,11 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/forums/ForumUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET";
 import { ChannelFlags } from "set";
+import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 function getCreationDefaultFormatter() {

@@ -1,4 +1,3 @@
-import { useEmbeddedApps } from "../../../activities/useEmbeddedAppsForChannel.tsx";
 // discord_app/modules/channel_list_v2/native/items/VoiceChannel.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import importAllResult from "useIsConnectedToVoiceChannel";
@@ -11,6 +10,7 @@ import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import { NO_VOICE_STATES } from "getVoiceStatesForGuild";
 import ME from "ME";
 import { jsx } from "getChannelSubtitleData";
+import { useEmbeddedApps } from "../../../activities/useEmbeddedAppsForChannel.tsx";
 
 let closure_12;
 let map1;

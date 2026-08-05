@@ -1,11 +1,11 @@
-import { GuildNSFWContentLevel } from "../../../age_gate/native/AgeGateUtils.tsx";
-import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";
-import { initializeSearch } from "../../EmojiPickerUtils.tsx";
 // discord_app/modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import EmojiCategoryTypes from "EmojiCategoryTypes";
 import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE";
+import { GuildNSFWContentLevel } from "../../../age_gate/native/AgeGateUtils.tsx";
+import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";
+import { initializeSearch } from "../../EmojiPickerUtils.tsx";
 
 let c5;
 let closure_6;

@@ -1,5 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useHasExpiredShopBlocks } from "useHasExpiredShopBlocks.tsx";
 // discord_app/modules/collectibles/hooks/useMaybeFetchShopHome.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,6 +5,8 @@ import getHash from "getHash";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";
 import items from "items";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useHasExpiredShopBlocks } from "useHasExpiredShopBlocks.tsx";
 
 let c10;
 let c3;

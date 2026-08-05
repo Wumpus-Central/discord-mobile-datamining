@@ -1,13 +1,13 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { snapVolumeToDefault } from "../user_settings/voice/AudioSettingsUtils.tsx";
 // discord_app/modules/game_console/GameConsoleActionCreators.tsx
 import expandEventProperties from "expandEventProperties";
 import createRTCConnection from "createRTCConnection";
 import handleUpdate from "handleUpdate";
 import set from "set";
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { snapVolumeToDefault } from "../user_settings/voice/AudioSettingsUtils.tsx";
 
 let c9;
 let error;

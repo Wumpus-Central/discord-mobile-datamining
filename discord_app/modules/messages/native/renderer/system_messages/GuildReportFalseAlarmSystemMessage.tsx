@@ -1,3 +1,5 @@
+// discord_app/modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { ensureAvatarSource } from "../../../../../utils/native/AvatarUtils.tsx";
 import { getTagProperties } from "../getTagProperties.tsx";
@@ -6,8 +8,6 @@ import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { nativeStyleProperties } from "GuildAlertModeSystemMessage.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;
 const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx");

@@ -1,7 +1,7 @@
-import { wrapChildrenDefault } from "../../../../../design/components/TransitionGroup/TransitionGroup.tsx";
 // discord_app/modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { wrapChildrenDefault } from "../../../../../design/components/TransitionGroup/TransitionGroup.tsx";
 
 const require = arg1;
 function getItemKey(items) {

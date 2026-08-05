@@ -1,6 +1,6 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/hooks/useThrottle.tsx
 import noop from "noop";
+import { apply } from "../../_runtime/00012_apply.js";
 
 const require = arg1;
 function throttleStateFn(arg0) {

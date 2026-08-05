@@ -1,9 +1,9 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/SubscriptionPlanActionCreators.tsx
 import _deletePaymentSource from "_deletePaymentSource";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
 import { Endpoints } from "ME";
 import GuildFeatures from "GuildFeatures";
+import { dispatcher } from "../Dispatcher.tsx";
 
 let closure_6;
 let error;

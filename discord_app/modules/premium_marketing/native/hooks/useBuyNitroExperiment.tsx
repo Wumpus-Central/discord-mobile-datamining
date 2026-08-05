@@ -1,8 +1,8 @@
-import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { usePremiumPlanPurchasedStore as closure_5 } from "usePremiumPlanPurchasedStore";
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 
 const require = arg1;
 const result = require("usePremiumPlanPurchasedStore").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");

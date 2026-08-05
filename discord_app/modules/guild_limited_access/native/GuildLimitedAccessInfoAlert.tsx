@@ -1,7 +1,3 @@
-import { componentDidMount } from "../../../components_native/common/Alert.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -9,6 +5,10 @@ import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "GUILD_LIMITED_ACCESS_
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

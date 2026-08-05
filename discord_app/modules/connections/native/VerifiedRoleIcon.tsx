@@ -1,12 +1,12 @@
-import { LinkIcon } from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
-import { useRoleIcon } from "../../guild_boosting/native/RoleIconUtils.tsx";
-import { getHigherContrastColor } from "../../user_profile/utils/getHigherContrastColor.tsx";
 // discord_app/modules/connections/native/VerifiedRoleIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinkIcon } from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import { useRoleIcon } from "../../guild_boosting/native/RoleIconUtils.tsx";
+import { getHigherContrastColor } from "../../user_profile/utils/getHigherContrastColor.tsx";
 
 let c3;
 let c4;

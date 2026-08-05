@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,6 +6,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import { Permissions } from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");

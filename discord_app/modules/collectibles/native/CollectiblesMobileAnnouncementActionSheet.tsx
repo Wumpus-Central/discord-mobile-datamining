@@ -1,5 +1,3 @@
-import { metadata } from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx
 import metadata from "metadata";
 import get_ActivityIndicator from "QUICK_SWITCHER";
@@ -8,6 +6,8 @@ import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { metadata } from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let StyleSheet;
 let c10;

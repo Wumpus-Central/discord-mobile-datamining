@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsSessions } from "../../devices/native/UserSettingsSessions.tsx";
 // discord_app/modules/user_settings/defs/native/DevicesSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsSessions } from "../../devices/native/UserSettingsSessions.tsx";
 
 obj = {
   useTitle() {

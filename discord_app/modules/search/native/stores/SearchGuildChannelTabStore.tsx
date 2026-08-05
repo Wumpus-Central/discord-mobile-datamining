@@ -1,9 +1,9 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { NOOP } from "../../../../utils/AutocompleteUtils.tsx";
 // discord_app/modules/search/native/stores/SearchGuildChannelTabStore.tsx
 import comparator from "comparator";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { Store } from "initialize";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { NOOP } from "../../../../utils/AutocompleteUtils.tsx";
 
 let c3;
 let c4;

@@ -1,8 +1,8 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { Opcode } from "GatewaySocketOpcode.tsx";
 // discord_app/modules/gateway/GatewaySocketOpCodes.tsx
 import initialize from "initialize";
 import { EventEmitter } from "EventEmitter";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { Opcode } from "GatewaySocketOpcode.tsx";
 
 const require = arg1;
 class GatewaySocketOpCodes extends EventEmitter {

@@ -1,14 +1,14 @@
-import { useChatLayout } from "../../chat/native/useChatLayout.tsx";
-import { MobileHomeDrawerExperiment } from "../../home_drawer/native/HomeDrawerExperiment.tsx";
-import { matchPath } from "../../routing/matchPathCompat.tsx";
-import { transitionTo } from "../../routing/router_utils.tsx";
-import { RouteParam } from "../../routing/RouteUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/getInitialNavigationState.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
+import { useChatLayout } from "../../chat/native/useChatLayout.tsx";
+import { MobileHomeDrawerExperiment } from "../../home_drawer/native/HomeDrawerExperiment.tsx";
+import { matchPath } from "../../routing/matchPathCompat.tsx";
+import { transitionTo } from "../../routing/router_utils.tsx";
+import { RouteParam } from "../../routing/RouteUtils.tsx";
 
 let closure_6;
 let error;

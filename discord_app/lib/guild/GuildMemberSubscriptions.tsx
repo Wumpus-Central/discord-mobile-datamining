@@ -1,7 +1,7 @@
+// discord_app/lib/guild/GuildMemberSubscriptions.tsx
 import { apply } from "../../../_runtime/00012_apply.js";
 import { timestamp } from "../../modules/debug/Logger.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-// discord_app/lib/guild/GuildMemberSubscriptions.tsx
 const require = arg1;
 const MINUTE = require("set").Millis.MINUTE;
 const result = require("DISCORD_EPOCH").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");

@@ -1,10 +1,3 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import { generateAcceptInviteOptions } from "../../../../actions/InstantInviteActionCreators.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { getCurrentEmbeddedActivityChannel } from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/channels.tsx
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,6 +7,13 @@ import handleConnectionOpen from "handleConnectionOpen";
 import updateVoiceState from "updateVoiceState";
 import { RPC_SCOPE_CONFIG } from "RPC_SCOPE_CONFIG";
 import ME from "ME";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import { generateAcceptInviteOptions } from "../../../../actions/InstantInviteActionCreators.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { getCurrentEmbeddedActivityChannel } from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
+import { prototype } from "../../RPCError.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 let RPCCommands;
 let c10;

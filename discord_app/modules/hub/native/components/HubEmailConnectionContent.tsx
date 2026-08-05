@@ -1,10 +1,3 @@
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { HubEmailConnectionModal } from "HubEmailConnectionModal.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionContent.tsx
 import closure_3 from "HubEmailConnectionSteps";
 import _slicedToArray from "_slicedToArray";
@@ -15,6 +8,13 @@ import HubEmailConnectionSteps from "HubEmailConnectionSteps";
 import { MarketingURLs } from "ME";
 import jsxProd from "module_8276";
 import createCacheKey from "createCacheKey";
+import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { HubEmailConnectionModal } from "HubEmailConnectionModal.tsx";
 
 let c10;
 let c9;

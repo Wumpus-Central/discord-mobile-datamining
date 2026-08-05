@@ -1,6 +1,3 @@
-import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { useBackPressHandler } from "../../routing/native/useBackPressHandler.tsx";
-import { useIsInRestrictedHours } from "../hooks/useIsInRestrictedHours.tsx";
 // discord_app/modules/parent_tools/native/RestrictedHoursModal.tsx
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
@@ -8,6 +5,9 @@ import get_ActivityIndicator from "ManaContext";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "handleLogout";
 import createCacheKey from "createCacheKey";
+import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { useBackPressHandler } from "../../routing/native/useBackPressHandler.tsx";
+import { useIsInRestrictedHours } from "../hooks/useIsInRestrictedHours.tsx";
 
 let StyleSheet;
 let c5;

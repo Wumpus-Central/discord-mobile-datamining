@@ -1,3 +1,11 @@
+// discord_app/modules/opt_in_channels/OptInChannelsActionCreators.tsx
+import closure_3 from "MAX_FAVORITES";
+import initialize from "initialize";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import { AnalyticEvents } from "ME";
+import MAX_FAVORITES from "MAX_FAVORITES";
+import apply from "collectGuildAnalyticsMetadata";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { NotificationSettingsModalActionCreators } from "../../actions/NotificationSettingsModalActionCreators.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";
@@ -7,14 +15,6 @@ import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtil
 import { updateImpersonating } from "../impersonate/ImpersonateActionCreators.tsx";
 import { handleConnectionOpen } from "../user_settings/UserGuildSettingsManager.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
-// discord_app/modules/opt_in_channels/OptInChannelsActionCreators.tsx
-import closure_3 from "MAX_FAVORITES";
-import initialize from "initialize";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { AnalyticEvents } from "ME";
-import MAX_FAVORITES from "MAX_FAVORITES";
-import apply from "collectGuildAnalyticsMetadata";
 
 let c9;
 let metroImportAll;

@@ -1,3 +1,7 @@
+// discord_app/modules/guild_tag/native/badges/GuildBadge.tsx
+import "items";
+import { GuildTagBadgeKind } from "items";
+import { jsx } from "items";
 import { items } from "GuildBadgeBee.tsx";
 import { items } from "GuildBadgeBlossom.tsx";
 import { items } from "GuildBadgeBunny.tsx";
@@ -39,10 +43,6 @@ import { items } from "GuildBadgeTrophy.tsx";
 import { items } from "GuildBadgeWaterDrop.tsx";
 import { items } from "GuildBadgeWiltedFlower.tsx";
 import { items } from "GuildBadgeWind.tsx";
-// discord_app/modules/guild_tag/native/badges/GuildBadge.tsx
-import "items";
-import { GuildTagBadgeKind } from "items";
-import { jsx } from "items";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadge.tsx");

@@ -1,9 +1,9 @@
-import { getExpiringGuildEntitlements } from "utils/getExpiringGuildEntitlements.tsx";
 // discord_app/modules/premium/powerups/GuildPowerupsNotificationStore.tsx
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { PersistedStore } from "initialize";
+import { getExpiringGuildEntitlements } from "utils/getExpiringGuildEntitlements.tsx";
 
 const require = arg1;
 let closure_5 = {};

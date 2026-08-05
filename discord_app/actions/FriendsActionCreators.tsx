@@ -1,7 +1,7 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
 // discord_app/actions/FriendsActionCreators.tsx
 import { Routes } from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
 
 const result = require("transitionTo").fileFinishedImporting("actions/FriendsActionCreators.tsx");
 

@@ -1,11 +1,11 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { transitionTo } from "../routing/router_utils.tsx";
 // discord_app/modules/app_analytics/ThreadAnalyticsUtils.tsx
 import updateFromGuild from "updateFromGuild";
 import updateState from "updateState";
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
 
 const require = arg1;
 const result = require("createChannelRecord").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");

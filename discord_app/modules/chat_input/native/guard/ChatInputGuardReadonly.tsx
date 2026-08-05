@@ -1,4 +1,3 @@
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReadonly.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -12,6 +11,7 @@ import { TextAreaCta } from "TextAreaCta";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import importAllResult from "ChatInputGuard";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 
 let closure_12;
 let map1;

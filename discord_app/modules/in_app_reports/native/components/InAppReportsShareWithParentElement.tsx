@@ -1,8 +1,8 @@
-import { InAppReportsUpsellsTableRow } from "InAppReportsUpsellsTableRow.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { InAppReportsUpsellsTableRow } from "InAppReportsUpsellsTableRow.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");

@@ -1,9 +1,9 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 let c3;
 let c4;

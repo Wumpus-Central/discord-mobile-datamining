@@ -1,3 +1,8 @@
+// discord_app/modules/premium/PremiumSubscriptionOfferUtil.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import reset from "reset";
+import GuildFeatures from "GuildFeatures";
 import { t } from "../../../_runtime/03867_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useDiscountOffer } from "hooks/useDiscountOffer.tsx";
@@ -6,11 +11,6 @@ import { usePremiumTrialOffer } from "hooks/usePremiumTrialOffer.android.tsx";
 import { useHasActiveTrial } from "PremiumSubscriptionTrialUtil.tsx";
 import { useIsInReverseTrial } from "ReverseTrialUtils.native.tsx";
 import { _fetchUserOffer } from "UserOfferActionCreators.tsx";
-// discord_app/modules/premium/PremiumSubscriptionOfferUtil.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import reset from "reset";
-import GuildFeatures from "GuildFeatures";
 
 let c10;
 let c9;

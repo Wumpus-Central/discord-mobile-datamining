@@ -1,8 +1,8 @@
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/captcha/tooling/native/OpenCaptchaTestModal.tsx
 import asyncRequireImpl from "asyncRequireImpl";
 import "noop";
 import { jsx } from "jsxProd";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");

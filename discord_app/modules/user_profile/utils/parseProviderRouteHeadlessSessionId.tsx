@@ -1,6 +1,6 @@
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 // discord_app/modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx
 import _slicedToArray from "_slicedToArray";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 
 let c3 = "h:";
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");

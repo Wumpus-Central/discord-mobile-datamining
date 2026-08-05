@@ -1,8 +1,8 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/CertifiedDeviceStore.tsx
 import { DeviceTypes } from "DesktopSources";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 
 const CertifiedDeviceStore = "CertifiedDeviceStore";
 let closure_5 = {};

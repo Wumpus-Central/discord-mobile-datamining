@@ -1,5 +1,3 @@
-import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
-import { unpackStageChannelParty } from "StageChannelRichPresenceUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -12,6 +10,8 @@ import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate
 import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH";
 import ME from "ME";
 import { Store } from "initialize";
+import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
+import { unpackStageChannelParty } from "StageChannelRichPresenceUtils.tsx";
 
 let closure_14;
 let closure_15;

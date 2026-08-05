@@ -1,6 +1,6 @@
-import { TTIMeasurementView } from "../../tti_analytics/native/TTIMeasurementView.tsx";
 // discord_app/modules/chat/native/ChatTTITracker.tsx
 import jsxProd from "jsxProd";
+import { TTIMeasurementView } from "../../tti_analytics/native/TTIMeasurementView.tsx";
 
 let c3;
 let c4;

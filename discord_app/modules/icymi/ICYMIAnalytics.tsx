@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/icymi/ICYMIAnalytics.tsx
 import filterStaffGuild from "filterStaffGuild";
 import ME from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let c4;
 let c5;

@@ -1,13 +1,13 @@
-import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/quests/native/QuestDockDismissalToast.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 let c3;
 let c4;

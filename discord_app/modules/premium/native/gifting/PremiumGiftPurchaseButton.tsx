@@ -1,10 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNameplateData } from "../../../collectibles/nameplates/utils.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import { useShouldShowGiftingPromotionDeco } from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftPurchaseButton.tsx
 import useNavigation from "useNavigation";
 import get_ActivityIndicator from "LinearGradient";
@@ -16,6 +9,13 @@ import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "initialize";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getNameplateData } from "../../../collectibles/nameplates/utils.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import { useShouldShowGiftingPromotionDeco } from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
 
 let c4;
 let c5;

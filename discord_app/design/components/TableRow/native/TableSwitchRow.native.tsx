@@ -1,13 +1,13 @@
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { getNodeText } from "../../../utils/native.tsx";
-import { FormSwitch } from "../../Forms/native/FormSwitch.native.tsx";
-import { TableRowInner } from "TableRow.native.tsx";
 // discord_app/design/components/TableRow/native/TableSwitchRow.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { getNodeText } from "../../../utils/native.tsx";
+import { FormSwitch } from "../../Forms/native/FormSwitch.native.tsx";
+import { TableRowInner } from "TableRow.native.tsx";
 
 let c5;
 let closure_6;

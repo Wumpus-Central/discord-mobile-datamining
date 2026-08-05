@@ -1,10 +1,10 @@
+// discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { registerAsset } from "../../../../../_runtime/08610_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Emoji } from "../../../emojis/native/Emoji.tsx";
 import { useEmojiByIdOrName } from "../../useEmojiByIdOrName.tsx";
-// discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("useEmojiByIdOrName").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");

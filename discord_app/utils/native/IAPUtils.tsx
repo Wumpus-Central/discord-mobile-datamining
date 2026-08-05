@@ -1,10 +1,3 @@
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { GeneratedPaymentCurrencies } from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
-import { productSK2ToIAPProduct } from "../../modules/billing/native/StorekitIAPQueue.tsx";
-import { set } from "../PlatformUtils.tsx";
-import { DCDDeviceManager } from "DeviceUtils.tsx";
 // discord_app/utils/native/IAPUtils.tsx
 import updateProduct from "updateProduct";
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
@@ -14,6 +7,13 @@ import ME from "ME";
 import { NAMESPACE_SNOWFLAKE_UUID } from "GuildFeatures";
 import set from "set";
 import set from "getUserAgnosticState";
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { GeneratedPaymentCurrencies } from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
+import { productSK2ToIAPProduct } from "../../modules/billing/native/StorekitIAPQueue.tsx";
+import { set } from "../PlatformUtils.tsx";
+import { DCDDeviceManager } from "DeviceUtils.tsx";
 
 let IOS_BUNDLE_ID;
 let closure_12;

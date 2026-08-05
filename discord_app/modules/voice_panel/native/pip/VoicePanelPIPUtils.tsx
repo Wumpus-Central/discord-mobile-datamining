@@ -1,4 +1,3 @@
-import { canRenderParticipantVideo } from "../../../video_calls/participantHasVideo.tsx";
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx
 import getParticipants from "getParticipants";
 import reset from "reset";
@@ -8,6 +7,7 @@ import VoicePanelPIPModes from "VoicePanelPIPModes";
 import { ParticipantTypes } from "ParticipantTypes";
 import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE";
 import set from "fetchFingerprint";
+import { canRenderParticipantVideo } from "../../../video_calls/participantHasVideo.tsx";
 
 let PIPReferenceDimensions;
 let c5;

@@ -1,12 +1,12 @@
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/game_console/native/GameConsoleAlertUtils.tsx
 import "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "XBOX_URL_BASE";
 import ME from "ME";
 import { jsx } from "jsxProd";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
 let c5;
 let closure_6;

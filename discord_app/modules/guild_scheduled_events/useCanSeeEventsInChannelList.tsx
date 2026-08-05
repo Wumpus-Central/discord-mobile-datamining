@@ -1,6 +1,6 @@
+// discord_app/modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx
 import { useIsHubForGuild } from "../hub/useIsHubForGuild.tsx";
 import { useCanCreateAnEvent } from "useCanCreateAnEvent.tsx";
-// discord_app/modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx
 const result = require("useIsHubForGuild").fileFinishedImporting("modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx");
 
 export default function useCanSeeEventsInChannelList(arg0) {

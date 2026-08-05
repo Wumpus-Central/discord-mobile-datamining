@@ -1,6 +1,6 @@
-import { apexExperiment } from "../user_profile/PrivateProfilesExperiment.tsx";
 // discord_app/modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx
 import ApexExperiment from "ApexExperiment";
+import { apexExperiment } from "../user_profile/PrivateProfilesExperiment.tsx";
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-privacy-matching", kind: "user", defaultConfig: { copyChanges: false, upsell: false }, variations: { 0: { copyChanges: false, upsell: false }, 1: { copyChanges: true, upsell: false }, 2: { copyChanges: true, upsell: true } } });
 const result = require("set").fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");

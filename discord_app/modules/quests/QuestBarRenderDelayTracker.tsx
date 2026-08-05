@@ -1,9 +1,9 @@
+// discord_app/modules/quests/QuestBarRenderDelayTracker.tsx
+import { AnalyticEvents } from "ME";
 import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
 import { set } from "../monitoring/MonitoringAgent.tsx";
-// discord_app/modules/quests/QuestBarRenderDelayTracker.tsx
-import { AnalyticEvents } from "ME";
 
 let c4 = 30000;
 class QuestBarRenderDelayTracker {

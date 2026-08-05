@@ -1,6 +1,6 @@
+// discord_app/modules/user_profile/preloadUserBannerImage.tsx
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-// discord_app/modules/user_profile/preloadUserBannerImage.tsx
 const result = require("set").fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
 export default function preloadUserBannerImage(user) {

@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { updateDevToolsSettings } from "../../../devtools/DevToolsActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/ShowDevWidgetSetting.tsx
 import initialize from "initialize";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { updateDevToolsSettings } from "../../../devtools/DevToolsActionCreators.tsx";
 
 const require = arg1;
 createToggle = {

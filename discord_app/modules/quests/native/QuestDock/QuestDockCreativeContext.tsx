@@ -1,7 +1,7 @@
-import { AdCreativeType } from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockCreativeContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { AdCreativeType } from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 
 const require = arg1;
 let context = importAllResult.createContext(null);

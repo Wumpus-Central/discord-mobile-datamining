@@ -1,10 +1,3 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { t } from "../../../../_runtime/03867_t.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getMatch } from "../../../lib/QueryTokenizer.tsx";
-import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
-import { SearchTokenTypes } from "../SearchUtils.tsx";
-import { ANSWER_IN_REGEX } from "SearchTokensUtils.tsx";
 // discord_app/modules/search/tokens/SearchTokens.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -17,6 +10,13 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import handleUserSearchResults from "handleUserSearchResults";
 import handleReset from "handleReset";
 import ME from "ME";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { t } from "../../../../_runtime/03867_t.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getMatch } from "../../../lib/QueryTokenizer.tsx";
+import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
+import { SearchTokenTypes } from "../SearchUtils.tsx";
+import { ANSWER_IN_REGEX } from "SearchTokensUtils.tsx";
 
 let SearchTokenTypes;
 let c5;

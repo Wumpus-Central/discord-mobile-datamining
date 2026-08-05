@@ -1,14 +1,14 @@
+// discord_app/modules/wishlists/native/WishlistItemCardBase.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CheckmarkLargeBoldIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useUserProfileColors } from "../../user_profile/hooks/native/useUserProfileColors.tsx";
-// discord_app/modules/wishlists/native/WishlistItemCardBase.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let StyleSheet;
 let c3;

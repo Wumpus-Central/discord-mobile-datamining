@@ -1,12 +1,12 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { useIsSearchResultsFeedbackExperimentEnabled } from "../search/experiments/SearchResultsFeedbackExperiment.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/feedback/FeedbackManager.tsx
 import set from "set";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";
 import FeedbackRating from "FeedbackRating";
 import "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { useIsSearchResultsFeedbackExperimentEnabled } from "../search/experiments/SearchResultsFeedbackExperiment.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let FeedbackGroup;
 let FeedbackType;

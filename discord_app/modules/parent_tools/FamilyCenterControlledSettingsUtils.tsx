@@ -1,7 +1,7 @@
+// discord_app/modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { resolveExplicitContentSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
 import { result } from "../user_settings/family_center/ParentalControlledUserSettings.tsx";
-// discord_app/modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx
 function getGoreContentSettingOrDefault(arg0) {
   let goreContentFriendDm;
   let goreContentNonFriendDm;

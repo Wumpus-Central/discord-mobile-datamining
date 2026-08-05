@@ -1,14 +1,3 @@
-import { t } from "../../../_runtime/03984_t.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { getGameMediaRefURL } from "../games/getGameMediaRefURL.tsx";
-import { extractColorStringsFromServerColors } from "../premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
-import { useHasEnhancedRoleColors } from "../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
-import { getSoundmojiASTFromString } from "../premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx";
-import { validateContentTypes } from "MarkupLinkRule.tsx";
-import { staticRouteToTranslation } from "StaticRouteRendering.tsx";
-import { TIMESTAMP_FORMATS } from "TimestampUtils.tsx";
 // discord_app/modules/markup/MarkupRules.tsx
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
@@ -34,6 +23,17 @@ import importDefaultResult10 from "useHasEnhancedRoleColors";
 import importDefaultResult11 from "useHasEnhancedRoleColors";
 import importDefaultResult12 from "combineMarkupRules";
 import importDefaultResult13 from "useHasEnhancedRoleColors";
+import { t } from "../../../_runtime/03984_t.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { getGameMediaRefURL } from "../games/getGameMediaRefURL.tsx";
+import { extractColorStringsFromServerColors } from "../premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
+import { useHasEnhancedRoleColors } from "../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
+import { getSoundmojiASTFromString } from "../premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx";
+import { validateContentTypes } from "MarkupLinkRule.tsx";
+import { staticRouteToTranslation } from "StaticRouteRendering.tsx";
+import { TIMESTAMP_FORMATS } from "TimestampUtils.tsx";
 
 let c10;
 let closure_12;

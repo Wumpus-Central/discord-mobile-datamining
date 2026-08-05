@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/channel_list_v2/native/items/TextChannel.tsx
 import importAllResult from "module_4295";
 import { View } from "initialize";
@@ -11,6 +10,7 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import hairlineWidth from "hairlineWidth";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_12;
 let closure_14;

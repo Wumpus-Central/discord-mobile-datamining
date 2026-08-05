@@ -1,9 +1,9 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NoResults.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

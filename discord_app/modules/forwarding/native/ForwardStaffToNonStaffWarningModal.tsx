@@ -1,7 +1,7 @@
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx
 import jsxProd from "jsxProd";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c3;
 let c4;

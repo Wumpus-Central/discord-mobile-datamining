@@ -1,5 +1,3 @@
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { getClass } from "../../../../utils/StylesheetUtils.tsx";
 // discord_app/design/void/Button/native/Button.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -16,6 +14,8 @@ import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { getClass } from "../../../../utils/StylesheetUtils.tsx";
 
 let c10;
 let c4;

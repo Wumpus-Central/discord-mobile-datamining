@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
-import { spendingLimitEqual } from "SpendingLimitUtils.tsx";
 // discord_app/modules/parent_tools/SpendingLimitDisplay.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { SubscriptionIntervalTypes } from "GuildFeatures";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
+import { spendingLimitEqual } from "SpendingLimitUtils.tsx";
 
 const require = arg1;
 function getSpendingLimitDisplayState(amount) {

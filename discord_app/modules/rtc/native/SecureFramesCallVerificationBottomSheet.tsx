@@ -1,9 +1,9 @@
-import { SecureFramesVerificationBottomSheet } from "SecureFramesVerificationBottomSheet.tsx";
 // discord_app/modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx
 import noop from "noop";
 import createRTCConnection from "createRTCConnection";
 import { AnalyticsSections } from "ME";
 import { jsx } from "jsxProd";
+import { SecureFramesVerificationBottomSheet } from "SecureFramesVerificationBottomSheet.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");

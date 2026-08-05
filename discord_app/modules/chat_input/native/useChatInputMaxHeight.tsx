@@ -1,12 +1,12 @@
-import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
-import { useCustomKeyboardHeight } from "../../keyboard/native/useCustomKeyboardHeight.tsx";
-import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
-import { useSystemKeyboardHeight } from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
 // discord_app/modules/chat_input/native/useChatInputMaxHeight.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 import { CHAT_INPUT_PILL_CONTENT_SIZE as closure_6 } from "TextAreaCta";
+import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
+import { useCustomKeyboardHeight } from "../../keyboard/native/useCustomKeyboardHeight.tsx";
+import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
+import { useSystemKeyboardHeight } from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
 
 const require = arg1;
 function getChatInputMaxHeight() {

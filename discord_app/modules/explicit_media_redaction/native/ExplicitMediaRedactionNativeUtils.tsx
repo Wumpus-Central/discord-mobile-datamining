@@ -1,12 +1,12 @@
+// discord_app/modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
+import { SearchMediaTypes } from "MessageEmbedTypes";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
-// discord_app/modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
-import { SearchMediaTypes } from "MessageEmbedTypes";
 
 const require = arg1;
 let result = require("MessageEmbedTypes").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");

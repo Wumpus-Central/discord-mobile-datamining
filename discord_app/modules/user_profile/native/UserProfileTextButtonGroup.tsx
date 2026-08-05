@@ -1,10 +1,10 @@
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileTextButtonGroup.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 let c4;
 let c5;

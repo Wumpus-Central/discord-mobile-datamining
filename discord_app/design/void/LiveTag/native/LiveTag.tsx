@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/LiveTag/native/LiveTag.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "jsxProd";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Text } from "../../../components/Text/native/Text.tsx";
 
 const require = arg1;
 createCacheKey = { tag: null, tagText: null };

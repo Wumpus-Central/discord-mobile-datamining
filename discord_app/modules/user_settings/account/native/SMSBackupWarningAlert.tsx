@@ -1,8 +1,8 @@
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 // discord_app/modules/user_settings/account/native/SMSBackupWarningAlert.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 
 let c3;
 let c4;

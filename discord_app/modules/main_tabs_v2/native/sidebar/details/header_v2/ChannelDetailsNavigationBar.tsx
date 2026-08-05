@@ -1,5 +1,3 @@
-import { registerAsset } from "../../../../../../../_runtime/05916_registerAsset.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelDetailsNavigationBar.tsx
 import importAllResult from "registerAsset";
 import { View } from "IconButton";
@@ -13,6 +11,8 @@ import { ChannelSettingsSections } from "ME";
 import { SearchEntrypointAnalyticsLocations as closure_14 } from "SearchEntrypointAnalyticsLocations";
 import jsxProd from "useGuildSearchContext";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../../_runtime/05916_registerAsset.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c9;

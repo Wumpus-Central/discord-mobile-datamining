@@ -1,9 +1,9 @@
-import { Stack } from "../../Stack/native/Stack.native.tsx";
 // discord_app/design/components/RowGroup/native/RowGroup.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Stack } from "../../Stack/native/Stack.native.tsx";
 
 let c3;
 let c4;

@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useFavoritesAccess } from "../../FavoritesHooks.tsx";
-import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
 // discord_app/modules/favorites/native/action/useFavoritesGuildChannelActions.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import initializeFromUserSettings from "initializeFromUserSettings";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useFavoritesAccess } from "../../FavoritesHooks.tsx";
+import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
 
 const require = arg1;
 let result = require("initializeFromUserSettings").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");

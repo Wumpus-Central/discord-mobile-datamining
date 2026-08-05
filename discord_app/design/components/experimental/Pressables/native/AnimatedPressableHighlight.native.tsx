@@ -1,4 +1,3 @@
-import { SPRING_CONFIG } from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
 // discord_app/design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { jsx } from "jsxProd";
 import set from "set";
 import importDefaultResult from "module_4146";
 import set from "jsxProd";
+import { SPRING_CONFIG } from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
 
 const require = arg1;
 let closure_6 = require("module_4146").createAnimatedComponent(require("PressableBase").PressableHighlight);

@@ -1,8 +1,8 @@
-import { getStickerExtensionFromFormatType } from "../StickersUtils.tsx";
 // discord_app/modules/stickers/native/StickerPackBanner.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { getStickerExtensionFromFormatType } from "../StickersUtils.tsx";
 
 let c3;
 let obj1;

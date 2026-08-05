@@ -1,3 +1,9 @@
+// discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx
+import PressableBase from "PressableBase";
+import get_ActivityIndicator from "useWatchTaskPressHandler";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import jsxProd from "LinearGradient";
+import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
@@ -5,12 +11,6 @@ import { PressableCard } from "../../../../design/components/Card/native/Card.na
 import { useQuests } from "../../hooks/QuestHooks.tsx";
 import { QuestDockBlurredContentBackground } from "../QuestDock/QuestDockBlurredContentBackground.tsx";
 import { QUEST_PROGRESS_DIAMETER_BY_SIZE } from "../QuestProgressIndicator.tsx";
-// discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx
-import PressableBase from "PressableBase";
-import get_ActivityIndicator from "useWatchTaskPressHandler";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "LinearGradient";
-import createCacheKey from "createCacheKey";
 
 let StyleSheet;
 let c4;

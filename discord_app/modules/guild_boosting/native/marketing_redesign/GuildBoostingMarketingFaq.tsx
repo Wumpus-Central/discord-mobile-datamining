@@ -1,6 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +5,9 @@ import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
 let error;
 let metroImportAll;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ClipsSettingsScreen } from "../../clips/native/SettingsClipsScreen.tsx";
 // discord_app/modules/user_settings/defs/native/ClipsSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ClipsSettingsScreen } from "../../clips/native/SettingsClipsScreen.tsx";
 
 obj = {
   useTitle() {

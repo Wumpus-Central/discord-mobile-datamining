@@ -1,11 +1,11 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { items } from "../../../guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelsSection.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import PlatformTypes from "PlatformTypes";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { items } from "../../../guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx";
 
 let c5;
 let closure_6;

@@ -1,7 +1,7 @@
-import { SearchTokenTypes } from "../SearchUtils.tsx";
 // discord_app/modules/search/managers/SearchTokensManager.tsx
 import { subscribeToIntlLoadingSuccess as closure_2 } from "_setAppLocale";
 import "initialize";
+import { SearchTokenTypes } from "../SearchUtils.tsx";
 
 class SearchTokensManager extends tmp2 {
   constructor() {

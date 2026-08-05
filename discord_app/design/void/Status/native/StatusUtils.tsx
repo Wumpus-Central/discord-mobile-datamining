@@ -1,6 +1,6 @@
-import { STATUS_PADDING } from "getStatusContainerStyle.tsx";
 // discord_app/design/void/Status/native/StatusUtils.tsx
 import STATUS_PADDING from "STATUS_PADDING";
+import { STATUS_PADDING } from "getStatusContainerStyle.tsx";
 
 let c3;
 let obj1;

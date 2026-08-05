@@ -1,7 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { GappedList } from "../components/LayoutUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePreviewCard.tsx
 import _slicedToArray from "_slicedToArray";
 import "TruncatedText";
@@ -9,6 +5,10 @@ import get_ActivityIndicator from "getChannelIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import jsxProd from "emphasisHook";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { GappedList } from "../components/LayoutUtils.tsx";
 
 let c10;
 let c5;

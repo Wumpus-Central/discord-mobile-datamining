@@ -1,4 +1,3 @@
-import { handleVoiceChannelSelect } from "../VoicePermissionManager.tsx";
 // discord_app/modules/voice_calls/native/AudioSessionModeManager.tsx
 import participantFromServer from "participantFromServer";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
@@ -13,6 +12,7 @@ import { AppStates } from "ME";
 import set from "set";
 import "initialize";
 import set from "buildStageChannelUserRoles";
+import { handleVoiceChannelSelect } from "../VoicePermissionManager.tsx";
 
 const require = arg1;
 function handleAVAudioSessionMode() {

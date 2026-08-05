@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsWebAuthn } from "../../../webauthn/native/UserSettingsWebAuthn.tsx";
-import { _fetchWebAuthnConditionalChallenge } from "../../../webauthn/WebAuthnActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx
 import noop from "noop";
 import hasFetchedCredentials from "hasFetchedCredentials";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsWebAuthn } from "../../../webauthn/native/UserSettingsWebAuthn.tsx";
+import { _fetchWebAuthnConditionalChallenge } from "../../../webauthn/WebAuthnActionCreators.tsx";
 
 const require = arg1;
 createToggle = {

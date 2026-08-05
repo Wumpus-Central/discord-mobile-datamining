@@ -1,3 +1,13 @@
+// discord_app/modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx
+import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE";
+import { View } from "CollectiblesItemType";
+import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
+import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO";
+import jsxProd from "AvatarDecorationSampleV2";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { metadata } from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
@@ -10,16 +20,6 @@ import { getNameplateData } from "../nameplates/utils.tsx";
 import { useProfileEffect } from "../profile_effects/useProfileEffect.tsx";
 import { useMaybeFetchProfileFrame } from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
 import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
-// discord_app/modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx
-import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE";
-import { View } from "CollectiblesItemType";
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO";
-import jsxProd from "AvatarDecorationSampleV2";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let SAMPLE_PROFILE_ASPECT_RATIO;
 let closure_6;

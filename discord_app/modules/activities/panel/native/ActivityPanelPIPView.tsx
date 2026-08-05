@@ -1,5 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/activities/panel/native/ActivityPanelPIPView.tsx
 import importAllResult from "u";
 import { View } from "useWindowDimensions";
@@ -15,6 +13,8 @@ import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE";
 import { jsx } from "MIN_PIP_TOSS_VELOCITY";
 import Button from "Button";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let closure_12;
 let closure_14;

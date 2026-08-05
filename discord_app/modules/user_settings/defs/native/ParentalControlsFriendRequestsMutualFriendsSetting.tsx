@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualFriendsSetting.tsx
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { FriendSourceFlags } from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 
 const require = arg1;
 createToggle = {

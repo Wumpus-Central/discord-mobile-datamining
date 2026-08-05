@@ -1,9 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
-import { parseServerPerkConfigKind } from "../premium/perks_state/PerksStateUtils.tsx";
 // discord_app/modules/collectibles/CollectiblesUtils.tsx
 import { isAvatarDecorationRecord } from "fromServer";
 import { isNameplateRecord } from "fromServer";
@@ -13,6 +7,12 @@ import { AssetDisplayConfigRecord } from "fromServer";
 import items from "items";
 import ME from "ME";
 import { CurrencyCodes } from "sum";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
+import { parseServerPerkConfigKind } from "../premium/perks_state/PerksStateUtils.tsx";
 
 let c10;
 let c9;

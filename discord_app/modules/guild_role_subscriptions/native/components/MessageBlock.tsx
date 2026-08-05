@@ -1,10 +1,10 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/MessageBlock.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 
 const require = arg1;
 let obj = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };

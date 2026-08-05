@@ -1,10 +1,10 @@
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 // discord_app/modules/premium_marketing/native/components/BuyNitroGradient.tsx
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import importDefaultResult from "module_4146";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 
 let c4;
 let c5;

@@ -1,9 +1,9 @@
+// discord_app/modules/guild_instant_invites/native/InstantInviteIcons.tsx
+import { Platform } from "get ActivityIndicator";
 import { registerAsset } from "../../../../_runtime/09016_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/09610_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/09611_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/09612_registerAsset.js";
-// discord_app/modules/guild_instant_invites/native/InstantInviteIcons.tsx
-import { Platform } from "get ActivityIndicator";
 
 const obj = {};
 Object.defineProperty(obj, "more", { get: () => registerAsset /* registerAsset */, set: undefined });

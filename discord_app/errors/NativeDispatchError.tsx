@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { formatSize } from "../utils/FileSizeUtils.tsx";
 // discord_app/errors/NativeDispatchError.tsx
 import { DispatchErrorCodes } from "RPC_SCOPE_CONFIG";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { formatSize } from "../utils/FileSizeUtils.tsx";
 
 const result = require("formatSize").fileFinishedImporting("errors/NativeDispatchError.tsx");
 class NativeDispatchError {

@@ -1,9 +1,9 @@
-import { RequestDataContent } from "RequestDataContent.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/RequestDataScreen.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { RequestDataContent } from "RequestDataContent.tsx";
 
 let StyleSheet;
 let obj1;

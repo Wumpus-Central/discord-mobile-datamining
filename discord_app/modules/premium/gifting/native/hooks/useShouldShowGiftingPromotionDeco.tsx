@@ -1,6 +1,6 @@
-import { NativeGiftContextProvider } from "../../../../payments/native/NativeGiftContext.tsx";
 // discord_app/modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx
 import { PremiumTypes } from "GuildFeatures";
+import { NativeGiftContextProvider } from "../../../../payments/native/NativeGiftContext.tsx";
 
 const result = require("set").fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
 

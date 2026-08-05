@@ -1,11 +1,11 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import set from "mergeGuildAvatar";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 const GuildNSFWContentLevel = ME.GuildNSFWContentLevel;

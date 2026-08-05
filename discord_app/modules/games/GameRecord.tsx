@@ -1,9 +1,9 @@
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { getGameMediaRefURL } from "getGameMediaRefURL.tsx";
 // discord_app/modules/games/GameRecord.tsx
 import "toJS";
 import createExecutable from "createExecutable";
 import { createExecutable } from "createExecutable";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { getGameMediaRefURL } from "getGameMediaRefURL.tsx";
 
 const require = arg1;
 const result = require("PermissionOverwriteType").fileFinishedImporting("modules/games/GameRecord.tsx");

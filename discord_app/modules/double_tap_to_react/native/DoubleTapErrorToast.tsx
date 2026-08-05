@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { XSmallBoldIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapErrorToast.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EmojiDisabledReasons } from "set";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { XSmallBoldIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 const require = arg1;
 function DoubleTapErrorToastIcon() {

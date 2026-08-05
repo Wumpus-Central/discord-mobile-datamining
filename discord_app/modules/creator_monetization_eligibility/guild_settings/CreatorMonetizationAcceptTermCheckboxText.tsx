@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx
 import { HelpdeskArticles } from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
 
 const result = require("combined").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx");
 

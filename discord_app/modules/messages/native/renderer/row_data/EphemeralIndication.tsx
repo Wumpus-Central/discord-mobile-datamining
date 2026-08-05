@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { combined } from "../../../../../utils/HelpdeskUtils.tsx";
-import { getEphemeralReasonMessage } from "../../../../application_commands/ApplicationCommandUserAppUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/EphemeralIndication.tsx
 import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";
 import ME from "ME";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { combined } from "../../../../../utils/HelpdeskUtils.tsx";
+import { getEphemeralReasonMessage } from "../../../../application_commands/ApplicationCommandUserAppUtils.tsx";
 
 let c4;
 let c5;

@@ -1,15 +1,15 @@
-import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { HeaderActionButton } from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { EditGuildEventScreens } from "../../utils/EditGuildEventUtils.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { HeaderActionButton } from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { EditGuildEventScreens } from "../../utils/EditGuildEventUtils.tsx";
 
 let c5;
 let closure_6;

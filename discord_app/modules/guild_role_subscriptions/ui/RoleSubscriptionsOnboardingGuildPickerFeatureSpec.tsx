@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx
 import getHash from "getHash";
 import { isGuildOwner } from "GuildNSFWContentLevel";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 let result = require("getSystemLocale").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");

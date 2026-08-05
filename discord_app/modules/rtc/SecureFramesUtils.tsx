@@ -1,3 +1,14 @@
+// discord_app/modules/rtc/SecureFramesUtils.tsx
+import _slicedToArray from "_slicedToArray";
+import initialize from "initialize";
+import fetchFingerprint from "fetchFingerprint";
+import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import createRTCConnection from "createRTCConnection";
+import closure_8 from "initialize";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import items from "items";
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
+import ME from "ME";
 import { byteLength } from "../../../_runtime/00206_byteLength.js";
 import { t } from "../../../_runtime/03867_t.js";
 import { set } from "../../../discord_common/js/packages/libdave/index.tsx";
@@ -10,17 +21,6 @@ import { nameFromUser } from "../../utils/UserUtils.tsx";
 import { savePersistentCodesEnabled } from "SecureFramesActionCreators.tsx";
 import { SecureFramesPlatformUtils.native } from "SecureFramesPlatformUtils.native.tsx";
 import { trackRTCPanelViewed } from "SecureFramesTracking.tsx";
-// discord_app/modules/rtc/SecureFramesUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import closure_8 from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import items from "items";
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import ME from "ME";
 
 let closure_12;
 let closure_14;

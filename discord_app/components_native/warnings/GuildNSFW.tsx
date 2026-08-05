@@ -1,15 +1,15 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { AgeVerificationModalEntryPoint } from "../../modules/age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import { useAgeVerificationRunner } from "../../modules/age_assurance/AgeVerificationUtils.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../../modules/age_gate/AgeGateUtils.tsx";
-import { GatedContent } from "GatedContent.tsx";
 // discord_app/components_native/warnings/GuildNSFW.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { AgeGateSource } from "result";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { AgeVerificationModalEntryPoint } from "../../modules/age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import { useAgeVerificationRunner } from "../../modules/age_assurance/AgeVerificationUtils.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../../modules/age_gate/AgeGateUtils.tsx";
+import { GatedContent } from "GatedContent.tsx";
 
 const require = arg1;
 let closure_3 = ["modalType"];

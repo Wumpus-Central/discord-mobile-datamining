@@ -1,8 +1,8 @@
-import { t } from "../../../../../../../_runtime/03867_t.js";
-import { parseMessageEmbedForProps } from "../../../../../safety_hub/SafetyHubUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx
 import { Image } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
+import { t } from "../../../../../../../_runtime/03867_t.js";
+import { parseMessageEmbedForProps } from "../../../../../safety_hub/SafetyHubUtils.tsx";
 
 const result = require("t").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx");
 

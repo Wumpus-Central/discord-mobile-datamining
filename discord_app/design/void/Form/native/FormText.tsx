@@ -1,9 +1,9 @@
-import { result } from "../../../migrations/native/LegacyTokens.tsx";
-import { Button } from "../../native.tsx";
 // discord_app/design/void/Form/native/FormText.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { result } from "../../../migrations/native/LegacyTokens.tsx";
+import { Button } from "../../native.tsx";
 
 const require = arg1;
 let closure_3 = createCacheKey.createStyles((arg0) => {

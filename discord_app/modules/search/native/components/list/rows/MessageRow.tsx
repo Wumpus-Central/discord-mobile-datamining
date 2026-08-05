@@ -1,8 +1,3 @@
-import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../../../design/void/native.tsx";
-import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
-import { useNullableMessageAuthor } from "../../../../../messages/useMessageAuthor.tsx";
-import { PollBadge } from "../../../../../polls/native/PollBadge.tsx";
 // discord_app/modules/search/native/components/list/rows/MessageRow.tsx
 import importAllResult from "nameFromUser";
 import get_ActivityIndicator from "registerAsset";
@@ -14,6 +9,11 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { MessageFlags } from "ME";
 import jsxProd from "useSearchMessageTimestamp";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../../../../design/void/native.tsx";
+import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
+import { useNullableMessageAuthor } from "../../../../../messages/useMessageAuthor.tsx";
+import { PollBadge } from "../../../../../polls/native/PollBadge.tsx";
 
 let Platform;
 let c4;

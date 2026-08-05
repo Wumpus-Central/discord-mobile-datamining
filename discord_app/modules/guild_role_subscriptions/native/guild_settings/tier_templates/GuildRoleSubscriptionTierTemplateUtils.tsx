@@ -1,5 +1,5 @@
-import { set } from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx
+import { set } from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 const result = require("VoiceLockIcon").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx");
 
 export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {

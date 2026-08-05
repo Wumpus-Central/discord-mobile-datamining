@@ -1,11 +1,11 @@
-import { set } from "../../../../core/native/NativeView.tsx";
-import { BrokenImage } from "../../../../image/native/BrokenImage.tsx";
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../../core/native/NativeView.tsx";
+import { BrokenImage } from "../../../../image/native/BrokenImage.tsx";
 
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles((aspectRatio) => {

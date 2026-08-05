@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 // discord_app/components_native/premium/PremiumSubscriptionUpsell.tsx
 import "registerAsset";
 import get_ActivityIndicator from "Text";
@@ -9,6 +7,8 @@ import { Gradients } from "items";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
 let StyleSheet;
 let c10;

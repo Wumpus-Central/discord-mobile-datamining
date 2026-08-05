@@ -1,3 +1,8 @@
+// discord_app/modules/quests/native/BountiesModal/BountiesAutoScrollIndicator.tsx
+import noop from "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { CircularProgress } from "../../../../../_runtime/14204_CircularProgress.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ArrowSmallUpIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
@@ -5,11 +10,6 @@ import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-// discord_app/modules/quests/native/BountiesModal/BountiesAutoScrollIndicator.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

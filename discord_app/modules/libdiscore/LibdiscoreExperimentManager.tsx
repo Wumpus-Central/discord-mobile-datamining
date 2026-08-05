@@ -1,9 +1,9 @@
-import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { items } from "libdiscoreExperiments.tsx";
 // discord_app/modules/libdiscore/LibdiscoreExperimentManager.tsx
 import initialize from "initialize";
 import "initialize";
+import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { items } from "libdiscoreExperiments.tsx";
 
 const require = arg1;
 function experimentStoreUpdateHandler() {

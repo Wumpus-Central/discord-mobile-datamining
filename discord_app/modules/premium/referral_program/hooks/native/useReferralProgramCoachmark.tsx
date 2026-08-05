@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/15736_registerAsset.js";
-import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { useSelectedDismissibleContent } from "../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { useIsEligibleSenderForReferralProgram } from "../useIsEligibleSenderForReferralProgram.tsx";
 // discord_app/modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -12,6 +6,12 @@ import { UserSettingsSections } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/15736_registerAsset.js";
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { useSelectedDismissibleContent } from "../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { useIsEligibleSenderForReferralProgram } from "../useIsEligibleSenderForReferralProgram.tsx";
 
 const require = arg1;
 function ReferralProgramCoachmarkImg() {

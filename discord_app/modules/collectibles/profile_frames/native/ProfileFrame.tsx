@@ -1,4 +1,3 @@
-import { OverrideProfileFrameLayer } from "tooling/FramePreviewOverrideFrame.tsx";
 // discord_app/modules/collectibles/profile_frames/native/ProfileFrame.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -7,6 +6,7 @@ import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPON
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { OverrideProfileFrameLayer } from "tooling/FramePreviewOverrideFrame.tsx";
 
 let StyleSheet;
 let c3;

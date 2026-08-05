@@ -1,8 +1,3 @@
-import { registerAsset } from "../../../../_runtime/15138_registerAsset.js";
-import { BookCheckIcon } from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
-import { BaseChannelSubtitle } from "BaseChannelItem.tsx";
 // discord_app/modules/guild_sidebar/native/ChannelItem.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "BookCheckIcon";
@@ -16,6 +11,11 @@ import jsxProd from "getChannelRoleSubscriptionStatus";
 import createCacheKey from "createCacheKey";
 import importAllResult from "initialize";
 import set from "get ActivityIndicator";
+import { registerAsset } from "../../../../_runtime/15138_registerAsset.js";
+import { BookCheckIcon } from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
+import { BaseChannelSubtitle } from "BaseChannelItem.tsx";
 
 let closure_14;
 let map1;

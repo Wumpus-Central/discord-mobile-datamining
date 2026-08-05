@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { BlockedUsersList } from "../../content_and_social/native/BlockedUsersListV2.tsx";
 // discord_app/modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx
 import upsertRelationship from "upsertRelationship";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { BlockedUsersList } from "../../content_and_social/native/BlockedUsersListV2.tsx";
 
 const require = arg1;
 createToggle = {

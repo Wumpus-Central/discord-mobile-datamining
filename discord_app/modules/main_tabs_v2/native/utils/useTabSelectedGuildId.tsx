@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");

@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/go_live/GoLiveNotificationUtils.tsx
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/go_live/GoLiveNotificationUtils.tsx");
 

@@ -1,11 +1,11 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/hooks/useCanDM.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const require = arg1;
 const result = require("fetchFingerprint").fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");

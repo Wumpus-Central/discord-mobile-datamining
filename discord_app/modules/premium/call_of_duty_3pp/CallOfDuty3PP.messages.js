@@ -1,3 +1,6 @@
+// discord_app/modules/premium/call_of_duty_3pp/CallOfDuty3PP.messages.js
+import 01274__ from "../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../_runtime/03064_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03065_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03066_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../_runtime/03092_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03093_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03094_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/premium/call_of_duty_3pp/CallOfDuty3PP.messages.js
-import 01274__ from "../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

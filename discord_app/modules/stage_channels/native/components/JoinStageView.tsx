@@ -1,12 +1,12 @@
+// discord_app/modules/stage_channels/native/components/JoinStageView.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { sortKey } from "../../StageChannelParticipants.tsx";
 import { useStageParticipants } from "../../StageChannelParticipantStoreHooks.tsx";
 import { fillChunk } from "../../StageChannelUtils.tsx";
 import { AgeVerificationSpeakerActionSheet } from "StageActionBarButtons.tsx";
 import { styles } from "StageViewWithPrompts.tsx";
-// discord_app/modules/stage_channels/native/components/JoinStageView.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("useStageParticipants").fileFinishedImporting("modules/stage_channels/native/components/JoinStageView.tsx");

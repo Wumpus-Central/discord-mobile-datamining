@@ -1,3 +1,7 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
@@ -6,10 +10,6 @@ import { ModalType } from "../analytics/GuildPowerupAnalytics.tsx";
 import { messagesProxy } from "../GuildPowerups.messages.js";
 import { useDeactivateWarningText } from "../hooks/useDeactivateWarningText.tsx";
 import { useGuildPowerupOnDeactivate } from "../hooks/useGuildPowerupOnDeactivate.tsx";
-// discord_app/modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

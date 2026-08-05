@@ -1,6 +1,6 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeRemoteAuthCryptoModule.tsx";
 // discord_app/modules/remote_auth/RemoteAuthCrypto.android.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeRemoteAuthCryptoModule.tsx";
 
 let closure_3 = {};
 class AndroidRemoteAuthCrypto {

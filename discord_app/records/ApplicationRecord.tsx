@@ -1,12 +1,12 @@
-import { ApplicationOverlayMethodFlags } from "../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx";
-import { getAvatarURL } from "../utils/AvatarUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/records/ApplicationRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
 import createdAt from "createdAt";
 import items3 from "items3";
 import { ApplicationTypes } from "ApplicationTypes";
+import { ApplicationOverlayMethodFlags } from "../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx";
+import { getAvatarURL } from "../utils/AvatarUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 let END_GAME_APPLICATION_ID;
 let POKER_NIGHT_APPLICATION_ID;

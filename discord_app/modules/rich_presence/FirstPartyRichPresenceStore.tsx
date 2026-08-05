@@ -1,6 +1,6 @@
-import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
 import { Store } from "initialize";
+import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
 
 function updateActivities() {
   const items = [];

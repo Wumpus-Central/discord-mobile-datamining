@@ -1,9 +1,9 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { generateAcceptInviteOptions } from "InstantInviteActionCreators.tsx";
 // discord_app/actions/CreateInviteModalActionCreators.tsx
 import updateWithLatestInvite from "updateWithLatestInvite";
 import { AnalyticEvents } from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { generateAcceptInviteOptions } from "InstantInviteActionCreators.tsx";
 
 const require = arg1;
 const result = require("dispatcher").fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");

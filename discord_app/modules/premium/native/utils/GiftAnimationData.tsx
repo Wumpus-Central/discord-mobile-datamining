@@ -1,6 +1,6 @@
-import { _sendGiftMessage } from "../../PremiumGiftingUtils.tsx";
 // discord_app/modules/premium/native/utils/GiftAnimationData.tsx
 import { PremiumGiftStyles } from "GuildFeatures";
+import { _sendGiftMessage } from "../../PremiumGiftingUtils.tsx";
 
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
 const result = require("module_9505").fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");

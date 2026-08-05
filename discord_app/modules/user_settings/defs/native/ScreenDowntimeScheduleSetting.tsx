@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { apexExperiment } from "../../../parent_tools/FamilyCenterV3Experiment.tsx";
 import { useUserIsTeenAgeGroup } from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
 import { useUserIdsForLinkStatus } from "../../../parent_tools/hooks/useUserLinks.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

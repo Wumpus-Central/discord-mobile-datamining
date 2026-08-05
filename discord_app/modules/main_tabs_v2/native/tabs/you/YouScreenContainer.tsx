@@ -1,11 +1,11 @@
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import { trackTabPressed } from "../TabsPerformanceTracker.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx
 import { View } from "get ActivityIndicator";
 import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { trackTabPressed } from "../TabsPerformanceTracker.tsx";
 
 const require = arg1;
 let obj = { container: null, androidContainer: null, wrapper: null };

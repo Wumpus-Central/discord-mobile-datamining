@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
+import zustandStore from "zustandStore";
+import createToggle from "createToggle";
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { apexExperiment } from "../../../bug_reporter/BugReporterExperiment.tsx";
-// discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
-import zustandStore from "zustandStore";
-import createToggle from "createToggle";
 
 const require = arg1;
 function useBugReporterExperimentSettingPredicate() {

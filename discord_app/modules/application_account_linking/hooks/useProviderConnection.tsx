@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/application_account_linking/hooks/useProviderConnection.tsx
 import set from "set";
 import noop from "noop";
 import closure_5 from "set";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");

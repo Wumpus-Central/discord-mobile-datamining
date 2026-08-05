@@ -1,6 +1,6 @@
+// discord_app/modules/guilds_bar/native/GuildsBarConstants.tsx
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
-// discord_app/modules/guilds_bar/native/GuildsBarConstants.tsx
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");
 
 export const GUILD_ITEM_SIZE = 48;

@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");

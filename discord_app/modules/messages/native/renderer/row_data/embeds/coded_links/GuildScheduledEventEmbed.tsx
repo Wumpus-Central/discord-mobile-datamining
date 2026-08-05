@@ -1,15 +1,3 @@
-import { registerAsset } from "../../../../../../../../_runtime/12509_registerAsset.js";
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../../../../../../utils/GuildRecordUtils.tsx";
-import { getGuildEventsForCurrentUser } from "../../../../../../guild_scheduled_events/GuildScheduledEventManager.tsx";
-import { GuildScheduledEventsActionCreators } from "../../../../../../guild_scheduled_events/GuildScheduledEventsActionCreators.tsx";
-import { getEventLocationIconSource } from "../../../../../../guild_scheduled_events/native/components/GuildEventUtils.tsx";
-import { canEveryoneRoleViewEvent } from "../../../../../../guild_scheduled_events/useCanInviteForGuildEvent.tsx";
-import { useEventSchedule } from "../../../../../../guild_scheduled_events/useEventSchedule.tsx";
-import { getChannelFromEvent } from "../../../../../../guild_scheduled_events/utils/EntityUtils.tsx";
-import { getRRule } from "../../../../../../guild_scheduled_events/utils/ScheduleUtils.tsx";
-import { frozen } from "../../../EmbedUtils.tsx";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/GuildScheduledEventEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import { processColor } from "getSystemLocale";
@@ -23,6 +11,18 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import { GuildScheduledEventEntityTypes as closure_14 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { InviteTypes } from "InviteSendStates";
+import { registerAsset } from "../../../../../../../../_runtime/12509_registerAsset.js";
+import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../../../../../../../utils/GuildRecordUtils.tsx";
+import { getGuildEventsForCurrentUser } from "../../../../../../guild_scheduled_events/GuildScheduledEventManager.tsx";
+import { GuildScheduledEventsActionCreators } from "../../../../../../guild_scheduled_events/GuildScheduledEventsActionCreators.tsx";
+import { getEventLocationIconSource } from "../../../../../../guild_scheduled_events/native/components/GuildEventUtils.tsx";
+import { canEveryoneRoleViewEvent } from "../../../../../../guild_scheduled_events/useCanInviteForGuildEvent.tsx";
+import { useEventSchedule } from "../../../../../../guild_scheduled_events/useEventSchedule.tsx";
+import { getChannelFromEvent } from "../../../../../../guild_scheduled_events/utils/EntityUtils.tsx";
+import { getRRule } from "../../../../../../guild_scheduled_events/utils/ScheduleUtils.tsx";
+import { frozen } from "../../../EmbedUtils.tsx";
+import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 
 let c5;
 let closure_6;

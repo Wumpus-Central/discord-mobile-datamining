@@ -1,7 +1,3 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { TextField } from "../../../../../design/components/TextField/native/TextField.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../../people/FriendRequestMessageExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendById.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -9,6 +5,10 @@ import get_ActivityIndicator from "Button";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { TextField } from "../../../../../design/components/TextField/native/TextField.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../../people/FriendRequestMessageExperiment.tsx";
 
 let c10;
 let c5;

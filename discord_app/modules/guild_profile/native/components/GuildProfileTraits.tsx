@@ -1,11 +1,11 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { getEmojiUnavailableReason } from "../../../../utils/EmojiUtils.tsx";
 // discord_app/modules/guild_profile/native/components/GuildProfileTraits.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { getEmojiUnavailableReason } from "../../../../utils/EmojiUtils.tsx";
 
 let c5;
 let closure_6;

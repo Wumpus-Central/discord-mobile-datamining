@@ -1,6 +1,6 @@
-import { StackBlock } from "../../design_system/native/UserSettingsDesignSystemStack.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemStackSetting.tsx
 import createToggle from "createToggle";
+import { StackBlock } from "../../design_system/native/UserSettingsDesignSystemStack.tsx";
 
 obj = {
   useTitle() {

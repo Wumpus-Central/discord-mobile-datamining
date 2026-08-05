@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
-import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
+import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 
 const require = arg1;
 createToggle = {

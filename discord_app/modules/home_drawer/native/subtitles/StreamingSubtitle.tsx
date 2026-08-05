@@ -1,9 +1,9 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNickname } from "../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/home_drawer/native/subtitles/StreamingSubtitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../utils/NicknameUtils.tsx";
 
 const require = arg1;
 const result = require("Text").fileFinishedImporting("modules/home_drawer/native/subtitles/StreamingSubtitle.tsx");

@@ -1,8 +1,8 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
 // discord_app/modules/markup/native/MarkupReactGameMentionRule.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../components_native/common/FastImage.tsx";
 
 let c3;
 let c4;

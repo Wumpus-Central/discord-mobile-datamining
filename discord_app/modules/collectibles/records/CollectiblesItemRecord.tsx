@@ -1,4 +1,3 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/records/CollectiblesItemRecord.tsx
 import fromServer from "fromServer";
 import closure_3 from "fromServer";
@@ -6,6 +5,7 @@ import closure_4 from "fromServer";
 import closure_5 from "fromServer";
 import closure_6 from "fromServer";
 import ME from "ME";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 let error;
 let metroImportAll;

@@ -1,4 +1,3 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx
 import _slicedToArray from "_slicedToArray";
 import ModalActionCreators from "../../../../actions/ModalActionCreators.tsx";
@@ -9,6 +8,7 @@ import VibingWumpusAction from "VibingWumpusAction";
 import { AnalyticEvents } from "ME";
 import jsxProd from "PauseIcon";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 let c10;
 let c5;

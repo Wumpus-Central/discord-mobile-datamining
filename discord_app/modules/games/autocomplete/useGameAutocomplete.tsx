@@ -1,11 +1,11 @@
-import { _fetchGameAutocomplete } from "GameAutocompleteActionCreators.tsx";
-import { GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH } from "GameAutocompleteUtils.tsx";
 // discord_app/modules/games/autocomplete/useGameAutocomplete.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import importDefaultResult from "set";
 import { QueryIds } from "ME";
 import initialize from "initialize";
+import { _fetchGameAutocomplete } from "GameAutocompleteActionCreators.tsx";
+import { GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH } from "GameAutocompleteUtils.tsx";
 
 let require = arg1;
 let c4 = importDefaultResult;

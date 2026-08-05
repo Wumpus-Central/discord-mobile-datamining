@@ -1,6 +1,6 @@
-import { t } from "roundToNearestPixel.tsx";
 // discord_app/modules/voice_panel/native/utils/calculateContentCenterOffset.tsx
 import { EDGE_GUTTER } from "CARD_SIZE";
+import { t } from "roundToNearestPixel.tsx";
 
 const fn = function t(arg0) {
   let contentHeight;

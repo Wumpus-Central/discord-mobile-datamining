@@ -1,7 +1,7 @@
+// discord_app/design/tokens/native/useToken.tsx
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-// discord_app/design/tokens/native/useToken.tsx
 const require = arg1;
 const map = new Map();
 const keys = Object.keys(require("Themes").colors);

@@ -1,6 +1,3 @@
-import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { CollectiblesShopCardInternalV2 } from "../CollectiblesShopCardV2.tsx";
 // discord_app/modules/collectibles/native/tooling/CollectiblesTool.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +7,9 @@ import map from "map";
 import { useFramePreviewOverrideStore as closure_9 } from "measure";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { CollectiblesShopCardInternalV2 } from "../CollectiblesShopCardV2.tsx";
 
 let c10;
 let c5;

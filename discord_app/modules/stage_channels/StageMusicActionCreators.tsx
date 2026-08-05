@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/stage_channels/StageMusicActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
 
 export const updateStageMusicMuted = function updateStageMusicMuted(muted) {

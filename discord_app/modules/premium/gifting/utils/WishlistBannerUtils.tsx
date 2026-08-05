@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/premium/gifting/utils/WishlistBannerUtils.tsx
 import { useMemo } from "noop";
 import { intl } from "getSystemLocale";
 import { intl as intl2 } from "getSystemLocale";
 import { intl as intl3 } from "getSystemLocale";
 import { intl as intl4 } from "getSystemLocale";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let obj = { FULL_WISHLIST: "FULL_WISHLIST", MIXED: "MIXED", SHOP_ONLY: "SHOP_ONLY", SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY" };
 obj = { FULL_WISHLIST: null, MIXED: null, SHOP_ONLY: null, SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: null };

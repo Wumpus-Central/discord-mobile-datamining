@@ -1,10 +1,3 @@
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 // discord_app/modules/create_guild/native/components/CreationIntent.tsx
 import set from "set";
 import get_ActivityIndicator from "ListSelectionItem";
@@ -12,6 +5,13 @@ import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 
 let c10;
 let c4;

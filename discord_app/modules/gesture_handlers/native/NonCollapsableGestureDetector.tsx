@@ -1,9 +1,9 @@
-import { Directions } from "../../../../_runtime/05368_Directions.js";
 // discord_app/modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Directions } from "../../../../_runtime/05368_Directions.js";
 
 const require = arg1;
 let closure_2 = ["children"];

@@ -1,7 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
-import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/user_required_action/native/NewTermsModal.tsx
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +7,10 @@ import handleRequiredAction from "handleRequiredAction";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
+import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let closure_12;

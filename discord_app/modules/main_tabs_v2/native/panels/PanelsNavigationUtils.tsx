@@ -1,5 +1,5 @@
-import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx
+import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 const result = require("CommonActions").fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
 export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {

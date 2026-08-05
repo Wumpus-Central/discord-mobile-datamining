@@ -1,8 +1,3 @@
-import { PermissionOverwriteType } from "../flow/Server.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { hasStream } from "../modules/guild_sidebar/ChannelListUtils.tsx";
-import { useAudienceRequestToSpeakState } from "../modules/stage_channels/useAudienceRequestToSpeakState.tsx";
-import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
 // discord_app/utils/ChannelUtils.tsx
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -12,6 +7,11 @@ import handleConnectionOpen from "handleConnectionOpen";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import ME from "ME";
 import { BoostedGuildFeatures } from "GuildFeatures";
+import { PermissionOverwriteType } from "../flow/Server.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { hasStream } from "../modules/guild_sidebar/ChannelListUtils.tsx";
+import { useAudienceRequestToSpeakState } from "../modules/stage_channels/useAudienceRequestToSpeakState.tsx";
+import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
 
 let c4;
 let c5;

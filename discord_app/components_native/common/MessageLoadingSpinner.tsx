@@ -1,11 +1,11 @@
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { map } from "../../design/tokens/native/useToken.tsx";
 // discord_app/components_native/common/MessageLoadingSpinner.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import set from "set";
 import set from "jsxProd";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
 
 const require = arg1;
 let result = null;

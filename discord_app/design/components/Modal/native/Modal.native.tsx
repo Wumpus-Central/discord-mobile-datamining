@@ -1,9 +1,9 @@
-import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import { NavigationStack } from "../../Navigator/native/Navigator.native.tsx";
-import { NAV_BAR_HEIGHT } from "../../Navigator/native/NavigatorConstants.native.tsx";
 // discord_app/design/components/Modal/native/Modal.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import { NavigationStack } from "../../Navigator/native/Navigator.native.tsx";
+import { NAV_BAR_HEIGHT } from "../../Navigator/native/NavigatorConstants.native.tsx";
 
 const require = arg1;
 const result = require("useSafeAreaInsets").fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");

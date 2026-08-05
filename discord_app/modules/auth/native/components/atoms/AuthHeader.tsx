@@ -1,9 +1,9 @@
-import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/auth/native/components/atoms/AuthHeader.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { Button } from "../../../../../design/void/native.tsx";
 
 const require = arg1;
 createCacheKey = { header: null };

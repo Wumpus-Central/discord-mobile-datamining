@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getSearchSessionId } from "SettingSearchSessionAnalyticsManager.tsx";
 // discord_app/modules/settings/tracking/Tracking.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getSearchSessionId } from "SettingSearchSessionAnalyticsManager.tsx";
 
 const result = require("getSearchSessionId").fileFinishedImporting("modules/settings/tracking/Tracking.tsx");
 

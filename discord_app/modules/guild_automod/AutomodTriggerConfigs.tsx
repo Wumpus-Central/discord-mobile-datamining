@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isInMentionRaidExperiment } from "ExperimentUtils.tsx";
 // discord_app/modules/guild_automod/AutomodTriggerConfigs.tsx
 import noop from "noop";
 import AutomodEventType from "AutomodEventType";
 import set from "getSystemLocale";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isInMentionRaidExperiment } from "ExperimentUtils.tsx";
 
 let AutomodActionType;
 let AutomodEventType;

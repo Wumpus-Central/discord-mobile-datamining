@@ -1,5 +1,3 @@
-import { FileIcon } from "../../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
-import { AttachmentIcon } from "../../../../media/native/AttachmentPreview.tsx";
 // discord_app/modules/app_launcher/native/options/attachment/AppLauncherAttachmentOption.tsx
 import noop from "noop";
 import { View } from "set";
@@ -7,6 +5,8 @@ import { DraftType } from "handleChanged";
 import map from "map";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { FileIcon } from "../../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
+import { AttachmentIcon } from "../../../../media/native/AttachmentPreview.tsx";
 
 const require = arg1;
 function AttachmentPreviewAppLauncher(arg0) {

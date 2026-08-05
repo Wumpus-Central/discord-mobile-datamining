@@ -1,7 +1,3 @@
-import { noop } from "../../../../../discord_common/js/packages/flash-list/index.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getDeviceMetadata } from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 // discord_app/modules/user_settings/dev_tools/native/UserSettingsStartupTimings.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +7,10 @@ import refreshSourceMapCookie from "refreshSourceMapCookie";
 import jsxProd from "setDeveloperOptionSettings";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "enforcing";
+import { noop } from "../../../../../discord_common/js/packages/flash-list/index.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getDeviceMetadata } from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
 let c10;
 let c9;

@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../../_runtime/09397_registerAsset.js";
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09397_registerAsset.js";
 
 const require = arg1;
 let c3 = importAllResult;

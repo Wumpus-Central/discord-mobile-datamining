@@ -1,6 +1,6 @@
+// discord_app/modules/messages/native/handlers/handleMessagesLongPressChannel.tsx
 import { allowChannelAccess } from "../../../../utils/ChannelUtils.tsx";
 import { showLongPressURLActionSheet } from "../../../links/native/showLongPressURLActionSheet.tsx";
-// discord_app/modules/messages/native/handlers/handleMessagesLongPressChannel.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
 
 export const handleMessagesLongPressChannel = function handleMessagesLongPressChannel(data) {

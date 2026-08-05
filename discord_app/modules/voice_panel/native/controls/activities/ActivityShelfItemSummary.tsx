@@ -1,10 +1,3 @@
-import { UserSummaryItem } from "../../../../../components_native/common/UserSummaryItem.tsx";
-import { EllipsisCircle } from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
-import { PillWrapper } from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { useActivityUsers } from "../../../../activities/useActivityUsers.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -12,6 +5,13 @@ import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { UserSummaryItem } from "../../../../../components_native/common/UserSummaryItem.tsx";
+import { EllipsisCircle } from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
+import { PillWrapper } from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { useActivityUsers } from "../../../../activities/useActivityUsers.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 
 let c5;
 let closure_6;

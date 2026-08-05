@@ -1,3 +1,8 @@
+// discord_app/modules/user_settings/UserSettingsProtoStore.tsx
+import MAX_FAVORITES from "MAX_FAVORITES";
+import { PreloadedUserSettings } from "create";
+import { FrecencyUserSettings } from "create";
+import { PersistedStore } from "initialize";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
@@ -5,11 +10,6 @@ import { now } from "../../../discord_common/js/packages/protos/google/protobuf/
 import { resolveDefaultGuildThemePreference } from "GuildThemeSourcePreferenceUtils.tsx";
 import { MAX_FAVORITES } from "UserSettingsMigrationsByType.tsx";
 import { b64ToProto } from "UserSettingsUtils.tsx";
-// discord_app/modules/user_settings/UserSettingsProtoStore.tsx
-import MAX_FAVORITES from "MAX_FAVORITES";
-import { PreloadedUserSettings } from "create";
-import { FrecencyUserSettings } from "create";
-import { PersistedStore } from "initialize";
 
 function handleConnectionClosedOrResumed() {
   const values = Object.values(closure_7);

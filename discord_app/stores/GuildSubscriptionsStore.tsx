@@ -1,5 +1,3 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 // discord_app/stores/GuildSubscriptionsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
@@ -18,6 +16,8 @@ import closure_17 from "handleConnectionOpen";
 import closure_18 from "handleConnectionOpen";
 import ME from "ME";
 import { Store } from "initialize";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 
 let ChannelSections;
 let closure_19;

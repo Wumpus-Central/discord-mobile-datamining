@@ -1,3 +1,9 @@
+// discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx
+import _slicedToArray from "_slicedToArray";
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -5,12 +11,6 @@ import { formatSingleCurrencyPrice } from "../../../../utils/PriceUtils.tsx";
 import { getBenefitKey } from "../../GuildRoleSubscriptionTypeUtils.tsx";
 import { GuildPremiumRoleSubscribeButton } from "GuildPremiumRoleSubscribeButton.tsx";
 import { GuildRoleSubscriptionMemberPreview } from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
-// discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

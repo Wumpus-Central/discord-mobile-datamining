@@ -1,11 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { XSmallIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { renderChannelBadge } from "../../channel_list_v2/native/components/index.tsx";
-import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapToReactChatInputBanner.tsx
 import SelectedDismissibleContent from "SelectedDismissibleContent";
 import encodeProperties from "encodeProperties";
@@ -18,6 +10,14 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "get ActivityIndicator";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { XSmallIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { renderChannelBadge } from "../../channel_list_v2/native/components/index.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 
 let c10;
 let c9;

@@ -1,5 +1,5 @@
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/saved_messages/SavedMessagesTypes.tsx
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 
 export const SavedMessageSortTypes = { ALL: "ALL", REMINDER: "REMINDER", BOOKMARK: "BOOKMARK" };

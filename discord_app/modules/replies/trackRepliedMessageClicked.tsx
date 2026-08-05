@@ -1,8 +1,8 @@
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { maybeCreateMessageRecordFromSnapshot } from "../forwarding/maybeCreateMessageRecordFromSnapshot.tsx";
 // discord_app/modules/replies/trackRepliedMessageClicked.tsx
 import { ReferencedMessageState } from "processMessage";
 import { AnalyticEvents } from "ME";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { maybeCreateMessageRecordFromSnapshot } from "../forwarding/maybeCreateMessageRecordFromSnapshot.tsx";
 
 const result = require("maybeCreateMessageRecordFromSnapshot").fileFinishedImporting("modules/replies/trackRepliedMessageClicked.tsx");
 

@@ -1,9 +1,9 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/channel/VoiceChannelStartTimeStore.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import { Store } from "initialize";
 import set from "initialize";
+import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import { set } from "../../utils/Durations.tsx";
 
 const require = arg1;
 function _toTimestampMs(arg0) {

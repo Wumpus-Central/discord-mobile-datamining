@@ -1,5 +1,5 @@
-import { TDigest } from "../../_runtime/07123_TDigest.js";
 // discord_app/lib/Histogram.tsx
+import { TDigest } from "../../_runtime/07123_TDigest.js";
 const result = require("set").fileFinishedImporting("lib/Histogram.tsx");
 class Histogram {
   constructor() {

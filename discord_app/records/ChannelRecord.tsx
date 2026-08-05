@@ -1,3 +1,9 @@
+// discord_app/records/ChannelRecord.tsx
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
+import ME from "ME";
+import { ChannelFlags } from "set";
+import importAllResult from "fromString";
+import set from "set";
 import { apply } from "../../_runtime/00012_apply.js";
 import { exact } from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
 import { set } from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
@@ -6,12 +12,6 @@ import { set } from "../../discord_common/js/shared/shared-constants/ThreadSortO
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { Permissions } from "../modules/stage_channels/StageChannelPermissions.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
-// discord_app/records/ChannelRecord.tsx
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import ME from "ME";
-import { ChannelFlags } from "set";
-import importAllResult from "fromString";
-import set from "set";
 
 let ChannelTypes;
 let Permissions;

@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/media_viewer/native/useMessagePreviewHeight.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const obj = keys.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));
 const result = require("set").fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");

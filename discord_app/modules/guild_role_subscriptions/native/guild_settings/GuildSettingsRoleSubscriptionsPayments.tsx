@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UnavailableNotice } from "../components/UnavailableNotice.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UnavailableNotice } from "../components/UnavailableNotice.tsx";
 
 const require = arg1;
 const forwardRefResult = require("noop").forwardRef(() => {

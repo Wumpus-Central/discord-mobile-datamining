@@ -1,3 +1,8 @@
+// discord_app/modules/quests/native/openQuestCollectibleRewardModal.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { QuestsExperimentLocations } from "QuestsExperimentLocations";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -5,11 +10,6 @@ import { MODAL_KEY } from "../../collectibles/native/ProductPurchaseSuccessActio
 import { useQuests } from "../hooks/QuestHooks.tsx";
 import { getQuestLogger } from "../lib/getQuestLogger.tsx";
 import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
-// discord_app/modules/quests/native/openQuestCollectibleRewardModal.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

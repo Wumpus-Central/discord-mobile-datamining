@@ -1,3 +1,13 @@
+// discord_app/modules/parent_tools/native/FamilyCenterActivityCard.tsx
+import importAllResult from "asyncRequireImpl";
+import { View } from "module_4490";
+import items from "items";
+import { AnalyticEvents } from "ME";
+import jsxProd from "FamilyCenterUsernameHeader";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
@@ -13,16 +23,6 @@ import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
 import { SpendingLimitRow } from "FamilyCenterSettingsControls.tsx";
 import { FamilyCenterTopActivity } from "FamilyCenterTopActivity.tsx";
 import { FamilyCenterUsernameHeader } from "FamilyCenterUsernameHeader.tsx";
-// discord_app/modules/parent_tools/native/FamilyCenterActivityCard.tsx
-import importAllResult from "asyncRequireImpl";
-import { View } from "module_4490";
-import items from "items";
-import { AnalyticEvents } from "ME";
-import jsxProd from "FamilyCenterUsernameHeader";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let c9;

@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/user_profile/useProfileThemeValues.native.tsx
 import { useMemo } from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");
 

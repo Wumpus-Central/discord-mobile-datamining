@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/messages/native/MessagesHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +7,7 @@ import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInpu
 import handleConnectionOpen from "handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import sortActivity from "sortActivity";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");

@@ -1,6 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/forums/native/ForumTagFilterActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "set";
@@ -10,6 +7,9 @@ import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "getEmojiToGroupId";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 
 let c10;
 let c9;

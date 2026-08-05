@@ -1,6 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/forums/ForumPostDataLoader.tsx
 import ME from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -9,6 +6,9 @@ import handleLoadThreadsSuccess from "handleLoadThreadsSuccess";
 import closure_7 from "handleLoadThreadsSuccess";
 import { Endpoints } from "ME";
 import set from "maybeRebuildState";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 function loadForumPostData() {

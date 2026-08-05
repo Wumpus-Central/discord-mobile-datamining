@@ -1,10 +1,10 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/oauth2/native/AuthorizeScopes.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c4;
 let c5;

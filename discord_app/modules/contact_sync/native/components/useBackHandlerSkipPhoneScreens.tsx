@@ -1,7 +1,7 @@
-import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 // discord_app/modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx
 import { NativeModules } from "get ActivityIndicator";
 import { ContactSyncScenes } from "ContactSyncLandingPage";
+import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 
 const result = require("useNavigatorBackPressHandler").fileFinishedImporting("modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx");
 

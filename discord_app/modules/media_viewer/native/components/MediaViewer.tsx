@@ -1,8 +1,3 @@
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
-import { handleOrientationChange } from "../../../device/native/DeviceOrientation.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { MediaViewerDimensionsProvider } from "../MediaViewerDimensionsContext.tsx";
-import { useMediaViewerPanGestureConfig } from "../useMediaViewerPanGesture.tsx";
 // discord_app/modules/media_viewer/native/components/MediaViewer.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "View";
@@ -10,6 +5,11 @@ import get_ActivityIndicator from "handleOrientationChange";
 import jsxProd from "set";
 import set from "set";
 import set from "get ActivityIndicator";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { handleOrientationChange } from "../../../device/native/DeviceOrientation.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { MediaViewerDimensionsProvider } from "../MediaViewerDimensionsContext.tsx";
+import { useMediaViewerPanGestureConfig } from "../useMediaViewerPanGesture.tsx";
 
 let c5;
 let closure_6;

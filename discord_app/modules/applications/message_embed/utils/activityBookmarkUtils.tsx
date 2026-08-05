@@ -1,5 +1,5 @@
-import { isDiscordProxiedAssetUrl } from "../../../../utils/URLUtils.tsx";
 // discord_app/modules/applications/message_embed/utils/activityBookmarkUtils.tsx
+import { isDiscordProxiedAssetUrl } from "../../../../utils/URLUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { AuthorizedAppPermissionsScreen } from "../../authorized_apps/native/AuthorizedAppPermissionsScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { AuthorizedAppPermissionsScreen } from "../../authorized_apps/native/AuthorizedAppPermissionsScreen.tsx";
 
 obj = {
   useTitle() {

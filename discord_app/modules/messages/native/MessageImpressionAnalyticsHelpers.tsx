@@ -1,4 +1,3 @@
-import { InviteTypes } from "../../instant_invite/InviteTypeUtils.tsx";
 // discord_app/modules/messages/native/MessageImpressionAnalyticsHelpers.tsx
 import noop from "noop";
 import updateInvite from "updateInvite";
@@ -6,6 +5,7 @@ import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import ME from "ME";
 import { LinkType } from "LinkType";
 import { InviteTypes } from "InviteSendStates";
+import { InviteTypes } from "../../instant_invite/InviteTypeUtils.tsx";
 
 let c9;
 let closure_6;

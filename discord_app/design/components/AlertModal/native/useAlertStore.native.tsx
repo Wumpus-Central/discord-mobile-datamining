@@ -1,8 +1,8 @@
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { markAccessibilityFocus } from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
 // discord_app/design/components/AlertModal/native/useAlertStore.native.tsx
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { markAccessibilityFocus } from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
 
 const require = arg1;
 keys = keys.create(() => ({ alerts: [] }));

@@ -1,11 +1,11 @@
-import { GuildRowWrapper } from "../../home_drawer/native/HomeDrawerGuildRow.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { GuildsBarGeoRestrictedBadge } from "GuildsBarGeoRestrictedBadge.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedGuild.tsx
 import importAllResult from "noop";
 import { GUILD_ITEM_BADGE_SIZE } from "GUILD_ITEM_SIZE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { GuildRowWrapper } from "../../home_drawer/native/HomeDrawerGuildRow.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { GuildsBarGeoRestrictedBadge } from "GuildsBarGeoRestrictedBadge.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

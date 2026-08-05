@@ -1,8 +1,8 @@
+// discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx
 import { getNumSubscriptionsPurchasedFromSystemMessage } from "../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {

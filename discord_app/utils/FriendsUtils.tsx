@@ -1,9 +1,9 @@
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { expandEventProperties } from "AnalyticsUtils.tsx";
 // discord_app/utils/FriendsUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { expandEventProperties } from "AnalyticsUtils.tsx";
 
 let c4;
 let c5;

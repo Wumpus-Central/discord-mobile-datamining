@@ -1,11 +1,11 @@
-import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
-import { useInputClearButton } from "../../Input/native/useInputClearButton.native.tsx";
-import { BaseTextField } from "../../TextField/native/BaseTextField.native.tsx";
-import { useTextFieldState } from "../../TextField/native/useTextField.native.tsx";
 // discord_app/design/components/SplitTextInput/native/SplitTextField.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
+import { useInputClearButton } from "../../Input/native/useInputClearButton.native.tsx";
+import { BaseTextField } from "../../TextField/native/BaseTextField.native.tsx";
+import { useTextFieldState } from "../../TextField/native/useTextField.native.tsx";
 
 let c3;
 let obj1;

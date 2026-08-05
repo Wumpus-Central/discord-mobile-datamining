@@ -1,7 +1,3 @@
-import { useEmbeddedApps } from "../../activities/useEmbeddedAppsForChannel.tsx";
-import { useStartTime } from "../../channel/useVoiceChannelStartTime.tsx";
-import { ActiveTimestamp } from "../../icymi/native/content_inventory/Badges.tsx";
-import { showChannelBadge } from "../showChannelBadge.tsx";
 // discord_app/modules/guild_sidebar/native/ChannelInfo.tsx
 import "useStageHasMedia";
 import guildHasCommunity from "guildHasCommunity";
@@ -12,6 +8,10 @@ import updateVoiceState from "updateVoiceState";
 import ME from "ME";
 import { jsx } from "ConnectedUserLimit";
 import createCacheKey from "createCacheKey";
+import { useEmbeddedApps } from "../../activities/useEmbeddedAppsForChannel.tsx";
+import { useStartTime } from "../../channel/useVoiceChannelStartTime.tsx";
+import { ActiveTimestamp } from "../../icymi/native/content_inventory/Badges.tsx";
+import { showChannelBadge } from "../showChannelBadge.tsx";
 
 let Fonts;
 let c9;

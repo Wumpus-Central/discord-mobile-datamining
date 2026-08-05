@@ -1,8 +1,8 @@
-import { usePendingFolderGuildIds } from "../../usePendingFolderGuildIds.tsx";
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx
 import noop from "noop";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import set from "set";
+import { usePendingFolderGuildIds } from "../../usePendingFolderGuildIds.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");

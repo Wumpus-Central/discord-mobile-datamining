@@ -1,6 +1,6 @@
+// discord_app/modules/premium/sounds/soundmoji/native/utils/openSoundmojiActionSheet.tsx
 import { asyncRequireImpl } from "../../../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/premium/sounds/soundmoji/native/utils/openSoundmojiActionSheet.tsx
 const result = require("SoundmojiActionSheet").fileFinishedImporting("modules/premium/sounds/soundmoji/native/utils/openSoundmojiActionSheet.tsx");
 
 export default function openSoundmojiActionSheet(arg0) {

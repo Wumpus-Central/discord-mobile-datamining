@@ -1,9 +1,9 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useIsInAdultAgeGroup } from "useIsInAdultAgeGroup.tsx";
 // discord_app/modules/parent_tools/hooks/useSelectedTeenUser.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getSettings from "getSettings";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useIsInAdultAgeGroup } from "useIsInAdultAgeGroup.tsx";
 
 const require = arg1;
 const result = require("freshTeenActivityWithMap").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");

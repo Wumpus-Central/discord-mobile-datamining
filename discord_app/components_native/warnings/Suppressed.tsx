@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../_runtime/15863_registerAsset.js";
-import { registerAsset } from "../../../_runtime/15864_registerAsset.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/warnings/Suppressed.tsx
 import initialize from "initialize";
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
+import { registerAsset } from "../../../_runtime/15863_registerAsset.js";
+import { registerAsset } from "../../../_runtime/15864_registerAsset.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 class Suppressed extends Component {

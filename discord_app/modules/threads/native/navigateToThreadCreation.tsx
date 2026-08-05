@@ -1,5 +1,5 @@
-import { patchThread } from "../ThreadActionCreators.tsx";
 // discord_app/modules/threads/native/navigateToThreadCreation.tsx
+import { patchThread } from "../ThreadActionCreators.tsx";
 let result = require("transitionToChannel").fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
 
 export const navigateToThreadCreation = function navigateToThreadCreation(channel, Message) {

@@ -1,3 +1,10 @@
+// discord_app/modules/premium/native/PremiumPerkCard.tsx
+import registerAsset from "registerAsset";
+import get_ActivityIndicator from "registerAsset";
+import { MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE as closure_6 } from "GuildFeatures";
+import ME from "ME";
+import jsxProd from "registerAsset";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/12598_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12599_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12600_registerAsset.js";
@@ -21,13 +28,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { combined } from "../../../utils/HelpdeskUtils.tsx";
 import { getFontScale } from "../../screen/native/useFontScale.tsx";
 import { PillText } from "components/PillText.tsx";
-// discord_app/modules/premium/native/PremiumPerkCard.tsx
-import registerAsset from "registerAsset";
-import get_ActivityIndicator from "registerAsset";
-import { MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE as closure_6 } from "GuildFeatures";
-import ME from "ME";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c4;

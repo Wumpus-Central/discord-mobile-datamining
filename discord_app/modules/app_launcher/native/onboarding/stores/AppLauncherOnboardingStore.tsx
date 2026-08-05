@@ -1,9 +1,9 @@
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
-import { ApplicationCommandSectionType } from "../../../../application_commands/ApplicationCommandTypes.tsx";
-import { result } from "../hooks/useCanShowAppLauncherOnboarding.tsx";
 // discord_app/modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
+import { ApplicationCommandSectionType } from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import { result } from "../hooks/useCanShowAppLauncherOnboarding.tsx";
 
 const require = arg1;
 class AppLauncherOnboardingStore extends Store {

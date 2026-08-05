@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
-import { useIsPremiumSubscriber } from "../../useIsPremiumSubscriber.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { useIsPremiumSubscriber } from "../../useIsPremiumSubscriber.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx");

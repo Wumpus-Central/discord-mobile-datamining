@@ -1,8 +1,3 @@
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/custom_status/native/ClearAfterOptionsActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +5,11 @@ import { View } from "get ActivityIndicator";
 import { ClearAfterOptions } from "StatusTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let error;
 let metroImportAll;

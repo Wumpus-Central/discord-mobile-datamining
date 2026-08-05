@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/favorites/FavoritesUtils.tsx
 import { FAVORITES_RAW_GUILD_ID } from "date";
 import { FAVORITES } from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
 

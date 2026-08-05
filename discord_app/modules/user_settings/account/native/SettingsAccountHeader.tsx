@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
-import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 // discord_app/modules/user_settings/account/native/SettingsAccountHeader.tsx
 import importAllResult from "noop";
 import { View } from "set";
@@ -11,6 +7,10 @@ import { AnalyticsSections } from "ME";
 import { SafetySettingsNoticeType } from "SafetyToastType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
+import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 
 let c10;
 let c9;

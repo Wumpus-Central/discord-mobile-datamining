@@ -1,6 +1,6 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/app_startup/ManagerRegistryShared.tsx
 import set from "set";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 function populateMap(actions) {
   actions = actions.actions;

@@ -1,11 +1,11 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
-import { selectVoiceChannelAdditional } from "SelectedChannelActionCreatorsAdditional.native.tsx";
 // discord_app/actions/SelectedChannelActionCreators.tsx
 import set from "set";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ME from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { selectVoiceChannelAdditional } from "SelectedChannelActionCreatorsAdditional.native.tsx";
 
 let PopoutWindowKeys;
 let error;

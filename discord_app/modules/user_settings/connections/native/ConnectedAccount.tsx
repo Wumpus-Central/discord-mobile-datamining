@@ -1,3 +1,16 @@
+// discord_app/modules/user_settings/connections/native/ConnectedAccount.tsx
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import combined from "combined";
+import importAllResult from "getPlatformUserUrl";
+import { View } from "Text";
+import set from "set";
+import closure_8 from "createGuildRecordFromRust";
+import ME from "ME";
+import { MetadataFields } from "OperatorTypes";
+import jsxProd from "ManaContext";
+import createCacheKey from "createCacheKey";
+import Button from "Button";
+import importDefaultResult from "createTextStyle";
 import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
 import { callback } from "../../../../actions/ConnectedAccountsActionCreators.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -13,19 +26,6 @@ import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 import { PlayStationTwoWayLinkUpsell } from "two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx";
 import { XboxTwoWayLinkUpsell } from "two_way_link/xbox/XboxTwoWayLinkUpsell.tsx";
-// discord_app/modules/user_settings/connections/native/ConnectedAccount.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import combined from "combined";
-import importAllResult from "getPlatformUserUrl";
-import { View } from "Text";
-import set from "set";
-import closure_8 from "createGuildRecordFromRust";
-import ME from "ME";
-import { MetadataFields } from "OperatorTypes";
-import jsxProd from "ManaContext";
-import createCacheKey from "createCacheKey";
-import Button from "Button";
-import importDefaultResult from "createTextStyle";
 
 let Fonts;
 let c10;

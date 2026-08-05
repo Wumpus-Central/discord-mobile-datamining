@@ -1,4 +1,3 @@
-import { fetchActivePromotions } from "PromotionsActionCreators.tsx";
 // discord_app/modules/premium/promotions/PromotionsManager.tsx
 import GuildFeatures from "GuildFeatures";
 import _getSystemLocale from "_getSystemLocale";
@@ -8,6 +7,7 @@ import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { PremiumTypes } from "GuildFeatures";
 import { EntitlementTypes } from "ME";
 import "initialize";
+import { fetchActivePromotions } from "PromotionsActionCreators.tsx";
 
 const require = arg1;
 class PromotionsManager extends tmp2 {

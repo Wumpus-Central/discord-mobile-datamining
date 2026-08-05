@@ -1,4 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx
 import combined from "combined";
 import get_ActivityIndicator from "module_8943";
@@ -8,6 +7,7 @@ import handleFormInit from "handleFormInit";
 import ME from "ME";
 import jsxProd from "module_16621";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c10;
 let c4;

@@ -1,9 +1,9 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { updateImpersonating } from "../impersonate/ImpersonateActionCreators.tsx";
 // discord_app/modules/guild_member/GuildMemberActionCreators.tsx
 import initialize from "initialize";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { updateImpersonating } from "../impersonate/ImpersonateActionCreators.tsx";
 
 const require = arg1;
 let result = require("updateImpersonating").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");

@@ -1,7 +1,7 @@
-import { inlineStyles } from "../../../../../../_runtime/08437_inlineStyles.js";
 // discord_app/modules/quests/native/VideoQuestModal/icons/SkipForwardIcon.tsx
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
+import { inlineStyles } from "../../../../../../_runtime/08437_inlineStyles.js";
 
 let c3;
 let c4;

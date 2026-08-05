@@ -1,7 +1,7 @@
-import { useInappropriateConversationSafetyToolsWarningForChannel } from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
-import { useInappropriateConversationWarningsForChannel } from "useInappropriateConversationWarningsForChannel.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx
 import { SafetyWarningTypes } from "handleConnectionOpen";
+import { useInappropriateConversationSafetyToolsWarningForChannel } from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
+import { useInappropriateConversationWarningsForChannel } from "useInappropriateConversationWarningsForChannel.tsx";
 
 const HOUR = require("set").Millis.HOUR;
 let closure_4 = 12 * require("set").Millis.HOUR;

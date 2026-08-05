@@ -1,11 +1,11 @@
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
 // discord_app/modules/app_icons/native/AppIcon.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getIconById } from "items";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
 
 let c3;
 let c4;

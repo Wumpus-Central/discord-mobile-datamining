@@ -1,9 +1,3 @@
-import { apply } from "../../../../../../_runtime/00012_apply.js";
-import { dispatcher } from "../../../../../Dispatcher.tsx";
-import { getGuildNameSuggestion } from "../../../../../utils/GuildUtils.tsx";
-import { getAll } from "../../../../app_database/modules/UserSearchItems.tsx";
-import { getTransformedUser } from "../../../../autocompleter/UserSearchManager.tsx";
-import { cleanString } from "../../../UserSearchUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -16,6 +10,12 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { RelationshipTypes } from "ME";
 import set from "noop";
+import { apply } from "../../../../../../_runtime/00012_apply.js";
+import { dispatcher } from "../../../../../Dispatcher.tsx";
+import { getGuildNameSuggestion } from "../../../../../utils/GuildUtils.tsx";
+import { getAll } from "../../../../app_database/modules/UserSearchItems.tsx";
+import { getTransformedUser } from "../../../../autocompleter/UserSearchManager.tsx";
+import { cleanString } from "../../../UserSearchUtils.tsx";
 
 const require = arg1;
 function _toPropertyKey(obj) {

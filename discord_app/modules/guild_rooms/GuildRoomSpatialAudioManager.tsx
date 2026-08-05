@@ -1,5 +1,3 @@
-import { experiment } from "GuildRoomsExperiment.tsx";
-import { computeLivingRoomWorldPoints } from "GuildRoomSpatialAudio.tsx";
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudioManager.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
@@ -10,6 +8,8 @@ import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
 import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
 import "initialize";
+import { experiment } from "GuildRoomsExperiment.tsx";
+import { computeLivingRoomWorldPoints } from "GuildRoomSpatialAudio.tsx";
 
 let require = arg1;
 class GuildRoomSpatialAudioManager extends tmp2 {

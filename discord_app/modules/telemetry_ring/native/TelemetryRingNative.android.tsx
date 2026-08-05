@@ -1,5 +1,5 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx";
 // discord_app/modules/telemetry_ring/native/TelemetryRingNative.android.tsx
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx";
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingNative.android.tsx");
 
 export default {

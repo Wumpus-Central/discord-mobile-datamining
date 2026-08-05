@@ -1,7 +1,3 @@
-import { getOptionValue } from "ApplicationCommandBuiltIns.tsx";
-import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
-import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
-import { buildCommand } from "ApplicationCommandUtils.tsx";
 // discord_app/modules/application_commands/ApplicationCommandQueryApi.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +6,10 @@ import getIndexKey from "getIndexKey";
 import closure_10 from "getIndexKey";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
 import { NOOP } from "ME";
+import { getOptionValue } from "ApplicationCommandBuiltIns.tsx";
+import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
+import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
+import { buildCommand } from "ApplicationCommandUtils.tsx";
 
 let c9;
 let closure_6;

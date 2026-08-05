@@ -1,4 +1,3 @@
-import { apexExperiment } from "../experiments/MainViewTooltipActionSheetsDisabledExperiment.tsx";
 // discord_app/modules/upsell_tooltip/native/useMainViewTooltipActionSheetEligibilityMap.tsx
 import _slicedToArray from "_slicedToArray";
 import getGiftingBadgeProgressPercent from "getGiftingBadgeProgressPercent";
@@ -11,6 +10,7 @@ import { PlatformTypes } from "ME";
 import GuildFeatures from "GuildFeatures";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import set from "map";
+import { apexExperiment } from "../experiments/MainViewTooltipActionSheetsDisabledExperiment.tsx";
 
 let PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID;
 let PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;

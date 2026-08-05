@@ -1,5 +1,3 @@
-import { registerAsset } from "../../../../_runtime/15556_registerAsset.js";
-import { useResourceChannels } from "../useResourceChannels.tsx";
 // discord_app/modules/guild_onboarding_home/native/GuildHomeResources.tsx
 import getDefaultRules from "get defaultRules";
 import get_ActivityIndicator from "PressableBase";
@@ -10,6 +8,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "transitionTo";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/15556_registerAsset.js";
+import { useResourceChannels } from "../useResourceChannels.tsx";
 
 let c10;
 let c4;

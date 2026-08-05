@@ -1,6 +1,6 @@
+// discord_app/modules/forums/FormError.tsx
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getAutomodErrorMessageFromErrorResponse } from "../guild_automod/AutomodErrorUtils.tsx";
-// discord_app/modules/forums/FormError.tsx
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", EmptyTags: 2, [2]: "EmptyTags", ApiValidation: 3, [3]: "ApiValidation" };
 const result = require("set").fileFinishedImporting("modules/forums/FormError.tsx");
 

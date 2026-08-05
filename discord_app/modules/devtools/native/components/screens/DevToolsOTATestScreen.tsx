@@ -1,7 +1,3 @@
-import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { BundleUpdaterManager } from "../../../../../lib/native/BundleUpdater.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsOTATestScreen.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +5,10 @@ import DownloadIcon from "DownloadIcon";
 import get_ActivityIndicator from "_copy";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { BundleUpdaterManager } from "../../../../../lib/native/BundleUpdater.tsx";
 
 let c9;
 let closure_6;

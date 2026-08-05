@@ -1,9 +1,9 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/lib/VoiceStateAnalytics.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import { SpeakingFlags } from "DesktopSources";
+import { apply } from "../../_runtime/00012_apply.js";
 
 const require = arg1;
 const result = require("getVoiceStatesForGuild").fileFinishedImporting("lib/VoiceStateAnalytics.tsx");

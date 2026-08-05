@@ -1,7 +1,7 @@
-import { LockedIcon } from "FormDropdown.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { LockedIcon } from "FormDropdown.tsx";
 
 const require = arg1;
 const GuildRoleSubscriptionTrialIntervalSelect = "GuildRoleSubscriptionTrialIntervalSelect";

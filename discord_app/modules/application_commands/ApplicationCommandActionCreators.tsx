@@ -1,13 +1,13 @@
+// discord_app/modules/application_commands/ApplicationCommandActionCreators.tsx
+import fetchFingerprint from "fetchFingerprint";
+import handleInit from "handleInit";
+import { Endpoints } from "ME";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
-// discord_app/modules/application_commands/ApplicationCommandActionCreators.tsx
-import fetchFingerprint from "fetchFingerprint";
-import handleInit from "handleInit";
-import { Endpoints } from "ME";
 
 let require = arg1;
 const result = require("ME").fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");

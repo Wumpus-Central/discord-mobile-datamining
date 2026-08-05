@@ -1,6 +1,6 @@
-import { map } from "../../../tokens/typography/generated/TypographyVariantRemap.tsx";
 // discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx
 import _slicedToArray from "_slicedToArray";
+import { map } from "../../../tokens/typography/generated/TypographyVariantRemap.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx");

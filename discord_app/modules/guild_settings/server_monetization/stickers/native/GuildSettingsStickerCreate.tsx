@@ -1,6 +1,3 @@
-import { useInitialValue } from "../../../../../hooks/useInitialValue.tsx";
-import { _calculateScrollOffset } from "../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import ReactionIcon from "ReactionIcon";
@@ -14,6 +11,9 @@ import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
 import set from "noop";
+import { useInitialValue } from "../../../../../hooks/useInitialValue.tsx";
+import { _calculateScrollOffset } from "../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let c10;
 let closure_12;

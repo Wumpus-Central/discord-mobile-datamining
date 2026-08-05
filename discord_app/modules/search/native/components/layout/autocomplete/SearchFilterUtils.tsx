@@ -1,3 +1,7 @@
+// discord_app/modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx
+import MessageEmbedTypes from "MessageEmbedTypes";
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
+import ME from "ME";
 import { AtIcon } from "../../../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
 import { AttachmentIcon } from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import { CalendarIcon } from "../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
@@ -7,10 +11,6 @@ import { ChannelListMagnifyingGlassIcon } from "../../../../../../design/compone
 import { RobotIcon } from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import { UserIcon } from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-// discord_app/modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx
-import MessageEmbedTypes from "MessageEmbedTypes";
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
-import ME from "ME";
 
 let c3;
 let c4;

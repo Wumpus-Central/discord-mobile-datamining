@@ -1,7 +1,7 @@
-import { useMobilePurchaseSKU } from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
 // discord_app/modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx
 import noop from "noop";
 import { PriceSetAssignmentPurchaseTypes as closure_4 } from "ME";
+import { useMobilePurchaseSKU } from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
 
 const require = arg1;
 const result = require("getPlanIdForProduct").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");

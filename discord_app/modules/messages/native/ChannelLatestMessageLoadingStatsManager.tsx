@@ -1,7 +1,7 @@
-import { isClickstreamEnabled } from "../../app_analytics/clickstream/Clickstream.tsx";
 // discord_app/modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx
 import { AnalyticEvents } from "ME";
 import set from "set";
+import { isClickstreamEnabled } from "../../app_analytics/clickstream/Clickstream.tsx";
 
 let ChannelLatestMessageLoadingStatsManager;
 class ChannelLatestMessageLoadingStatsManager {

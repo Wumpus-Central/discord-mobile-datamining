@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/stage_channels/StageLurkingManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let require = arg1;
 class StageLurkingManager extends tmp2 {

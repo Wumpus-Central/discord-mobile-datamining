@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { closeActionSheet } from "../../feedback/native/FeedbackActionSheet.tsx";
-import { DEFAULT_UX_VARIATION } from "../ICYMIAnalytics.tsx";
 // discord_app/modules/icymi/native/ICYMIFeedbackSheet.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { closeActionSheet } from "../../feedback/native/FeedbackActionSheet.tsx";
+import { DEFAULT_UX_VARIATION } from "../ICYMIAnalytics.tsx";
 
 const require = arg1;
 let result = require("closeActionSheet").fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");

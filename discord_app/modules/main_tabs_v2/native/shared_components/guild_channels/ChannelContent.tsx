@@ -1,7 +1,3 @@
-import { isRoleRequired } from "../../../../channel/isRoleRequired.tsx";
-import { SubscriptionGatedChannelIcon } from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
-import { ChannelTitle } from "ChannelTitle.tsx";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -11,6 +7,10 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "hairlineWidth";
+import { isRoleRequired } from "../../../../channel/isRoleRequired.tsx";
+import { SubscriptionGatedChannelIcon } from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
+import { ChannelTitle } from "ChannelTitle.tsx";
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 
 let closure_6;
 let error;

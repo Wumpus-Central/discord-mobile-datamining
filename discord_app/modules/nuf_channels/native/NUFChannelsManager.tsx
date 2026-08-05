@@ -1,5 +1,3 @@
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/nuf_channels/native/NUFChannelsManager.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -8,6 +6,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { GuildFeatures } from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import "initialize";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 
 let require = arg1;
 let c9 = "2020_02_nuf_channels";

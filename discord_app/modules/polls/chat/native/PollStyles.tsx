@@ -1,7 +1,7 @@
+// discord_app/modules/polls/chat/native/PollStyles.tsx
 import { t } from "../../../../../_runtime/04484_t.js";
 import { PollLayoutTypes } from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import { NativeShadowType } from "../PollMessageChatDataTypes.tsx";
-// discord_app/modules/polls/chat/native/PollStyles.tsx
 function normal(border) {
   const _require = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };

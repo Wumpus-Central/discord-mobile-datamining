@@ -1,14 +1,14 @@
-import { registerAsset } from "../../../../_runtime/10954_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10955_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { useRoleIcon } from "../../guild_boosting/native/RoleIconUtils.tsx";
 // discord_app/modules/connections/native/OfficialConnectionIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/10954_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10955_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { useRoleIcon } from "../../guild_boosting/native/RoleIconUtils.tsx";
 
 let c4;
 let c5;

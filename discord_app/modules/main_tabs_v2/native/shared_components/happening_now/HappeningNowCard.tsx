@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PressableCard } from "../../../../../design/components/Card/native/Card.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { useIsWindowLarge } from "../../../../screen/native/useIsWindowLarge.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCard.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -10,6 +5,11 @@ import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAIN
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PressableCard } from "../../../../../design/components/Card/native/Card.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { useIsWindowLarge } from "../../../../screen/native/useIsWindowLarge.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let HAPPENING_NOW_BADGE_SIZE;
 let HAPPENING_NOW_PANELS_CONTAINER_PADDING;

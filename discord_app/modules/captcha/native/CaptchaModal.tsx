@@ -1,9 +1,3 @@
-import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/captcha/native/CaptchaModal.tsx
 import noop from "noop";
 import get_ActivityIndicator from "trackRegTransition";
@@ -11,6 +5,12 @@ import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUI
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c4;

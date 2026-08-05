@@ -1,11 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useGuildSettingsRoleExampleMessage } from "../../../guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx";
-import { setOptions } from "../../../messages/native/renderer/RowGenerator.tsx";
-import { useHasEnhancedRoleColors } from "../hooks/useHasEnhancedRoleColors.tsx";
 // discord_app/modules/premium/powerups/native/EnhancedRoleColorsSelectStyleModal.tsx
 import get_ActivityIndicator from "extractColorStringsFromServerColors";
 import { RoleColorsStyle } from "handleSetSection";
@@ -14,6 +6,14 @@ import { STYLE_CONFIGS } from "title";
 import { ThemeTypes } from "sum";
 import jsxProd from "messagesProxy";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useGuildSettingsRoleExampleMessage } from "../../../guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx";
+import { setOptions } from "../../../messages/native/renderer/RowGenerator.tsx";
+import { useHasEnhancedRoleColors } from "../hooks/useHasEnhancedRoleColors.tsx";
 
 let c10;
 let c3;

@@ -1,12 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { trackDeviceChanged } from "../../../actions/AudioActionCreators.tsx";
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { openChannelCallModal } from "../../../utils/native/PrivateChannelCallUtils.tsx";
-import { mapped } from "../../errors/av_errors/AVError.tsx";
-import { NativePermissionsRequestOptions } from "../../native_permissions/NativePermissionUtils.tsx";
-import { useIsVideoMode } from "../../video_calls/native/useIsVideoMode.tsx";
-import { RouteTypes } from "../VoiceCallTypes.tsx";
 // discord_app/modules/voice_calls/native/CallsUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -24,6 +15,15 @@ import importDefaultResult from "useChannelVideoLimit";
 import set from "set";
 import importDefaultResult1 from "useChannelVideoLimit";
 import set from "noop";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { trackDeviceChanged } from "../../../actions/AudioActionCreators.tsx";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { openChannelCallModal } from "../../../utils/native/PrivateChannelCallUtils.tsx";
+import { mapped } from "../../errors/av_errors/AVError.tsx";
+import { NativePermissionsRequestOptions } from "../../native_permissions/NativePermissionUtils.tsx";
+import { useIsVideoMode } from "../../video_calls/native/useIsVideoMode.tsx";
+import { RouteTypes } from "../VoiceCallTypes.tsx";
 
 let require = arg1;
 function _handleToggleVideo() {

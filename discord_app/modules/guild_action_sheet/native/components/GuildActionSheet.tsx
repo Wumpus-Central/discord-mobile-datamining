@@ -1,3 +1,8 @@
+// discord_app/modules/guild_action_sheet/native/components/GuildActionSheet.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
 import { ActionSheetHeaderBar } from "../../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -8,11 +13,6 @@ import { GuildActionSheetEmojiSection } from "GuildActionSheetEmojiSection.tsx";
 import { CommunityPill } from "GuildActionSheetHeader.tsx";
 import { GuildActionSheetProgress } from "GuildActionSheetProgress.tsx";
 import { GuildActionSheetTabItems } from "GuildActionSheetTabItems.tsx";
-// discord_app/modules/guild_action_sheet/native/components/GuildActionSheet.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let c4;
 let c5;

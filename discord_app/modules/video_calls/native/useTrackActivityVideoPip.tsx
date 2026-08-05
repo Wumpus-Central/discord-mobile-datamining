@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/video_calls/native/useTrackActivityVideoPip.tsx
 import noop from "noop";
 import initialize from "initialize";
 import { AnalyticEvents } from "ME";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/video_calls/native/useTrackActivityVideoPip.tsx");

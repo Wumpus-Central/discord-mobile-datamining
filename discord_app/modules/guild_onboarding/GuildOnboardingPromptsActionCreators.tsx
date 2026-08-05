@@ -1,7 +1,3 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx
 import serverPromptToClientPrompt from "serverPromptToClientPrompt";
 import fetchFingerprint from "fetchFingerprint";
@@ -11,6 +7,10 @@ import handleUpdate from "handleUpdate";
 import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt";
 import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 let c10;
 let c9;

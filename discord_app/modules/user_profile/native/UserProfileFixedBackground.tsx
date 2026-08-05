@@ -1,12 +1,12 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { useUserProfileColors } from "../hooks/native/useUserProfileColors.tsx";
-import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
 // discord_app/modules/user_profile/native/UserProfileFixedBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { useUserProfileColors } from "../hooks/native/useUserProfileColors.tsx";
+import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
 
 let c4;
 let c5;

@@ -1,6 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -10,6 +7,9 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "set";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 const require = arg1;
 class ToastEmoji {

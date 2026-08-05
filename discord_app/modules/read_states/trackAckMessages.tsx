@@ -1,10 +1,10 @@
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/read_states/trackAckMessages.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { AnalyticEvents } from "ME";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 const require = arg1;
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/read_states/trackAckMessages.tsx");

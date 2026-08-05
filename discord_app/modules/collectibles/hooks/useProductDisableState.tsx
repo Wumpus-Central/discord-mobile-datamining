@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 // discord_app/modules/collectibles/hooks/useProductDisableState.tsx
 import reset from "reset";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");

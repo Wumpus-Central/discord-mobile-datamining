@@ -1,8 +1,8 @@
-import { Portal } from "../../../../_runtime/04156_Portal.js";
-import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 // discord_app/modules/keyboard/native/PortalKeyboard.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Portal } from "../../../../_runtime/04156_Portal.js";
+import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 
 const require = arg1;
 let c3 = "default";

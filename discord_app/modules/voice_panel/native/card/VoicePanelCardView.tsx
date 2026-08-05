@@ -1,4 +1,3 @@
-import { SelfStreamCard } from "VoicePanelCard.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelCardView.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CONFIG_NEVER_ANIMATE";
@@ -10,6 +9,7 @@ import { VoicePanelPIPModes } from "VoicePanelPIPModes";
 import { EDGE_GUTTER } from "CARD_SIZE";
 import { isUserParticipant } from "ParticipantTypes";
 import { jsx } from "useRefValue";
+import { SelfStreamCard } from "VoicePanelCard.tsx";
 
 let UI_SHOW_HIDE_PHYSICS;
 let VOICE_PANEL_CHUNK_DIVISOR;

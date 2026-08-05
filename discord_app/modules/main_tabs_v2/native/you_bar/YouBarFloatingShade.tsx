@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { int2hslRaw } from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { useYouBarTotalHeight } from "hooks/useYouBarTotalHeight.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx
 import { View } from "LinearGradient";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
@@ -10,6 +6,10 @@ import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { int2hslRaw } from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { useYouBarTotalHeight } from "hooks/useYouBarTotalHeight.tsx";
 
 let c9;
 let error;

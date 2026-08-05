@@ -1,6 +1,6 @@
+// discord_app/modules/messages/native/renderer/transformStickers.tsx
 import { apexExperiment } from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 import { getStickerExtensionFromFormatType } from "../../../stickers/StickersUtils.tsx";
-// discord_app/modules/messages/native/renderer/transformStickers.tsx
 const result = require("NativeLottieView").fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
 
 export default function transformStickers(message) {

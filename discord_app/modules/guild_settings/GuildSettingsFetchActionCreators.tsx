@@ -1,9 +1,9 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/guild_settings/GuildSettingsFetchActionCreators.tsx
 import dispatcher from "dispatcher";
 import { BasicApplicationRecord } from "createExecutable";
 import createdAt from "createdAt";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _fetchGuildIntegrationsApplications() {

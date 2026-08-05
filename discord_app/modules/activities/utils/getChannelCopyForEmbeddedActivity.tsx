@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 
 export default function getChannelCopyForEmbeddedActivity(arg0) {

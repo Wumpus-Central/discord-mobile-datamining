@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/11968_registerAsset.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncInviteFriends.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -11,6 +5,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/11968_registerAsset.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c5;
 let c9;

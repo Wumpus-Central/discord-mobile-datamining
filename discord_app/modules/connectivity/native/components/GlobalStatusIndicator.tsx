@@ -1,4 +1,3 @@
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/connectivity/native/components/GlobalStatusIndicator.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -8,6 +7,7 @@ import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import jsxProd from "jsxProd";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let NativeEventEmitter;
 let NativeModules;

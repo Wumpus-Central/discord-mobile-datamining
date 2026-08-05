@@ -1,9 +1,9 @@
+// discord_app/utils/ChangeLogUtils.tsx
 import { t } from "../../_runtime/03984_t.js";
 import { regExp } from "../modules/markup/MarkupListRule.tsx";
 import { MarkupSubtextRule } from "../modules/markup/MarkupSubtextRule.tsx";
 import { textRegexp } from "../modules/markup/MarkupTextRule.tsx";
 import { ChangeLogLink } from "native/ChangeLogUtils.tsx";
-// discord_app/utils/ChangeLogUtils.tsx
 const require = arg1;
 function defaultRules(uri) {
   let obj = {};

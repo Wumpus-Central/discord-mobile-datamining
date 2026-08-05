@@ -1,5 +1,5 @@
-import { logger } from "integrations/MobileCustomMuxIntegration.tsx";
 // discord_app/modules/video-qoe/MobileMuxWrapper.tsx
+import { logger } from "integrations/MobileCustomMuxIntegration.tsx";
 const logger = new require("log").Logger("MobileMuxWrapper");
 let result = require("set").fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
 class MobileMuxWrapper {

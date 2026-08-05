@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { VideoComponent } from "../../../../components_native/common/Video.tsx";
-import { context } from "../ICYMIContext.tsx";
 // discord_app/modules/icymi/native/media/ICYMIMediaMosaic.tsx
 import apply from "apply";
 import preload from "preload";
@@ -14,6 +10,10 @@ import filterStaffGuild from "filterStaffGuild";
 import ME from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { VideoComponent } from "../../../../components_native/common/Video.tsx";
+import { context } from "../ICYMIContext.tsx";
 
 let c5;
 let closure_12;

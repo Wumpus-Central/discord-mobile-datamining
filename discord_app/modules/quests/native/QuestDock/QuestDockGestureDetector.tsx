@@ -1,9 +1,9 @@
-import { Directions } from "../../../../../_runtime/05368_Directions.js";
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureDetector.tsx
 import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import { jsx } from "jsxProd";
+import { Directions } from "../../../../../_runtime/05368_Directions.js";
 
 let c10;
 let c5;

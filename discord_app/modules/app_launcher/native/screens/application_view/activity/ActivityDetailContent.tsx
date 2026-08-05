@@ -1,6 +1,3 @@
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { QUICK_SWITCHER } from "../../../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx
 import createExecutable from "createExecutable";
 import useGetOrFetchApplications from "useGetOrFetchApplications";
@@ -11,6 +8,9 @@ import closure_9 from "createExecutable";
 import { AnalyticEvents } from "ME";
 import jsxProd from "module_4295";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { QUICK_SWITCHER } from "../../../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../../../app_analytics/useAnalyticsLocations.tsx";
 
 let closure_12;
 let map1;

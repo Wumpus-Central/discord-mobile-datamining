@@ -1,4 +1,3 @@
-import { CodedLinkActionCreators } from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 // discord_app/actions/GiftCodeActionCreators.tsx
 import GuildFeatures from "GuildFeatures";
 import addApplication from "addApplication";
@@ -6,6 +5,7 @@ import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer";
 import ME from "ME";
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures";
+import { CodedLinkActionCreators } from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 
 let c9;
 let error;

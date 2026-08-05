@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/chat/SlowmodeUtils.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { set } from "../../utils/Durations.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");

@@ -1,10 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ActivityStatus } from "../../../activity_status/native/ActivityStatus.tsx";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
 // discord_app/modules/navbars/native/components/ChannelNavbar.tsx
 import importAllResult from "computeChannelName";
 import { View } from "getSystemLocale";
@@ -21,6 +14,13 @@ import ContentDismissActionType from "ContentDismissActionType";
 import jsxProd from "SpecialNavigationPath";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ActivityStatus } from "../../../activity_status/native/ActivityStatus.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
 
 let Fonts;
 let closure_12;

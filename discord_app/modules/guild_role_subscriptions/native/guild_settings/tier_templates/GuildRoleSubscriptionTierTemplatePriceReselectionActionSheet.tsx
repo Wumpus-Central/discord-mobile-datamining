@@ -1,8 +1,3 @@
-import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { render } from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import BottomSheetModal from "BottomSheetModal";
@@ -11,6 +6,11 @@ import { SubscriptionIntervalTypes } from "GuildFeatures";
 import { CurrencyCodes } from "sum";
 import jsxProd from "CollapsingText";
 import createCacheKey from "createCacheKey";
+import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { render } from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c10;
 let c5;

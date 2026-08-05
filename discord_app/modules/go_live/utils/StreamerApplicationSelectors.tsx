@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
 // discord_app/modules/go_live/utils/StreamerApplicationSelectors.tsx
 import sortActivity from "sortActivity";
 import { ActivityTypes } from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
 
 const require = arg1;
 function _findPlayingActivity(type) {

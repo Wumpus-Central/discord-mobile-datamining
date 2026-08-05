@@ -1,9 +1,9 @@
-import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
 // discord_app/modules/mfa/native/screens/BackupScreen.tsx
 import Text from "Text";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";
+import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
 
 let closure_6;
 let error;

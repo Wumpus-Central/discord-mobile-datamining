@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/utils/NumberUtils.tsx
+import { getSystemLocale } from "../intl/index.native.tsx";
 let c2 = 1000000;
 let result = require("set").fileFinishedImporting("utils/NumberUtils.tsx");
 

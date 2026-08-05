@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/utils/AnalyticsFeedItemSeenActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("utils/AnalyticsFeedItemSeenActionCreators.tsx");
 
 export const markAnalyticsFeedItemSeen = function markAnalyticsFeedItemSeen(forumPostSeenManagerId, feedItemId, timestampMillis) {

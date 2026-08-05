@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { experiment } from "experiments/GameClaimCoachmarkExperiment.tsx";
 // discord_app/modules/game_claim/useGameClaimCoachmark.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { experiment } from "experiments/GameClaimCoachmarkExperiment.tsx";
 
 const require = arg1;
 const result = require("experiment").fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");

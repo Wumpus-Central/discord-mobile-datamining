@@ -1,7 +1,7 @@
-import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx
 import getTimeSafe from "getTimeSafe";
 import "initialize";
+import { set } from "../../../utils/Durations.tsx";
 
 let require = arg1;
 function scheduleNextNotification() {

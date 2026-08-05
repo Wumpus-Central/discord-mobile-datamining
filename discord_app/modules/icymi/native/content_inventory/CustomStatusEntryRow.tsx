@@ -1,8 +1,8 @@
-import { UploadPlaceholder } from "ICYMICustomStatusRow.tsx";
-import { useReplyActions } from "useReplyActions.tsx";
 // discord_app/modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { UploadPlaceholder } from "ICYMICustomStatusRow.tsx";
+import { useReplyActions } from "useReplyActions.tsx";
 
 const require = arg1;
 const result = require("useReplyActions").fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");

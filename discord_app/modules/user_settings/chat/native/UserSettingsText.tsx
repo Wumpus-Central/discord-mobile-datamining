@@ -1,6 +1,3 @@
-import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/chat/native/UserSettingsText.tsx
 import "registerAsset";
 import { View } from "dispatcher";
@@ -12,6 +9,9 @@ import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH";
 import ME from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 let c10;
 let c9;

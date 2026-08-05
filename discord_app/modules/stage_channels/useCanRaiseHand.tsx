@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/useCanRaiseHand.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/stage_channels/useCanRaiseHand.tsx");

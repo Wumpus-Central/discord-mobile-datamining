@@ -1,7 +1,7 @@
-import { vanityUrl } from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier3LargeBadge-2x.png.js";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
 // discord_app/design/components/mana-assets/native/generated/GiftingTier3LargeBadge.native.tsx
 import { jsx } from "jsxProd";
+import { vanityUrl } from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier3LargeBadge-2x.png.js";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier3LargeBadge.native.tsx");
 

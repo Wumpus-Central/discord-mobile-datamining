@@ -1,6 +1,3 @@
-import { dispatcher } from "../../../actions/UploadAttachmentActionCreators.tsx";
-import { findGameMentionTokens } from "../../chat_input/native/ChatInputCommandOptionParser.tsx";
-import { addRule } from "../../chat_input/native/ChatInputParser.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandManager.tsx
 import _slicedToArray from "_slicedToArray";
 import { DraftType } from "handleChanged";
@@ -8,6 +5,9 @@ import handleInit from "handleInit";
 import ME from "ME";
 import regExp from "regExp";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";
+import { dispatcher } from "../../../actions/UploadAttachmentActionCreators.tsx";
+import { findGameMentionTokens } from "../../chat_input/native/ChatInputCommandOptionParser.tsx";
+import { addRule } from "../../chat_input/native/ChatInputParser.tsx";
 
 let c10;
 let c9;

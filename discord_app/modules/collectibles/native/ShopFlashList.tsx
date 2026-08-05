@@ -1,12 +1,12 @@
+// discord_app/modules/collectibles/native/ShopFlashList.tsx
+import noop from "noop";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { noop } from "../../../../discord_common/js/packages/flash-list/index.js";
 import { getNoResultsSource } from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { INITIAL_SCROLL_DELAY_MS } from "hooks/useScrollToInitialIndexOnce.tsx";
-// discord_app/modules/collectibles/native/ShopFlashList.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 function ShopEmptyState() {

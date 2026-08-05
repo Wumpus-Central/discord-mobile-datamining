@@ -1,10 +1,10 @@
-import { useVoiceStateForRemoteSession } from "../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
-import { useIsInvitedToSpeak } from "../../stage_channels/useIsInvitedToSpeak.tsx";
 // discord_app/modules/connectivity/native/useGlobalStatusIndicatorState.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
+import { useVoiceStateForRemoteSession } from "../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
+import { useIsInvitedToSpeak } from "../../stage_channels/useIsInvitedToSpeak.tsx";
 
 const require = arg1;
 const result = require("RTC_PANEL_HEIGHT").fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");

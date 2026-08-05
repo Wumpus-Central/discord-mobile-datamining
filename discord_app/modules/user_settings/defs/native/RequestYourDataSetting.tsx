@@ -1,9 +1,3 @@
-import { t } from "../../../../../_runtime/03867_t.js";
-import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { saveProfileAndAccountRequest } from "../../../../actions/UserSettingsAccountActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { RequestDataScreen } from "../../privacy_and_safety/native/RequestDataScreen.tsx";
 // discord_app/modules/user_settings/defs/native/RequestYourDataSetting.tsx
 import { ActivityIndicator } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -11,6 +5,12 @@ import ME from "ME";
 import { jsx } from "jsxProd";
 import identity from "identity";
 import createToggle from "createToggle";
+import { t } from "../../../../../_runtime/03867_t.js";
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { saveProfileAndAccountRequest } from "../../../../actions/UserSettingsAccountActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { RequestDataScreen } from "../../privacy_and_safety/native/RequestDataScreen.tsx";
 
 let UserSettingsSections;
 let c5;

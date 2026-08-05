@@ -1,6 +1,6 @@
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/guild_badge/GuildTraits.tsx
 import ME from "ME";
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 
 let c3;
 let obj1;

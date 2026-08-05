@@ -1,6 +1,6 @@
+// discord_app/modules/presence/splitAgeRestrictedActivities.tsx
 import { isAgeRestrictedClassificationReference } from "../content_classification/ContentClassificationReference.tsx";
 import { apexExperiment } from "ContentClassificationPresenceFilterExperiment.tsx";
-// discord_app/modules/presence/splitAgeRestrictedActivities.tsx
 const result = require("set").fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
 export default function splitAgeRestrictedActivities(arg0, arg1) {

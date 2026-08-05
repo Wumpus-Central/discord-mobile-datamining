@@ -1,6 +1,6 @@
+// discord_app/modules/guild_products/GuildProductLinkActionCreators.native.tsx
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
-// discord_app/modules/guild_products/GuildProductLinkActionCreators.native.tsx
 const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
 
 export const openGuildProductLink = function openGuildProductLink(closure_0, closure_1) {

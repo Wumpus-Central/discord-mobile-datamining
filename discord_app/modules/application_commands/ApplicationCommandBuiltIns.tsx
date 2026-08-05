@@ -1,9 +1,3 @@
-import { ChangeNicknameActionCreators } from "../../actions/ChangeNicknameActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { useMessageMaxLength } from "../messages/useMessageMaxLength.tsx";
-import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/application_commands/ApplicationCommandBuiltIns.tsx
 import importDefaultResult from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,6 +8,12 @@ import ME from "ME";
 import ROLL_DURATION_MS from "ROLL_DURATION_MS";
 import { getDisableCommunicationDurationOptions as closure_11 } from "getFriendlyDurationString";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { ChangeNicknameActionCreators } from "../../actions/ChangeNicknameActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { useMessageMaxLength } from "../messages/useMessageMaxLength.tsx";
+import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let ALLOWED_DICE_SIDES;
 let DISPLAY_NAME_MAX_LENGTH;

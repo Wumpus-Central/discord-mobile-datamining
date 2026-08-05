@@ -1,7 +1,7 @@
-import { isSystemMessage } from "isSystemMessage.tsx";
-import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 // discord_app/modules/messages/canEditMessage.tsx
 import ME from "ME";
+import { isSystemMessage } from "isSystemMessage.tsx";
+import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 
 let c3;
 let c4;

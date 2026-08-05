@@ -1,12 +1,12 @@
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { Link } from "../../../../_runtime/01481_Link.js";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
-import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ME } from "ME";
 import set from "ME";
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { Link } from "../../../../_runtime/01481_Link.js";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
+import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 
 let c4;
 let c5;

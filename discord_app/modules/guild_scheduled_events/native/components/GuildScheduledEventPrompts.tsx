@@ -1,8 +1,8 @@
-import { canManageResource } from "../../../permissions/useManageResourcePermissions.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/GuildScheduledEventPrompts.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { canManageResource } from "../../../permissions/useManageResourcePermissions.tsx";
 
 const require = arg1;
 createCacheKey = { actionBarCTAContainer: { marginVertical: 4 }, iconStyle: null, iconContainerStyle: null, greenIcon: null };

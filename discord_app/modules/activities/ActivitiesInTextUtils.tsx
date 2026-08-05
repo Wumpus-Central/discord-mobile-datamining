@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/activities/ActivitiesInTextUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
 const require = arg1;
 function isActivityInTextSupportedForChannel(channel) {

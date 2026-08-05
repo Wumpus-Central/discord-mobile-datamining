@@ -1,7 +1,7 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/SelfPresenceStoreManager.tsx
 import filterPlayingActivities from "filterPlayingActivities";
 import "initialize";
+import { dispatcher } from "../Dispatcher.tsx";
 
 function handleChange() {
   let obj = dispatcher;

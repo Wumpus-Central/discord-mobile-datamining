@@ -1,7 +1,7 @@
+// discord_app/modules/instant_invite/native/components/openInstantInviteActionSheet.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/instant_invite/native/components/openInstantInviteActionSheet.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
 
 export default function openInstantInviteActionSheet(invite_channel_id) {

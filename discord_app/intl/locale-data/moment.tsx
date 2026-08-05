@@ -1,5 +1,5 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 // discord_app/intl/locale-data/moment.tsx
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 const result = require("t").fileFinishedImporting("intl/locale-data/moment.tsx");
 
 export const momentLocales = {

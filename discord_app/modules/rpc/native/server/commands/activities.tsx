@@ -1,10 +1,10 @@
-import { validateOpenInviteDialog } from "../../../helpers/validateOpenInviteDialog.tsx";
-import { prototype } from "../../../RPCError.tsx";
 // discord_app/modules/rpc/native/server/commands/activities.tsx
 import validateOpenInviteDialog from "validateOpenInviteDialog";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
 import { NativePermissionTypes } from "NativePermissionStatus";
+import { validateOpenInviteDialog } from "../../../helpers/validateOpenInviteDialog.tsx";
+import { prototype } from "../../../RPCError.tsx";
 
 let RPCCommands;
 let RPC_AUTHENTICATED_SCOPE;

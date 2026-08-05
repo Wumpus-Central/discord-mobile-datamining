@@ -1,7 +1,7 @@
-import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../../../Dispatcher.tsx";
 // discord_app/modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../../../Dispatcher.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
 

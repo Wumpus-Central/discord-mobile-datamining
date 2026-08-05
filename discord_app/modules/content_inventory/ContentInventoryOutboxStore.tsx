@@ -1,7 +1,7 @@
-import { isMatchingListeningActivity } from "matchUtils.tsx";
 // discord_app/modules/content_inventory/ContentInventoryOutboxStore.tsx
 import { Store } from "initialize";
 import set from "dispatcher";
+import { isMatchingListeningActivity } from "matchUtils.tsx";
 
 const require = arg1;
 let map = new Map();

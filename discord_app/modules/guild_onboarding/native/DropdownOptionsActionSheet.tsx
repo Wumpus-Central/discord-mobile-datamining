@@ -1,5 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx
 import Button from "Button";
 import { View } from "Background";
@@ -8,6 +6,8 @@ import handleUpdate from "handleUpdate";
 import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c9;
 let metroImportAll;

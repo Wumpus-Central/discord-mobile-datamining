@@ -1,10 +1,10 @@
+// discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
+import { StreamTypes } from "StreamIssueReportReasons";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
-import { StreamTypes } from "StreamIssueReportReasons";
 
 const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
 

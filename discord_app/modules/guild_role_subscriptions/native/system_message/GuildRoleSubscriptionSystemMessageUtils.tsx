@@ -1,8 +1,8 @@
+// discord_app/modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx
+import { AnalyticEvents } from "ME";
 import { trackInvite } from "../../../../actions/MessageActionCreators.tsx";
 import { collectGuildAnalyticsMetadata } from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import { identityHook } from "../../GuildRoleSubscriptionSystemMessageUtils.tsx";
-// discord_app/modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx
-import { AnalyticEvents } from "ME";
 
 const result = require("identityHook").fileFinishedImporting("modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx");
 

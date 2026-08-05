@@ -1,3 +1,9 @@
+// discord_app/modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx
+import "noop";
+import { ScrollView } from "get ActivityIndicator";
+import upsertRelationship from "upsertRelationship";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { getBlockedSource } from "../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx";
@@ -6,12 +12,6 @@ import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-// discord_app/modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import upsertRelationship from "upsertRelationship";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

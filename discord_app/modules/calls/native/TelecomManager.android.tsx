@@ -1,8 +1,3 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx";
-import { trackDeviceChanged } from "../../../actions/AudioActionCreators.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
-import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
-import { createSoundForPack } from "../../sound_playback/SoundUtils.tsx";
 // discord_app/modules/calls/native/TelecomManager.android.tsx
 import callConnect from "callConnect";
 import get_ActivityIndicator from "initialize";
@@ -20,6 +15,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ApplicationStreamStates } from "ME";
 import { MediaEngineContextTypes } from "DesktopSources";
 import "initialize";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx";
+import { trackDeviceChanged } from "../../../actions/AudioActionCreators.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
+import { createSoundForPack } from "../../sound_playback/SoundUtils.tsx";
 
 let NativeEventEmitter;
 let c4;

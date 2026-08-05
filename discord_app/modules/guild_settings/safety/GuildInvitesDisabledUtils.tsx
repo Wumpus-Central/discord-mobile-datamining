@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx
 import computeAlertSettings from "computeAlertSettings";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let c4;
 let c5;

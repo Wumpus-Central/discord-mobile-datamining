@@ -1,9 +1,3 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { _isNativeReflectConstruct } from "../../../../_runtime/05260__isNativeReflectConstruct.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/main_tabs_v2/native/ConnectionBanner.tsx
 import _slicedToArray from "_slicedToArray";
 import expandEventProperties from "expandEventProperties";
@@ -14,6 +8,12 @@ import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import { AnalyticEvents } from "ME";
 import jsxProd from "CONFIG_NEVER_ANIMATE";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { _isNativeReflectConstruct } from "../../../../_runtime/05260__isNativeReflectConstruct.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let c5;
 let closure_12;

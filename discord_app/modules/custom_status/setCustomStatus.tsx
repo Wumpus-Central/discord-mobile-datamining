@@ -1,10 +1,10 @@
+// discord_app/modules/custom_status/setCustomStatus.tsx
+import { ClearAfterValues } from "StatusTypes";
+import { AnalyticEvents } from "ME";
 import { t } from "../../../_runtime/03867_t.js";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 import { getClearAfterDuration } from "utils/getClearAfterDuration.tsx";
-// discord_app/modules/custom_status/setCustomStatus.tsx
-import { ClearAfterValues } from "StatusTypes";
-import { AnalyticEvents } from "ME";
 
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
 

@@ -1,6 +1,6 @@
-import { SettingsDesignSystemsScreen } from "../../design_system/native/UserSettingsDesignSystemsScreen.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsSetting.tsx
 import createToggle from "createToggle";
+import { SettingsDesignSystemsScreen } from "../../design_system/native/UserSettingsDesignSystemsScreen.tsx";
 
 obj = {
   useTitle() {

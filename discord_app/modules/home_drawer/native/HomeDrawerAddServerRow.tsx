@@ -1,9 +1,9 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { HomeDrawerSharedItem } from "HomeDrawerShared.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerAddServerRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { HomeDrawerSharedItem } from "HomeDrawerShared.tsx";
 
 const require = arg1;
 const result = require("HomeDrawerSharedItem").fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");

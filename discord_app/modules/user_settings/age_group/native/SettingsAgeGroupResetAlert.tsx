@@ -1,9 +1,9 @@
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx
 import presentAddedFriendToast from "presentAddedFriendToast";
 import jsxProd from "jsxProd";
+import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

@@ -1,8 +1,8 @@
+// discord_app/modules/threads/ThreadAutoArchive.tsx
+import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_3 } from "AbortCodes";
 import { t } from "../../../_runtime/03867_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { set } from "../../utils/Durations.tsx";
-// discord_app/modules/threads/ThreadAutoArchive.tsx
-import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_3 } from "AbortCodes";
 
 function getAutoArchiveOptions() {
   let obj = { id: "1hour", label: null, value: null };

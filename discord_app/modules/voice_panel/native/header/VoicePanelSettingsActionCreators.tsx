@@ -1,6 +1,6 @@
+// discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx
 const VoicePanelSettingsActionSheet = "VoicePanelSettingsActionSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx");
 

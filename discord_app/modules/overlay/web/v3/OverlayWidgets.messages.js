@@ -1,3 +1,6 @@
+// discord_app/modules/overlay/web/v3/OverlayWidgets.messages.js
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../../_runtime/02388_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02389_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02390_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../../_runtime/02416_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02417_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02418_registerAsset.js";
 import { loadJsonAsset } from "../../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/overlay/web/v3/OverlayWidgets.messages.js
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

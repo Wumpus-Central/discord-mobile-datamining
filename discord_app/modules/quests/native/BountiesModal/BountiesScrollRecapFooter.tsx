@@ -1,15 +1,15 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { OrbsIcon } from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { OrbsIcon } from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

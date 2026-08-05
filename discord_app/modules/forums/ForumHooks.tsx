@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
-import { _formatMessageCountLabel } from "../threads/MessageCountUtils.tsx";
 // discord_app/modules/forums/ForumHooks.tsx
 import updateState from "updateState";
 import AbortCodes from "AbortCodes";
@@ -22,6 +19,9 @@ import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET";
 import ME from "ME";
 import { ChannelFlags } from "set";
 import { MAX_THREAD_UNREAD_MESSAGE_COUNT as closure_25 } from "AbortCodes";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
+import { _formatMessageCountLabel } from "../threads/MessageCountUtils.tsx";
 
 let closure_20;
 let closure_21;

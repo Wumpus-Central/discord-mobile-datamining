@@ -1,5 +1,5 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/messages/createNonce.tsx
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 let c2 = 0;
 const snowflakeSequence = new require("DISCORD_EPOCH").SnowflakeSequence();
 const result = require("set").fileFinishedImporting("modules/messages/createNonce.tsx");

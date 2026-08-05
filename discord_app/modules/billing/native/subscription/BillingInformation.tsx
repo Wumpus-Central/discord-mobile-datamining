@@ -1,8 +1,8 @@
-import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 // discord_app/modules/billing/native/subscription/BillingInformation.tsx
 import serializePurchaseResponse from "serializePurchaseResponse";
 import { SubscriptionStatusTypes } from "ME";
+import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 
 const require = arg1;
 const result = require("getPremiumPlanItem").fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");

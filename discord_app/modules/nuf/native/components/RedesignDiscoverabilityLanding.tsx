@@ -1,3 +1,8 @@
+// discord_app/modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/12017_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
@@ -6,11 +11,6 @@ import { NAV_BAR_HEIGHT } from "../../../../design/components/Navigator/native/N
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-// discord_app/modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

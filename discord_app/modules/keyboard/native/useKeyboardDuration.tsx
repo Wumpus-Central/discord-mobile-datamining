@@ -1,6 +1,6 @@
+// discord_app/modules/keyboard/native/useKeyboardDuration.tsx
 import { context } from "../../window/native/AppEntryKeyContext.tsx";
 import { computeEntryState } from "KeyboardUIStore.native.tsx";
-// discord_app/modules/keyboard/native/useKeyboardDuration.tsx
 const result = require("computeEntryState").fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");
 
 export const getKeyboardDuration = function getKeyboardDuration() {

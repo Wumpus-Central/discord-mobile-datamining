@@ -1,6 +1,6 @@
-import { logger } from "../../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx";
 // discord_app/lib/injectMediaEngine.native.tsx
 import inject from "inject";
+import { logger } from "../../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx";
 
 inject.inject({
   supported() {

@@ -1,6 +1,6 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/media_channel/useCanSetThumbnail.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");

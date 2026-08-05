@@ -1,8 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../design/components/Button/native/Button.native.tsx";
-import { Button } from "../../design/void/native.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { SafeAreaPaddingView } from "../common/SafeAreaView.tsx";
 // discord_app/components_native/calls/RTCDebugOverlay.tsx
 import importAllResult from "SafeAreaPaddingView";
 import get_ActivityIndicator from "open";
@@ -16,6 +11,11 @@ import { MediaEngineContextTypes } from "DesktopSources";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../design/components/Button/native/Button.native.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { SafeAreaPaddingView } from "../common/SafeAreaView.tsx";
 
 let StyleSheet;
 let c5;

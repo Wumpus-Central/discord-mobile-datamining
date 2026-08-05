@@ -1,10 +1,10 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/custom_status/native/CustomStatusPreview.tsx
 import EmojiImage from "EmojiImage";
 import { View } from "OpenableUserProfileAvatar";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "StaticEffect";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c5;
 let closure_6;

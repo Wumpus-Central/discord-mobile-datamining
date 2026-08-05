@@ -1,13 +1,3 @@
-import { Directions } from "../../../../../_runtime/05368_Directions.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { MicrophoneIcon } from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
-import { XSmallBoldIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
-import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { _startAudioRecording } from "../VoiceMessageUtils.tsx";
 // discord_app/modules/voice_messages/native/components/VoiceMessageButton.tsx
 import getState from "getState";
 import getSystemLocale from "getSystemLocale";
@@ -24,6 +14,16 @@ import { NativePermissionTypes } from "NativePermissionStatus";
 import { jsx } from "useGradientBottom";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Directions } from "../../../../../_runtime/05368_Directions.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { MicrophoneIcon } from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
+import { XSmallBoldIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
+import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { _startAudioRecording } from "../VoiceMessageUtils.tsx";
 
 let closure_12;
 let closure_14;

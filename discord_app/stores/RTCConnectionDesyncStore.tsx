@@ -1,4 +1,3 @@
-import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
 // discord_app/stores/RTCConnectionDesyncStore.tsx
 import isVoiceMuted from "isVoiceMuted";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -10,6 +9,7 @@ import ME from "ME";
 import { ParticipantTypes } from "ParticipantTypes";
 import { Store } from "initialize";
 import set from "createRTCConnection";
+import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
 
 let c10;
 let c9;

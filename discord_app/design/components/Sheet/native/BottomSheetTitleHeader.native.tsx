@@ -1,9 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import { useWindowDimensions } from "../../../../modules/screen/useWindowDimensions.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { map } from "../../../tokens/native/useToken.tsx";
-import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Sheet/native/BottomSheetTitleHeader.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -12,6 +6,12 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
+import { useWindowDimensions } from "../../../../modules/screen/useWindowDimensions.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { map } from "../../../tokens/native/useToken.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 
 let closure_6;
 let error;

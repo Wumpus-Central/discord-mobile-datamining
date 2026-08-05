@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/replies/PendingReplyActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/replies/PendingReplyActionCreators.tsx");
 
 export const createPendingReply = function createPendingReply(arg0) {

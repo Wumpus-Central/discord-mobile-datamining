@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 
 const require = arg1;
 let obj = { SERVER: 0, [0]: "SERVER", CHANNEL: 1, [1]: "CHANNEL", DM: 2, [2]: "DM", CATEGORY: 3, [3]: "CATEGORY" };

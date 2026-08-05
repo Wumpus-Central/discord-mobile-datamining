@@ -1,8 +1,8 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
 // discord_app/modules/user_profile/native/UserProfileGradientContainer.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo((arg0) => {

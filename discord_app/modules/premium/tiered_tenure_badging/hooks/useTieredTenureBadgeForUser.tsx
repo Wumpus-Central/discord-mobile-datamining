@@ -1,6 +1,6 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("getTieredTenureBadgeData").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");

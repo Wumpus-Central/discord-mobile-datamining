@@ -1,6 +1,6 @@
-import { Content } from "../../design_system/native/UserSettingsDesignSystemCoachmark.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsCoachmarkSetting.tsx
 import createToggle from "createToggle";
+import { Content } from "../../design_system/native/UserSettingsDesignSystemCoachmark.tsx";
 
 obj = {
   useTitle() {

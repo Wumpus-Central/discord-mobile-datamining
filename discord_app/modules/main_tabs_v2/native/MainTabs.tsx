@@ -1,14 +1,14 @@
+// discord_app/modules/main_tabs_v2/native/MainTabs.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { getMixedGradientColor } from "../../client_themes/native/ThemedGradient.tsx";
 import { useActiveThemeType } from "../../client_themes/native/useActiveTheme.tsx";
 import { getGuildThemeName } from "../../client_themes/native/useColorThemeBackground.tsx";
 import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 import { MainTabsNavigatorPanel } from "panels/MainTabsNavigatorPanel.tsx";
-// discord_app/modules/main_tabs_v2/native/MainTabs.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let c4;
 let c5;

@@ -1,5 +1,5 @@
-import { 03510__ } from "../../../../../_runtime/metro/03510__.js";
 // discord_app/modules/premium/gifting/shared/FriendAnniversaryUtils.tsx
+import { 03510__ } from "../../../../../_runtime/metro/03510__.js";
 const result = require("set").fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
 
 export const FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS = 7;

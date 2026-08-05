@@ -1,10 +1,10 @@
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
-import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
 
 let c4;
 let c5;

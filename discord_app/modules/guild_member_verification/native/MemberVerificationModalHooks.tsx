@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalHooks.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import map from "map";
 import { setInitialVerification } from "map";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("map").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");

@@ -1,12 +1,12 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import { GuildDirectoryEditDescriptionModalActionCreators } from "GuildDirectoryEditDescriptionModalActionCreators.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx
 import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { GuildDirectoryEditDescriptionModalActionCreators } from "GuildDirectoryEditDescriptionModalActionCreators.tsx";
 
 let c5;
 let closure_6;

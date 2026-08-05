@@ -1,4 +1,3 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/VoiceChannelSettingsManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import bitrate from "bitrate";
@@ -7,6 +6,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import mode from "mode";
 import { VideoQualityMode } from "ME";
 import "initialize";
+import { dispatcher } from "../Dispatcher.tsx";
 
 function updateVoiceSettings() {
   let obj = store2;

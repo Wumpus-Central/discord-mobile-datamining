@@ -1,6 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getGradientColorByPercentage } from "../../client_themes/native/ClientThemesUtils.tsx";
 // discord_app/modules/messages/native/DMMessageStickerGreeting.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import set from "set";
@@ -11,6 +8,9 @@ import closure_8 from "reinjectEphemerals";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "MAX_MESSAGES_ALLOWED_FOR_GREETING";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getGradientColorByPercentage } from "../../client_themes/native/ClientThemesUtils.tsx";
 
 let c10;
 let closure_12;

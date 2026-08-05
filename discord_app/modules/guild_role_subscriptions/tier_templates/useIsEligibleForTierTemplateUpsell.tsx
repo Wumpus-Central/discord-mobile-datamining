@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { GuildFeatures } from "../GuildRoleSubscriptionsExperimentUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { GuildFeatures } from "../GuildRoleSubscriptionsExperimentUtils.tsx";
 
 const require = arg1;
 let result = require("initialize").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");

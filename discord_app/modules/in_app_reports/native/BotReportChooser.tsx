@@ -1,13 +1,13 @@
+// discord_app/modules/in_app_reports/native/BotReportChooser.tsx
+import "noop";
+import addApplication from "addApplication";
+import jsxProd from "jsxProd";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { ActionSheetRowIcon } from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { fetchApplication } from "../../applications/ApplicationActionCreators.tsx";
-// discord_app/modules/in_app_reports/native/BotReportChooser.tsx
-import "noop";
-import addApplication from "addApplication";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

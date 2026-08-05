@@ -1,4 +1,3 @@
-import { t } from "../../../_runtime/03984_t.js";
 // discord_app/modules/markup/BioMarkupUtils.tsx
 import importDefaultResult from "combineMarkupRules";
 import importAllResult from "reactParserFor";
@@ -6,6 +5,7 @@ import importDefaultResult1 from "get defaultRules";
 import importAllResult1 from "reactParserFor";
 import importDefaultResult2 from "combineMarkupRules";
 import importDefaultResult3 from "apply";
+import { t } from "../../../_runtime/03984_t.js";
 
 const items = [require("parseLink").PROFILE_BIO_RULES, require("MarkupText")({ enableBuildOverrides: false, mustConfirmExternalLink: true })];
 const importDefaultResultResult = require("combineMarkupRules")(items);

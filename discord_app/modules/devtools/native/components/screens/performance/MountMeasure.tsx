@@ -1,8 +1,8 @@
-import { useMountLayoutEffect } from "../../../../../../hooks/useMountEffect.tsx";
 // discord_app/modules/devtools/native/components/screens/performance/MountMeasure.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { useMountLayoutEffect } from "../../../../../../hooks/useMountEffect.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");

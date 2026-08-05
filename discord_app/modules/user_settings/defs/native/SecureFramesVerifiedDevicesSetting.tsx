@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { VerificationListItem } from "../../privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx";
 // discord_app/modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { VerificationListItem } from "../../privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx";
 
 obj = {
   useTitle() {

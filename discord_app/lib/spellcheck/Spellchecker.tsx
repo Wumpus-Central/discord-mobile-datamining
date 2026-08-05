@@ -1,12 +1,12 @@
-import { parse } from "../../../_runtime/05290_parse.js";
-import { set } from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
-import { set } from "fallbackLocales.tsx";
 // discord_app/lib/spellcheck/Spellchecker.tsx
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import importDefaultResult from "set";
 import importDefaultResult1 from "apply";
+import { parse } from "../../../_runtime/05290_parse.js";
+import { set } from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
+import { set } from "fallbackLocales.tsx";
 
 const require = arg1;
 function normalizeLocale(arg0) {

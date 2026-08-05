@@ -1,9 +1,9 @@
+// discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx
+import jsxProd from "jsxProd";
 import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { isSocialLayerApplication } from "../../../applications/isSocialLayerApplication.tsx";
 import { isAuthorizedAppTwoWay } from "../shouldWarnAuthorizedAppTwoWay.tsx";
-// discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

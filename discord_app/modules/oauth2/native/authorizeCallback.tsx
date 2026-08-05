@@ -1,11 +1,11 @@
+// discord_app/modules/oauth2/native/authorizeCallback.tsx
+import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { keys } from "../../../ConstantsIOS.tsx";
 import { Linking } from "../../../lib/native/Linking.tsx";
 import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
 import { NativeModules } from "../../links/native/BrowserManager.tsx";
-// discord_app/modules/oauth2/native/authorizeCallback.tsx
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
 
 let c3;
 let c4;

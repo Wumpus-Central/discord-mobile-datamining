@@ -1,12 +1,12 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelUtils.tsx
 import createRTCConnection from "createRTCConnection";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import { RequestToSpeakPermissionStates as closure_6 } from "MAX_STAGE_TOPIC_LENGTH";
 import { Permissions } from "ME";
 import { RowType } from "RowType";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
 
 let require = arg1;
 const result = require("MAX_STAGE_TOPIC_LENGTH").fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");

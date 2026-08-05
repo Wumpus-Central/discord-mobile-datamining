@@ -1,11 +1,11 @@
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
-import { processColorOrThrow } from "../../../RowGeneratorStyleSheet.tsx";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx
 import { Image } from "get ActivityIndicator";
 import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import { InviteTypes } from "InviteSendStates";
+import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
+import { processColorOrThrow } from "../../../RowGeneratorStyleSheet.tsx";
+import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 
 const result = require("GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx");
 

@@ -1,5 +1,5 @@
-import { TableId } from "../types/index.tsx";
 // discord_common/js/packages/kv-storage/js/util/Key.tsx
+import { TableId } from "../types/index.tsx";
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
 export const combineKey = function combineKey(prefix, key) {

@@ -1,9 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03867_t.js";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { EmojiTerms } from "../emoji_terms/EmojiTerms.tsx";
-import { parseRawEmojiObject } from "UnicodeEmojis.tsx";
-import { dedupeEmojisByNameOrId } from "utils/dedupeEmojisByNameOrId.tsx";
 // discord_app/modules/emojis/EmojiStore.tsx
 import dedupeEmojisByNameOrId from "dedupeEmojisByNameOrId";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -28,6 +22,12 @@ import importDefaultResult2 from "DEFAULT_FRECENCY";
 import importDefaultResult3 from "DEFAULT_FRECENCY";
 import { PersistedStore } from "initialize";
 import set from "getHash";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { t } from "../../../_runtime/03867_t.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { EmojiTerms } from "../emoji_terms/EmojiTerms.tsx";
+import { parseRawEmojiObject } from "UnicodeEmojis.tsx";
+import { dedupeEmojisByNameOrId } from "utils/dedupeEmojisByNameOrId.tsx";
 
 let closure_17;
 let closure_18;

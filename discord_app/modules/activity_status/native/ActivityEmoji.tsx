@@ -1,8 +1,8 @@
-import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/activity_status/native/ActivityEmoji.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });

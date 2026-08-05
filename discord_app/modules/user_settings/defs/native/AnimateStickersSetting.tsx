@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/AnimateStickersSetting.tsx
 import noop from "noop";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const require = arg1;
 createToggle = {

@@ -1,6 +1,6 @@
+// discord_app/modules/interaction_components/validateComponent.tsx
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
-// discord_app/modules/interaction_components/validateComponent.tsx
 const result = require("getSystemLocale").fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
 
 export default function validateComponent(type, arg1, modal) {

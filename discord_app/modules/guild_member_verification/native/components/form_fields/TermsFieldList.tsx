@@ -1,9 +1,9 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 
 let c5;
 let closure_6;

@@ -1,5 +1,3 @@
-import { getPathsFromURL } from "../modules/coded_links/findCodedLinks.tsx";
-import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
 // discord_app/lib/getOnClick.tsx
 import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity";
 import fetchFingerprint from "fetchFingerprint";
@@ -17,6 +15,8 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import ME from "ME";
 import items from "items";
 import { isGameShopPath } from "STOREFRONT_MARKETING_GUILD_ID";
+import { getPathsFromURL } from "../modules/coded_links/findCodedLinks.tsx";
+import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
 
 let AbortCodes;
 let AppContext;

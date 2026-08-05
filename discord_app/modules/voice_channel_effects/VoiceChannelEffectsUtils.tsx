@@ -1,11 +1,11 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType";
 import importDefaultResult from "module_5884";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 
 let VoiceChannelEffectAnimationType;
 let c4;

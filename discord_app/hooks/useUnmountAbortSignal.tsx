@@ -1,6 +1,6 @@
+// discord_app/hooks/useUnmountAbortSignal.tsx
 import { useInitialValue } from "useInitialValue.tsx";
 import { useMountLayoutEffect } from "useMountEffect.tsx";
-// discord_app/hooks/useUnmountAbortSignal.tsx
 const result = require("set").fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
 
 export default function useUnmountAbortSignal() {

@@ -1,3 +1,10 @@
+// discord_app/modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "getSearchEmptySource";
+import { View } from "SearchField";
+import set from "set";
+import jsxProd from "useSafeAreaInsets";
+import createCacheKey from "createCacheKey";
 import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { DoubleCheckmarkIcon } from "../../../../../design/components/Icon/native/redesign/generated/DoubleCheckmarkIcon.tsx";
@@ -13,13 +20,6 @@ import { handleDCShownToUser } from "../../../../dismissible_content/Dismissible
 import { useToggleDismissibleContentDismissState } from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import { updateUserGuildSettings } from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
-// discord_app/modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "getSearchEmptySource";
-import { View } from "SearchField";
-import set from "set";
-import jsxProd from "useSafeAreaInsets";
-import createCacheKey from "createCacheKey";
 
 let c9;
 let error;

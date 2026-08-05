@@ -1,3 +1,6 @@
+// discord_app/modules/favorites/native/FavoritesGuildActionSheet.tsx
+import "noop";
+import jsxProd from "jsxProd";
 import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { ActionSheetRowIcon } from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -5,9 +8,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { useFavoritesGuildHideAction } from "../hooks/useFavoritesGuildHideAction.tsx";
 import { useFavoritesGuildResetAction } from "../hooks/useFavoritesGuildResetAction.tsx";
-// discord_app/modules/favorites/native/FavoritesGuildActionSheet.tsx
-import "noop";
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

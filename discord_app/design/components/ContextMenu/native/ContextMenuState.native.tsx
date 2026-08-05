@@ -1,9 +1,9 @@
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { HapticFeedbackTypes } from "../../../../modules/haptics/HapticUtils.native.tsx";
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 // discord_app/design/components/ContextMenu/native/ContextMenuState.native.tsx
 import noop from "noop";
 import keys from "keys";
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { HapticFeedbackTypes } from "../../../../modules/haptics/HapticUtils.native.tsx";
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 keys = keys.create(() => ({ menu: null }));

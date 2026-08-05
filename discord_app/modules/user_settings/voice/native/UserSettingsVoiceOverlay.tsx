@@ -1,12 +1,12 @@
+// discord_app/modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx
+import "noop";
+import getUserAgnosticState from "getUserAgnosticState";
+import { jsx } from "jsxProd";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { dispatcher } from "../../../voice_overlay/native/MobileVoiceOverlayActionCreators.tsx";
 import { UserSettingsVoice } from "UserSettingsVoice.tsx";
-// discord_app/modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx
-import "noop";
-import getUserAgnosticState from "getUserAgnosticState";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");

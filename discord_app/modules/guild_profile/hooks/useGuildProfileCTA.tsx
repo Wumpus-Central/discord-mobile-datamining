@@ -1,5 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { usePendingFolderGuildIds } from "../../guilds_bar/usePendingFolderGuildIds.tsx";
 // discord_app/modules/guild_profile/hooks/useGuildProfileCTA.tsx
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
@@ -8,6 +6,8 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateInvite from "updateInvite";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { usePendingFolderGuildIds } from "../../guilds_bar/usePendingFolderGuildIds.tsx";
 
 let c10;
 let c9;

@@ -1,7 +1,7 @@
+// discord_app/modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { useCanPurchaseFrames } from "useCanPurchaseFrames.tsx";
 import { useShouldShowPremiumProfileFrameEA } from "useShouldShowPremiumProfileFrameEA.tsx";
-// discord_app/modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
 
 export default function useShouldShowPremiumProfileFrameCTA(location) {

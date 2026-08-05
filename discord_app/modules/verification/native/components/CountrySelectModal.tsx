@@ -1,7 +1,7 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/verification/native/components/CountrySelectModal.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/verification/native/components/CountrySelectModal.tsx");

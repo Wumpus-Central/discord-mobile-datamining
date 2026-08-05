@@ -1,5 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/multi_account/native/AccountSwitcherListItem.tsx
 import "noop";
 import get_ActivityIndicator from "nameFromUser";
@@ -9,6 +7,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { MultiAccountTokenStatus } from "initialize";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 
 let c10;
 let c3;

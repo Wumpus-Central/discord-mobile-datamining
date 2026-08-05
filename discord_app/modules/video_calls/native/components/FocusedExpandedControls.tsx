@@ -1,3 +1,11 @@
+// discord_app/modules/video_calls/native/components/FocusedExpandedControls.tsx
+import "stopScreenshare";
+import get_ActivityIndicator from "_handleToggleVideo";
+import reset from "reset";
+import fetchFingerprint from "fetchFingerprint";
+import { MediaEngineContextTypes } from "DesktopSources";
+import jsxProd from "NOOP";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/10792_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/10793_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
@@ -11,14 +19,6 @@ import { _handleToggleVideo } from "../../../voice_calls/native/CallsUtils.tsx";
 import { useDeafStates } from "../../useDeafStates.tsx";
 import { stopScreenshare } from "../useScreenshareUtils.tsx";
 import { NOOP } from "../VoiceActionUtils.tsx";
-// discord_app/modules/video_calls/native/components/FocusedExpandedControls.tsx
-import "stopScreenshare";
-import get_ActivityIndicator from "_handleToggleVideo";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import { MediaEngineContextTypes } from "DesktopSources";
-import jsxProd from "NOOP";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c3;

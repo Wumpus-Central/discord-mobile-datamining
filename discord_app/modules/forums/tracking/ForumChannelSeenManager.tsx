@@ -1,8 +1,8 @@
+// discord_app/modules/forums/tracking/ForumChannelSeenManager.tsx
+import { AnalyticsFeedItemSeenManager } from "maybeMarkSeen";
 import { markAnalyticsFeedItemSeen } from "../../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
 import { maybeMarkSeen } from "../../../utils/AnalyticsFeedItemSeenManager.tsx";
 import { collectForumAnalyticsMetadata } from "TrackingUtils.tsx";
-// discord_app/modules/forums/tracking/ForumChannelSeenManager.tsx
-import { AnalyticsFeedItemSeenManager } from "maybeMarkSeen";
 
 const prototype = function ForumChannelSeenManager(channelId) {
   channelId = channelId.channelId;

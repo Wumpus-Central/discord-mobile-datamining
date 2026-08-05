@@ -1,9 +1,9 @@
-import { preload } from "FastImage.tsx";
 // discord_app/components_native/common/ImageWithPlaceholder.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import set from "set";
 import set from "set";
+import { preload } from "FastImage.tsx";
 
 let obj1;
 let requireNativeComponent;

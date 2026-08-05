@@ -1,6 +1,6 @@
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/messages/native/openPinnedMessages.tsx
 import { ChannelDetailsNavigatorScreens as closure_2 } from "ChannelDetailsNavigatorScreens";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
 

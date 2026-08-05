@@ -1,11 +1,11 @@
-import { apexExperiment } from "../../voice_calls/DefaultAudioRouteExperiment.tsx";
-import { RouteTypes } from "../../voice_calls/VoiceCallTypes.tsx";
 // discord_app/modules/stage_channels/native/StageChannelAudioStore.tsx
 import { NativeModules } from "get ActivityIndicator";
 import handleAudioRouteChanged from "handleAudioRouteChanged";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import { Store } from "initialize";
+import { apexExperiment } from "../../voice_calls/DefaultAudioRouteExperiment.tsx";
+import { RouteTypes } from "../../voice_calls/VoiceCallTypes.tsx";
 
 function handleAudioRouteChanged() {
   if (c8) {

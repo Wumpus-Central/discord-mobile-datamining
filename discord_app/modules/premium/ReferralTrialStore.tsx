@@ -1,10 +1,10 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { _fetchReferralEligibleUsers } from "ReferralTrialActionCreators.tsx";
 // discord_app/modules/premium/ReferralTrialStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { NOOP_NULL } from "ME";
 import { Store } from "initialize";
 import set from "_fetchReferralEligibleUsers";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { _fetchReferralEligibleUsers } from "ReferralTrialActionCreators.tsx";
 
 const require = arg1;
 function emitChanges() {

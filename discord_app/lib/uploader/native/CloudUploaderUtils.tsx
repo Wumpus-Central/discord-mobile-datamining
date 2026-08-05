@@ -1,9 +1,9 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/lib/uploader/native/CloudUploaderUtils.tsx
 import _getSystemLocale from "_getSystemLocale";
 import fetchFingerprint from "fetchFingerprint";
 import refreshSourceMapCookie from "refreshSourceMapCookie";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 function getUploadPayload(outer1_0) {

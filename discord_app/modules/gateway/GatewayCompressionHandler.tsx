@@ -1,11 +1,11 @@
+// discord_app/modules/gateway/GatewayCompressionHandler.tsx
+import { NativeModules } from "get ActivityIndicator";
 import { 12826__ } from "../../../_runtime/metro/12826__.js";
 import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
 import { get } from "../../utils/ProcessArgs.tsx";
 import { timestamp } from "../debug/Logger.tsx";
 import { supportsZstd } from "GatewayZstdUtils.native.tsx";
-// discord_app/modules/gateway/GatewayCompressionHandler.tsx
-import { NativeModules } from "get ActivityIndicator";
 
 const items = [];
 class BaseGatewayCompressionHandler {

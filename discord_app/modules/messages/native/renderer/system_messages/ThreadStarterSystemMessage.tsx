@@ -1,10 +1,10 @@
-import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
 import { MessageTypes } from "ME";
+import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 
 const require = arg1;
 const result = require("module_38").fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");

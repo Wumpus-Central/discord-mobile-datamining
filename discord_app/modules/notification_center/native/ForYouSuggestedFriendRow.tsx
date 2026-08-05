@@ -1,6 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
-import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 // discord_app/modules/notification_center/native/ForYouSuggestedFriendRow.tsx
 import renderChannelPressableWrapper from "renderChannelPressableWrapper";
 import { View } from "getSystemLocale";
@@ -9,6 +6,9 @@ import upsertRelationship from "upsertRelationship";
 import ME from "ME";
 import jsxProd from "renderChannelWrapper";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 
 let c10;
 let c9;

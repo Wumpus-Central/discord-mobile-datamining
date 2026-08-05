@@ -1,4 +1,3 @@
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/messages/native/MessageGameIconActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +7,7 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "addApplication";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
 
 let closure_6;
 let error;

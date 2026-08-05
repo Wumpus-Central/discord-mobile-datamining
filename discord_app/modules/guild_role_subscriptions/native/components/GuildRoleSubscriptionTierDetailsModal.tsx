@@ -1,3 +1,9 @@
+// discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx
+import _slicedToArray from "_slicedToArray";
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
+import { UPLOAD_MEDIUM_SIZE } from "ME";
+import jsxProd from "jsxProd";
+import importAllResult from "noop";
 import { Form } from "../../../../design/void/Form/native/index.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -7,12 +13,6 @@ import { pickImage } from "FormImagePicker.tsx";
 import { FormPriceTier } from "FormPriceTier.tsx";
 import { styles } from "FormStyles.tsx";
 import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
-// discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx
-import _slicedToArray from "_slicedToArray";
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
-import { UPLOAD_MEDIUM_SIZE } from "ME";
-import jsxProd from "jsxProd";
-import importAllResult from "noop";
 
 let c10;
 let c5;

@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/modules/voice_panel/native/utils/VoiceStateIconUtils.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 
 const require = arg1;
 function isStableVoiceStateEqual(arg0, arg1) {

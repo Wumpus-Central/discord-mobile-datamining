@@ -1,8 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { PermissionOverwriteType } from "../flow/Server.tsx";
-import { GuildMemberFlags } from "../modules/guild_automod/AutomodPermissionUtils.tsx";
-import { compareGuildRoles } from "GuildRoleUtils.tsx";
-import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
 // discord_app/utils/PermissionUtils.tsx
 import initialize from "initialize";
 import closure_5 from "initialize";
@@ -27,6 +22,11 @@ import importAllResult4 from "fromString";
 import importAllResult5 from "fromString";
 import importAllResult6 from "fromString";
 import importAllResult7 from "fromString";
+import { apply } from "../../_runtime/00012_apply.js";
+import { PermissionOverwriteType } from "../flow/Server.tsx";
+import { GuildMemberFlags } from "../modules/guild_automod/AutomodPermissionUtils.tsx";
+import { compareGuildRoles } from "GuildRoleUtils.tsx";
+import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
 
 let c10;
 let c9;

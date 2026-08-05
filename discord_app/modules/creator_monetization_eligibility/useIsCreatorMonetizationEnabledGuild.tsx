@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx");

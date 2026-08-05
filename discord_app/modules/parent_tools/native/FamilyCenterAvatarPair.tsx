@@ -1,10 +1,10 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterAvatarPair.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 let c4;
 let c5;

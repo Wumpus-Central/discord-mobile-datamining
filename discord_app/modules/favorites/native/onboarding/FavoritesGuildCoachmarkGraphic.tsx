@@ -1,9 +1,9 @@
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 
 let c3;
 let c4;

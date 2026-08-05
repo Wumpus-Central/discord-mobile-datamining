@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx
 import { useEffect } from "noop";
 import scheduledEventSort from "scheduledEventSort";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const result = require("initialize").fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
 

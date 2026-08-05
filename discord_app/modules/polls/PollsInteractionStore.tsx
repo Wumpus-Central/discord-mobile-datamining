@@ -1,7 +1,7 @@
-import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/polls/PollsInteractionStore.tsx
 import identity from "identity";
+import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_3 = {};
 let closure_4 = identity.createWithEqualityFn((arg0) => {

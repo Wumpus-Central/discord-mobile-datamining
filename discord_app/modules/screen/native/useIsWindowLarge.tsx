@@ -1,5 +1,5 @@
-import { useWindowSizeClassifier } from "useWindowSizeClassifier.tsx";
 // discord_app/modules/screen/native/useIsWindowLarge.tsx
+import { useWindowSizeClassifier } from "useWindowSizeClassifier.tsx";
 const result = require("set").fileFinishedImporting("modules/screen/native/useIsWindowLarge.tsx");
 
 export default function useIsWindowLarge() {

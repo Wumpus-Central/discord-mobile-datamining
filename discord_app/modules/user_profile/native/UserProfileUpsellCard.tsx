@@ -1,11 +1,11 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/user_profile/native/UserProfileUpsellCard.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Gradients } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
 
 let c3;
 let c4;

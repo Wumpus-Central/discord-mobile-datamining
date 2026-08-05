@@ -1,6 +1,3 @@
-import { Directions } from "../../../../../../_runtime/05368_Directions.js";
-import { HappeningNowCardPlaceholder } from "HappeningNowCardPlaceholder.tsx";
-import { HappeningNowCardUnifiedVC } from "HappeningNowCardUnifiedVC.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx
 import HappeningNowCardCreateChannel from "HappeningNowCardCreateChannel";
 import importAllResult from "useHappeningNowScrollBehavior";
@@ -11,6 +8,9 @@ import { jsx } from "u";
 import createFakeSharedValue from "createFakeSharedValue";
 import createCacheKey from "createCacheKey";
 import { Gesture } from "Directions";
+import { Directions } from "../../../../../../_runtime/05368_Directions.js";
+import { HappeningNowCardPlaceholder } from "HappeningNowCardPlaceholder.tsx";
+import { HappeningNowCardUnifiedVC } from "HappeningNowCardUnifiedVC.tsx";
 
 let HAPPENING_NOW_PANELS_CONTAINER_PADDING;
 let c5;

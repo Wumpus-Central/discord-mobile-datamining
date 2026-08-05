@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../_runtime/11025_registerAsset.js";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/notifications/native/NotificationSurveyResponseActionSheet.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -11,6 +5,12 @@ import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { registerAsset } from "../../../../_runtime/11025_registerAsset.js";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let Fonts;
 let c3;

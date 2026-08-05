@@ -1,10 +1,10 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/RTCDebugStore.tsx
 import _slicedToArray from "_slicedToArray";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import DesktopSources from "DesktopSources";
 import { Store } from "initialize";
+import { dispatcher } from "../Dispatcher.tsx";
 
 let c9;
 let metroImportAll;

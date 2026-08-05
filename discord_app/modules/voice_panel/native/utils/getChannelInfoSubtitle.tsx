@@ -1,6 +1,6 @@
+// discord_app/modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getNickname } from "../../../../utils/NicknameUtils.tsx";
-// discord_app/modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");
 
 export default function getChannelInfoSubtitle(arg0, arg1, arg2) {

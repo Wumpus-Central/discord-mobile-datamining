@@ -1,4 +1,3 @@
-import { _promptForRegisterCredential } from "../NativeCeremonies.tsx";
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import { View } from "set";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { _promptForRegisterCredential } from "../NativeCeremonies.tsx";
 
 let OTHER_AND_ANDROID_NONDISCOVERABLE;
 let PASSKEY_CREDENTIAL_MANAGER;

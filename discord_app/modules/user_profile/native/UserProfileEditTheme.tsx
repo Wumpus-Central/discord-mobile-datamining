@@ -1,3 +1,8 @@
+// discord_app/modules/user_profile/native/UserProfileEditTheme.tsx
+import "EditProfileThemeActionSheet";
+import { View } from "showCustomColorPickerActionSheet";
+import jsxProd from "MoreHorizontalIcon";
+import createCacheKey from "createCacheKey";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import { PencilIcon } from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
@@ -7,11 +12,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { showCustomColorPickerActionSheet } from "../../color_picker/native/showCustomColorPickerActionSheet.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import { getHigherContrastColor } from "../utils/getHigherContrastColor.tsx";
-// discord_app/modules/user_profile/native/UserProfileEditTheme.tsx
-import "EditProfileThemeActionSheet";
-import { View } from "showCustomColorPickerActionSheet";
-import jsxProd from "MoreHorizontalIcon";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

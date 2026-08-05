@@ -1,12 +1,12 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TrophyIcon } from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileRankPill.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TrophyIcon } from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

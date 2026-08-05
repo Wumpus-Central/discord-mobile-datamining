@@ -1,10 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { Emoji } from "../../emojis/native/Emoji.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/native/UserProfileCustomStatusBubble.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "QUICK_SWITCHER";
@@ -13,6 +6,13 @@ import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 let c10;
 let c5;

@@ -1,6 +1,6 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeKeyboardModule.tsx";
 // discord_app/utils/native/KeyboardManagerUtils.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeKeyboardModule.tsx";
 
 let result = require("enforcing").fileFinishedImporting("utils/native/KeyboardManagerUtils.tsx");
 

@@ -1,9 +1,9 @@
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 // discord_app/modules/self_mod/shared/native/SafetyTipsRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 
 const require = arg1;
 createCacheKey = { indexContainer: null };

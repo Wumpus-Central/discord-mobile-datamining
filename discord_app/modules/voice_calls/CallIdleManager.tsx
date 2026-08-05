@@ -1,13 +1,13 @@
-import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/voice_calls/CallIdleManager.tsx
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateVoiceState from "updateVoiceState";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import "initialize";
+import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let require = arg1;
 function disconnect() {

@@ -1,3 +1,8 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
+import importAllResult from "useTheme";
+import { View } from "map";
+import upsertRelationship from "upsertRelationship";
+import jsxProd from "Themes";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import { ImageIcon } from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
@@ -9,11 +14,6 @@ import { StickerIcon } from "../../../../design/components/Icon/native/redesign/
 import { VideoIcon } from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import { getOrParseMessagePreviewMarkupAST } from "../../../message_previews/native/MessagePreviewMarkup.tsx";
 import { getFontScale } from "../../../screen/native/useFontScale.tsx";
-// discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
-import importAllResult from "useTheme";
-import { View } from "map";
-import upsertRelationship from "upsertRelationship";
-import jsxProd from "Themes";
 
 let closure_6;
 let error;

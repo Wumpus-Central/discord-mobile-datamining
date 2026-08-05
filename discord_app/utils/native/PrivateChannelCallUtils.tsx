@@ -1,13 +1,3 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
-import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../../modules/age_gate/AgeGateUtils.tsx";
-import { navigationToRootTabHelper } from "../../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { openStageChannelSettings } from "../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx";
-import { runAfterInteractions } from "RunAfterInteractionsUtils.tsx";
 // discord_app/utils/native/PrivateChannelCallUtils.tsx
 import upsertRelationship from "upsertRelationship";
 import runAfterInteractions from "runAfterInteractions";
@@ -21,6 +11,16 @@ import ME from "ME";
 import { AgeGateSource } from "result";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import { jsx } from "ACTION_SHEET_HEIGHT_HALF";
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../../modules/age_gate/AgeGateUtils.tsx";
+import { navigationToRootTabHelper } from "../../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { openStageChannelSettings } from "../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx";
+import { runAfterInteractions } from "RunAfterInteractionsUtils.tsx";
 
 let closure_12;
 let map1;

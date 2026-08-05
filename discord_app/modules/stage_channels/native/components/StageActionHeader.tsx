@@ -1,12 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/10805_registerAsset.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { openChannelCallModal } from "../../../../utils/native/PrivateChannelCallUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import { componentDidMount } from "../../../status_bar/native/components/StatusBar.android.tsx";
-import { CameraButton } from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
-import { ChannelCallNavigatorIcon } from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import { useMyCurrentStageChannelRole } from "../../useMyCurrentStageChannelRole.tsx";
 // discord_app/modules/stage_channels/native/components/StageActionHeader.tsx
 import { View } from "module_4490";
 import getParticipants from "getParticipants";
@@ -21,6 +12,15 @@ import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import importAllResult from "initialize";
+import { registerAsset } from "../../../../../_runtime/10805_registerAsset.js";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { openChannelCallModal } from "../../../../utils/native/PrivateChannelCallUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import { componentDidMount } from "../../../status_bar/native/components/StatusBar.android.tsx";
+import { CameraButton } from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
+import { ChannelCallNavigatorIcon } from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
+import { useMyCurrentStageChannelRole } from "../../useMyCurrentStageChannelRole.tsx";
 
 let c10;
 let closure_12;

@@ -1,9 +1,9 @@
-import { items } from "../../../user_profile/UserProfileGameWidgetTypes.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { items } from "../../../user_profile/UserProfileGameWidgetTypes.tsx";
 
 let c4;
 let c5;

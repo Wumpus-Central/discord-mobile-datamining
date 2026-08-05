@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { parseUserProfileCollectibles } from "utils/parseUserProfileCollectibles.tsx";
 // discord_app/modules/user_profile/UserProfileStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createdAt from "createdAt";
@@ -12,6 +8,10 @@ import sortActivity from "sortActivity";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { MAX_TIMEOUT_MS } from "ME";
 import set from "fetchFingerprint";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { parseUserProfileCollectibles } from "utils/parseUserProfileCollectibles.tsx";
 
 const require = arg1;
 function createUserWidgetFromServer(data) {

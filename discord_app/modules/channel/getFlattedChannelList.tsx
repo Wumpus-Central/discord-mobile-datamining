@@ -1,5 +1,5 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/channel/getFlattedChannelList.tsx
+import { apply } from "../../../_runtime/00012_apply.js";
 const result = require("set").fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 
 export default function getFlattenedChannelList(arg0, arg1) {

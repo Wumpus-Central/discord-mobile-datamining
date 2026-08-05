@@ -1,12 +1,12 @@
+// discord_app/modules/safety_hub/SafetyHubUtils.tsx
+import fetchFingerprint from "fetchFingerprint";
+import SafetyHubView from "SafetyHubView";
+import ME from "ME";
 import { t } from "../../../_runtime/03867_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
 import { ContentIdType } from "SafetyHubModels.tsx";
-// discord_app/modules/safety_hub/SafetyHubUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
-import SafetyHubView from "SafetyHubView";
-import ME from "ME";
 
 let c4;
 let c5;

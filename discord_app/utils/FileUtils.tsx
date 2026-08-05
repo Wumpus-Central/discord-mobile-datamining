@@ -1,10 +1,10 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { noConflict } from "../../_runtime/04823_noConflict.js";
 // discord_app/utils/FileUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
+import { apply } from "../../_runtime/00012_apply.js";
+import { noConflict } from "../../_runtime/04823_noConflict.js";
 
 const require = arg1;
 function getUploadFileSizeSum(arg0) {

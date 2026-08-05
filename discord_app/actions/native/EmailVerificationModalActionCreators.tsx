@@ -1,9 +1,9 @@
+// discord_app/actions/native/EmailVerificationModalActionCreators.tsx
+import { AnalyticEvents } from "ME";
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { ModalActionCreators } from "../ModalActionCreators.tsx";
-// discord_app/actions/native/EmailVerificationModalActionCreators.tsx
-import { AnalyticEvents } from "ME";
 
 const EMAIL_VERIFICATION_MODAL_KEY = "EMAIL_VERIFICATION_MODAL_KEY";
 const result = require("module_4490").fileFinishedImporting("actions/native/EmailVerificationModalActionCreators.tsx");

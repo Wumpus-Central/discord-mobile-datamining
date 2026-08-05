@@ -1,7 +1,7 @@
+// discord_app/modules/premium/powerups/utils/getBoostRowMessageText.tsx
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../GuildPowerups.messages.js";
 import { BOOST_EXPIRING_DISPLAY_WINDOW_DAYS } from "getBoostLifecyclePhase.tsx";
-// discord_app/modules/premium/powerups/utils/getBoostRowMessageText.tsx
 const result = require("BOOST_EXPIRING_DISPLAY_WINDOW_DAYS").fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
 
 export default function getBoostRowMessageText(phase) {

@@ -1,6 +1,6 @@
-import { _fetchSocialLayerStorefront } from "SocialLayerStorefrontActionCreators.tsx";
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx
 import "initialize";
+import { _fetchSocialLayerStorefront } from "SocialLayerStorefrontActionCreators.tsx";
 
 const require = arg1;
 class SocialLayerStorefrontConfigManager extends tmp2 {

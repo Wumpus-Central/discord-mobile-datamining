@@ -1,7 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
-import { useNullableMessageAuthor } from "../../../messages/useMessageAuthor.tsx";
-import { useHasEnhancedRoleColors } from "../../../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 // discord_app/modules/threads/native/components/ThreadBrowserRowSubtext.tsx
 import importAllResult from "useNullableMessageAuthor";
 import { View } from "nameFromUser";
@@ -11,6 +7,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import updateState from "updateState";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import { useNullableMessageAuthor } from "../../../messages/useMessageAuthor.tsx";
+import { useHasEnhancedRoleColors } from "../../../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 
 let c10;
 let c9;

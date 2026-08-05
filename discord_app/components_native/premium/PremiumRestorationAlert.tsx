@@ -1,10 +1,10 @@
-import { componentDidMount } from "../common/UntouchableAlert.tsx";
 // discord_app/components_native/premium/PremiumRestorationAlert.tsx
 import importDefaultResult from "updateProduct";
 import { jsx } from "jsxProd";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
 import importDefaultResult1 from "initialize";
+import { componentDidMount } from "../common/UntouchableAlert.tsx";
 
 class PremiumRestorationAlert extends PureComponent {
 }

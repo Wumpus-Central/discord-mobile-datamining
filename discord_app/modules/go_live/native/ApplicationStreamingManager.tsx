@@ -1,5 +1,3 @@
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { apexExperiment } from "MobileGoLiveUpsellExperiment.tsx";
 // discord_app/modules/go_live/native/ApplicationStreamingManager.tsx
 import "noop";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
@@ -7,6 +5,8 @@ import { ApplicationStreamPresets } from "RESOLUTION_720";
 import { MediaEngineContextTypes } from "DesktopSources";
 import { jsx } from "jsxProd";
 import "updateRegion";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { apexExperiment } from "MobileGoLiveUpsellExperiment.tsx";
 
 const require = arg1;
 let obj = new require("DesktopSources")("ApplicationStreamingManager");

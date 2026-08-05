@@ -1,5 +1,5 @@
-import { Integer } from "../../../../_runtime/00014_Integer.js";
 // discord_common/js/shared/utils/SnowflakeUtils.tsx
+import { Integer } from "../../../../_runtime/00014_Integer.js";
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;
 }

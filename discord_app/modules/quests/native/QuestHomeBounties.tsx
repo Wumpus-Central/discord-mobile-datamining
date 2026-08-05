@@ -1,8 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useTrackQuestEventWithImpression } from "../lib/analytics/AnalyticsHooks.tsx";
-import { BountiesCtaDescription } from "BountiesCtaHeader.tsx";
 // discord_app/modules/quests/native/QuestHomeBounties.tsx
 import ListEdgeSpacer from "ListEdgeSpacer";
 import importAllResult from "HapticFeedbackTypes";
@@ -12,6 +7,11 @@ import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLoc
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "getQuestContentName";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useTrackQuestEventWithImpression } from "../lib/analytics/AnalyticsHooks.tsx";
+import { BountiesCtaDescription } from "BountiesCtaHeader.tsx";
 
 let c10;
 let c9;

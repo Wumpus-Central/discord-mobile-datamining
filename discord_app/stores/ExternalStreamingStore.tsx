@@ -1,7 +1,3 @@
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { callback } from "../actions/ConnectedAccountsActionCreators.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/ExternalStreamingStore.tsx
 import sendRequest from "sendRequest";
 import closure_4 from "set";
@@ -9,6 +5,10 @@ import initialize from "initialize";
 import { PlatformTypes } from "ME";
 import { Store } from "initialize";
 import set from "initialize";
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { callback } from "../actions/ConnectedAccountsActionCreators.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 
 const require = arg1;
 function makeTwitchRequest(arg0, query) {

@@ -1,4 +1,3 @@
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/messages/GuildOfficialMessagesStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -7,6 +6,7 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MessageFlags } from "ME";
 import { Store } from "initialize";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 let require = arg1;
 function updateGuildState(guildId, arg1) {

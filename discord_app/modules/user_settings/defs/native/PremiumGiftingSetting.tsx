@@ -1,12 +1,12 @@
+// discord_app/modules/user_settings/defs/native/PremiumGiftingSetting.tsx
+import noop from "noop";
+import { jsx } from "jsxProd";
+import createToggle from "createToggle";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { isPremiumGiftingSupported } from "../../../device/BillingPlatformUtils.tsx";
 import { useEligibleActiveOutboundPromotions } from "../../../premium/promotions/PromotionsHooks.tsx";
 import { GiftingSectionTitle } from "../../premium/native/UserSettingsPremiumGifting.tsx";
-// discord_app/modules/user_settings/defs/native/PremiumGiftingSetting.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

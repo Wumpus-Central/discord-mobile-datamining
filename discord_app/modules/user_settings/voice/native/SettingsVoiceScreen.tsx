@@ -1,10 +1,3 @@
-import { Directions } from "../../../../../_runtime/05368_Directions.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNoiseCancellationDeferredToSystem } from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
-import { handleKrispLinkPressed } from "KrispLogo.tsx";
 // discord_app/modules/user_settings/voice/native/SettingsVoiceScreen.tsx
 import set from "set";
 import get_ActivityIndicator from "createToggle";
@@ -14,6 +7,13 @@ import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "combined";
+import { Directions } from "../../../../../_runtime/05368_Directions.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getNoiseCancellationDeferredToSystem } from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import { handleKrispLinkPressed } from "KrispLogo.tsx";
 
 let c10;
 let c4;

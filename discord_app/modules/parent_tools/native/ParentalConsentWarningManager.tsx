@@ -1,6 +1,3 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { frozen } from "../ParentalConsentWarningTypes.tsx";
 // discord_app/modules/parent_tools/native/ParentalConsentWarningManager.tsx
 import setContent from "setContent";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
@@ -8,6 +5,9 @@ import initialize from "initialize";
 import items from "items";
 import { AppStates } from "ME";
 import "initialize";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { frozen } from "../ParentalConsentWarningTypes.tsx";
 
 let error;
 let metroImportAll;

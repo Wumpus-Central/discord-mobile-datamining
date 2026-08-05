@@ -1,5 +1,5 @@
-import { set } from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
 // discord_app/modules/user_settings/authorized_apps/shouldWarnAuthorizedAppTwoWay.tsx
+import { set } from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
 const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/shouldWarnAuthorizedAppTwoWay.tsx");
 
 export default function isAuthorizedAppTwoWay(arg0) {

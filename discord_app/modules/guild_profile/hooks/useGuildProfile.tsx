@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_profile/hooks/useGuildProfile.tsx
 import set from "set";
 import noop from "noop";
 import handleUpdateStart from "handleUpdateStart";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("handleUpdateStart").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");

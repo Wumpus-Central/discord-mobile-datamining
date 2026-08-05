@@ -1,10 +1,10 @@
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/voice_panel/native/controller/usePanelOpenState.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import withEqualityFn from "withEqualityFn";
 import { VoicePanelModes } from "VoicePanelModes";
 import ME from "ME";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let error;
 let metroImportAll;

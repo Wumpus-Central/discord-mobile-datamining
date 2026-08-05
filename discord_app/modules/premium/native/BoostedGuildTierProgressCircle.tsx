@@ -1,12 +1,12 @@
-import { getTier048PxSource } from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
-import { useGuildAppliedBoostCount } from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 // discord_app/modules/premium/native/BoostedGuildTierProgressCircle.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getTier048PxSource } from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
+import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
+import { useGuildAppliedBoostCount } from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 
 let c3;
 let c4;

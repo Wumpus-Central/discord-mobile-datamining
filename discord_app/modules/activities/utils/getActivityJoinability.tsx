@@ -1,3 +1,5 @@
+// discord_app/modules/activities/utils/getActivityJoinability.tsx
+import ME from "ME";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { useIsActivitiesEnabledForCurrentPlatform } from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
 import { getCurrentUserPresenceActivity } from "getCurrentUserPresenceActivity.tsx";
@@ -6,8 +8,6 @@ import { getIsInParty } from "getIsInParty.tsx";
 import { getPartySize } from "getPartySize.tsx";
 import { hasFlag } from "hasFlag.tsx";
 import { isActivityJoinableOnCurrentPlatform } from "isActivityJoinableOnCurrentPlatform.tsx";
-// discord_app/modules/activities/utils/getActivityJoinability.tsx
-import ME from "ME";
 
 let c3;
 let c4;

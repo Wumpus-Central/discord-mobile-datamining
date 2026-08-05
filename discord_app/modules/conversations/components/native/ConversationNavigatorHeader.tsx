@@ -1,11 +1,11 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
 // discord_app/modules/conversations/components/native/ConversationNavigatorHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {

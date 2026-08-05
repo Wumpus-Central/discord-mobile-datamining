@@ -1,8 +1,3 @@
-import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { ChatTTITracker } from "../../chat/native/ChatTTITracker.tsx";
-import { openMediaModalOverlayAltTextSheet } from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
-import { useMessageAuthorActivities } from "MessagesHooks.tsx";
-import { getVisibleMessages } from "MessagesUtils.tsx";
 // discord_app/modules/messages/native/MessagesRenderer.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import getMessageJumpData from "getMessageJumpData";
@@ -15,6 +10,11 @@ import addSku from "addSku";
 import { Changeset } from "Changeset";
 import ME from "ME";
 import jsxProd from "useChannelLoading";
+import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { ChatTTITracker } from "../../chat/native/ChatTTITracker.tsx";
+import { openMediaModalOverlayAltTextSheet } from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
+import { useMessageAuthorActivities } from "MessagesHooks.tsx";
+import { getVisibleMessages } from "MessagesUtils.tsx";
 
 let closure_12;
 let closure_14;

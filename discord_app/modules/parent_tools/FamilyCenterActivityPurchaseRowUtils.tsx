@@ -1,10 +1,10 @@
-import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx
 import { isAvatarDecorationRecord } from "fromServer";
 import { isProfileEffectRecord } from "fromServer";
 import GuildFeatures from "GuildFeatures";
+import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
 
 let c5;
 let closure_6;

@@ -1,11 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03867_t.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getMatch } from "../../lib/QueryTokenizer.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-import { computeChannelName } from "../channel/useChannelName.tsx";
-import { SearchActionCreators } from "SearchActionCreators.tsx";
-import { getShortcuts } from "tokens/SearchTokens.tsx";
 // discord_app/modules/search/SearchUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -16,6 +8,14 @@ import "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SearchTabs } from "MessageEmbedTypes";
 import ME from "ME";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { t } from "../../../_runtime/03867_t.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getMatch } from "../../lib/QueryTokenizer.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
+import { computeChannelName } from "../channel/useChannelName.tsx";
+import { SearchActionCreators } from "SearchActionCreators.tsx";
+import { getShortcuts } from "tokens/SearchTokens.tsx";
 
 let ME;
 let SearchTokenTypes;

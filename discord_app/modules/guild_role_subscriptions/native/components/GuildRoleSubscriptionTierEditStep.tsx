@@ -1,13 +1,13 @@
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { FormSeparator } from "FormSeparator.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { FormSeparator } from "FormSeparator.tsx";
 
 let c4;
 let c5;

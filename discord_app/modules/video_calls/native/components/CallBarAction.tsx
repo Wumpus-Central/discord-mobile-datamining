@@ -1,5 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/video_calls/native/components/CallBarAction.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import { resetFocusTimer } from "VoiceChatDrawerState";
 import jsxProd from "jsxProd";
 import hexToRgba from "hexToRgba";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

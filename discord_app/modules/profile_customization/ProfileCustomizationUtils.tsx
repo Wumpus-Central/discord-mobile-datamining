@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/profile_customization/ProfileCustomizationUtils.tsx
 import noop from "noop";
 import handleFormOpen from "handleFormOpen";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("createUserWidgetFromServer").fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");

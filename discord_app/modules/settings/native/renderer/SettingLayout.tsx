@@ -1,9 +1,9 @@
-import { SearchListSectionLabel } from "SettingListRenderer.tsx";
-import { SettingSegmentedControl } from "SettingSegmentedControlRenderer.tsx";
 // discord_app/modules/settings/native/renderer/SettingLayout.tsx
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { SearchListSectionLabel } from "SettingListRenderer.tsx";
+import { SettingSegmentedControl } from "SettingSegmentedControlRenderer.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function SettingLayout(node) {

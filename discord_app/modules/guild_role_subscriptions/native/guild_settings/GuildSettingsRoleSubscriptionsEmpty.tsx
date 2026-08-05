@@ -1,11 +1,11 @@
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Placeholder } from "../components/Placeholder.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 import { ApplicationTypes } from "ApplicationTypes";
 import { jsx } from "jsxProd";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Placeholder } from "../components/Placeholder.tsx";
 
 let c4;
 let c5;

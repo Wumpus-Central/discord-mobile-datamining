@@ -1,7 +1,7 @@
-import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/subscriptions.tsx
 import getInitialSubscriptionPayload from "getInitialSubscriptionPayload";
 import ME from "ME";
+import { prototype } from "../../RPCError.tsx";
 
 let RPCCommands;
 let c4;

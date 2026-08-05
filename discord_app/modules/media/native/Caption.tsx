@@ -1,9 +1,9 @@
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/media/native/Caption.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { Button } from "../../../design/void/native.tsx";
 
 let obj = { captionText: null, labelContainer: null };
 obj = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: require("Themes").colors.WHITE, fontSize: 12 };

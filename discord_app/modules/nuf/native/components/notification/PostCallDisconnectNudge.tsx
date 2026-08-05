@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { NotificationNudgeBottomSheet } from "NotificationNudgeBottomSheet.tsx";
 // discord_app/modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +6,8 @@ import updateVoiceState from "updateVoiceState";
 import { PermissionPromptType } from "set";
 import EventActionType from "EventActionType";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { NotificationNudgeBottomSheet } from "NotificationNudgeBottomSheet.tsx";
 
 let c9;
 let metroImportAll;

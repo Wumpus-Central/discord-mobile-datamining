@@ -1,3 +1,8 @@
+// discord_app/modules/guild_sidebar/useGuildActionRows.tsx
+import _slicedToArray from "_slicedToArray";
+import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
+import { GuildFeatures } from "ME";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useGuildShopVisibleInGuild } from "../creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx";
 import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -17,11 +22,6 @@ import { useHasAllocateBoostPermission } from "../premium/powerups/hooks/useHasA
 import { useTotalPossibleBoostCount } from "../premium/powerups/hooks/useTotalPossibleBoostCount.tsx";
 import { getPrice } from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 import { vibegrationsAppIdFromTopic } from "../vibegrations/lib/VibegrationsUtils.tsx";
-// discord_app/modules/guild_sidebar/useGuildActionRows.tsx
-import _slicedToArray from "_slicedToArray";
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
-import { GuildFeatures } from "ME";
 
 const require = arg1;
 let result = require("ChannelListGuildActionRow").fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");

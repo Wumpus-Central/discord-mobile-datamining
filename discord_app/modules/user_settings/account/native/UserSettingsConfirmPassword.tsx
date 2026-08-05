@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { FreeFormInputGroup } from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
-import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
-import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 // discord_app/modules/user_settings/account/native/UserSettingsConfirmPassword.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +7,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { FreeFormInputGroup } from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
+import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 
 let c10;
 let closure_6;

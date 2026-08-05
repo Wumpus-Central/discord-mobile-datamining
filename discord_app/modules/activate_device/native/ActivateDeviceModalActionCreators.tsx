@@ -1,6 +1,6 @@
+// discord_app/modules/activate_device/native/ActivateDeviceModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/activate_device/native/ActivateDeviceModalActionCreators.tsx
 const ACTIVATE_DEVICE_MODAL_KEY = "ACTIVATE_DEVICE_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/activate_device/native/ActivateDeviceModalActionCreators.tsx");
 

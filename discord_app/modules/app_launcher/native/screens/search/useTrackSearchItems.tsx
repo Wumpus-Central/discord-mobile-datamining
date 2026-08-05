@@ -1,6 +1,6 @@
-import { context } from "../../AppLauncherContext.tsx";
 // discord_app/modules/app_launcher/native/screens/search/useTrackSearchItems.tsx
 import noop from "noop";
+import { context } from "../../AppLauncherContext.tsx";
 
 const require = arg1;
 const result = require("trackImpression").fileFinishedImporting("modules/app_launcher/native/screens/search/useTrackSearchItems.tsx");

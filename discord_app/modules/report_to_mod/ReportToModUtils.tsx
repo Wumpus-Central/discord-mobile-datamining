@@ -1,8 +1,3 @@
-import { canReportUser } from "../../utils/ReportUtils.tsx";
-import { getContextForPermission } from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
-import { isCurrentUserTeen } from "../self_mod/SelfModUtils.tsx";
-import { getGuildModeratorReportChannelId } from "getGuildModeratorReportChannelId.tsx";
-import { getGuildModeratorReportingEnabled } from "getGuildModeratorReportingEnabled.tsx";
 // discord_app/modules/report_to_mod/ReportToModUtils.tsx
 import handleLoadThreadsSuccess from "handleLoadThreadsSuccess";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -10,6 +5,11 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import reinjectEphemerals from "reinjectEphemerals";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ReportToModPermissions } from "ReportToModPermissions";
+import { canReportUser } from "../../utils/ReportUtils.tsx";
+import { getContextForPermission } from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
+import { isCurrentUserTeen } from "../self_mod/SelfModUtils.tsx";
+import { getGuildModeratorReportChannelId } from "getGuildModeratorReportChannelId.tsx";
+import { getGuildModeratorReportingEnabled } from "getGuildModeratorReportingEnabled.tsx";
 
 const require = arg1;
 let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");

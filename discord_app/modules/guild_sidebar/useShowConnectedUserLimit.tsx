@@ -1,6 +1,6 @@
-import { useChannelVideoLimit } from "../video_calls/useChannelVideoLimit.tsx";
 // discord_app/modules/guild_sidebar/useShowConnectedUserLimit.tsx
 import { MAX_STAGE_VOICE_USER_LIMIT as closure_2 } from "ME";
+import { useChannelVideoLimit } from "../video_calls/useChannelVideoLimit.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");
 

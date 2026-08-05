@@ -1,7 +1,7 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const require = arg1;
 const result = require("noop").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");

@@ -1,5 +1,5 @@
-import { isForwardMessage } from "isForwardMessage.tsx";
 // discord_app/modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx
+import { isForwardMessage } from "isForwardMessage.tsx";
 const result = require("set").fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
 
 export default function maybeCreateMessageRecordFromSnapshot(merge) {

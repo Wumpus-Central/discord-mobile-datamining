@@ -1,3 +1,7 @@
+// discord_app/modules/collectibles/native/ProductDetailsActionSheetInfo.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
@@ -5,10 +9,6 @@ import { useCollectiblesMobileFlexibleBundlesExperiment } from "../experiments/C
 import { getBundleDescription } from "../hooks/useProductDescription.tsx";
 import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
 import { PriceTag } from "InlinePriceTag.tsx";
-// discord_app/modules/collectibles/native/ProductDetailsActionSheetInfo.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

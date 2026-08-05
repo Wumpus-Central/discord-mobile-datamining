@@ -1,3 +1,9 @@
+// discord_app/modules/quests/native/QuestHomeEmptyState.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import { VerticalGradient } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -5,12 +11,6 @@ import { map } from "../../../design/tokens/native/useToken.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { useChatLayout } from "../../chat/native/useChatLayout.tsx";
-// discord_app/modules/quests/native/QuestHomeEmptyState.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { VerticalGradient } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

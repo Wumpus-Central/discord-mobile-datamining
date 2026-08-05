@@ -1,10 +1,3 @@
-import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { DCDDeviceManager } from "../../../utils/native/DeviceUtils.tsx";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { getMediaPerformanceClass } from "../../device/getMediaPerformanceClass.android.tsx";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import { AppStartInfo } from "AppStartInfo.android.tsx";
 // discord_app/modules/tti_analytics/native/TTIAnalyticsUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleClearCaches from "handleClearCaches";
@@ -19,6 +12,13 @@ import { StaticChannelRoutes } from "set";
 import { jsx } from "enforcing";
 import v1 from "v1";
 import set from "getHash";
+import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { DCDDeviceManager } from "../../../utils/native/DeviceUtils.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { getMediaPerformanceClass } from "../../device/getMediaPerformanceClass.android.tsx";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import { AppStartInfo } from "AppStartInfo.android.tsx";
 
 const require = arg1;
 function getDeviceMetadata() {

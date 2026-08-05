@@ -1,6 +1,6 @@
+// discord_app/modules/activities/utils/activityShareLink.tsx
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-// discord_app/modules/activities/utils/activityShareLink.tsx
 const items = [require("getPathsFromURL").parseQuestsEmbedCode];
 const result = require("getSystemLocale").fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 

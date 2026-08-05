@@ -1,12 +1,12 @@
-import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
-import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
-import { MINIMUM_HIT_AREA } from "../../Button/native/ButtonConstants.native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Navigator/native/HeaderActionButton.native.tsx
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
+import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
+import { MINIMUM_HIT_AREA } from "../../Button/native/ButtonConstants.native.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 
 let c4;
 let c5;

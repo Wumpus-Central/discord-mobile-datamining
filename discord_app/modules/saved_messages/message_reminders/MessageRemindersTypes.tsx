@@ -1,6 +1,6 @@
+// discord_app/modules/saved_messages/message_reminders/MessageRemindersTypes.tsx
 import { t } from "../../../../_runtime/03867_t.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-// discord_app/modules/saved_messages/message_reminders/MessageRemindersTypes.tsx
 const items = [
   {
     getDueAt() {

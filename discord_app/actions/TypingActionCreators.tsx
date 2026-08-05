@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/TypingActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("actions/TypingActionCreators.tsx");
 
 export default {

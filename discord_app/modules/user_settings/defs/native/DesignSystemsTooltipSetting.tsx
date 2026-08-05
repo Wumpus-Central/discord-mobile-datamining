@@ -1,6 +1,6 @@
-import { Content } from "../../design_system/native/UserSettingsDesignSystemTooltip.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTooltipSetting.tsx
 import createToggle from "createToggle";
+import { Content } from "../../design_system/native/UserSettingsDesignSystemTooltip.tsx";
 
 obj = {
   useTitle() {

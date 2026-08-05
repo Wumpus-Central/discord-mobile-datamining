@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/QuestProgressIndicator.tsx
 import noop from "noop";
 import importDefaultResult from "noop";
@@ -7,6 +6,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult1 from "module_4146";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c3;

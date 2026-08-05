@@ -1,11 +1,11 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/TextInput/native/TextInput.tsx
 import { TextInput } from "get ActivityIndicator";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 
 let Fonts;
 let c4;

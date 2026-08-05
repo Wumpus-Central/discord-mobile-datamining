@@ -1,13 +1,13 @@
+// discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
+import "noop";
+import { jsx } from "jsxProd";
+import createToggle from "createToggle";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
 import { useIsParentalConsentBannerActive } from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
 import { useParentalConsentWarning } from "../../../parent_tools/useParentalConsentWarning.tsx";
 import { FamilyCenterLoading } from "../../family_center/native/UserSettingsFamilyCenter.tsx";
-// discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

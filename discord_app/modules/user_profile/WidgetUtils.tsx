@@ -1,3 +1,9 @@
+// discord_app/modules/user_profile/WidgetUtils.tsx
+import _slicedToArray from "_slicedToArray";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import createUserWidgetFromServer from "createUserWidgetFromServer";
+import initialize from "initialize";
+import items from "items";
 import { USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH } from "../../../discord_common/js/shared/shared-constants/ClipsGalleryLimits.tsx";
 import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import { WidgetGameTag } from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
@@ -6,12 +12,6 @@ import { convertClip } from "UserProfileClipsGalleryWidgetTypes.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
 import { isFieldEmpty } from "UserProfilePersonalWidget.tsx";
 import { WidgetActionCreators } from "WidgetActionCreators.tsx";
-// discord_app/modules/user_profile/WidgetUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import initialize from "initialize";
-import items from "items";
 
 let c9;
 let error;

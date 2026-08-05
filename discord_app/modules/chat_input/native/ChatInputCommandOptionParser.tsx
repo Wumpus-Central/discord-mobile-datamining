@@ -1,11 +1,3 @@
-import { registerAsset } from "../../../../_runtime/07751_registerAsset.js";
-import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
-import { AutocompleteFormDivider } from "../../autocompleter/native/AutocompleteUtils.tsx";
-import { apexExperiment } from "../../game_mentions/GameMentionsMobileExperiment.tsx";
-import { getGameMediaRefURL } from "../../games/getGameMediaRefURL.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-import { getUsers } from "ApplicationCommandOptionValueParser.tsx";
-import { addRule } from "ChatInputParser.tsx";
 // discord_app/modules/chat_input/native/ChatInputCommandOptionParser.tsx
 import { Image } from "Themes";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -15,6 +7,14 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 import regExp from "regExp";
 import { EmojiIntention } from "set";
+import { registerAsset } from "../../../../_runtime/07751_registerAsset.js";
+import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
+import { AutocompleteFormDivider } from "../../autocompleter/native/AutocompleteUtils.tsx";
+import { apexExperiment } from "../../game_mentions/GameMentionsMobileExperiment.tsx";
+import { getGameMediaRefURL } from "../../games/getGameMediaRefURL.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import { getUsers } from "ApplicationCommandOptionValueParser.tsx";
+import { addRule } from "ChatInputParser.tsx";
 
 let c10;
 let c9;

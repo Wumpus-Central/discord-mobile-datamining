@@ -1,5 +1,5 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/utils/SnowflakeUtils.tsx
+import { apply } from "../../_runtime/00012_apply.js";
 const result = require("set").fileFinishedImporting("utils/SnowflakeUtils.tsx");
 
 export default {

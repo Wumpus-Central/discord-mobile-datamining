@@ -1,9 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useDominantRGBFromImage } from "../../../calls/native/VideoBackground.tsx";
 // discord_app/modules/avatar/native/components/AddAvatarModal.tsx
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -14,6 +8,12 @@ import ME from "ME";
 import jsxProd from "TouchableUploadAvatar";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useDominantRGBFromImage } from "../../../calls/native/VideoBackground.tsx";
 
 let Fonts;
 let ModalAnimation;

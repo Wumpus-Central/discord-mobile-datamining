@@ -1,13 +1,13 @@
+// discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx
+import "noop";
+import { CommandListSortOrder } from "CommandListSortOrder";
+import { jsx } from "jsxProd";
 import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ArrowsUpDownIcon } from "../../../../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx";
 import { Background } from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import { context } from "../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
-// discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx
-import "noop";
-import { CommandListSortOrder } from "CommandListSortOrder";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");

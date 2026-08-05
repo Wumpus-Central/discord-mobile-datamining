@@ -1,11 +1,11 @@
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/rpc/native/SocialRpcNetworkConfigManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import fetchFingerprint from "fetchFingerprint";
 import "initialize";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 function updateSocialRpcNetworkConfig() {
   let obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null, "X-Discord-Locale": null };

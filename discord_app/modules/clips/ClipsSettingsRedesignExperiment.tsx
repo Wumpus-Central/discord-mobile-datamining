@@ -1,7 +1,7 @@
-import { isClipsEnabled } from "isClipsEnabled.tsx";
 // discord_app/modules/clips/ClipsSettingsRedesignExperiment.tsx
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 import ApexExperiment from "ApexExperiment";
+import { isClipsEnabled } from "isClipsEnabled.tsx";
 
 const require = arg1;
 ApexExperiment = { 1: null };

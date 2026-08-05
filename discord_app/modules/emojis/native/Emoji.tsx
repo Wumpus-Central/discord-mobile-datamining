@@ -1,11 +1,11 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/emojis/native/Emoji.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
 import { jsx } from "jsxProd";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 const result = require("handleThemeChange").fileFinishedImporting("modules/emojis/native/Emoji.tsx");

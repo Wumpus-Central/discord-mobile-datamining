@@ -1,9 +1,9 @@
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
-import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
 import jsxProd from "jsxProd";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
 
 let c3;
 let c4;

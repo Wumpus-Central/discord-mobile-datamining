@@ -1,8 +1,8 @@
-import { _backgroundSync } from "BackgroundSync.tsx";
 // discord_app/modules/app_database/background_sync/native/BackgroundSyncManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
+import { _backgroundSync } from "BackgroundSync.tsx";
 
 const require = arg1;
 class BackgroundSyncManager extends tmp2 {

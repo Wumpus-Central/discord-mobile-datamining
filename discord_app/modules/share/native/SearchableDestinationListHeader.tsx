@@ -1,10 +1,10 @@
-import { Background } from "../../../../_runtime/05245_Background.js";
-import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 // discord_app/modules/share/native/SearchableDestinationListHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../../../_runtime/05245_Background.js";
+import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 
 const require = arg1;
 createCacheKey = { container: null, header: null };

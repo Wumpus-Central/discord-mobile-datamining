@@ -1,5 +1,5 @@
-import { t } from "../../../_runtime/03867_t.js";
 // discord_app/modules/polls/transformMessagPoll.tsx
+import { t } from "../../../_runtime/03867_t.js";
 const result = require("set").fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 
 export default function transformMessagePoll(expiry) {

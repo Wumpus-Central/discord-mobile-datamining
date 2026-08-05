@@ -1,5 +1,5 @@
-import { formatSinkWantStat } from "../utils/transformStatsUtils.tsx";
 // discord_common/js/packages/media-engine/native/transformStats.tsx
+import { formatSinkWantStat } from "../utils/transformStatsUtils.tsx";
 function sumBytes(rtpStats) {
   let num;
   if (rtpStats != null) {

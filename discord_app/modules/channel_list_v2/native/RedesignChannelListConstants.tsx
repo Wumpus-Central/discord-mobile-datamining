@@ -1,6 +1,6 @@
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 // discord_app/modules/channel_list_v2/native/RedesignChannelListConstants.tsx
 import PlatformTypes from "PlatformTypes";
+import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 
 let c2 = "text-xs/medium";
 let num = 20;

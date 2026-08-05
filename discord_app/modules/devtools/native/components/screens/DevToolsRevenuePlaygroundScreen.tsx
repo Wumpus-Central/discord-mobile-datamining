@@ -1,11 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowArrow } from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { serializePurchaseResponse } from "../../../../../utils/native/IAPUtils.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx
 import recomputeAffinities from "recomputeAffinities";
 import serializePurchaseResponse from "serializePurchaseResponse";
@@ -22,6 +14,14 @@ import { DevSettingsCategory } from "getUserAgnosticState";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "trackInvite";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowArrow } from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { serializePurchaseResponse } from "../../../../../utils/native/IAPUtils.tsx";
 
 let closure_15;
 let closure_16;

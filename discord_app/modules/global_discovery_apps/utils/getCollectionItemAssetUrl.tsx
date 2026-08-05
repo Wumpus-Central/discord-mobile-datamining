@@ -1,7 +1,7 @@
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx
 import { Endpoints } from "ME";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
 
 let c3;
 let c4;

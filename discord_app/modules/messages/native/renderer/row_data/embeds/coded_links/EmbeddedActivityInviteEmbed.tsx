@@ -1,5 +1,3 @@
-import { dispatcher } from "../../../../../../../Dispatcher.tsx";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import { Image } from "computeChannelName";
@@ -14,6 +12,8 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import { InviteTargetTypes } from "InviteSendStates";
+import { dispatcher } from "../../../../../../../Dispatcher.tsx";
+import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 
 const require = arg1;
 let closure_16 = ["embedded_cover"];

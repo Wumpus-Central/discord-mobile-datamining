@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelParticipantStoreHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");

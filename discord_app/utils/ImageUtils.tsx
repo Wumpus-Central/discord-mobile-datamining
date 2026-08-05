@@ -1,9 +1,9 @@
-import { PQueue } from "../../_runtime/01472_PQueue.js";
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { getSrcWithWidthAndHeight } from "native/ImageUtils.tsx";
 // discord_app/utils/ImageUtils.tsx
 import set from "set";
 import importDefaultResult from "apply";
+import { PQueue } from "../../_runtime/01472_PQueue.js";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { getSrcWithWidthAndHeight } from "native/ImageUtils.tsx";
 
 const require = arg1;
 function fit(minHeight) {

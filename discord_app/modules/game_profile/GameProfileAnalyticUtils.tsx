@@ -1,9 +1,9 @@
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import map from "map";
 import ME from "ME";
 import { ContentInventoryFeedKey } from "ContentInventoryFeedKey";
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let c4;
 let c5;

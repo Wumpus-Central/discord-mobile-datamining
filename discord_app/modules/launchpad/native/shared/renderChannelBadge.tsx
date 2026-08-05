@@ -1,11 +1,11 @@
+// discord_app/modules/launchpad/native/shared/renderChannelBadge.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { shortenAndLocalizeNumber } from "../../../../utils/NumberUtils.tsx";
 import { NewBadge } from "../../../channel_list_v2/native/components/NewBadge.tsx";
-// discord_app/modules/launchpad/native/shared/renderChannelBadge.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("Button").fileFinishedImporting("modules/launchpad/native/shared/renderChannelBadge.tsx");

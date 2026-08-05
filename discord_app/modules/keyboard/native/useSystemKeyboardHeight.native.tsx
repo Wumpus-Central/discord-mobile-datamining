@@ -1,6 +1,6 @@
+// discord_app/modules/keyboard/native/useSystemKeyboardHeight.native.tsx
 import { context } from "../../window/native/AppEntryKeyContext.tsx";
 import { computeEntryState } from "KeyboardUIStore.native.tsx";
-// discord_app/modules/keyboard/native/useSystemKeyboardHeight.native.tsx
 let closure_3 = { excludeSafeAreaInsets: false };
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
 

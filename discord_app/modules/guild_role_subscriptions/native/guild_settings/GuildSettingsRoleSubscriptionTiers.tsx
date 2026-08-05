@@ -1,8 +1,3 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ApplicationRejectedNotice } from "GuildSettingsRoleSubscriptionContainer.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx
 import HeaderBackImage from "HeaderBackImage";
 import render from "render";
@@ -15,6 +10,11 @@ import ME from "ME";
 import { SubscriptionIntervalTypes } from "GuildFeatures";
 import jsxProd from "getRoleEmojis";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ApplicationRejectedNotice } from "GuildSettingsRoleSubscriptionContainer.tsx";
 
 let closure_14;
 let closure_15;

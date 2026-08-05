@@ -1,6 +1,3 @@
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { useStoreConnectionErrorAlert } from "../../../premium/native/useStoreConnectionErrorAlert.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/user_settings/premium/native/UserSettingsPremium.tsx
 import _fetchUserOffer from "_fetchUserOffer";
 import expandEventProperties from "expandEventProperties";
@@ -15,6 +12,9 @@ import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import { jsx } from "useNavigation";
 import createCacheKey from "createCacheKey";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useStoreConnectionErrorAlert } from "../../../premium/native/useStoreConnectionErrorAlert.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING;
 let c5;

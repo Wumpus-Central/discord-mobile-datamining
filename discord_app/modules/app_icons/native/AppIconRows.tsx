@@ -1,6 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isPremiumAtLeast } from "../../../utils/PremiumTypeUtils.tsx";
-import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 // discord_app/modules/app_icons/native/AppIconRows.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,6 +6,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { createElement } from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { isPremiumAtLeast } from "../../../utils/PremiumTypeUtils.tsx";
+import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 
 let c10;
 let c9;

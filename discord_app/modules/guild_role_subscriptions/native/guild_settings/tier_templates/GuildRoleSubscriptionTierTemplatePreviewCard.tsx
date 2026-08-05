@@ -1,14 +1,14 @@
-import { registerAsset } from "../../../../../../_runtime/05600_registerAsset.js";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getPrivateChannelIconComponent } from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePreviewCard.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get_ActivityIndicator from "_getTemplates";
 import ME from "ME";
 import jsxProd from "GuildRoleSubscriptionTierTemplateBasicInfo";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/05600_registerAsset.js";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getPrivateChannelIconComponent } from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 
 let c10;
 let c5;

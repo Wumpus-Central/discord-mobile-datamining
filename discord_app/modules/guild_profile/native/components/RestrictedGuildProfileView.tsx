@@ -1,3 +1,7 @@
+// discord_app/modules/guild_profile/native/components/RestrictedGuildProfileView.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -6,10 +10,6 @@ import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 import { GuildProfileBackground } from "GuildProfileView.tsx";
-// discord_app/modules/guild_profile/native/components/RestrictedGuildProfileView.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

@@ -1,5 +1,5 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/user_profile/utils/parseUserProfileCollectibles.tsx
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {

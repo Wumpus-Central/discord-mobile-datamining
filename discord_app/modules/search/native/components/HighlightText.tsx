@@ -1,9 +1,9 @@
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/search/native/components/HighlightText.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { Button } from "../../../../design/void/native.tsx";
 
 const require = arg1;
 createCacheKey = { text: null };

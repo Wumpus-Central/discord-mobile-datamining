@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/11730_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/11731_registerAsset.js";
-import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx
 import { Image } from "ChatInputGuard";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -9,6 +6,9 @@ import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "module_11732";
+import { registerAsset } from "../../../../../_runtime/11730_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11731_registerAsset.js";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });

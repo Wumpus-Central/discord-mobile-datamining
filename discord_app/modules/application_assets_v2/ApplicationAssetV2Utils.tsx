@@ -1,6 +1,6 @@
+// discord_app/modules/application_assets_v2/ApplicationAssetV2Utils.tsx
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
-// discord_app/modules/application_assets_v2/ApplicationAssetV2Utils.tsx
 let result = require("set").fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
 export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1, asset_id, width) {

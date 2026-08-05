@@ -1,14 +1,14 @@
-import { getChannelIcon } from "../../../../../../utils/native/ChannelUtils.tsx";
-import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
-import { ChannelContentComponent } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx";
-import { LaunchpadChannelIcon } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx";
-import { SearchListRow } from "../SearchListRow.tsx";
 // discord_app/modules/search/native/components/list/rows/GuildChannelRow.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { CHANNEL_LIST_SEARCH_LAYOUT as closure_5 } from "MessageEmbedTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { getChannelIcon } from "../../../../../../utils/native/ChannelUtils.tsx";
+import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
+import { ChannelContentComponent } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx";
+import { LaunchpadChannelIcon } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx";
+import { SearchListRow } from "../SearchListRow.tsx";
 
 let c3;
 let c4;

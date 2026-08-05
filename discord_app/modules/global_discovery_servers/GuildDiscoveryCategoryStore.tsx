@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 let c3;
 let c4;

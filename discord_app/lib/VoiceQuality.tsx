@@ -1,9 +1,9 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
-import { getSamples } from "Histogram.tsx";
 // discord_app/lib/VoiceQuality.tsx
 import _slicedToArray from "_slicedToArray";
 import "on";
+import { apply } from "../../_runtime/00012_apply.js";
+import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
+import { getSamples } from "Histogram.tsx";
 
 let require = arg1;
 let obj = { InputDeviceSampleRateChanged: "input-device-sample-rate-changed" };

@@ -1,10 +1,10 @@
-import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
-import { useAuthorizedAppsTokens } from "../hooks/useAuthorizedAppsToken.tsx";
 // discord_app/modules/application_account_linking/native/useStartAuthorize.tsx
 import useAuthorizedAppsTokens from "useAuthorizedAppsTokens";
 import noop from "noop";
 import { AuthorizeFlow } from "AuthorizeFlow";
 import { AnalyticEvents } from "ME";
+import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
+import { useAuthorizedAppsTokens } from "../hooks/useAuthorizedAppsToken.tsx";
 
 const require = arg1;
 let result = require("AuthorizeFlow").fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");

@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 // discord_app/modules/oauth2/native/Header.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserFlags } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 
 let c5;
 let closure_6;

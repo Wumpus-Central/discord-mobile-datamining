@@ -1,8 +1,8 @@
+// discord_app/modules/create_guild/native/CreateGuildModalActionCreators.tsx
+import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { _startContactSyncForDiscoverability } from "../../nuf/native/NUFActionCreators.tsx";
-// discord_app/modules/create_guild/native/CreateGuildModalActionCreators.tsx
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 
 let c3;
 let c4;

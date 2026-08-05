@@ -1,11 +1,11 @@
-import { fuzzysearch } from "../../../../_runtime/05197_fuzzysearch.js";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesUtils.tsx
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES";
 import { AnalyticEvents } from "ME";
+import { fuzzysearch } from "../../../../_runtime/05197_fuzzysearch.js";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");

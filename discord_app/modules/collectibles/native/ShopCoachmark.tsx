@@ -1,9 +1,9 @@
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/collectibles/native/ShopCoachmark.tsx
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/void/native.tsx";
 
 const require = arg1;
 function CoachmarkImg(arg0) {

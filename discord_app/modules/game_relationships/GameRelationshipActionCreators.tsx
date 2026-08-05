@@ -1,9 +1,9 @@
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { V6OrEarlierAPIError } from "../../errors/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/game_relationships/GameRelationshipActionCreators.tsx
 import sendRequest from "sendRequest";
 import ME from "ME";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { V6OrEarlierAPIError } from "../../errors/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c4;
 let c5;

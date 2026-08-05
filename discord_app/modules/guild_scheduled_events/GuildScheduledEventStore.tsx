@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 let c4;
 let c5;

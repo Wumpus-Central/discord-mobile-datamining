@@ -1,6 +1,6 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx");

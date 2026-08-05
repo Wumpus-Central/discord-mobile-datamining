@@ -1,8 +1,8 @@
-import { set } from "../../../actions/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandBuiltIns.tsx
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { set } from "../../../actions/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: null, inputType: null, applicationId: null };

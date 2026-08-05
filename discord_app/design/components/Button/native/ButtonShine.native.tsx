@@ -1,12 +1,12 @@
+// discord_app/design/components/Button/native/ButtonShine.native.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import { jsx } from "jsxProd";
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../animation/reanimated/timing/timing.tsx";
 import { AccessibilityAnnouncer } from "../../../shared.tsx";
 import { createCacheKey } from "../../Styles/native/createStyles.tsx";
 import { styleProperties } from "ButtonHooks.native.tsx";
-// discord_app/design/components/Button/native/ButtonShine.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 function useShineEffectStyles(width, variant) {

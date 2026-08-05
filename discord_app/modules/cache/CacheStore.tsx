@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { serialize } from "../tti_analytics/TTITracker.tsx";
 // discord_app/modules/cache/CacheStore.tsx
 import getToken from "getToken";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -10,6 +7,9 @@ import closure_7 from "handleConnectionOpen";
 import closure_8 from "handleConnectionOpen";
 import ME from "ME";
 import { Store } from "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { serialize } from "../tti_analytics/TTITracker.tsx";
 
 let c10;
 let c9;

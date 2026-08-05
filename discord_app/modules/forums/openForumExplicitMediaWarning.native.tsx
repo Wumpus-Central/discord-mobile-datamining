@@ -1,6 +1,6 @@
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/forums/openForumExplicitMediaWarning.native.tsx
 import { jsx } from "jsxProd";
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 
 const result = require("ForumExplicitMediaAlert").fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");
 

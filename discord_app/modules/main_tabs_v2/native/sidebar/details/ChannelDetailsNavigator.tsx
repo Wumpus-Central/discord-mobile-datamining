@@ -1,4 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/12036_registerAsset.js";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx
 import importAllResult from "useSafeAreaInsets";
 import { View } from "useNavigatorBackPressHandler";
@@ -8,6 +7,7 @@ import { AnalyticEvents } from "ME";
 import { SearchNavigatorScreens } from "SearchNavigatorScreens";
 import jsxProd from "set";
 import createNativeStackNavigator from "createNativeStackNavigator";
+import { registerAsset } from "../../../../../../_runtime/12036_registerAsset.js";
 
 let c10;
 let c9;

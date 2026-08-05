@@ -1,10 +1,10 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { HelpdeskArticles } from "ME";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 const require = arg1;
 function resolveGoreSettingWithDefaults(isFriend) {

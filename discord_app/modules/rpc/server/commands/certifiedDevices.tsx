@@ -1,9 +1,9 @@
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/certifiedDevices.tsx
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
 import { DeviceTypes } from "DesktopSources";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
 
 let RPCCommands;
 let RPC_LOCAL_SCOPE;

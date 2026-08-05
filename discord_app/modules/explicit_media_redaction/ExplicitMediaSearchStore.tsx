@@ -1,7 +1,7 @@
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
 // discord_app/modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx
 import { Store } from "initialize";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
+import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
 
 const require = arg1;
 function handleSearchMessagesSuccess(data) {

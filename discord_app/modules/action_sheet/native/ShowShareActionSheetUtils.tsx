@@ -1,10 +1,10 @@
+// discord_app/modules/action_sheet/native/ShowShareActionSheetUtils.tsx
+import { AnalyticEvents } from "ME";
+import { SHARE_SHEET_PRESENT_DELAY_MS as closure_4 } from "SHARE_PREPARING_MODAL_KEY";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
 import { apexExperiment } from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
 import { decideFileExtension } from "../../media/FileExtensionUtils.tsx";
-// discord_app/modules/action_sheet/native/ShowShareActionSheetUtils.tsx
-import { AnalyticEvents } from "ME";
-import { SHARE_SHEET_PRESENT_DELAY_MS as closure_4 } from "SHARE_PREPARING_MODAL_KEY";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/action_sheet/native/ShowShareActionSheetUtils.tsx");
 

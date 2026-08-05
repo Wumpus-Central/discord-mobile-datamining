@@ -1,7 +1,7 @@
+// discord_app/modules/search/SearchActionCreators.tsx
 import { dispatcher } from "../../Dispatcher.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 import { createRequestPayload } from "managers/SearchTabsFetchManager.tsx";
-// discord_app/modules/search/SearchActionCreators.tsx
 let result = require("dispatcher").fileFinishedImporting("modules/search/SearchActionCreators.tsx");
 
 export default {

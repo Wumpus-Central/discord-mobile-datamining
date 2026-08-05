@@ -1,6 +1,3 @@
-import { useChatLayout } from "../../../chat/native/useChatLayout.tsx";
-import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
-import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,6 +6,9 @@ import handleConnectionOpen from "handleConnectionOpen";
 import closure_7 from "handleConnectionOpen";
 import { ME } from "ME";
 import { isStaticChannelRoute } from "set";
+import { useChatLayout } from "../../../chat/native/useChatLayout.tsx";
+import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
+import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 
 const require = arg1;
 function getActiveTabsRoute(coerceTabsRouteResult) {

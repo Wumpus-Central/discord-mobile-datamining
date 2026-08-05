@@ -1,6 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx
 import "PressableBase";
 import { View } from "Background";
@@ -12,6 +9,9 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "init";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 let c10;
 let c9;

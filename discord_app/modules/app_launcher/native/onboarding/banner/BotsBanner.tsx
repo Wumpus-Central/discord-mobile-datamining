@@ -1,8 +1,8 @@
-import { useBannerBots } from "../hooks/useBannerBots.tsx";
-import { BannerBase } from "BannerBase.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/BotsBanner.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { useBannerBots } from "../hooks/useBannerBots.tsx";
+import { BannerBase } from "BannerBase.tsx";
 
 const require = arg1;
 const result = require("useBannerBots").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");

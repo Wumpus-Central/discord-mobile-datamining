@@ -1,4 +1,3 @@
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/app_launcher/native/onboarding/hooks/useCanShowAppLauncherOnboarding.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +6,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
 import closure_8 from "initialize";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 let result = 5 * require("set").Millis.SECOND;

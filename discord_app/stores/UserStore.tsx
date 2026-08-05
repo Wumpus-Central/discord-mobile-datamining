@@ -1,7 +1,3 @@
-import { PermissionOverwriteType } from "../flow/Server.tsx";
-import { isUserPrimaryGuildEqual } from "../modules/guild_tag/PrimaryGuildUtils.tsx";
-import { validatePremiumType } from "../modules/user/UserStoreUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/stores/UserStore.tsx
 import setPremiumTypeActual from "setPremiumTypeActual";
 import createdAt from "createdAt";
@@ -9,6 +5,10 @@ import fetchFingerprint from "fetchFingerprint";
 import "clearAll";
 import ME from "ME";
 import { UNSELECTED_PREMIUM_TYPE_OVERRIDE as closure_10 } from "GuildFeatures";
+import { PermissionOverwriteType } from "../flow/Server.tsx";
+import { isUserPrimaryGuildEqual } from "../modules/guild_tag/PrimaryGuildUtils.tsx";
+import { validatePremiumType } from "../modules/user/UserStoreUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 let c9;
 let error;

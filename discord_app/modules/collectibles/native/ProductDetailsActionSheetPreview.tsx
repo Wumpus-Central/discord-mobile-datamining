@@ -1,7 +1,3 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { useCollectiblesMobileFlexibleBundlesExperiment } from "../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx";
-import { memo } from "BundleProductDetailsActionSheetPreview.tsx";
-import { ProfilePreviewWrapper } from "IndividualProductPreview.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetPreview.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,6 +5,10 @@ import { View } from "get ActivityIndicator";
 import { ShopCtaEnum } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { useCollectiblesMobileFlexibleBundlesExperiment } from "../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx";
+import { memo } from "BundleProductDetailsActionSheetPreview.tsx";
+import { ProfilePreviewWrapper } from "IndividualProductPreview.tsx";
 
 let c10;
 let c4;

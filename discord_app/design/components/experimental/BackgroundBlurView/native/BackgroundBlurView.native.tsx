@@ -1,9 +1,9 @@
-import { BlurTheme } from "BackgroundBlurFill.native.tsx";
 // discord_app/design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { BlurTheme } from "BackgroundBlurFill.native.tsx";
 
 let c3;
 let c4;

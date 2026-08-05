@@ -1,8 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { runAfterInteractions } from "../../../utils/native/RunAfterInteractionsUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { _safeTransitionTo } from "../../links/safeTransitionTo.native.tsx";
 // discord_app/modules/icymi/native/ICYMIShared.tsx
 import closure_3 from "createICYMIStyles";
 import { View } from "trackInvite";
@@ -14,6 +9,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "Themes";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { runAfterInteractions } from "../../../utils/native/RunAfterInteractionsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { _safeTransitionTo } from "../../links/safeTransitionTo.native.tsx";
 
 let c10;
 let closure_12;

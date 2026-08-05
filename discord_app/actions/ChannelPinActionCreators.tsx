@@ -1,10 +1,10 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ChannelPinActionCreators.tsx
 import V6OrEarlierAPIError from "V6OrEarlierAPIError";
 import handleChannelDelete from "handleChannelDelete";
 import { FetchState } from "handleChannelDelete";
 import ME from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 
 let closure_6;
 let error;

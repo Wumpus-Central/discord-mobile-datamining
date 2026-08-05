@@ -1,8 +1,8 @@
+// discord_app/modules/payments/utils/BillingStandaloneUtils.tsx
+import ME from "ME";
 import { v1 } from "../../../../_runtime/00514_v1.js";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-// discord_app/modules/payments/utils/BillingStandaloneUtils.tsx
-import ME from "ME";
 
 let c3;
 let c4;

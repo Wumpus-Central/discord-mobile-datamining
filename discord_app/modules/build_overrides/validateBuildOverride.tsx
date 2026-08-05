@@ -1,10 +1,10 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/build_overrides/validateBuildOverride.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BUILD_OVERRIDE_TARGET_NAMES";
 import { PublicReleaseChannels } from "ME";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("BUILD_OVERRIDE_TARGET_NAMES").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");

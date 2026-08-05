@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigUtils.tsx
 import getRegionalFeatureConfig from "getRegionalFeatureConfig";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");

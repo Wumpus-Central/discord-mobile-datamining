@@ -1,3 +1,10 @@
+// discord_app/modules/guild_scheduled_events/native/components/GuildEventModalComponents.tsx
+import registerAsset from "registerAsset";
+import { View } from "registerAsset";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
+import { GuildFeatures } from "ME";
+import jsxProd from "registerAsset";
+import createCacheKey from "createCacheKey";
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { registerAsset } from "../../../../../_runtime/07823_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/08893_registerAsset.js";
@@ -9,13 +16,6 @@ import { TextInput } from "../../../../design/components/TextInput/native/TextIn
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { useChannelsUserCanStartStageIn } from "../../useGuildsUserCanStartStageIn.tsx";
-// discord_app/modules/guild_scheduled_events/native/components/GuildEventModalComponents.tsx
-import registerAsset from "registerAsset";
-import { View } from "registerAsset";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { GuildFeatures } from "ME";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
 
 let c9;
 let closure_12;

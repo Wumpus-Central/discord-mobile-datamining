@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/useIsStreamFocused.tsx
 import getParticipants from "getParticipants";
 import { isStreamParticipant } from "ParticipantTypes";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");

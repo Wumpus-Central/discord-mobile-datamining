@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getClientInfo } from "CopyClientInfoSetting.tsx";
 // discord_app/modules/user_settings/defs/native/AppVersionSetting.tsx
 import createToggle from "createToggle";
 import importAllResult from "getConstants";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getClientInfo } from "CopyClientInfoSetting.tsx";
 
 const require = arg1;
 const constants = require("getConstants").getConstants();

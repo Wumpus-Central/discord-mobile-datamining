@@ -1,6 +1,6 @@
-import { expandEventProperties } from "../../../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../../../utils/AnalyticsUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx");
 

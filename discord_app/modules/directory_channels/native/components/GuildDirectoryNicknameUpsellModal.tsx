@@ -1,3 +1,12 @@
+// discord_app/modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModal.tsx
+import GuildPrompts from "GuildPrompts";
+import _slicedToArray from "_slicedToArray";
+import Button from "Button";
+import get_ActivityIndicator from "module_8276";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { GuildPrompts } from "GuildPrompts";
+import jsxProd from "module_11930";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -8,15 +17,6 @@ import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-// discord_app/modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModal.tsx
-import GuildPrompts from "GuildPrompts";
-import _slicedToArray from "_slicedToArray";
-import Button from "Button";
-import get_ActivityIndicator from "module_8276";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildPrompts } from "GuildPrompts";
-import jsxProd from "module_11930";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let closure_6;

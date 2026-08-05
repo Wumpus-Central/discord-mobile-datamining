@@ -1,7 +1,7 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 
 const require = arg1;
 class Versions$Type extends MessageType {

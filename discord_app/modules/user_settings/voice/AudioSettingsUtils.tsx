@@ -1,6 +1,6 @@
-import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
 // discord_app/modules/user_settings/voice/AudioSettingsUtils.tsx
 import { ProtoAudioSettingsContextTypes as closure_2 } from "MAX_FAVORITES";
+import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
 
 let result = require("AudioSettingsDefaultVolumes").fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 

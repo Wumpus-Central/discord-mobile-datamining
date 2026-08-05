@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { filterLayer } from "../../user_profile/native/UserProfilePreview.tsx";
-import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
-import { hasAtLeastOneGPlaySynced } from "CollectiblesUtils.tsx";
 // discord_app/modules/collectibles/native/OrbBadgePreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { filterLayer } from "../../user_profile/native/UserProfilePreview.tsx";
+import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { hasAtLeastOneGPlaySynced } from "CollectiblesUtils.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });

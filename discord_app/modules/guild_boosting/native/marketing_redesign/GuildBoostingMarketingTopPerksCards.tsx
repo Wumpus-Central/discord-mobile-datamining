@@ -1,3 +1,9 @@
+// discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/12779_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/12781_registerAsset.js";
 import { 12780__ } from "../../../../../_runtime/metro/12780__.js";
@@ -5,12 +11,6 @@ import { play } from "../../../../components_native/common/LottieAnimationView.t
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { items } from "MarketingCardsScroller.tsx";
-// discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

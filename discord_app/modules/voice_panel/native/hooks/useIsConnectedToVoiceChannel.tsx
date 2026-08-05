@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";
 import { RTCConnectionStates } from "ME";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("updateVoiceState").fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");

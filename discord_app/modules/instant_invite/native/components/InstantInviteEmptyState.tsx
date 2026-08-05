@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../../_runtime/09009_registerAsset.js";
-import { ClearButton } from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteEmptyState.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import updateWithLatestInvite from "updateWithLatestInvite";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09009_registerAsset.js";
+import { ClearButton } from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 
 let c5;
 let closure_6;

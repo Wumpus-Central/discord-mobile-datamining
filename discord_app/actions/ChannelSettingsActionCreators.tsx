@@ -1,11 +1,11 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/actions/ChannelSettingsActionCreators.tsx
 import getRootNavigationRef from "getRootNavigationRef";
 import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 
 let Layers;
 let closure_6;

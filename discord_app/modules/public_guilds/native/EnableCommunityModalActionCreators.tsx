@@ -1,6 +1,6 @@
+// discord_app/modules/public_guilds/native/EnableCommunityModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/public_guilds/native/EnableCommunityModalActionCreators.tsx
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
 

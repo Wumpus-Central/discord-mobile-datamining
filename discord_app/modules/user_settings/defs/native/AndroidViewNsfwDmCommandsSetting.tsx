@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { openIncodeAgeVerificationModal } from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import { shouldShowAgeGateForVoiceChannel } from "../../../age_gate/AgeGateUtils.tsx";
 import { resolveNsfwTogglesWithDefaults } from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import { useNSFWAllowed } from "../../content_and_social/useNSFWAllowed.tsx";
-// discord_app/modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

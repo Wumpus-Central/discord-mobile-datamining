@@ -1,10 +1,10 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/stage_channels/StageChannelNewUserManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "MAX_STAGE_TOPIC_LENGTH";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let require = arg1;
 class StageChannelNewUserManager extends tmp2 {

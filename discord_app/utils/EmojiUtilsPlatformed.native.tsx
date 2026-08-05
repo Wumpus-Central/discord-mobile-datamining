@@ -1,12 +1,12 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { onDismiss } from "../components_native/reactions/BurstReactionFirstSendActionSheet.tsx";
-import { set } from "PlatformUtils.tsx";
 // discord_app/utils/EmojiUtilsPlatformed.native.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "get ActivityIndicator";
 import defaultImageSrcGenerator from "defaultImageSrcGenerator";
 import importDefaultResult from "set";
+import { apply } from "../../_runtime/00012_apply.js";
+import { onDismiss } from "../components_native/reactions/BurstReactionFirstSendActionSheet.tsx";
+import { set } from "PlatformUtils.tsx";
 
 let c5;
 let closure_6;

@@ -1,9 +1,9 @@
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx
 import importAllResult from "noop";
 import { MobileSetting } from "MobileSetting";
 import { MarketingURLs } from "ME";
 import { jsx } from "jsxProd";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

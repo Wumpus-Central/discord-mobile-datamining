@@ -1,3 +1,8 @@
+// discord_app/modules/content_inventory/ContentInventoryActivityImageUtils.tsx
+import { useEffect } from "noop";
+import addApplication from "addApplication";
+import ME from "ME";
+import { ImageSizes } from "items3";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { isCrunchyrollActivity } from "../activities/utils/isCrunchyrollActivity.tsx";
@@ -6,11 +11,6 @@ import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplicat
 import { importDefaultResult1 } from "../games/hooks/useGame.tsx";
 import { unpackStageChannelParty } from "../stage_channels/StageChannelRichPresenceUtils.tsx";
 import { useEntryActivityAndApplication } from "useEntryActivityAndApplication.tsx";
-// discord_app/modules/content_inventory/ContentInventoryActivityImageUtils.tsx
-import { useEffect } from "noop";
-import addApplication from "addApplication";
-import ME from "ME";
-import { ImageSizes } from "items3";
 
 let c5;
 let closure_6;

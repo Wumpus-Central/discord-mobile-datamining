@@ -1,9 +1,9 @@
-import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 // discord_app/modules/checkout/native/showCheckoutOrderErrorModal.tsx
 import getSystemLocale from "getSystemLocale";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";
+import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 
 let c5;
 let closure_6;

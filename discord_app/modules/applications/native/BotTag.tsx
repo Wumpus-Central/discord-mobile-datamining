@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/applications/native/BotTag.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { BotTagTypes } from "ApplicationTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

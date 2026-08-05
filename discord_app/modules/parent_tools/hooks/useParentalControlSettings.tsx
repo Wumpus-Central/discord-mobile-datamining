@@ -1,12 +1,12 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { result } from "../../user_settings/family_center/ParentalControlledUserSettings.tsx";
-import { useSelectedTeen } from "useSelectedTeen.tsx";
-import { useUserIdsForLinkStatus } from "useUserLinks.tsx";
 // discord_app/modules/parent_tools/hooks/useParentalControlSettings.tsx
 import result from "result";
 import noop from "noop";
 import getSettings from "getSettings";
 import { SafetyToastType } from "SafetyToastType";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { result } from "../../user_settings/family_center/ParentalControlledUserSettings.tsx";
+import { useSelectedTeen } from "useSelectedTeen.tsx";
+import { useUserIdsForLinkStatus } from "useUserLinks.tsx";
 
 const require = arg1;
 const result = require("getSettings").fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");

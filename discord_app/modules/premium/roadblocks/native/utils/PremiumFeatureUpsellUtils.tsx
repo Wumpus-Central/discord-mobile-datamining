@@ -1,7 +1,7 @@
+// discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
 import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
 import { EntitlementFeatureNames } from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
-// discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
 const result = require("keys").fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {

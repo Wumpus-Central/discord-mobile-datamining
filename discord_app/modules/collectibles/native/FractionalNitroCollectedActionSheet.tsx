@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../_runtime/12074_registerAsset.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { FRACTIONAL_NITRO_COIN_SIZE } from "FractionalNitroCoinIllustration.tsx";
 // discord_app/modules/collectibles/native/FractionalNitroCollectedActionSheet.tsx
 import Background from "Background";
 import get_ActivityIndicator from "combined";
@@ -8,6 +5,9 @@ import { HelpdeskArticles } from "ME";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/12074_registerAsset.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { FRACTIONAL_NITRO_COIN_SIZE } from "FractionalNitroCoinIllustration.tsx";
 
 let c10;
 let c4;

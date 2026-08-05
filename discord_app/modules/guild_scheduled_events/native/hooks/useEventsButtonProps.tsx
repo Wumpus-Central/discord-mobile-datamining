@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildEvents } from "../../useGuildScheduledEvents.tsx";
 // discord_app/modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx
 import noop from "noop";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { ReadStateTypes } from "ReadStateTypes";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useGuildEvents } from "../../useGuildScheduledEvents.tsx";
 
 const require = arg1;
 let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");

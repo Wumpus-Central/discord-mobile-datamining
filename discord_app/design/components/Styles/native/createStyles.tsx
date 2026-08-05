@@ -1,13 +1,13 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { getSemanticColorContextFromThemeContext } from "../../../tokens/native/SemanticColorContext.native.tsx";
 // discord_app/design/components/Styles/native/createStyles.tsx
 import _slicedToArray from "_slicedToArray";
 import { processColor } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import set from "maybeApplyNoTextColorForLightCustomTheme";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { getSemanticColorContextFromThemeContext } from "../../../tokens/native/SemanticColorContext.native.tsx";
 
 const require = arg1;
 function createCacheKey(context) {

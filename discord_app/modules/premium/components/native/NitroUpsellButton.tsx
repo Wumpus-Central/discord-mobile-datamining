@@ -1,11 +1,11 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { NitroWheelIcon } from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 // discord_app/modules/premium/components/native/NitroUpsellButton.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { NitroWheelIcon } from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function NitroUpsellButton(shiny) {

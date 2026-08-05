@@ -1,9 +1,3 @@
-import { ChangeNicknameActionCreators } from "../../actions/ChangeNicknameActionCreators.tsx";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { checkReactionResponse } from "../reactions/ReactionActionCreators.tsx";
-import { MAX_REACTIONS } from "../reactions/ReactionUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/messages/LegacyCommands.tsx
 import _slicedToArray from "_slicedToArray";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -11,6 +5,12 @@ import reinjectEphemerals from "reinjectEphemerals";
 import ME from "ME";
 import importDefaultResult from "t";
 import importDefaultResult1 from "t";
+import { ChangeNicknameActionCreators } from "../../actions/ChangeNicknameActionCreators.tsx";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { checkReactionResponse } from "../reactions/ReactionActionCreators.tsx";
+import { MAX_REACTIONS } from "../reactions/ReactionUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let closure_6;
 let error;

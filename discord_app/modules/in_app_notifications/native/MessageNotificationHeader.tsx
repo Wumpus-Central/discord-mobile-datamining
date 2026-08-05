@@ -1,4 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/in_app_notifications/native/MessageNotificationHeader.tsx
 import noop from "noop";
 import { View } from "XSmallIcon";
@@ -7,6 +6,7 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let error;
 let metroImportAll;

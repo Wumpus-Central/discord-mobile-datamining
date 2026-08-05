@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
+import refreshSourceMapCookie from "refreshSourceMapCookie";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { setDeveloperOptionSettings } from "../../../../actions/DeveloperOptionsActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { showNotification } from "../../../bug_reporter/native/BugReportManager.tsx";
-// discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
-import refreshSourceMapCookie from "refreshSourceMapCookie";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

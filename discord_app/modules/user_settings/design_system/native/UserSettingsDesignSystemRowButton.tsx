@@ -1,13 +1,13 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
 import { registerAsset } from "../../../../../_runtime/05921_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { RowButtonWrapper } from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Form } from "../../../../design/void/Form/native/index.tsx";
-// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

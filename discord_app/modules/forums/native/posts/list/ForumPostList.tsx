@@ -1,8 +1,3 @@
-import { useAvailableTags } from "../../../ForumTagHooks.tsx";
-import { ForumPostAppliedTagPills } from "../ForumPostAppliedTags.tsx";
-import { ForumPostPinIcon } from "../ForumPostPinIcon.tsx";
-import { ForumPostListBody } from "ForumPostListBody.tsx";
-import { ForumPostListFooter } from "ForumPostListFooter.tsx";
 // discord_app/modules/forums/native/posts/list/ForumPostList.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -10,6 +5,11 @@ import { View } from "get ActivityIndicator";
 import { ChannelFlags } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useAvailableTags } from "../../../ForumTagHooks.tsx";
+import { ForumPostAppliedTagPills } from "../ForumPostAppliedTags.tsx";
+import { ForumPostPinIcon } from "../ForumPostPinIcon.tsx";
+import { ForumPostListBody } from "ForumPostListBody.tsx";
+import { ForumPostListFooter } from "ForumPostListFooter.tsx";
 
 let closure_6;
 let error;

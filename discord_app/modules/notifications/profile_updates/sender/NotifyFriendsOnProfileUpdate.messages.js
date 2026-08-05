@@ -1,3 +1,6 @@
+// discord_app/modules/notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../../_runtime/02452_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02453_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02454_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../../_runtime/02480_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02481_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02482_registerAsset.js";
 import { loadJsonAsset } from "../../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

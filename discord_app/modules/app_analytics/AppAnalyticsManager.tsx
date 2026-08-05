@@ -1,6 +1,3 @@
-import { getGamePlatform } from "../activities/utils/getGamePlatform.tsx";
-import { _openRobloxURLWithRootPlaceId } from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "AppAnalyticsUtils.tsx";
 // discord_app/modules/app_analytics/AppAnalyticsManager.tsx
 import initialize from "initialize";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -10,6 +7,9 @@ import anyoneHasFlagInContext from "anyoneHasFlagInContext";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import ME from "ME";
 import "initialize";
+import { getGamePlatform } from "../activities/utils/getGamePlatform.tsx";
+import { _openRobloxURLWithRootPlaceId } from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "AppAnalyticsUtils.tsx";
 
 let c10;
 let c9;

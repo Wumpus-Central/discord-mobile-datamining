@@ -1,8 +1,8 @@
-import { tokensToAppTokensMap } from "../../oauth2/AuthorizedAppsActionCreators.tsx";
-import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
 // discord_app/modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";
+import { tokensToAppTokensMap } from "../../oauth2/AuthorizedAppsActionCreators.tsx";
+import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
 
 const require = arg1;
 const result = require("tokensToAppTokensMap").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");

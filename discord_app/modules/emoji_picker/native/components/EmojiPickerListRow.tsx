@@ -1,8 +1,3 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { LockIcon } from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { View } from "EmojiPickerListRowView.tsx";
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListRow.tsx
 import importAllResult from "set";
 import get_ActivityIndicator from "Button";
@@ -13,6 +8,11 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "handleThemeChange";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { LockIcon } from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { View } from "EmojiPickerListRowView.tsx";
 
 let StyleSheet;
 let c3;

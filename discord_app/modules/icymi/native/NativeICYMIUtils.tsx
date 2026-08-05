@@ -1,7 +1,7 @@
+// discord_app/modules/icymi/native/NativeICYMIUtils.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { ICYMI_INFO_MODAL_KEY } from "info_modal/ICYMIInfoModalTypes.tsx";
-// discord_app/modules/icymi/native/NativeICYMIUtils.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/icymi/native/NativeICYMIUtils.tsx");
 
 export const pushICYMIInfoModal = function pushICYMIInfoModal(arg0) {

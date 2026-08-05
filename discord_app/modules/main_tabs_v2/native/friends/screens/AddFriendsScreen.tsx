@@ -1,4 +1,3 @@
-import { handleNameInputScreenOrSuggestions } from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx
 import ActivityIndicator from "ActivityIndicator";
 import upsertRelationship from "upsertRelationship";
@@ -12,6 +11,7 @@ import ME from "ME";
 import { ContactPermissions } from "ContactSyncLandingPage";
 import jsxProd from "QUICK_SWITCHER";
 import createCacheKey from "createCacheKey";
+import { handleNameInputScreenOrSuggestions } from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
 
 let closure_12;
 let closure_14;

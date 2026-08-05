@@ -1,4 +1,3 @@
-import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 // discord_app/modules/voice_panel/native/card/ActivityAccessibilityLayer.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { IS_IOS } from "VoicePanelModes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 
 let c4;
 let c5;

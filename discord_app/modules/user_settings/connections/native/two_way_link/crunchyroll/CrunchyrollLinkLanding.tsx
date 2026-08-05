@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../../../../_runtime/10487_registerAsset.js";
-import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../../_runtime/10487_registerAsset.js";
+import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 
 let c5;
 let closure_6;

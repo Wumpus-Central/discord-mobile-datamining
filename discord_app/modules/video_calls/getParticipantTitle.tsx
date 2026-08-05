@@ -1,7 +1,7 @@
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { useIsGuestOrLurker } from "../guild_member/useIsGuestOrLurker.tsx";
 // discord_app/modules/video_calls/getParticipantTitle.tsx
 import { ParticipantTypes } from "ParticipantTypes";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
+import { useIsGuestOrLurker } from "../guild_member/useIsGuestOrLurker.tsx";
 
 let result = require("getNickname").fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
 

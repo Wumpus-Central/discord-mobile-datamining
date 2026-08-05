@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/parent_tools/hooks/useSelectedTeen.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");

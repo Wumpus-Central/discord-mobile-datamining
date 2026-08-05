@@ -1,11 +1,11 @@
-import { TableCheckboxRow } from "../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { TermsFieldListItem } from "TermsFieldList.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsField.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableCheckboxRow } from "../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { TermsFieldListItem } from "TermsFieldList.tsx";
 
 let c4;
 let c5;

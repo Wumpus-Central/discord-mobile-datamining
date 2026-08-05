@@ -1,6 +1,6 @@
-import { getPlatformUserUrl } from "../lib/Platforms.tsx";
 // discord_app/records/TwitchApplicationRecord.tsx
 import "createExecutable";
+import { getPlatformUserUrl } from "../lib/Platforms.tsx";
 
 const require = arg1;
 let c3 = "twitch:";

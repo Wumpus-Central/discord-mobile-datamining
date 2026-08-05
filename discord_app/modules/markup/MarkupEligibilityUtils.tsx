@@ -1,5 +1,5 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/markup/MarkupEligibilityUtils.tsx
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/markup/MarkupEligibilityUtils.tsx");
 
 export const isMessageNewerThanImprovedMarkdownEpoch = function isMessageNewerThanImprovedMarkdownEpoch(timestamp) {

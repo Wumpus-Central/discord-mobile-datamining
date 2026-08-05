@@ -1,3 +1,8 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -7,11 +12,6 @@ import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import { useArchiveOrDelete } from "useArchiveOrDelete.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

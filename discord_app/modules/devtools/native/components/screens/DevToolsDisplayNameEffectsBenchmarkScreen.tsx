@@ -1,10 +1,3 @@
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { DISPLAY_NAME_STYLES_EFFECT_NAMES } from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
-import { messagesProxy } from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
-import { AVERAGE_FONT_WIDTH_RATIO } from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import { DisplayNameStyleColorPreset } from "../../../../display_name_styles/types.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import FRAME_BUDGET_MS from "FRAME_BUDGET_MS";
@@ -12,6 +5,13 @@ import get_ActivityIndicator from "DisplayNameStyleColorPreset";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "TableRowInner";
 import createCacheKey from "createCacheKey";
+import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { DISPLAY_NAME_STYLES_EFFECT_NAMES } from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
+import { messagesProxy } from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import { AVERAGE_FONT_WIDTH_RATIO } from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
+import { DisplayNameStyleColorPreset } from "../../../../display_name_styles/types.tsx";
 
 let c5;
 let c9;

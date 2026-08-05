@@ -1,6 +1,3 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji.tsx
 import _slicedToArray from "_slicedToArray";
 import getEmptyServerSettingsEmojiSource from "getEmptyServerSettingsEmojiSource";
@@ -11,6 +8,9 @@ import jsxProd from "NavScrim";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "getGuildTierFromGuild";
 import importDefaultResult1 from "getGuildTierFromGuild";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 
 let c10;
 let c5;

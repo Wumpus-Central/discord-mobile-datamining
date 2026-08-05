@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/notifications/NotificationUtils.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";
 import MAX_FAVORITES from "MAX_FAVORITES";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 let closure_6;
 let error;

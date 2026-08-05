@@ -1,6 +1,6 @@
+// discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx
 import { context } from "../ManaContext/ManaContext.native.tsx";
 import { remapTypographyVariant } from "typographyVariantRemap.tsx";
-// discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
 export const useTypographyVariantRemap = function useTypographyVariantRemap(variant, arg1) {

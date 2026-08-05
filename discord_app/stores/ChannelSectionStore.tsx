@@ -1,6 +1,3 @@
-import { SidebarType } from "../modules/sidebar/SidebarActionTypes.tsx";
-import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/ChannelSectionStore.tsx
 import getHash from "getHash";
 import handleReaction from "handleReaction";
@@ -15,6 +12,9 @@ import set from "set";
 import { Permissions } from "sum";
 import { PersistedStore } from "initialize";
 import set from "ensureGuildLoaded";
+import { SidebarType } from "../modules/sidebar/SidebarActionTypes.tsx";
+import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 let closure_12;
 let closure_14;

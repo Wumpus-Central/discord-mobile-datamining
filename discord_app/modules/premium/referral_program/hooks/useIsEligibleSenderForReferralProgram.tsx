@@ -1,7 +1,7 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useMaybeFetchReferralsRemaining } from "useMaybeFetchReferralsRemaining.tsx";
 // discord_app/modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx
 import emitChanges from "emitChanges";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useMaybeFetchReferralsRemaining } from "useMaybeFetchReferralsRemaining.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");

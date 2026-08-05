@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/AnnouncementMessageRow.tsx
 import importAllResult from "getSystemLocale";
 import { View } from "generateHydrationId";
@@ -10,6 +9,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ITEM_PADDING } from "ITEM_PADDING";
 import jsxProd from "PressableBase";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_12;
 let unpackModuleId;

@@ -1,10 +1,10 @@
-import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/emojis/records/ExpressionSourceRecord.tsx
 import areSetsEqual from "areSetsEqual";
 import "toJS";
 import ME from "ME";
+import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../../../utils/GuildRecordUtils.tsx";
 
 let c4;
 let c5;

@@ -1,3 +1,11 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTableRow.tsx
+import _slicedToArray from "_slicedToArray";
+import TableRadioRow from "TableRadioRow";
+import get_ActivityIndicator from "TableCheckboxRow";
+import handleConnectionOpen from "handleConnectionOpen";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import jsxProd from "registerAsset";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { registerAsset } from "../../../../../_runtime/13267_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/13268_registerAsset.js";
@@ -18,14 +26,6 @@ import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTableRow.tsx
-import _slicedToArray from "_slicedToArray";
-import TableRadioRow from "TableRadioRow";
-import get_ActivityIndicator from "TableCheckboxRow";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "registerAsset";
 
 let c10;
 let c5;

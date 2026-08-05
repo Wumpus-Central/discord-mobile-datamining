@@ -1,11 +1,11 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getEmbeddedActivityLocationChannelId } from "../activities/utils/embeddedActivityLocationUtils.tsx";
-import { isVoiceEmbeddedActivity } from "../activities/utils/isVoiceEmbeddedActivity.tsx";
 // discord_app/modules/messages/useAllowedChatOverlays.tsx
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChatOverlays } from "ChatOverlays";
 import { ActivityPanelModes } from "ActivityPanelModes";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getEmbeddedActivityLocationChannelId } from "../activities/utils/embeddedActivityLocationUtils.tsx";
+import { isVoiceEmbeddedActivity } from "../activities/utils/isVoiceEmbeddedActivity.tsx";
 
 const require = arg1;
 const no_text_activity = "no_text_activity";

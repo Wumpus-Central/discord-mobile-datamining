@@ -1,10 +1,10 @@
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx
 import noop from "noop";
 import get_ActivityIndicator from "Text";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

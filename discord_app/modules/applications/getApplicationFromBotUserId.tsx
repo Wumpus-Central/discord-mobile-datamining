@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/applications/getApplicationFromBotUserId.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/applications/getApplicationFromBotUserId.tsx");

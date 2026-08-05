@@ -1,7 +1,7 @@
-import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/libdiscore/stores/DualReadUtils.tsx
 import { AnalyticEvents } from "ME";
+import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 function deepEqualImpl(set, set1, map, arg3) {
   if (set === set1) {

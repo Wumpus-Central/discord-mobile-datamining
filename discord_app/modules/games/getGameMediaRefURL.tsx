@@ -1,6 +1,6 @@
+// discord_app/modules/games/getGameMediaRefURL.tsx
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { isImageProxyURL } from "../image_proxy/ImageProxyUtils.tsx";
-// discord_app/modules/games/getGameMediaRefURL.tsx
 const result = require("isImageProxyURL").fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
 export default function getGameMediaRefURL(arg0, type, size) {

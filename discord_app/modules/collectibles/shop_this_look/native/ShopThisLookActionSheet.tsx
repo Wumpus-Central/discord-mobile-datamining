@@ -1,8 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { WishlistItemCard } from "../../../wishlists/native/WishlistItemCard.tsx";
-import { SourceIcon } from "../../../wishlists/native/WishlistItemCardBase.tsx";
-import { useEquippedCollectibleSkuIds } from "../../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "openCollectiblesShop";
@@ -10,6 +5,11 @@ import getFetchState from "getFetchState";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { WishlistItemCard } from "../../../wishlists/native/WishlistItemCard.tsx";
+import { SourceIcon } from "../../../wishlists/native/WishlistItemCardBase.tsx";
+import { useEquippedCollectibleSkuIds } from "../../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
 
 let c4;
 let c5;

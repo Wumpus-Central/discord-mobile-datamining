@@ -1,10 +1,10 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/GamePartyStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import filterPlayingActivities from "filterPlayingActivities";
 import ME from "ME";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 let c5;
 let closure_6;

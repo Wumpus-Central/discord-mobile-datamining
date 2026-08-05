@@ -1,7 +1,7 @@
-import { SearchTokenTypes } from "../SearchUtils.tsx";
 // discord_app/modules/search/tokens/SearchTokenStreamerModeUtils.tsx
 import initialize from "initialize";
 import ME from "ME";
+import { SearchTokenTypes } from "../SearchUtils.tsx";
 
 let c3;
 let c4;

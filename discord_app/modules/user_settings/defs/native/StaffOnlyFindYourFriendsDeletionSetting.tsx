@@ -1,11 +1,11 @@
-import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import identity from "identity";
 import createToggle from "createToggle";
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
 function setFindYourFriendsDeletionIsLoading(arg0) {

@@ -1,5 +1,5 @@
-import { Link } from "../../../../_runtime/01481_Link.js";
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
+import { Link } from "../../../../_runtime/01481_Link.js";
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 
 export default function useGuildsRouteGuildId() {

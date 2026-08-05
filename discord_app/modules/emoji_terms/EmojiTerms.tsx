@@ -1,5 +1,5 @@
-import { emojiTermsImporter } from "EmojiTermsImporter.js";
 // discord_app/modules/emoji_terms/EmojiTerms.tsx
+import { emojiTermsImporter } from "EmojiTermsImporter.js";
 const require = arg1;
 const obj = {
   setEmojiLocale(locale) {

@@ -1,10 +1,10 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/guild_home/ActiveChannelsStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import { isGuildHomeChannel } from "set";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {

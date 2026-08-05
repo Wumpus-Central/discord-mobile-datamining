@@ -1,5 +1,5 @@
-import { n } from "../../../../_runtime/00689_n.js";
 // discord_app/design/utils/shared/colors.tsx
+import { n } from "../../../../_runtime/00689_n.js";
 const result = require("set").fileFinishedImporting("design/utils/shared/colors.tsx");
 
 export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {

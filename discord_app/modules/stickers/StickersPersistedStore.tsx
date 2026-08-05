@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/stickers/StickersPersistedStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 function handleStickersStoreUpdate() {
   if (stickerById.isLoaded) {

@@ -1,6 +1,6 @@
-import { SampleCard } from "../../design_system/native/UserSettingsDesignSystemPile.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemPileSetting.tsx
 import createToggle from "createToggle";
+import { SampleCard } from "../../design_system/native/UserSettingsDesignSystemPile.tsx";
 
 obj = {
   useTitle() {

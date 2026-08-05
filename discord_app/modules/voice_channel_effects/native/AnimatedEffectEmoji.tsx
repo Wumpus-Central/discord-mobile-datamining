@@ -1,11 +1,11 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../design/void/native.tsx";
 
 const require = arg1;
 function Emoji(url) {

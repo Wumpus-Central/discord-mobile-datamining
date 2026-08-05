@@ -1,7 +1,3 @@
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { ActivitiesActionCreators } from "../actions/ActivitiesActionCreators.tsx";
-import { removeExecutablePathPrefix } from "../modules/game_detection/GameAnalyticsUtils.tsx";
-import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 // discord_app/stores/ActivityTrackingStore.tsx
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -13,6 +9,10 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { Distributors } from "ME";
 import { Storage } from "Storage";
 import { Store } from "initialize";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { ActivitiesActionCreators } from "../actions/ActivitiesActionCreators.tsx";
+import { removeExecutablePathPrefix } from "../modules/game_detection/GameAnalyticsUtils.tsx";
+import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 
 const require = arg1;
 function stopActivity(applicationId, flag) {

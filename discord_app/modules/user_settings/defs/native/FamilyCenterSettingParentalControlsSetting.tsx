@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/FamilyCenterSettingParentalControlsSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
 import { FamilyCenterParentalControlsSettings } from "../../family_center/native/UserSettingsFamilyCenterParentalControls.tsx";
-// discord_app/modules/user_settings/defs/native/FamilyCenterSettingParentalControlsSetting.tsx
-import createToggle from "createToggle";
 
 obj = {
   useTitle() {

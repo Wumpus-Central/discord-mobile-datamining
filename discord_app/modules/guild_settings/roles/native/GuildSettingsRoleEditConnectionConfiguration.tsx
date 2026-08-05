@@ -1,9 +1,3 @@
-import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getPlatformUserUrl } from "../../../../lib/Platforms.tsx";
-import { request } from "../../../applications/useGetOrFetchApplicationBatched.tsx";
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionConfiguration.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -12,6 +6,12 @@ import { PlatformTypes } from "ME";
 import OperatorTypes from "OperatorTypes";
 import jsxProd from "getPlatformUserUrl";
 import createCacheKey from "createCacheKey";
+import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getPlatformUserUrl } from "../../../../lib/Platforms.tsx";
+import { request } from "../../../applications/useGetOrFetchApplicationBatched.tsx";
 
 let c10;
 let c9;

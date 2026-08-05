@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/virtual_currency/native/BalanceWidgetActionSheet.tsx
 import preload from "preload";
 import get_ActivityIndicator from "ManaContext";
@@ -7,6 +5,8 @@ import ME from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "ActionSheetHeaderBar";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 let c10;
 let c4;

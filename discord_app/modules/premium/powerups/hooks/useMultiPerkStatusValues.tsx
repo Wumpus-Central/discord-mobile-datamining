@@ -1,7 +1,7 @@
-import { messagesProxy } from "../GuildPowerups.messages.js";
-import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
 import { PowerupActiveStatusType } from "BoostedGuildTiers";
+import { messagesProxy } from "../GuildPowerups.messages.js";
+import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
 

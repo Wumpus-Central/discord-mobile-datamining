@@ -1,4 +1,3 @@
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/activities/native/ActivitiesPrivateChannelCallTooltip.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import { EMBEDDED_ACTIVITIES_BLOG_POST_URL as closure_5 } from "items3";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let closure_7 = { duration: 500 };

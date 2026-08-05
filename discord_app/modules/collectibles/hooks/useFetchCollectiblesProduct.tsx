@@ -1,10 +1,10 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProduct.tsx
 import _slicedToArray from "_slicedToArray";
 import { useEffect } from "noop";
 import addSku from "addSku";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { SKUProductLines } from "ME";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("addSku").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");

@@ -1,11 +1,11 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/activity_privacy/ActivityPrivacyUpsellUtils.tsx
 import handleChannelSelect from "handleChannelSelect";
 import handleInviteData from "handleInviteData";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 const require = arg1;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {

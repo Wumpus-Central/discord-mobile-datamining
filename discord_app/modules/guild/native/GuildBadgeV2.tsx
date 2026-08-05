@@ -1,12 +1,12 @@
+// discord_app/modules/guild/native/GuildBadgeV2.tsx
+import "noop";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { BadgeCategory } from "../../guild_badge/BadgeCategory.tsx";
 import { GuildVisibility } from "../../guild_badge/GuildTraits.tsx";
 import { badgeVariants } from "../../guild_badge/native/GuildBadgeImageSource.tsx";
-// discord_app/modules/guild/native/GuildBadgeV2.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_3 = createCacheKey.createStyles({ icon: { marginRight: 8 } });

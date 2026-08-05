@@ -1,5 +1,3 @@
-import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { usePlaceholderWidth } from "../../../hooks/usePlaceholderSize.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx
 import ME from "ME";
 import findCommandInSection from "findCommandInSection";
@@ -10,6 +8,8 @@ import { AnalyticEvents } from "ME";
 import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME";
 import jsxProd from "useSortedSectionCommands";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { usePlaceholderWidth } from "../../../hooks/usePlaceholderSize.tsx";
 
 let closure_14;
 let closure_15;

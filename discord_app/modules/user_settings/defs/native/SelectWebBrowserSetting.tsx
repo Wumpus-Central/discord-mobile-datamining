@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { NativeModules } from "../../../links/native/BrowserManager.tsx";
 // discord_app/modules/user_settings/defs/native/SelectWebBrowserSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { NativeModules } from "../../../links/native/BrowserManager.tsx";
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;

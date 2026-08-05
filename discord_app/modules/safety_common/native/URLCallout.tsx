@@ -1,10 +1,10 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useUrlParts } from "../../masked_link/SharedStateUtils.tsx";
 // discord_app/modules/safety_common/native/URLCallout.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useUrlParts } from "../../masked_link/SharedStateUtils.tsx";
 
 let c3;
 let c4;

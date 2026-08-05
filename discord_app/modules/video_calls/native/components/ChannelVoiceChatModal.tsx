@@ -1,8 +1,8 @@
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
-import { ModalStackNavigator } from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 // discord_app/modules/video_calls/native/components/ChannelVoiceChatModal.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { ModalStackNavigator } from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 
 const require = arg1;
 const result = require("computeChannelName").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");

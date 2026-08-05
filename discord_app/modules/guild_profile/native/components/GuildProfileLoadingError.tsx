@@ -1,3 +1,7 @@
+// discord_app/modules/guild_profile/native/components/GuildProfileLoadingError.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
@@ -7,10 +11,6 @@ import { PressableBase } from "../../../../design/void/Pressables/native/Pressab
 import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { GuildProfileBackground } from "GuildProfileView.tsx";
-// discord_app/modules/guild_profile/native/components/GuildProfileLoadingError.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

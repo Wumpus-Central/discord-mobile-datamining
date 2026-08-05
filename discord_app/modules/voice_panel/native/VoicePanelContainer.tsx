@@ -1,12 +1,12 @@
-import { isIterable } from "../../../../_runtime/03898_isIterable.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
-import { VoicePanelController } from "VoicePanelController.tsx";
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import withEqualityFn from "withEqualityFn";
 import { jsx } from "jsxProd";
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { VoicePanelController } from "VoicePanelController.tsx";
 
 const require = arg1;
 function VoicePanel(arg0) {

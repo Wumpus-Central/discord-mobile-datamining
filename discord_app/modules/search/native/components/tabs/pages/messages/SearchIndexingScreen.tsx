@@ -1,7 +1,7 @@
-import { ErrorScreen } from "../ErrorScreen.tsx";
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { ErrorScreen } from "../ErrorScreen.tsx";
 
 const require = arg1;
 const result = require("module_11644").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");

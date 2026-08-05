@@ -1,6 +1,6 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/application_assets_v2/ApplicationAssetsV2Store.tsx
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {

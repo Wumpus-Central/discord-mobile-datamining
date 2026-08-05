@@ -1,9 +1,9 @@
-import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceUserSummary.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
 import createCacheKey from "createCacheKey";
+import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
 
 let c4;
 let c5;

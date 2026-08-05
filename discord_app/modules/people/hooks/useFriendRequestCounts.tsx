@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/people/hooks/useFriendRequestCounts.tsx
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import upsertRelationship from "upsertRelationship";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("upsertRelationship").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");

@@ -1,10 +1,3 @@
-import { KeyboardChatScrollView } from "../../../../../_runtime/01595_KeyboardChatScrollView.js";
-import { createStackNavigator } from "../../../../../_runtime/05667_createStackNavigator.js";
-import { registerAsset } from "../../../../../_runtime/15027_registerAsset.js";
-import { usePortraitOrientationOnly } from "../useOrientationLock.tsx";
-import { useWideAuthView } from "../useWideAuthView.tsx";
-import { BackgroundImage } from "atoms/BackgroundImage.tsx";
-import { useIsHCaptchaModalOpenTracking } from "utils/useIsHCaptchaModalOpenTracking.tsx";
 // discord_app/modules/auth/native/components/Auth.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "PlatformTypes";
@@ -13,6 +6,13 @@ import { AuthStates } from "ME";
 import jsxProd from "_initialize";
 import headerTitle from "headerTitle";
 import createCacheKey from "createCacheKey";
+import { KeyboardChatScrollView } from "../../../../../_runtime/01595_KeyboardChatScrollView.js";
+import { createStackNavigator } from "../../../../../_runtime/05667_createStackNavigator.js";
+import { registerAsset } from "../../../../../_runtime/15027_registerAsset.js";
+import { usePortraitOrientationOnly } from "../useOrientationLock.tsx";
+import { useWideAuthView } from "../useWideAuthView.tsx";
+import { BackgroundImage } from "atoms/BackgroundImage.tsx";
+import { useIsHCaptchaModalOpenTracking } from "utils/useIsHCaptchaModalOpenTracking.tsx";
 
 let StyleSheet;
 let c10;

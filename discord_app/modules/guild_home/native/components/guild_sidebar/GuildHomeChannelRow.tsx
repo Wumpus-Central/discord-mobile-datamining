@@ -1,10 +1,10 @@
-import { BaseChannelSubtitle } from "../../../../guild_sidebar/native/BaseChannelItem.tsx";
 // discord_app/modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx
 import noop from "noop";
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { BaseChannelSubtitle } from "../../../../guild_sidebar/native/BaseChannelItem.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

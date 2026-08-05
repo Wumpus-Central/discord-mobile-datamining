@@ -1,10 +1,10 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/chat_input/native/FloatingChatInputContainer.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
 import { Easing } from "module_4146";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 function useKeyboardOpenPaddingStyle() {

@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { recordChannelFetchStart } from "MessageCacheStats.tsx";
 // discord_app/modules/local_message_caching/LocalMessageCacheStatsManager.tsx
 import ME from "ME";
 import "initialize";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { recordChannelFetchStart } from "MessageCacheStats.tsx";
 
 let c3;
 let obj1;

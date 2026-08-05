@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../_runtime/13355_registerAsset.js";
-import { loadJsonAsset } from "../../modules/asset_json/native/AssetJsonUtils.tsx";
 // discord_app/intl/messages/untranslated.messages.js
 import 01274__ from "../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../_runtime/13355_registerAsset.js";
+import { loadJsonAsset } from "../../modules/asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({
   () => {

@@ -1,3 +1,7 @@
+// discord_app/modules/ads/analytics/captureAdUserAction.tsx
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement";
+import initializeState from "initializeState";
+import { AnalyticEvents } from "ME";
 import { AdCreativeType } from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { getDeviceMetadata } from "../../device/getDeviceMetadata.native.tsx";
@@ -5,10 +9,6 @@ import { getQuestContentName } from "../../quests/lib/analytics/AnalyticsTypes.t
 import { getBrandSafetyContext } from "../../quests/lib/analytics/BrandSafetyContext.tsx";
 import { getQuestLogger } from "../../quests/lib/getQuestLogger.tsx";
 import { AdUserActionType } from "captureAdUserActionTypes.tsx";
-// discord_app/modules/ads/analytics/captureAdUserAction.tsx
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement";
-import initializeState from "initializeState";
-import { AnalyticEvents } from "ME";
 
 const require = arg1;
 function emitClickEventWithCreative() {

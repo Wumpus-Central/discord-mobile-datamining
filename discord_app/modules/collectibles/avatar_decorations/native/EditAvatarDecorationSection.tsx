@@ -1,4 +1,3 @@
-import { useCollectibleListLayout } from "../../native/useCollectibleListLayout.tsx";
 // discord_app/modules/collectibles/avatar_decorations/native/EditAvatarDecorationSection.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { isAvatarDecorationRecord } from "fromServer";
 import { AVATAR_DECORATION_SIZE } from "DECORATION_TO_AVATAR_RATIO";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCollectibleListLayout } from "../../native/useCollectibleListLayout.tsx";
 
 let c9;
 let error;

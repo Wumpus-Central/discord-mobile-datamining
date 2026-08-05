@@ -1,7 +1,3 @@
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { ActivityStatus } from "../../activity_status/native/ActivityStatus.tsx";
-import { useUserProfileMutuals } from "../hooks/useUserProfileMutuals.tsx";
-import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 // discord_app/modules/user_profile/native/UserProfileMutualsActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import getNoMutualFriendsSource from "getNoMutualFriendsSource";
@@ -10,6 +6,10 @@ import sortActivity from "sortActivity";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
 import jsxProd from "getMutualGuildsLabel";
 import createCacheKey from "createCacheKey";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { ActivityStatus } from "../../activity_status/native/ActivityStatus.tsx";
+import { useUserProfileMutuals } from "../hooks/useUserProfileMutuals.tsx";
+import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 
 let c10;
 let c5;

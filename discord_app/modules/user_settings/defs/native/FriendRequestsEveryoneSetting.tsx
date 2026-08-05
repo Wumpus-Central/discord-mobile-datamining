@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx
 import noop from "noop";
 import ME from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 let c3;
 let c4;

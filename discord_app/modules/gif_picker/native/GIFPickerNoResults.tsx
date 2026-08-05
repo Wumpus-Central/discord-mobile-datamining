@@ -1,9 +1,9 @@
-import { useExpressionPickerInsets } from "../../expression_picker/native/useExpressionPickerInsets.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerNoResults.tsx
 import importAllResult from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useExpressionPickerInsets } from "../../expression_picker/native/useExpressionPickerInsets.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

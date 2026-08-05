@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/channel_following/useChannelFollowerStats.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getFollowerStatsForChannel from "getFollowerStatsForChannel";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const HOUR = require("set").Millis.HOUR;

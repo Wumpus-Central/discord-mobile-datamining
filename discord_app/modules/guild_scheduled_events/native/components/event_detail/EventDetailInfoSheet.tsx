@@ -1,5 +1,3 @@
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { useGuildScheduledEventUserCount } from "../../../useGuildScheduledEventUserCount.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailInfoSheet.tsx
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "getGuildEventsForCurrentUser";
@@ -15,6 +13,8 @@ import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { useGuildScheduledEventUserCount } from "../../../useGuildScheduledEventUserCount.tsx";
 
 let closure_12;
 let closure_14;

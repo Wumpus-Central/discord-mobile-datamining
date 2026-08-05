@@ -1,9 +1,9 @@
-import { result } from "useCanShowAppLauncherOnboarding.tsx";
 // discord_app/modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx
 import _slicedToArray from "_slicedToArray";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { DismissibleContentGroupName as closure_6 } from "ContentDismissActionType";
+import { result } from "useCanShowAppLauncherOnboarding.tsx";
 
 const require = arg1;
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx");

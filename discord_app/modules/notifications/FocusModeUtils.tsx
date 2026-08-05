@@ -1,11 +1,11 @@
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/notifications/FocusModeUtils.tsx
 import filterPlayingActivities from "filterPlayingActivities";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 import ME from "ME";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 let c5;
 let closure_6;

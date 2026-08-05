@@ -1,12 +1,12 @@
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { shortenAndLocalizeNumber } from "../../../../utils/NumberUtils.tsx";
-import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Pile/native/PileOverflow.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { shortenAndLocalizeNumber } from "../../../../utils/NumberUtils.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 
 let c4;
 let c5;

@@ -1,10 +1,3 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
-import { cancel } from "../../lib/uploader/Upload.tsx";
-import { toString } from "../../modules/media_uploads/native/VideoUploadUtils.tsx";
-import { getUploadFileSizeSum } from "../FileUtils.tsx";
-import { set } from "../PlatformUtils.tsx";
-import { items } from "../UploadUtils.tsx";
-import { getTimeFormat } from "TimeUtils.tsx";
 // discord_app/utils/native/UploadUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -15,6 +8,13 @@ import handleConnectionInfoChange from "handleConnectionInfoChange";
 import closure_12 from "mergeGuildAvatar";
 import ME from "ME";
 import { NativePermissionTypes } from "NativePermissionStatus";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import { cancel } from "../../lib/uploader/Upload.tsx";
+import { toString } from "../../modules/media_uploads/native/VideoUploadUtils.tsx";
+import { getUploadFileSizeSum } from "../FileUtils.tsx";
+import { set } from "../PlatformUtils.tsx";
+import { items } from "../UploadUtils.tsx";
+import { getTimeFormat } from "TimeUtils.tsx";
 
 let Base64GIFPrefix;
 let Base64JPEGPrefix;

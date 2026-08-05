@@ -1,9 +1,9 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/rtc/native/SecureFramesCode.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

@@ -1,13 +1,13 @@
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx
 import "noop";
 import { Image } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

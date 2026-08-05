@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx
 import getSystemLocale from "getSystemLocale";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 function _updateClipsAllowVoiceRecording() {

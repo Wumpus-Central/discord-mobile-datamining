@@ -1,6 +1,6 @@
+// discord_app/modules/content_inventory/reactionUtils.tsx
 import { trackInvite } from "../../actions/MessageActionCreators.tsx";
 import { rebuild } from "../messages/MessageParser.tsx";
-// discord_app/modules/content_inventory/reactionUtils.tsx
 const result = require("set").fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 
 export const sendMessageWithEmbed = function sendMessageWithEmbed(channel) {

@@ -1,13 +1,13 @@
+// discord_app/design/components/TextInput/native/GhostInput.native.tsx
+import "noop";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Input } from "../../Input/native/Input.native.tsx";
 import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
 import { useKeyboardBlurring } from "../../Input/native/NativeTextInput.native.tsx";
 import { Text } from "../../Text/native/Text.tsx";
 import { useTextFieldState } from "../../TextField/native/useTextField.native.tsx";
-// discord_app/design/components/TextInput/native/GhostInput.native.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles(() => {

@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/components/SegmentedControl/native/SegmentedControl.native.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c4;
 let c5;

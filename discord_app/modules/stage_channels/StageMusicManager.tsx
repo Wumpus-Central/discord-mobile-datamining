@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { sortKey } from "StageChannelParticipants.tsx";
-import { useStageParticipants } from "StageChannelParticipantStoreHooks.tsx";
 // discord_app/modules/stage_channels/StageMusicManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import importDefaultResult from "_detectH265HardwareDecode";
@@ -11,6 +8,9 @@ import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate
 import initialize from "initialize";
 import createSoundForPack from "createSoundForPack";
 import "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { sortKey } from "StageChannelParticipants.tsx";
+import { useStageParticipants } from "StageChannelParticipantStoreHooks.tsx";
 
 const require = arg1;
 function checkVoiceStates() {

@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { _activityFromSetting } from "userSettingToActivity.tsx";
 // discord_app/modules/custom_status/utils/useCustomStatusActivityForUser.tsx
 import fetchFingerprint from "fetchFingerprint";
 import sortActivity from "sortActivity";
 import { ActivityTypes } from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { _activityFromSetting } from "userSettingToActivity.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/custom_status/utils/useCustomStatusActivityForUser.tsx");

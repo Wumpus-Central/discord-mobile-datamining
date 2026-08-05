@@ -1,7 +1,7 @@
-import { BaseConnectionEvent } from "index.tsx";
-import { STATS_INTERVAL } from "Stats.tsx";
 // discord_common/js/packages/media-engine/pollConnectionStats.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { BaseConnectionEvent } from "index.tsx";
+import { STATS_INTERVAL } from "Stats.tsx";
 
 const require = arg1;
 const result = require("STATS_INTERVAL").fileFinishedImporting("../discord_common/js/packages/media-engine/pollConnectionStats.tsx");

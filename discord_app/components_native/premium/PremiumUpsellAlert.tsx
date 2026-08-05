@@ -1,3 +1,14 @@
+// discord_app/components_native/premium/PremiumUpsellAlert.tsx
+import usePremiumUpsellConfig from "usePremiumUpsellConfig";
+import importAllResult from "AccessibilityAnnouncer";
+import get_ActivityIndicator from "registerAsset";
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import { getIcons } from "items";
+import GuildFeatures from "GuildFeatures";
+import jsxProd from "registerAsset";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../_runtime/08174_registerAsset.js";
 import { registerAsset } from "../../../_runtime/08175_registerAsset.js";
 import { registerAsset } from "../../../_runtime/08614_registerAsset.js";
@@ -10,17 +21,6 @@ import { getSystemLocale } from "../../intl/index.native.tsx";
 import { useMessageMaxLength } from "../../modules/messages/useMessageMaxLength.tsx";
 import { usePremiumTrialOffer } from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-// discord_app/components_native/premium/PremiumUpsellAlert.tsx
-import usePremiumUpsellConfig from "usePremiumUpsellConfig";
-import importAllResult from "AccessibilityAnnouncer";
-import get_ActivityIndicator from "registerAsset";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getIcons } from "items";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c5;

@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/calls/mobile/useIsCallActive.tsx
 import callConnect from "callConnect";
 import getParticipants from "getParticipants";
 import { ParticipantTypes } from "ParticipantTypes";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ParticipantTypes").fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");

@@ -1,8 +1,8 @@
+// discord_app/modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx
+import { AnalyticEvents } from "ME";
 import { noop } from "../../../../lib/RTCControlSocket.tsx";
 import { getHermesInstrumentedStatsSummary } from "../../../../utils/ProcessUtils.native.tsx";
 import { Opcode } from "../../../gateway/GatewaySocketOpcode.tsx";
-// discord_app/modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx
-import { AnalyticEvents } from "ME";
 
 let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };
 let closure_4 = {

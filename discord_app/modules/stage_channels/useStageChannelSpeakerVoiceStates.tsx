@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 // discord_app/modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx
 import _slicedToArray from "_slicedToArray";
 import initializeFromUserSettings from "initializeFromUserSettings";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { getComparator } from "getVoiceStatesForGuild";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 
 const require = arg1;
 function transformParticipantToSortedVoiceState(user) {

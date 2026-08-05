@@ -1,6 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ActionComponentState } from "../../InteractionComponentTypes.tsx";
-import { SelectionHeader } from "SelectComponentActionSheet.tsx";
 // discord_app/modules/interaction_components/native/components/GuildSelectComponentActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,6 +6,9 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ActionComponentState } from "../../InteractionComponentTypes.tsx";
+import { SelectionHeader } from "SelectComponentActionSheet.tsx";
 
 let c9;
 let metroImportAll;

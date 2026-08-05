@@ -1,6 +1,3 @@
-import { siteKey } from "../../../_runtime/16227_siteKey.js";
-import { convertStringArrayToSkemaErrorItems } from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
-import { expandEventProperties } from "../AnalyticsUtils.tsx";
 // discord_app/utils/native/CaptchaUtils.tsx
 import noop from "noop";
 import get_ActivityIndicator from "set";
@@ -8,6 +5,9 @@ import _getSystemLocale from "_getSystemLocale";
 import handleThemeChange from "handleThemeChange";
 import ME from "ME";
 import { jsx } from "jsxProd";
+import { siteKey } from "../../../_runtime/16227_siteKey.js";
+import { convertStringArrayToSkemaErrorItems } from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
+import { expandEventProperties } from "../AnalyticsUtils.tsx";
 
 let NativeEventEmitter;
 let NativeModules;

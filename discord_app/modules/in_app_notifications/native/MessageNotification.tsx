@@ -1,4 +1,3 @@
-import { NativeMessagePreviewContent } from "MessagePreviewText.tsx";
 // discord_app/modules/in_app_notifications/native/MessageNotification.tsx
 import importAllResult from "checkReactionResponse";
 import { View } from "context";
@@ -9,6 +8,7 @@ import jsxProd from "getSystemLocale";
 import set from "set";
 import createCacheKey from "createCacheKey";
 import set from "maybeApplyNoTextColorForLightCustomTheme";
+import { NativeMessagePreviewContent } from "MessagePreviewText.tsx";
 
 let c9;
 let closure_12;

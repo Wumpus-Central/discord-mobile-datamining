@@ -1,9 +1,9 @@
-import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
 // discord_app/modules/forums/native/posts/ForumPostTimestamp.tsx
 import "noop";
 import { useForumChannelStore } from "set";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ text: { lineHeight: 18, height: 18 } });

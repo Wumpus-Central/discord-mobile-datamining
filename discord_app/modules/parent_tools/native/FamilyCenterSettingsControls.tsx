@@ -1,5 +1,3 @@
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterSettingsControls.tsx
 import useScheduleTimeControlsRowProps from "useScheduleTimeControlsRowProps";
 import { View } from "apexExperiment";
@@ -7,6 +5,8 @@ import { FamilyCenterSubPages } from "items";
 import { UserSettingsSections } from "ME";
 import jsxProd from "TableRowGroupTitle";
 import createCacheKey from "createCacheKey";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
 
 let error;
 let metroImportAll;

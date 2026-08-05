@@ -1,13 +1,13 @@
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapReminderToast.tsx
 import "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 const require = arg1;
 function DoubleTapReminderContent(emoji) {

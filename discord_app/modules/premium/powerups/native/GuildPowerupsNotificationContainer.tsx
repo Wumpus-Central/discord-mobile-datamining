@@ -1,11 +1,11 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useGuildPowerupExpiringNotificationsConfig } from "../hooks/useGuildPowerupExpiringNotificationsConfig.tsx";
-import { useGuildPowerupTier3OverrideConfig } from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useGuildPowerupExpiringNotificationsConfig } from "../hooks/useGuildPowerupExpiringNotificationsConfig.tsx";
+import { useGuildPowerupTier3OverrideConfig } from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
 
 let c4;
 let c5;

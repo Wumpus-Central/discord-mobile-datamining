@@ -1,12 +1,12 @@
+// discord_app/components_native/calls/stream/StreamFullAlert.tsx
+import "noop";
+import { Image } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
 import { registerAsset } from "../../../../_runtime/16816_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { mapped } from "../../../modules/errors/av_errors/AVError.tsx";
 import { componentDidMount } from "../../common/Alert.tsx";
-// discord_app/components_native/calls/stream/StreamFullAlert.tsx
-import "noop";
-import { Image } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

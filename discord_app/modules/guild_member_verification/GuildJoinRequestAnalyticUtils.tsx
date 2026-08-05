@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/guild_member_verification/GuildJoinRequestAnalyticUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("ME").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestAnalyticUtils.tsx");
 

@@ -1,9 +1,9 @@
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { getEmbeddedActivityLocationChannelId } from "../../activities/utils/embeddedActivityLocationUtils.tsx";
 // discord_app/modules/rpc/helpers/activityInstanceConnectedParticipants.tsx
 import participantFromServer from "participantFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { getEmbeddedActivityLocationChannelId } from "../../activities/utils/embeddedActivityLocationUtils.tsx";
 
 const require = arg1;
 let obj = { [RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY]: items };

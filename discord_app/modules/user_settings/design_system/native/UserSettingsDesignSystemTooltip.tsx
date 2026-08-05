@@ -1,11 +1,11 @@
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 
 let c5;
 let closure_6;

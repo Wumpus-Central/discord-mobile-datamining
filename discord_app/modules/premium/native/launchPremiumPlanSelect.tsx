@@ -1,8 +1,8 @@
+// discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
+import { UserSettingsSections } from "ME";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { PremiumModal } from "../../../components_native/premium/PremiumModal.tsx";
 import { getSanitizedRestrictedGuilds } from "../../../utils/UserSettingsUtils.tsx";
-// discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
-import { UserSettingsSections } from "ME";
 
 let result = require("module_4490").fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
 

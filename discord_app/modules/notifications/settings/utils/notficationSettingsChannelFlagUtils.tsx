@@ -1,8 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { NotificationSettingsModalActionCreators } from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import { UserNotificationSettings } from "../../../../utils/NotificationSettingsUtils.tsx";
-import { resetGuildUnreadFlags } from "notificationSettingsFlagUtils.tsx";
-import { Presets } from "notificationSettingsPresetUtils.tsx";
 // discord_app/modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -10,6 +5,11 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
 import { ChannelNotificationSettingsFlags as closure_8 } from "MAX_FAVORITES";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { NotificationSettingsModalActionCreators } from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import { UserNotificationSettings } from "../../../../utils/NotificationSettingsUtils.tsx";
+import { resetGuildUnreadFlags } from "notificationSettingsFlagUtils.tsx";
+import { Presets } from "notificationSettingsPresetUtils.tsx";
 
 const require = arg1;
 let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx");

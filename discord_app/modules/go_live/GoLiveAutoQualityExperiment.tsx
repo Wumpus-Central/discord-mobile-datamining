@@ -1,9 +1,9 @@
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/go_live/GoLiveAutoQualityExperiment.tsx
 import initialize from "initialize";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import { ApplicationStreamPresets } from "RESOLUTION_720";
 import importDefaultResult from "getUnitId";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 const require = arg1;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };

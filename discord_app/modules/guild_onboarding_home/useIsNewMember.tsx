@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/guild_onboarding_home/useIsNewMember.tsx
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { set } from "../../utils/Durations.tsx";
 
 const require = arg1;
 const result = require("GuildMemberFlags").fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");

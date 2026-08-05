@@ -1,5 +1,5 @@
-import { t } from "../../../_runtime/04484_t.js";
 // discord_app/modules/unique_usernames/UniqueUsernamesUtils.tsx
+import { t } from "../../../_runtime/04484_t.js";
 const result = require("getSystemLocale").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {

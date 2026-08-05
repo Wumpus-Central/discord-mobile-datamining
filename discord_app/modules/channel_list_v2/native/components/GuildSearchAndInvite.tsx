@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { set } from "../../../../hooks/useStableCallback.tsx";
-import { useEventsButtonProps } from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
 // discord_app/modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx
 import importAllResult from "SPRING_CONFIG";
 import { View } from "module_11584";
@@ -13,6 +9,10 @@ import { SEARCH_BAR_MARGIN_BOTTOM } from "hairlineWidth";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { set } from "../../../../hooks/useStableCallback.tsx";
+import { useEventsButtonProps } from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
 
 let c10;
 let closure_12;

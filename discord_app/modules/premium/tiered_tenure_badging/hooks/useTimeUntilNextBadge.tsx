@@ -1,6 +1,6 @@
-import { t } from "../../../../../_runtime/03867_t.js";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx
 import { useMemo } from "noop";
+import { t } from "../../../../../_runtime/03867_t.js";
 
 const result = require("useNextTenureBadge").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
 

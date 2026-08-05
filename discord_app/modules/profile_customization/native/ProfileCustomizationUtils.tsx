@@ -1,7 +1,7 @@
+// discord_app/modules/profile_customization/native/ProfileCustomizationUtils.tsx
 import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { useDominantRGBFromImage } from "../../calls/native/VideoBackground.tsx";
-// discord_app/modules/profile_customization/native/ProfileCustomizationUtils.tsx
 let result = require("int2hslRaw").fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
 export const useEditBannerSource = function useEditBannerSource(arg0) {

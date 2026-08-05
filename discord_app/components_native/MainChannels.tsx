@@ -1,7 +1,3 @@
-import { setLevels } from "../modules/app_startup/StartupProfiler.tsx";
-import { NonCollapsableGestureDetector } from "../modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx";
-import { MobileHomeDrawerExperiment } from "../modules/home_drawer/native/HomeDrawerExperiment.tsx";
-import { context } from "../modules/home_drawer/native/useHomeDrawerGesture.tsx";
 // discord_app/components_native/MainChannels.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "MobileHomeDrawerExperiment";
@@ -9,6 +5,10 @@ import get_ActivityIndicator from "context";
 import ME from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { setLevels } from "../modules/app_startup/StartupProfiler.tsx";
+import { NonCollapsableGestureDetector } from "../modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx";
+import { MobileHomeDrawerExperiment } from "../modules/home_drawer/native/HomeDrawerExperiment.tsx";
+import { context } from "../modules/home_drawer/native/useHomeDrawerGesture.tsx";
 
 let c10;
 let c5;

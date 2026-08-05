@@ -1,10 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useUserProfileApplicationRoleConnections } from "../hooks/useUserProfileApplicationRoleConnections.tsx";
-import { Divider } from "UserProfileCard.tsx";
 // discord_app/modules/user_profile/native/UserProfileConnections.tsx
 import importAllResult from "getPlatformUserUrl";
 import get_ActivityIndicator from "useIsMobileVisualRefreshExperimentEnabled";
@@ -17,6 +10,13 @@ import jsxProd from "isLinkTrusted";
 import Button from "Button";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useUserProfileApplicationRoleConnections } from "../hooks/useUserProfileApplicationRoleConnections.tsx";
+import { Divider } from "UserProfileCard.tsx";
 
 let CARD_PADDING;
 let CARD_ROWS_COLUMN_GAP;

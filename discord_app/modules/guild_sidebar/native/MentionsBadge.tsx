@@ -1,7 +1,7 @@
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/guild_sidebar/native/MentionsBadge.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Button } from "../../../design/void/native.tsx";
 
 const require = arg1;
 const result = require("Button").fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");

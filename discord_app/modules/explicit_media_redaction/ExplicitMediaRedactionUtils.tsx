@@ -1,3 +1,9 @@
+// discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx
+import getUserAgnosticState from "getUserAgnosticState";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import getFpMessageInfo from "getFpMessageInfo";
+import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY";
+import { AnalyticEvents } from "ME";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
@@ -7,12 +13,6 @@ import { set } from "../monitoring/MonitoringAgent.tsx";
 import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import { isCurrentUserTeen } from "../self_mod/SelfModUtils.tsx";
 import { resetManager } from "ExplicitMediaManager.tsx";
-// discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx
-import getUserAgnosticState from "getUserAgnosticState";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getFpMessageInfo from "getFpMessageInfo";
-import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY";
-import { AnalyticEvents } from "ME";
 
 let closure_6;
 let error;

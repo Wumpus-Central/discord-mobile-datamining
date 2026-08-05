@@ -1,4 +1,3 @@
-import { getComboShakeIntensity } from "PoggermodeUtils.tsx";
 // discord_app/modules/poggermode/PoggermodeStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -7,6 +6,7 @@ import ConfettiLocation from "ConfettiLocation";
 import { ComponentActions } from "ME";
 import { Store } from "initialize";
 import set from "initialize";
+import { getComboShakeIntensity } from "PoggermodeUtils.tsx";
 
 let c5;
 let closure_6;

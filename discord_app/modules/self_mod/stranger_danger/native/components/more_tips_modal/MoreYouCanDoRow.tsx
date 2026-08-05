@@ -1,7 +1,7 @@
-import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 
 const require = arg1;
 const result = require("TableRowInner").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx");

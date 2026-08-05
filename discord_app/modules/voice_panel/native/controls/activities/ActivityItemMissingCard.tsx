@@ -1,10 +1,10 @@
-import { set } from "../../../../core/native/NativeView.tsx";
 // discord_app/modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx
 import Themes from "Themes";
 import importAllResult from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../../core/native/NativeView.tsx";
 
 let closure_6;
 let error;

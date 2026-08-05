@@ -1,8 +1,8 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
 // discord_app/modules/webauthn/native/NativeCeremonies.tsx
 import set from "set";
 import { NativeModules } from "get ActivityIndicator";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
 
 const require = arg1;
 function _promptForRegisterCredential() {

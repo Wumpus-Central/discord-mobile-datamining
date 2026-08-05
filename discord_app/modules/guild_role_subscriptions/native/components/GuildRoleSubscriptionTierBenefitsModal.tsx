@@ -1,3 +1,12 @@
+// discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierBenefitsModal.tsx
+import Row from "Row";
+import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled";
+import get_ActivityIndicator from "useTrialIntervalOptions";
+import { AllChannelAccessOptions } from "AllChannelAccessOptions";
+import { useGroupIsFullGateState } from "usePriceTiers";
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
+import jsxProd from "FormHeader";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/16705_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -11,15 +20,6 @@ import { items } from "../../useRoleSubscriptionEmojis.tsx";
 import { useRoleSubscriptionFormat } from "../../useRoleSubscriptionFormat.tsx";
 import { EmojiAlias } from "EmojiAlias.tsx";
 import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
-// discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierBenefitsModal.tsx
-import Row from "Row";
-import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled";
-import get_ActivityIndicator from "useTrialIntervalOptions";
-import { AllChannelAccessOptions } from "AllChannelAccessOptions";
-import { useGroupIsFullGateState } from "usePriceTiers";
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
-import jsxProd from "FormHeader";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let closure_12;

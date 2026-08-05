@@ -1,13 +1,3 @@
-import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { set } from "../../lib/DiscordNative.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { apexExperiment } from "ClipsExperiment.tsx";
-import { apexExperiment } from "ClipsV3RuntimeExperiment.tsx";
-import { isClientClipsCapable } from "isClientClipsCapable.tsx";
-import { isClipsEnabled } from "isClipsEnabled.tsx";
 // discord_app/modules/clips/ClipsManager.tsx
 import initialize from "initialize";
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo";
@@ -20,6 +10,16 @@ import result from "result";
 import ME from "ME";
 import { StreamTypes } from "StreamIssueReportReasons";
 import "initialize";
+import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { set } from "../../lib/DiscordNative.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { apexExperiment } from "ClipsExperiment.tsx";
+import { apexExperiment } from "ClipsV3RuntimeExperiment.tsx";
+import { isClientClipsCapable } from "isClientClipsCapable.tsx";
+import { isClipsEnabled } from "isClipsEnabled.tsx";
 
 let closure_12;
 let closure_14;

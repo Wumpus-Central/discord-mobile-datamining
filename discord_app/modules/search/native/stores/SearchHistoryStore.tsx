@@ -1,7 +1,7 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
 // discord_app/modules/search/native/stores/SearchHistoryStore.tsx
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../../../_runtime/00012_apply.js";
 
 let NATIVE_SEARCH_HISTORY_STORAGE_KEY;
 let NATIVE_SEARCH_HISTORY_STORE_DISPLAY_NAME;

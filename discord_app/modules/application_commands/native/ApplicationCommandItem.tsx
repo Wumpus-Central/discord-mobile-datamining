@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandItem.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let error;
 let metroImportAll;

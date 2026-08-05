@@ -1,7 +1,7 @@
-import { useFavoritesAccess } from "../FavoritesHooks.tsx";
 // discord_app/modules/favorites/hooks/useIsFavoritesGuildVisible.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import initializeFromUserSettings from "initializeFromUserSettings";
+import { useFavoritesAccess } from "../FavoritesHooks.tsx";
 
 const require = arg1;
 let result = require("getFavoritesAwareGuildName").fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");

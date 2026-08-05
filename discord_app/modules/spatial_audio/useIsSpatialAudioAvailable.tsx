@@ -1,7 +1,7 @@
-import { apexExperiment } from "../voice_panel/SpatialAudioForVoiceExperiment.tsx";
 // discord_app/modules/spatial_audio/useIsSpatialAudioAvailable.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { Features } from "DesktopSources";
+import { apexExperiment } from "../voice_panel/SpatialAudioForVoiceExperiment.tsx";
 
 const require = arg1;
 const result = require("apexExperiment").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");

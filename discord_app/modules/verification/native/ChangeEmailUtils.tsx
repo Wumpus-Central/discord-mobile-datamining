@@ -1,7 +1,7 @@
-import { keys } from "../../../ConstantsIOS.tsx";
 // discord_app/modules/verification/native/ChangeEmailUtils.tsx
 import set from "set";
 import ChangeEmailFields from "ChangeEmailFields";
+import { keys } from "../../../ConstantsIOS.tsx";
 
 let c4;
 let c5;

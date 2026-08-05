@@ -1,9 +1,9 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/forums/ForumPostMessagesStore.tsx
 import handleConnectionOpenOrResumed from "handleConnectionOpenOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 const require = arg1;
 function handleLoadThreadsSuccess(arg0) {

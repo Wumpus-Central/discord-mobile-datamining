@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isValidFormResponse } from "../MemberVerificationUtils.tsx";
 // discord_app/modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { isValidFormResponse } from "../MemberVerificationUtils.tsx";
 
 const require = arg1;
 function shouldShowMembershipVerificationGate(guildId, items) {

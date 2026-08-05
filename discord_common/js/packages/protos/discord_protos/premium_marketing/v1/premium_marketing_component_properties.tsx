@@ -1,3 +1,6 @@
+// discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx
+import _slicedToArray from "_slicedToArray";
+import { MessageType } from "module_1307";
 import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 import { create } from "admin_editor_test_component.tsx";
 import { create } from "announcement_modal_variant_1_properties.tsx";
@@ -18,9 +21,6 @@ import { create } from "premium_tab_popover.tsx";
 import { create } from "premium_tab_tooltip.tsx";
 import { create } from "premium_tab.tsx";
 import { create } from "shop_nagbar.tsx";
-// discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx
-import _slicedToArray from "_slicedToArray";
-import { MessageType } from "module_1307";
 
 const require = arg1;
 class PremiumMarketingComponentProperties$Type extends MessageType {

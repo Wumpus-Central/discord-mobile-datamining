@@ -1,6 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useProfileEffect } from "../useProfileEffect.tsx";
-import { sortEffectLayers } from "../utils.tsx";
 // discord_app/modules/collectibles/profile_effects/native/ProfileEffect.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,6 +6,9 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import getState from "getState";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useProfileEffect } from "../useProfileEffect.tsx";
+import { sortEffectLayers } from "../utils.tsx";
 
 let c5;
 let closure_6;

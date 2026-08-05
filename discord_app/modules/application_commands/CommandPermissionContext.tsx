@@ -1,5 +1,3 @@
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { resolveNsfwTogglesWithDefaults } from "../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 // discord_app/modules/application_commands/CommandPermissionContext.tsx
 import noop from "noop";
 import initialize from "initialize";
@@ -12,6 +10,8 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { resolveNsfwTogglesWithDefaults } from "../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 
 let closure_14;
 let map1;

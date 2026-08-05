@@ -1,3 +1,6 @@
+// discord_app/modules/favorites/native/FavoritesGuildAddActionSheet.tsx
+import "noop";
+import jsxProd from "jsxProd";
 import { FolderPlusIcon } from "../../../design/components/Icon/native/redesign/generated/FolderPlusIcon.tsx";
 import { StarOutlineIcon } from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
 import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -8,9 +11,6 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetA
 import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 import { AddFavoriteCategoryActionSheet } from "AddFavoriteCategoryActionSheet.tsx";
 import { AddFavoriteChannelModal } from "AddFavoriteChannelModal.tsx";
-// discord_app/modules/favorites/native/FavoritesGuildAddActionSheet.tsx
-import "noop";
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

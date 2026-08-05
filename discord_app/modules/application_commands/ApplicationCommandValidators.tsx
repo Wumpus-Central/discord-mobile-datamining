@@ -1,11 +1,11 @@
+// discord_app/modules/application_commands/ApplicationCommandValidators.tsx
+import _getSystemLocale from "_getSystemLocale";
+import map from "map";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { toChoiceBooleanValue } from "ApplicationCommandChoiceUtils.tsx";
 import { buildCommand } from "ApplicationCommandUtils.tsx";
-// discord_app/modules/application_commands/ApplicationCommandValidators.tsx
-import _getSystemLocale from "_getSystemLocale";
-import map from "map";
 
 const require = arg1;
 function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3Q_S) {

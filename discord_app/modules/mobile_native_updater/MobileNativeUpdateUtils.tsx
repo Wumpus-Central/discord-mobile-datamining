@@ -1,8 +1,8 @@
-import { keys } from "../../ConstantsIOS.tsx";
-import { Linking } from "../../lib/native/Linking.tsx";
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
 import set from "set";
 import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
+import { keys } from "../../ConstantsIOS.tsx";
+import { Linking } from "../../lib/native/Linking.tsx";
 
 const require = arg1;
 function _checkForNewerBuild() {

@@ -1,14 +1,14 @@
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { TextIcon } from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/nuf_channels/native/components/NUFChannelIllustration.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "Text";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { TextIcon } from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let c5;
 let closure_6;

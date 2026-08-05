@@ -1,7 +1,7 @@
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const result = require("sendRequest").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
 

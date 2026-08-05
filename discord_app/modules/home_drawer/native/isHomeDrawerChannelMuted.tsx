@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/home_drawer/native/isHomeDrawerChannelMuted.tsx
 import storeThread from "storeThread";
 import { isThread } from "createChannelRecord";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");

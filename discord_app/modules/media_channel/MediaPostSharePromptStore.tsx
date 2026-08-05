@@ -1,11 +1,11 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { useIsFirstMessageInMediaPost } from "useIsFirstMessageInMediaPost.tsx";
 // discord_app/modules/media_channel/MediaPostSharePromptStore.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";
 import set from "ensureGuildLoaded";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useIsFirstMessageInMediaPost } from "useIsFirstMessageInMediaPost.tsx";
 
 const require = arg1;
 let set = new Set();

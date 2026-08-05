@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/bug_reporter/BugReportUtils.tsx
 import _uploadDebugLogFiles from "_uploadDebugLogFiles";
 import handleThemeChange from "handleThemeChange";
 import ME from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

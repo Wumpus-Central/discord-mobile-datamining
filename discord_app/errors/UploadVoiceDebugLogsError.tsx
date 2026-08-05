@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/errors/UploadVoiceDebugLogsError.tsx
+import { getSystemLocale } from "../intl/index.native.tsx";
 let obj = { GENERAL: 0, [0]: "GENERAL", NO_FILE: 1, [1]: "NO_FILE", PROGRESS: 2, [2]: "PROGRESS", UPLOAD: 3, [3]: "UPLOAD", READ: 4, [4]: "READ" };
 class UploadVoiceDebugLogsError {
   constructor(arg0) {

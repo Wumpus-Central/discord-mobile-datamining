@@ -1,11 +1,11 @@
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../SafetyFlows.messages.js";
 // discord_app/modules/safety_flows/native/UpdateAppScreen.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../SafetyFlows.messages.js";
 
 let c3;
 let c4;

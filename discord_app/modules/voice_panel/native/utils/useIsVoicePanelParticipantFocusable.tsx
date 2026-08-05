@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
 import reset from "reset";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ParticipantTypes from "ParticipantTypes";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 let closure_6;
 let error;

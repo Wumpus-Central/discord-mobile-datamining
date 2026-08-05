@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/10839_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/11547_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14100_registerAsset.js";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/devices/native/UserSettingsSessions.tsx
 import _slicedToArray from "_slicedToArray";
 import PressableBase from "PressableBase";
@@ -13,6 +7,12 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { registerAsset } from "../../../../../_runtime/10839_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11547_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14100_registerAsset.js";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let Fonts;
 let c10;

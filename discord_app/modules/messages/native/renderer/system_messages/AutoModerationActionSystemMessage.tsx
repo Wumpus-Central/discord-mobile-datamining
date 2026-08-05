@@ -1,10 +1,3 @@
-import { t } from "../../../../../../_runtime/03867_t.js";
-import { registerAsset } from "../../../../../../_runtime/07718_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/07936_registerAsset.js";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
-import { getDecisionOutcomeFromMessage } from "../../../../guild_automod/AutomodMessageUtils.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx
 import get_ActivityIndicator from "DATE_CONFIG";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,6 +7,13 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import apply from "useNullableMessageAuthor";
+import { t } from "../../../../../../_runtime/03867_t.js";
+import { registerAsset } from "../../../../../../_runtime/07718_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07936_registerAsset.js";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
+import { getDecisionOutcomeFromMessage } from "../../../../guild_automod/AutomodMessageUtils.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 
 let c3;
 let c4;

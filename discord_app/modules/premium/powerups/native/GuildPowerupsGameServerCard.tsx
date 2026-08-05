@@ -1,4 +1,3 @@
-import { useGameServerPerk } from "../../../game_server/hooks/useGameServerPerk.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useGameServerPerk } from "../../../game_server/hooks/useGameServerPerk.tsx";
 
 const require = arg1;
 createCacheKey = { riveContainer: null };

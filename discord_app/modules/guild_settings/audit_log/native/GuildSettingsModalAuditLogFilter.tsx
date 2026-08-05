@@ -1,4 +1,3 @@
-import { getPermissionChanges } from "../AuditLogUtils.tsx";
 // discord_app/modules/guild_settings/audit_log/native/GuildSettingsModalAuditLogFilter.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -8,6 +7,7 @@ import AuditLogActions from "AuditLogActions";
 import { AuditLogFilterTypes } from "ME";
 import jsxProd from "AuditIcons";
 import createCacheKey from "createCacheKey";
+import { getPermissionChanges } from "../AuditLogUtils.tsx";
 
 let c10;
 let c9;

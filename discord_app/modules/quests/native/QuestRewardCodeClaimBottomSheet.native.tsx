@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/QuestRewardCodeClaimBottomSheet.native.tsx
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import get_ActivityIndicator from "_getQuestsInstructionsToWinReward";
@@ -6,6 +5,7 @@ import initializeState from "initializeState";
 import { REWARD_CODE_PLACEHOLDER } from "QuestsExperimentLocations";
 import jsxProd from "get defaultRules";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c4;
 let c5;

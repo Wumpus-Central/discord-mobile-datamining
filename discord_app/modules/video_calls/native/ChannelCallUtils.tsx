@@ -1,14 +1,14 @@
+// discord_app/modules/video_calls/native/ChannelCallUtils.tsx
+import "report";
+import initialize from "initialize";
+import ME from "ME";
+import { jsx } from "showShareActionSheet";
 import { registerAsset } from "../../../../_runtime/07828_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/10762_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/16152_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/16153_registerAsset.js";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-// discord_app/modules/video_calls/native/ChannelCallUtils.tsx
-import "report";
-import initialize from "initialize";
-import ME from "ME";
-import { jsx } from "showShareActionSheet";
 
 let c4;
 let c5;

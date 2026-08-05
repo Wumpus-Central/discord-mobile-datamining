@@ -1,13 +1,13 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getConsoleIcon } from "../../../game_console/native/getConsoleIcon.tsx";
-import { useGameConsoleAccounts } from "../../../game_console/useGameConsoleAccounts.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx
 import noop from "noop";
 import { PlatformTypes } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getConsoleIcon } from "../../../game_console/native/getConsoleIcon.tsx";
+import { useGameConsoleAccounts } from "../../../game_console/useGameConsoleAccounts.tsx";
 
 let require = arg1;
 function getConsoleInfo(type) {

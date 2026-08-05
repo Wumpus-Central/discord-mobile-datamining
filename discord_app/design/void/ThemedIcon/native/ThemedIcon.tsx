@@ -1,8 +1,8 @@
-import { map } from "../../../tokens/native/useToken.tsx";
-import { IconSizes } from "../../Icon/native/Icon.tsx";
 // discord_app/design/void/ThemedIcon/native/ThemedIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { map } from "../../../tokens/native/useToken.tsx";
+import { IconSizes } from "../../Icon/native/Icon.tsx";
 
 const require = arg1;
 const result = require("map").fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");

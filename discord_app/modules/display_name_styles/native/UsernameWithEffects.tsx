@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 // discord_app/modules/display_name_styles/native/UsernameWithEffects.tsx
 import importAllResult from "getNodeText";
 import get_ActivityIndicator from "Text";
 import { MIN_PRISM_GRADIENT_WIDTH } from "items3";
 import jsxProd from "isDiscordFrontendDevelopment";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 
 let c10;
 let c4;

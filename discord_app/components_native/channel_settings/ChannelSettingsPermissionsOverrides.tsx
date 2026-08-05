@@ -1,8 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useNavigation } from "../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsPermissionsOverrides.tsx
 import computeChannelName from "computeChannelName";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -18,6 +13,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "module_4295";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useNavigation } from "../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
 
 let closure_16;
 let closure_17;

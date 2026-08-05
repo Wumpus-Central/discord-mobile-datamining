@@ -1,5 +1,5 @@
-import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
 // discord_app/modules/guild/GuildUtils.tsx
+import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
 let result = require("set").fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
 export const handleJoinGuild = function handleJoinGuild(closure_0) {

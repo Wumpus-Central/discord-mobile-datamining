@@ -1,9 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CircleCheckIcon } from "../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
-import { CircleErrorIcon } from "../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { CircleInformationIcon } from "../../../components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { CircleXIcon } from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
-import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/HelpMessage/native/HelpMessage.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -17,6 +11,12 @@ import int2hslRaw from "int2hslRaw";
 import int2hslRaw from "int2hslRaw";
 import int2hslRaw from "int2hslRaw";
 import int2hslRaw from "int2hslRaw";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleCheckIcon } from "../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import { CircleErrorIcon } from "../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { CircleInformationIcon } from "../../../components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { CircleXIcon } from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import { Text } from "../../../components/Text/native/Text.tsx";
 
 let c4;
 let c5;

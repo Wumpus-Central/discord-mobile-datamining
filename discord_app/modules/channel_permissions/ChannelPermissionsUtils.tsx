@@ -1,10 +1,3 @@
-import { _updatePermission } from "../../actions/ChannelSettingsPermissionsActionCreators.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { compareGuildRoles } from "../../utils/GuildRoleUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/channel_permissions/ChannelPermissionsUtils.tsx
 import { isGuildVocalChannelType } from "createChannelRecord";
 import { isGuildOwner } from "GuildNSFWContentLevel";
@@ -13,6 +6,13 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { RowType } from "RowType";
 import ME from "ME";
+import { _updatePermission } from "../../actions/ChannelSettingsPermissionsActionCreators.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { compareGuildRoles } from "../../utils/GuildRoleUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 
 let closure_12;
 let closure_6;

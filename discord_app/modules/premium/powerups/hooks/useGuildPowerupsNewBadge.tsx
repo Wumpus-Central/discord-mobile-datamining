@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { useGuildPowerupNewPerkMarketingVersion } from "useGuildPowerupNewPerkMarketingVersion.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "BoostedGuildTiers";
 import { ContentDismissActionType } from "ContentDismissActionType";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { useGuildPowerupNewPerkMarketingVersion } from "useGuildPowerupNewPerkMarketingVersion.tsx";
 
 const require = arg1;
 let closure_8 = require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;

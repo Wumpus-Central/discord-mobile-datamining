@@ -1,7 +1,7 @@
-import { useInitialValue } from "useInitialValue.tsx";
 // discord_app/hooks/useResettingValue.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { useInitialValue } from "useInitialValue.tsx";
 
 let c4;
 let c5;

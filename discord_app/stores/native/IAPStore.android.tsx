@@ -1,10 +1,10 @@
-import { _createGatewayCheckoutContext } from "../../utils/BillingUtils.tsx";
-import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
 // discord_app/stores/native/IAPStore.android.tsx
 import GPlayConnectionState from "GPlayConnectionState";
 import { CurrencyCodes } from "sum";
 import { Store } from "initialize";
 import set from "formatSingleCurrencyPrice";
+import { _createGatewayCheckoutContext } from "../../utils/BillingUtils.tsx";
+import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
 
 function updateProduct(currencyCode) {
   const formatted = currencyCode.currencyCode.toLowerCase();

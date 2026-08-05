@@ -1,7 +1,7 @@
+// discord_app/modules/collectibles/nameplates/hooks/useFetchNameplate.tsx
 import { CollectiblesItemType } from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { useFetchCollectiblesProduct } from "../../hooks/useFetchCollectiblesProduct.tsx";
 import { getNameplateData } from "../utils.tsx";
-// discord_app/modules/collectibles/nameplates/hooks/useFetchNameplate.tsx
 const result = require("getNameplateData").fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {

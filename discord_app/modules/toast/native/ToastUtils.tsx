@@ -1,3 +1,5 @@
+// discord_app/modules/toast/native/ToastUtils.tsx
+import { VerificationCriteria } from "ME";
 import { v1 } from "../../../../_runtime/00514_v1.js";
 import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import { CircleCheckIcon } from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
@@ -15,8 +17,6 @@ import { XLargeIcon } from "../../../design/components/Icon/native/redesign/gene
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { dispatcher } from "ToastActionCreators.tsx";
-// discord_app/modules/toast/native/ToastUtils.tsx
-import { VerificationCriteria } from "ME";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/toast/native/ToastUtils.tsx");
 

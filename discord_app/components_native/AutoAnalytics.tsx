@@ -1,14 +1,3 @@
-import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import { isClickstreamEnabled } from "../modules/app_analytics/clickstream/Clickstream.tsx";
-import { getChannelOpenedRouteTrackingProps } from "../modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx";
-import { trackChannelOpenedClickstream } from "../modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
-import { setNextFavoritesGuildViewSource } from "../modules/favorites/FavoritesAnalytics.tsx";
-import { useFavoritesAccess } from "../modules/favorites/FavoritesHooks.tsx";
-import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
-import { collectGuildThemeAnalyticsMetadata } from "../modules/guild_themes/GuildThemeAnalyticsUtils.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
-import { isPremiumAtLeast } from "../utils/PremiumTypeUtils.tsx";
 // discord_app/components_native/AutoAnalytics.tsx
 import getParticipants from "getParticipants";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -32,6 +21,17 @@ import { PremiumTypes } from "GuildFeatures";
 import { jsx } from "collectGuildAnalyticsMetadata";
 import { PureComponent } from "GuildFeatures";
 import importAllResult from "GuildFeatures";
+import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { isClickstreamEnabled } from "../modules/app_analytics/clickstream/Clickstream.tsx";
+import { getChannelOpenedRouteTrackingProps } from "../modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx";
+import { trackChannelOpenedClickstream } from "../modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
+import { setNextFavoritesGuildViewSource } from "../modules/favorites/FavoritesAnalytics.tsx";
+import { useFavoritesAccess } from "../modules/favorites/FavoritesHooks.tsx";
+import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
+import { collectGuildThemeAnalyticsMetadata } from "../modules/guild_themes/GuildThemeAnalyticsUtils.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
+import { isPremiumAtLeast } from "../utils/PremiumTypeUtils.tsx";
 
 let closure_19;
 let closure_20;

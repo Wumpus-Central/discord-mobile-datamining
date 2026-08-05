@@ -1,4 +1,3 @@
-import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/StickerPickerListRowNativeComponent.tsx";
 // discord_app/modules/stickers/native/StickerPickerListRow.tsx
 import _slicedToArray from "_slicedToArray";
 import "PressableBase";
@@ -9,6 +8,7 @@ import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
 import { PADDING_VERTICAL } from "ExpressionPickerViewType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/StickerPickerListRowNativeComponent.tsx";
 
 const require = arg1;
 const STICKER_SIZE = PADDING_HORIZONTAL.STICKER_SIZE;

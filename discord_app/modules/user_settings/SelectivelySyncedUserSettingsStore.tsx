@@ -1,8 +1,8 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/user_settings/SelectivelySyncedUserSettingsStore.tsx
 import { UserSettingsSections } from "ME";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 let closure_4 = {};
 class SelectivelySyncedUserSettingsStore extends PersistedStore {

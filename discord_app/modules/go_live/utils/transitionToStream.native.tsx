@@ -1,8 +1,8 @@
+// discord_app/modules/go_live/utils/transitionToStream.native.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { openChannelCallModal } from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/go_live/utils/transitionToStream.native.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;
 const result = require("module_4490").fileFinishedImporting("modules/go_live/utils/transitionToStream.native.tsx");

@@ -1,8 +1,8 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getNickname } from "../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/app_launcher/native/base_components/UsernameText.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getNickname } from "../../../../utils/NicknameUtils.tsx";
 
 let c3;
 let c4;

@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/messages/getHeaderTextForInvite.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {

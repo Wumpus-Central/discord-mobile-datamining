@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/WebBrowserSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { SettingsWebBrowserScreen } from "../../web_browser/native/SettingsWebBrowserScreen.tsx";
 import { useWebBrowserSettingOptions } from "SelectWebBrowserSetting.tsx";
-// discord_app/modules/user_settings/defs/native/WebBrowserSetting.tsx
-import createToggle from "createToggle";
 
 obj = {
   useTitle() {

@@ -1,6 +1,3 @@
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getSubscriptionPlansLoaded } from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
 // discord_app/components_native/premium/PremiumSubscriptionPricingUpsell.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -14,6 +11,9 @@ import { CurrencyCodes } from "ME";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "formatSingleCurrencyPrice";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getSubscriptionPlansLoaded } from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
 
 let closure_12;
 let closure_14;

@@ -1,3 +1,8 @@
+// discord_app/modules/user_settings/defs/native/CopyClientInfoSetting.tsx
+import getCurrentBuildOverride from "getCurrentBuildOverride";
+import jsxProd from "jsxProd";
+import createToggle from "createToggle";
+import importAllResult from "getConstants";
 import { CopyIcon } from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
 import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
@@ -5,11 +10,6 @@ import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/component
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { isFabric } from "../../../../utils/native/FabricUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/user_settings/defs/native/CopyClientInfoSetting.tsx
-import getCurrentBuildOverride from "getCurrentBuildOverride";
-import jsxProd from "jsxProd";
-import createToggle from "createToggle";
-import importAllResult from "getConstants";
 
 let c4;
 let c5;

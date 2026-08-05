@@ -1,8 +1,8 @@
+// discord_app/modules/app_launcher/native/AppLauncherContext.tsx
+import importAllResult from "noop";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { AppLauncherEntrypoint } from "../AppLauncherTypes.tsx";
 import { useDefaultAppLauncherWidth } from "hooks/useDefaultAppLauncherWidth.tsx";
-// discord_app/modules/app_launcher/native/AppLauncherContext.tsx
-import importAllResult from "noop";
 
 const require = arg1;
 let obj = { DISMISSED: 0, [0]: "DISMISSED", COMMAND: 1, [1]: "COMMAND", ACTIVITY: 2, [2]: "ACTIVITY", BACK: 3, [3]: "BACK", OAUTH_MODAL: 4, [4]: "OAUTH_MODAL" };

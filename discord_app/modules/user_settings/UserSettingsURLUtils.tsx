@@ -1,11 +1,11 @@
-import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { WebUserSettings } from "UserSettingsKeys.tsx";
-import { apexExperiment } from "UserSettingsRedesignExperiment.tsx";
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import { UserSettingsPath } from "MAX_FAVORITES";
 import ME from "ME";
+import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { WebUserSettings } from "UserSettingsKeys.tsx";
+import { apexExperiment } from "UserSettingsRedesignExperiment.tsx";
 
 let c5;
 let closure_6;

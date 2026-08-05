@@ -1,3 +1,9 @@
+// discord_app/modules/app_launcher/native/onboarding/AppLauncherOnboardingChatInputButtonAnimation.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { 11361__ } from "../../../../../_runtime/metro/11361__.js";
 import { 11526__ } from "../../../../../_runtime/metro/11526__.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
@@ -7,12 +13,6 @@ import { MINIMUM_HIT_AREA } from "../../../../design/components/Button/native/Bu
 import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { useAppLauncherOnboardingContent } from "hooks/useAppLauncherOnboardingContent.tsx";
-// discord_app/modules/app_launcher/native/onboarding/AppLauncherOnboardingChatInputButtonAnimation.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

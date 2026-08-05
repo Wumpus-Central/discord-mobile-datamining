@@ -1,6 +1,6 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");

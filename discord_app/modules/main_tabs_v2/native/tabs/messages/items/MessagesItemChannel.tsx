@@ -1,3 +1,8 @@
+// discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "noop";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { jsx } from "jsxProd";
 import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15071_toNativeHorizontalOffset.js";
 import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
@@ -5,11 +10,6 @@ import { Themes } from "../../../../../../../discord_common/js/packages/tokens/n
 import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import { MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING } from "channel/MessagesItemChannelBase.tsx";
 import { MessagesItemPlaceholder } from "MessagesItemPlaceholder.tsx";
-// discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { jsx } from "jsxProd";
 
 let require = arg1;
 let c4 = importAllResult;

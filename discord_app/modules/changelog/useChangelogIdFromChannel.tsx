@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/changelog/useChangelogIdFromChannel.tsx
 import reinjectEphemerals from "reinjectEphemerals";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/changelog/useChangelogIdFromChannel.tsx");

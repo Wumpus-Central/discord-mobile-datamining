@@ -1,6 +1,6 @@
+// discord_app/modules/chat_input/native/useShouldUseFabricChatInput.tsx
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { apexExperiment } from "ChatInputFabricExperiment.tsx";
-// discord_app/modules/chat_input/native/useShouldUseFabricChatInput.tsx
 const chat_input = "chat_input";
 const result = require("apexExperiment").fileFinishedImporting("modules/chat_input/native/useShouldUseFabricChatInput.tsx");
 

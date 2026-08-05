@@ -1,10 +1,10 @@
-import { ChatWarningIcon } from "../../../../design/components/Icon/native/redesign/generated/ChatWarningIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx
 import { QUARANTINE_APPEAL_LINK } from "QUARANTINE_APPEAL_LINK";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { ChatWarningIcon } from "../../../../design/components/Icon/native/redesign/generated/ChatWarningIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function ChatInputGuardQuarantineDM() {

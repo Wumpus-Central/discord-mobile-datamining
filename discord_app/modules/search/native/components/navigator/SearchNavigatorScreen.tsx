@@ -1,13 +1,13 @@
-import { getMixedGradientColor } from "../../../../client_themes/native/ThemedGradient.tsx";
-import { useBaseAppContainerDimensions } from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
-import { useSearchLayoutInsetTop } from "../../hooks/useSearchLayoutInsetTop.tsx";
-import { SearchFreezeContainer } from "../layout/SearchScreenLayout.tsx";
-import { SearchScreenSearchBar } from "../layout/SearchScreenSearchBar.tsx";
 // discord_app/modules/search/native/components/navigator/SearchNavigatorScreen.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getMixedGradientColor } from "../../../../client_themes/native/ThemedGradient.tsx";
+import { useBaseAppContainerDimensions } from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
+import { useSearchLayoutInsetTop } from "../../hooks/useSearchLayoutInsetTop.tsx";
+import { SearchFreezeContainer } from "../layout/SearchScreenLayout.tsx";
+import { SearchScreenSearchBar } from "../layout/SearchScreenSearchBar.tsx";
 
 let c5;
 let closure_6;

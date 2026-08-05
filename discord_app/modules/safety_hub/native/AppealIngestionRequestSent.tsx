@@ -1,15 +1,15 @@
-import { registerAsset } from "../../../../_runtime/11224_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useEmitAppealIngestionEvent } from "../hooks/useEmitAppealIngestionEvent.tsx";
-import { AppealIngestionExternalLink } from "AppealIngestionExternalLink.tsx";
-import { AppealIngestionModal } from "AppealIngestionModal.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import SafetyHubView from "SafetyHubView";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/11224_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useEmitAppealIngestionEvent } from "../hooks/useEmitAppealIngestionEvent.tsx";
+import { AppealIngestionExternalLink } from "AppealIngestionExternalLink.tsx";
+import { AppealIngestionModal } from "AppealIngestionModal.tsx";
 
 let c3;
 let c4;

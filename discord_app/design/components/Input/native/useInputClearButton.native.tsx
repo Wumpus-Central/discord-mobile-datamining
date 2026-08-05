@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CircleXIcon } from "../../Icon/native/redesign/generated/CircleXIcon.tsx";
 // discord_app/design/components/Input/native/useInputClearButton.native.tsx
 import "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CircleXIcon } from "../../Icon/native/redesign/generated/CircleXIcon.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");

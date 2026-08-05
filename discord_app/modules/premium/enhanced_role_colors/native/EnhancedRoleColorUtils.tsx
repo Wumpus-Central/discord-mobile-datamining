@@ -1,12 +1,12 @@
-import { n } from "../../../../../_runtime/00689_n.js";
-import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
-import { useHasEnhancedRoleColors } from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
 // discord_app/modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { processColor } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
 import { ThemeTypes } from "sum";
+import { n } from "../../../../../_runtime/00689_n.js";
+import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
+import { useHasEnhancedRoleColors } from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
 
 const require = arg1;
 function processColorStrings(colorStrings) {

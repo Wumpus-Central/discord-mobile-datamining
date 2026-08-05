@@ -1,7 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { ImpersonateType } from "ImpersonateTypes.tsx";
 // discord_app/modules/impersonate/ImpersonateActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
@@ -13,6 +9,10 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import initialize from "initialize";
 import ME from "ME";
 import { isStaticChannelRoute } from "set";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { ImpersonateType } from "ImpersonateTypes.tsx";
 
 let closure_12;
 let map1;

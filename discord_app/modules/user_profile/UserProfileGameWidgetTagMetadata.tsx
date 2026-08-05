@@ -1,6 +1,6 @@
+// discord_app/modules/user_profile/UserProfileGameWidgetTagMetadata.tsx
 import { WidgetGameTag } from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
-// discord_app/modules/user_profile/UserProfileGameWidgetTagMetadata.tsx
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
 obj = {
   getText() {

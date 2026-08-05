@@ -1,5 +1,5 @@
-import { parseRawEmojiObject } from "../UnicodeEmojis.tsx";
 // discord_app/modules/emojis/utils/dedupeEmojisByNameOrId.tsx
+import { parseRawEmojiObject } from "../UnicodeEmojis.tsx";
 let result = require("set").fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 
 export default function dedupeEmojisByNameOrId(arg0) {

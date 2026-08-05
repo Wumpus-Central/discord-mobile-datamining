@@ -1,7 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 // discord_app/modules/stickers/StickersHooks.tsx
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import _slicedToArray from "_slicedToArray";
@@ -13,6 +9,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import handleStickersStoreUpdate from "handleStickersStoreUpdate";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 
 let require = arg1;
 function useStickerPackCategories(channel) {

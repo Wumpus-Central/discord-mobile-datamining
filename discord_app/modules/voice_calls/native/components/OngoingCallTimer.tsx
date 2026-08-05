@@ -1,9 +1,9 @@
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
-import { componentDidMount } from "Timer.tsx";
 // discord_app/modules/voice_calls/native/components/OngoingCallTimer.tsx
 import "noop";
 import callConnect from "callConnect";
 import { jsx } from "jsxProd";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import { componentDidMount } from "Timer.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/voice_calls/native/components/OngoingCallTimer.tsx");

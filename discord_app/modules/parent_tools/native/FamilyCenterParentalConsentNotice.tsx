@@ -1,10 +1,10 @@
-import { useIsParentalConsentBannerActive } from "../useIsParentalConsentBannerActive.tsx";
-import { useParentalConsentWarning } from "../useParentalConsentWarning.tsx";
-import { FamilyCenterInlineWarningNotice } from "FamilyCenterInlineWarningNotice.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useIsParentalConsentBannerActive } from "../useIsParentalConsentBannerActive.tsx";
+import { useParentalConsentWarning } from "../useParentalConsentWarning.tsx";
+import { FamilyCenterInlineWarningNotice } from "FamilyCenterInlineWarningNotice.tsx";
 
 let require = arg1;
 createCacheKey = { container: null, link: null };

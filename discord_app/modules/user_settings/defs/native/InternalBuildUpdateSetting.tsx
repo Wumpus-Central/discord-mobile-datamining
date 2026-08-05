@@ -1,10 +1,10 @@
-import { t } from "../../../../../_runtime/03867_t.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 // discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
 import checkForNewerBuild from "checkForNewerBuild";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";
+import { t } from "../../../../../_runtime/03867_t.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 
 const require = arg1;
 createToggle = {

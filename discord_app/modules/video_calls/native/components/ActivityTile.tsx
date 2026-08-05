@@ -1,4 +1,3 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/modules/video_calls/native/components/ActivityTile.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ManaContext from "ManaContext";
@@ -10,6 +9,7 @@ import ME from "ME";
 import { ActivityLayoutMode } from "items3";
 import jsxProd from "useAnalyticsContext";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 
 let Fonts;
 let c10;

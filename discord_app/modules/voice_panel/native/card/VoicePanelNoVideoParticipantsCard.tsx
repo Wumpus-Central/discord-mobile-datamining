@@ -1,10 +1,10 @@
-import { set } from "../../../core/native/NativeView.tsx";
-import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx
 import importAllResult from "noop";
 import { Pressable } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../core/native/NativeView.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 
 let c5;
 let closure_6;

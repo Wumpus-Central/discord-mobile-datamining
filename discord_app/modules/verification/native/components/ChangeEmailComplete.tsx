@@ -1,14 +1,14 @@
-import { registerAsset } from "../../../../../_runtime/08273_registerAsset.js";
-import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/verification/native/components/ChangeEmailComplete.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { resetChangeEmailStore } from "ChangeEmailFields";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/08273_registerAsset.js";
+import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c3;
 let c4;

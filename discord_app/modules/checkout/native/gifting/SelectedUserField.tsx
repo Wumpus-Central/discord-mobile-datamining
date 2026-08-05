@@ -1,11 +1,11 @@
-import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
-import { useInputStyles } from "../../../../design/components/Input/native/InputFieldContainer.native.tsx";
-import { nameFromUser } from "../../../../utils/UserUtils.tsx";
 // discord_app/modules/checkout/native/gifting/SelectedUserField.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
+import { useInputStyles } from "../../../../design/components/Input/native/InputFieldContainer.native.tsx";
+import { nameFromUser } from "../../../../utils/UserUtils.tsx";
 
 let c3;
 let c4;

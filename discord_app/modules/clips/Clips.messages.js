@@ -1,3 +1,6 @@
+// discord_app/modules/clips/Clips.messages.js
+import 01274__ from "../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../_runtime/02126_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02127_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02128_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../_runtime/02154_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02155_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02156_registerAsset.js";
 import { loadJsonAsset } from "../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/clips/Clips.messages.js
-import 01274__ from "../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

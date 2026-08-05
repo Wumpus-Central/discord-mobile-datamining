@@ -1,8 +1,8 @@
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/parent_tools/hooks/useIsOnMainSurface.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import set from "getRootNavigationRef";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const require = arg1;
 function getIsOnMainSurface() {

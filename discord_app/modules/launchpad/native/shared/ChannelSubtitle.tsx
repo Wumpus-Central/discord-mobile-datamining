@@ -1,10 +1,10 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getChannelSubtitleData } from "../../../channel/native/getChannelSubtitleData.tsx";
-import { getLayoutStyle } from "getLayoutStyles.tsx";
 // discord_app/modules/launchpad/native/shared/ChannelSubtitle.tsx
 import "noop";
 import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";
 import { jsx } from "jsxProd";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getChannelSubtitleData } from "../../../channel/native/getChannelSubtitleData.tsx";
+import { getLayoutStyle } from "getLayoutStyles.tsx";
 
 const require = arg1;
 function ChannelSubtitle(arg0) {

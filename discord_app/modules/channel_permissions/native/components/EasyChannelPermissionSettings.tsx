@@ -1,4 +1,3 @@
-import { set } from "../../../../actions/AlertActionCreators.tsx";
 // discord_app/modules/channel_permissions/native/components/EasyChannelPermissionSettings.tsx
 import CirclePlusIcon from "CirclePlusIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -16,6 +15,7 @@ import { SettingMode } from "RowType";
 import ME from "ME";
 import jsxProd from "_isDefaultChannelThresholdMetAfterDelete";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../../actions/AlertActionCreators.tsx";
 
 let closure_18;
 let closure_19;

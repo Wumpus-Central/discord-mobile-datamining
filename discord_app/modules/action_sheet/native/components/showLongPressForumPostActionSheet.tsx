@@ -1,6 +1,6 @@
+// discord_app/modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../ActionSheetActionCreators.tsx";
-// discord_app/modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx");
 
 export default function showLongPressForumPostActionSheet(thread, parentChannel) {

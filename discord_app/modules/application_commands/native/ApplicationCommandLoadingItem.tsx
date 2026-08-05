@@ -1,11 +1,11 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getFontScale } from "../../screen/native/useFontScale.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandLoadingItem.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getFontScale } from "../../screen/native/useFontScale.tsx";
 
 let c5;
 let closure_6;

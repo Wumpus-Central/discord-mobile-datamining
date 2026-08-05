@@ -1,9 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsGeneratedTestUsersScreen.tsx
 import fetchFingerprint from "fetchFingerprint";
 import _getGeneratedPoolById from "_getGeneratedPoolById";
@@ -13,6 +7,12 @@ import handleAddUser from "handleAddUser";
 import closure_9 from "fetchFingerprint";
 import jsxProd from "BurgerIcon";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let c10;
 let closure_6;

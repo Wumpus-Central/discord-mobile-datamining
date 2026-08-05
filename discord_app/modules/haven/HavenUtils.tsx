@@ -1,6 +1,6 @@
+// discord_app/modules/haven/HavenUtils.tsx
 import { HavenGenres } from "constants.tsx";
 import { messagesProxy } from "Haven.messages.js";
-// discord_app/modules/haven/HavenUtils.tsx
 function parseParticipant(userId) {
   return { userId: userId.user_id, position: userId.position, avatar: userId.avatar };
 }

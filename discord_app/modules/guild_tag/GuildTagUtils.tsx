@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
 // discord_app/modules/guild_tag/GuildTagUtils.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import items from "items";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
 
 let GuildTagBadgeMediaProxySizes;
 let c5;

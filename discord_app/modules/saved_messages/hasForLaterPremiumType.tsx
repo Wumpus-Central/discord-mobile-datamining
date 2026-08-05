@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
 // discord_app/modules/saved_messages/hasForLaterPremiumType.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
 
 const require = arg1;
 const result = require("isPremiumAtLeast").fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");

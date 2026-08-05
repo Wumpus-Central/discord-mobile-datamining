@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/utils/FileSizeUtils.tsx
+import { getSystemLocale } from "../intl/index.native.tsx";
 function formatSize(result, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {

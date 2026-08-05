@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../../../age_assurance/AgeAssurance.messages.js";
 import { SettingsAgeGroupHeader } from "../../age_group/native/SettingsAgeGroupScreen.tsx";
-// discord_app/modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx
-import createToggle from "createToggle";
 
 obj = {
   useTitle() {

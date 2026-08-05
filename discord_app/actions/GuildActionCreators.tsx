@@ -1,14 +1,3 @@
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../modules/age_gate/AgeGateUtils.tsx";
-import { getPreviousSafeRouteForNsfwReturn } from "../modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx";
-import { stopLurkingAll } from "../modules/lurker_mode/LurkerActionCreators.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
-import { set } from "AlertActionCreators.tsx";
 // discord_app/actions/GuildActionCreators.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import comparator from "comparator";
@@ -22,6 +11,17 @@ import closure_13 from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { AgeGateSource } from "result";
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../modules/age_gate/AgeGateUtils.tsx";
+import { getPreviousSafeRouteForNsfwReturn } from "../modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx";
+import { stopLurkingAll } from "../modules/lurker_mode/LurkerActionCreators.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
+import { set } from "AlertActionCreators.tsx";
 
 let closure_15;
 let closure_16;

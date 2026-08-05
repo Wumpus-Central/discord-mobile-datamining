@@ -1,6 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { areSetsEqual } from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import { AccountCreditTier } from "../../../premium/native/PremiumAccountCredit.tsx";
 // discord_app/modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
@@ -9,6 +6,9 @@ import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_6 } from "GuildFeatures";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { areSetsEqual } from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import { AccountCreditTier } from "../../../premium/native/PremiumAccountCredit.tsx";
 
 const require = arg1;
 let obj = { creditList: null };

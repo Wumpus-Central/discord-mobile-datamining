@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_member/useIsGuestOrLurker.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");

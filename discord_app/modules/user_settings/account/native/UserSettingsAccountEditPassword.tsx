@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/13928_registerAsset.js";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../../design/components/TextInput/native/TextInput.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 // discord_app/modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx
 import get_ActivityIndicator from "Text";
 import handleUpdateUser from "handleUpdateUser";
@@ -15,6 +8,13 @@ import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import { Component } from "Stack";
 import importAllResult from "Stack";
+import { registerAsset } from "../../../../../_runtime/13928_registerAsset.js";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { TextInput } from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 
 let c10;
 let c4;

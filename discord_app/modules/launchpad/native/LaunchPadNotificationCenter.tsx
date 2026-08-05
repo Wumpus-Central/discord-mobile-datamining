@@ -1,8 +1,8 @@
-import { goBack } from "../../main_tabs_v2/native/tabs/notifications/Notifications.tsx";
 // discord_app/modules/launchpad/native/LaunchPadNotificationCenter.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { goBack } from "../../main_tabs_v2/native/tabs/notifications/Notifications.tsx";
 
 let closure_3 = createCacheKey.createStyles({ wrapper: { height: "100%" } });
 const memoResult = require("noop").memo(function NotificationsContent() {

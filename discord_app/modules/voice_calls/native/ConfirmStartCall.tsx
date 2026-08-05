@@ -1,9 +1,9 @@
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/voice_calls/native/ConfirmStartCall.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c3;
 let obj1;

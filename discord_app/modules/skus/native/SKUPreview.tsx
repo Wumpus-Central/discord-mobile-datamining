@@ -1,6 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { SourceIcon } from "../../wishlists/native/WishlistItemCardBase.tsx";
 // discord_app/modules/skus/native/SKUPreview.tsx
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment";
 import { View } from "map";
@@ -8,6 +5,9 @@ import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesI
 import { SKUProductLines } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { SourceIcon } from "../../wishlists/native/WishlistItemCardBase.tsx";
 
 const require = arg1;
 class CollectiblesPreview {

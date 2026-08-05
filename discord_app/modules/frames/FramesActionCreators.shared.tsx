@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/frames/FramesActionCreators.shared.tsx
 import leaveCurrentFrame from "leaveCurrentFrame";
 import map from "map";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function _launchFrame() {

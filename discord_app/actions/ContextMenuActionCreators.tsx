@@ -1,6 +1,6 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ContextMenuActionCreators.tsx
 import { AppContext } from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
 
 function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
   let bottom;

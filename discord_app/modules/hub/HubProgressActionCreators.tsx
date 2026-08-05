@@ -1,8 +1,8 @@
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/hub/HubProgressActionCreators.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { HUB_PROGRESS_STEP_ORDER } from "items";
 import { GuildFeatures } from "ME";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");

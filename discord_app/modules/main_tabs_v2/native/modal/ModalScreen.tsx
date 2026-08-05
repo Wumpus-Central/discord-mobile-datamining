@@ -1,5 +1,3 @@
-import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/main_tabs_v2/native/modal/ModalScreen.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -7,6 +5,8 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { NOOP } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c9;

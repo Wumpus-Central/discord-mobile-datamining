@@ -1,9 +1,9 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/forwarding/ForwardingAnalyticsUtils.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");

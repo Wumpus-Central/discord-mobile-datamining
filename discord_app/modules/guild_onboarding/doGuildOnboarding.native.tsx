@@ -1,5 +1,3 @@
-import { 05208__ } from "../../../_runtime/metro/05208__.js";
-import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
 import closure_3 from "ME";
 import { NativeModules } from "asyncRequireImpl";
@@ -7,6 +5,8 @@ import handleConnectionOpen from "handleConnectionOpen";
 import shouldShowOnboarding from "shouldShowOnboarding";
 import { GUILD_ONBOARDING_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY";
 import ME from "ME";
+import { 05208__ } from "../../../_runtime/metro/05208__.js";
+import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 let c9;
 let metroImportAll;

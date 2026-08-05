@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/calls/native/usePrivateChannelCall.tsx
 import getPrivateChannelCall from "getPrivateChannelCall";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");

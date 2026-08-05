@@ -1,12 +1,12 @@
+// discord_app/utils/UserSettingsUtils.tsx
+import handleConnectionOpen from "handleConnectionOpen";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import ME from "ME";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import { getSearchSessionId } from "../modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx";
 import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 import { ComponentDispatcher } from "ComponentDispatchUtils.tsx";
-// discord_app/utils/UserSettingsUtils.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
 
 let c5;
 let closure_6;

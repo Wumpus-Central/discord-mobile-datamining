@@ -1,12 +1,12 @@
+// discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx
+import "noop";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { useMessagePreviewHeightStore } from "../../useMessagePreviewHeight.tsx";
-// discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 createCacheKey = { container: null };

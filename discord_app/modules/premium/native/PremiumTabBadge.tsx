@@ -1,3 +1,12 @@
+// discord_app/modules/premium/native/PremiumTabBadge.tsx
+import _slicedToArray from "_slicedToArray";
+import "getPremiumPlanItem";
+import { View } from "usePremiumTrialOffer";
+import reset from "reset";
+import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "GuildFeatures";
+import { Gradients } from "items";
+import jsxProd from "DismissibleContent";
+import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
 import { registerAsset } from "../../../../_runtime/14132_registerAsset.js";
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
@@ -11,15 +20,6 @@ import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import { usePremiumDiscountOffer } from "../hooks/usePremiumDiscountOffer.android.tsx";
 import { usePremiumTrialOffer } from "../hooks/usePremiumTrialOffer.android.tsx";
-// discord_app/modules/premium/native/PremiumTabBadge.tsx
-import _slicedToArray from "_slicedToArray";
-import "getPremiumPlanItem";
-import { View } from "usePremiumTrialOffer";
-import reset from "reset";
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "GuildFeatures";
-import { Gradients } from "items";
-import jsxProd from "DismissibleContent";
-import createCacheKey from "createCacheKey";
 
 let c9;
 let metroImportAll;

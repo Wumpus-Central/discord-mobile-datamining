@@ -1,7 +1,7 @@
+// discord_app/modules/quests/experiments/useBountiesExperience.tsx
 import { apexExperiment } from "BountiesStage1Experiment.tsx";
 import { apexExperiment } from "BountiesVerticalScrollExperiment.tsx";
 import { apexExperiment } from "QuestHomeBountiesExperiment.tsx";
-// discord_app/modules/quests/experiments/useBountiesExperience.tsx
 const result = require("apexExperiment").fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 
 export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_MOBILE) {

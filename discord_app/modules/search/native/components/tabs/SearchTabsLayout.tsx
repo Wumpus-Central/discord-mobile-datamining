@@ -1,5 +1,3 @@
-import { Tracking } from "../../tracking/Tracking.tsx";
-import { ErrorScreen } from "pages/ErrorScreen.tsx";
 // discord_app/modules/search/native/components/tabs/SearchTabsLayout.tsx
 import importAllResult from "Directions";
 import { View } from "useSearchSegmentedControlState";
@@ -11,6 +9,8 @@ import { ComponentActions } from "ME";
 import jsxProd from "module_11647";
 import createCacheKey from "createCacheKey";
 import apply from "getSystemLocale";
+import { Tracking } from "../../tracking/Tracking.tsx";
+import { ErrorScreen } from "pages/ErrorScreen.tsx";
 
 let c10;
 let c9;

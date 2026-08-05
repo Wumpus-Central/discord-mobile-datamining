@@ -1,7 +1,7 @@
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { computeSubtitle } from "../../guild_sidebar/ChannelListState.tsx";
 // discord_app/modules/channel_list_v2/native/ChannelListUtils.tsx
 import { AnalyticEvents } from "ME";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import { computeSubtitle } from "../../guild_sidebar/ChannelListState.tsx";
 
 const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
 

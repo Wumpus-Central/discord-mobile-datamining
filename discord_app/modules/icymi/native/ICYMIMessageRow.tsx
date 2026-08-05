@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/icymi/native/ICYMIMessageRow.tsx
 import importAllResult from "MediaMosaicVideo";
 import { View } from "initialize";
@@ -13,6 +11,8 @@ import { ITEM_PADDING } from "ITEM_PADDING";
 import ME from "ME";
 import jsxProd from "getSystemLocale";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 let closure_12;
 let closure_14;

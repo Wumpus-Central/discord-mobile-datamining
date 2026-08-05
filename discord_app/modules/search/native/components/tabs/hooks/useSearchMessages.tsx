@@ -1,7 +1,7 @@
-import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/search/native/components/tabs/hooks/useSearchMessages.tsx
 import handleReaction from "handleReaction";
 import prototype from "prototype";
+import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");

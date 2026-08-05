@@ -1,7 +1,3 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getEmoji } from "GuildProfileBuilders.tsx";
 // discord_app/modules/guild_profile/GuildProfileActionCreators.tsx
 import dispatcher from "dispatcher";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
@@ -9,6 +5,10 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import handleUpdateStart from "handleUpdateStart";
 import { GuildProfileFetchStatus } from "handleUpdateStart";
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getEmoji } from "GuildProfileBuilders.tsx";
 
 let c9;
 let metroImportAll;

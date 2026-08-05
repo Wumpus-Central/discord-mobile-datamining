@@ -1,6 +1,6 @@
-import { V6OrEarlierAPIError } from "../../errors/index.tsx";
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx
 import { Store } from "initialize";
+import { V6OrEarlierAPIError } from "../../errors/index.tsx";
 
 const require = arg1;
 const map = new Map();

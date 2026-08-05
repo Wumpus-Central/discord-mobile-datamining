@@ -1,8 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { allowChannelAccess } from "../../../utils/ChannelUtils.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../../age_gate/AgeGateUtils.tsx";
-import { canJoinVoiceChannel } from "../../channel/canJoinVoiceChannel.tsx";
 // discord_app/modules/go_live/utils/StreamPermissionUtils.tsx
 import set from "set";
 import { ChannelRecordBase } from "createChannelRecord";
@@ -11,6 +6,11 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateVoiceState from "updateVoiceState";
 import { Permissions } from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { allowChannelAccess } from "../../../utils/ChannelUtils.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../../age_gate/AgeGateUtils.tsx";
+import { canJoinVoiceChannel } from "../../channel/canJoinVoiceChannel.tsx";
 
 const require = arg1;
 function canStreamInChannel(channel, closure_2, set, arg3) {

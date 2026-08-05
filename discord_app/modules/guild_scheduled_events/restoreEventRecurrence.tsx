@@ -1,5 +1,5 @@
-import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
 // discord_app/modules/guild_scheduled_events/restoreEventRecurrence.tsx
+import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/restoreEventRecurrence.tsx");
 
 export default function restoreEventRecurrence(arg0, guild_id, id, c2) {

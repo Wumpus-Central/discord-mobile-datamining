@@ -1,10 +1,10 @@
-import { CollectiblesShopCardInternalV2 } from "../../../collectibles/native/CollectiblesShopCardV2.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileShopCarousel.tsx
 import noop from "noop";
 import { View } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CollectiblesShopCardInternalV2 } from "../../../collectibles/native/CollectiblesShopCardV2.tsx";
 
 let closure_6;
 let error;

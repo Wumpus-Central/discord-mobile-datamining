@@ -1,3 +1,14 @@
+// discord_app/modules/user_settings/account/native/SettingsAccountScreen.tsx
+import expandEventProperties from "expandEventProperties";
+import importAllResult from "UserSettingsWebAuthn";
+import { View } from "Button";
+import hasFetchedCredentials from "hasFetchedCredentials";
+import { MobileSetting } from "MobileSetting";
+import { AccountSettingsTabs } from "AccountSettingsTabs";
+import { AnalyticEvents } from "ME";
+import { WebAuthnScreens } from "WebAuthnScreens";
+import jsxProd from "initialize";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/13872_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -11,17 +22,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { AutomatedUnderageAppealStatus } from "../../../safety_hub/native/SafetyHubPage.tsx";
 import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
-// discord_app/modules/user_settings/account/native/SettingsAccountScreen.tsx
-import expandEventProperties from "expandEventProperties";
-import importAllResult from "UserSettingsWebAuthn";
-import { View } from "Button";
-import hasFetchedCredentials from "hasFetchedCredentials";
-import { MobileSetting } from "MobileSetting";
-import { AccountSettingsTabs } from "AccountSettingsTabs";
-import { AnalyticEvents } from "ME";
-import { WebAuthnScreens } from "WebAuthnScreens";
-import jsxProd from "initialize";
-import createCacheKey from "createCacheKey";
 
 let closure_12;
 let map1;

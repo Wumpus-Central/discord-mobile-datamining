@@ -1,8 +1,8 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TabsGradient } from "../../../../../design/components/Tabs/native/TabsGradient.native.tsx";
 // discord_app/modules/search/native/components/tabs/SearchTabsGradient.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TabsGradient } from "../../../../../design/components/Tabs/native/TabsGradient.native.tsx";
 
 const require = arg1;
 const result = require("map").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsGradient.tsx");

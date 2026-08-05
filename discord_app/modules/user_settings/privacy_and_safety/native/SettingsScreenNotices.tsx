@@ -1,12 +1,12 @@
-import { AgeGatedFeature } from "../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import { useAgeVerificationRunner } from "../../../age_assurance/AgeVerificationUtils.tsx";
-import { isFeatureAgeGated } from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AgeGatedFeature } from "../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import { useAgeVerificationRunner } from "../../../age_assurance/AgeVerificationUtils.tsx";
+import { isFeatureAgeGated } from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 
 const require = arg1;
 createCacheKey = { noticeContainer: null };

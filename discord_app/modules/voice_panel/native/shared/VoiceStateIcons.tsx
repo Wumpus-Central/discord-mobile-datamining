@@ -1,13 +1,13 @@
-import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
-import { registerAsset } from "../../../../../_runtime/09110_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09111_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
-import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
 // discord_app/modules/voice_panel/native/shared/VoiceStateIcons.tsx
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
+import { registerAsset } from "../../../../../_runtime/09110_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09111_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
 
 let c4;
 let c5;

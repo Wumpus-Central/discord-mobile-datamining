@@ -1,5 +1,5 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelCardConstants.tsx
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");
 
 export const CARD_SIZE = 165;

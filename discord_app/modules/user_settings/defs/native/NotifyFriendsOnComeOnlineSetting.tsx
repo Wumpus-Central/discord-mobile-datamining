@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../activity_privacy/ActivityPrivacy.messages.js";
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../activity_privacy/ActivityPrivacy.messages.js";
 
 const toggle = createToggle.createToggle({
   useTitle() {

@@ -1,6 +1,3 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
 // discord_app/modules/opt_in_channels/OptInOnboardingUtils.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import comparator from "comparator";
@@ -8,6 +5,9 @@ import closure_6 from "comparator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
 
 let c4;
 let c5;

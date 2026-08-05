@@ -1,7 +1,7 @@
-import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 const result = require("useFullscreenPlaceholderCount").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");

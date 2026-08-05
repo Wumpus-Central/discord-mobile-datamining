@@ -1,3 +1,9 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx
+import _slicedToArray from "_slicedToArray";
+import SettingsIcon from "SettingsIcon";
+import { ScrollView } from "SearchField";
+import jsxProd from "Button";
+import createCacheKey from "createCacheKey";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
@@ -15,12 +21,6 @@ import { TextField } from "../../../../design/components/TextField/native/TextFi
 import { GhostInput } from "../../../../design/components/TextInput/native/GhostInput.native.tsx";
 import { TextArea } from "../../../../design/components/TextInput/native/TextArea.native.tsx";
 import { TextInput } from "../../../../design/components/TextInput/native/TextInput.native.tsx";
-// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx
-import _slicedToArray from "_slicedToArray";
-import SettingsIcon from "SettingsIcon";
-import { ScrollView } from "SearchField";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

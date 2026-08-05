@@ -1,6 +1,6 @@
+// discord_app/modules/app_database/modules/messages/requireSortedDescending.tsx
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
-// discord_app/modules/app_database/modules/messages/requireSortedDescending.tsx
 const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/requireSortedDescending.tsx");
 
 export const requireSortedDescending = function requireSortedDescending(messages) {

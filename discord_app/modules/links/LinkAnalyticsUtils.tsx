@@ -1,8 +1,8 @@
+// discord_app/modules/links/LinkAnalyticsUtils.tsx
+import { AnalyticEvents } from "ME";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 import { ME } from "LinkUtils.tsx";
-// discord_app/modules/links/LinkAnalyticsUtils.tsx
-import { AnalyticEvents } from "ME";
 
 let closure_4 = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };
 const items = [

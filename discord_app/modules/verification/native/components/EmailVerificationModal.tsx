@@ -1,4 +1,3 @@
-import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 // discord_app/modules/verification/native/components/EmailVerificationModal.tsx
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
@@ -6,6 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { resetChangeEmailStore } from "ChangeEmailFields";
 import { VerificationModalScenes } from "ME";
 import { jsx } from "set";
+import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 
 const require = arg1;
 function closeModal() {

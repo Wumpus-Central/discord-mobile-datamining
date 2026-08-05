@@ -1,8 +1,8 @@
-import { useChannelVideoLimit } from "../../video_calls/useChannelVideoLimit.tsx";
-import { VoiceChannelUserLimit } from "VoiceChannelUserLimit.tsx";
 // discord_app/modules/guild_sidebar/native/ConnectedUserLimit.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { useChannelVideoLimit } from "../../video_calls/useChannelVideoLimit.tsx";
+import { VoiceChannelUserLimit } from "VoiceChannelUserLimit.tsx";
 
 const result = require("useChannelVideoLimit").fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
 

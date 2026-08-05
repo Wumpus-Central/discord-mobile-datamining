@@ -1,5 +1,5 @@
-import { n } from "../../../../_runtime/00689_n.js";
 // discord_common/js/packages/tokens/transforms.tsx
+import { n } from "../../../../_runtime/00689_n.js";
 function interpolate(arg0, arg1, arg2) {
   let tmp;
   let tmp2;

@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

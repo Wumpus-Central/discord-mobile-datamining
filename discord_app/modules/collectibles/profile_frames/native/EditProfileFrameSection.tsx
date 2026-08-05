@@ -1,4 +1,3 @@
-import { useCollectibleListLayout } from "../../native/useCollectibleListLayout.tsx";
 // discord_app/modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { isProfileFrameRecord } from "fromServer";
 import { PROFILE_FRAME_ASPECT_RATIO as closure_6 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCollectibleListLayout } from "../../native/useCollectibleListLayout.tsx";
 
 let c9;
 let error;

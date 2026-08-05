@@ -1,6 +1,6 @@
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/activities/utils/hasFlag.tsx
 import { ActivityFlags } from "ME";
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/hasFlag.tsx");
 

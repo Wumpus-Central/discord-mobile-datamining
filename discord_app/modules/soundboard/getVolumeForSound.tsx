@@ -1,7 +1,7 @@
-import { perceptualToAmplitude } from "../../utils/PerceptualVolumeUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/soundboard/getVolumeForSound.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import { perceptualToAmplitude } from "../../utils/PerceptualVolumeUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 const require = arg1;
 let result = require("explicitContentFromProto").fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");

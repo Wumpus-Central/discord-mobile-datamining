@@ -1,7 +1,3 @@
-import { v1 } from "../../_runtime/00514_v1.js";
-import { IGNORE_ANALYTICS_BREADCRUMB_EVENTS } from "../modules/errors/CommonSentryInitUtils.tsx";
-import { getHermesInstrumentedStatsSummary } from "ProcessUtils.native.tsx";
-import { SentryUtils.native } from "SentryUtils.native.tsx";
 // discord_app/utils/AnalyticsUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import withEqualityFn from "withEqualityFn";
@@ -15,6 +11,10 @@ import encodeProperties from "encodeProperties";
 import importAllResult1 from "encodeProperties";
 import encodeProperties from "encodeProperties";
 import merged from "encodeProperties";
+import { v1 } from "../../_runtime/00514_v1.js";
+import { IGNORE_ANALYTICS_BREADCRUMB_EVENTS } from "../modules/errors/CommonSentryInitUtils.tsx";
+import { getHermesInstrumentedStatsSummary } from "ProcessUtils.native.tsx";
+import { SentryUtils.native } from "SentryUtils.native.tsx";
 
 let AnalyticEvents;
 let c10;

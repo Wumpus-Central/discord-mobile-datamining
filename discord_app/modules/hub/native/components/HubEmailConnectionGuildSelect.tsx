@@ -1,8 +1,3 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionGuildSelect.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +6,11 @@ import get_ActivityIndicator from "HeaderActionButton";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import jsxProd from "HubEmailConnectionModal";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c9;

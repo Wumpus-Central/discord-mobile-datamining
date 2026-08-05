@@ -1,6 +1,6 @@
-import { AwaitAnimationContext } from "useAwaitAnimationComplete.tsx";
 // discord_app/modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx
 import noop from "noop";
+import { AwaitAnimationContext } from "useAwaitAnimationComplete.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");

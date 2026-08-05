@@ -1,5 +1,3 @@
-import { set } from "../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import { fetchUserAffinitiesV2 } from "../../../user_affinities/UserAffinitiesActionCreators.tsx";
 // discord_app/modules/premium/gifting/native/MobileGiftIntentCardManager.tsx
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +6,8 @@ import handleConnectionOpen from "handleConnectionOpen";
 import getCurrentTime from "getCurrentTime";
 import GuildFeatures from "GuildFeatures";
 import "onPostConnectionOpen";
+import { set } from "../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import { fetchUserAffinitiesV2 } from "../../../user_affinities/UserAffinitiesActionCreators.tsx";
 
 let c9;
 let metroImportAll;

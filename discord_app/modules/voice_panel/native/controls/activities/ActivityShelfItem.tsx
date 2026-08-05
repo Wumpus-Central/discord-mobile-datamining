@@ -1,3 +1,9 @@
+// discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx
+import Button from "Button";
+import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
+import jsxProd from "useActivityUsers";
+import createCacheKey from "createCacheKey";
+import hexToRgba from "hexToRgba";
 import { registerAsset } from "../../../../../../_runtime/12041_registerAsset.js";
 import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -14,12 +20,6 @@ import { ApplicationCommandSectionType } from "../../../../application_commands/
 import { set } from "../../../../core/native/NativeView.tsx";
 import { isTestModeForApplication } from "../../../../game_store/TestModeUtils.tsx";
 import { ParticipantsSummary } from "ActivityShelfItemSummary.tsx";
-// discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx
-import Button from "Button";
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
-import jsxProd from "useActivityUsers";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
 
 let c5;
 let closure_6;

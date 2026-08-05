@@ -1,11 +1,11 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { snowflakeSequence } from "createNonce.tsx";
 // discord_app/modules/messages/createMessage.tsx
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
 import createdAt from "createdAt";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { snowflakeSequence } from "createNonce.tsx";
 
 let c10;
 let c9;

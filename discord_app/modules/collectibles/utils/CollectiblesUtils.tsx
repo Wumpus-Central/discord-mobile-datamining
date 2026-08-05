@@ -1,9 +1,9 @@
+// discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
+import { ApplicationStreamPresets } from "RESOLUTION_720";
 import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
 import { ShopVariantsReturnStyle } from "../../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
 import { resetCache } from "../../../utils/DateUtils.tsx";
 import { calculateFractionalPremiumInfo } from "../../billing/hooks/useFractionalPremiumInfo.tsx";
-// discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
-import { ApplicationStreamPresets } from "RESOLUTION_720";
 
 const result = require("ShopVariantsReturnStyle").fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 

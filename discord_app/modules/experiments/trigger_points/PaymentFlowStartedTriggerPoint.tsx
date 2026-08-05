@@ -1,6 +1,6 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration([], require("ExperimentBuckets").CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
 const result = require("registeredExperimentIds").fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");

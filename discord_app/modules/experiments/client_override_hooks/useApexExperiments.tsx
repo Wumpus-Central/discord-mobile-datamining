@@ -1,8 +1,8 @@
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx";
 // discord_app/modules/experiments/client_override_hooks/useApexExperiments.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import initialize from "initialize";
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx";
 
 let c3;
 let c4;

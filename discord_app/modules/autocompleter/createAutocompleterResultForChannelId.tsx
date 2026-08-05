@@ -1,9 +1,9 @@
-import { computeChannelName } from "../channel/useChannelName.tsx";
 // discord_app/modules/autocompleter/createAutocompleterResultForChannelId.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ChannelTypes } from "ME";
+import { computeChannelName } from "../channel/useChannelName.tsx";
 
 const require = arg1;
 require("HeaderRecord").AutocompleterResultTypes;

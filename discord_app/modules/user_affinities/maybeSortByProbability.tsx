@@ -1,5 +1,5 @@
-import { apexExperiment } from "VoiceUserAffinityExperiment.tsx";
 // discord_app/modules/user_affinities/maybeSortByProbability.tsx
+import { apexExperiment } from "VoiceUserAffinityExperiment.tsx";
 const result = require("set").fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {

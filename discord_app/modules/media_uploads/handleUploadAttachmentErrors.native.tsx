@@ -1,11 +1,11 @@
+// discord_app/modules/media_uploads/handleUploadAttachmentErrors.native.tsx
+import ME from "ME";
 import { set } from "../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getUploadFileSizeSum } from "../../utils/FileUtils.tsx";
 import { KESTREL_GA_UPLOAD_LIMIT_MB } from "experiments/KestrelExperiment.tsx";
 import { getAttachmentUploadAbortAlertContent } from "getAttachmentUploadAbortAlert.tsx";
 import { showUploadFileSizeError } from "native/showUploadFileSizeError.tsx";
-// discord_app/modules/media_uploads/handleUploadAttachmentErrors.native.tsx
-import ME from "ME";
 
 let c3;
 let c4;

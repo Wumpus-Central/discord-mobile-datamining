@@ -1,10 +1,10 @@
-import { getMixedGradientColor } from "../../client_themes/native/ThemedGradient.tsx";
-import { useActiveThemeType } from "../../client_themes/native/useActiveTheme.tsx";
-import { t } from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 // discord_app/modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getMixedGradientColor } from "../../client_themes/native/ThemedGradient.tsx";
+import { useActiveThemeType } from "../../client_themes/native/useActiveTheme.tsx";
+import { t } from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 
 let c3;
 let c4;

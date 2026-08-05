@@ -1,9 +1,9 @@
-import { isRoleRequired } from "../../channel/isRoleRequired.tsx";
 // discord_app/modules/user_profile/native/UserProfileVoiceActivityIcon.tsx
 import "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
 import { jsx } from "jsxProd";
+import { isRoleRequired } from "../../channel/isRoleRequired.tsx";
 
 const require = arg1;
 const result = require("sum").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");

@@ -1,6 +1,6 @@
-import { UserSettingsDesignSystemText } from "../../design_system/native/UserSettingsDesignSystemText.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTextSetting.tsx
 import createToggle from "createToggle";
+import { UserSettingsDesignSystemText } from "../../design_system/native/UserSettingsDesignSystemText.tsx";
 
 obj = {
   useTitle() {

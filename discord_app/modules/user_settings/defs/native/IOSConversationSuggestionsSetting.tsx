@@ -1,10 +1,10 @@
-import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx
 import noop from "noop";
 import identity from "identity";
 import createToggle from "createToggle";
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));

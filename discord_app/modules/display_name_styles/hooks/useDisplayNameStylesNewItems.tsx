@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx
 import noop from "noop";
 import set from "set";
 import items3 from "items3";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let c4;
 let c5;

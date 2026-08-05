@@ -1,4 +1,3 @@
-import { getFlattenedChannelList } from "../modules/channel/getFlattedChannelList.tsx";
 // discord_app/stores/NotificationSettingsModalStore.tsx
 import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
 import setIndex from "setIndex";
@@ -8,6 +7,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import ME from "ME";
 import { Store } from "initialize";
+import { getFlattenedChannelList } from "../modules/channel/getFlattedChannelList.tsx";
 
 const FormStates = ME.FormStates;
 const ChannelTypes = ME.ChannelTypes;

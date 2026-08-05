@@ -1,10 +1,10 @@
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/message_request/MessageRequestPreviewStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import processChannel from "processChannel";
 import closure_4 from "processChannel";
 import { Store } from "initialize";
 import set from "processChannel";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 const require = arg1;
 function isMessagePreviewEnabledForChannel(id) {

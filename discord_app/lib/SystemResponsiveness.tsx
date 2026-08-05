@@ -1,5 +1,5 @@
-import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
 // discord_app/lib/SystemResponsiveness.tsx
+import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
 const result = require("apply").fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
   constructor(arg0) {

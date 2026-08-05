@@ -1,9 +1,9 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/hooks/useTrackCollectiblesItemTryOut.tsx
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { AnalyticEvents } from "ME";
 import GuildFeatures from "GuildFeatures";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 let AnalyticsPremiumFeatureNames;
 let closure_6;

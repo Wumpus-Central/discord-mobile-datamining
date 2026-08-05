@@ -1,10 +1,10 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { NativePermissionsRequestOptions } from "NativePermissionUtils.tsx";
 // discord_app/modules/native_permissions/NativePermissionManager.tsx
 import { NativePermissionTypes } from "NativePermissionStatus";
 import { InputModes } from "ME";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { NativePermissionsRequestOptions } from "NativePermissionUtils.tsx";
 
 class NativePermissionManager extends tmp2 {
 }

@@ -1,7 +1,3 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getHermesInstrumentedStatsSummary } from "../../../utils/ProcessUtils.native.tsx";
 // discord_app/modules/headless_tasks/android/TTITestAction.tsx
 import importDefaultResult from "ensureGuildLoaded";
 import { applicationReady } from "linkFromAppsFlyer";
@@ -9,6 +5,10 @@ import getHash from "getHash";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getHermesInstrumentedStatsSummary } from "../../../utils/ProcessUtils.native.tsx";
 
 let closure_0 = arg1;
 function sendReply(status, message) {

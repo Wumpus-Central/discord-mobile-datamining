@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { MAX_MESSAGES_ALLOWED_FOR_GREETING } from "../messages/useShowConvoStarterInDM.tsx";
 // discord_app/modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import { UserFlags } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { MAX_MESSAGES_ALLOWED_FOR_GREETING } from "../messages/useShowConvoStarterInDM.tsx";
 
 const require = arg1;
 const result = require("MAX_MESSAGES_ALLOWED_FOR_GREETING").fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");

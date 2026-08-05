@@ -1,10 +1,10 @@
+// discord_app/modules/explicit_media_redaction/HarmTypeConfiguration.tsx
+import ME from "ME";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 import { ContentHarmTypeChannel } from "ExplicitMediaRedactionModels.tsx";
 import { resolveExplicitContentSettingWithDefaults } from "SensitiveMediaExplicitRedactionSettingsUtils.tsx";
 import { resolveGoreSettingWithDefaults } from "SensitiveMediaGoreRedactionSettingsUtils.tsx";
-// discord_app/modules/explicit_media_redaction/HarmTypeConfiguration.tsx
-import ME from "ME";
 
 let MessageAttachmentFlags;
 let MessageEmbedFlags;

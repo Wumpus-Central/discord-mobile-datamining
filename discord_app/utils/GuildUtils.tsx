@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/utils/GuildUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import importDefaultResult from "priv";
+import { getSystemLocale } from "../intl/index.native.tsx";
 
 const require = arg1;
 function getGuildNameSuggestion(truncateUsername) {

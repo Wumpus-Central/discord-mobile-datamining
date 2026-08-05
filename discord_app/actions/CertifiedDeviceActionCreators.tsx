@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/CertifiedDeviceActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("actions/CertifiedDeviceActionCreators.tsx");
 
 export const setCertifiedDevices = function setCertifiedDevices(id, devices) {

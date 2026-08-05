@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import SafetyToastType from "SafetyToastType";
 import { jsx } from "jsxProd";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c5;
 let closure_6;

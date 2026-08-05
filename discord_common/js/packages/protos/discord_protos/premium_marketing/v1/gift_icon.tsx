@@ -1,8 +1,8 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { create } from "gradient.tsx";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { create } from "gradient.tsx";
 
 const require = arg1;
 class GiftIcon$Type extends MessageType {

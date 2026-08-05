@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../_runtime/08256_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12785_registerAsset.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { PremiumGuildTierPill } from "PremiumGuildPreview.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalConfirmation.tsx
 import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
 import registerAsset from "registerAsset";
@@ -19,6 +12,13 @@ import { BoostPurchaseIntent } from "BoostedGuildTiers";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { registerAsset } from "../../../../_runtime/08256_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12785_registerAsset.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { PremiumGuildTierPill } from "PremiumGuildPreview.tsx";
 
 let StyleSheet;
 let c5;

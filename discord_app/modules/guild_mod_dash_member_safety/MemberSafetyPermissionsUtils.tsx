@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import { isGuildOwner } from "GuildNSFWContentLevel";
@@ -7,6 +6,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let c10;
 let c9;

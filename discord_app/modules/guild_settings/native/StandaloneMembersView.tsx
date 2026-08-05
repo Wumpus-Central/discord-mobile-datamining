@@ -1,7 +1,7 @@
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/guild_settings/native/StandaloneMembersView.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 const require = arg1;
 let closure_5 = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };

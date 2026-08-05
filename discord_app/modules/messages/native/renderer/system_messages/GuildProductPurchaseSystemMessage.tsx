@@ -1,12 +1,12 @@
+// discord_app/modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx
+import hasFlag from "hasFlag";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { MessageTypes } from "ME";
 import { ensureAvatarSource } from "../../../../../utils/native/AvatarUtils.tsx";
 import { useNullableMessageAuthor } from "../../../useMessageAuthor.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx
-import hasFlag from "hasFlag";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { MessageTypes } from "ME";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");

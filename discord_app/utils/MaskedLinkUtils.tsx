@@ -1,7 +1,3 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { openInviteModal } from "../lib/getOnClick.tsx";
-import { set1 } from "../modules/masked_link/constants/TrustedURLs.tsx";
-import { getHostname } from "../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 // discord_app/utils/MaskedLinkUtils.tsx
 import isBlockedDomain from "isBlockedDomain";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -11,6 +7,10 @@ import reinjectEphemerals from "reinjectEphemerals";
 import upsertRelationship from "upsertRelationship";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { openInviteModal } from "../lib/getOnClick.tsx";
+import { set1 } from "../modules/masked_link/constants/TrustedURLs.tsx";
+import { getHostname } from "../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 
 let c10;
 let closure_12;

@@ -1,7 +1,7 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx
 import "noop";
 import { jsxs } from "jsxProd";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 const require = arg1;
 const result = require("Text").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");

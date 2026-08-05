@@ -1,7 +1,7 @@
+// discord_app/utils/GuildRoleUtils.tsx
 import { int2hslRaw } from "../../discord_common/js/shared/utils/ColorUtils.tsx";
 import { extractColorStringsFromServerColors } from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
-// discord_app/utils/GuildRoleUtils.tsx
 function compareGuildRoles(guildId, id) {
   guildId = guildId.guildId;
   if (guildId.id === guildId) {

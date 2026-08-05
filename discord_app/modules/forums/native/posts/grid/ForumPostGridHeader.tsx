@@ -1,7 +1,3 @@
-import { ForumPostPinIcon } from "../ForumPostPinIcon.tsx";
-import { ForumPostTimestamp } from "../ForumPostTimestamp.tsx";
-import { ForumPostTitle } from "../ForumPostTitle.tsx";
-import { ForumPostUsername } from "../ForumPostUsername.tsx";
 // discord_app/modules/forums/native/posts/grid/ForumPostGridHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -9,6 +5,10 @@ import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET";
 import { ChannelFlags } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ForumPostPinIcon } from "../ForumPostPinIcon.tsx";
+import { ForumPostTimestamp } from "../ForumPostTimestamp.tsx";
+import { ForumPostTitle } from "../ForumPostTitle.tsx";
+import { ForumPostUsername } from "../ForumPostUsername.tsx";
 
 let closure_6;
 let error;

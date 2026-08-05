@@ -1,10 +1,10 @@
+// discord_common/js/packages/analytics-utils/getSuperProperties.tsx
+import { getSystemLocale } from "getSystemLocale";
 import { usesClientMods } from "../../shared/utils/ClientModDetectionUtils.tsx";
 import { enforcing } from "../rtn-codegen/js/NativeDeviceModule.tsx";
 import { enforcing } from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import { clientLaunchId } from "clientLaunchId.tsx";
 import { encodeProperties } from "encodeProperties.tsx";
-// discord_common/js/packages/analytics-utils/getSuperProperties.tsx
-import { getSystemLocale } from "getSystemLocale";
 
 function getOS() {
   const _default = enforcing /* enforcing */.default;

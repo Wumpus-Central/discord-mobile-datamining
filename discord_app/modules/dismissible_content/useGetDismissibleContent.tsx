@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 // discord_app/modules/dismissible_content/useGetDismissibleContent.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -10,6 +7,9 @@ import withContent from "withContent";
 import { removeCandidateContent } from "withContent";
 import { AnalyticEvents } from "ME";
 import { UserSettingsTypes } from "MAX_FAVORITES";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 
 const require = arg1;
 function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed, cooldownDurationMs) {

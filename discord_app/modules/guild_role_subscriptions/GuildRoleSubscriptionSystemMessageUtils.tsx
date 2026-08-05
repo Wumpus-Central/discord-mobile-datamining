@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { useIsCreatorMonetizationEnabledGuild } from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getJoinButtonLabels from "getJoinButtonLabels";
 import ME from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { useIsCreatorMonetizationEnabledGuild } from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
 
 let c5;
 let c9;

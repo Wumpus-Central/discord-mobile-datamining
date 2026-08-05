@@ -1,9 +1,9 @@
-import { experiment } from "../../../game_server/GameServerExperiment.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
+import { experiment } from "../../../game_server/GameServerExperiment.tsx";
 
 const require = arg1;
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");

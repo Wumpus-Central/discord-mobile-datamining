@@ -1,9 +1,9 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { styles } from "useSubtitleStyles.tsx";
 // discord_app/modules/home_drawer/native/subtitles/TypingSubtitle.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { styles } from "useSubtitleStyles.tsx";
 
 let c3;
 let c4;

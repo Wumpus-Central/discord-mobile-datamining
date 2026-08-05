@@ -1,14 +1,14 @@
-import { registerAsset } from "../../../../../_runtime/08068_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PremiumUpsellGradientBackground } from "../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListComponents.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import IMAGE_SIZE from "IMAGE_SIZE";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/08068_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PremiumUpsellGradientBackground } from "../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 
 let LABEL_BOTTOM_PADDING;
 let LABEL_TOP_PADDING;

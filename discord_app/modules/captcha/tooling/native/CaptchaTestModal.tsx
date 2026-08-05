@@ -1,5 +1,3 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/captcha/tooling/native/CaptchaTestModal.tsx
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +9,8 @@ import { HCAPTCHA_DIFFICULTY_OPTIONS as prop } from "found";
 import { CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found";
 import createCacheKey from "createCacheKey";
 import set from "noop";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let error;
 let metroImportAll;

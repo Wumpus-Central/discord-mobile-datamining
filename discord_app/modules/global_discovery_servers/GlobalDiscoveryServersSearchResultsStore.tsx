@@ -1,7 +1,7 @@
-import { V6OrEarlierAPIError } from "../../errors/index.tsx";
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { Store } from "initialize";
+import { V6OrEarlierAPIError } from "../../errors/index.tsx";
 
 let c3;
 let c4;

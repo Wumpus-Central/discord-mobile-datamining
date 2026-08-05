@@ -1,9 +1,9 @@
-import { GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT } from "../../game_community_upsell/native/GameCommunityUpsellExperiment.tsx";
-import { DetectableAppNames } from "../LocalAppDetectionTypes.tsx";
 // discord_app/modules/local_app_detection/native/LocalAppDetectionUtils.tsx
 import PlatformTypes from "PlatformTypes";
 import hasConsented from "hasConsented";
 import ME from "ME";
+import { GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT } from "../../game_community_upsell/native/GameCommunityUpsellExperiment.tsx";
+import { DetectableAppNames } from "../LocalAppDetectionTypes.tsx";
 
 let c5;
 let closure_6;

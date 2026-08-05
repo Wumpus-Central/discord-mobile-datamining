@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/favorites/FavoritesAnalytics.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 let manual_browsing = "manual_browsing";

@@ -1,5 +1,3 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 // discord_app/modules/nuf/native/components/NewUserModal.tsx
 import _slicedToArray from "_slicedToArray";
 import headerTitle from "headerTitle";
@@ -7,6 +5,8 @@ import { NativeModules } from "RedesignAddAvatarModal";
 import jsxProd from "ConnectGuardianModal";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 
 let closure_6;
 let error;

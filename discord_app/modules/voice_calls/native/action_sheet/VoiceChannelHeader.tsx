@@ -1,8 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/09638_registerAsset.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { id } from "../CallStateHooks.tsx";
-import { OngoingCallStatusLabel } from "../components/OngoingCallStatusLabel.tsx";
-import { OnGoingCallTimer } from "../components/OngoingCallTimer.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceChannelHeader.tsx
 import "Button";
 import { View } from "getSystemLocale";
@@ -12,6 +7,11 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09638_registerAsset.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { id } from "../CallStateHooks.tsx";
+import { OngoingCallStatusLabel } from "../components/OngoingCallStatusLabel.tsx";
+import { OnGoingCallTimer } from "../components/OngoingCallTimer.tsx";
 
 let c10;
 let c9;

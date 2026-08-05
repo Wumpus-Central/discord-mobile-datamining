@@ -1,4 +1,3 @@
-import { 05506__ } from "../../../../_runtime/metro/05506__.js";
 // discord_common/js/packages/flash-list/index.js
 import importAllResult from "noop";
 import { RefreshControl } from "get ActivityIndicator";
@@ -7,6 +6,7 @@ import set from "set";
 import importDefaultResult from "module_4146";
 import importDefaultResult1 from "module_4146";
 import set from "jsxProd";
+import { 05506__ } from "../../../../_runtime/metro/05506__.js";
 
 const require = arg1;
 let c3 = importAllResult;

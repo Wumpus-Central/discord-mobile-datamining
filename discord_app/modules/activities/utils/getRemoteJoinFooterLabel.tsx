@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/activities/utils/getRemoteJoinFooterLabel.tsx
 import { ActivityGamePlatforms } from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");
 

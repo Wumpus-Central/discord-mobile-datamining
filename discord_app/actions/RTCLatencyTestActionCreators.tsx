@@ -1,6 +1,6 @@
+// discord_app/actions/RTCLatencyTestActionCreators.tsx
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
-// discord_app/actions/RTCLatencyTestActionCreators.tsx
 const result = require("set").fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
 
 export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(arg0) {

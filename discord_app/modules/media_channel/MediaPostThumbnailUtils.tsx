@@ -1,5 +1,5 @@
-import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
 // discord_app/modules/media_channel/MediaPostThumbnailUtils.tsx
+import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
 const result = require("set").fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;

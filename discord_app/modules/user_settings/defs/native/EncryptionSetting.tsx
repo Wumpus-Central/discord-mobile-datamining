@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/EncryptionSetting.tsx
+import items from "items";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useSecureFramesVerifiedUserIds } from "../../../rtc/hooks/useSecureFramesVerifiedUsers.tsx";
 import { UserListItem } from "../../privacy_and_safety/native/SettingsSecureFramesScreen.tsx";
-// discord_app/modules/user_settings/defs/native/EncryptionSetting.tsx
-import items from "items";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

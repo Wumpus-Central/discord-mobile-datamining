@@ -1,5 +1,3 @@
-import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { FacepileGroupDMAvatar } from "../../../../../../group_dm/native/GroupDMAvatar.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import fetchFingerprint from "fetchFingerprint";
@@ -10,6 +8,8 @@ import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { FacepileGroupDMAvatar } from "../../../../../../group_dm/native/GroupDMAvatar.tsx";
 
 const require = arg1;
 let closure_10 = createCacheKey.createStyles((arg0) => {

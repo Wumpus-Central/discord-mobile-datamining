@@ -1,9 +1,9 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { trackExposureToExperiment } from "../modules/experiments/ExperimentManager.tsx";
 // discord_app/utils/ExperimentUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import ExperimentBuckets from "ExperimentBuckets";
+import { apply } from "../../_runtime/00012_apply.js";
+import { trackExposureToExperiment } from "../modules/experiments/ExperimentManager.tsx";
 
 let c5;
 let closure_6;

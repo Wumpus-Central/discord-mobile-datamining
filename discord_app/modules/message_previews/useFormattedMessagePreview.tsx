@@ -1,3 +1,8 @@
+// discord_app/modules/message_previews/useFormattedMessagePreview.tsx
+import fetchFingerprint from "fetchFingerprint";
+import upsertRelationship from "upsertRelationship";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { MessageFlags } from "ME";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
@@ -5,11 +10,6 @@ import { getSystemMessageUserJoinMobile } from "../../utils/SystemMessageUtils.t
 import { useIsCallActive } from "../calls/mobile/useIsCallActive.tsx";
 import { isForwardMessage } from "../forwarding/isForwardMessage.tsx";
 import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
-// discord_app/modules/message_previews/useFormattedMessagePreview.tsx
-import fetchFingerprint from "fetchFingerprint";
-import upsertRelationship from "upsertRelationship";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageFlags } from "ME";
 
 const require = arg1;
 function formatMessagePreview(type, isBlocked) {

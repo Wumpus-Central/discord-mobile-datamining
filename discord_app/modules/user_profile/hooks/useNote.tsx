@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_profile/hooks/useNote.tsx
 import dispatcher from "dispatcher";
 import noop from "noop";
 import getNote from "getNote";
 import { Endpoints } from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function _fetchNote() {

@@ -1,6 +1,6 @@
+// discord_app/utils/SecondsSliderUtils.tsx
 import { t } from "../../_runtime/03867_t.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
-// discord_app/utils/SecondsSliderUtils.tsx
 const result = require("set").fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 
 export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPerUser, arg1, intl) {

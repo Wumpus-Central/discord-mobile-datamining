@@ -1,4 +1,3 @@
-import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/GuildBasicChannels.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -12,6 +11,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import hasChannel from "hasChannel";
 import set from "_handleConnectionOpen";
+import { items } from "../DatabaseDaos.tsx";
 
 function hasBasicChannelChanged(basicChannel, nextResult) {
   let tmp = null == basicChannel || basicChannel.type !== nextResult.type || basicChannel.parent_id !== nextResult.parent_id;

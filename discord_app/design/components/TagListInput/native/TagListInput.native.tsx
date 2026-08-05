@@ -1,5 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/TagListInput/native/TagListInput.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "BottomSheetModal";
@@ -7,6 +5,8 @@ import get_ActivityIndicator from "useBottomSheetKeyboardHandling";
 import jsxProd from "VoidTextInput";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 
 let c5;
 let c9;

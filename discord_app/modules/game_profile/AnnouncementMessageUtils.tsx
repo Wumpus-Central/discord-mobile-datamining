@@ -1,7 +1,7 @@
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
-import { formatExpirationLabel } from "../polls/chat/useFormattedExpirationLabel.tsx";
 // discord_app/modules/game_profile/AnnouncementMessageUtils.tsx
 import { isMessageComponentsV2 } from "hasFlag";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import { formatExpirationLabel } from "../polls/chat/useFormattedExpirationLabel.tsx";
 
 const re4 = /^#{1,3}\s+(.+)$/;
 const re5 = /^https?:\/\/\S+$/;

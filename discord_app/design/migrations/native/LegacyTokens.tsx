@@ -1,6 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { hexToRgba } from "../../../utils/ColorUtils.tsx";
-import { AccessibilityAnnouncer } from "../../shared.tsx";
 // discord_app/design/migrations/native/LegacyTokens.tsx
 import { Platform } from "get ActivityIndicator";
 import createCacheKey from "createCacheKey";
@@ -63,6 +60,9 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { AccessibilityAnnouncer } from "../../shared.tsx";
 
 const result = createCacheKey.experimental_createToken((theme) => {
   const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;

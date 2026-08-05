@@ -1,7 +1,7 @@
-import { getApplicationFlags } from "utils/ApplicationFlagUtils.tsx";
 // discord_app/modules/applications/useIsSocialLayerParentApplication.tsx
 import noop from "noop";
 import { ApplicationFlags } from "ME";
+import { getApplicationFlags } from "utils/ApplicationFlagUtils.tsx";
 
 const require = arg1;
 const result = require("getApplicationFlags").fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");

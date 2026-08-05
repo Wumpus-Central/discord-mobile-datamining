@@ -1,3 +1,9 @@
+// discord_app/modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteActionSheet.tsx
+import _slicedToArray from "_slicedToArray";
+import set from "set";
+import { View } from "SearchField";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/12405_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/12406_registerAsset.js";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -7,12 +13,6 @@ import { SearchField } from "../../../../../design/components/TextField/native/S
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { isGuildMember } from "../../../../../utils/InstantInviteUtils.tsx";
-// discord_app/modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import { View } from "SearchField";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

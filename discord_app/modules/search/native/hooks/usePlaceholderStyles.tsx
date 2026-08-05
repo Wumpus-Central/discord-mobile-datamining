@@ -1,11 +1,11 @@
+// discord_app/modules/search/native/hooks/usePlaceholderStyles.tsx
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-// discord_app/modules/search/native/hooks/usePlaceholderStyles.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes";
 
 const require = arg1;
 let closure_5 = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };

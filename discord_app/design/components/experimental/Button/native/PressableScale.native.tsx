@@ -1,10 +1,10 @@
-import { ReanimatedRexport } from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
-import { styleProperties } from "../../../Button/native/ButtonHooks.native.tsx";
 // discord_app/design/components/experimental/Button/native/PressableScale.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 import importDefaultResult from "module_4146";
+import { ReanimatedRexport } from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { styleProperties } from "../../../Button/native/ButtonHooks.native.tsx";
 
 const require = arg1;
 let closure_2 = ["style"];

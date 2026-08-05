@@ -1,9 +1,9 @@
+// discord_app/modules/recent_avatars/RecentAvatarUtils.tsx
+import { Endpoints } from "ME";
 import { parse } from "../../../_runtime/01464_parse.js";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 import { AssetOriginTypes } from "RecentAvatarsTypes.tsx";
-// discord_app/modules/recent_avatars/RecentAvatarUtils.tsx
-import { Endpoints } from "ME";
 
 function getArchivedAvatarURL(allowWebp) {
   let avatarId;

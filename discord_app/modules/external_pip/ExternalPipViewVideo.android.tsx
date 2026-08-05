@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useExternalPipParticipant } from "useExternalPipParticipant.android.tsx";
 // discord_app/modules/external_pip/ExternalPipViewVideo.android.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useExternalPipParticipant";
@@ -9,6 +7,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ParticipantTypes } from "ParticipantTypes";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useExternalPipParticipant } from "useExternalPipParticipant.android.tsx";
 
 let StyleSheet;
 let c5;

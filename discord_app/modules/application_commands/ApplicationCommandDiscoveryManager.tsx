@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/application_commands/ApplicationCommandDiscoveryManager.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const obj = keys.create(() => ({ initialSectionId: "r" }));
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");

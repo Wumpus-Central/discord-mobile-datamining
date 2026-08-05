@@ -1,6 +1,3 @@
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { GuildSelectDefaultIcon } from "SettingRenderer.tsx";
 // discord_app/modules/settings/native/renderer/SettingListRenderer.tsx
 import importAllResult from "set";
 import { View } from "SettingSearchBar";
@@ -9,6 +6,9 @@ import closure_6 from "zustandStore";
 import { ListItemType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { GuildSelectDefaultIcon } from "SettingRenderer.tsx";
 
 const require = arg1;
 function SearchListSectionLabel(label) {

@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { componentDidMount } from "../common/Alert.tsx";
 // discord_app/components_native/warnings/VADPermission.tsx
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { componentDidMount } from "../common/Alert.tsx";
 
 const require = arg1;
 class VADPermission extends Component {

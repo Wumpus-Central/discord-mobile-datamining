@@ -1,6 +1,6 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/video_calls/native/VoiceCallOverlayUtils.tsx
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const MIN_MARGIN_BETWEEN_OVERLAYS = BOX_MODE_ACTIONSHEET_WIDTH.MIN_MARGIN_BETWEEN_OVERLAYS;
 const VoiceCallOverlayType = BOX_MODE_ACTIONSHEET_WIDTH.VoiceCallOverlayType;

@@ -1,8 +1,8 @@
-import { isDiscordFrontendDevelopment } from "../../../../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx
 import noop from "noop";
 import participantFromServer from "participantFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { isDiscordFrontendDevelopment } from "../../../../../../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx");

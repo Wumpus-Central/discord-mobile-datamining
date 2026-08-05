@@ -1,10 +1,10 @@
-import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
-import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 
 let c3;
 let c4;

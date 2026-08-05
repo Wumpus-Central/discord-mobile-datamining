@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx
 import importAllResult from "openChannelLongPressActionSheet";
 import { View } from "module_4295";
@@ -11,6 +10,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ActivityTypes } from "ME";
 import jsxProd from "getChannelA11yLabel";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_12;
 let map1;

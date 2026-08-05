@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useIsNsfwGated } from "../age_gate/useIsNsfwGated.tsx";
-import { useLatestChannelMessage } from "../message_previews/useLatestChannelMessage.tsx";
 // discord_app/modules/main_tabs_v2/useMessagePreviews.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useIsNsfwGated } from "../age_gate/useIsNsfwGated.tsx";
+import { useLatestChannelMessage } from "../message_previews/useLatestChannelMessage.tsx";
 
 const require = arg1;
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");

@@ -1,12 +1,12 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import SafetyHubView from "SafetyHubView";
 import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set";
 import { jsx } from "jsxProd";
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let c4;
 let c5;

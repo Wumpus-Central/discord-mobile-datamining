@@ -1,12 +1,12 @@
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
-import { Divider } from "FormDivider.tsx";
-import { FormTitle } from "FormTitle.tsx";
 // discord_app/design/void/Form/native/FormSection.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { TitleStyleType } from "semanticColor";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import { Divider } from "FormDivider.tsx";
+import { FormTitle } from "FormTitle.tsx";
 
 let Platform;
 let StyleSheet;

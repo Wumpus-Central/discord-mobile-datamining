@@ -1,14 +1,14 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { MINIMUM_HIT_AREA } from "../../../design/components/Button/native/ButtonConstants.native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/chat_input/native/GiftIconTrinketsAnimation.tsx
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { MINIMUM_HIT_AREA } from "../../../design/components/Button/native/ButtonConstants.native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {

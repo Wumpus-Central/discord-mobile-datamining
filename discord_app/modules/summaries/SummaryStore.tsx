@@ -1,6 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { canSeeChannelSummaries } from "../../experiments/ChannelSummariesExperiment.tsx";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/summaries/SummaryStore.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
@@ -13,6 +10,9 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SUMMARY_POLL_INTERVAL } from "result";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { canSeeChannelSummaries } from "../../experiments/ChannelSummariesExperiment.tsx";
+import { set } from "../../utils/Durations.tsx";
 
 const require = arg1;
 function handleQuickSwitcherUpdate() {

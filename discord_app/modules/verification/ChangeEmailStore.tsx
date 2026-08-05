@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/verification/ChangeEmailStore.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = { errors: null, emailToken: null };
 let obj = keys.create(() => closure_2);

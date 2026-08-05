@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { expandEventProperties } from "AnalyticsUtils.tsx";
 // discord_app/utils/StreamQualityUtils.tsx
 import noop from "noop";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
@@ -11,6 +9,8 @@ import { AnalyticEvents } from "ME";
 import RESOLUTION_720 from "RESOLUTION_720";
 import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures";
 import { ResolutionTypes } from "DesktopSources";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { expandEventProperties } from "AnalyticsUtils.tsx";
 
 let c10;
 let closure_12;

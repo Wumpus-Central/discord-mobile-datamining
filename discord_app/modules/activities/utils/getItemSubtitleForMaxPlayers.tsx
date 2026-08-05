@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/activities/utils/getItemSubtitleForMaxPlayers.tsx
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
 
 export default function getItemSubtitleForMaxPlayers(arg0) {

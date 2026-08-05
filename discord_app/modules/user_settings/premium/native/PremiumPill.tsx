@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumPill.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {

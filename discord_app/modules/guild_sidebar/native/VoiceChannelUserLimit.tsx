@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../_runtime/12963_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceChannelUserLimit.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { registerAsset } from "../../../../_runtime/12963_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
 
 let c4;
 let c5;

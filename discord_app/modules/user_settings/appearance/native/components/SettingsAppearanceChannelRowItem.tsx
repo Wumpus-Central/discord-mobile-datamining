@@ -1,5 +1,3 @@
-import { Button } from "../../../../../design/void/native.tsx";
-import { FacepileGroupDMAvatar } from "../../../../group_dm/native/GroupDMAvatar.tsx";
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelRowItem.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import { StatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
+import { Button } from "../../../../../design/void/native.tsx";
+import { FacepileGroupDMAvatar } from "../../../../group_dm/native/GroupDMAvatar.tsx";
 
 let c4;
 let c5;

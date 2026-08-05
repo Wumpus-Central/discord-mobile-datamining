@@ -1,14 +1,14 @@
+// discord_app/modules/application_commands/CommandPermissionUtils.tsx
+import { ChannelRecordBase } from "createChannelRecord";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { BuiltInSectionId } from "TRUE_OPTION_NAME";
+import { Permissions } from "ME";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { ApplicationIntegrationType } from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 import { commandPermissions } from "../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx";
 import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
 import { buildCommand } from "ApplicationCommandUtils.tsx";
 import { computePermissions } from "CommandPermissionContext.tsx";
-// discord_app/modules/application_commands/CommandPermissionUtils.tsx
-import { ChannelRecordBase } from "createChannelRecord";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import { Permissions } from "ME";
 
 function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImpersonating) {
   if (null == permissions) {

@@ -1,4 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncSuggestions.tsx
 import _slicedToArray from "_slicedToArray";
 import Form from "Form";
@@ -7,6 +6,7 @@ import { AnalyticEvents } from "ME";
 import { SuggestedFriendSource } from "SuggestedFriendSource";
 import jsxProd from "LinearGradient";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c10;
 let c9;

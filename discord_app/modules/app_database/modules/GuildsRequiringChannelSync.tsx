@@ -1,5 +1,3 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/GuildsRequiringChannelSync.tsx
 import createChannelRecord from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
@@ -12,6 +10,8 @@ import ME from "ME";
 import { ChannelFlags } from "set";
 import { Permissions } from "sum";
 import importAllResult from "fromString";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { items } from "../DatabaseDaos.tsx";
 
 let c4;
 let c5;

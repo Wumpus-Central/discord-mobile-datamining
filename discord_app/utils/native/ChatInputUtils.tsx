@@ -1,7 +1,7 @@
+// discord_app/utils/native/ChatInputUtils.tsx
 import { KeyboardTypes } from "../../modules/keyboard/native/KeyboardTypes.tsx";
 import { zustandStore } from "../../modules/keyboard/native/PortalKeyboardUIStore.native.tsx";
 import { dismissGlobalKeyboard } from "KeyboardManagerUtils.tsx";
-// discord_app/utils/native/ChatInputUtils.tsx
 function getBestActiveInput() {
   let str;
   if (0 !== map1.size) {

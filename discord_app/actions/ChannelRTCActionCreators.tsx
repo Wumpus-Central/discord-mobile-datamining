@@ -1,9 +1,9 @@
+// discord_app/actions/ChannelRTCActionCreators.tsx
+import ME from "ME";
 import { dispatcher } from "../Dispatcher.tsx";
 import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
-// discord_app/actions/ChannelRTCActionCreators.tsx
-import ME from "ME";
 
 let c3;
 let c4;

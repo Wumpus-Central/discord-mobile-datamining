@@ -1,10 +1,10 @@
-import { usePrivateChannelWaveEligible } from "usePrivateChannelWaveEligible.tsx";
 // discord_app/modules/channel/usePrivateChannelWave.native.tsx
 import getDmHasMessageHistory from "getDmHasMessageHistory";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ME from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { usePrivateChannelWaveEligible } from "usePrivateChannelWaveEligible.tsx";
 
 let closure_6;
 let error;

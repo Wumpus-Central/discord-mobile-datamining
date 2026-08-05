@@ -1,7 +1,7 @@
-import { CollectiblesShopViewAllCategoryItems } from "../../../collectibles/native/CollectiblesShopViewAllCategoryItems.tsx";
 // discord_app/modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { CollectiblesShopViewAllCategoryItems } from "../../../collectibles/native/CollectiblesShopViewAllCategoryItems.tsx";
 
 const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx");

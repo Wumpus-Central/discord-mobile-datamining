@@ -1,6 +1,6 @@
-import { apexExperiment } from "ClipsExperiment.tsx";
 // discord_app/modules/clips/isClientClipsCapable.tsx
 import { Features } from "DesktopSources";
+import { apexExperiment } from "ClipsExperiment.tsx";
 
 const result = require("set").fileFinishedImporting("modules/clips/isClientClipsCapable.tsx");
 

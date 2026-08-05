@@ -1,12 +1,3 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { ModalFooter } from "../../../design/components/Modal/native/ModalFooter.native.tsx";
-import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/native/FamilyCenterModalRequest.tsx
 import closure_3 from "jsxProd";
 import messagesProxy from "messagesProxy";
@@ -21,6 +12,15 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import HeaderBackImage from "HeaderBackImage";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { ModalFooter } from "../../../design/components/Modal/native/ModalFooter.native.tsx";
+import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
 
 let c10;
 let c5;

@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c4;
 let c5;

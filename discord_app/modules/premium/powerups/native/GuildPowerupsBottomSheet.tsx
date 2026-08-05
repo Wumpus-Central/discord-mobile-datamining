@@ -1,3 +1,10 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsBottomSheet.tsx
+import { View } from "useGuildPowerupLevelPerks";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import BoostedGuildTiers from "BoostedGuildTiers";
+import { GAME_SERVER_POWERUP_SKU_ID as closure_7 } from "str11";
+import jsxProd from "messagesProxy";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -14,13 +21,6 @@ import { usePowerupActiveStatus } from "../hooks/usePowerupActiveStatus.tsx";
 import { useCalculatePowerupCardStatus } from "../utils/useCalculatePowerupCardStatus.tsx";
 import { GuildPowerupCardFooterActive } from "GuildPowerupsCardFooter.tsx";
 import { useGuildPowerupOnActivate } from "hooks/useGuildPowerupOnActivate.tsx";
-// discord_app/modules/premium/powerups/native/GuildPowerupsBottomSheet.tsx
-import { View } from "useGuildPowerupLevelPerks";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import BoostedGuildTiers from "BoostedGuildTiers";
-import { GAME_SERVER_POWERUP_SKU_ID as closure_7 } from "str11";
-import jsxProd from "messagesProxy";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c5;

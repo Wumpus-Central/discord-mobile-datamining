@@ -1,5 +1,5 @@
-import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/modules/messages/WebViewWebmSupportTest.native.tsx
+import { set } from "../../utils/PlatformUtils.tsx";
 const ARM64_ = "ARM64_";
 const result = require("set").fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 

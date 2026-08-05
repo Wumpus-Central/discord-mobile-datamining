@@ -1,11 +1,11 @@
+// discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
+import importDefaultResult from "apply";
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { registerAsset } from "../../../../_runtime/05332_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/05652_registerAsset.js";
 import { createCacheKey } from "../../../design/components/Styles/native/createStyles.tsx";
 import { ensureAvatarSource } from "../../../utils/native/AvatarUtils.tsx";
 import { frozen } from "../../messages/native/renderer/EmbedUtils.tsx";
-// discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
-import importDefaultResult from "apply";
 
 const require = arg1;
 let closure_3 = require("apply").mapValues(require("normal").pollStyleSets, (arg0) => {

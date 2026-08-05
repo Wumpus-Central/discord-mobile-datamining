@@ -1,3 +1,10 @@
+// discord_app/modules/message_request/native/spam/SpamMessageHamActionSheet.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import { View } from "Button";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { ActionSheetCloseButton } from "../../../../design/components/Sheet/native/ActionSheetCloseButton.native.tsx";
@@ -6,13 +13,6 @@ import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/component
 import { Form } from "../../../../design/void/Form/native/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useMessageRequestActions } from "../../hooks/useMessageRequestActions.tsx";
-// discord_app/modules/message_request/native/spam/SpamMessageHamActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "Button";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let error;
 let metroImportAll;

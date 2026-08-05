@@ -1,10 +1,10 @@
-import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 // discord_app/modules/guild_rooms/GuildRoomStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";
 import { Store } from "initialize";
+import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 
 const require = arg1;
 function handleSelectedChannelStoreChange() {

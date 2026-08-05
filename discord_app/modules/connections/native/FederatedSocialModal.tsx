@@ -1,7 +1,3 @@
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 // discord_app/modules/connections/native/FederatedSocialModal.tsx
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +5,10 @@ import noop from "noop";
 import { WebBrowserType } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 
 let error;
 let metroImportAll;

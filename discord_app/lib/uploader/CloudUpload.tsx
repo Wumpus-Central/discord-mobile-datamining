@@ -1,7 +1,3 @@
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { cancel } from "Upload.tsx";
 // discord_app/lib/uploader/CloudUpload.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
@@ -12,6 +8,10 @@ import closure_9 from "handleConnectionInfoChange";
 import ME from "ME";
 import "cancel";
 import set from "_slicedToArray";
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { cancel } from "Upload.tsx";
 
 let c10;
 let unpackModuleId;

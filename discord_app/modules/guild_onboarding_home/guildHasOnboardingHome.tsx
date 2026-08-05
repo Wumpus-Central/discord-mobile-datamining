@@ -1,6 +1,6 @@
-import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 // discord_app/modules/guild_onboarding_home/guildHasOnboardingHome.tsx
 import ME from "ME";
+import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 
 let c3;
 let obj1;

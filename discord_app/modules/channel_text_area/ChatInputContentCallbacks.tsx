@@ -1,10 +1,10 @@
-import { subscribeMembers } from "../../actions/GuildSubscriptionsActionCreators.tsx";
-import { reset } from "../../lib/guild/GuildChannelSubscriptions.tsx";
-import { useMessageMaxLength } from "../messages/useMessageMaxLength.tsx";
 // discord_app/modules/channel_text_area/ChatInputContentCallbacks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getMemberListId from "getMemberListId";
+import { subscribeMembers } from "../../actions/GuildSubscriptionsActionCreators.tsx";
+import { reset } from "../../lib/guild/GuildChannelSubscriptions.tsx";
+import { useMessageMaxLength } from "../messages/useMessageMaxLength.tsx";
 
 const require = arg1;
 let c6 = "@here";

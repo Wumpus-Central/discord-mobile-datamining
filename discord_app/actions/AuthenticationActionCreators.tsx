@@ -1,10 +1,3 @@
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import { set } from "../utils/CrossPlatformNativeUtils.native.tsx";
-import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/AuthenticationActionCreators.tsx
 import closure_5 from "str2";
 import { setPromoEmailConsentState } from "setPromoEmailConsentState";
@@ -12,6 +5,13 @@ import fetchFingerprint from "fetchFingerprint";
 import hasConsented from "hasConsented";
 import ME from "ME";
 import str2 from "str2";
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import { set } from "../utils/CrossPlatformNativeUtils.native.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 
 let c10;
 let c9;

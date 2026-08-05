@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useInterestedEventUsers.tsx
 import { useMemo } from "noop";
 import scheduledEventSort from "scheduledEventSort";
 import { GuildScheduledEventUserResponses as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const result = require("GUILD_EVENT_MAX_NAME_LENGTH").fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");
 

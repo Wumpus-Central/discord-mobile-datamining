@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_antiraid/GuildReportRaidModalConstants.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const obj = { DM_SPAM: "DM_SPAM", MESSAGE_SPAM: "MESSAGE_SPAM", MENTION_SPAM: "MENTION_SPAM", SUSPICIOUS_USERS: "SUSPICIOUS_USERS", SETTINGS_SPAM: "SETTINGS_SPAM" };
 const items = [, , , , ];
 ({ MESSAGE_SPAM: arr[0], DM_SPAM: arr[1], MENTION_SPAM: arr[2], SUSPICIOUS_USERS: arr[3], SETTINGS_SPAM: arr[4] } = obj);

@@ -1,13 +1,13 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { PencilIcon } from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
-import { UserProfileBanner } from "UserProfileBanner.tsx";
 // discord_app/modules/user_profile/native/UserProfileEditBannerButton.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PencilIcon } from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
+import { UserProfileBanner } from "UserProfileBanner.tsx";
 
 let c5;
 let closure_6;

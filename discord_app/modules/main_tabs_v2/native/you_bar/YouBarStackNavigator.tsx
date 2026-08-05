@@ -1,6 +1,3 @@
-import { ICYMINavigator } from "../../../icymi/native/navigator/ICYMINavigator.tsx";
-import { Guilds } from "../tabs/guilds/Guilds.tsx";
-import { goBack } from "../tabs/notifications/Notifications.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -9,6 +6,9 @@ import closure_7 from "handleConnectionOpen";
 import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
+import { ICYMINavigator } from "../../../icymi/native/navigator/ICYMINavigator.tsx";
+import { Guilds } from "../tabs/guilds/Guilds.tsx";
+import { goBack } from "../tabs/notifications/Notifications.tsx";
 
 let c10;
 let c4;

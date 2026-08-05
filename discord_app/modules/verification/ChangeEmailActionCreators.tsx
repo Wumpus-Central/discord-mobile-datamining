@@ -1,8 +1,8 @@
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 // discord_app/modules/verification/ChangeEmailActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 
 const require = arg1;
 function _confirmEmailChange() {

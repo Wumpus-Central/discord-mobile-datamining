@@ -1,7 +1,7 @@
-import { v1 } from "../../../_runtime/00514_v1.js";
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
+import { v1 } from "../../../_runtime/00514_v1.js";
 
 const require = arg1;
 function _createHandoffToken() {

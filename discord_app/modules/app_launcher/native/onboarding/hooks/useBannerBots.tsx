@@ -1,9 +1,9 @@
-import { useApplicationsInContext } from "../../../utils/AppLauncherSearchUtils.tsx";
-import { useActivityApplications } from "useActivityApplications.tsx";
 // discord_app/modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import initialize from "initialize";
+import { useApplicationsInContext } from "../../../utils/AppLauncherSearchUtils.tsx";
+import { useActivityApplications } from "useActivityApplications.tsx";
 
 const require = arg1;
 let result = require("initialize").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx");

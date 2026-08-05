@@ -1,6 +1,6 @@
+// discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx
 const TWO_FA_SETUP_MODAL_KEY = "TWO_FA_SETUP_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx");
 

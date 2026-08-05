@@ -1,5 +1,5 @@
-import { parseAvatarDecorationData } from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 // discord_app/modules/rpc/helpers/transformGuildMember.tsx
+import { parseAvatarDecorationData } from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");
 
 export default function transformGuildMember(userId) {

@@ -1,5 +1,3 @@
-import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
-import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 // discord_app/modules/notification_center/NotificationCenterItemsStore.tsx
 import getHash from "getHash";
 import { isGuildEventEnded } from "scheduledEventSort";
@@ -9,6 +7,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { RelationshipTypes } from "ME";
 import { PersistedStore } from "initialize";
 import set from "hasFlag";
+import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
+import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 
 const require = arg1;
 function _validate(id) {

@@ -1,5 +1,3 @@
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { ActionComponentState } from "InteractionComponentTypes.tsx";
 // discord_app/modules/interaction_components/ComponentStateContext.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useMountLayoutEffect";
@@ -11,6 +9,8 @@ import recomputeGuild from "recomputeGuild";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getInteractionComponentStates from "getInteractionComponentStates";
 import { jsx } from "set";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { ActionComponentState } from "InteractionComponentTypes.tsx";
 
 const require = arg1;
 function isInteractionComponent(type) {

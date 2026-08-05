@@ -1,6 +1,6 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_profile/hooks/useIsUserProfileObfuscated.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");

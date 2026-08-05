@@ -1,3 +1,10 @@
+// discord_app/modules/contact_sync/native/ContactSyncUtils.tsx
+import closure_3 from "ME";
+import { NativeModules } from "module_4490";
+import set from "set";
+import setStoredContacts from "setStoredContacts";
+import ContactSyncLandingPage from "ContactSyncLandingPage";
+import ME from "ME";
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -9,13 +16,6 @@ import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
 import { TrackedHTTPUtils } from "../../../utils/TrackedHTTPUtils.tsx";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 import { _requestAndSyncContacts } from "ContactSyncManager.tsx";
-// discord_app/modules/contact_sync/native/ContactSyncUtils.tsx
-import closure_3 from "ME";
-import { NativeModules } from "module_4490";
-import set from "set";
-import setStoredContacts from "setStoredContacts";
-import ContactSyncLandingPage from "ContactSyncLandingPage";
-import ME from "ME";
 
 let c10;
 let c9;

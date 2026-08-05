@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx
 import ActionSheetHeaderBar from "ActionSheetHeaderBar";
 import { View } from "Background";
@@ -7,6 +6,7 @@ import ME from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c9;

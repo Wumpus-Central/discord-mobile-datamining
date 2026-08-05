@@ -1,4 +1,3 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelAnimatedActivityCard.tsx
 import ActivityItemEmptyCard from "ActivityItemEmptyCard";
 import importAllResult from "context";
@@ -11,6 +10,7 @@ import { ThemeTypes } from "ME";
 import items3 from "items3";
 import jsxProd from "useAnalyticsContext";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 
 let c9;
 let closure_12;

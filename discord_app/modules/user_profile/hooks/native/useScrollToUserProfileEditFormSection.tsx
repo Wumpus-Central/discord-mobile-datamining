@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx
 import noop from "noop";
 import { findNodeHandle } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import zustandStore from "zustandStore";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");

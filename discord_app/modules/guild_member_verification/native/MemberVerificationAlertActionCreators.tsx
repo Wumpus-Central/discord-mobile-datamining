@@ -1,7 +1,7 @@
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 
 const require = arg1;
 let result = require("dismissGlobalKeyboard").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx");

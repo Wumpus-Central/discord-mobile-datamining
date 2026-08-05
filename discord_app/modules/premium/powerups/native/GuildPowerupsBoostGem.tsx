@@ -1,8 +1,8 @@
-import { BoostGem } from "images/BoostGem.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostGem.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { BoostGem } from "images/BoostGem.tsx";
 
 let obj = { boostGemContainer: null };
 obj = { width: 100, height: 100, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SECONDARY_ALT, alignItems: "center", justifyContent: "center", alignSelf: "center" };

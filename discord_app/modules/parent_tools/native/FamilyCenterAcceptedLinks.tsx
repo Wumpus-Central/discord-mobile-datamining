@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../_runtime/14073_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
-import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
-import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
-import { FamilyCenterLinkRow } from "FamilyCenterLinkRow.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterAcceptedLinks.tsx
 import "registerAsset";
 import { View } from "asyncRequireImpl";
@@ -12,6 +5,13 @@ import items from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/14073_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
+import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
+import { FamilyCenterLinkRow } from "FamilyCenterLinkRow.tsx";
 
 let c4;
 let c5;

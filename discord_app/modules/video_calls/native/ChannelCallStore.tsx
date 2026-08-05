@@ -1,9 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
-import { useSelectedParticipant } from "../useSelectedParticipant.tsx";
-import { areParticipantStatesEqual } from "useIsPrivateAudioOnlyCall.tsx";
 // discord_app/modules/video_calls/native/ChannelCallStore.tsx
 import noop from "noop";
 import participantFromServer from "participantFromServer";
@@ -12,6 +6,12 @@ import { OrientationLockState } from "items3";
 import { ParticipantTypes } from "ParticipantTypes";
 import keys from "keys";
 import importDefaultResult from "areParticipantStatesEqual";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
+import { useSelectedParticipant } from "../useSelectedParticipant.tsx";
+import { areParticipantStatesEqual } from "useIsPrivateAudioOnlyCall.tsx";
 
 let VoiceCallOverlayType;
 let VoiceChatDrawerState;

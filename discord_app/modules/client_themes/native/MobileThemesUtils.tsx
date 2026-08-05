@@ -1,14 +1,14 @@
+// discord_app/modules/client_themes/native/MobileThemesUtils.tsx
+import handleThemeChange from "handleThemeChange";
+import validateSavedTheme from "validateSavedTheme";
+import reset from "reset";
+import items1 from "items1";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { ClientThemeType } from "../ClientThemesTypes.tsx";
 import { messagesProxy } from "../intl/ClientThemes.messages.js";
 import { useCustomThemeDisplaySettings } from "useCustomThemeDisplaySettings.tsx";
-// discord_app/modules/client_themes/native/MobileThemesUtils.tsx
-import handleThemeChange from "handleThemeChange";
-import validateSavedTheme from "validateSavedTheme";
-import reset from "reset";
-import items1 from "items1";
 
 let closure_6;
 let error;

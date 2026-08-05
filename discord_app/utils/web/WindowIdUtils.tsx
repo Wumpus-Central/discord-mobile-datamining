@@ -1,5 +1,5 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/utils/web/WindowIdUtils.tsx
+import { apply } from "../../../_runtime/00012_apply.js";
 const result = require("set").fileFinishedImporting("utils/web/WindowIdUtils.tsx");
 
 export const getWindowId = function getWindowId(defaultView) {

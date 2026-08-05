@@ -1,5 +1,3 @@
-import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
-import { useInitialValue } from "../hooks/useInitialValue.tsx";
 // discord_app/components_native/CreateChannelModal.tsx
 import Form from "Form";
 import AnnouncementsIcon from "AnnouncementsIcon";
@@ -15,6 +13,8 @@ import ME from "ME";
 import { RowType } from "RowType";
 import jsxProd from "TextLockIcon";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
+import { useInitialValue } from "../hooks/useInitialValue.tsx";
 
 let c5;
 let closure_16;

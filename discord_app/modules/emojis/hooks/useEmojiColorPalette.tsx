@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { buildPlatformedThemedEmojiColorPalette } from "../utils/EmojiColorUtils.tsx";
 // discord_app/modules/emojis/hooks/useEmojiColorPalette.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import handleThemeChange from "handleThemeChange";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { buildPlatformedThemedEmojiColorPalette } from "../utils/EmojiColorUtils.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");

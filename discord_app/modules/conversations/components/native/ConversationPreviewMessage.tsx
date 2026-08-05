@@ -1,4 +1,3 @@
-import { MediaGalleryItemType } from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
 // discord_app/modules/conversations/components/native/ConversationPreviewMessage.tsx
 import noop from "noop";
 import { View } from "set";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { MediaGalleryItemType } from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
 
 let error;
 let metroImportAll;

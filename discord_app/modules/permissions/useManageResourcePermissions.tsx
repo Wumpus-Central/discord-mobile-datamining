@@ -1,4 +1,3 @@
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/permissions/useManageResourcePermissions.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import VIEW_CHANNEL from "VIEW_CHANNEL";
 import { Permissions } from "sum";
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 
 let c9;
 let error;

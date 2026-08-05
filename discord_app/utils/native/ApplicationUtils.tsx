@@ -1,10 +1,10 @@
+// discord_app/utils/native/ApplicationUtils.tsx
+import { AnalyticEvents } from "ME";
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY";
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { expandEventProperties } from "../AnalyticsUtils.tsx";
-// discord_app/utils/native/ApplicationUtils.tsx
-import { AnalyticEvents } from "ME";
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY";
 
 const result = require("expandEventProperties").fileFinishedImporting("utils/native/ApplicationUtils.tsx");
 

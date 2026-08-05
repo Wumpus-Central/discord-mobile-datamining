@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../_runtime/16507_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16508_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16509_registerAsset.js";
-import { ChatIcon } from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
-import { RobotIcon } from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/guild_moderation/native/AuditLogActionIcon.tsx
 import "StickerIcon";
 import { View } from "CalendarIcon";
@@ -11,6 +5,12 @@ import getTargetType from "getTargetType";
 import ME from "ME";
 import jsxProd from "SoundboardIcon";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/16507_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16508_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16509_registerAsset.js";
+import { ChatIcon } from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import { RobotIcon } from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import { Button } from "../../../design/void/native.tsx";
 
 let ALL;
 let APPLICATION_COMMAND;

@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { sortKey } from "../calls/ChannelRTCParticipants.tsx";
 // discord_app/modules/activities/useIsActivityFocused.tsx
 import getParticipants from "getParticipants";
 import participantFromServer from "participantFromServer";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { sortKey } from "../calls/ChannelRTCParticipants.tsx";
 
 const require = arg1;
 const result = require("sortKey").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");

@@ -1,5 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx
 import importAllResult from "noop";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
@@ -8,6 +6,8 @@ import handleThemeChange from "handleThemeChange";
 import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 let error;
 let metroImportAll;

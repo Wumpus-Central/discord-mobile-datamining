@@ -1,8 +1,8 @@
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import { getEmoji } from "GuildProfileBuilders.tsx";
 // discord_app/modules/guild_profile/GuildProfileStore.tsx
 import { ChannelTypes } from "ME";
 import { Store } from "initialize";
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { getEmoji } from "GuildProfileBuilders.tsx";
 
 function handleUpdateStart(guildId) {
   guildId = guildId.guildId;

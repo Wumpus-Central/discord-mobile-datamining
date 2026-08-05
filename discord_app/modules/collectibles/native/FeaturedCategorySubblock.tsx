@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { onChange } from "VisibilitySensor.tsx";
 // discord_app/modules/collectibles/native/FeaturedCategorySubblock.tsx
 import "NewBadge";
 import { Image } from "QUICK_SWITCHER";
@@ -8,6 +6,8 @@ import { CollectiblesMobileShopScreen as closure_5 } from "items";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { onChange } from "VisibilitySensor.tsx";
 
 let c9;
 let closure_6;

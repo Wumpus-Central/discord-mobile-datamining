@@ -1,11 +1,11 @@
-import { StarIcon } from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
-import { StarOutlineIcon } from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
 import _slicedToArray from "_slicedToArray";
 import StarIcon from "StarIcon";
 import { jsx } from "jsxProd";
+import { StarIcon } from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import { StarOutlineIcon } from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 
 const require = arg1;
 function _addChannelToFavorites() {

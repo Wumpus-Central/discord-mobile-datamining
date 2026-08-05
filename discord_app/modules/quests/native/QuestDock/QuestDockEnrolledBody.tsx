@@ -1,8 +1,3 @@
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
-import { QuestBottomSheet } from "../QuestBottomSheet/QuestBottomSheet.tsx";
-import { useQuestRewardClaimHandler } from "../QuestBottomSheet/QuestBottomSheetFooter.tsx";
-import { QuestBottomSheetHeader } from "../QuestBottomSheet/QuestBottomSheetHeader.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockEnrolledBody.tsx
 import closure_3 from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import importAllResult from "useSafeAreaInsets";
@@ -12,6 +7,11 @@ import QuestsExperimentLocations from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
+import { QuestBottomSheet } from "../QuestBottomSheet/QuestBottomSheet.tsx";
+import { useQuestRewardClaimHandler } from "../QuestBottomSheet/QuestBottomSheetFooter.tsx";
+import { QuestBottomSheetHeader } from "../QuestBottomSheet/QuestBottomSheetHeader.tsx";
 
 let QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP;
 let QUEST_DOCK_EXPANDED_PADDING_BOTTOM;

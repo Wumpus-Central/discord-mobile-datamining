@@ -1,13 +1,13 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import { DevToolsScreens } from "../DevToolsScreens.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { DevToolsScreens } from "../DevToolsScreens.tsx";
 
 const require = arg1;
 let obj = { container: null };

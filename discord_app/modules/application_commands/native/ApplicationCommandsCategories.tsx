@@ -1,4 +1,3 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandsCategories.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "AccessibilityAnnouncer";
@@ -7,6 +6,7 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import ICON_SIZE from "ICON_SIZE";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../components_native/common/FastImage.tsx";
 
 let ICON_SIZE;
 let NODE_MARGIN;

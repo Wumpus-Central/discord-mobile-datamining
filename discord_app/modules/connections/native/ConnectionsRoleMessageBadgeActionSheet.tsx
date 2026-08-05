@@ -1,7 +1,3 @@
-import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { officialApplicationIds } from "../ConnectionsUtils.tsx";
 // discord_app/modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import apply from "apply";
@@ -16,6 +12,10 @@ import { OperatorTypes } from "OperatorTypes";
 import ME from "ME";
 import jsxProd from "getPlatformUserUrl";
 import createCacheKey from "createCacheKey";
+import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { officialApplicationIds } from "../ConnectionsUtils.tsx";
 
 let c5;
 let closure_14;

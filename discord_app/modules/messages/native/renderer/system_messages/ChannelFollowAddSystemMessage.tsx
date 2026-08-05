@@ -1,8 +1,8 @@
+// discord_app/modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx");
 
 export const createChannelFollowAddSystemMessage = function createChannelFollowAddSystemMessage(roleStyle) {

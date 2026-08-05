@@ -1,3 +1,11 @@
+// discord_app/modules/applications/message_embed/native/createAppMessageEmbed.tsx
+import _slicedToArray from "_slicedToArray";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
+import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess";
+import addApplication from "addApplication";
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
+import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import { _copy } from "../../../../utils/ClipboardUtils.native.tsx";
 import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
 import { installApplication } from "../../../../utils/native/ApplicationUtils.tsx";
@@ -11,14 +19,6 @@ import { getEmbedThemeColors } from "../../../messages/native/renderer/row_data/
 import { presentAddedFriendToast } from "../../../toast/native/ToastUtils.tsx";
 import { fetchApplication } from "../../ApplicationActionCreators.tsx";
 import { _joinOrStartActivityInChannel } from "utils/joinOrStartActivityInChannel.tsx";
-// discord_app/modules/applications/message_embed/native/createAppMessageEmbed.tsx
-import _slicedToArray from "_slicedToArray";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
-import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess";
-import addApplication from "addApplication";
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 
 const require = arg1;
 let closure_10 = ["embedded_cover"];

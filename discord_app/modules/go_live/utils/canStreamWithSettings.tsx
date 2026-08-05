@@ -1,7 +1,7 @@
-import { getGoLiveAutoQualityExperimentConfig } from "../GoLiveAutoQualityExperiment.tsx";
-import { canUseStreamSetting } from "canUseStreamSetting.tsx";
 // discord_app/modules/go_live/utils/canStreamWithSettings.tsx
 import RESOLUTION_720 from "RESOLUTION_720";
+import { getGoLiveAutoQualityExperimentConfig } from "../GoLiveAutoQualityExperiment.tsx";
+import { canUseStreamSetting } from "canUseStreamSetting.tsx";
 
 let c3;
 let c4;

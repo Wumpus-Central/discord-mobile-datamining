@@ -1,7 +1,7 @@
-import { context } from "../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/user_profile/UserProfileAnalyticsContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { context } from "../app_analytics/useAnalyticsLocations.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

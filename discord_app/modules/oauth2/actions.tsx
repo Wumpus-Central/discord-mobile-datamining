@@ -1,11 +1,11 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
-import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
 // discord_app/modules/oauth2/actions.tsx
 import handleLogout from "handleLogout";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
 
 let closure_6;
 let error;

@@ -1,10 +1,10 @@
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarButton.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 
 let c5;
 let closure_6;

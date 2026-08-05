@@ -1,3 +1,6 @@
+// discord_app/modules/go_live/web/modal/GoLiveModal.messages.js
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../../_runtime/02062_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02063_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02064_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../../_runtime/02090_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02091_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/02092_registerAsset.js";
 import { loadJsonAsset } from "../../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/go_live/web/modal/GoLiveModal.messages.js
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

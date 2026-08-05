@@ -1,6 +1,6 @@
+// discord_app/modules/safe_area/useSafeAreaInsets.native.tsx
 import { context } from "../window/native/AppEntryKeyContext.tsx";
 import { SafeAreaStore.native } from "SafeAreaStore.native.tsx";
-// discord_app/modules/safe_area/useSafeAreaInsets.native.tsx
 const result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
 
 export default function useSafeAreaInsets() {

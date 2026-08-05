@@ -1,10 +1,10 @@
+// discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
+import items from "items";
+import { AnalyticEvents } from "ME";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { _fetchVerificationForm } from "../MemberVerificationActionCreators.tsx";
-// discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
-import items from "items";
-import { AnalyticEvents } from "ME";
 
 let c3;
 let c4;

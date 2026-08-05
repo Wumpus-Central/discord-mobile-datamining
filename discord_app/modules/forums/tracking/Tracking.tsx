@@ -1,9 +1,3 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { collectThreadMetadata } from "../../app_analytics/ThreadAnalyticsUtils.tsx";
-import { trackChannelOpenedClickstream } from "../../app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
-import { collectForumAnalyticsMetadata } from "TrackingUtils.tsx";
 // discord_app/modules/forums/tracking/Tracking.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleChanged from "handleChanged";
@@ -11,6 +5,12 @@ import { DraftType } from "handleChanged";
 import handleLoadThreadsSuccess from "handleLoadThreadsSuccess";
 import initialize from "initialize";
 import ME from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import { collectThreadMetadata } from "../../app_analytics/ThreadAnalyticsUtils.tsx";
+import { trackChannelOpenedClickstream } from "../../app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
+import { collectForumAnalyticsMetadata } from "TrackingUtils.tsx";
 
 let c9;
 let metroImportAll;

@@ -1,7 +1,7 @@
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerStore.tsx
 import { DM_WIDTH } from "ME";
 import identity from "identity";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;

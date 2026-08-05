@@ -1,13 +1,13 @@
-import { registerAsset } from "../../../../../../_runtime/11960_registerAsset.js";
-import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { _uploadContacts } from "../../../../contact_sync/native/ContactSyncUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsContactSyncEmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/11960_registerAsset.js";
+import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { _uploadContacts } from "../../../../contact_sync/native/ContactSyncUtils.tsx";
 
 let c3;
 let c4;

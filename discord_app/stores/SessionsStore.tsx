@@ -1,7 +1,7 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/SessionsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 function handleUpdate(sessions) {
   let closure_4 = {};

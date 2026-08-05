@@ -1,12 +1,12 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { getClass } from "../../../utils/StylesheetUtils.tsx";
 // discord_app/modules/guild/native/GuildInviteIcon.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { getClass } from "../../../utils/StylesheetUtils.tsx";
 
 const require = arg1;
 let obj = { SMALL: "small", MEDIUM: "medium", LARGE: "large" };

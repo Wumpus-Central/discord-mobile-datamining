@@ -1,8 +1,8 @@
-import { result } from "../../../../../components_native/common/MessageLoadingSpinner.tsx";
 // discord_app/modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { result } from "../../../../../components_native/common/MessageLoadingSpinner.tsx";
 
 let closure_3 = createCacheKey.createStyles({ spinner: { width: 32, height: 32 } });
 const memoResult = require("noop").memo(() => {

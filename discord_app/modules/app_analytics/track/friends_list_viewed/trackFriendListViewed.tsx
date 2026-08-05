@@ -1,8 +1,8 @@
+// discord_app/modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx
+import { AnalyticEvents } from "ME";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { isClickstreamEnabled } from "../../clickstream/Clickstream.tsx";
 import { getTrackFriendsListViewedData } from "getTrackFriendsListViewedData.native.tsx";
-// discord_app/modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx
-import { AnalyticEvents } from "ME";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
 

@@ -1,5 +1,3 @@
-import { VoiceOrStageSummaryRow } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx";
-import { useStageParticipants } from "../../../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
 // discord_app/modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate
 import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "MessageEmbedTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { VoiceOrStageSummaryRow } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx";
+import { useStageParticipants } from "../../../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
 
 const require = arg1;
 function GuildVoiceChannelSubtitle(channel) {

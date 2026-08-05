@@ -1,7 +1,7 @@
+// discord_app/modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx
 import { SettingsDefaultFeature } from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
 import { useAgeVerificationRunner } from "../../age_assurance/AgeVerificationUtils.tsx";
 import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-// discord_app/modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx
 const result = require("SettingsDefaultFeature").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 
 export const useIsMessageRequestRestrictedViewer = function useIsMessageRequestRestrictedViewer(ChatInputGuardMessageRequest) {

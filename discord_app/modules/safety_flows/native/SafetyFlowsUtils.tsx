@@ -1,3 +1,7 @@
+// discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
+import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
+import noop from "noop";
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { registerAsset } from "../../../../_runtime/09793_registerAsset.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -5,10 +9,6 @@ import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 import { SAFETY_FLOWS_MODAL_KEY } from "../constants.tsx";
 import { messagesProxy } from "../SafetyFlows.messages.js";
 import { TaskType } from "../types.tsx";
-// discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
-import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 function fetchAndUpdateTask() {

@@ -1,3 +1,8 @@
+// discord_app/modules/keyboard/native/PortalKeyboardPlaceholder.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { useGradientBottom } from "../../client_themes/native/ClientThemesOverrides.tsx";
@@ -8,11 +13,6 @@ import { KeyboardTypes } from "KeyboardTypes.tsx";
 import { useCustomKeyboardHeight } from "useCustomKeyboardHeight.tsx";
 import { useKeyboardType } from "useKeyboardType.tsx";
 import { useSystemKeyboardHeight } from "useSystemKeyboardHeight.native.tsx";
-// discord_app/modules/keyboard/native/PortalKeyboardPlaceholder.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

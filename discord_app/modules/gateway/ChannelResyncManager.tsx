@@ -1,6 +1,3 @@
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getCachedPrivateChannelObfuscation } from "PrivateChannelHidingExperiment.tsx";
 // discord_app/modules/gateway/ChannelResyncManager.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
@@ -12,6 +9,9 @@ import { AnalyticEvents } from "ME";
 import { ChannelFlags } from "set";
 import "initialize";
 import set from "ensureGuildLoaded";
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getCachedPrivateChannelObfuscation } from "PrivateChannelHidingExperiment.tsx";
 
 const require = arg1;
 function handleGuildCreate(guild) {

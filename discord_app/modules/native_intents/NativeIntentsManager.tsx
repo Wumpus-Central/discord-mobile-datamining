@@ -1,8 +1,3 @@
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { getChannelIconURL } from "../channel/getChannelIcon.tsx";
-import { computeChannelName } from "../channel/useChannelName.tsx";
-import { set } from "IntentsBindings.android.tsx";
-import { experiment } from "NativeIntentsExperiment.tsx";
 // discord_app/modules/native_intents/NativeIntentsManager.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -13,6 +8,11 @@ import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import "initialize";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { getChannelIconURL } from "../channel/getChannelIcon.tsx";
+import { computeChannelName } from "../channel/useChannelName.tsx";
+import { set } from "IntentsBindings.android.tsx";
+import { experiment } from "NativeIntentsExperiment.tsx";
 
 let c10;
 let closure_12;

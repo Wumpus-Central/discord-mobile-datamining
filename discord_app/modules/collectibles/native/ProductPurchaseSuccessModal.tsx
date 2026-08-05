@@ -1,7 +1,3 @@
-import { Background } from "../../../../_runtime/05245_Background.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/collectibles/native/ProductPurchaseSuccessModal.tsx
 import BalanceWidgetPill from "BalanceWidgetPill";
 import _toArray from "_toArray";
@@ -12,6 +8,10 @@ import ME from "ME";
 import jsxProd from "LinearGradient";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../../../_runtime/05245_Background.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let closure_12;

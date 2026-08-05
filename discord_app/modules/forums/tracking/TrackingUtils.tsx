@@ -1,7 +1,3 @@
-import { set } from "../../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { setFilterTagIds } from "ForumChannelAnalyticsManager.tsx";
-import { getForumChannelSessionId } from "ForumSessionAnalyticsManager.tsx";
 // discord_app/modules/forums/tracking/TrackingUtils.tsx
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import storeThread from "storeThread";
@@ -16,6 +12,10 @@ import handleLoadThreadsSuccess from "handleLoadThreadsSuccess";
 import { Permissions } from "ME";
 import { ChannelFlags } from "set";
 import { ThreadSortOrderReadableForAnalytics as closure_15 } from "AbortCodes";
+import { set } from "../../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { setFilterTagIds } from "ForumChannelAnalyticsManager.tsx";
+import { getForumChannelSessionId } from "ForumSessionAnalyticsManager.tsx";
 
 const require = arg1;
 function collectForumAnalyticsMetadata(sessionId) {

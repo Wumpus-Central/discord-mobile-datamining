@@ -1,7 +1,3 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { _isStreaming } from "../../../../activities/utils/isStreaming.tsx";
-import { computeChannelName } from "../../../../channel/useChannelName.tsx";
-import { HAPPENING_NOW_CARD_MARGIN_RIGHT } from "HappeningNowCard.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -9,6 +5,10 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import { ActivityTypes } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { _isStreaming } from "../../../../activities/utils/isStreaming.tsx";
+import { computeChannelName } from "../../../../channel/useChannelName.tsx";
+import { HAPPENING_NOW_CARD_MARGIN_RIGHT } from "HappeningNowCard.tsx";
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });

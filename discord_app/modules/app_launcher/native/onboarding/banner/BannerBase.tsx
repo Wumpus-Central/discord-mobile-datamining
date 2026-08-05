@@ -1,8 +1,3 @@
-import { 11361__ } from "../../../../../../_runtime/metro/11361__.js";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
-import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/BannerBase.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +5,11 @@ import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { 11361__ } from "../../../../../../_runtime/metro/11361__.js";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 
 let error;
 let metroImportAll;

@@ -1,6 +1,6 @@
-import { 04846__ } from "../../../_runtime/metro/04846__.js";
 // discord_app/modules/discord_md5/DiscordMd5.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { 04846__ } from "../../../_runtime/metro/04846__.js";
 
 let prototype;
 prototype = function DiscordMd5() {

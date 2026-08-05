@@ -1,8 +1,8 @@
-import { useSecureFramesUserVerifiedKeysCount } from "../hooks/useSecureFramesUserVerifiedKeysCount.tsx";
 // discord_app/modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useSecureFramesUserVerifiedKeysCount } from "../hooks/useSecureFramesUserVerifiedKeysCount.tsx";
 
 let closure_4 = createCacheKey.createStyles({ container: { width: "100%" } });
 const result = require("createCacheKey").fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");

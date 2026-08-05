@@ -1,5 +1,3 @@
-import { GuildsBar } from "../../../../guilds_bar/native/GuildsBar.tsx";
-import { context } from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx
 import { View } from "get ActivityIndicator";
 import withEqualityFn from "withEqualityFn";
@@ -7,6 +5,8 @@ import { DM_WIDTH } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { GuildsBar } from "../../../../guilds_bar/native/GuildsBar.tsx";
+import { context } from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
 
 const require = arg1;
 function HomeDrawerPanelContent() {

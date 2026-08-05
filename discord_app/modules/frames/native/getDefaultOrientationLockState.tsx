@@ -1,6 +1,6 @@
+// discord_app/modules/frames/native/getDefaultOrientationLockState.tsx
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { getIsTabletActivitySurface } from "../../activities/native/getDefaultOrientationLockState.tsx";
-// discord_app/modules/frames/native/getDefaultOrientationLockState.tsx
 const result = require("set").fileFinishedImporting("modules/frames/native/getDefaultOrientationLockState.tsx");
 
 export const setOrientationLockState = function setOrientationLockState(id) {

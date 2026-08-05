@@ -1,12 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/12514_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
-import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../../utils/UserUtils.tsx";
-import { render } from "../../../guild/native/GuildInviteIcon.tsx";
-import { useIsWindowLarge } from "../../../screen/native/useIsWindowLarge.tsx";
 // discord_app/modules/auth/native/components/Welcome.tsx
 import nameFromUser from "nameFromUser";
 import get_ActivityIndicator from "module_38";
@@ -23,6 +14,15 @@ import { InviteTypes } from "InviteSendStates";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/12514_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { nameFromUser } from "../../../../utils/UserUtils.tsx";
+import { render } from "../../../guild/native/GuildInviteIcon.tsx";
+import { useIsWindowLarge } from "../../../screen/native/useIsWindowLarge.tsx";
 
 let c4;
 let c5;

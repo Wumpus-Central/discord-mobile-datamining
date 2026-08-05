@@ -1,11 +1,11 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/phone/native/FormPhoneOrEmail.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

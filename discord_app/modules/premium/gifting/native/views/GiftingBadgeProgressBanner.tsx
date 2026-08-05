@@ -1,13 +1,13 @@
-import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
-import { trackImpression } from "../../../../app_analytics/useTrackImpression.tsx";
-import { messagesProxy } from "../../GiftingBadge.messages.js";
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
+import { trackImpression } from "../../../../app_analytics/useTrackImpression.tsx";
+import { messagesProxy } from "../../GiftingBadge.messages.js";
 
 let c4;
 let c5;

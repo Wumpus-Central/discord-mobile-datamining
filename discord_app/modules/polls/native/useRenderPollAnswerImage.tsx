@@ -1,5 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { PollMediaUploadAttachmentStatus } from "../PollTypes.tsx";
 // discord_app/modules/polls/native/useRenderPollAnswerImage.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +6,8 @@ import { DraftType } from "handleChanged";
 import map from "map";
 import { EMOJI_URL_BASE_SIZE } from "set";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { PollMediaUploadAttachmentStatus } from "../PollTypes.tsx";
 
 const require = arg1;
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");

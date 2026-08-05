@@ -1,13 +1,13 @@
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useEnsureSyncedChannelVoiceStates } from "../../../voice_calls/RTCConnectionDesyncHooks.tsx";
-import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
-import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx
 import noop from "noop";
 import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";
 import { ParticipantTypes } from "ParticipantTypes";
 import { jsx } from "jsxProd";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useEnsureSyncedChannelVoiceStates } from "../../../voice_calls/RTCConnectionDesyncHooks.tsx";
+import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 
 const require = arg1;
 let obj = { STREAM_ICON: "STREAM_ICON", USER_VIDEO_ICON: "USER_VIDEO_ICON", MUTE_DEAFEN_ICON: "MUTE_DEAFEN_ICON", USER_DISCONNECTED_ICON: "DISCONNECTED_ICON", SPEAKER_MUTE_ICON: "SPEAKER_MUTE_ICON" };

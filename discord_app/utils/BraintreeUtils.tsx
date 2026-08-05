@@ -1,7 +1,7 @@
-import { CodeSplittingUtils } from "../modules/core/CodeSplittingUtils.tsx";
 // discord_app/utils/BraintreeUtils.tsx
 import getClient from "getClient";
 import { PaymentSettings } from "ME";
+import { CodeSplittingUtils } from "../modules/core/CodeSplittingUtils.tsx";
 
 const require = arg1;
 const result = require("module_3949").fileFinishedImporting("utils/BraintreeUtils.tsx");

@@ -1,10 +1,10 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
-import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 // discord_app/modules/device/ThermalUtils.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";
 import keys from "keys";
 import set from "enforcing";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
+import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 if (set.isAndroid()) {

@@ -1,11 +1,11 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { set } from "../../core/native/NativeView.tsx";
-import { context } from "../../home_drawer/native/useHomeDrawerGesture.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarFooterWrapper.tsx
 import { GUILD_ITEM_HIT_SLOP } from "GUILD_ITEM_SIZE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { set } from "../../core/native/NativeView.tsx";
+import { context } from "../../home_drawer/native/useHomeDrawerGesture.tsx";
 
 let obj = { footerWrapper: null };
 obj = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: require("Themes").modules.mobile.GUILD_BAR_ITEM_PADDING };

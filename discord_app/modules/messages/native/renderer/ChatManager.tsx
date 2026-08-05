@@ -1,7 +1,7 @@
-import { isUndefinedOrNull } from "../../../../../_runtime/00659_isUndefinedOrNull.js";
-import { getEmbeddedActivityKey } from "../getEmbeddedActivityKey.tsx";
 // discord_app/modules/messages/native/renderer/ChatManager.tsx
 import Changeset from "Changeset";
+import { isUndefinedOrNull } from "../../../../../_runtime/00659_isUndefinedOrNull.js";
+import { getEmbeddedActivityKey } from "../getEmbeddedActivityKey.tsx";
 
 let c3;
 let obj1;

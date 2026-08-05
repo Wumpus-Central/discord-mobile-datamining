@@ -1,8 +1,3 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { OpenableUserProfileAvatar } from "UserProfileAvatar.tsx";
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
-import { WidgetRenderer } from "UserProfileWidgetsBoard.tsx";
-import { UserProfileWidgetsBoardEditNotice } from "UserProfileWidgetsBoardEditNotice.tsx";
 // discord_app/modules/user_profile/native/YouScreenUserProfileContent.tsx
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled";
 import DismissibleContent from "DismissibleContent";
@@ -14,6 +9,11 @@ import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "UserProfileTextButtonGroup";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { OpenableUserProfileAvatar } from "UserProfileAvatar.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
+import { WidgetRenderer } from "UserProfileWidgetsBoard.tsx";
+import { UserProfileWidgetsBoardEditNotice } from "UserProfileWidgetsBoardEditNotice.tsx";
 
 let c5;
 let closure_14;

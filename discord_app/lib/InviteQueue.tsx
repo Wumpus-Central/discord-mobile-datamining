@@ -1,7 +1,7 @@
-import { trackInvite } from "../actions/MessageActionCreators.tsx";
 // discord_app/lib/InviteQueue.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import "enqueue";
+import { trackInvite } from "../actions/MessageActionCreators.tsx";
 
 const sum = require("set").Millis.SECOND + 10;
 let c3 = sum;

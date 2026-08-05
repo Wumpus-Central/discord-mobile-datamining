@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
-import { getSrcWithWidthAndHeight } from "../../../../utils/native/ImageUtils.tsx";
-import { useCanManageGuildOfficialMessages } from "../../GuildOfficialMessageUtils.tsx";
-import { createMinimalMessageRecord } from "../../MessageRecordUtils.tsx";
 // discord_app/modules/messages/native/renderer/RowGeneratorUtils.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -13,6 +8,11 @@ import ME from "ME";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import set from "ensureGuildLoaded";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
+import { getSrcWithWidthAndHeight } from "../../../../utils/native/ImageUtils.tsx";
+import { useCanManageGuildOfficialMessages } from "../../GuildOfficialMessageUtils.tsx";
+import { createMinimalMessageRecord } from "../../MessageRecordUtils.tsx";
 
 let c10;
 let c9;

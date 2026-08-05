@@ -1,6 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/threads/ThreadMessageStore.tsx
 import createChannelRecord from "createChannelRecord";
 import hasFlag from "hasFlag";
@@ -11,6 +8,9 @@ import { MAX_THREAD_MESSAGE_COUNT } from "AbortCodes";
 import { MessageTypes } from "ME";
 import { Store } from "initialize";
 import set from "createdAt";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 let c3;
 let c4;

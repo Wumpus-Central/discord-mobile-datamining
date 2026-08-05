@@ -1,10 +1,10 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "SearchField";
 import { View } from "RedesignBottomSheetTitleHeaderBase";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let closure_6;
 let error;

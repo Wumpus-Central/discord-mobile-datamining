@@ -1,5 +1,5 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/lib/guild/GuildMemberRequester.tsx
+import { apply } from "../../../_runtime/00012_apply.js";
 class GuildMemberRequestState {
   constructor(arg0, arg1) {
     closure_0 = global;

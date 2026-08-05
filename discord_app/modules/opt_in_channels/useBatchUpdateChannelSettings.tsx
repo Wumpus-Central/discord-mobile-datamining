@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/opt_in_channels/useBatchUpdateChannelSettings.tsx
 import noop from "noop";
 import incrementVersion from "incrementVersion";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { AnalyticsSections } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/opt_in_channels/useBatchUpdateChannelSettings.tsx");

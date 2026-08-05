@@ -1,6 +1,6 @@
-import { t } from "../../../_runtime/03867_t.js";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventUtils.tsx
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
+import { t } from "../../../_runtime/03867_t.js";
 
 let c3;
 let c4;

@@ -1,13 +1,13 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { GuildBadgeV2 } from "../../../guild/native/GuildBadgeV2.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useStickyServerHeaderSubtitle } from "../hooks/useStickyServerHeaderSubtitle.tsx";
 // discord_app/modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx
 import FavoritesGuildHeaderActionButton from "FavoritesGuildHeaderActionButton";
 import get_ActivityIndicator from "Button";
 import jsxProd from "GuildHeaderCoachmarks";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { GuildBadgeV2 } from "../../../guild/native/GuildBadgeV2.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useStickyServerHeaderSubtitle } from "../hooks/useStickyServerHeaderSubtitle.tsx";
 
 let Pressable;
 let c4;

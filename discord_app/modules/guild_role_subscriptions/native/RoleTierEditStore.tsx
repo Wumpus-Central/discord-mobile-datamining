@@ -1,8 +1,8 @@
-import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/guild_role_subscriptions/native/RoleTierEditStore.tsx
 import _slicedToArray from "_slicedToArray";
 import isIterable from "isIterable";
 import identity from "identity";
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 
 const require = arg1;
 function usePriceTiers(guildId) {

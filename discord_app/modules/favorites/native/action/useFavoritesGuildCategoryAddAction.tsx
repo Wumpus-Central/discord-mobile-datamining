@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
-import { messagesProxy } from "../../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/native/action/useFavoritesGuildCategoryAddAction.tsx
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName";
 import noop from "noop";
 import { ChannelTypes } from "ME";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
+import { messagesProxy } from "../../intl/FavoritesGuild.messages.js";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryAddAction.tsx");

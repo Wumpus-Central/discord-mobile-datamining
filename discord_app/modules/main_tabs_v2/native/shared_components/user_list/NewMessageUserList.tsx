@@ -1,5 +1,3 @@
-import { fuzzysearch } from "../../../../../../_runtime/05197_fuzzysearch.js";
-import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx
 import _slicedToArray from "_slicedToArray";
 import NoResults from "NoResults";
@@ -10,6 +8,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { fuzzysearch } from "../../../../../../_runtime/05197_fuzzysearch.js";
+import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 
 let c10;
 let closure_12;

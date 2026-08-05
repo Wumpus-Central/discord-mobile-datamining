@@ -1,11 +1,11 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles(() => ({ container: { width: 80, height: 80 } }));

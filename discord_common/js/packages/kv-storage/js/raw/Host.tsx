@@ -1,7 +1,7 @@
-import { set } from "../implementation/index.tsx";
-import { logger } from "Runtime.tsx";
 // discord_common/js/packages/kv-storage/js/raw/Host.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { set } from "../implementation/index.tsx";
+import { logger } from "Runtime.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Host.tsx");

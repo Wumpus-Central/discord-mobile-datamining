@@ -1,14 +1,14 @@
-import { Text } from "../../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
-import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
-import { useFullscreenPlaceholderCount } from "../../../../hooks/usePlaceholderStyles.tsx";
-import { GridItemPlaceholder } from "GridItemPlaceholder.tsx";
 // discord_app/modules/search/native/components/tabs/pages/placeholders/MediaGridPlaceholder.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import MessageEmbedTypes from "MessageEmbedTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
+import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import { useFullscreenPlaceholderCount } from "../../../../hooks/usePlaceholderStyles.tsx";
+import { GridItemPlaceholder } from "GridItemPlaceholder.tsx";
 
 let SEARCH_LIST_HORIZONTAL_PADDING;
 let SEARCH_LIST_SECTION_TOP_PADDING;

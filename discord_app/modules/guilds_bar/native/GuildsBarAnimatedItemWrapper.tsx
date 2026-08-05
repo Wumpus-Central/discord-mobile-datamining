@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx
 import noop from "noop";
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE";
@@ -7,6 +5,8 @@ import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
 
 let c5;
 let closure_6;

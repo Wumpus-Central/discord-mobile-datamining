@@ -1,9 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { getFocusedChannelId } from "../../panels/isChannelFocused.native.tsx";
-import { useIsWindowLarge } from "../../screen/native/useIsWindowLarge.tsx";
-import { apexExperiment } from "../experiments/NewAdRequestBehaviorExperiment.tsx";
-import { getIsEligibleForQuests } from "../lib/QuestsEligibility.tsx";
 // discord_app/modules/quests/native/QuestHooks.native.tsx
 import closure_3 from "QuestsExperimentLocations";
 import getIsEligibleForQuests from "getIsEligibleForQuests";
@@ -13,6 +7,12 @@ import initializeState from "initializeState";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS";
 import { ThemeTypes } from "sum";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { getFocusedChannelId } from "../../panels/isChannelFocused.native.tsx";
+import { useIsWindowLarge } from "../../screen/native/useIsWindowLarge.tsx";
+import { apexExperiment } from "../experiments/NewAdRequestBehaviorExperiment.tsx";
+import { getIsEligibleForQuests } from "../lib/QuestsEligibility.tsx";
 
 let c9;
 let metroImportAll;

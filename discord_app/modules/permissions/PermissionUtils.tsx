@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/permissions/PermissionUtils.tsx
 import { Permissions } from "sum";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 function getGuildPermissionSpec(permissionOptions) {
   let obj = {};

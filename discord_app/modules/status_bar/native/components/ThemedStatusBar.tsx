@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useGlobalStatusIndicatorState } from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
-import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { componentDidMount } from "StatusBar.android.tsx";
 // discord_app/modules/status_bar/native/components/ThemedStatusBar.tsx
 import "noop";
 import handleThemeChange from "handleThemeChange";
 import fetchFingerprint from "fetchFingerprint";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useGlobalStatusIndicatorState } from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
+import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { componentDidMount } from "StatusBar.android.tsx";
 
 const require = arg1;
 const result = require("fetchFingerprint").fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");

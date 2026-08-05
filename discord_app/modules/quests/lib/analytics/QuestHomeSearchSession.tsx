@@ -1,6 +1,6 @@
+// discord_app/modules/quests/lib/analytics/QuestHomeSearchSession.tsx
 import { v1 } from "../../../../../_runtime/00514_v1.js";
 import { result } from "../../../analytics_sessions/SessionUtils.tsx";
-// discord_app/modules/quests/lib/analytics/QuestHomeSearchSession.tsx
 let c2 = null;
 const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/QuestHomeSearchSession.tsx");
 

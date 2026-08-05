@@ -1,5 +1,3 @@
-import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
-import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 // discord_app/modules/quests/native/QuestEmbed.native.tsx
 import { Image } from "isSponsoredPlayQuest";
 import handleThemeChange from "handleThemeChange";
@@ -7,6 +5,8 @@ import initializeState from "initializeState";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import { ThemeTypes } from "ME";
 import { InviteTypes } from "InviteSendStates";
+import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
+import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 
 let closure_6;
 let error;

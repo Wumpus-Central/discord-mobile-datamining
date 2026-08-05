@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/games/GameActionCreators.tsx
 import importDefaultResult from "start";
 import handleLoadMessages from "handleLoadMessages";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let closure_0 = arg1;
 function requestGames() {

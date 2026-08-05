@@ -1,12 +1,3 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
-import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { dismissGlobalKeyboard } from "../../../utils/native/KeyboardManagerUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { context } from "../../window/native/AppEntryKeyContext.tsx";
-import { KeyboardStateDebugging } from "../KeyboardStateDebugging.tsx";
-import { KeyboardTypes } from "KeyboardTypes.tsx";
 // discord_app/modules/keyboard/native/KeyboardUIStore.native.tsx
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { ExpressionPickerViewType } from "ExpressionPickerViewType";
@@ -17,6 +8,15 @@ import keys from "keys";
 import { KeyboardEvents } from "KeyboardChatScrollView";
 import { KeyboardEvents as KeyboardEvents2 } from "KeyboardChatScrollView";
 import set from "DRAG_HANDLE";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
+import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { dismissGlobalKeyboard } from "../../../utils/native/KeyboardManagerUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { context } from "../../window/native/AppEntryKeyContext.tsx";
+import { KeyboardStateDebugging } from "../KeyboardStateDebugging.tsx";
+import { KeyboardTypes } from "KeyboardTypes.tsx";
 
 function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   let tmp = arg0;

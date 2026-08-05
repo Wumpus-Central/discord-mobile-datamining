@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getGuildBarNeighbors } from "getGuildBarNeighbors.tsx";
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getGuildBarNeighbors } from "getGuildBarNeighbors.tsx";
 
 const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx");

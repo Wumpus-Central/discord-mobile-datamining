@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
-import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumManagePlanScreen.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumManagePlanScreen.tsx";
 
 const require = arg1;
 createToggle = {

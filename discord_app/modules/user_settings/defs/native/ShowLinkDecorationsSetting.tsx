@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
 
 const require = arg1;
 function useShowLinkDecorationsSettingValue() {

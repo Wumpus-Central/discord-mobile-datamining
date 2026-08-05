@@ -1,9 +1,9 @@
-import { _fetchAdUser } from "../native/AdUserActionCreators.android.tsx";
 // discord_app/modules/ads/utils/AdDataUtils.android.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import adUser from "adUser";
 import { DEFAULT_TIMEOUT_MS } from "DEFAULT_TIMEOUT_MS";
+import { _fetchAdUser } from "../native/AdUserActionCreators.android.tsx";
 
 const require = arg1;
 const result = require("adUser").fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");

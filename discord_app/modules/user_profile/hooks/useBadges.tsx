@@ -1,7 +1,7 @@
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/hooks/useBadges.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const require = arg1;
 const legacy_username = "legacy_username";

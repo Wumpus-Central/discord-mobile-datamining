@@ -1,13 +1,13 @@
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { prototype } from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import getSystemLocale from "getSystemLocale";
 import _getSystemLocale from "_getSystemLocale";
 import map from "map";
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { AnalyticEvents } from "ME";
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { prototype } from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
 
 let c10;
 let c9;

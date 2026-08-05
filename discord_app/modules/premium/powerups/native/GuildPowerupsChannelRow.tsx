@@ -1,13 +1,13 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { add } from "../../../../design/components/Layers/native/LayerContext.native.tsx";
-import { SidebarCoachmarkOverlayLayer } from "../../../main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx";
-import { GUILD_POWERUP_NOTIFICATION_COOLDOWN } from "../constants/GuildPowerupsNotification.tsx";
-import { useGuildPowerupsCoachmark } from "hooks/useGuildPowerupsCoachmark.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsChannelRow.tsx
 import messagesProxy from "messagesProxy";
 import { View } from "Layer";
 import jsxProd from "renderChannelBadge";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { add } from "../../../../design/components/Layers/native/LayerContext.native.tsx";
+import { SidebarCoachmarkOverlayLayer } from "../../../main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx";
+import { GUILD_POWERUP_NOTIFICATION_COOLDOWN } from "../constants/GuildPowerupsNotification.tsx";
+import { useGuildPowerupsCoachmark } from "hooks/useGuildPowerupsCoachmark.tsx";
 
 let c5;
 let closure_6;

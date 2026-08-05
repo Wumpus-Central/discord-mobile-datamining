@@ -1,10 +1,10 @@
-import { getMixedGradientColor } from "../../../../client_themes/native/ThemedGradient.tsx";
-import { UserSettingsFriendRequests } from "../../../../user_settings/content_and_social/native/UserSettingsFriendRequests.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/FriendRequestsSettingsScreen.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getMixedGradientColor } from "../../../../client_themes/native/ThemedGradient.tsx";
+import { UserSettingsFriendRequests } from "../../../../user_settings/content_and_social/native/UserSettingsFriendRequests.tsx";
 
 let c3;
 let c4;

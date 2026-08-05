@@ -1,3 +1,9 @@
+// discord_app/modules/user_settings/voice/native/KrispLogo.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import handleThemeChange from "handleThemeChange";
+import ME from "ME";
+import jsxProd from "jsxProd";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
@@ -5,12 +11,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { Linking } from "../../../../lib/native/Linking.tsx";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { combined } from "../../../../utils/HelpdeskUtils.tsx";
-// discord_app/modules/user_settings/voice/native/KrispLogo.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import handleThemeChange from "handleThemeChange";
-import ME from "ME";
-import jsxProd from "jsxProd";
 
 let c10;
 let c3;

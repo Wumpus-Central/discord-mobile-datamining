@@ -1,6 +1,6 @@
-import { HapticButton } from "../../design_system/native/UserSettingsDesignSystemHaptics.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemHapticsSetting.tsx
 import createToggle from "createToggle";
+import { HapticButton } from "../../design_system/native/UserSettingsDesignSystemHaptics.tsx";
 
 obj = {
   useTitle() {

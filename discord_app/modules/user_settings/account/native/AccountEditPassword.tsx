@@ -1,9 +1,9 @@
-import { componentWillUnmount } from "UserSettingsAccountEditPassword.tsx";
 // discord_app/modules/user_settings/account/native/AccountEditPassword.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { componentWillUnmount } from "UserSettingsAccountEditPassword.tsx";
 
 let StyleSheet;
 let obj1;

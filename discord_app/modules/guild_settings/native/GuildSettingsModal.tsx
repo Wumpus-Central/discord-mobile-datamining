@@ -1,5 +1,3 @@
-import { GuildSettingsActionCreators } from "../GuildSettingsActionCreators.tsx";
-import { dispatcher } from "../GuildSettingsModalChannelsActionCreators.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModal.tsx
 import InvitesDisabledRow from "InvitesDisabledRow";
 import GuildSettingsModalServerTag from "GuildSettingsModalServerTag";
@@ -7,6 +5,8 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleFormInit from "handleFormInit";
 import ME from "ME";
 import { jsx } from "WebhookItem";
+import { GuildSettingsActionCreators } from "../GuildSettingsActionCreators.tsx";
+import { dispatcher } from "../GuildSettingsModalChannelsActionCreators.tsx";
 
 let error;
 let metroImportAll;

@@ -1,12 +1,12 @@
-import { jsx } from "../../../../panels/morphable/native/AppFreezer.tsx";
-import { NoSearchResultsScreen } from "../tabs/SearchTabsLayout.tsx";
-import { AutocompleteScreen } from "autocomplete/AutocompleteScreen.tsx";
 // discord_app/modules/search/native/components/layout/SearchScreenLayout.tsx
 import { View } from "get ActivityIndicator";
 import prototype from "prototype";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { jsx } from "../../../../panels/morphable/native/AppFreezer.tsx";
+import { NoSearchResultsScreen } from "../tabs/SearchTabsLayout.tsx";
+import { AutocompleteScreen } from "autocomplete/AutocompleteScreen.tsx";
 
 let c5;
 let closure_6;

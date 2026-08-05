@@ -1,6 +1,3 @@
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
-import { StickerFormat } from "StickersTypes.tsx";
 // discord_app/modules/stickers/StickersUtils.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -8,6 +5,9 @@ import map from "map";
 import getStickerPreview from "getStickerPreview";
 import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID";
 import { Endpoints } from "ME";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
+import { StickerFormat } from "StickersTypes.tsx";
 
 let ASSET_ENDPOINT;
 let closure_12;

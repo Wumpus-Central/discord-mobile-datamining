@@ -1,14 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/11938_registerAsset.js";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { HubProgressHeader } from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
-import { TTIFirstContentfulPaint } from "../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
-import { useCanManageGuildDirectoryEntry } from "../../useCanManageGuildDirectoryEntry.tsx";
-import { RowType } from "../GuildDirectoryRowGenerator.tsx";
-import { GuildDirectoryPlaceholderRow } from "GuildDirectoryPlaceholderRow.tsx";
-import { GuildDirectoryRow } from "GuildDirectoryRow.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectory.tsx
 import MagnifyingGlassIcon from "MagnifyingGlassIcon";
 import get_ActivityIndicator from "getSystemLocale";
@@ -21,6 +10,17 @@ import ME from "ME";
 import jsxProd from "HubProgressHeader";
 import createCacheKey from "createCacheKey";
 import ArrayResult from "TTIFirstContentfulPaint";
+import { registerAsset } from "../../../../../_runtime/11938_registerAsset.js";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { HubProgressHeader } from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
+import { TTIFirstContentfulPaint } from "../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
+import { useCanManageGuildDirectoryEntry } from "../../useCanManageGuildDirectoryEntry.tsx";
+import { RowType } from "../GuildDirectoryRowGenerator.tsx";
+import { GuildDirectoryPlaceholderRow } from "GuildDirectoryPlaceholderRow.tsx";
+import { GuildDirectoryRow } from "GuildDirectoryRow.tsx";
 
 let StyleSheet;
 let c5;

@@ -1,8 +1,8 @@
+// discord_app/modules/tti_analytics/TTITracker.tsx
+import set from "set";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { isTracing } from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-// discord_app/modules/tti_analytics/TTITracker.tsx
-import set from "set";
 
 const require = arg1;
 function serialize(arg0, arg1) {

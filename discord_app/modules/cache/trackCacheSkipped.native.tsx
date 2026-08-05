@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getDeviceMetadata } from "../tti_analytics/native/TTIAnalyticsUtils.tsx";
 // discord_app/modules/cache/trackCacheSkipped.native.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getDeviceMetadata } from "../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
 const result = require("getDeviceMetadata").fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");
 

@@ -1,11 +1,3 @@
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { extractMetadataFromNotification } from "InAppNotificationUtils.tsx";
-import { VideoBadge } from "MediaPreviewRightAccessory.tsx";
-import { LocationText } from "MessageNotificationHeader.tsx";
-import { NativeMessagePreviewContent } from "MessagePreviewText.tsx";
 // discord_app/modules/in_app_notifications/native/ReminderNotification.tsx
 import importAllResult from "module_38";
 import { View } from "PreviewIcon";
@@ -16,6 +8,14 @@ import { AnalyticEvents } from "ME";
 import jsxProd from "module_4490";
 import createCacheKey from "createCacheKey";
 import set from "ensureGuildLoaded";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { extractMetadataFromNotification } from "InAppNotificationUtils.tsx";
+import { VideoBadge } from "MediaPreviewRightAccessory.tsx";
+import { LocationText } from "MessageNotificationHeader.tsx";
+import { NativeMessagePreviewContent } from "MessagePreviewText.tsx";
 
 let RIGHT_ACCESSORY_LEFT_MARGIN;
 let c10;

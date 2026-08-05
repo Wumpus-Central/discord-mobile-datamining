@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CollectiblesShopScreen } from "../../shop/native/CollectiblesShopScreen.tsx";
 // discord_app/modules/user_settings/defs/native/CollectiblesShopSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CollectiblesShopScreen } from "../../shop/native/CollectiblesShopScreen.tsx";
 
 obj = {
   useTitle() {

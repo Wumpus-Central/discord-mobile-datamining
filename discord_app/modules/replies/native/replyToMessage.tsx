@@ -1,13 +1,13 @@
-import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { handleEdit } from "../../messages/native/long_press/LongPressMessageActionSheetUtils.tsx";
-import { createPendingReply } from "../PendingReplyActionCreators.tsx";
 // discord_app/modules/replies/native/replyToMessage.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getState from "getState";
 import { AnalyticEvents } from "ME";
+import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import { handleEdit } from "../../messages/native/long_press/LongPressMessageActionSheetUtils.tsx";
+import { createPendingReply } from "../PendingReplyActionCreators.tsx";
 
 const require = arg1;
 const result = require("getState").fileFinishedImporting("modules/replies/native/replyToMessage.tsx");

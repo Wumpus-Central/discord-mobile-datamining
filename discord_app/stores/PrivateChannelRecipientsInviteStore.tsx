@@ -1,8 +1,3 @@
-import { getTransformedUser } from "../modules/autocompleter/UserSearchManager.tsx";
-import { getFrictionlessGDMsEnabled } from "../modules/header_bar/FrictionlessGDMsExperiment.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
-import { isNullOrEmpty } from "../utils/StringUtils.tsx";
-import { nameFromUser } from "../utils/UserUtils.tsx";
 // discord_app/stores/PrivateChannelRecipientsInviteStore.tsx
 import getHash from "getHash";
 import recomputeAffinities from "recomputeAffinities";
@@ -17,6 +12,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "createChannelRecord";
+import { getTransformedUser } from "../modules/autocompleter/UserSearchManager.tsx";
+import { getFrictionlessGDMsEnabled } from "../modules/header_bar/FrictionlessGDMsExperiment.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import { isNullOrEmpty } from "../utils/StringUtils.tsx";
+import { nameFromUser } from "../utils/UserUtils.tsx";
 
 let Consents;
 let closure_14;

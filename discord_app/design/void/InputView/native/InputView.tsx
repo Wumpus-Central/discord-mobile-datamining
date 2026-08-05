@@ -1,3 +1,10 @@
+// discord_app/design/void/InputView/native/InputView.tsx
+import _objectWithoutProperties from "_objectWithoutProperties";
+import get_ActivityIndicator from "get ActivityIndicator";
+import { Fonts } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { BottomSheetTextInput } from "../../../../modules/action_sheet/native/components/BottomSheetTextInput.tsx";
@@ -6,13 +13,6 @@ import { CircleXIcon } from "../../../components/Icon/native/redesign/generated/
 import { Text } from "../../../components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../shared.tsx";
 import { Button } from "../../native.tsx";
-// discord_app/design/void/InputView/native/InputView.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { Fonts } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let Platform;
 let c10;

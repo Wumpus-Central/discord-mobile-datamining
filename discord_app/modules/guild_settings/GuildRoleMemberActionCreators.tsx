@@ -1,8 +1,8 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/guild_settings/GuildRoleMemberActionCreators.tsx
 import priv from "priv";
 import getRoleMemberCount from "getRoleMemberCount";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _fetchMemberCountsFromBackend() {

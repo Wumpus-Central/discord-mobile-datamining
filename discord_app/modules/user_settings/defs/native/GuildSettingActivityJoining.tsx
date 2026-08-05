@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getSanitizedRestrictedGuilds } from "../../../../utils/UserSettingsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/GuildSettingActivityJoining.tsx
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getSanitizedRestrictedGuilds } from "../../../../utils/UserSettingsUtils.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 let c3;
 let obj1;

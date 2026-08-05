@@ -1,11 +1,11 @@
+// discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { getNumSubscriptionsPurchasedFromSystemMessage } from "../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 import { createUserPremiumGuildSubscriptionSystemMessage } from "UserPremiumGuildSubscriptionSystemMessage.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
 
 const require = arg1;
 const result = require("createUserPremiumGuildSubscriptionSystemMessage").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx");

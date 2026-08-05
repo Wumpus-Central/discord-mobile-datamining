@@ -1,5 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx
 import importAllResult from "Text";
 import get_ActivityIndicator from "TableCheckboxRow";
@@ -15,6 +13,8 @@ import handleStopEditingRoles from "handleStopEditingRoles";
 import ME from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 
 let StyleSheet;
 let c5;

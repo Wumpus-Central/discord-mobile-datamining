@@ -1,3 +1,8 @@
+// discord_app/utils/web/DesktopNativeUtils.tsx
+import _slicedToArray from "_slicedToArray";
+import closure_4 from "set";
+import { NativeFeatures } from "ME";
+import set from "ME";
 import { IPCEvents } from "../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { log } from "../../../discord_common/js/packages/logger/Logger.tsx";
@@ -6,11 +11,6 @@ import { DomainMigrationEventType } from "../../../discord_common/js/shared/doma
 import { GuildThemeSourcePreference } from "../../flow/Client.tsx";
 import { GameTheme } from "../../modules/game_detection/GameDetectionTypes.tsx";
 import { set } from "../PlatformUtils.tsx";
-// discord_app/utils/web/DesktopNativeUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import closure_4 from "set";
-import { NativeFeatures } from "ME";
-import set from "ME";
 
 let require = arg1;
 function sanitizeFilename(arg0) {

@@ -1,8 +1,8 @@
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
-import { getIsEligibleForQuests } from "lib/QuestsEligibility.tsx";
 // discord_app/modules/quests/useQuestForPlacement.tsx
 import noop from "noop";
 import initializeState from "initializeState";
+import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
+import { getIsEligibleForQuests } from "lib/QuestsEligibility.tsx";
 
 let c3;
 let c4;

@@ -1,10 +1,10 @@
-import { useCollectibleListLayout } from "../../native/useCollectibleListLayout.tsx";
 // discord_app/modules/collectibles/nameplates/native/EditNameplateSection.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { isNameplateRecord } from "fromServer";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCollectibleListLayout } from "../../native/useCollectibleListLayout.tsx";
 
 let closure_6;
 let error;

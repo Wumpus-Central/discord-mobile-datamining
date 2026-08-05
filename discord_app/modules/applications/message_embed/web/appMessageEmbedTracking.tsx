@@ -1,9 +1,9 @@
-import { items } from "../../../../../discord_common/js/shared/hooks/useIntersectionObserver.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { trackingConfigWithDefaults } from "appMessageEmbedTrackingConfig.tsx";
 // discord_app/modules/applications/message_embed/web/appMessageEmbedTracking.tsx
 import noop from "noop";
 import { AnalyticEvents } from "ME";
+import { items } from "../../../../../discord_common/js/shared/hooks/useIntersectionObserver.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { trackingConfigWithDefaults } from "appMessageEmbedTrackingConfig.tsx";
 
 const require = arg1;
 const result = require("expandEventProperties").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTracking.tsx");

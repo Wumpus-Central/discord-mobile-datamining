@@ -1,8 +1,8 @@
-import { items } from "useFormattedTimestamp.tsx";
 // discord_app/modules/markup/Timestamp.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { items } from "useFormattedTimestamp.tsx";
 
 const require = arg1;
 createCacheKey = { timestamp: null };

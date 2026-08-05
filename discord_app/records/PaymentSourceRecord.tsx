@@ -1,8 +1,8 @@
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/records/PaymentSourceRecord.tsx
 import "toJS";
 import ME from "ME";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 let c3;
 let c4;

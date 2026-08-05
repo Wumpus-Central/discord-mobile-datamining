@@ -1,9 +1,9 @@
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/images.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
 
 const require = arg1;
 const RPCErrors = ME.RPCErrors;

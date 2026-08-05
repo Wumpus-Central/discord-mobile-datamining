@@ -1,10 +1,10 @@
-import { NAV_BAR_HEIGHT } from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayHeaderWrapper.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { NAV_BAR_HEIGHT } from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((paddingTop) => {

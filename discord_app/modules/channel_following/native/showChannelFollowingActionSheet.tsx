@@ -1,8 +1,8 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/channel_following/native/showChannelFollowingActionSheet.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/channel_following/native/showChannelFollowingActionSheet.tsx");

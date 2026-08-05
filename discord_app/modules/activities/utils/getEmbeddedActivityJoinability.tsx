@@ -1,5 +1,3 @@
-import { allowChannelAccess } from "../../../utils/ChannelUtils.tsx";
-import { isActivitySupportedOnClientPlatform } from "isActivitySupportedOnClientPlatform.tsx";
 // discord_app/modules/activities/utils/getEmbeddedActivityJoinability.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -7,6 +5,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import { Permissions } from "ME";
+import { allowChannelAccess } from "../../../utils/ChannelUtils.tsx";
+import { isActivitySupportedOnClientPlatform } from "isActivitySupportedOnClientPlatform.tsx";
 
 const require = arg1;
 function getEmbeddedActivityJoinability(arg0) {

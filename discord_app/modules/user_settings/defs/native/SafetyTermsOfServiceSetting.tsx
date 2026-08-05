@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Linking } from "../../../../lib/native/Linking.tsx";
 // discord_app/modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx
 import { MarketingURLs } from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Linking } from "../../../../lib/native/Linking.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {

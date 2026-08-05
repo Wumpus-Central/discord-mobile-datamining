@@ -1,3 +1,18 @@
+// discord_app/modules/voice_panel/native/controls/VoicePanelVoiceControlsButtons.tsx
+import SoundboardIcon from "SoundboardIcon";
+import TableRowGroupTitle from "TableRowGroupTitle";
+import participantFromServer from "participantFromServer";
+import getParticipants from "getParticipants";
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
+import initialize from "initialize";
+import reset from "reset";
+import fetchFingerprint from "fetchFingerprint";
+import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import updateVoiceState from "updateVoiceState";
+import ME from "ME";
+import { SelfStreamAndVideoAlertType as closure_15 } from "SelfStreamAndVideoAlertType";
+import { MediaEngineContextTypes } from "DesktopSources";
+import { jsx } from "initialize";
 import { registerAsset } from "../../../../../_runtime/07828_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/10269_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/10762_registerAsset.js";
@@ -20,21 +35,6 @@ import { _handleToggleVideo } from "../../../voice_calls/native/CallsUtils.tsx";
 import { useCanInviteMembers } from "../hooks/useCanInviteMembers.tsx";
 import { useInviteMembersCallback } from "../hooks/useInviteMembersCallback.tsx";
 import { useSoundboardConfig } from "../hooks/useSoundboardConfig.tsx";
-// discord_app/modules/voice_panel/native/controls/VoicePanelVoiceControlsButtons.tsx
-import SoundboardIcon from "SoundboardIcon";
-import TableRowGroupTitle from "TableRowGroupTitle";
-import participantFromServer from "participantFromServer";
-import getParticipants from "getParticipants";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import initialize from "initialize";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import updateVoiceState from "updateVoiceState";
-import ME from "ME";
-import { SelfStreamAndVideoAlertType as closure_15 } from "SelfStreamAndVideoAlertType";
-import { MediaEngineContextTypes } from "DesktopSources";
-import { jsx } from "initialize";
 
 let closure_14;
 let map1;

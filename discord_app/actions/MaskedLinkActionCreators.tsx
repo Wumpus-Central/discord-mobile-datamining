@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/MaskedLinkActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("actions/MaskedLinkActionCreators.tsx");
 
 export const trustDomain = function trustDomain(url) {

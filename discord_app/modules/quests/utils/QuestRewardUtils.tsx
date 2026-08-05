@@ -1,3 +1,6 @@
+// discord_app/modules/quests/utils/QuestRewardUtils.tsx
+import updateCategoriesAndProducts from "updateCategoriesAndProducts";
+import set from "QuestRewardTypes";
 import { QuestRewardAssignmentMethods } from "../../../../discord_common/js/shared/shared-constants/QuestRewardAssignmentMethods.tsx";
 import { QuestRewardTypes } from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -6,9 +9,6 @@ import { getDurationStringOfFractionalPremium } from "../lib/FractionalPremiumUt
 import { QuestsVisibleMessagesChangedSource } from "../QuestTypes.tsx";
 import { getContextualEntrypointHeading } from "QuestCopyUtils.tsx";
 import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
-// discord_app/modules/quests/utils/QuestRewardUtils.tsx
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import set from "QuestRewardTypes";
 
 const require = arg1;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {

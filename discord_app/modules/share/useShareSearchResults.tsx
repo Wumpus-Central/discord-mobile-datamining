@@ -1,4 +1,3 @@
-import { trackClose } from "../quickswitcher/QuickSwitcherActionCreators.tsx";
 // discord_app/modules/share/useShareSearchResults.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
 import handleChannelSelect from "handleChannelSelect";
 import { ALLOWED_TYPES } from "ALLOWED_TYPES";
+import { trackClose } from "../quickswitcher/QuickSwitcherActionCreators.tsx";
 
 const require = arg1;
 const result = require("_handleConnectionOpen").fileFinishedImporting("modules/share/useShareSearchResults.tsx");

@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_tag/native/GuildTag.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -9,6 +8,7 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "mergeGuildAvatar";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c4;

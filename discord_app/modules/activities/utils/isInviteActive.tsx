@@ -1,5 +1,5 @@
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/activities/utils/isInviteActive.tsx
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 const result = 2 * require("set").Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
 

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumPlanSelectSettingScreen.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumPlanSelectSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumPlanSelectSettingScreen.tsx";
 
 obj = {
   useTitle() {

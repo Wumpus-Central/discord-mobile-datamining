@@ -1,3 +1,8 @@
+// discord_app/modules/user_settings/premium/native/Footer.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/12671_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -5,11 +10,6 @@ import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
 import { useOpenPremiumMarketingPayment } from "useOpenPremiumMarketingPayment.tsx";
-// discord_app/modules/user_settings/premium/native/Footer.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

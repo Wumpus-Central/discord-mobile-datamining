@@ -1,13 +1,3 @@
-import { BugReporterNotification } from "../../bug_reporter/native/BugReporterNotification.tsx";
-import { AlertNotification } from "AlertNotification.tsx";
-import { ForumThreadCreatedNotification } from "ForumThreadCreatedNotification.tsx";
-import { MessageFailedToSendNotification } from "MessageFailedToSendNotification.tsx";
-import { MessageNotification } from "MessageNotification.tsx";
-import { MessageNotificationDetachedContent } from "MessageNotificationDetachedContent.tsx";
-import { MessageRequestInAppNotification } from "MessageRequestNotification.tsx";
-import { ReactionNotificationBody } from "ReactionNotification.tsx";
-import { NotificationAvatar } from "ReminderNotification.tsx";
-import { RestrictedHoursWarningNotification } from "RestrictedHoursWarningNotification.tsx";
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import NotificationAvatar from "NotificationAvatar";
@@ -20,6 +10,16 @@ import jsxProd from "MessageRequestInAppNotification";
 import { Easing } from "module_4146";
 import createCacheKey from "createCacheKey";
 import set from "get ActivityIndicator";
+import { BugReporterNotification } from "../../bug_reporter/native/BugReporterNotification.tsx";
+import { AlertNotification } from "AlertNotification.tsx";
+import { ForumThreadCreatedNotification } from "ForumThreadCreatedNotification.tsx";
+import { MessageFailedToSendNotification } from "MessageFailedToSendNotification.tsx";
+import { MessageNotification } from "MessageNotification.tsx";
+import { MessageNotificationDetachedContent } from "MessageNotificationDetachedContent.tsx";
+import { MessageRequestInAppNotification } from "MessageRequestNotification.tsx";
+import { ReactionNotificationBody } from "ReactionNotification.tsx";
+import { NotificationAvatar } from "ReminderNotification.tsx";
+import { RestrictedHoursWarningNotification } from "RestrictedHoursWarningNotification.tsx";
 
 let NOTIFICATION_CONTAINER_MARGIN;
 let c10;

@@ -1,11 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/15449_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15450_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15451_registerAsset.js";
-import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { generateHydrationId } from "../../ICYMIUtils.tsx";
 // discord_app/modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx
 import _slicedToArray from "_slicedToArray";
 import TableSwitchRow from "TableSwitchRow";
@@ -14,6 +6,14 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import filterStaffGuild from "filterStaffGuild";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/15449_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15450_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15451_registerAsset.js";
+import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
+import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { generateHydrationId } from "../../ICYMIUtils.tsx";
 
 let c9;
 let metroImportAll;

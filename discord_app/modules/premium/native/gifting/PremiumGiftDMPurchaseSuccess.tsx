@@ -1,12 +1,12 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
-import { PremiumGiftBackgroundAnimation } from "PremiumGiftBackgroundAnimation.android.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
+import { PremiumGiftBackgroundAnimation } from "PremiumGiftBackgroundAnimation.android.tsx";
 
 let c5;
 let closure_6;

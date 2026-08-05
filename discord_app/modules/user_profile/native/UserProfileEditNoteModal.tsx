@@ -1,9 +1,9 @@
-import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileEditNoteModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("module_4490").fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");

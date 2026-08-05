@@ -1,8 +1,8 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/components/TableRow/native/RowButton.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const require = arg1;
 class RowButton {

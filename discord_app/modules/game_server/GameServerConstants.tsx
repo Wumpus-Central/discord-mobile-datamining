@@ -1,5 +1,5 @@
-import { GameServerProviderType } from "../../../discord_common/js/shared/shared-constants/GameServerProviderType.tsx";
 // discord_app/modules/game_server/GameServerConstants.tsx
+import { GameServerProviderType } from "../../../discord_common/js/shared/shared-constants/GameServerProviderType.tsx";
 let obj = { SELECT_GAME: "select-game", SERVER_SETTINGS: "server-settings" };
 obj = { type: "go-to-step", step: obj.SERVER_SETTINGS };
 obj = { type: "go-to-step", step: obj.SELECT_GAME };

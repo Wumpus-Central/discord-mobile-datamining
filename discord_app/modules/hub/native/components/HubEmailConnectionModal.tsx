@@ -1,13 +1,13 @@
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionModal.tsx
 import "getSystemLocale";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 createCacheKey = { safeArea: null };

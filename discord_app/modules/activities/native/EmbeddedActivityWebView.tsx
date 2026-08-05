@@ -1,4 +1,3 @@
-import { usePrevious } from "../../../hooks/usePrevious.tsx";
 // discord_app/modules/activities/native/EmbeddedActivityWebView.tsx
 import closure_4 from "items3";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +10,7 @@ import { jsx } from "set";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "noop";
+import { usePrevious } from "../../../hooks/usePrevious.tsx";
 
 let c10;
 let c9;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/threads/ThreadConstants.tsx
 import { AbortCodes } from "ME";
 import set from "set";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let obj = { HAS_INTERACTED: 1, ALL_MESSAGES: 2, ONLY_MENTIONS: 4, NO_MESSAGES: 8 };
 let items = [, , , ];

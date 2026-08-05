@@ -1,8 +1,3 @@
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { useIsViewingActivity } from "../../../activities/native/useIsViewingActivity.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { usePipDimensions } from "usePipDimensions.tsx";
-import { useShouldForcePipOrientation } from "useShouldForcePipOrientation.tsx";
 // discord_app/modules/video_calls/native/components/PictureInPictureVideo.tsx
 import registerAsset from "registerAsset";
 import importAllResult from "isWatchTogetherApplication";
@@ -19,6 +14,11 @@ import { ParticipantTypes } from "ParticipantTypes";
 import jsxProd from "module_4478";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { useIsViewingActivity } from "../../../activities/native/useIsViewingActivity.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { usePipDimensions } from "usePipDimensions.tsx";
+import { useShouldForcePipOrientation } from "useShouldForcePipOrientation.tsx";
 
 let c4;
 let c5;

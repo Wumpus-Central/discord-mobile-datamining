@@ -1,8 +1,3 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Form } from "../../../../design/void/Form/native/index.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +6,11 @@ import { View } from "get ActivityIndicator";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c9;
 let metroImportAll;

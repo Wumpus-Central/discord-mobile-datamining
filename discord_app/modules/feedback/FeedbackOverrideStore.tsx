@@ -1,6 +1,6 @@
-import { optOutEligibilityCheck } from "FeedbackManager.tsx";
 // discord_app/modules/feedback/FeedbackOverrideStore.tsx
 import { Store } from "initialize";
+import { optOutEligibilityCheck } from "FeedbackManager.tsx";
 
 const require = arg1;
 let closure_2 = {};

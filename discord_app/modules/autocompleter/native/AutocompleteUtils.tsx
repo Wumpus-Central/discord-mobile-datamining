@@ -1,6 +1,3 @@
-import { Divider } from "../../../design/void/Form/native/FormDivider.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
 // discord_app/modules/autocompleter/native/AutocompleteUtils.tsx
 import "noop";
 import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
@@ -12,6 +9,9 @@ import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT";
 import regExp from "regExp";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Divider } from "../../../design/void/Form/native/FormDivider.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
 
 let c10;
 let c9;

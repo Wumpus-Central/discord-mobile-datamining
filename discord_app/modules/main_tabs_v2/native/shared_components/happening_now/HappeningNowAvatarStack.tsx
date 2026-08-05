@@ -1,5 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +6,8 @@ import _getSystemLocale from "_getSystemLocale";
 import { CHANNEL_SPRING_CONFIG } from "n";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
 
 let c9;
 let metroImportAll;

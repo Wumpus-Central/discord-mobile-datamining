@@ -1,7 +1,7 @@
-import { connectToStage } from "../../modules/stage_channels/StageChannelModalActionCreators.tsx";
-import { openChannelCallModal } from "PrivateChannelCallUtils.tsx";
 // discord_app/utils/native/openChannelCallModalForChannelId.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { connectToStage } from "../../modules/stage_channels/StageChannelModalActionCreators.tsx";
+import { openChannelCallModal } from "PrivateChannelCallUtils.tsx";
 
 const require = arg1;
 const result = require("openChannelCallModal").fileFinishedImporting("utils/native/openChannelCallModalForChannelId.tsx");

@@ -1,7 +1,7 @@
-import { transitionTo } from "../../../routing/router_utils.tsx";
-import { collectThreadMetadata } from "../../ThreadAnalyticsUtils.tsx";
 // discord_app/modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { transitionTo } from "../../../routing/router_utils.tsx";
+import { collectThreadMetadata } from "../../ThreadAnalyticsUtils.tsx";
 
 const require = arg1;
 let result = require("transitionTo").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");

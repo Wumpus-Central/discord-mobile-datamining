@@ -1,12 +1,12 @@
+// discord_app/modules/stage_channels/StageChannelActionCreatorExtras.native.tsx
+import { setIsOnStartStageScreen } from "setIsOnStartStageScreen";
+import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH";
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import { showUserProfileActionSheet } from "../user_profile/native/showUserProfileActionSheet.tsx";
 import { useIsStageVoicePanelEnabled } from "StageVoicePanelExperiment.tsx";
 import { useStageBlockedUsersCount } from "useStageBlockedUsersCount.tsx";
-// discord_app/modules/stage_channels/StageChannelActionCreatorExtras.native.tsx
-import { setIsOnStartStageScreen } from "setIsOnStartStageScreen";
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH";
 
 let c4;
 let c5;

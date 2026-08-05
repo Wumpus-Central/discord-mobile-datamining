@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/DeviceInfoSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { DCDDeviceManager } from "../../../../utils/native/DeviceUtils.tsx";
 import { getClientInfo } from "CopyClientInfoSetting.tsx";
-// discord_app/modules/user_settings/defs/native/DeviceInfoSetting.tsx
-import createToggle from "createToggle";
 
 let obj = {
   useTitle() {

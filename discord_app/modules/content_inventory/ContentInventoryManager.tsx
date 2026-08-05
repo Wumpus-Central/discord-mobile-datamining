@@ -1,6 +1,3 @@
-import { ContentInventoryFeature } from "../../../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { apexExperiment } from "ContentInventoryExperiments.tsx";
 // discord_app/modules/content_inventory/ContentInventoryManager.tsx
 import updateImpressionCaches from "updateImpressionCaches";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -14,6 +11,9 @@ import { PlatformTypes } from "ME";
 import apply from "dispatcher";
 import "initialize";
 import set from "set";
+import { ContentInventoryFeature } from "../../../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { apexExperiment } from "ContentInventoryExperiments.tsx";
 
 const require = arg1;
 function getBackoffJitter() {

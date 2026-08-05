@@ -1,4 +1,3 @@
-import { UserPlaceholderRow } from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteActionSheet.tsx
 import InstantInviteShareApps from "InstantInviteShareApps.tsx";
 import getInviteURL from "getInviteURL";
@@ -11,6 +10,7 @@ import { InviteTargetTypes } from "InviteSendStates";
 import { Permissions } from "ME";
 import jsxProd from "ACTION_SHEET_HEIGHT_HALF";
 import createCacheKey from "createCacheKey";
+import { UserPlaceholderRow } from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 
 let c5;
 let closure_14;

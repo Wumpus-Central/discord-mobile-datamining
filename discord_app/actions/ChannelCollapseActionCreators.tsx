@@ -1,7 +1,7 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { handleConnectionOpen } from "../modules/user_settings/UserGuildSettingsManager.tsx";
 // discord_app/actions/ChannelCollapseActionCreators.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import { dispatcher } from "../Dispatcher.tsx";
+import { handleConnectionOpen } from "../modules/user_settings/UserGuildSettingsManager.tsx";
 
 let result = require("handleConnectionOpen").fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
 

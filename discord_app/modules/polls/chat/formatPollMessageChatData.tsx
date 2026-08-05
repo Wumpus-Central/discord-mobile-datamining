@@ -1,6 +1,3 @@
-import { GuildMemberFlags } from "../../guild_automod/AutomodPermissionUtils.tsx";
-import { isCommunicationDisabled } from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
-import { formatExpirationLabel } from "useFormattedExpirationLabel.tsx";
 // discord_app/modules/polls/chat/formatPollMessageChatData.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -11,6 +8,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { getPollState } from "useMessagePollInteractions";
 import ME from "ME";
 import set from "ensureGuildLoaded";
+import { GuildMemberFlags } from "../../guild_automod/AutomodPermissionUtils.tsx";
+import { isCommunicationDisabled } from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import { formatExpirationLabel } from "useFormattedExpirationLabel.tsx";
 
 const require = arg1;
 function reactionForId(reactions, first) {

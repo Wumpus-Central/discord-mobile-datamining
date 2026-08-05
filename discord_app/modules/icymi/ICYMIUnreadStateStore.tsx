@@ -1,6 +1,6 @@
-import { MessageEmbedTypes } from "ICYMITypes.tsx";
 // discord_app/modules/icymi/ICYMIUnreadStateStore.tsx
 import { DeviceSettingsStore } from "initialize";
+import { MessageEmbedTypes } from "ICYMITypes.tsx";
 
 const require = arg1;
 let closure_2 = 7 * require("set").Millis.DAY;

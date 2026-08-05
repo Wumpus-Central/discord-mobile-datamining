@@ -1,6 +1,3 @@
-import { memoResult1 } from "../../guild_settings/native/DetailedGuildIdentityUserRow.tsx";
-import { InviteRolesDisplay } from "../../instant_invite/native/InviteRolesDisplay.tsx";
-import { InstantInviteUsesLabel } from "InstantInviteUsesLabel.tsx";
 // discord_app/modules/guild_instant_invites/native/InstantInvite.tsx
 import importAllResult from "IconButton";
 import { View } from "Text";
@@ -8,6 +5,9 @@ import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord"
 import { Routes } from "ME";
 import jsxProd from "memoResult1";
 import createCacheKey from "createCacheKey";
+import { memoResult1 } from "../../guild_settings/native/DetailedGuildIdentityUserRow.tsx";
+import { InviteRolesDisplay } from "../../instant_invite/native/InviteRolesDisplay.tsx";
+import { InstantInviteUsesLabel } from "InstantInviteUsesLabel.tsx";
 
 let error;
 let metroImportAll;

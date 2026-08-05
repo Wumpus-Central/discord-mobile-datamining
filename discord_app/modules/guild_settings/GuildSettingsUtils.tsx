@@ -1,7 +1,7 @@
-import { getPermissionOptions } from "../../utils/PermissionSpecUtils.tsx";
 // discord_app/modules/guild_settings/GuildSettingsUtils.tsx
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import ME from "ME";
+import { getPermissionOptions } from "../../utils/PermissionSpecUtils.tsx";
 
 let c4;
 let c5;

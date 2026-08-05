@@ -1,4 +1,3 @@
-import { InitialPinsScreen } from "../../../../../search/native/components/tabs/pages/messages/PinsScreen.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/PinsScreen.tsx
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -6,6 +5,7 @@ import { SearchTabs } from "MessageEmbedTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { InitialPinsScreen } from "../../../../../search/native/components/tabs/pages/messages/PinsScreen.tsx";
 
 const require = arg1;
 let obj = { container: null };

@@ -1,11 +1,11 @@
-import { HeaderAvatar } from "../../profile_customization/native/HeaderAvatar.tsx";
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
 // discord_app/modules/user_profile/native/UserProfileAvatar.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY";
 import { AVATAR_SIZE_VARIANT } from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "jsxProd";
+import { HeaderAvatar } from "../../profile_customization/native/HeaderAvatar.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
 
 let c9;
 let error;

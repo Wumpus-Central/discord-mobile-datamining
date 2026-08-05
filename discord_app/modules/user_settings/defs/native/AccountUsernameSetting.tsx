@@ -1,13 +1,13 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useCurrentUserHasAutomodQuarantinedProfile } from "../../../guild_automod/AutomodQuarantineUtils.tsx";
-import { UsernameStatusMessage } from "../../account/native/UserSettingsChangeUsername.tsx";
 // discord_app/modules/user_settings/defs/native/AccountUsernameSetting.tsx
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useCurrentUserHasAutomodQuarantinedProfile } from "../../../guild_automod/AutomodQuarantineUtils.tsx";
+import { UsernameStatusMessage } from "../../account/native/UserSettingsChangeUsername.tsx";
 
 const require = arg1;
 createToggle = {

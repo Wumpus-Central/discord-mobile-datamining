@@ -1,7 +1,7 @@
-import { __INTERNAL_VIEW_CONFIG } from "../../../../../discord_common/js/packages/rtn-codegen/js/PassthroughTouchNativeComponent.tsx";
 // discord_app/design/void/PassthroughTouchView/native/PassthroughTouchView.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "../../../../../discord_common/js/packages/rtn-codegen/js/PassthroughTouchNativeComponent.tsx";
 
 const result = require("__INTERNAL_VIEW_CONFIG").fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
 

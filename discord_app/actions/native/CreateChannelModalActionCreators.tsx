@@ -1,7 +1,7 @@
-import { ModalActionCreators } from "../ModalActionCreators.tsx";
 // discord_app/actions/native/CreateChannelModalActionCreators.tsx
 import { CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES as closure_3 } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { ModalActionCreators } from "../ModalActionCreators.tsx";
 
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
 const result = require("transitionToChannel").fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");

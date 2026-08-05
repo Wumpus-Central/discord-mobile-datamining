@@ -1,8 +1,8 @@
-import { apexExperiment } from "experiments/GiftingBadgeDesktopExperiment.tsx";
-import { apexExperiment } from "experiments/GiftingBadgeExperiment.tsx";
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
 import { getSingleRequirementThreshold as closure_2 } from "map";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { apexExperiment } from "experiments/GiftingBadgeDesktopExperiment.tsx";
+import { apexExperiment } from "experiments/GiftingBadgeExperiment.tsx";
 
 let result = require("apexExperiment").fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 

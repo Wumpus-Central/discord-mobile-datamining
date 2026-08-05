@@ -1,9 +1,9 @@
+// discord_app/modules/user_profile/DisplayProfile.tsx
+import { PremiumTypes } from "GuildFeatures";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 import { useAvatarsWithGuilds } from "../profile_customization/ProfileCustomizationUtils.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
-// discord_app/modules/user_profile/DisplayProfile.tsx
-import { PremiumTypes } from "GuildFeatures";
 
 const result = require("getPremiumPlanItem").fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
 class DisplayProfile {

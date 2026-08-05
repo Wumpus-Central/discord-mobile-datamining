@@ -1,3 +1,9 @@
+// discord_app/modules/stickers/native/StickerPackHeader.tsx
+import { View } from "get ActivityIndicator";
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { registerAsset } from "../../../../_runtime/09882_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/09883_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -5,12 +11,6 @@ import { Button } from "../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getStickerExtensionFromFormatType } from "../StickersUtils.tsx";
 import { StickerPackBanner } from "StickerPackBanner.tsx";
-// discord_app/modules/stickers/native/StickerPackHeader.tsx
-import { View } from "get ActivityIndicator";
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let PADDING_HORIZONTAL;
 let PADDING_VERTICAL;

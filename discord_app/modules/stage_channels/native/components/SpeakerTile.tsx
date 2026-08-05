@@ -1,4 +1,3 @@
-import { StageTileSize } from "../../StageTileTypes.tsx";
 // discord_app/modules/stage_channels/native/components/SpeakerTile.tsx
 import importAllResult from "registerAsset";
 import { View } from "Button";
@@ -7,6 +6,7 @@ import { ParticipantTypes } from "ParticipantTypes";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { StageTileSize } from "../../StageTileTypes.tsx";
 
 let error;
 let metroImportAll;

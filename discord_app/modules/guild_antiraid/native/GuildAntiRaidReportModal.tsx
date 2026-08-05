@@ -1,8 +1,3 @@
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/guild_antiraid/native/GuildAntiRaidReportModal.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +5,11 @@ import { View } from "set";
 import COMMUNITY_PORTAL_SERVER_SAFETY_PAGE from "COMMUNITY_PORTAL_SERVER_SAFETY_PAGE";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c9;

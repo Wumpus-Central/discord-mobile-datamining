@@ -1,4 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/summaries/SummaryActionCreators.tsx
 import ME from "ME";
 import noop from "noop";
@@ -6,6 +5,7 @@ import _handleConnectionOpen from "_handleConnectionOpen";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleQuickSwitcherUpdate from "handleQuickSwitcherUpdate";
 import { Routes } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function fetchSummary(c1, c4) {

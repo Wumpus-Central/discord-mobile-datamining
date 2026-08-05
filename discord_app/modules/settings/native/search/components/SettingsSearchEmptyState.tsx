@@ -1,12 +1,12 @@
-import { getNoResultsAltSource } from "../../../../../design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx";
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/settings/native/search/components/SettingsSearchEmptyState.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getNoResultsAltSource } from "../../../../../design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx";
+import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

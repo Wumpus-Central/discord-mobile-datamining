@@ -1,5 +1,3 @@
-import { frozen } from "../../../../components_native/QRCode.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteQRCodeActionSheet.tsx
 import noop from "noop";
 import { View } from "set";
@@ -8,6 +6,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { frozen } from "../../../../components_native/QRCode.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 
 let c10;
 let c9;

@@ -1,9 +1,9 @@
-import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
-import { PortalKeyboardRendererComponent } from "PortalKeyboardRendererComponent.tsx";
 // discord_app/modules/keyboard/native/PortalKeyboardRenderer.tsx
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 import { jsx } from "jsxProd";
+import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { PortalKeyboardRendererComponent } from "PortalKeyboardRendererComponent.tsx";
 
 const require = arg1;
 function transitionGroupGetItemKey(id) {

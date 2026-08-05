@@ -1,7 +1,7 @@
-import { timestamp } from "../../debug/Logger.tsx";
 // discord_app/modules/app_startup/native/executeRunnable.tsx
 import createFastConnectSocket from "createFastConnectSocket";
 import linkFromAppsFlyer from "linkFromAppsFlyer";
+import { timestamp } from "../../debug/Logger.tsx";
 
 let c5;
 let closure_6;

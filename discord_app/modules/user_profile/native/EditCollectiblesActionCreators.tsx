@@ -1,6 +1,6 @@
-import { openUserSettings } from "../../user_settings/core/native/openUserSettings.tsx";
 // discord_app/modules/user_profile/native/EditCollectiblesActionCreators.tsx
 import { UserSettingsSections } from "ME";
+import { openUserSettings } from "../../user_settings/core/native/openUserSettings.tsx";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesActionCreators.tsx");
 

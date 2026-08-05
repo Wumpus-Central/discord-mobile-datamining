@@ -1,8 +1,8 @@
-import { trackDeviceChanged } from "../../actions/AudioActionCreators.tsx";
 // discord_app/modules/calls/NativeMuteManager.native.tsx
 import importDefaultResult from "handleAudioRouteChanged";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import importDefaultResult1 from "dispatcher";
+import { trackDeviceChanged } from "../../actions/AudioActionCreators.tsx";
 
 let obj = arg1;
 let c3 = importDefaultResult;

@@ -1,9 +1,9 @@
-import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx
 import getParticipants from "getParticipants";
 import reset from "reset";
 import initialize from "initialize";
 import { ApplicationStreamStates } from "ME";
+import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
 
 const require = arg1;
 let closure_6 = 20 * require("set").Millis.SECOND;

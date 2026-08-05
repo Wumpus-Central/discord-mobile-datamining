@@ -1,8 +1,8 @@
-import { designConfig } from "../../../config.tsx";
-import { PostponeRender } from "PostponeRender.native.tsx";
 // discord_app/design/components/Navigator/native/NavigatorScreen.native.tsx
 import { jsxs } from "jsxProd";
 import importAllResult from "noop";
+import { designConfig } from "../../../config.tsx";
+import { PostponeRender } from "PostponeRender.native.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo((arg0) => {

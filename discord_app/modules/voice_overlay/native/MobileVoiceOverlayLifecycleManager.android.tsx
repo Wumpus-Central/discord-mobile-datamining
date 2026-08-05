@@ -1,5 +1,3 @@
-import { MessageQueue } from "../../../../_runtime/00039_MessageQueue.js";
-import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 // discord_app/modules/voice_overlay/native/MobileVoiceOverlayLifecycleManager.android.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
@@ -34,6 +32,8 @@ import { intl as intl9 } from "getSystemLocale";
 import { intl as intl10 } from "getSystemLocale";
 import { intl as intl11 } from "getSystemLocale";
 import "initialize";
+import { MessageQueue } from "../../../../_runtime/00039_MessageQueue.js";
+import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 
 let closure_14;
 let closure_15;

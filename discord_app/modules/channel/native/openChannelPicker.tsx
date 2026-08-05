@@ -1,9 +1,9 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/channel/native/openChannelPicker.tsx
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");

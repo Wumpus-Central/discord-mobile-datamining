@@ -1,12 +1,12 @@
-import { ApplicationIntegrationType } from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
 // discord_app/modules/application_commands/getPrimaryAppCommand.tsx
 import ScoreMethod from "ScoreMethod";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getIndexKey from "getIndexKey";
 import closure_7 from "getIndexKey";
+import { ApplicationIntegrationType } from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
 
 let c5;
 let closure_6;

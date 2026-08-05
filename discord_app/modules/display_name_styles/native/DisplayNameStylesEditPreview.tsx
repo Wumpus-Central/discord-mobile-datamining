@@ -1,14 +1,14 @@
+// discord_app/modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx
+import noop from "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../intl/DisplayNameStyles.messages.js";
 import { DisplayNameStyleColorPreset } from "../types.tsx";
 import { AVERAGE_FONT_WIDTH_RATIO } from "UsernameWithEffects.tsx";
-// discord_app/modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

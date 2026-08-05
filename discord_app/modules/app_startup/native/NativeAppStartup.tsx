@@ -1,7 +1,3 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { databaseName } from "../../app_database/system/DatabaseManager.tsx";
 // discord_app/modules/app_startup/native/NativeAppStartup.tsx
 import onStageConnectionError from "onStageConnectionError";
 import closure_5 from "timestamp";
@@ -17,6 +13,10 @@ import ManagerRegistry.native from "../ManagerRegistry.native.tsx";
 import ME from "ME";
 import { loadImports } from "result";
 import { loadIndex } from "result";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { databaseName } from "../../app_database/system/DatabaseManager.tsx";
 
 let c10;
 let c9;

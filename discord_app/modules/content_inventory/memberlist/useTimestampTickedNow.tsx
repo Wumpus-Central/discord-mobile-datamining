@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/content_inventory/memberlist/useTimestampTickedNow.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../../utils/Durations.tsx";
 
 const require = arg1;
 let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");

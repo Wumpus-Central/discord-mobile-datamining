@@ -1,4 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/visual_effect_view/native/overrides/VEVOO.tsx
 import { ScrollView } from "toggle";
 import getUserAgnosticState from "getUserAgnosticState";
@@ -7,6 +6,7 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 let closure_6;
 let error;

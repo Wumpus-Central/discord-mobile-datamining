@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -9,6 +5,10 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import jsxProd from "jsxProd";
 import { createElement } from "noop";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let closure_6;
 let error;

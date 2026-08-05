@@ -1,11 +1,11 @@
-import { PendingMessageRequestRow } from "../../../../message_request/native/MessageRequestList.tsx";
-import { PendingSpamMessageRequestRow } from "../../../../message_request/native/spam/SpamMessageList.tsx";
 // discord_app/modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { PendingMessageRequestRow } from "../../../../message_request/native/MessageRequestList.tsx";
+import { PendingSpamMessageRequestRow } from "../../../../message_request/native/spam/SpamMessageList.tsx";
 
 let closure_6;
 let error;

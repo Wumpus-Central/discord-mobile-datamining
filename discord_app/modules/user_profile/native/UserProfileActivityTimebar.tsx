@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useActivityTimer } from "../hooks/useActivityTimer.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivityTimebar.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useActivityTimer } from "../hooks/useActivityTimer.tsx";
 
 let c5;
 let closure_6;

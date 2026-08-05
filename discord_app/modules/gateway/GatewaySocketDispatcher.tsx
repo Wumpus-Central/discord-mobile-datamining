@@ -1,10 +1,10 @@
-import { CLOSED } from "ConnectionState.tsx";
-import { prettyPrintTrace_ } from "GatewaySocketAnalytics.tsx";
-import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 // discord_app/modules/gateway/GatewaySocketDispatcher.tsx
 import _slicedToArray from "_slicedToArray";
 import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DISPATCHER_STANDARD_TIMEOUT_MS";
 import set from "timestamp";
+import { CLOSED } from "ConnectionState.tsx";
+import { prettyPrintTrace_ } from "GatewaySocketAnalytics.tsx";
+import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 
 const require = arg1;
 let c5 = new require("_queueIdleCallback")("GatewaySocket");

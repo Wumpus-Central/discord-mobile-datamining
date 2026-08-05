@@ -1,11 +1,11 @@
+// discord_app/modules/user_settings/defs/native/SyncContactsNameSetting.tsx
+import { AnalyticEvents } from "ME";
+import createToggle from "createToggle";
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.tsx";
-// discord_app/modules/user_settings/defs/native/SyncContactsNameSetting.tsx
-import { AnalyticEvents } from "ME";
-import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {

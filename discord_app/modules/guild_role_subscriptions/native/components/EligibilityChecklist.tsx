@@ -1,10 +1,10 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

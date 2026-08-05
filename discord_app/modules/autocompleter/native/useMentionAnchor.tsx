@@ -1,7 +1,7 @@
-import { AutocompleteFormDivider } from "AutocompleteUtils.tsx";
 // discord_app/modules/autocompleter/native/useMentionAnchor.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { AutocompleteFormDivider } from "AutocompleteUtils.tsx";
 
 const require = arg1;
 let closure_4 = { kind: "idle" };

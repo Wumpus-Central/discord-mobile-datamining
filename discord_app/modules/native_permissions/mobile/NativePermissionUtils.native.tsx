@@ -1,7 +1,3 @@
-import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { timestamp } from "../../debug/Logger.tsx";
-import { openPrivacySettings } from "openPrivacySettings.native.tsx";
 // discord_app/modules/native_permissions/mobile/NativePermissionUtils.native.tsx
 import closure_3 from "set";
 import noop from "noop";
@@ -14,6 +10,10 @@ import { NativePermissionBaseUtils } from "requestAuthorization";
 import set from "set";
 import set from "set";
 import set from "get ActivityIndicator";
+import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { timestamp } from "../../debug/Logger.tsx";
+import { openPrivacySettings } from "openPrivacySettings.native.tsx";
 
 let NativePermissionTypes;
 let closure_6;

@@ -1,3 +1,6 @@
+// discord_app/modules/avatar/native/AddAvatarModalActionCreators.tsx
+import { ADD_AVATAR_MODAL_KEY } from "ADD_AVATAR_MODAL_KEY";
+import { AnalyticEvents } from "ME";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { set } from "../../../actions/AlertActionCreators.tsx";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
@@ -5,9 +8,6 @@ import { saveProfileAndAccountRequest } from "../../../actions/UserSettingsAccou
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { _startContactSyncForDiscoverability } from "../../nuf/native/NUFActionCreators.tsx";
-// discord_app/modules/avatar/native/AddAvatarModalActionCreators.tsx
-import { ADD_AVATAR_MODAL_KEY } from "ADD_AVATAR_MODAL_KEY";
-import { AnalyticEvents } from "ME";
 
 let result = require("expandEventProperties").fileFinishedImporting("modules/avatar/native/AddAvatarModalActionCreators.tsx");
 

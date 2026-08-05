@@ -1,4 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +8,7 @@ import closure_9 from "makeGroupListingIndexSubscriptionListingTag";
 import { AnalyticsLocations } from "ME";
 import { StaticChannelRoute } from "set";
 import jsxProd from "asyncRequireImpl";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let closure_12;
 let map1;

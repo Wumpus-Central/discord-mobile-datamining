@@ -1,7 +1,7 @@
-import { parseProviderRouteHeadlessSessionId } from "parseProviderRouteHeadlessSessionId.tsx";
 // discord_app/modules/user_profile/utils/getActivityPlatform.tsx
 import { PlatformTypes } from "ME";
 import set from "isListeningOnSpotify";
+import { parseProviderRouteHeadlessSessionId } from "parseProviderRouteHeadlessSessionId.tsx";
 
 const items = [, , , ];
 ({ LEAGUE_OF_LEGENDS: arr[0], ROBLOX: arr[1], TWITCH: arr[2], YOUTUBE: arr[3] } = PlatformTypes);

@@ -1,9 +1,9 @@
-import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Sheet/native/ActionSheetIconHeader.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../Text/native/Text.tsx";
 
 let c3;
 let c4;

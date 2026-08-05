@@ -1,9 +1,9 @@
-import { V6OrEarlierAPIError } from "../../errors/index.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/search/SearchMessageStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import { Store } from "initialize";
+import { V6OrEarlierAPIError } from "../../errors/index.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 const require = arg1;
 function handleReaction(optimistic) {

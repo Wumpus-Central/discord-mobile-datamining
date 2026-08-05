@@ -1,9 +1,9 @@
-import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { items } from "DevToolsGuildTagBadgesScreen.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import importAllResult from "noop";
+import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { items } from "DevToolsGuildTagBadgesScreen.tsx";
 
 const require = arg1;
 createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigator();

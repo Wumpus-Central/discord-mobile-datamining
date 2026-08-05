@@ -1,14 +1,14 @@
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { JoinCallButton } from "../channel/ChannelActions.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/HeaderShared.tsx
 import importAllResult from "ChannelHeader";
 import get_ActivityIndicator from "shallowEqual";
 import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { JoinCallButton } from "../channel/ChannelActions.tsx";
 
 let Platform;
 let c4;

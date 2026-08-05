@@ -1,6 +1,6 @@
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
 // discord_app/modules/interaction_components/StringSelectActionComponentUtils.tsx
 import getInteractionComponentStates from "getInteractionComponentStates";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");

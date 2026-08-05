@@ -1,9 +1,3 @@
-import { AutomodNotificationEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx";
-import { AutomodQuarantineUserActionMessageEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserActionMessageEmbedKeys.tsx";
-import { AutomodQuarantineUserMessageEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { computeChannelName } from "../channel/useChannelName.tsx";
-import { Feedback } from "AutomodFeedback.tsx";
 // discord_app/modules/guild_automod/AutomodMessageUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import Feedback from "Feedback";
@@ -12,6 +6,12 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { AutomodNotificationEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx";
+import { AutomodQuarantineUserActionMessageEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserActionMessageEmbedKeys.tsx";
+import { AutomodQuarantineUserMessageEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { computeChannelName } from "../channel/useChannelName.tsx";
+import { Feedback } from "AutomodFeedback.tsx";
 
 let c10;
 let c9;

@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { InfoBox } from "../../user_settings/authorized_apps/native/InfoBox.tsx";
-import { SlayerStorefrontItemCard } from "SlayerStorefrontItemCard.tsx";
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { InfoBox } from "../../user_settings/authorized_apps/native/InfoBox.tsx";
+import { SlayerStorefrontItemCard } from "SlayerStorefrontItemCard.tsx";
 
 let c4;
 let c5;

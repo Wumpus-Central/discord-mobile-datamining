@@ -1,3 +1,9 @@
+// discord_app/modules/collectibles/native/FramesEarlyAccessBadge.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import { Layer } from "../../../design/components/Layers/native/LayerScope.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -5,12 +11,6 @@ import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { useTheme } from "../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useCanPurchaseFrames } from "../hooks/useCanPurchaseFrames.tsx";
-// discord_app/modules/collectibles/native/FramesEarlyAccessBadge.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

@@ -1,10 +1,10 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/premium/ReferralTrialActionCreators.tsx
 import dispatcher from "dispatcher";
 import createdAt from "createdAt";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let closure_6;
 let error;

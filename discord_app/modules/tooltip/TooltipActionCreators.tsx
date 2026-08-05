@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/tooltip/TooltipActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/tooltip/TooltipActionCreators.tsx");
 
 export default {

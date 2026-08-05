@@ -1,8 +1,8 @@
+// discord_app/modules/emojis/top_emojis/TopEmojisActionCreators.tsx
+import { Endpoints } from "ME";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { RouteParam } from "../../routing/RouteUtils.tsx";
-// discord_app/modules/emojis/top_emojis/TopEmojisActionCreators.tsx
-import { Endpoints } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisActionCreators.tsx");
 

@@ -1,9 +1,3 @@
-import { CircleCheckIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
-import { FileUpIcon } from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { formatSize } from "../../../../utils/FileSizeUtils.tsx";
-import { flattenComponents } from "../../InteractionComponentUtils.tsx";
 // discord_app/modules/interaction_components/native/actions/FileUploadActionComponent.tsx
 import ME from "ME";
 import initialize from "initialize";
@@ -13,6 +7,12 @@ import { DraftType } from "handleChanged";
 import { NOOP } from "ME";
 import jsxProd from "KESTREL_GA_UPLOAD_LIMIT_MB";
 import createCacheKey from "createCacheKey";
+import { CircleCheckIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import { FileUpIcon } from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { formatSize } from "../../../../utils/FileSizeUtils.tsx";
+import { flattenComponents } from "../../InteractionComponentUtils.tsx";
 
 let c10;
 let c9;

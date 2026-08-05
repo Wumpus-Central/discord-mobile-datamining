@@ -1,10 +1,10 @@
-import { useResourceChannels } from "../useResourceChannels.tsx";
 // discord_app/modules/guild_onboarding_home/native/ResourcesRow.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useResourceChannels } from "../useResourceChannels.tsx";
 
 let c5;
 let closure_6;

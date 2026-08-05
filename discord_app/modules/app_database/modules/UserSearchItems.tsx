@@ -1,4 +1,3 @@
-import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/UserSearchItems.tsx
 import ME from "ME";
 import recountRelationshipTypes from "recountRelationshipTypes";
@@ -7,6 +6,7 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { RelationshipTypes } from "ME";
 import set from "recomputeAffinities";
+import { items } from "../DatabaseDaos.tsx";
 
 let c9 = new require("upsertRelationship")("UserSearchItems");
 let c10 = false;

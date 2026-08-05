@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/09883_registerAsset.js";
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/chat/native/SettingsChatScreen.tsx
 import SettingLayout from "../../../settings/native/renderer/SettingLayout.tsx";
 import { View } from "dispatcher";
@@ -14,6 +7,13 @@ import { MobileSetting } from "MobileSetting";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09883_registerAsset.js";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 
 let c10;
 let c9;

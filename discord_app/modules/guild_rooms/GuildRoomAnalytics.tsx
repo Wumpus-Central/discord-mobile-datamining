@@ -1,4 +1,3 @@
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/guild_rooms/GuildRoomAnalytics.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +6,7 @@ import updateVoiceState from "updateVoiceState";
 import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
 import { getSeatName } from "getName";
 import { AnalyticEvents } from "ME";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 const result = require("createRTCConnection").fileFinishedImporting("modules/guild_rooms/GuildRoomAnalytics.tsx");
 

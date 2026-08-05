@@ -1,3 +1,9 @@
+// discord_app/modules/accept_invite/native/InviteError.tsx
+import "set";
+import get_ActivityIndicator from "GuildIconSizes";
+import ME from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/11992_registerAsset.js";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -8,12 +14,6 @@ import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { combined } from "../../../utils/HelpdeskUtils.tsx";
 import { getDescriptiveInviteError } from "../../../utils/InviteErrorUtils.tsx";
 import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
-// discord_app/modules/accept_invite/native/InviteError.tsx
-import "set";
-import get_ActivityIndicator from "GuildIconSizes";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c3;

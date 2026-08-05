@@ -1,9 +1,9 @@
-import { ContextMenuDivider } from "ContextMenuPopout.native.tsx";
 // discord_app/design/components/ContextMenu/native/ContextMenuContainer.native.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ContextMenuDivider } from "ContextMenuPopout.native.tsx";
 
 let StyleSheet;
 let c4;

@@ -1,9 +1,9 @@
-import { set } from "../../utils/Durations.tsx";
-import { canFetchNitroProgramReward } from "ProgramRewardsUtils.tsx";
 // discord_app/modules/rewards/ProgramRewardsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PersistedStore } from "initialize";
+import { set } from "../../utils/Durations.tsx";
+import { canFetchNitroProgramReward } from "ProgramRewardsUtils.tsx";
 
 let require = arg1;
 function updateTtl() {

@@ -1,3 +1,17 @@
+// discord_app/utils/PremiumUtils.tsx
+import create from "create";
+import closure_4 from "t";
+import { isNoneSubscription } from "createFromServer";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
+import handlePaymentSourceUpdate from "handlePaymentSourceUpdate";
+import addSubscriptionPlan from "addSubscriptionPlan";
+import reset from "reset";
+import ME from "ME";
+import GuildFeatures from "GuildFeatures";
+import { getPremiumGroupProductName as closure_47 } from "SubscriptionStatusTypes";
+import sum from "sum";
+import set from "createFromServer";
 import { t } from "../../_runtime/03867_t.js";
 import { 00038__ } from "../../_runtime/metro/00038__.js";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
@@ -14,20 +28,6 @@ import { set } from "Durations.tsx";
 import { formatSize } from "FileSizeUtils.tsx";
 import { isPremiumAtLeast } from "PremiumTypeUtils.tsx";
 import { formatSingleCurrencyPrice } from "PriceUtils.tsx";
-// discord_app/utils/PremiumUtils.tsx
-import create from "create";
-import closure_4 from "t";
-import { isNoneSubscription } from "createFromServer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
-import handlePaymentSourceUpdate from "handlePaymentSourceUpdate";
-import addSubscriptionPlan from "addSubscriptionPlan";
-import reset from "reset";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import { getPremiumGroupProductName as closure_47 } from "SubscriptionStatusTypes";
-import sum from "sum";
-import set from "createFromServer";
 
 let SubscriptionPlans;
 let closure_12;

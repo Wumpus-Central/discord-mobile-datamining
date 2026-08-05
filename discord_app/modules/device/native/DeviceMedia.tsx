@@ -1,7 +1,7 @@
-import { getDeviceMediaPhotos } from "getDeviceMediaPhotos.tsx";
 // discord_app/modules/device/native/DeviceMedia.tsx
 import { AnalyticEvents } from "ME";
 import keys from "keys";
+import { getDeviceMediaPhotos } from "getDeviceMediaPhotos.tsx";
 
 let closure_4 = keys.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
 const result = require("expandEventProperties").fileFinishedImporting("modules/device/native/DeviceMedia.tsx");

@@ -1,11 +1,11 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { defaultFormatter } from "AnimatedCounterUtils.tsx";
 // discord_app/modules/forums/native/posts/AnimatedCounter.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { defaultFormatter } from "AnimatedCounterUtils.tsx";
 
 let c5;
 let closure_6;

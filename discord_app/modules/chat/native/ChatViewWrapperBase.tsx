@@ -1,9 +1,9 @@
-import { Layer } from "../../../design/components/Layers/native/LayerScope.native.tsx";
-import { StickyWrapper } from "../../../design/components/Sticky/native/StickyWrapper.native.tsx";
-import { useChatViewPointerEventsAndroid } from "useChatViewPointerEvents.android.tsx";
 // discord_app/modules/chat/native/ChatViewWrapperBase.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Layer } from "../../../design/components/Layers/native/LayerScope.native.tsx";
+import { StickyWrapper } from "../../../design/components/Sticky/native/StickyWrapper.native.tsx";
+import { useChatViewPointerEventsAndroid } from "useChatViewPointerEvents.android.tsx";
 
 const require = arg1;
 const result = require("useChatViewPointerEventsAndroid").fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");

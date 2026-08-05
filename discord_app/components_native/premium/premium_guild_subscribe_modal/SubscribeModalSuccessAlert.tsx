@@ -1,10 +1,3 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { componentDidMount } from "../../common/Alert.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
@@ -13,6 +6,13 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Gradients } from "items";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { keys } from "../../../ConstantsIOS.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { componentDidMount } from "../../common/Alert.tsx";
 
 let c10;
 let c5;

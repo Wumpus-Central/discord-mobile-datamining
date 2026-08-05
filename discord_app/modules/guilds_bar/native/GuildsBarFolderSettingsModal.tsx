@@ -1,13 +1,13 @@
-import { FormRoleColorPicker } from "../../../components_native/common/color_picker/FormRoleColorPicker.tsx";
-import { Form } from "../../../design/void/Form/native/index.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarFolderSettingsModal.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR";
 import jsxProd from "jsxProd";
+import { FormRoleColorPicker } from "../../../components_native/common/color_picker/FormRoleColorPicker.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let error;
 let metroImportAll;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ContentAndSocialSettings } from "../../content_and_social/native/ContentAndSocialScreen.tsx";
 // discord_app/modules/user_settings/defs/native/ContentAndSocialSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ContentAndSocialSettings } from "../../content_and_social/native/ContentAndSocialScreen.tsx";
 
 obj = {
   useTitle() {

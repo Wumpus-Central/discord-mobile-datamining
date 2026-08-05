@@ -1,9 +1,9 @@
-import { set } from "../lib/DiscordNative.tsx";
-import { set } from "PlatformUtils.tsx";
 // discord_app/utils/SpellcheckUtils.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import set from "set";
 import set from "set";
+import { set } from "../lib/DiscordNative.tsx";
+import { set } from "PlatformUtils.tsx";
 
 const require = arg1;
 function _setEnabled() {

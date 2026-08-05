@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsText } from "../../chat/native/UserSettingsText.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ImageDescriptionsSetting.tsx
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsText } from "../../chat/native/UserSettingsText.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const require = arg1;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {

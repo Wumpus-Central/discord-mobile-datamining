@@ -1,10 +1,10 @@
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { usePlaceholderWidth } from "../hooks/usePlaceholderSize.tsx";
 // discord_app/modules/app_launcher/native/base_components/PlaceholderAppRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { usePlaceholderWidth } from "../hooks/usePlaceholderSize.tsx";
 
 const require = arg1;
 createCacheKey = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };

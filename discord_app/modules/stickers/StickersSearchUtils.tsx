@@ -1,5 +1,5 @@
-import { NOOP } from "../../utils/AutocompleteUtils.tsx";
 // discord_app/modules/stickers/StickersSearchUtils.tsx
+import { NOOP } from "../../utils/AutocompleteUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/stickers/StickersSearchUtils.tsx");
 
 export const searchAllStickers = function searchAllStickers(arg0) {

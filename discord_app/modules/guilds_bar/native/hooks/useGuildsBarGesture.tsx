@@ -1,8 +1,3 @@
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { renderDefaultEmpty } from "../../../../lib/native/FastList.tsx";
-import { SentryUtils.native } from "../../../../utils/SentryUtils.native.tsx";
-import { HapticFeedbackTypes } from "../../../haptics/HapticUtils.native.tsx";
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarGesture.tsx
 import withEqualityFn from "withEqualityFn";
 import closure_4 from "t";
@@ -18,6 +13,11 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import apply from "module_1208";
 import apply from "module_1208";
 import importDefaultResult1 from "debounce";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { renderDefaultEmpty } from "../../../../lib/native/FastList.tsx";
+import { SentryUtils.native } from "../../../../utils/SentryUtils.native.tsx";
+import { HapticFeedbackTypes } from "../../../haptics/HapticUtils.native.tsx";
 
 let c10;
 let unpackModuleId;

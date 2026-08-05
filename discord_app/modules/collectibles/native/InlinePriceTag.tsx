@@ -1,3 +1,12 @@
+// discord_app/modules/collectibles/native/InlinePriceTag.tsx
+import "useVirtualCurrencyData";
+import get_ActivityIndicator from "useProductDisableState";
+import updateProduct from "updateProduct";
+import { ShopCtaEnum } from "items";
+import ME from "ME";
+import jsxProd from "useCanPurchaseFrames";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
@@ -11,15 +20,6 @@ import { useProductDisableState } from "../hooks/useProductDisableState.tsx";
 import { hasAtLeastOneGPlaySynced } from "CollectiblesUtils.tsx";
 import { useVirtualCurrencyData } from "hooks/useVirtualCurrencyData.tsx";
 import { useOpenNitroSubscribeActionSheet } from "useOpenNitroSubscribeActionSheet.tsx";
-// discord_app/modules/collectibles/native/InlinePriceTag.tsx
-import "useVirtualCurrencyData";
-import get_ActivityIndicator from "useProductDisableState";
-import updateProduct from "updateProduct";
-import { ShopCtaEnum } from "items";
-import ME from "ME";
-import jsxProd from "useCanPurchaseFrames";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c3;

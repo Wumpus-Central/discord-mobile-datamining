@@ -1,7 +1,7 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/quests/UnenrolledActivityQuestStore.tsx
 import { PersistedStore } from "initialize";
 import set from "dispatcher";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 let set = new Set();
 let set1 = set;

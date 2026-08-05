@@ -1,7 +1,3 @@
-import { trackInvite } from "../../../../actions/MessageActionCreators.tsx";
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { apexExperiment } from "../../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx";
-import { fetchAndReconcileGiftIntentDismissals } from "../PremiumGiftingIntentActionCreators.tsx";
 // discord_app/modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx
 import dropChannelIfEmpty from "dropChannelIfEmpty";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -9,6 +5,10 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import getCurrentTime from "getCurrentTime";
 import { MessageTypes } from "ME";
 import "initialize";
+import { trackInvite } from "../../../../actions/MessageActionCreators.tsx";
+import { dispatcher } from "../../../../Dispatcher.tsx";
+import { apexExperiment } from "../../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx";
+import { fetchAndReconcileGiftIntentDismissals } from "../PremiumGiftingIntentActionCreators.tsx";
 
 let require = arg1;
 let closure_8 = 10 * require("set").Millis.SECOND;

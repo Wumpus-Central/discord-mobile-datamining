@@ -1,6 +1,6 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/polls/chat/usePollMessageContextItemTypes.tsx
 import fetchFingerprint from "fetchFingerprint";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let obj = { END_EARLY: 0, [0]: "END_EARLY" };

@@ -1,6 +1,6 @@
-import { useWideAuthView } from "useWideAuthView.tsx";
 // discord_app/modules/auth/native/useOrientationLock.tsx
 import noop from "noop";
+import { useWideAuthView } from "useWideAuthView.tsx";
 
 let require = arg1;
 const result = require("isMetaQuest").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");

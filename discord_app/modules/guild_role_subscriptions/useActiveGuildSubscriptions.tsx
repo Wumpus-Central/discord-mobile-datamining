@@ -1,8 +1,8 @@
-import { useUserRoleSubscriptionRelationship } from "useUserRoleSubscriptionRelationship.tsx";
 // discord_app/modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx
 import noop from "noop";
 import reset from "reset";
 import { UserGuildRoleSubscriptionRelationship as closure_6 } from "MAX_SUBSCRIPTION_TIERS";
+import { useUserRoleSubscriptionRelationship } from "useUserRoleSubscriptionRelationship.tsx";
 
 const require = arg1;
 let closure_7 = [];

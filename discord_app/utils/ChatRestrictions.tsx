@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { parsedItemUsesEveryoneRole } from "MentionGuardUtils.tsx";
 // discord_app/utils/ChatRestrictions.tsx
 import { TOKEN_REGEX } from "ME";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { parsedItemUsesEveryoneRole } from "MentionGuardUtils.tsx";
 
 const items = [
   {

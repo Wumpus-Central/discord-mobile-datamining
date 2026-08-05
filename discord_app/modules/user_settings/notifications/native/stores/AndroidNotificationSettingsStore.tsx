@@ -1,9 +1,9 @@
-import { isIterable } from "../../../../../../_runtime/03898_isIterable.js";
-import { batchUpdates } from "../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { NativeModules } from "../../../../../lib/pushnotification/PushNotification.tsx";
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
 import isIterable from "isIterable";
 import identity from "identity";
+import { isIterable } from "../../../../../../_runtime/03898_isIterable.js";
+import { batchUpdates } from "../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { NativeModules } from "../../../../../lib/pushnotification/PushNotification.tsx";
 
 const require = arg1;
 function _initializeAndroidNotificationSettingsStore() {

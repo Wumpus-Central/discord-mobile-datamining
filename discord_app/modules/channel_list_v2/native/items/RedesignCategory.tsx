@@ -1,5 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/channel_list_v2/native/items/RedesignCategory.tsx
 import useFavoritesGuildCategoryAddAction from "useFavoritesGuildCategoryAddAction";
 import { View } from "initialize";
@@ -9,6 +7,8 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import hairlineWidth from "hairlineWidth";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 
 let c10;
 let c9;

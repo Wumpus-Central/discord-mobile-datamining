@@ -1,8 +1,8 @@
+// discord_app/modules/routing/transitionToGuild.native.tsx
+import { Routes } from "ME";
 import { LayoutAnimation } from "../animations/native/DeprecatedLayoutAnimation.tsx";
 import { getChannelIdForGuildTransition } from "getChannelIdForGuildTransition.tsx";
 import { transitionTo } from "router_utils.tsx";
-// discord_app/modules/routing/transitionToGuild.native.tsx
-import { Routes } from "ME";
 
 let result = require("LayoutAnimation").fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");
 

@@ -1,9 +1,9 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { isParentalConsentWarningFetchEnabled } from "ParentalConsentWarningFetchExperiment.tsx";
 // discord_app/modules/parent_tools/ParentalConsentWarningActionCreators.tsx
 import isParentalConsentWarningFetchEnabled from "isParentalConsentWarningFetchEnabled";
 import initialize from "initialize";
 import importDefaultResult from "fails";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { isParentalConsentWarningFetchEnabled } from "ParentalConsentWarningFetchExperiment.tsx";
 
 const require = arg1;
 function clearPendingRetry() {

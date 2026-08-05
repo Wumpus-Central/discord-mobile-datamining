@@ -1,3 +1,9 @@
+// discord_app/actions/GIFPickerActionCreators.tsx
+import _getSystemLocale from "_getSystemLocale";
+import getFormatFromUrl from "getFormatFromUrl";
+import ME from "ME";
+import MAX_FAVORITES from "MAX_FAVORITES";
+import importDefaultResult from "shouldRefreshAttachmentUrl";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
 import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
@@ -6,12 +12,6 @@ import { shouldRefreshAttachmentUrl } from "../modules/messages/SignedAttachment
 import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 import { isKlipyProvider } from "../utils/GIFPickerUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
-// discord_app/actions/GIFPickerActionCreators.tsx
-import _getSystemLocale from "_getSystemLocale";
-import getFormatFromUrl from "getFormatFromUrl";
-import ME from "ME";
-import MAX_FAVORITES from "MAX_FAVORITES";
-import importDefaultResult from "shouldRefreshAttachmentUrl";
 
 let c10;
 let c5;

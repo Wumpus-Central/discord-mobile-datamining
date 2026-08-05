@@ -1,12 +1,3 @@
-import { t } from "../../../_runtime/03867_t.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { ack } from "../../actions/ReadStateActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { computeSubtitle } from "../guild_sidebar/ChannelListState.tsx";
-import { _bulkClearRecents } from "../recent_channels/RecentChannelsActionCreators.tsx";
 // discord_app/modules/opt_in_channels/OptInChannelsUtils.tsx
 import DismissibleContent from "DismissibleContent";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -19,6 +10,15 @@ import set from "set";
 import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
 import { ReadStateTypes } from "ReadStateTypes";
 import set from "setIndex";
+import { t } from "../../../_runtime/03867_t.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { ack } from "../../actions/ReadStateActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { computeSubtitle } from "../guild_sidebar/ChannelListState.tsx";
+import { _bulkClearRecents } from "../recent_channels/RecentChannelsActionCreators.tsx";
 
 let c10;
 let c9;

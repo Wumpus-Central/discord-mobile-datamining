@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/shared_space_warnings/native/BlockedUserInGdmActionSheet.tsx
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "CircleCheckIcon";
@@ -8,6 +7,7 @@ import GdmWarningMedium from "GdmWarningMedium";
 import { AnalyticEvents } from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c4;
 let c5;

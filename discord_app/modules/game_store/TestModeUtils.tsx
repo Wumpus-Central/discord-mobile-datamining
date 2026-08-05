@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_store/TestModeUtils.tsx
 import initialize from "initialize";
 import reset from "reset";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("initialize").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");

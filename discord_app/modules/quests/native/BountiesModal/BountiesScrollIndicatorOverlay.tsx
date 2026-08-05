@@ -1,10 +1,10 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_6;
 let error;

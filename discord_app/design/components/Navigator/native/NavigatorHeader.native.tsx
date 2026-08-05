@@ -1,14 +1,14 @@
-import { Background } from "../../../../../_runtime/05245_Background.js";
-import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
-import { NAV_BAR_HEIGHT } from "NavigatorConstants.native.tsx";
 // discord_app/design/components/Navigator/native/NavigatorHeader.native.tsx
 import closure_3 from "createCacheKey";
 import "noop";
 import get_ActivityIndicator from "NAV_BAR_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../../../../_runtime/05245_Background.js";
+import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
+import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import { Text } from "../../Text/native/Text.tsx";
+import { NAV_BAR_HEIGHT } from "NavigatorConstants.native.tsx";
 
 let c4;
 let c5;

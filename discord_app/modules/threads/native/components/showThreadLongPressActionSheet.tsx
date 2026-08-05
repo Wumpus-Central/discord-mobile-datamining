@@ -1,6 +1,6 @@
+// discord_app/modules/threads/native/components/showThreadLongPressActionSheet.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/threads/native/components/showThreadLongPressActionSheet.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/threads/native/components/showThreadLongPressActionSheet.tsx");
 
 export default function showThreadLongPressActionSheet(channelId) {

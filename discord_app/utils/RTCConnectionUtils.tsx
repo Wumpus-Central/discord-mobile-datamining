@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/utils/RTCConnectionUtils.tsx
 import ME from "ME";
+import { getSystemLocale } from "../intl/index.native.tsx";
 
 let c3;
 let obj1;

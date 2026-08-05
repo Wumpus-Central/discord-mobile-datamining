@@ -1,7 +1,3 @@
-import { pushLayer } from "../../actions/LayerActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
-import { getItemRecordsFromPurchases } from "CollectiblesUtils.tsx";
 // discord_app/modules/collectibles/CollectiblesActionCreators.tsx
 import map from "map";
 import getUserAgnosticState from "getUserAgnosticState";
@@ -19,6 +15,10 @@ import { CollectiblesMobileShopScreen as closure_15 } from "items";
 import ME from "ME";
 import getMarketingBySurface from "getMarketingBySurface";
 import "map";
+import { pushLayer } from "../../actions/LayerActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import { getItemRecordsFromPurchases } from "CollectiblesUtils.tsx";
 
 let Routes;
 let closure_16;

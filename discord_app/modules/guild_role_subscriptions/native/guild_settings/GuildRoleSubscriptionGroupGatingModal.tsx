@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { FormGuildGatingModeSelector } from "../components/FormGuildGatingModeSelector.tsx";
-import { Header } from "../components/GuildRoleSubscriptionTierEditStep.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import usePriceTiers from "usePriceTiers";
 import { GuildRoleSubscriptionsTierScenes as closure_5 } from "MAX_SUBSCRIPTION_TIERS";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { FormGuildGatingModeSelector } from "../components/FormGuildGatingModeSelector.tsx";
+import { Header } from "../components/GuildRoleSubscriptionTierEditStep.tsx";
 
 const require = arg1;
 const result = require("usePriceTiers").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");

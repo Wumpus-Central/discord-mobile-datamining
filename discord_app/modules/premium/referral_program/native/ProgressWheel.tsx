@@ -1,13 +1,13 @@
+// discord_app/modules/premium/referral_program/native/ProgressWheel.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
 import { metadata } from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 import { MAX_REFERRALS_SENT } from "../hooks/useReferralProgramBannerDetails.tsx";
-// discord_app/modules/premium/referral_program/native/ProgressWheel.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

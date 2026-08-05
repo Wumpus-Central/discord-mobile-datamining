@@ -1,10 +1,10 @@
-import { experiment } from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
 import { Image } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateVoiceState from "updateVoiceState";
 import { Permissions } from "ME";
+import { experiment } from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
 
 let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 

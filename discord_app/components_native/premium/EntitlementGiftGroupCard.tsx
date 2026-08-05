@@ -1,3 +1,15 @@
+// discord_app/components_native/premium/EntitlementGiftGroupCard.tsx
+import importAllResult from "Button";
+import get_ActivityIndicator from "getPrice";
+import importDefaultResult from "addApplication";
+import importDefaultResult1 from "fetchFingerprint";
+import importDefaultResult2 from "updateGiftCode";
+import importDefaultResult4 from "addSku";
+import GuildFeatures from "GuildFeatures";
+import jsxProd from "ChevronSmallDownIcon";
+import createCacheKey from "createCacheKey";
+import importDefaultResult3 from "addSubscriptionPlan";
+import importDefaultResult5 from "initialize";
 import { registerAsset } from "../../../_runtime/12488_registerAsset.js";
 import { registerAsset } from "../../../_runtime/12489_registerAsset.js";
 import { registerAsset } from "../../../_runtime/12490_registerAsset.js";
@@ -17,18 +29,6 @@ import { GameIcon } from "../../modules/game_detection/native/GameIcon.tsx";
 import { SlayerStorefrontItemCard } from "../../modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx";
 import { getPrice } from "../../modules/slayer_storefront/SlayerStorefrontUtils.tsx";
 import { getSubscriptionPlans } from "../../utils/SubscriptionUtils.tsx";
-// discord_app/components_native/premium/EntitlementGiftGroupCard.tsx
-import importAllResult from "Button";
-import get_ActivityIndicator from "getPrice";
-import importDefaultResult from "addApplication";
-import importDefaultResult1 from "fetchFingerprint";
-import importDefaultResult2 from "updateGiftCode";
-import importDefaultResult4 from "addSku";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "ChevronSmallDownIcon";
-import createCacheKey from "createCacheKey";
-import importDefaultResult3 from "addSubscriptionPlan";
-import importDefaultResult5 from "initialize";
 
 let c4;
 let c5;

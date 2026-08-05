@@ -1,9 +1,9 @@
-import { SelectedDismissibleContent } from "SelectedDismissibleContent.tsx";
 // discord_app/modules/dismissible_content/native/DismissibleNewBadge.tsx
 import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SelectedDismissibleContent } from "SelectedDismissibleContent.tsx";
 
 const require = arg1;
 createCacheKey = { newTag: { backgroundColor: "transparent" }, newTagContainer: null };

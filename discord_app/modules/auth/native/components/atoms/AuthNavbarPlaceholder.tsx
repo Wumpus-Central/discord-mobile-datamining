@@ -1,8 +1,8 @@
-import { HeaderBackImage } from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 // discord_app/modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { HeaderBackImage } from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 
 const require = arg1;
 createCacheKey = { navBar: null };

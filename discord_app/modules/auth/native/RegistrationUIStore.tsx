@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/auth/native/RegistrationUIStore.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "call" }));
 const result = require("set").fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");

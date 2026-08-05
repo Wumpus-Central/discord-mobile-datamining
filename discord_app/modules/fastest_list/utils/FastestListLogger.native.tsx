@@ -1,5 +1,5 @@
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
 // discord_app/modules/fastest_list/utils/FastestListLogger.native.tsx
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
 const tmp2 = new require("timestamp")("FastestList");
 const result = require("set").fileFinishedImporting("modules/fastest_list/utils/FastestListLogger.native.tsx");
 

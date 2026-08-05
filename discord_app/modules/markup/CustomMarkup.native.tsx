@@ -1,9 +1,9 @@
+// discord_app/modules/markup/CustomMarkup.native.tsx
 import { t } from "../../../_runtime/03984_t.js";
 import { combineMarkupRules } from "combineMarkupRules.tsx";
 import { MarkupText } from "MarkupReactRules.native.tsx";
 import { parseLink } from "MarkupRules.tsx";
 import { AST_KEY } from "MarkupTypes.tsx";
-// discord_app/modules/markup/CustomMarkup.native.tsx
 function createRules(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {

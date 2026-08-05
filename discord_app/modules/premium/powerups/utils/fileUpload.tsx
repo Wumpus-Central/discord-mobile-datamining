@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { experiment } from "../experiments/FileUpload250MbPowerupExperiment.tsx";
-import { usePowerupActiveStatus } from "../hooks/usePowerupActiveStatus.tsx";
 // discord_app/modules/premium/powerups/utils/fileUpload.tsx
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { PowerupActiveStatusType } from "BoostedGuildTiers";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { experiment } from "../experiments/FileUpload250MbPowerupExperiment.tsx";
+import { usePowerupActiveStatus } from "../hooks/usePowerupActiveStatus.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/premium/powerups/utils/fileUpload.tsx");

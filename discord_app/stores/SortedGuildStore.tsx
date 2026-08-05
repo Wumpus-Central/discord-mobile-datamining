@@ -1,5 +1,3 @@
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
-import { 00038__ } from "../../_runtime/metro/00038__.js";
 // discord_app/stores/SortedGuildStore.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import initialize from "initialize";
@@ -15,6 +13,8 @@ import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
 
 let areArraysShallowlyEqual = arg1;
 function insertUnsortedGuilds(arg0, arg1) {

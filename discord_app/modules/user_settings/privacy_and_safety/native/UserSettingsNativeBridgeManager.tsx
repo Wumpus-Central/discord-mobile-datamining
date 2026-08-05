@@ -1,8 +1,8 @@
-import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import "initialize";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 
 let prototype = function UserSettingsNativeBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

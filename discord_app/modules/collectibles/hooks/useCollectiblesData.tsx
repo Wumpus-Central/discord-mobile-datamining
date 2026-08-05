@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/collectibles/hooks/useCollectiblesData.tsx
 import _slicedToArray from "_slicedToArray";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("map").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");

@@ -1,6 +1,6 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/coded_links/web/CodedLinkActionCreators.tsx
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const result = require("set").fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
 

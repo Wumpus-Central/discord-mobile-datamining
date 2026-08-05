@@ -1,7 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { createAutocompleterResultForChannelId } from "../../autocompleter/createAutocompleterResultForChannelId.tsx";
 // discord_app/modules/launchpad/native/LaunchPad.tsx
 import set from "set";
 import importAllResult from "jsxProd";
@@ -25,6 +21,10 @@ import updateVoiceState from "updateVoiceState";
 import ME from "ME";
 import jsxProd from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { createAutocompleterResultForChannelId } from "../../autocompleter/createAutocompleterResultForChannelId.tsx";
 
 let c10;
 let c9;

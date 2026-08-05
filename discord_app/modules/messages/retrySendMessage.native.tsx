@@ -1,7 +1,7 @@
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { _executeCommand } from "../application_commands/executeCommand.tsx";
 // discord_app/modules/messages/retrySendMessage.native.tsx
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { _executeCommand } from "../application_commands/executeCommand.tsx";
 
 let result = require("_executeCommand").fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
 

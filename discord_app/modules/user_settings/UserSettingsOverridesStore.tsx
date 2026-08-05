@@ -1,7 +1,7 @@
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/user_settings/UserSettingsOverridesStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { PersistedStore } from "initialize";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 const require = arg1;
 function updateExistingSettings() {

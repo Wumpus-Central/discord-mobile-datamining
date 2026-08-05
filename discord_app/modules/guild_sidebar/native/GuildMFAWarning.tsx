@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../_runtime/15205_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 // discord_app/modules/guild_sidebar/native/GuildMFAWarning.tsx
 import closure_3 from "createCacheKey";
 import "noop";
@@ -11,6 +5,12 @@ import { Image } from "get ActivityIndicator";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/15205_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 
 let Fonts;
 let c5;

@@ -1,11 +1,11 @@
+// discord_app/modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { ExplicitContentFilterTypes } from "items";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
 import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 import { getShouldObscureForSetting } from "SensitiveMediaRedactionSettingUtils.tsx";
-// discord_app/modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ExplicitContentFilterTypes } from "items";
 
 const require = arg1;
 function resolveExplicitContentSettingWithDefaults(isFriend) {

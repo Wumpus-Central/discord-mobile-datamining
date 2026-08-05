@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteAgeText.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import updateWithLatestInvite from "updateWithLatestInvite";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 let c4;
 let c5;

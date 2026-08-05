@@ -1,10 +1,10 @@
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
 // discord_app/modules/premium/promotions/native/MarketingPageBannerTile.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
 
 let c3;
 let c4;

@@ -1,5 +1,5 @@
-import { useEmojiPickerData } from "useEmojiPickerData.tsx";
 // discord_app/modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx
+import { useEmojiPickerData } from "useEmojiPickerData.tsx";
 const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");
 
 export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked) {

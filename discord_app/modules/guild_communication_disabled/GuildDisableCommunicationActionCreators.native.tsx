@@ -1,10 +1,10 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx");

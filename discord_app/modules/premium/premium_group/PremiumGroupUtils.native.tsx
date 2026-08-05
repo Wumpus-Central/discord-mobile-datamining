@@ -1,7 +1,7 @@
-import { messagesProxy } from "PremiumGroup.messages.js";
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.native.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
+import { messagesProxy } from "PremiumGroup.messages.js";
 
 let c4;
 let c5;

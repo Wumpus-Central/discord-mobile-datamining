@@ -1,3 +1,9 @@
+// discord_app/modules/connections/native/ConnectionMetadataVanityItems.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import OperatorTypes from "OperatorTypes";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { registerAsset } from "../../../../_runtime/10963_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/10964_registerAsset.js";
@@ -6,12 +12,6 @@ import { Button } from "../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { shortenAndLocalizeNumber } from "../../../utils/NumberUtils.tsx";
 import { officialApplicationIds } from "../ConnectionsUtils.tsx";
-// discord_app/modules/connections/native/ConnectionMetadataVanityItems.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import OperatorTypes from "OperatorTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

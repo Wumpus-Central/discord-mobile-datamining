@@ -1,10 +1,10 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { RouteTypes } from "VoiceCallTypes.tsx";
 // discord_app/modules/voice_calls/AudioRouteStore.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import createRTCConnection from "createRTCConnection";
 import { Store } from "initialize";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { RouteTypes } from "VoiceCallTypes.tsx";
 
 function handleAudioRouteChanged(arr) {
   let tmp = arg1;

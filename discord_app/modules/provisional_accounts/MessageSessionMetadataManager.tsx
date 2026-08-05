@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/provisional_accounts/MessageSessionMetadataManager.tsx
 import { AnalyticEvents } from "ME";
 import "initialize";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 class MessageSessionMetadataManager extends tmp2 {
   constructor() {

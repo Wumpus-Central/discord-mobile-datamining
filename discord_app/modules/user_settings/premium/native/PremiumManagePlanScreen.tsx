@@ -1,7 +1,7 @@
-import { ManagePlanHeader } from "PremiumManagePlan.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumManagePlanScreen.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { ManagePlanHeader } from "PremiumManagePlan.tsx";
 
 const result = require("ManagePlanHeader").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlanScreen.tsx");
 

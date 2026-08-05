@@ -1,12 +1,12 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { APP_ENTRY_KEYS } from "../../window/native/AppEntryKey.tsx";
-import { readWindowSizeForAppEntry } from "readAppEntryWindowMetrics.android.tsx";
 // discord_app/modules/screen/native/DimensionsStore.android.tsx
 import { Dimensions } from "get ActivityIndicator";
 import keys from "keys";
 import importDefaultResult from "subscribeToKeyboardUIStore";
 import importDefaultResult1 from "module_1582";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { APP_ENTRY_KEYS } from "../../window/native/AppEntryKey.tsx";
+import { readWindowSizeForAppEntry } from "readAppEntryWindowMetrics.android.tsx";
 
 function getDimensionsStoreStateForEntry(appEntryKey) {
   let height;

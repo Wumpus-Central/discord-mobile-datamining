@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/actions/native/PhoneVerificationActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("actions/native/PhoneVerificationActionCreators.tsx");
 
 export default {

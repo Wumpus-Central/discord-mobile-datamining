@@ -1,6 +1,3 @@
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { useEmojiHotrail } from "../hooks/useEmojiHotrail.tsx";
-import { useTopAndNewlyAddedEmojis } from "../hooks/useTopAndNewlyAddedEmojis.tsx";
 // discord_app/modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx
 import noop from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -9,6 +6,9 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { AnalyticEvents } from "ME";
 import { EmojiIntention } from "set";
 import { ExpressionPickerViewType } from "ExpressionPickerViewType";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import { useEmojiHotrail } from "../hooks/useEmojiHotrail.tsx";
+import { useTopAndNewlyAddedEmojis } from "../hooks/useTopAndNewlyAddedEmojis.tsx";
 
 const require = arg1;
 function trackOnEmojiPickerOpened(arg0) {

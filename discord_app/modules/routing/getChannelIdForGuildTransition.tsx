@@ -1,5 +1,3 @@
-import { useCanSeeOnboardingHome } from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
-import { getPrice } from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 // discord_app/modules/routing/getChannelIdForGuildTransition.tsx
 import shouldShowOnboarding from "shouldShowOnboarding";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -9,6 +7,8 @@ import handleConnectionOpen from "handleConnectionOpen";
 import makeSortedChannel from "makeSortedChannel";
 import { ME } from "ME";
 import { StaticChannelRoute } from "set";
+import { useCanSeeOnboardingHome } from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
+import { getPrice } from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 
 const require = arg1;
 const result = require("comparator").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");

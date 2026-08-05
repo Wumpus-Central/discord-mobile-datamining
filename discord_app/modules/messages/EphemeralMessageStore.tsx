@@ -1,9 +1,9 @@
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 // discord_app/modules/messages/EphemeralMessageStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { MessageFlags } from "ME";
 import { Store } from "initialize";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 
 const require = arg1;
 function dropChannelIfEmpty(channelId, value) {

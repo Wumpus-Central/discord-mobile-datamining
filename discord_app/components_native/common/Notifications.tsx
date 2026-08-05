@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { NotificationWrapper } from "../../modules/in_app_notifications/native/InAppNotificationContainer.tsx";
 // discord_app/components_native/common/Notifications.tsx
 import "noop";
 import handleAlertMessage from "handleAlertMessage";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { NotificationWrapper } from "../../modules/in_app_notifications/native/InAppNotificationContainer.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("components_native/common/Notifications.tsx");

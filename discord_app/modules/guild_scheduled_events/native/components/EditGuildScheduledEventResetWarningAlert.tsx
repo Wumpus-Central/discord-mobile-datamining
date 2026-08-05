@@ -1,8 +1,8 @@
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("componentDidMount").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx");

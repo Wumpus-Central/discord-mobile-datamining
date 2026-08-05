@@ -1,10 +1,3 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { _detectH265HardwareDecode } from "../../stores/MediaEngineStore.tsx";
-import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
-import { apexExperiment } from "AutoclippingDefaultOverrideExperiment.tsx";
-import { apexExperiment } from "DistributedClipsExperiment.tsx";
-import { isClipsEnabled } from "isClipsEnabled.tsx";
 // discord_app/modules/clips/ClipsStore.tsx
 import closure_3 from "RESOLUTION_720";
 import initialize from "initialize";
@@ -14,6 +7,13 @@ import { VoiceFlags } from "ME";
 import RESOLUTION_720 from "RESOLUTION_720";
 import { DeviceSettingsStore } from "initialize";
 import set from "fetchFingerprint";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { _detectH265HardwareDecode } from "../../stores/MediaEngineStore.tsx";
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
+import { apexExperiment } from "AutoclippingDefaultOverrideExperiment.tsx";
+import { apexExperiment } from "DistributedClipsExperiment.tsx";
+import { isClipsEnabled } from "isClipsEnabled.tsx";
 
 let ApplicationStreamFPS;
 let ApplicationStreamResolutions;

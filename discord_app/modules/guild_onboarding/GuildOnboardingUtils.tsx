@@ -1,7 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { useCanChannelBeDefault } from "DefaultChannelUtils.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import set from "set";
@@ -12,6 +8,10 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { OnboardingConnectionType } from "serverPromptToClientPrompt";
 import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { useCanChannelBeDefault } from "DefaultChannelUtils.tsx";
 
 let closure_12;
 let unpackModuleId;

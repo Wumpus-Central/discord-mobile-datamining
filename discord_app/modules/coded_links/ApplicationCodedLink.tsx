@@ -1,7 +1,7 @@
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { CodedLinkType } from "CodedLink.tsx";
 // discord_app/modules/coded_links/ApplicationCodedLink.tsx
 import set from "makeStorefrontSKUCodedLink";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { CodedLinkType } from "CodedLink.tsx";
 
 const items = [require("CodedLinkType").CodedLinkType.APP_DIRECTORY_PROFILE, require("CodedLinkType").CodedLinkType.ACTIVITY_BOOKMARK, require("CodedLinkType").CodedLinkType.APP_DIRECTORY_STOREFRONT, require("CodedLinkType").CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, require("CodedLinkType").CodedLinkType.APP_OAUTH2_LINK];
 let set = new Set(items);

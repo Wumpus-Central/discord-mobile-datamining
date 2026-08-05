@@ -1,12 +1,12 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 // discord_app/stores/LibraryApplicationStore.tsx
 import createFromServer from "createFromServer";
 import fetchFingerprint from "fetchFingerprint";
 import { LibraryApplicationFlags } from "ME";
 import { Store } from "initialize";
 import set from "ME";
+import { apply } from "../../_runtime/00012_apply.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 
 const require = arg1;
 function setLibraryApplications(libraryApplications) {

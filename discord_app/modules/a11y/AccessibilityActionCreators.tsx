@@ -1,10 +1,10 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/a11y/AccessibilityActionCreators.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AnalyticEvents } from "ME";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
 import { SettingsOverrideReasonKeys as closure_5 } from "MAX_FAVORITES";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let result = require("STICKER_PICKER_TAB_PANEL_ID").fileFinishedImporting("modules/a11y/AccessibilityActionCreators.tsx");
 

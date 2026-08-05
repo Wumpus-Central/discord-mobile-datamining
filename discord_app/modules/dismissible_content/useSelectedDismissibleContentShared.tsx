@@ -1,8 +1,8 @@
-import { set } from "DismissibleContentFatigueConfig.tsx";
 // discord_app/modules/dismissible_content/useSelectedDismissibleContentShared.tsx
 import noop from "noop";
 import set from "set";
 import { ContentDismissActionType } from "ContentDismissActionType";
+import { set } from "DismissibleContentFatigueConfig.tsx";
 
 const require = arg1;
 let result = require("ContentDismissActionType").fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");

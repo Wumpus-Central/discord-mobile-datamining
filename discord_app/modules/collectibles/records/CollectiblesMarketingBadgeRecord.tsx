@@ -1,5 +1,5 @@
-import { CollectiblesMarketingType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx";
 // discord_app/modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx
+import { CollectiblesMarketingType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx";
 let prototype;
 prototype = function CollectiblesMarketingBadgeRecord(arg0) {
   const obj = Object.create(new.target.prototype);

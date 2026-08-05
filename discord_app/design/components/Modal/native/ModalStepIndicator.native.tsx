@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../intl/Mana.messages.js";
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../intl/Mana.messages.js";
 
 const require = arg1;
 function StepPill(isActive) {

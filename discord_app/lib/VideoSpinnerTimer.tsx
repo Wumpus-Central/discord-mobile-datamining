@@ -1,5 +1,3 @@
-import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/lib/VideoSpinnerTimer.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +5,8 @@ import handleConnectionInfoChange from "handleConnectionInfoChange";
 import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";
 import { AnalyticEvents } from "ME";
+import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 const map = new Map();

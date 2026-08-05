@@ -1,9 +1,9 @@
-import { trackViewedEvent } from "../shared/SafetyWarningUtils.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleConnectionOpen from "handleConnectionOpen";
 import { SafetyWarningTypes } from "handleConnectionOpen";
+import { trackViewedEvent } from "../shared/SafetyWarningUtils.tsx";
 
 const require = arg1;
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");

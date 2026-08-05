@@ -1,11 +1,11 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useGuildTagBadgeCollection } from "../../guild_tag/useGuildTagBadgeCollection.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagBadgeGrid.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { GuildTagBadgeSize } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useGuildTagBadgeCollection } from "../../guild_tag/useGuildTagBadgeCollection.tsx";
 
 let c4;
 let c5;

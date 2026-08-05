@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useChatPlaceholderAnimatedStyles } from "../../chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { Separator } from "ICYMIShared.tsx";
 // discord_app/modules/icymi/native/ICYMILoading.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useChatPlaceholderAnimatedStyles } from "../../chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { Separator } from "ICYMIShared.tsx";
 
 let c5;
 let closure_6;

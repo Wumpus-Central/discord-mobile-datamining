@@ -1,9 +1,9 @@
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { format } from "../../../../_runtime/00669_format.js";
-import { set } from "getDescription.tsx";
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { format } from "../../../../_runtime/00669_format.js";
+import { set } from "getDescription.tsx";
 
 const require = arg1;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];

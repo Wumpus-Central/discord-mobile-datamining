@@ -1,6 +1,6 @@
+// discord_app/modules/guild_badge/GuildBadgeConstants.tsx
 import { BadgeCategory } from "BadgeCategory.tsx";
 import { GuildVisibility } from "GuildTraits.tsx";
-// discord_app/modules/guild_badge/GuildBadgeConstants.tsx
 const result = require("BadgeCategory").fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 
 export const getBadgeTooltip = function getBadgeTooltip(arg0, arg1) {

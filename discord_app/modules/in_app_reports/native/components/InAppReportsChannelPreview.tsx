@@ -1,10 +1,10 @@
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsChannelPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 
 let c5;
 let closure_6;

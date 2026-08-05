@@ -1,12 +1,12 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
-import { hasRichActivity } from "../modules/activities/utils/hasRichActivity.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/PresenceStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
+import { hasRichActivity } from "../modules/activities/utils/hasRichActivity.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 let c4;
 let c5;

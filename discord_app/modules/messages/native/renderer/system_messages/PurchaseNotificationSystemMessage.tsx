@@ -1,6 +1,6 @@
+// discord_app/modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx
 import { PermissionOverwriteType } from "../../../../../flow/Server.tsx";
 import { createGuildProductPurchaseSystemMessage } from "GuildProductPurchaseSystemMessage.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 
 export const createPurchaseNotificationSystemMessage = function createPurchaseNotificationSystemMessage(message) {

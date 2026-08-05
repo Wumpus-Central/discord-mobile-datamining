@@ -1,6 +1,6 @@
-import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import identity from "identity";
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
 
 let closure_2 = Object.freeze({ name: "", emojiId: "call", emojiName: "r", description: "title", refId: "accessibilityRole" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {

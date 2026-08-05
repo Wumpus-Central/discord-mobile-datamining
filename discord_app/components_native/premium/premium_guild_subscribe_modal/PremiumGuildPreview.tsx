@@ -1,3 +1,10 @@
+// discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx
+import "initialize";
+import get_ActivityIndicator from "Button";
+import handleThemeChange from "handleThemeChange";
+import { BoostedGuildTiers } from "ME";
+import jsxProd from "set";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/12787_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12788_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12789_registerAsset.js";
@@ -11,13 +18,6 @@ import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { GuildIconSizes } from "../../../modules/guild/native/GuildIcon.tsx";
 import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
-// discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx
-import "initialize";
-import get_ActivityIndicator from "Button";
-import handleThemeChange from "handleThemeChange";
-import { BoostedGuildTiers } from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

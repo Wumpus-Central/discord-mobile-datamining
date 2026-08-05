@@ -1,4 +1,3 @@
-import { UserPlaceholderRow } from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import loadInviteSuggestions from "loadInviteSuggestions";
@@ -10,6 +9,7 @@ import InviteSendStates from "InviteSendStates";
 import { NOOP_NULL } from "sum";
 import jsxProd from "RedesignBottomSheetTitleHeaderBase";
 import createCacheKey from "createCacheKey";
+import { UserPlaceholderRow } from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 
 let c10;
 let closure_14;

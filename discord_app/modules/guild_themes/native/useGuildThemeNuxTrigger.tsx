@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildThemeNuxTrigger } from "../useGuildThemeNuxTrigger.tsx";
 // discord_app/modules/guild_themes/native/useGuildThemeNuxTrigger.tsx
 import noop from "noop";
 import setContent from "setContent";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useGuildThemeNuxTrigger } from "../useGuildThemeNuxTrigger.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");

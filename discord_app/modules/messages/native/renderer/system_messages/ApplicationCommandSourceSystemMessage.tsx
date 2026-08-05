@@ -1,9 +1,9 @@
-import { getApplicationCommand } from "../../../ApplicationCommands.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx
 import { MessageTypes } from "ME";
 import { COMMAND_SENTINEL } from "regExp";
+import { getApplicationCommand } from "../../../ApplicationCommands.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 
 const result = require("getApplicationCommand").fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx");
 

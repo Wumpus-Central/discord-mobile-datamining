@@ -1,7 +1,7 @@
-import { readSnowflake } from "../modules/instant_invite/InviteCodeUtils.tsx";
 // discord_app/stores/InviteStore.tsx
 import { InviteStates } from "ME";
 import { Store } from "initialize";
+import { readSnowflake } from "../modules/instant_invite/InviteCodeUtils.tsx";
 
 function updateInvite(code, arg1) {
   let str = code;

@@ -1,4 +1,3 @@
-import { areSetsEqual } from "../../discord_common/js/shared/utils/SetUtils.tsx";
 // discord_app/stores/GuildStore.tsx
 import isValueEqual from "isValueEqual";
 import { LibdiscoreStore } from "identity";
@@ -6,6 +5,7 @@ import GuildNSFWContentLevel from "GuildNSFWContentLevel";
 import fetchFingerprint from "fetchFingerprint";
 import { FAVORITES_GUILD_RECORD } from "date";
 import { LibdiscoreBatchStoreRefactorExperiment } from "items";
+import { areSetsEqual } from "../../discord_common/js/shared/utils/SetUtils.tsx";
 
 let c4;
 let c5;

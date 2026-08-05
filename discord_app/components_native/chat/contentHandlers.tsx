@@ -1,3 +1,5 @@
+// discord_app/components_native/chat/contentHandlers.tsx
+import importDefaultResult from "castNativeSyntheticEventData";
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { set } from "../../actions/AlertActionCreators.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
@@ -7,8 +9,6 @@ import { presentAddedFriendToast } from "../../modules/toast/native/ToastUtils.t
 import { showUserProfileActionSheet } from "../../modules/user_profile/native/showUserProfileActionSheet.tsx";
 import { _copy } from "../../utils/ClipboardUtils.native.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-// discord_app/components_native/chat/contentHandlers.tsx
-import importDefaultResult from "castNativeSyntheticEventData";
 
 const require = arg1;
 let obj = {

@@ -1,5 +1,3 @@
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { useConnectionFilteredAppIdentities } from "../../../user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx";
 // discord_app/modules/user_settings/connections/native/UserSettingsConnections.tsx
 import EmptyStateCard from "EmptyStateCard";
 import { ActivityIndicator } from "asyncRequireImpl";
@@ -11,6 +9,8 @@ import _getSystemLocale from "_getSystemLocale";
 import { AnalyticsLocations } from "ME";
 import jsxProd from "ConnectedApplicationIdentity";
 import createCacheKey from "createCacheKey";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { useConnectionFilteredAppIdentities } from "../../../user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx";
 
 let closure_12;
 let unpackModuleId;

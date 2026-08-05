@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/libdiscore/libDiscoreSmokeTest.tsx
 import items from "items";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 function libDiscoreSmokeTest() {

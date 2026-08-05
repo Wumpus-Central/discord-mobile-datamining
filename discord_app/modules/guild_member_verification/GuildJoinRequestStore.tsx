@@ -1,10 +1,10 @@
-import { t } from "../../../_runtime/03867_t.js";
-import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
-import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/GuildJoinRequestStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate";
 import { Store } from "initialize";
+import { t } from "../../../_runtime/03867_t.js";
+import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
+import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 
 const require = arg1;
 function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatus) {

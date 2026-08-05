@@ -1,7 +1,7 @@
-import { set } from "../../hooks/useIsStricterMessageRequests.tsx";
 // discord_app/modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { set } from "../../hooks/useIsStricterMessageRequests.tsx";
 
 const require = arg1;
 function MessageRequestRestrictedGuildPrivacyOption(guild) {

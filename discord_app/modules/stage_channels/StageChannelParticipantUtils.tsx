@@ -1,5 +1,5 @@
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelParticipantUtils.tsx
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 const require = arg1;
 const DAY = require("set").Millis.DAY;
 const result = require("getSystemLocale").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");

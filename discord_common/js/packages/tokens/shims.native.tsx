@@ -1,5 +1,5 @@
-import { Themes } from "native.tsx";
 // discord_common/js/packages/tokens/shims.native.tsx
+import { Themes } from "native.tsx";
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
 
 export const unsafe_getRawColor = function unsafe_getRawColor(RED_400) {

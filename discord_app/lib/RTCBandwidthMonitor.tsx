@@ -1,5 +1,5 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/lib/RTCBandwidthMonitor.tsx
+import { apply } from "../../_runtime/00012_apply.js";
 let closure_2 = [];
 let RTCBandwidthMonitor;
 class RTCBandwidthMonitor {

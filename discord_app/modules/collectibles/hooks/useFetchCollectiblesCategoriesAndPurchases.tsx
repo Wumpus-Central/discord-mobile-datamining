@@ -1,9 +1,9 @@
-import { set } from "useMaybeFetchCollectiblesCategories.tsx";
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";
 import map from "map";
+import { set } from "useMaybeFetchCollectiblesCategories.tsx";
 
 let c4;
 let c5;

@@ -1,3 +1,8 @@
+// discord_app/modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx
+import noop from "noop";
+import { HelpdeskArticles } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { ButtonGroup } from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
@@ -5,11 +10,6 @@ import { LinkExternalSmallIcon } from "../../../design/components/Icon/native/re
 import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-// discord_app/modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx
-import noop from "noop";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

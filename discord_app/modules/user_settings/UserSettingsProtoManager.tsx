@@ -1,12 +1,12 @@
+// discord_app/modules/user_settings/UserSettingsProtoManager.tsx
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
+import { UserSettingsTypes } from "MAX_FAVORITES";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { readFavoriteGIFs } from "FrecencySettingsMigrations.tsx";
 import { migrateHotspotLocation } from "PreloadedUserSettingsMigrations.tsx";
 import { MAX_FAVORITES } from "UserSettingsMigrationsByType.tsx";
 import { updateUserGuildSettings } from "UserSettingsProtoActionCreators.tsx";
-// discord_app/modules/user_settings/UserSettingsProtoManager.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { UserSettingsTypes } from "MAX_FAVORITES";
 
 const require = arg1;
 function handleConnectionOpen() {

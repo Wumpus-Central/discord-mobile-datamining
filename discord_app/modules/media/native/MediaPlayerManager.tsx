@@ -1,6 +1,3 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/media/native/MediaPlayerManager.tsx
 import get_ActivityIndicator from "set";
 import participantFromServer from "participantFromServer";
@@ -15,6 +12,9 @@ import MediaPlaybackPanelModes from "MediaPlaybackPanelModes";
 import { Permissions } from "sum";
 import keys from "keys";
 import "initialize";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 
 let c3;
 let c4;

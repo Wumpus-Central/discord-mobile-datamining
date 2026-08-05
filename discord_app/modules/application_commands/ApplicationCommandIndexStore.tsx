@@ -1,12 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getOptionValue } from "ApplicationCommandBuiltIns.tsx";
-import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
-import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
-import { computePermissions } from "CommandPermissionContext.tsx";
-import { computeAllowedForUser } from "CommandPermissionUtils.tsx";
 // discord_app/modules/application_commands/ApplicationCommandIndexStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -22,6 +13,15 @@ import closure_14 from "handleUserSettingsProtoStoreChange";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
 import ME from "ME";
 import { Store } from "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getOptionValue } from "ApplicationCommandBuiltIns.tsx";
+import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
+import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
+import { computePermissions } from "CommandPermissionContext.tsx";
+import { computeAllowedForUser } from "CommandPermissionUtils.tsx";
 
 let closure_15;
 let closure_16;

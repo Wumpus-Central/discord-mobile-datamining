@@ -1,10 +1,10 @@
-import { context } from "InAppNotificationContext.tsx";
 // discord_app/modules/in_app_notifications/native/NotificationProgress.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { context } from "InAppNotificationContext.tsx";
 
 const require = arg1;
 function Progress(percent) {

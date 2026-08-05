@@ -1,13 +1,13 @@
-import { FormCheckbox } from "../../../components/Forms/native/FormCheckbox.native.tsx";
-import { RowButtonWrapper } from "../../../components/TableRow/native/RowButton.native.tsx";
-import { Button } from "../../native.tsx";
-import { FormRow } from "FormRow.tsx";
 // discord_app/design/void/Form/native/FormCTA.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "sum";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { FormCheckbox } from "../../../components/Forms/native/FormCheckbox.native.tsx";
+import { RowButtonWrapper } from "../../../components/TableRow/native/RowButton.native.tsx";
+import { Button } from "../../native.tsx";
+import { FormRow } from "FormRow.tsx";
 
 const require = arg1;
 createCacheKey = { form: null, title: null, description: null, icon: null, completedIcon: null, completedText: null };

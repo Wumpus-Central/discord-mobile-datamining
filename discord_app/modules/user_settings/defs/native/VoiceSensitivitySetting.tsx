@@ -1,11 +1,11 @@
-import { VoiceSensitivity } from "../../../../components_native/common/VoiceSensitivity.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/VoiceSensitivitySetting.tsx
 import { View } from "get ActivityIndicator";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createToggle from "createToggle";
+import { VoiceSensitivity } from "../../../../components_native/common/VoiceSensitivity.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let closure_6 = createCacheKey.createStyles({ slider: { marginTop: 8 } });
 let obj = {

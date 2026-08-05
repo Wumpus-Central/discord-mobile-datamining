@@ -1,10 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 // discord_app/modules/oauth2/native/ConnectAccountStep.tsx
 import authorizeConnection from "authorizeConnection";
 import { View } from "getSystemLocale";
@@ -13,6 +6,13 @@ import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "CheckmarkLargeIcon";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 
 let c9;
 let metroImportAll;

@@ -1,3 +1,8 @@
+// discord_app/modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
+import createToggle from "createToggle";
 import { set } from "../../../../actions/AlertActionCreators.tsx";
 import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -6,11 +11,6 @@ import { useParentalControlledExplicitContentSettings } from "../../../parent_to
 import { useAllowFriendsFromMutualGuildsOnly } from "../../content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx";
 import { useDefaultGuildsRestricted } from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import createToggle from "createToggle";
 
 let c4;
 let c5;

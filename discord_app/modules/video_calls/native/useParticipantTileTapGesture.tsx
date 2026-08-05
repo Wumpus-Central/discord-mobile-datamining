@@ -1,5 +1,5 @@
-import { Directions } from "../../../../_runtime/05368_Directions.js";
 // discord_app/modules/video_calls/native/useParticipantTileTapGesture.tsx
+import { Directions } from "../../../../_runtime/05368_Directions.js";
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
 
 export default function useParticipantTileTapGesture(arg0) {

@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { IgnoredUsersList } from "../../content_and_social/native/IgnoredUsersList.tsx";
 // discord_app/modules/user_settings/defs/native/AccountIgnoredUsersSetting.tsx
 import upsertRelationship from "upsertRelationship";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { IgnoredUsersList } from "../../content_and_social/native/IgnoredUsersList.tsx";
 
 const require = arg1;
 createToggle = {

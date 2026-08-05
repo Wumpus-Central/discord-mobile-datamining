@@ -1,7 +1,7 @@
-import { apexExperiment } from "ServerThemeApexShadowExperiment.tsx";
 // discord_app/modules/premium/powerups/experiments/ServerThemeExperiment.tsx
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import createExperiment from "createExperiment";
+import { apexExperiment } from "ServerThemeApexShadowExperiment.tsx";
 
 const items = [{ id: 0, label: "Control", config: { enabled: false, inExperiment: true, gatesApex: false } }, { id: 1, label: "Enable Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false } }];
 let experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_server_theme", label: "Server Theme", defaultConfig: { enabled: false, inExperiment: false, gatesApex: false }, treatments: items });

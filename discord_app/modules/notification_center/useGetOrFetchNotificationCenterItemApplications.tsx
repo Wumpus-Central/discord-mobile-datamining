@@ -1,7 +1,7 @@
-import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 // discord_app/modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx
 import noop from "noop";
 import set from "useGetOrFetchApplications";
+import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 
 let items = [require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
 let set = new Set(items);

@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx
+import noop from "noop";
+import { ThemeTypes } from "sum";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ClientThemeType } from "../../../client_themes/ClientThemesTypes.tsx";
 import { getCustomThemesName } from "../../../client_themes/native/MobileThemesUtils.tsx";
 import { getSystemTheme } from "../../../themes/getSystemTheme.native.tsx";
-// discord_app/modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx
-import noop from "noop";
-import { ThemeTypes } from "sum";
 
 const require = arg1;
 function getMaxColors() {

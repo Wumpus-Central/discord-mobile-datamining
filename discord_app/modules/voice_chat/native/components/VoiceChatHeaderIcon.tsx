@@ -1,9 +1,3 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { ChannelCallNavigatorIcon } from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
 // discord_app/modules/voice_chat/native/components/VoiceChatHeaderIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -11,6 +5,12 @@ import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { ThemeTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { ChannelCallNavigatorIcon } from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
 
 let closure_6;
 let error;

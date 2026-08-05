@@ -1,13 +1,13 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SvgComponent } from "GuildProfileEmptyStateSvg.tsx";
 // discord_app/modules/user_settings/profiles/native/GuildProfileEmptyState.tsx
 import SvgComponent from "SvgComponent";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SvgComponent } from "GuildProfileEmptyStateSvg.tsx";
 
 let c4;
 let c5;

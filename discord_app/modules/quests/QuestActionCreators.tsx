@@ -1,4 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/quests/QuestActionCreators.tsx
 import initializeState from "initializeState";
 import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore";
@@ -10,6 +9,7 @@ import _toPropertyKey from "_toPropertyKey";
 import { FetchStatus } from "_toPropertyKey";
 import { ORBS_INTRO_QUEST_ID } from "QuestsExperimentLocations";
 import ME from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let closure_12;
 let map1;

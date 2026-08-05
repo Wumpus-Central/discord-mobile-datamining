@@ -1,6 +1,6 @@
-import { hide_icymi_tab } from "LabFeatures.tsx";
 // discord_app/modules/labs/LabFeatureStore.tsx
 import { DeviceSettingsStore } from "initialize";
+import { hide_icymi_tab } from "LabFeatures.tsx";
 
 let closure_2 = {};
 class LabFeatureStore extends DeviceSettingsStore {

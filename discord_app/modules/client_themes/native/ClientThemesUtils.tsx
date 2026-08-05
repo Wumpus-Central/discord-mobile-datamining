@@ -1,3 +1,9 @@
+// discord_app/modules/client_themes/native/ClientThemesUtils.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import handleThemeChange from "handleThemeChange";
+import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
+import reset from "reset";
 import { n } from "../../../../_runtime/00689_n.js";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { useTheme } from "../../../hooks/useTheme.tsx";
@@ -6,12 +12,6 @@ import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 import { ClientThemeType } from "../ClientThemesTypes.tsx";
 import { getCustomThemesName } from "MobileThemesUtils.tsx";
 import { getGuildThemeName } from "useColorThemeBackground.tsx";
-// discord_app/modules/client_themes/native/ClientThemesUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import handleThemeChange from "handleThemeChange";
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import reset from "reset";
 
 const require = arg1;
 function getGradientColorByPercentage(type, END) {

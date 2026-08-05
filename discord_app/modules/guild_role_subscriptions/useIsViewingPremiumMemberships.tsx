@@ -1,8 +1,8 @@
-import { _extends } from "../../../_runtime/metro/04113__extends.js";
-import { RouteParam } from "../routing/RouteUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";
+import { _extends } from "../../../_runtime/metro/04113__extends.js";
+import { RouteParam } from "../routing/RouteUtils.tsx";
 
 const result = require("_extends").fileFinishedImporting("modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx");
 

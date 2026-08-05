@@ -1,9 +1,9 @@
-import { useActivityApplications } from "../hooks/useActivityApplications.tsx";
-import { BannerBase } from "BannerBase.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { jsx } from "jsxProd";
+import { useActivityApplications } from "../hooks/useActivityApplications.tsx";
+import { BannerBase } from "BannerBase.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx");

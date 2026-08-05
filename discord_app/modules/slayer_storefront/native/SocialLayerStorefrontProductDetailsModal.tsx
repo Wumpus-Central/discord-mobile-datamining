@@ -1,14 +1,3 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { VideoComponent } from "../../../components_native/common/Video.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
-import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
-import { NativeCheckoutStoreProvider } from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
-import { NativePaymentContextProvider } from "../../payments/native/NativePaymentContext.tsx";
-import { useFormattedSKUPrice } from "../../storefront/native/StorefrontNativeUtils.android.tsx";
-import { SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY } from "SocialLayerStorefrontNativeActionCreators.tsx";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontProductDetailsModal.tsx
 import expandEventProperties from "expandEventProperties";
 import Button from "Button";
@@ -23,6 +12,17 @@ import importDefaultResult from "n";
 import importDefaultResult1 from "n";
 import createCacheKey from "createCacheKey";
 import alphaResult1 from "_slicedToArray";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { VideoComponent } from "../../../components_native/common/Video.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
+import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
+import { NativeCheckoutStoreProvider } from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
+import { NativePaymentContextProvider } from "../../payments/native/NativePaymentContext.tsx";
+import { useFormattedSKUPrice } from "../../storefront/native/StorefrontNativeUtils.android.tsx";
+import { SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY } from "SocialLayerStorefrontNativeActionCreators.tsx";
 
 let c5;
 let closure_12;

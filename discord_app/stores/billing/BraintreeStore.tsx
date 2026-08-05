@@ -1,9 +1,9 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/stores/billing/BraintreeStore.tsx
 import ME from "ME";
 import set from "set";
 import { Store } from "initialize";
 import set from "sendRequest";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 let c4;
 let c5;

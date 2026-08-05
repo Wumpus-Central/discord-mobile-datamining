@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ME from "ME";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
 
 let c4;
 let c5;

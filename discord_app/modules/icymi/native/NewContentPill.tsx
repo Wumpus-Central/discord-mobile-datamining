@@ -1,6 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/NewContentPill.tsx
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
@@ -9,6 +6,9 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import filterStaffGuild from "filterStaffGuild";
 import jsxProd from "AccessibilityAnnouncer";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c10;
 let c5;

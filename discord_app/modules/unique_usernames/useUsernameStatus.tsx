@@ -1,7 +1,7 @@
-import { useUsernameLiveCheck } from "useUsernameLiveCheck.tsx";
 // discord_app/modules/unique_usernames/useUsernameStatus.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { useUsernameLiveCheck } from "useUsernameLiveCheck.tsx";
 
 const require = arg1;
 const result = require("useUsernameLiveCheck").fileFinishedImporting("modules/unique_usernames/useUsernameStatus.tsx");

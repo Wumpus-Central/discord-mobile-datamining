@@ -1,12 +1,12 @@
-import { registerAsset } from "../../../../../_runtime/08985_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/guild_settings/roles/native/InRolePromptNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { RoleFlags } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/08985_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 let c5;
 let closure_6;

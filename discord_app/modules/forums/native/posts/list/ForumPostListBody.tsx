@@ -1,15 +1,15 @@
-import { ForumPostMediaAndroid } from "../ForumPostMedia.tsx";
-import { ForumPostMessageContent } from "../ForumPostMessageContent.tsx";
-import { ForumPostNewTag } from "../ForumPostNewTag.tsx";
-import { ForumPostTimestamp } from "../ForumPostTimestamp.tsx";
-import { ForumPostTitle } from "../ForumPostTitle.tsx";
-import { ForumPostUsername } from "../ForumPostUsername.tsx";
 // discord_app/modules/forums/native/posts/list/ForumPostListBody.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ForumPostMediaAndroid } from "../ForumPostMedia.tsx";
+import { ForumPostMessageContent } from "../ForumPostMessageContent.tsx";
+import { ForumPostNewTag } from "../ForumPostNewTag.tsx";
+import { ForumPostTimestamp } from "../ForumPostTimestamp.tsx";
+import { ForumPostTitle } from "../ForumPostTitle.tsx";
+import { ForumPostUsername } from "../ForumPostUsername.tsx";
 
 let c5;
 let closure_6;

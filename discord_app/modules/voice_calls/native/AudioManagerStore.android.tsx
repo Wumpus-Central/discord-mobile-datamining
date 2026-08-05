@@ -1,11 +1,11 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
 // discord_app/modules/voice_calls/native/AudioManagerStore.android.tsx
 import { RTCConnectionStates } from "ME";
 import { MediaEngineContextTypes } from "DesktopSources";
 import enforcing from "enforcing";
 import enforcing from "enforcing";
 import { Store } from "initialize";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
 
 const nativeEventEmitter = new require("get ActivityIndicator").NativeEventEmitter(require("enforcing"));
 let closure_6 = [];

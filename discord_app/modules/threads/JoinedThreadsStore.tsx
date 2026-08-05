@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/threads/JoinedThreadsStore.tsx
 import { ALL_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 import set from "reset";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 function storeThread(channel) {
   let hasItem = ALL_CHANNEL_TYPES.has(channel.type);

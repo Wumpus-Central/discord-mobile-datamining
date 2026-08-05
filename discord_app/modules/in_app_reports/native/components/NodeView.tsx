@@ -1,7 +1,3 @@
-import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
-import { Arrow } from "Arrow.tsx";
 // discord_app/modules/in_app_reports/native/components/NodeView.tsx
 import ShieldElement from "ShieldElement";
 import PressableBase from "PressableBase";
@@ -15,6 +11,10 @@ import ME from "ME";
 import { Permissions } from "sum";
 import jsxProd from "useNavigation";
 import createCacheKey from "createCacheKey";
+import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
+import { Arrow } from "Arrow.tsx";
 
 let closure_14;
 let closure_16;

@@ -1,3 +1,7 @@
+// discord_app/records/UserRecord.tsx
+import "toJS";
+import ME from "ME";
+import GuildFeatures from "GuildFeatures";
 import { create } from "../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { parseAvatarDecorationData } from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
@@ -5,10 +9,6 @@ import { getNameplateData } from "../modules/collectibles/nameplates/utils.tsx";
 import { getAvatarURL } from "../utils/AvatarUtils.tsx";
 import { isPremiumAtLeast } from "../utils/PremiumTypeUtils.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
-// discord_app/records/UserRecord.tsx
-import "toJS";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
 
 let c10;
 let c4;

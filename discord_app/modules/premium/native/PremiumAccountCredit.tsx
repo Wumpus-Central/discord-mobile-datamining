@@ -1,7 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
 // discord_app/modules/premium/native/PremiumAccountCredit.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -9,6 +5,10 @@ import addEntitlement from "addEntitlement";
 import { SubscriptionStatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
 
 let closure_6;
 let error;

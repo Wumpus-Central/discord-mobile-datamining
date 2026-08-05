@@ -1,7 +1,7 @@
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/user_settings/core/isUserSettingsOpen.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const require = arg1;
 function isUserSettingsOpen() {

@@ -1,6 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { ApplicationIconAndName } from "../../user_profile/native/ApplicationIconAndName.tsx";
-import { ForYouMentionPlaceholder } from "ForYouMentionPlaceholder.tsx";
 // discord_app/modules/notification_center/native/ForYouItems.tsx
 import addApplication from "addApplication";
 import handleSupportedURL from "handleSupportedURL";
@@ -20,6 +17,9 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { ApplicationIconAndName } from "../../user_profile/native/ApplicationIconAndName.tsx";
+import { ForYouMentionPlaceholder } from "ForYouMentionPlaceholder.tsx";
 
 let StyleSheet;
 let closure_15;

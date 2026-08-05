@@ -1,8 +1,8 @@
+// discord_app/modules/media/MediaTypes.tsx
+import { MessageAttachmentFlags } from "ME";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
-// discord_app/modules/media/MediaTypes.tsx
-import { MessageAttachmentFlags } from "ME";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
   let obj = hasFlag /* hasFlag */;

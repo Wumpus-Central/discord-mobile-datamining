@@ -1,10 +1,10 @@
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/verification/native/components/ConfirmEmailChangeCode.tsx
 import keys from "keys";
 import noop from "noop";
 import { setEmailToken } from "ChangeEmailFields";
 import { jsx } from "jsxProd";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("ChangeEmailFields").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");

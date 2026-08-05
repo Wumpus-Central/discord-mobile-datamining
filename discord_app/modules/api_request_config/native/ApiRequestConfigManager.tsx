@@ -1,10 +1,10 @@
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/api_request_config/native/ApiRequestConfigManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import fetchFingerprint from "fetchFingerprint";
 import "initialize";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 function updateApiRequestConfig() {
   const NativeCacheModule = NativeModules.NativeCacheModule;

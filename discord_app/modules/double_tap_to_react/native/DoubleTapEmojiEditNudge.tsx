@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx
 import ME from "ME";
 import getSystemLocale from "getSystemLocale";
@@ -10,6 +9,7 @@ import set from "set";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
 import set from "get ActivityIndicator";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c9;

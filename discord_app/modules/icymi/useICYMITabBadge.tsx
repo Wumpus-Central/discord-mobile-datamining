@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/icymi/useICYMITabBadge.tsx
 import filterStaffGuild from "filterStaffGuild";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");

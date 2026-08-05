@@ -1,10 +1,10 @@
+// discord_common/js/packages/i18n/parse.tsx
+import _slicedToArray from "_slicedToArray";
+import FORMAT_RE from "FORMAT_RE";
 import { t } from "../../../../_runtime/03984_t.js";
 import { 16169__ } from "../../../../_runtime/metro/16169__.js";
 import { link } from "markdownRules.tsx";
 import { updateRules } from "updateRules.web.tsx";
-// discord_common/js/packages/i18n/parse.tsx
-import _slicedToArray from "_slicedToArray";
-import FORMAT_RE from "FORMAT_RE";
 
 let c9;
 let closure_6;

@@ -1,5 +1,5 @@
-import { getPricesFromServer } from "../../skus/utils/getPricesFromServer.tsx";
 // discord_app/modules/collectibles/records/CollectiblesBundledProductRecord.tsx
+import { getPricesFromServer } from "../../skus/utils/getPricesFromServer.tsx";
 let prototype;
 prototype = function CollectiblesBundledProductRecord(arg0) {
   ({ prices: tmp.prices, type: tmp.type, premiumType: tmp.premiumType, name: tmp.name, skuId: tmp.skuId, summary: tmp.summary } = arg0);

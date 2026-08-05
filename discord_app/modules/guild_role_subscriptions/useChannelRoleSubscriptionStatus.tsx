@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getChannelRoleSubscriptionStatus(id, getUncachedChannelPermissions, ensureGuildLoaded, closure_6) {

@@ -1,10 +1,10 @@
-import { useFilterAndSortToOnlyFrecentCommands } from "../../../../hooks/useFilterAndSortToOnlyFrecentCommands.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useFilterAndSortToOnlyFrecentCommands } from "../../../../hooks/useFilterAndSortToOnlyFrecentCommands.tsx";
 
 let closure_6;
 let error;

@@ -1,3 +1,12 @@
+// discord_app/modules/search/native/components/tabs/SearchTabsPage.tsx
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "module_15656";
+import { View } from "module_15646";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { SearchTabs } from "MessageEmbedTypes";
+import { SearchTypes } from "ME";
+import { jsx } from "module_15663";
+import createCacheKey from "createCacheKey";
 import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
 import { GuildNSFW } from "../../../../../components_native/warnings/GuildNSFW.tsx";
 import { map } from "../../../../reanimated/native/useStateFromSharedValue.tsx";
@@ -11,15 +20,6 @@ import { MessagesScreen } from "pages/messages/MessagesScreen.tsx";
 import { InitialPinsScreen } from "pages/messages/PinsScreen.tsx";
 import { PeopleScreen } from "pages/PeopleScreen.tsx";
 import { ClearAllHistory } from "pages/RecentScreen.tsx";
-// discord_app/modules/search/native/components/tabs/SearchTabsPage.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_15656";
-import { View } from "module_15646";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { SearchTabs } from "MessageEmbedTypes";
-import { SearchTypes } from "ME";
-import { jsx } from "module_15663";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 function SearchTabsPage(selectMediaTab) {

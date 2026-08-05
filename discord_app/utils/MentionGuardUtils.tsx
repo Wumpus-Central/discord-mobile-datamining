@@ -1,10 +1,10 @@
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { rebuild } from "../modules/messages/MessageParser.tsx";
 // discord_app/utils/MentionGuardUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import getMemberListId from "getMemberListId";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { rebuild } from "../modules/messages/MessageParser.tsx";
 
 let c5;
 let closure_6;

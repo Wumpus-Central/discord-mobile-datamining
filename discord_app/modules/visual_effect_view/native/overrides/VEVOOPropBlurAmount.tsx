@@ -1,11 +1,11 @@
-import { FormSwitch } from "../../../../design/components/Forms/native/FormSwitch.native.tsx";
-import { Form } from "../../../../design/void/Form/native/index.tsx";
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import useVisualEffectViewOverrides from "useVisualEffectViewOverrides";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { FormSwitch } from "../../../../design/components/Forms/native/FormSwitch.native.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
 
 let c5;
 let closure_6;

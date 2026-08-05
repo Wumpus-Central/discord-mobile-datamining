@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/useMuteStates.tsx
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
@@ -6,6 +5,7 @@ import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateVoiceState from "updateVoiceState";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getMuteStates(voiceStateStore) {

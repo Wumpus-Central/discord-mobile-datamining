@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 // discord_app/modules/parent_tools/hooks/useConnectGuardianGate.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 
 const require = arg1;
 const result = require("freshTeenActivityWithMap").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");

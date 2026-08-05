@@ -1,8 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { version } from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import { getFavoritesAwareGuildName } from "../../modules/favorites/FavoritesUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/stores/views/SortedVoiceStateStore.tsx
 import _slicedToArray from "_slicedToArray";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -14,6 +9,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import { ME } from "ME";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { version } from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import { getFavoritesAwareGuildName } from "../../modules/favorites/FavoritesUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 
 const require = arg1;
 function getVoiceStatesForGuild(guildId) {

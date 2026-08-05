@@ -1,10 +1,10 @@
-import { index } from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { databaseName } from "DatabaseManager.tsx";
 // discord_app/modules/app_database/system/AppDatabaseManager.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import set from "timestamp";
+import { index } from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { databaseName } from "DatabaseManager.tsx";
 
 const require = arg1;
 let c5 = new require("databaseName")("AppDatabaseManager");

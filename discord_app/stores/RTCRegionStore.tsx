@@ -1,6 +1,6 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/RTCRegionStore.tsx
 import { DeviceSettingsStore } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
 const HOUR = require("set").Millis.HOUR;

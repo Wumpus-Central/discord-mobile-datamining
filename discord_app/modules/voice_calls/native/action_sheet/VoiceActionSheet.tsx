@@ -1,12 +1,12 @@
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { _initialize } from "../../../nuf_channels/native/NUFChannelsManager.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx
 import noop from "noop";
 import get_ActivityIndicator from "ItemSeparator";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { _initialize } from "../../../nuf_channels/native/NUFChannelsManager.tsx";
 
 let StyleSheet;
 let c4;

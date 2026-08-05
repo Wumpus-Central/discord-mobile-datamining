@@ -1,10 +1,10 @@
-import { explicitContentFromProto } from "../../modules/user_settings/UserSettings.tsx";
 // discord_app/stores/game_store/TestModeStore.tsx
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import setLibraryApplications from "setLibraryApplications";
 import { PersistedStore } from "initialize";
 import set from "setLibraryApplications";
+import { explicitContentFromProto } from "../../modules/user_settings/UserSettings.tsx";
 
 const require = arg1;
 function reset() {

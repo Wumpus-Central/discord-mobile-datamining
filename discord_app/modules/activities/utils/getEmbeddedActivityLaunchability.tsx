@@ -1,6 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useIsActivitiesEnabledForCurrentPlatform } from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
 // discord_app/modules/activities/utils/getEmbeddedActivityLaunchability.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -8,6 +5,9 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateVoiceState from "updateVoiceState";
 import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "items3";
 import { Permissions } from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useIsActivitiesEnabledForCurrentPlatform } from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
 
 const require = arg1;
 function getEmbeddedActivityLaunchability(arg0) {

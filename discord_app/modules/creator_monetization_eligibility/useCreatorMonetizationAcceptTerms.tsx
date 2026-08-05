@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "CreatorMonetizationEligibilityExperimentUtils.tsx";
 // discord_app/modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
@@ -7,6 +5,8 @@ import noop from "noop";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import closure_9 from "mergeGuildAvatar";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "CreatorMonetizationEligibilityExperimentUtils.tsx";
 
 const require = arg1;
 const result = require("noop").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");

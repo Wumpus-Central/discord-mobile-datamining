@@ -1,5 +1,3 @@
-import { ButtonGroup } from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import { usePrimaryActionButtonType } from "GuildEventCardComponents.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventCard.tsx
 import { View } from "get ActivityIndicator";
 import createRTCConnection from "createRTCConnection";
@@ -8,6 +6,8 @@ import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_M
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { ButtonGroup } from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
+import { usePrimaryActionButtonType } from "GuildEventCardComponents.tsx";
 
 let error;
 let metroImportAll;

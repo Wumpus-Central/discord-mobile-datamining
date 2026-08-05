@@ -1,3 +1,9 @@
+// discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "MediaModalOverlayHeader";
+import get_ActivityIndicator from "ObscuredView";
+import jsxProd from "module_12156";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
 import { render } from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
@@ -9,12 +15,6 @@ import { useOverlayLayoutDriver } from "../../useOverlayLayoutDriver.tsx";
 import { ObscuredView } from "../MediaViewerThumbnails.tsx";
 import { MediaModalOverlayAltText } from "MediaModalOverlayAltText.tsx";
 import { MediaModalOverlayHeader } from "MediaModalOverlayHeader.tsx";
-// discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "MediaModalOverlayHeader";
-import get_ActivityIndicator from "ObscuredView";
-import jsxProd from "module_12156";
-import createCacheKey from "createCacheKey";
 
 let c9;
 let error;

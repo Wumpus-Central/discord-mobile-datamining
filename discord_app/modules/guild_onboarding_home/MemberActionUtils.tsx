@@ -1,11 +1,11 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { useIsNewMember } from "useIsNewMember.tsx";
 // discord_app/modules/guild_onboarding_home/MemberActionUtils.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 import set from "set";
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { useIsNewMember } from "useIsNewMember.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");

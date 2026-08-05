@@ -1,12 +1,12 @@
-import { ArrowSmallLeftIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallLeftIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { ArrowSmallLeftIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallLeftIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 let obj = { icon: null };

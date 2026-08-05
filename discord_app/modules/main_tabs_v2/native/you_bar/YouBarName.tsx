@@ -1,3 +1,9 @@
+// discord_app/modules/main_tabs_v2/native/you_bar/YouBarName.tsx
+import { View } from "get ActivityIndicator";
+import filterPlayingActivities from "filterPlayingActivities";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { ChevronSmallDownIcon } from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -7,12 +13,6 @@ import { AVERAGE_FONT_WIDTH_RATIO } from "../../../display_name_styles/native/Us
 import { useGameMentionsAsPlainText } from "../../../game_mentions/hooks/useGameMentionsAsPlainText.tsx";
 import { memoResult1 } from "../../../guild_tag/native/GuildTag.tsx";
 import { apexExperiment } from "YouBarGuildTagExperiment.tsx";
-// discord_app/modules/main_tabs_v2/native/you_bar/YouBarName.tsx
-import { View } from "get ActivityIndicator";
-import filterPlayingActivities from "filterPlayingActivities";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let c5;
 let closure_6;

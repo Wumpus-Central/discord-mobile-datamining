@@ -1,3 +1,7 @@
+// discord_app/modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx
+import "noop";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -5,10 +9,6 @@ import { Stack } from "../../../../design/components/Stack/native/Stack.native.t
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { URLCallout } from "../../../safety_common/native/URLCallout.tsx";
-// discord_app/modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

@@ -1,12 +1,12 @@
+// discord_app/modules/core/native/handleAppStateChanged.tsx
+import fetchFingerprint from "fetchFingerprint";
+import getState from "getState";
+import ME from "ME";
 import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { createRTCConnection } from "../../../stores/RTCConnectionStore.tsx";
 import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import { setSystemTheme } from "../../user_settings/ThemeActionCreators.tsx";
-// discord_app/modules/core/native/handleAppStateChanged.tsx
-import fetchFingerprint from "fetchFingerprint";
-import getState from "getState";
-import ME from "ME";
 
 let c5;
 let closure_6;

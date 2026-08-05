@@ -1,8 +1,8 @@
-import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../../payments/utils/MobileWebRedirectCheckoutUtils.tsx";
 // discord_app/modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx
 import PaymentFlowStep from "PaymentFlowStep";
 import noop from "noop";
 import { AnalyticEvents } from "ME";
+import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../../payments/utils/MobileWebRedirectCheckoutUtils.tsx";
 
 const require = arg1;
 let closure_6 = new require("timestamp")("useGuildBoostPurchaseHandler");

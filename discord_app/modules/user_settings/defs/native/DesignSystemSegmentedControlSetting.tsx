@@ -1,6 +1,6 @@
-import { UserSettingsDesignSystemSegmentedControl } from "../../design_system/native/UserSettingsDesignSystemSegmentedControl.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemSegmentedControlSetting.tsx
 import createToggle from "createToggle";
+import { UserSettingsDesignSystemSegmentedControl } from "../../design_system/native/UserSettingsDesignSystemSegmentedControl.tsx";
 
 obj = {
   useTitle() {

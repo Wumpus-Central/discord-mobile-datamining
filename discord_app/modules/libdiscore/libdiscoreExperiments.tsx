@@ -1,7 +1,7 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 // discord_app/modules/libdiscore/libdiscoreExperiments.tsx
 import { ensureValidMode } from "ensureValidMode";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 
 let c4 = new require("module_38")("libdiscoreExperiments");
 let items = [];

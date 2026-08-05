@@ -1,8 +1,3 @@
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getMixedGradientColor } from "../../../client_themes/native/ThemedGradient.tsx";
-import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
-import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/controls/VoicePanelChatView.tsx
 import importAllResult from "useSafeAreaInsets";
 import { Platform } from "useGradientBottom";
@@ -10,6 +5,11 @@ import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes";
 import ME from "ME";
 import jsxProd from "module_4295";
 import createCacheKey from "createCacheKey";
+import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getMixedGradientColor } from "../../../client_themes/native/ThemedGradient.tsx";
+import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 
 let c4;
 let c5;

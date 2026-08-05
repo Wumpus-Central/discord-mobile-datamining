@@ -1,5 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 // discord_app/modules/directory_channels/GuildDirectoryActionCreators.tsx
 import importDefaultResult from "dispatcher";
 import getSearchState from "getSearchState";
@@ -8,6 +6,8 @@ import { Endpoints } from "ME";
 import importDefaultResult1 from "debounce";
 import importDefaultResult2 from "debounce";
 import importDefaultResult3 from "debounce";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 
 let closure_0 = arg1;
 function _addDirectoryGuildEntry() {

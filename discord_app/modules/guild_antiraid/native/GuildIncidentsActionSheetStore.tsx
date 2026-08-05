@@ -1,7 +1,7 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/guild_antiraid/native/GuildIncidentsActionSheetStore.tsx
 import { DEFAULT_LOCKDOWN_DURATION } from "GUILD_REPORT_RAID_MOBILE_KEY";
 import keys from "keys";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const obj = keys.create(() => ({ time: DEFAULT_LOCKDOWN_DURATION, pauseInvites: true, pauseDms: true, hasTimeChanges: false }));
 const result = require("batchUpdates").fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentsActionSheetStore.tsx");

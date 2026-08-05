@@ -1,4 +1,3 @@
-import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 // discord_app/modules/interaction_components/native/display/TextDisplayComponent.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -7,6 +6,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_6 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS";
 import { jsx } from "jsxProd";
 import result from "__INTERNAL_VIEW_CONFIG";
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 
 const require = arg1;
 if (!set.isAndroid()) {

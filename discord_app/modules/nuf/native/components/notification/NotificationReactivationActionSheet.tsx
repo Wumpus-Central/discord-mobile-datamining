@@ -1,4 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/16402_registerAsset.js";
 // discord_app/modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { EventActionType } from "EventActionType";
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/16402_registerAsset.js";
 
 let c4;
 let c5;

@@ -1,9 +1,3 @@
-import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { start } from "../../discord_common/js/packages/timers/Timers.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { updateVoiceStates } from "../lib/VoiceStateAnalytics.tsx";
-import { trackVideoToggle } from "../modules/media_engine/trackVideoToggle.tsx";
-import { useIsSpatialAudioAvailable } from "../modules/spatial_audio/useIsSpatialAudioAvailable.tsx";
 // discord_app/stores/RTCConnectionStore.tsx
 import set from "set";
 import fetchFingerprint from "fetchFingerprint";
@@ -12,6 +6,12 @@ import ME from "ME";
 import { MediaEngineContextTypes } from "DesktopSources";
 import { Store } from "initialize";
 import promise from "expandEventProperties";
+import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { start } from "../../discord_common/js/packages/timers/Timers.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { updateVoiceStates } from "../lib/VoiceStateAnalytics.tsx";
+import { trackVideoToggle } from "../modules/media_engine/trackVideoToggle.tsx";
+import { useIsSpatialAudioAvailable } from "../modules/spatial_audio/useIsSpatialAudioAvailable.tsx";
 
 let c10;
 let c9;

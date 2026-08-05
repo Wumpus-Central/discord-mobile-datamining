@@ -1,8 +1,8 @@
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 // discord_app/modules/collectibles/CollectiblesCategoryStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import fromServer from "fromServer";
 import { Store } from "initialize";
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 
 const require = arg1;
 function updateCategoriesAndProducts(map) {

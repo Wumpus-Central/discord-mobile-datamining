@@ -1,8 +1,8 @@
-import { SolidCutout } from "../../Icon/native/ClipView.tsx";
-import { Pile } from "Pile.native.tsx";
 // discord_app/design/components/Pile/native/AvatarDuoPile.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { SolidCutout } from "../../Icon/native/ClipView.tsx";
+import { Pile } from "Pile.native.tsx";
 
 const require = arg1;
 const result = require("Pile").fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");

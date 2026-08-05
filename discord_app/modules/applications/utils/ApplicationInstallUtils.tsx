@@ -1,7 +1,7 @@
-import { ApplicationIntegrationType } from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 // discord_app/modules/applications/utils/ApplicationInstallUtils.tsx
 import getIndexKey from "getIndexKey";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
+import { ApplicationIntegrationType } from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 
 const require = arg1;
 let result = require("ApplicationIntegrationType").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");

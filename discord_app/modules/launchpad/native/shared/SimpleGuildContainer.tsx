@@ -1,10 +1,10 @@
-import { getMediaIcon } from "../../../guilds_bar/native/GuildsBarActivityIndicator.tsx";
-import { MaskedBadge } from "../../../main_tabs_v2/native/shared_components/MaskedBadge.tsx";
 // discord_app/modules/launchpad/native/shared/SimpleGuildContainer.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getMediaIcon } from "../../../guilds_bar/native/GuildsBarActivityIndicator.tsx";
+import { MaskedBadge } from "../../../main_tabs_v2/native/shared_components/MaskedBadge.tsx";
 
 let c4;
 let c5;

@@ -1,12 +1,12 @@
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { BountiesPosterSpotIllustration } from "../../../design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx";
-import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/BountiesNuxPromoSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { BountiesPosterSpotIllustration } from "../../../design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx";
+import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 createCacheKey = { illustrationContainer: null };

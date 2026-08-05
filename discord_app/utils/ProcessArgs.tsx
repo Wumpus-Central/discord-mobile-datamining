@@ -1,5 +1,5 @@
-import { set } from "../lib/DiscordNative.tsx";
 // discord_app/utils/ProcessArgs.tsx
+import { set } from "../lib/DiscordNative.tsx";
 let prototype;
 prototype = function ProcessArgs() {
   return Object.create(new.target.prototype);

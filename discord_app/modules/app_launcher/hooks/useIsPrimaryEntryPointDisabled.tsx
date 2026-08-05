@@ -1,8 +1,8 @@
-import { getPlatform } from "../../activities/utils/getPlatform.tsx";
 // discord_app/modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx
 import createExecutable from "createExecutable";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
+import { getPlatform } from "../../activities/utils/getPlatform.tsx";
 
 const require = arg1;
 const result = require("sum").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");

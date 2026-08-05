@@ -1,13 +1,13 @@
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/native/PushNotificationActionCreators.tsx
 import timestamp from "timestamp";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
 import str2 from "str2";
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 
 let c10;
 let c9;

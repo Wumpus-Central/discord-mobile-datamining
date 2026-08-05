@@ -1,10 +1,10 @@
-import { ContextMenu } from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
-import { FlagIcon } from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileWidgetReportButton.tsx
 import "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { ContextMenu } from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
+import { FlagIcon } from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 let closure_5 = { top: 8, bottom: 8, left: 8, right: 8 };

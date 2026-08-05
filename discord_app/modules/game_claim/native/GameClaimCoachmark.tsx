@@ -1,10 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { MINIMUM_HIT_AREA } from "../../../design/components/Button/native/ButtonConstants.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useGameNameAndCoverImage } from "../../games/hooks/useGameNameAndCoverImage.tsx";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import { fetchUnclaimedGames } from "../UnclaimedGamesActionCreators.tsx";
-import { importDefaultResult1 } from "GameClaimCardStack.tsx";
 // discord_app/modules/game_claim/native/GameClaimCoachmark.tsx
 import closure_3 from "jsxProd";
 import { View } from "Text";
@@ -13,6 +6,13 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importAllResult from "LinkExternalSmallIcon";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { MINIMUM_HIT_AREA } from "../../../design/components/Button/native/ButtonConstants.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useGameNameAndCoverImage } from "../../games/hooks/useGameNameAndCoverImage.tsx";
+import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import { fetchUnclaimedGames } from "../UnclaimedGamesActionCreators.tsx";
+import { importDefaultResult1 } from "GameClaimCardStack.tsx";
 
 let c5;
 let c9;

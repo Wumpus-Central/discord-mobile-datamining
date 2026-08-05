@@ -1,13 +1,13 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { getNavigationModalPresentation } from "../utils/getNavigationModalPresentation.tsx";
 // discord_app/modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { getNavigationModalPresentation } from "../utils/getNavigationModalPresentation.tsx";
 
 let c5;
 let closure_6;

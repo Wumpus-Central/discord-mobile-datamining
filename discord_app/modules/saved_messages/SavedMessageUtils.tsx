@@ -1,12 +1,12 @@
-import { t } from "../../../_runtime/03867_t.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import getSystemLocale from "getSystemLocale";
 import noop from "noop";
 import { UnknownChannelRecord } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
+import { t } from "../../../_runtime/03867_t.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let error;
 let metroImportAll;

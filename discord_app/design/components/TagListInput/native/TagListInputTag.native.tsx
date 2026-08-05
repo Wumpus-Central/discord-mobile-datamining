@@ -1,14 +1,14 @@
+// discord_app/design/components/TagListInput/native/TagListInputTag.native.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useAccessibilityPress } from "../../../../modules/a11y/native/useAccessibilityPress.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
 import { Text } from "../../Text/native/Text.tsx";
-// discord_app/design/components/TagListInput/native/TagListInputTag.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

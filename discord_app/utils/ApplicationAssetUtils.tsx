@@ -1,12 +1,12 @@
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { timestamp } from "../modules/debug/Logger.tsx";
-import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
 // discord_app/utils/ApplicationAssetUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import timestamp from "timestamp";
 import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
 import ME from "ME";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { timestamp } from "../modules/debug/Logger.tsx";
+import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
 
 let PlatformTypes;
 let closure_6;

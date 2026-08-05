@@ -1,4 +1,3 @@
-import { guildHasOnboardingHome } from "guildHasOnboardingHome.tsx";
 // discord_app/modules/guild_onboarding_home/hasPendingMemberAction.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -7,6 +6,7 @@ import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 import set from "set";
 import { GuildFeatures } from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { guildHasOnboardingHome } from "guildHasOnboardingHome.tsx";
 
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 

@@ -1,9 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { FastestList.android } from "../../fastest_list/FastestList.android.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/ICYMIServerRecommendationRow.tsx
 import _slicedToArray from "_slicedToArray";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -15,6 +9,12 @@ import filterStaffGuild from "filterStaffGuild";
 import ME from "ME";
 import jsxProd from "Text";
 import createICYMIStyles from "createICYMIStyles";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { FastestList.android } from "../../fastest_list/FastestList.android.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c10;
 let closure_12;

@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { apexExperiment } from "../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
-import { _requestPushNotificationPermission } from "../../../nuf/native/NotificationPermissionUtil.tsx";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
-import { hasAndroidNotificationChannels } from "SettingsNotificationUtils.tsx";
 // discord_app/modules/user_settings/notifications/native/SettingsNotificationScreen.tsx
 import importAllResult from "set";
 import { View } from "prefetchFamilyCenterAgeGroupWhen";
@@ -10,6 +5,11 @@ import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initia
 import { MobileSetting } from "MobileSetting";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { apexExperiment } from "../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
+import { _requestPushNotificationPermission } from "../../../nuf/native/NotificationPermissionUtil.tsx";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import { hasAndroidNotificationChannels } from "SettingsNotificationUtils.tsx";
 
 let c9;
 let error;

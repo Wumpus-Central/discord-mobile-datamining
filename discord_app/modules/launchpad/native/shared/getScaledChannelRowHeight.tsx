@@ -1,5 +1,5 @@
-import { getLayoutStyle } from "getLayoutStyles.tsx";
 // discord_app/modules/launchpad/native/shared/getScaledChannelRowHeight.tsx
+import { getLayoutStyle } from "getLayoutStyles.tsx";
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/getScaledChannelRowHeight.tsx");
 
 export default function getScaledChannelRowHeight(arg0) {

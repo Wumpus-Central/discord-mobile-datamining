@@ -1,8 +1,8 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/utils/CollectiblesProductUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import { isProfileEffectRecord } from "fromServer";
 import ME from "ME";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 let c4;
 let c5;

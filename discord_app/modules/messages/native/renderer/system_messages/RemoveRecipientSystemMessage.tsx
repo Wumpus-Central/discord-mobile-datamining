@@ -1,9 +1,9 @@
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx");
 

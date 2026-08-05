@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/labs/useLabFeature.tsx
 import getUserAgnosticState from "getUserAgnosticState";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/labs/useLabFeature.tsx");

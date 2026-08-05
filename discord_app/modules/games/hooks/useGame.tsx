@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/games/hooks/useGame.tsx
 import noop from "noop";
 import importDefaultResult1 from "handleLoadMessages";
 import initialize from "initialize";
 import importDefaultResult from "set";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 initialize = {

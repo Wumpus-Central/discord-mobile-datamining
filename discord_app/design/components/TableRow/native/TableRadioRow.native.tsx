@@ -1,10 +1,10 @@
+// discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
+import noop from "noop";
+import { jsx } from "jsxProd";
 import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import { FormRadio } from "../../Forms/native/FormRadio.native.tsx";
 import { context } from "TableRadioGroup.native.tsx";
 import { TableRowInner } from "TableRow.native.tsx";
-// discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
 
 let require = arg1;
 const result = require("context").fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");

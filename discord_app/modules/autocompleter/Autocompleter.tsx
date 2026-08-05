@@ -1,3 +1,9 @@
+// discord_app/modules/autocompleter/Autocompleter.tsx
+import handleUserUpdate from "handleUserUpdate";
+import fromPath from "fromPath";
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
+import upsertRelationship from "upsertRelationship";
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { t } from "../../../_runtime/03984_t.js";
 import { NOOP } from "../../utils/AutocompleteUtils.tsx";
 import { getGuildNameSuggestion } from "../../utils/GuildUtils.tsx";
@@ -6,12 +12,6 @@ import { CodedLinkType } from "../coded_links/CodedLink.tsx";
 import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
 import { queryGamesAutocomplete } from "../games/autocomplete/queryGamesAutocomplete.tsx";
 import { getTransformedUser } from "UserSearchManager.tsx";
-// discord_app/modules/autocompleter/Autocompleter.tsx
-import handleUserUpdate from "handleUserUpdate";
-import fromPath from "fromPath";
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
-import upsertRelationship from "upsertRelationship";
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 function getAutocompleterBoosterMap(USER, options) {

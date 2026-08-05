@@ -1,6 +1,6 @@
+// discord_common/js/packages/rpc-schema/definitions.tsx
 import { set } from "../../shared/shared-constants/OAuth2Scopes.tsx";
 import { RPCCommands } from "helpers.tsx";
-// discord_common/js/packages/rpc-schema/definitions.tsx
 let obj = { request: "Array", response: 0 };
 obj[1] = function response(string) {
   const obj = { image_url: null };

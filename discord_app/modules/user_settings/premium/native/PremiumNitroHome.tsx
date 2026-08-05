@@ -1,10 +1,3 @@
-import { MarketingComponentType } from "../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { usePromotionMarketingComponent } from "../../../premium/hooks/usePromotionMarketingComponent.tsx";
-import { frozen } from "../../../premium/native/PremiumPerkCard.tsx";
-import { useIsEligibleSenderForReferralProgram } from "../../../premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx";
-import { TieredTenureBadgePerkCard } from "../../../premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx";
-import { useScrollToSection } from "useScrollToSection.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumNitroHome.tsx
 import PremiumPerkCarousel from "PremiumPerkCarousel";
 import getSystemLocale from "getSystemLocale";
@@ -23,6 +16,13 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { MarketingComponentType } from "../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { usePromotionMarketingComponent } from "../../../premium/hooks/usePromotionMarketingComponent.tsx";
+import { frozen } from "../../../premium/native/PremiumPerkCard.tsx";
+import { useIsEligibleSenderForReferralProgram } from "../../../premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx";
+import { TieredTenureBadgePerkCard } from "../../../premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx";
+import { useScrollToSection } from "useScrollToSection.tsx";
 
 let c5;
 let closure_12;

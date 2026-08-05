@@ -1,9 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getIsScreenLandscape } from "../../../../screen/useIsScreenLandscape.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -13,6 +7,12 @@ import ME from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getIsScreenLandscape } from "../../../../screen/useIsScreenLandscape.native.tsx";
 
 let c10;
 let error;

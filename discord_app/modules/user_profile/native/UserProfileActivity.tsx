@@ -1,4 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivity.tsx
 import UserProfileActivityCardBadges from "UserProfileActivityCardBadges";
 import isLinkTrusted from "isLinkTrusted";
@@ -18,6 +17,7 @@ import jsxProd from "ManaContext";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "get ActivityIndicator";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c5;
 let closure_17;

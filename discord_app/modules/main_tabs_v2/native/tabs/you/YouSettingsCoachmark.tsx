@@ -1,6 +1,6 @@
+// discord_app/modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx
 import { useCoachmark } from "../../../../../design/components/Coachmark/native/useCoachmark.native.tsx";
 import { ReferralProgramCoachmarkImg } from "../../../../premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx";
-// discord_app/modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");
 
 export default function YouSettingsCoachmark(buttonRef) {

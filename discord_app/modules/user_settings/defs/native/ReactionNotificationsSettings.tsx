@@ -1,9 +1,9 @@
+// discord_app/modules/user_settings/defs/native/ReactionNotificationsSettings.tsx
+import createToggle from "createToggle";
 import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { MAX_REACTIONS } from "../../../reactions/ReactionUtils.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/ReactionNotificationsSettings.tsx
-import createToggle from "createToggle";
 
 function onChange(arg0) {
   const obj = MAX_REACTIONS /* MAX_REACTIONS */;

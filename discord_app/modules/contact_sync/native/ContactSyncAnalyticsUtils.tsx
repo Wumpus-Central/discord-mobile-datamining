@@ -1,11 +1,11 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { trackNUFStep } from "../../nuf/native/NewUserAnalyticsUtils.tsx";
-import { _uploadContacts } from "ContactSyncUtils.tsx";
 // discord_app/modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getIsOnboarding } from "ContactSyncModes";
 import { ContactPermissions } from "ContactSyncLandingPage";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { trackNUFStep } from "../../nuf/native/NewUserAnalyticsUtils.tsx";
+import { _uploadContacts } from "ContactSyncUtils.tsx";
 
 const require = arg1;
 let obj = { INITIALIZED: "Flow Initialized", LANDING: "Landing", PERMISSION_REQUESTED: "Contacts Permission Requested", NAME_INPUT: "Name Input", SUGGESTIONS_RESULTS: "Suggestions Results", CONTACT_INVITES: "Contact Invites", ADD_PHONE_NUMBER: "Add Phone Number", VERIFY_PHONE_NUMBER: "Verify Phone Number", PASSWORD_CONFIRM: "Password Confirmation", COMPLETE: "Complete" };

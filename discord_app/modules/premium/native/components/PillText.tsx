@@ -1,10 +1,10 @@
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { usePremiumPrimaryGradientColors } from "../usePremiumPrimaryGradientColors.tsx";
 // discord_app/modules/premium/native/components/PillText.tsx
 import { HorizontalGradient } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { usePremiumPrimaryGradientColors } from "../usePremiumPrimaryGradientColors.tsx";
 
 let obj = { pillTextContainer: null, pillText: null };
 obj = { paddingHorizontal: 8, borderRadius: require("Themes").radii.lg, justifyContent: "center" };

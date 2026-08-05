@@ -1,10 +1,10 @@
-import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
-import { firstAvatarDecoration } from "../hooks/useShopProductItems.tsx";
 // discord_app/modules/collectibles/native/AvatarDecorationProductPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { firstAvatarDecoration } from "../hooks/useShopProductItems.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" } });

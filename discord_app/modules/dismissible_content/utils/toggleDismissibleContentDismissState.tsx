@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx
 import handleConnectionOpen from "handleConnectionOpen";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../DismissibleContentUnsafeUtils.tsx";
 
 require("noop").useCallback;
 let result = require("handleDCShownToUser").fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");

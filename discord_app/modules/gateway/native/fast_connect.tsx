@@ -1,9 +1,9 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { serialize } from "../../tti_analytics/TTITracker.tsx";
 // discord_app/modules/gateway/native/fast_connect.tsx
 import checkEnv from "../../../utils/checkEnv.tsx";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { VERSION_TO_FORCE_RESYNCING_ALL_DATA as closure_6 } from "HELLO_KEY";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { serialize } from "../../tti_analytics/TTITracker.tsx";
 
 let AppState;
 let c4;

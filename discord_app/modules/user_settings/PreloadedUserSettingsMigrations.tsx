@@ -1,3 +1,7 @@
+// discord_app/modules/user_settings/PreloadedUserSettingsMigrations.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { ChannelNoticeTypes } from "ME";
+import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
@@ -5,10 +9,6 @@ import { defineProperty } from "../../../discord_common/js/packages/protos/googl
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { HotspotStore } from "../hotspot/index.tsx";
 import { b64ToProto } from "UserSettingsUtils.tsx";
-// discord_app/modules/user_settings/PreloadedUserSettingsMigrations.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ChannelNoticeTypes } from "ME";
-import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS";
 
 const require = arg1;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {

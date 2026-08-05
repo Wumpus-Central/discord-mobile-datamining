@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { CLOSED } from "ConnectionState.tsx";
-import { handleIdentify } from "GatewaySocketSingleton.tsx";
 // discord_app/modules/gateway/GatewayConnectionStore.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -17,6 +13,10 @@ import closure_14 from "initialize";
 import ME from "ME";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { CLOSED } from "ConnectionState.tsx";
+import { handleIdentify } from "GatewaySocketSingleton.tsx";
 
 let closure_15;
 let closure_16;

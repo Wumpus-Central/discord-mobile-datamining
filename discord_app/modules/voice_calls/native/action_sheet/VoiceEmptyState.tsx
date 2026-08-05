@@ -1,8 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/12954_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { JoinVoiceChannelButton } from "JoinVoiceChannelButton.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -11,6 +6,11 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
+import { registerAsset } from "../../../../../_runtime/12954_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { JoinVoiceChannelButton } from "JoinVoiceChannelButton.tsx";
 
 let c4;
 let c5;

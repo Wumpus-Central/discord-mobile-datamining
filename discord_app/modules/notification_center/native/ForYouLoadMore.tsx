@@ -1,10 +1,10 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/notification_center/native/ForYouLoadMore.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import _validate from "_validate";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 let c3;
 let obj1;

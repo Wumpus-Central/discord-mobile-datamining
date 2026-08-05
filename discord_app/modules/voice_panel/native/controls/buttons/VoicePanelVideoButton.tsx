@@ -1,4 +1,3 @@
-import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx
 import VideoIcon from "VideoIcon";
 import { View } from "getSystemLocale";
@@ -8,6 +7,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { jsx } from "set";
+import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
 
 const require = arg1;
 function VideoButtonRive(arg0) {

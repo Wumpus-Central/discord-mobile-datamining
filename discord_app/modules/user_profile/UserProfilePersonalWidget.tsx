@@ -1,8 +1,8 @@
+// discord_app/modules/user_profile/UserProfilePersonalWidget.tsx
 import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
 import { PersonalWidgetSectionType } from "../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx";
 import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-// discord_app/modules/user_profile/UserProfilePersonalWidget.tsx
 function isFieldEmpty(title) {
   let tmp = "" === title.title.trim();
   if (tmp) {

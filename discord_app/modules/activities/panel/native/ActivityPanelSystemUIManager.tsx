@@ -1,8 +1,8 @@
-import { useActivityWebViewLock } from "ActivityPanelStateContext.tsx";
 // discord_app/modules/activities/panel/native/ActivityPanelSystemUIManager.tsx
 import importAllResult from "noop";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import jsxProd from "jsxProd";
+import { useActivityWebViewLock } from "ActivityPanelStateContext.tsx";
 
 let c5;
 let closure_6;

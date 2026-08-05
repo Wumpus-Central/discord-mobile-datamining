@@ -1,10 +1,10 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/collectibles/native/EditCollectiblesPickerList.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

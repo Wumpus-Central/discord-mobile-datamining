@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { AgeGatedFeature } from "../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import { useAgeVerificationRunner } from "../../age_assurance/AgeVerificationUtils.tsx";
 import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import { explicitContentFromProto } from "../UserSettings.tsx";
 import { useNSFWAllowed } from "useNSFWAllowed.tsx";
-// discord_app/modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 const result = require("useAgeVerificationRunner").fileFinishedImporting("modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx");

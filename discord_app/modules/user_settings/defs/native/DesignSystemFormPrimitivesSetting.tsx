@@ -1,6 +1,6 @@
-import { Radio } from "../../design_system/native/UserSettingsDesignSystemFormPrimitives.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemFormPrimitivesSetting.tsx
 import createToggle from "createToggle";
+import { Radio } from "../../design_system/native/UserSettingsDesignSystemFormPrimitives.tsx";
 
 obj = {
   useTitle() {

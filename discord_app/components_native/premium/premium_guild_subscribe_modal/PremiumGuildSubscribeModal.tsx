@@ -1,7 +1,3 @@
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { useInitialValue } from "../../../hooks/useInitialValue.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useBackPressHandler } from "../../../modules/routing/native/useBackPressHandler.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx
 import _slicedToArray from "_slicedToArray";
 import PendingCancellationWarning from "PendingCancellationWarning";
@@ -9,6 +5,10 @@ import handleThemeChange from "handleThemeChange";
 import { PremiumGuildSubscribeModalScenes as closure_6 } from "PremiumGuildSubscribeModalScenes";
 import { UserSettingsSections } from "ME";
 import { jsx } from "useBackPressHandler";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useInitialValue } from "../../../hooks/useInitialValue.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useBackPressHandler } from "../../../modules/routing/native/useBackPressHandler.tsx";
 
 const require = arg1;
 let result = require("handleThemeChange").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx");

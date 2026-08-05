@@ -1,9 +1,9 @@
-import { Button } from "../../../../design/void/native.tsx";
-import { getParticipantTitle } from "../../getParticipantTitle.tsx";
 // discord_app/modules/video_calls/native/components/ParticipantTitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/void/native.tsx";
+import { getParticipantTitle } from "../../getParticipantTitle.tsx";
 
 const require = arg1;
 createCacheKey = { usernameText: null };

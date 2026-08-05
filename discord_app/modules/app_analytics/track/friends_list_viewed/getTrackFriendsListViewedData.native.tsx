@@ -1,7 +1,3 @@
-import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.tsx";
-import { getFriendStatusCounts } from "../../../friends/getFriendStatusCounts.tsx";
-import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 // discord_app/modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx
 import { useContactSyncStore } from "setStoredContacts";
 import initialize from "initialize";
@@ -9,6 +5,10 @@ import recountRelationshipTypes from "recountRelationshipTypes";
 import set from "set";
 import upsertRelationship from "upsertRelationship";
 import ME from "ME";
+import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.tsx";
+import { getFriendStatusCounts } from "../../../friends/getFriendStatusCounts.tsx";
+import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 
 let c9;
 let metroImportAll;

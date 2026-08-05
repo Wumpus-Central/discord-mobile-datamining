@@ -1,7 +1,7 @@
-import { ChangeLogScreen } from "../../../../components_native/ChangeLogModal.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/ChangeLogSetting.tsx
 import createToggle from "createToggle";
+import { ChangeLogScreen } from "../../../../components_native/ChangeLogModal.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 obj = {
   useTitle() {

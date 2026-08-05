@@ -1,13 +1,13 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { DiscordTag } from "../../user_profile/native/DiscordTag.tsx";
 // discord_app/modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { DiscordTag } from "../../user_profile/native/DiscordTag.tsx";
 
 let c5;
 let closure_6;

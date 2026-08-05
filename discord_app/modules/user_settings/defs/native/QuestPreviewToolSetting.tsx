@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/QuestPreviewToolSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useQuests } from "../../../quests/hooks/QuestHooks.tsx";
 import { SettingsQuestPreviewScreen } from "../../quests/native/SettingsQuestPreviewScreen.tsx";
-// discord_app/modules/user_settings/defs/native/QuestPreviewToolSetting.tsx
-import createToggle from "createToggle";
 
 obj = {
   useTitle() {

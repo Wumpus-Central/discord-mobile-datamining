@@ -1,10 +1,10 @@
-import { _guildRoomConnect } from "GuildRoomActionCreators.native.tsx";
-import { experiment } from "GuildRoomsExperiment.tsx";
 // discord_app/modules/guild_rooms/GuildRoomManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
 import "initialize";
+import { _guildRoomConnect } from "GuildRoomActionCreators.native.tsx";
+import { experiment } from "GuildRoomsExperiment.tsx";
 
 let require = arg1;
 let c6 = null;

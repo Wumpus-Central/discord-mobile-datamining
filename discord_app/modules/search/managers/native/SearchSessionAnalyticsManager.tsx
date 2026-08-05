@@ -1,7 +1,7 @@
-import { SearchTokenTypes } from "../../SearchUtils.tsx";
 // discord_app/modules/search/managers/native/SearchSessionAnalyticsManager.tsx
 import { SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB as closure_2 } from "SearchEntrypointAnalyticsLocations";
 import "getSession";
+import { SearchTokenTypes } from "../../SearchUtils.tsx";
 
 class SearchSessionAnalyticsManager extends tmp2 {
   constructor() {

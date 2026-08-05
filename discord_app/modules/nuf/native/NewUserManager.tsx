@@ -1,6 +1,3 @@
-import { keys } from "../../../ConstantsIOS.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { _startContactSyncForDiscoverability } from "NUFActionCreators.tsx";
 // discord_app/modules/nuf/native/NewUserManager.tsx
 import NewUserTypes from "NewUserTypes";
 import handleSetLocationMetadata from "handleSetLocationMetadata";
@@ -11,6 +8,9 @@ import { NewUserTypes } from "NewUserTypes";
 import { PlatformTypes } from "ME";
 import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps";
 import "initialize";
+import { keys } from "../../../ConstantsIOS.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { _startContactSyncForDiscoverability } from "NUFActionCreators.tsx";
 
 const require = arg1;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };

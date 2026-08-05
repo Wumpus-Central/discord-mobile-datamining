@@ -1,3 +1,4 @@
+// discord_app/modules/checkpoint/CheckpointUtils.tsx
 import { metadata } from "../../../discord_assets/assets/checkpoint/card-banana.png.js";
 import { metadata } from "../../../discord_assets/assets/checkpoint/card-capybara.png.js";
 import { metadata } from "../../../discord_assets/assets/checkpoint/card-cassette.png.js";
@@ -10,7 +11,6 @@ import { metadata } from "../../../discord_assets/assets/checkpoint/card-plant.p
 import { metadata } from "../../../discord_assets/assets/checkpoint/card-snail.png.js";
 import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import { getDurationString } from "../notification_center/getTimestampString.tsx";
-// discord_app/modules/checkpoint/CheckpointUtils.tsx
 const items = [require("sleep").TimeUnits.HOURS, require("sleep").TimeUnits.MINUTES];
 const result = require("getSystemLocale").fileFinishedImporting("modules/checkpoint/CheckpointUtils.tsx");
 

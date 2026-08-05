@@ -1,8 +1,8 @@
-import { fetchTopEmojis } from "TopEmojisActionCreators.tsx";
 // discord_app/modules/emojis/top_emojis/TopEmojisUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import initialize from "initialize";
+import { fetchTopEmojis } from "TopEmojisActionCreators.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");

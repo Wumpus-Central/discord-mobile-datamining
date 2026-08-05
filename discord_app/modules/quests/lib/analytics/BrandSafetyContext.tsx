@@ -1,5 +1,3 @@
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { getQuestDeliveryDataForPlacement } from "../../utils/QuestDataUtils.tsx";
 // discord_app/modules/quests/lib/analytics/BrandSafetyContext.tsx
 import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +6,8 @@ import upsertRelationship from "upsertRelationship";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN as closure_10 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { getQuestDeliveryDataForPlacement } from "../../utils/QuestDataUtils.tsx";
 
 let c3;
 let c4;

@@ -1,14 +1,14 @@
+// discord_app/modules/age_gate/native/components/AgeGateVerify.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { useAgeVerificationRunner } from "../../../age_assurance/AgeVerificationUtils.tsx";
 import { shouldShowAgeGateForVoiceChannel } from "../../AgeGateUtils.tsx";
-// discord_app/modules/age_gate/native/components/AgeGateVerify.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

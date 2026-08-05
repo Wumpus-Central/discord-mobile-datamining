@@ -1,6 +1,6 @@
-import { parsePollResultSystemMessageEmbed } from "../../../../polls/parsePollResultSystemMessageEmbed.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx
 import { EMOJI_URL_BASE_SIZE } from "set";
+import { parsePollResultSystemMessageEmbed } from "../../../../polls/parsePollResultSystemMessageEmbed.tsx";
 
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
 

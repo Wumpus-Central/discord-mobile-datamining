@@ -1,9 +1,9 @@
-import { useAccessibilityViewIsModalToggle } from "useAccessibilityViewIsModalToggle.native.tsx";
 // discord_app/design/components/AccessibilityView/AccessibilityView.native.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 import importDefaultResult from "module_4146";
+import { useAccessibilityViewIsModalToggle } from "useAccessibilityViewIsModalToggle.native.tsx";
 
 const forwardRefResult = require("noop").forwardRef((accessibilityViewIsModal, ref) => {
   let nativeID;

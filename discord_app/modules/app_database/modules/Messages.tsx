@@ -1,4 +1,3 @@
-import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/Messages.tsx
 import timestamp from "timestamp";
 import _slicedToArray from "_slicedToArray";
@@ -6,6 +5,7 @@ import _handleConnectionOpen from "_handleConnectionOpen";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged";
 import set from "_handleConnectionOpen";
+import { items } from "../DatabaseDaos.tsx";
 
 const metroImportAll = new require("ensureGuildLoaded")("Messages");
 let prototype;

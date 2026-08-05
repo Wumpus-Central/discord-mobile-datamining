@@ -1,6 +1,3 @@
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/events/crossPlatformRPCEventHandlers.tsx
 import addApplication from "addApplication";
 import initialize from "initialize";
@@ -15,6 +12,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 let RPCEvents;
 let RPC_AUTHENTICATED_SCOPE;

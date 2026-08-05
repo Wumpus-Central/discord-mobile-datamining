@@ -1,5 +1,5 @@
-import { navigationToRootTabHelper } from "../helpers/NavigationRouteUtils.native.tsx";
 // discord_app/modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx
+import { navigationToRootTabHelper } from "../helpers/NavigationRouteUtils.native.tsx";
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 
 export default function getChannelDetailsFromRoute(currentRoute) {

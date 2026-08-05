@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../../../../_runtime/08973_registerAsset.js";
-import { PressableNavigatorButtonWrapper } from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../../_runtime/08973_registerAsset.js";
+import { PressableNavigatorButtonWrapper } from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
 
 const require = arg1;
 let result = require("openChannelLongPressActionSheet").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");

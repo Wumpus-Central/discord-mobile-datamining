@@ -1,10 +1,10 @@
+// discord_common/js/packages/protos/discord_protos/premium_marketing/v1/mobile_bottom_sheet.tsx
+import _slicedToArray from "_slicedToArray";
+import { MessageType } from "module_1307";
 import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 import { create } from "../../common/v1/localized_string.tsx";
 import { create } from "cta_button.tsx";
 import { create } from "help_article.tsx";
-// discord_common/js/packages/protos/discord_protos/premium_marketing/v1/mobile_bottom_sheet.tsx
-import _slicedToArray from "_slicedToArray";
-import { MessageType } from "module_1307";
 
 const require = arg1;
 class MobileBottomSheet$Type extends MessageType {

@@ -1,14 +1,14 @@
-import { KeyIcon } from "../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowArrow } from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx
 import Themes from "Themes";
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { KeyIcon } from "../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowArrow } from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c5;
 let closure_6;

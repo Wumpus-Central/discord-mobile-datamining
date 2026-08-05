@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/activities/useActivityUsers.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import participantFromServer from "participantFromServer";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/activities/useActivityUsers.tsx");

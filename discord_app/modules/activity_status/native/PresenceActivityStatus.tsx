@@ -1,13 +1,13 @@
+// discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
+import "noop";
+import { ActivityTypes } from "ME";
+import jsxProd from "jsxProd";
 import { AppsIcon } from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import { GameControllerIcon } from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import { MusicIcon } from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import { TvIcon } from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
 import { getActivityStatusText } from "../getActivityStatusText.tsx";
-// discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
-import "noop";
-import { ActivityTypes } from "ME";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guilds_bar/usePendingFolderGuildIds.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");

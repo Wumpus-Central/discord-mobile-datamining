@@ -1,4 +1,3 @@
-import { EditGuildEventModalNavbar } from "EditGuildEventModalNavbar.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx
 import closure_4 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
@@ -6,6 +5,7 @@ import importAllResult from "NavigationStack";
 import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { EditGuildEventModalNavbar } from "EditGuildEventModalNavbar.tsx";
 
 const require = arg1;
 let obj = { cardStyle: null };

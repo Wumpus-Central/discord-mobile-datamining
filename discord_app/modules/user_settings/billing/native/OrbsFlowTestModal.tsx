@@ -1,10 +1,3 @@
-import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import { BalanceWidget } from "../../../virtual_currency/native/BalanceWidgetMenu.tsx";
-import { OrbCheckoutMenu } from "../../../virtual_currency/native/OrbCheckoutMenu.tsx";
 // discord_app/modules/user_settings/billing/native/OrbsFlowTestModal.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "BalanceWidgetPill";
@@ -12,6 +5,13 @@ import get_ActivityIndicator from "TextInput";
 import jsxProd from "useSafeAreaInsetsKeyboardAware";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import { BalanceWidget } from "../../../virtual_currency/native/BalanceWidgetMenu.tsx";
+import { OrbCheckoutMenu } from "../../../virtual_currency/native/OrbCheckoutMenu.tsx";
 
 let c5;
 let closure_6;

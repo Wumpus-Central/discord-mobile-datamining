@@ -1,12 +1,12 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useGetGuildPowerupBannerImage } from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useGetGuildPowerupBannerImage } from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
 
 let StyleSheet;
 let c4;

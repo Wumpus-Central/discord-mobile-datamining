@@ -1,8 +1,8 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/activity_status/native/ActivityStatusText.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 const require = arg1;
 let closure_3 = createCacheKey.createStyles({ text: { flexShrink: 1 } });

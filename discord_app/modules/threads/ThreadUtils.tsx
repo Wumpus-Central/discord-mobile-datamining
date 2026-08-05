@@ -1,3 +1,10 @@
+// discord_app/modules/threads/ThreadUtils.tsx
+import _objectWithoutProperties from "_objectWithoutProperties";
+import generateOldThreadCutoff from "generateOldThreadCutoff";
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import storeThread from "storeThread";
+import { ThreadMemberFlags } from "AbortCodes";
+import ME from "ME";
 import { t } from "../../../_runtime/03867_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
@@ -6,13 +13,6 @@ import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 import { collectThreadMetadata } from "../app_analytics/ThreadAnalyticsUtils.tsx";
 import { getTimestampString } from "getTimestampString.tsx";
-// discord_app/modules/threads/ThreadUtils.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import storeThread from "storeThread";
-import { ThreadMemberFlags } from "AbortCodes";
-import ME from "ME";
 
 let c10;
 let c9;

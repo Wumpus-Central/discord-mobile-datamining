@@ -1,8 +1,8 @@
-import { VoicePanelLockedIcon } from "VoicePanelLockedIcon.tsx";
 // discord_app/modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx
 import "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";
+import { VoicePanelLockedIcon } from "VoicePanelLockedIcon.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx");

@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useIsRemote } from "../game_console/hooks/useIsRemote.tsx";
-import { isSystemMessage } from "../messages/isSystemMessage.tsx";
 // discord_app/modules/threads/ThreadHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord";
@@ -10,6 +7,9 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import rebuild from "rebuild";
 import ME from "ME";
 import importDefaultResult from "createExperiment";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useIsRemote } from "../game_console/hooks/useIsRemote.tsx";
+import { isSystemMessage } from "../messages/isSystemMessage.tsx";
 
 let c10;
 let closure_12;

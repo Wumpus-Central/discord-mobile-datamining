@@ -1,6 +1,6 @@
+// discord_app/modules/quests/QuestHomeHeroTypes.tsx
 import { resolveAsset } from "lib/AssetUtils.tsx";
 import { questHomeHeroCtaFromServer } from "QuestHomeHeroCta.tsx";
-// discord_app/modules/quests/QuestHomeHeroTypes.tsx
 const result = require("set").fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 
 export const questHomeHeroFromServer = function questHomeHeroFromServer(c7) {

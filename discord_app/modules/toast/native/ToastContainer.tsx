@@ -1,10 +1,10 @@
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/toast/native/ToastContainer.tsx
 import importAllResult from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ToastStore from "ToastStore";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/void/native.tsx";
 
 const require = arg1;
 function AnimatedToast(toast) {

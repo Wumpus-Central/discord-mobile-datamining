@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/ICYMIGuildEventRow.tsx
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import get_ActivityIndicator from "useGuildScheduledEventUserCount";
@@ -8,6 +7,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "guildEventDetailsParser";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c4;
 let c5;

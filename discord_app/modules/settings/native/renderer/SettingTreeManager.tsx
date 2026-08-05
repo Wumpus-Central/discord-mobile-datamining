@@ -1,7 +1,7 @@
-import { frozen } from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
-import { map } from "SettingHookHarness.tsx";
 // discord_app/modules/settings/native/renderer/SettingTreeManager.tsx
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
+import { frozen } from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
+import { map } from "SettingHookHarness.tsx";
 
 class SettingTreeManagerCache {
   constructor() {

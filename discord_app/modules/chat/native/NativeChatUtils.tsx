@@ -1,8 +1,8 @@
+// discord_app/modules/chat/native/NativeChatUtils.tsx
+import get_ActivityIndicator from "get ActivityIndicator";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-// discord_app/modules/chat/native/NativeChatUtils.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
 
 let c3;
 let c4;

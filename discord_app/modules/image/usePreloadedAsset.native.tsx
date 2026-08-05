@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/modules/image/usePreloadedAsset.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { TurboModuleRegistry } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 let closure_6 = TurboModuleRegistry.get("NativeAPNGDecorationModule");

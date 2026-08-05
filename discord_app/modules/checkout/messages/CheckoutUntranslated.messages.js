@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../../_runtime/02026_registerAsset.js";
-import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 // discord_app/modules/checkout/messages/CheckoutUntranslated.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/02026_registerAsset.js";
+import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({
   () => {

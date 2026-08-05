@@ -1,11 +1,11 @@
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
-import { TableSwitchRow } from "../../../components/TableRow/native/TableSwitchRow.native.tsx";
 // discord_app/design/void/Form/native/FormSwitchRow.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import { TableSwitchRow } from "../../../components/TableRow/native/TableSwitchRow.native.tsx";
 
 let closure_6;
 let error;

@@ -1,3 +1,9 @@
+// discord_app/modules/chat_input/native/guard/ChatInputGuard.tsx
+import Button from "Button";
+import get_ActivityIndicator from "componentDidMount";
+import { updateChatInputContainerHeight as closure_6 } from "updateChatInputContainerHeight";
+import jsxProd from "TwinButtons";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Radius } from "../../../../../discord_common/js/packages/tokens/radii/generated/generated-definitions.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -5,12 +11,6 @@ import { ButtonGroup } from "../../../../design/components/ButtonGroup/native/Bu
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { useIsUsingClientTheme } from "../../../client_themes/native/useIsUsingClientTheme.tsx";
 import { getChatInputPositionStyle } from "../getChatInputPositionStyle.tsx";
-// discord_app/modules/chat_input/native/guard/ChatInputGuard.tsx
-import Button from "Button";
-import get_ActivityIndicator from "componentDidMount";
-import { updateChatInputContainerHeight as closure_6 } from "updateChatInputContainerHeight";
-import jsxProd from "TwinButtons";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

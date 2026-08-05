@@ -1,3 +1,8 @@
+// discord_app/modules/chat/native/ChatViewStickyHeader.tsx
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "noop";
+import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE";
+import jsxProd from "jsxProd";
 import { useLikelyAtoWarning } from "../../ato_alerts/hooks/useLikelyAtoWarning.tsx";
 import { LikelyAtoWarningBanner } from "../../ato_alerts/native/components/LikelyAtoWarningBanner.tsx";
 import { OptInChannelBanner } from "../../messages/native/ChatBanner.tsx";
@@ -6,11 +11,6 @@ import { useInappropriateConversationBannerForChannel } from "../../self_mod/ina
 import { InappropriateConversationWarningBanner } from "../../self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx";
 import { useStrangerDangerWarning } from "../../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 import { StrangerDangerWarningBanner } from "../../self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx";
-// discord_app/modules/chat/native/ChatViewStickyHeader.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE";
-import jsxProd from "jsxProd";
 
 let closure_6;
 let error;

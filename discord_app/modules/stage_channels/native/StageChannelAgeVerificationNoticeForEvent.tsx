@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useAgeVerificationRunner } from "../../age_assurance/AgeVerificationUtils.tsx";
-import { useIsStageSpeakingDisabledForCurrentUser } from "../useStageSpeakingForCurrentUser.tsx";
 // discord_app/modules/stage_channels/native/StageChannelAgeVerificationNoticeForEvent.tsx
 import "noop";
 import { View } from "set";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useAgeVerificationRunner } from "../../age_assurance/AgeVerificationUtils.tsx";
+import { useIsStageSpeakingDisabledForCurrentUser } from "../useStageSpeakingForCurrentUser.tsx";
 
 let c5;
 let closure_6;

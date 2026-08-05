@@ -1,10 +1,10 @@
-import { TableRowGroupTitle } from "../../TableRow/native/TableRowGroup.native.tsx";
-import { TableRowIcon } from "../../TableRow/native/TableRowIcon.native.tsx";
-import { TableSwitchRow } from "../../TableRow/native/TableSwitchRow.native.tsx";
 // discord_app/design/components/Sheet/native/ActionSheetRow.native.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { TableRowGroupTitle } from "../../TableRow/native/TableRowGroup.native.tsx";
+import { TableRowIcon } from "../../TableRow/native/TableRowIcon.native.tsx";
+import { TableSwitchRow } from "../../TableRow/native/TableSwitchRow.native.tsx";
 
 const require = arg1;
 class ActionSheetRow {

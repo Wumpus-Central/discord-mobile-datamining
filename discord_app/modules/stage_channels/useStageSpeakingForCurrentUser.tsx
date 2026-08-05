@@ -1,11 +1,11 @@
-import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
-import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 // discord_app/modules/stage_channels/useStageSpeakingForCurrentUser.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";
 import { Permissions } from "sum";
+import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
+import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 
 const require = arg1;
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/stage_channels/useStageSpeakingForCurrentUser.tsx");

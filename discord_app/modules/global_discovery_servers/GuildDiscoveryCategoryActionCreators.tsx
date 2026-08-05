@@ -1,10 +1,10 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx
 import dispatcher from "dispatcher";
 import _getSystemLocale from "_getSystemLocale";
 import getPrimaryCategories from "getPrimaryCategories";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function _maybeFetchGuildDiscoveryCategories() {

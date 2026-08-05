@@ -1,8 +1,8 @@
+// discord_app/modules/quests/utils/QuestCopyUtils.tsx
+import QuestsExperimentLocations from "QuestsExperimentLocations";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { _copy } from "../../../utils/ClipboardUtils.native.tsx";
 import { apexExperiment } from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
-// discord_app/modules/quests/utils/QuestCopyUtils.tsx
-import QuestsExperimentLocations from "QuestsExperimentLocations";
 
 let c3;
 let c4;

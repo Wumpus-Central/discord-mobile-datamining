@@ -1,6 +1,6 @@
-import { isIncomingVideoEnabled } from "../../../lib/WindowVisibilityVideoManager.tsx";
 // discord_app/modules/errors/av_errors/AVErrorUtils.tsx
 import updateAveragedStatsHelper from "updateAveragedStatsHelper";
+import { isIncomingVideoEnabled } from "../../../lib/WindowVisibilityVideoManager.tsx";
 
 const require = arg1;
 let closure_3 = 10 * require("set").Millis.SECOND;

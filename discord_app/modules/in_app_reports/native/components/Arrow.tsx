@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../../_runtime/07841_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/in_app_reports/native/components/Arrow.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/07841_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
 
 const require = arg1;
 createCacheKey = { tintColor: null };

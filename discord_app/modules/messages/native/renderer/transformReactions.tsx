@@ -1,5 +1,5 @@
-import { apexExperiment } from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 // discord_app/modules/messages/native/renderer/transformReactions.tsx
+import { apexExperiment } from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 const result = require("getAvatarURL").fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {

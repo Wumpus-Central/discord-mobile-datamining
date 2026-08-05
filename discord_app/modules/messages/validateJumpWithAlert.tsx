@@ -1,11 +1,11 @@
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isSpamSupported } from "isSpam.tsx";
 // discord_app/modules/messages/validateJumpWithAlert.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import upsertRelationship from "upsertRelationship";
 import { Permissions } from "ME";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isSpamSupported } from "isSpam.tsx";
 
 const require = arg1;
 const result = require("upsertRelationship").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");

@@ -1,4 +1,3 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsAnalyticsScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import Stack from "Stack";
@@ -8,6 +7,7 @@ import initialize from "initialize";
 import { Fonts } from "ME";
 import jsxProd from "TableSwitchRow";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 
 let c9;
 let metroImportAll;

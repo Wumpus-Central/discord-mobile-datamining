@@ -1,7 +1,7 @@
-import { fromBlob } from "../../modules/discord_md5/DiscordMd5.tsx";
-import { ORIGINAL_MD5_HEADER } from "originalMd5Header.tsx";
 // discord_app/lib/uploader_inline/InlineUploader.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { fromBlob } from "../../modules/discord_md5/DiscordMd5.tsx";
+import { ORIGINAL_MD5_HEADER } from "originalMd5Header.tsx";
 
 const require = arg1;
 const re4 = /^[a-f0-9]{32}$/;

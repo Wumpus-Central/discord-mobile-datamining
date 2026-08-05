@@ -1,10 +1,10 @@
-import { AppLauncherOnboardingBanner } from "AppLauncherOnboardingBanner.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx
 import { View } from "get ActivityIndicator";
 import { useBestActiveChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { AppLauncherOnboardingBanner } from "AppLauncherOnboardingBanner.tsx";
 
 let obj = { container: null };
 obj = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: require("Themes").colors.BACKGROUND_SCRIM };

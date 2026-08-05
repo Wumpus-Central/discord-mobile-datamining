@@ -1,6 +1,6 @@
+// discord_app/modules/oauth2/scopes.tsx
 import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
-// discord_app/modules/oauth2/scopes.tsx
 let items = [
   () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;

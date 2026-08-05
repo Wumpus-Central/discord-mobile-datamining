@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/devtools/DevToolsSettingsStore.tsx
 import init from "init";
 import { DeviceSettingsStore } from "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let closure_3 = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
 class DevToolsSettingsStore extends DeviceSettingsStore {

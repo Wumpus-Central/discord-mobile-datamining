@@ -1,6 +1,6 @@
+// discord_app/modules/app_launcher/native/onboarding/utils/completeAppLauncherOnboarding.tsx
 import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-// discord_app/modules/app_launcher/native/onboarding/utils/completeAppLauncherOnboarding.tsx
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/utils/completeAppLauncherOnboarding.tsx");
 
 export default function completeAppLauncherOnboarding(dismissAction) {

@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/premium/native/PremiumPlanSelectStore.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const obj = keys.create(() => ({ isPurchasing: false, purchasingProductId: null }));
 const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");

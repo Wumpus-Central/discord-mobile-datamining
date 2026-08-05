@@ -1,9 +1,9 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useNativeForumPostContent } from "hooks/useNativeForumPostContent.tsx";
 // discord_app/modules/forums/native/posts/ForumPostMessageContent.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useNativeForumPostContent } from "hooks/useNativeForumPostContent.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ text: { alignSelf: "flex-start" } });

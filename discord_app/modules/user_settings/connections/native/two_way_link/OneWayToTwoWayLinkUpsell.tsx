@@ -1,4 +1,3 @@
-import { SelectedDismissibleContent } from "../../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/OneWayToTwoWayLinkUpsell.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +7,7 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
+import { SelectedDismissibleContent } from "../../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 
 let closure_6;
 let error;

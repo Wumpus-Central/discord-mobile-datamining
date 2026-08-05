@@ -1,3 +1,10 @@
+// discord_app/modules/notification_center/native/ForYouShowAllRow.tsx
+import registerAsset from "registerAsset";
+import { View } from "Text";
+import { AnalyticEvents } from "ME";
+import { Sections } from "SuggestedFriendSource";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/05324_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AvatarDuoPile } from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
@@ -10,13 +17,6 @@ import { renderChannelPressableWrapper } from "../../main_tabs_v2/native/shared_
 import { renderChannelWrapper } from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx";
 import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import { getFontScale } from "../../screen/native/useFontScale.tsx";
-// discord_app/modules/notification_center/native/ForYouShowAllRow.tsx
-import registerAsset from "registerAsset";
-import { View } from "Text";
-import { AnalyticEvents } from "ME";
-import { Sections } from "SuggestedFriendSource";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c9;
 let error;

@@ -1,7 +1,7 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/nuf/native/showPushNotificationPromptModal.tsx
 import { PermissionStateType } from "set";
 import { NUF_NOTIFICATION_MODAL_KEY as closure_4 } from "NewUserTypes";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 
 let result = require("module_4490").fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
 

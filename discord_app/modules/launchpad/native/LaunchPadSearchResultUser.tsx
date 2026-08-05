@@ -1,11 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
-import { getLayoutStyle } from "shared/getLayoutStyles.tsx";
-import { renderChannelBadge } from "shared/renderChannelBadge.tsx";
-import { ChannelContent } from "shared/renderChannelContent.tsx";
-import { renderChannelWrapper } from "shared/renderChannelWrapper.tsx";
-import { UnreadBadge } from "shared/UnreadBadge.tsx";
-import { useChannelUnreadBadgeState } from "shared/useChannelUnreadBadgeState.tsx";
 // discord_app/modules/launchpad/native/LaunchPadSearchResultUser.tsx
 import importAllResult from "PressableBase";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -18,6 +10,14 @@ import { StatusTypes } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "module_15925";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
+import { getLayoutStyle } from "shared/getLayoutStyles.tsx";
+import { renderChannelBadge } from "shared/renderChannelBadge.tsx";
+import { ChannelContent } from "shared/renderChannelContent.tsx";
+import { renderChannelWrapper } from "shared/renderChannelWrapper.tsx";
+import { UnreadBadge } from "shared/UnreadBadge.tsx";
+import { useChannelUnreadBadgeState } from "shared/useChannelUnreadBadgeState.tsx";
 
 let closure_12;
 let closure_14;

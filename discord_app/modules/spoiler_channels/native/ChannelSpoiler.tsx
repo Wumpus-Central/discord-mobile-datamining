@@ -1,8 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { GatedContent } from "../../../components_native/warnings/GatedContent.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { AgeVerificationModalEntryPoint } from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
 // discord_app/modules/spoiler_channels/native/ChannelSpoiler.tsx
 import _slicedToArray from "_slicedToArray";
 import Stack from "Stack";
@@ -13,6 +8,11 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { GatedContent } from "../../../components_native/warnings/GatedContent.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { AgeVerificationModalEntryPoint } from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
 
 let c10;
 let unpackModuleId;

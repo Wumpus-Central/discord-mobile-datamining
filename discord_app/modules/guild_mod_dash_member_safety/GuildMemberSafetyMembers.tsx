@@ -1,3 +1,5 @@
+// discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { isEqual } from "../../../_runtime/04444_isEqual.js";
 import { version } from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
 import { isSpamSupported } from "../messages/isSpam.tsx";
@@ -5,8 +7,6 @@ import { getJoinedAtDateFormatter } from "DateUtils.tsx";
 import { result } from "MemberSafetyElasticSearchQueryTypes.tsx";
 import { hasMemberSupplemental } from "MemberSafetyStoreSupplemental.tsx";
 import { getSortValueForMember } from "SortUtils.tsx";
-// discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {

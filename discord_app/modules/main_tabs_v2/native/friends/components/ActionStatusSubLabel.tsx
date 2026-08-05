@@ -1,9 +1,9 @@
-import { AccessibilityAnnouncer } from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { AccessibilityAnnouncer } from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 
 let c3;
 let c4;

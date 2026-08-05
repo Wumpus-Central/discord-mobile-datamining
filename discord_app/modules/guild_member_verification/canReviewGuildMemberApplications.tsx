@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isValidFormResponse } from "MemberVerificationUtils.tsx";
 // discord_app/modules/guild_member_verification/canReviewGuildMemberApplications.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isValidFormResponse } from "MemberVerificationUtils.tsx";
 
 let c4;
 let c5;

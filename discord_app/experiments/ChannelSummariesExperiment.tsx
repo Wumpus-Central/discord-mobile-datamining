@@ -1,10 +1,10 @@
-import { defaultAreStatesEqual } from "../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 // discord_app/experiments/ChannelSummariesExperiment.tsx
 import { isGuildNSFW } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 import { ChannelFlags } from "set";
+import { defaultAreStatesEqual } from "../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 
 let c4;
 let c5;

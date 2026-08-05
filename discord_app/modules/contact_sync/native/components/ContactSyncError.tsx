@@ -1,10 +1,10 @@
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncError.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });

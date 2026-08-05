@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useFetchListingsForGuild } from "../../GuildRoleSubscriptionsHooks.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx
 import getSystemLocale from "getSystemLocale";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useFetchListingsForGuild } from "../../GuildRoleSubscriptionsHooks.tsx";
 
 let closure_6;
 let error;

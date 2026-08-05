@@ -1,4 +1,3 @@
-import { registerAsset } from "../../../../_runtime/08709_registerAsset.js";
 // discord_app/modules/user_profile/native/UserProfileSpeedBumpActionSheet.tsx
 import getNickname from "getNickname";
 import importAllResult from "useDisplayProfile";
@@ -10,6 +9,7 @@ import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY";
 import ME from "ME";
 import jsxProd from "QUICK_SWITCHER";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/08709_registerAsset.js";
 
 let c10;
 let closure_12;

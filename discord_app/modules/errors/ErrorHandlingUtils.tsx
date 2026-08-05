@@ -1,6 +1,6 @@
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 // discord_app/modules/errors/ErrorHandlingUtils.tsx
 import set from "set";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 
 const items = [, , ];
 ({ UNAUTHORIZED: arr[0], EMAIL_VERIFICATION_REQUIRED: arr[1], USER_BANNED: arr[2] } = require("ME").AbortCodes);

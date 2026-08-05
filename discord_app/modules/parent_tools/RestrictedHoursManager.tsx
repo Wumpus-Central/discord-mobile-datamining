@@ -1,12 +1,12 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
-import { apexExperiment } from "FamilyCenterV3Experiment.tsx";
-import { closeRestrictedHoursModal } from "RestrictedHoursActionCreators.native.tsx";
 // discord_app/modules/parent_tools/RestrictedHoursManager.tsx
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
+import { apexExperiment } from "FamilyCenterV3Experiment.tsx";
+import { closeRestrictedHoursModal } from "RestrictedHoursActionCreators.native.tsx";
 
 const require = arg1;
 function scheduleUpcomingWarning() {

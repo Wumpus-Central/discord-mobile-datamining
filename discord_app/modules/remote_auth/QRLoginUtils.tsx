@@ -1,5 +1,5 @@
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/remote_auth/QRLoginUtils.tsx
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 const re2 = /^\/ra\/([\w-]+)$/;
 const result = require("set").fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
 

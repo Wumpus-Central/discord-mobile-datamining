@@ -1,12 +1,12 @@
-import { registerAsset } from "../../../../_runtime/08038_registerAsset.js";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
 // discord_app/modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { registerAsset } from "../../../../_runtime/08038_registerAsset.js";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
 
 let error;
 let metroImportAll;

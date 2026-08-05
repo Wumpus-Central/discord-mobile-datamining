@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../../../_runtime/13108_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15127_registerAsset.js";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { ButtonBadge } from "../../../shared_components/IconActionButton.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx
 import ButtonBadge from "ButtonBadge";
 import importAllResult from "noop";
@@ -11,6 +5,12 @@ import { View } from "registerAsset";
 import { InstantInviteSources } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../../_runtime/13108_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15127_registerAsset.js";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { ButtonBadge } from "../../../shared_components/IconActionButton.tsx";
 
 let error;
 let metroImportAll;

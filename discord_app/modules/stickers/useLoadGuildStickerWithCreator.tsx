@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stickers/useLoadGuildStickerWithCreator.tsx
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import parseServerGuildSticker from "parseServerGuildSticker";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("noop").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");

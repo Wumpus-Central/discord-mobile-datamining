@@ -1,10 +1,10 @@
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/stickers/GuildStickersStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
 import { LibdiscoreStore } from "identity";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { LibdiscoreBatchStoreRefactorExperiment } from "items";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 
 const require = arg1;
 function parseServerGuildSticker(item10023) {

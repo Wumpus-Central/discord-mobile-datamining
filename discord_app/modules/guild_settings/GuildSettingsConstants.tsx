@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/GuildSettingsConstants.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const obj = {
   afk_channel_id() {
     const intl = getSystemLocale /* getSystemLocale */.intl;

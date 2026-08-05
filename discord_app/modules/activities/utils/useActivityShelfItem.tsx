@@ -1,3 +1,8 @@
+// discord_app/modules/activities/utils/useActivityShelfItem.tsx
+import set from "set";
+import participantFromServer from "participantFromServer";
+import { STAFF_RELEASE_PHASES } from "items3";
+import { ApplicationFlags } from "ME";
 import { getApplicationFlags } from "../../applications/utils/ApplicationFlagUtils.tsx";
 import { canLaunchFrame } from "../../frames/utils/canLaunchFrame.tsx";
 import { useEmbeddedApps } from "../useEmbeddedAppsForChannel.tsx";
@@ -5,11 +10,6 @@ import { getPlatform } from "getPlatform.tsx";
 import { useCurrentEmbeddedActivity } from "useCurrentEmbeddedActivity.tsx";
 import { useCurrentEmbeddedApplication } from "useCurrentEmbeddedApplication.tsx";
 import { useEmbeddedActivityBackground } from "useEmbeddedActivityBackground.tsx";
-// discord_app/modules/activities/utils/useActivityShelfItem.tsx
-import set from "set";
-import participantFromServer from "participantFromServer";
-import { STAFF_RELEASE_PHASES } from "items3";
-import { ApplicationFlags } from "ME";
 
 const require = arg1;
 function useActivityAction(applicationId) {

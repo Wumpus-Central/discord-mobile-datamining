@@ -1,13 +1,13 @@
-import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/verification/native/components/PhoneVerificationModal.tsx
 import HeaderBackImage from "HeaderBackImage";
 import "noop";
 import { VerificationModalScenes } from "ME";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";
 import { jsx } from "jsxProd";
+import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");

@@ -1,8 +1,8 @@
-import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
 // discord_app/modules/opt_in_channels/useShowChannelOptInNotice.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { NULL_STRING_GUILD_ID } from "ME";
 import { ChannelFlags } from "set";
+import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");

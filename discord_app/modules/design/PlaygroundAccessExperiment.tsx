@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/design/PlaygroundAccessExperiment.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ApexExperiment from "ApexExperiment";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ApexExperiment = { 1: null };

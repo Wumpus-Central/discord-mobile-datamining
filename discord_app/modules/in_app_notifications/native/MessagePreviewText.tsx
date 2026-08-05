@@ -1,8 +1,3 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { isForwardMessage } from "../../forwarding/isForwardMessage.tsx";
-import { PreviewIcon } from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
-import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
 // discord_app/modules/in_app_notifications/native/MessagePreviewText.tsx
 import getSystemLocale from "getSystemLocale";
 import { View } from "MessageEmbedTypes";
@@ -13,6 +8,11 @@ import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
 import createCacheKey from "createCacheKey";
 import set from "ensureGuildLoaded";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { isForwardMessage } from "../../forwarding/isForwardMessage.tsx";
+import { PreviewIcon } from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
+import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
 
 let c9;
 let closure_6;

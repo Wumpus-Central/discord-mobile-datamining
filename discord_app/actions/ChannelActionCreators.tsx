@@ -1,10 +1,3 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { isChangelogChannel } from "../modules/changelog/utils/isChangelogChannel.tsx";
-import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
-import { _httpGetWithCountryCodeQuery } from "../utils/StoreUtils.tsx";
-import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 // discord_app/actions/ChannelActionCreators.tsx
 import _slicedToArray from "_slicedToArray";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -13,6 +6,13 @@ import { createChannelRecordFromServer as closure_6 } from "createChannelRecord"
 import ensureGuildLoaded from "ensureGuildLoaded";
 import closure_8 from "generateOldThreadCutoff";
 import ME from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { isChangelogChannel } from "../modules/changelog/utils/isChangelogChannel.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { _httpGetWithCountryCodeQuery } from "../utils/StoreUtils.tsx";
+import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 
 let c10;
 let c9;

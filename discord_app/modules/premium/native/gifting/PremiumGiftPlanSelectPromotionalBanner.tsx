@@ -1,14 +1,14 @@
+// discord_app/modules/premium/native/gifting/PremiumGiftPlanSelectPromotionalBanner.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useThemeAndReducedMotionAwareAssetUrl } from "../../promotions/MarketingComponentHooks.tsx";
-// discord_app/modules/premium/native/gifting/PremiumGiftPlanSelectPromotionalBanner.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let c4;
 let c5;

@@ -1,9 +1,9 @@
-import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { unsafe_getRawColor } from "../../discord_common/js/packages/tokens/shims.native.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/utils/ModerationUtils.tsx
 import ME from "ME";
 import { ExplicitContentFilterTypes as closure_5 } from "items";
+import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { unsafe_getRawColor } from "../../discord_common/js/packages/tokens/shims.native.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
 
 let c3;
 let c4;

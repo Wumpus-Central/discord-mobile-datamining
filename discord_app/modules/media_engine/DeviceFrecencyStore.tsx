@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/media_engine/DeviceFrecencyStore.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import DesktopSources from "DesktopSources";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 let c5;
 let closure_6;

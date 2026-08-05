@@ -1,5 +1,3 @@
-import { SingleCodeInput } from "../../../phone/native/CodeField.tsx";
-import { NavigatorWithCaptchaHook } from "Auth.tsx";
 // discord_app/modules/auth/native/components/VerifyPhone.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -8,6 +6,8 @@ import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUI
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import { Links } from "ME";
 import { jsx } from "jsxProd";
+import { SingleCodeInput } from "../../../phone/native/CodeField.tsx";
+import { NavigatorWithCaptchaHook } from "Auth.tsx";
 
 let c9;
 let error;

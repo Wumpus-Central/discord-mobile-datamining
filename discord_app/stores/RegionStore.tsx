@@ -1,7 +1,7 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/RegionStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 let c3 = null;
 let closure_4 = {};

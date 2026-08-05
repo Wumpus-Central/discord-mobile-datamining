@@ -1,6 +1,6 @@
+// discord_common/js/packages/kv-storage/js/api/EntityDao.tsx
 import { TableId } from "../types/index.tsx";
 import { fromDatabaseTransaction } from "Table.tsx";
-// discord_common/js/packages/kv-storage/js/api/EntityDao.tsx
 let EntityDao;
 class EntityDao {
   constructor(arg0, arg1, arg2) {

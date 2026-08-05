@@ -1,9 +1,9 @@
-import { handleChannelSelect } from "SharedSpacesWarningManager.tsx";
 // discord_app/modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
 import { Store } from "initialize";
 import set from "handleChannelSelect";
+import { handleChannelSelect } from "SharedSpacesWarningManager.tsx";
 
 function init() {
   let closure_4 = {};

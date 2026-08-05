@@ -1,11 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { renderDefaultEmpty } from "../../../lib/native/FastList.tsx";
-import { computeSubtitle } from "../../guild_sidebar/ChannelListState.tsx";
-import { VOICE_USER_SUMMARY_HEIGHT } from "../../guild_sidebar/native/VoiceUserSummary.tsx";
-import { isFavoritesSection } from "ChannelListUtils.tsx";
-import { Divider } from "components/Divider.tsx";
-import { CategoryChannel } from "items/index.tsx";
-import { ShowAllVoiceChannelsButton } from "items/ShowAllVoiceChannelsButton.tsx";
 // discord_app/modules/channel_list_v2/native/renderRedesignChannelListItem.tsx
 import "Divider";
 import { View } from "CategoryChannel";
@@ -18,6 +10,14 @@ import hairlineWidth from "hairlineWidth";
 import { StaticChannelRoute } from "set";
 import ChannelListGuildActionRow from "ChannelListGuildActionRow";
 import jsxProd from "module_15200";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { renderDefaultEmpty } from "../../../lib/native/FastList.tsx";
+import { computeSubtitle } from "../../guild_sidebar/ChannelListState.tsx";
+import { VOICE_USER_SUMMARY_HEIGHT } from "../../guild_sidebar/native/VoiceUserSummary.tsx";
+import { isFavoritesSection } from "ChannelListUtils.tsx";
+import { Divider } from "components/Divider.tsx";
+import { CategoryChannel } from "items/index.tsx";
+import { ShowAllVoiceChannelsButton } from "items/ShowAllVoiceChannelsButton.tsx";
 
 let c10;
 let c5;

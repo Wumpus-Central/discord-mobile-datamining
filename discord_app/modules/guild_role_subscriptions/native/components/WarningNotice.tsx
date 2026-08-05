@@ -1,12 +1,12 @@
-import { registerAsset } from "../../../../../_runtime/08256_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/WarningNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/08256_registerAsset.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

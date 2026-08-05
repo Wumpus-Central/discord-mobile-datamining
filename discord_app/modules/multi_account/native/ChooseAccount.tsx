@@ -1,9 +1,3 @@
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Form } from "../../../design/void/Form/native/index.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useMultiAccountUsers } from "../useMultiAccount.tsx";
 // discord_app/modules/multi_account/native/ChooseAccount.tsx
 import closure_4 from "ME";
 import "Text";
@@ -13,6 +7,12 @@ import MAX_ACCOUNTS from "MAX_ACCOUNTS";
 import ME from "ME";
 import jsxProd from "AccountStatusIcon";
 import createCacheKey from "createCacheKey";
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useMultiAccountUsers } from "../useMultiAccount.tsx";
 
 let c10;
 let c9;

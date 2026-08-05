@@ -1,6 +1,6 @@
-import { shallowEqual } from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/stores/DimensionStore.tsx
 import { Store } from "initialize";
+import { shallowEqual } from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 
 let closure_2 = {};
 let closure_3 = {};

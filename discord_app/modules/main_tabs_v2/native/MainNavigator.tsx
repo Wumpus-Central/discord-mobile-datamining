@@ -1,3 +1,14 @@
+// discord_app/modules/main_tabs_v2/native/MainNavigator.tsx
+import useNativeThemeUpdater from "useNativeThemeUpdater";
+import importAllResult from "HeaderWithBorder";
+import { View } from "module_15731";
+import fetchFingerprint from "fetchFingerprint";
+import { StackNavigationAnimationSettings as closure_7 } from "StackNavigationAnimationSettings";
+import ME from "ME";
+import jsxProd from "ContextMenuCommandNavigator";
+import createCacheKey from "createCacheKey";
+import set from "set";
+import set from "get ActivityIndicator";
 import { componentDidMount } from "../../../components_native/AutoAnalytics.tsx";
 import { ContextMenuCommandNavigator } from "../../application_commands/native/ContextMenuCommandNavigator.tsx";
 import { NavigatorWithCaptchaHook } from "../../auth/native/components/Auth.tsx";
@@ -12,17 +23,6 @@ import { Modal } from "modal/ModalScreen.tsx";
 import { ConnectedCreateThreadHeaderButton } from "sidebar/details/ChannelDetailsNavigator.tsx";
 import { Settings } from "tabs/settings/Settings.tsx";
 import { YouScreenContainer } from "tabs/you/YouScreenContainer.tsx";
-// discord_app/modules/main_tabs_v2/native/MainNavigator.tsx
-import useNativeThemeUpdater from "useNativeThemeUpdater";
-import importAllResult from "HeaderWithBorder";
-import { View } from "module_15731";
-import fetchFingerprint from "fetchFingerprint";
-import { StackNavigationAnimationSettings as closure_7 } from "StackNavigationAnimationSettings";
-import ME from "ME";
-import jsxProd from "ContextMenuCommandNavigator";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "get ActivityIndicator";
 
 let c10;
 let c9;

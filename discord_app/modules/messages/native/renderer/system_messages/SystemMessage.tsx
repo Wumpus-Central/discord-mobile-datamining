@@ -1,3 +1,5 @@
+// discord_app/modules/messages/native/renderer/system_messages/SystemMessage.tsx
+import ME from "ME";
 import { createAddRecipientSystemMessage } from "AddRecipientSystemMessage.tsx";
 import { createApplicationCommandSourceSystemMessage } from "ApplicationCommandSourceSystemMessage.tsx";
 import { createApplicationSubscriptionPurchaseSystemMessage } from "ApplicationSubscriptionPurchaseSystemMessage.tsx";
@@ -35,8 +37,6 @@ import { createUserJoinSystemMessage } from "UserJoinSystemMessage.tsx";
 import { createUserPremiumGuildSubscriptionSystemMessage } from "UserPremiumGuildSubscriptionSystemMessage.tsx";
 import { createUserPremiumGuildSubscriptionTierAchievedSystemMessage } from "UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx";
 import { createVoiceSessionSystemMessage } from "VoiceSessionSystemMessage.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/SystemMessage.tsx
-import ME from "ME";
 
 let c3;
 let obj1;

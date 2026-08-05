@@ -1,6 +1,6 @@
-import { ThirdPartyGameApplicationWebsiteCategory } from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 // discord_app/modules/game_profile/native/utils/getGameProfileWebsiteData.tsx
 import { jsx } from "jsxProd";
+import { ThirdPartyGameApplicationWebsiteCategory } from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 
 const result = require("GlobeEarthIcon").fileFinishedImporting("modules/game_profile/native/utils/getGameProfileWebsiteData.tsx");
 

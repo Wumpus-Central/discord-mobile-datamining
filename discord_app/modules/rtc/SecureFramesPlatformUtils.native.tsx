@@ -1,14 +1,14 @@
+// discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createRTCConnection from "createRTCConnection";
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
+import ME from "ME";
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import { _safeTransitionTo } from "../links/safeTransitionTo.native.tsx";
-// discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import ME from "ME";
 
 let c5;
 let c9;

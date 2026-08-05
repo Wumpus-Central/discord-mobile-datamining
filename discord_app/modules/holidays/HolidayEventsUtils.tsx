@@ -1,5 +1,5 @@
-import { HolidayEmojiAnimationType } from "HolidayEventsConfig.tsx";
 // discord_app/modules/holidays/HolidayEventsUtils.tsx
+import { HolidayEmojiAnimationType } from "HolidayEventsConfig.tsx";
 const result = require("set").fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 
 export default {

@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../../_runtime/02384_registerAsset.js";
-import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 // discord_app/modules/premium/gifting/GiftingBadgeTier.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
+import { registerAsset } from "../../../../_runtime/02384_registerAsset.js";
+import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({
   () => {

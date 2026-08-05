@@ -1,8 +1,8 @@
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx");

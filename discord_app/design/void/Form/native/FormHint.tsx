@@ -1,9 +1,9 @@
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 // discord_app/design/void/Form/native/FormHint.tsx
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 
 const require = arg1;
 createCacheKey = { formHintText: null, redesignHorizontalPadding: null, horizonatalPadding: null };

@@ -1,3 +1,9 @@
+// discord_app/modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx
+import "noop";
+import get_ActivityIndicator from "Button";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { metadata } from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
 import { metadata } from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
 import { metadata } from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
@@ -10,12 +16,6 @@ import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-// discord_app/modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx
-import "noop";
-import get_ActivityIndicator from "Button";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

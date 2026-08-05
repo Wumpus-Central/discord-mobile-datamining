@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../_runtime/11547_registerAsset.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { registerAsset } from "../../../../_runtime/11547_registerAsset.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
 
 let obj = { badgeImageContainer: null, badgeImage: null };
 obj = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, backgroundColor: require("Themes").colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };

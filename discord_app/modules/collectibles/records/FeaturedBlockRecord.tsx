@@ -1,6 +1,6 @@
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/FeaturedBlockRecord.tsx
 import { FeaturedCategorySubblockRecord as closure_2 } from "fromServer";
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 
 let prototype;
 prototype = function FeaturedBlockRecord(subblocks) {

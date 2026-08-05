@@ -1,7 +1,3 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 // discord_app/modules/guild_onboarding/native/GuildOnboardingPrompts.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get from "get";
@@ -18,6 +14,10 @@ import { GuildOnboardingModalStates as closure_15 } from "GUILD_ONBOARDING_MODAL
 import ME from "ME";
 import jsxProd from "LinearGradient";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { keys } from "../../../ConstantsIOS.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 
 let closure_16;
 let closure_17;

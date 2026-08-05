@@ -1,8 +1,8 @@
+// discord_app/modules/notification_center/NotificationCenterUtils.tsx
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 import { getDurationString } from "getTimestampString.tsx";
 import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
-// discord_app/modules/notification_center/NotificationCenterUtils.tsx
 const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
 export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult, flag) {

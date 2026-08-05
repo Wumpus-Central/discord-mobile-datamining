@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/notifications_inbox/NotificationsInboxConstants.tsx
 import { NOTIFICATIONS_INBOX } from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
 obj = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };

@@ -1,6 +1,6 @@
-import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/action_sheet/native/components/EmojiRowUtils.tsx
 import ME from "ME";
+import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 let c3;
 let c4;

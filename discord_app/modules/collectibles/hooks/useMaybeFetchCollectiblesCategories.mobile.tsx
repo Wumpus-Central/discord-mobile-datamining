@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useMaybeFetchCollectiblesCategoriesShared } from "useMaybeFetchCollectiblesCategoriesShared.tsx";
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx
 import getUserAgnosticState from "getUserAgnosticState";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useMaybeFetchCollectiblesCategoriesShared } from "useMaybeFetchCollectiblesCategoriesShared.tsx";
 
 const require = arg1;
 const result = require("useMaybeFetchCollectiblesCategoriesShared").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");

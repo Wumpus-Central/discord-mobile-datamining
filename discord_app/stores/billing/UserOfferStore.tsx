@@ -1,5 +1,3 @@
-import { apexExperiment } from "../../modules/premium/experiments/PremiumOfferReminderExperiment.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 // discord_app/stores/billing/UserOfferStore.tsx
 import emitChanges from "emitChanges";
 import createFromServer from "createFromServer";
@@ -8,6 +6,8 @@ import addEntitlement from "addEntitlement";
 import reset from "reset";
 import GuildFeatures from "GuildFeatures";
 import { PersistedStore } from "initialize";
+import { apexExperiment } from "../../modules/premium/experiments/PremiumOfferReminderExperiment.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
 let c10;
 let c9;

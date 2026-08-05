@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { canManageResource } from "../permissions/useManageResourcePermissions.tsx";
 // discord_app/modules/guild_scheduled_events/useGetEventChannelsByType.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import comparator from "comparator";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import VIEW_CHANNEL from "VIEW_CHANNEL";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { canManageResource } from "../permissions/useManageResourcePermissions.tsx";
 
 let closure_6;
 let error;

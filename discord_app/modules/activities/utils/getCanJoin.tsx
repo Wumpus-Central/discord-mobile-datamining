@@ -1,8 +1,8 @@
+// discord_app/modules/activities/utils/getCanJoin.tsx
+import ME from "ME";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { getPartySize } from "getPartySize.tsx";
 import { result } from "isInviteActive.tsx";
-// discord_app/modules/activities/utils/getCanJoin.tsx
-import ME from "ME";
 
 let c3;
 let c4;

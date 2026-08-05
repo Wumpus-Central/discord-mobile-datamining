@@ -1,8 +1,8 @@
+// discord_app/modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx
+import noop from "noop";
 import { apexExperiment } from "../../experiments/CollectiblesProfileFramesExperiment.tsx";
 import { useFramePreviewOverrideFrame } from "useFramePreviewOverrideFrame.native.tsx";
 import { useProfileFrame } from "useProfileFrame.tsx";
-// discord_app/modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx
-import noop from "noop";
 
 const require = arg1;
 let result = require("apexExperiment").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");

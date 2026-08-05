@@ -1,15 +1,15 @@
-import { metadata } from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { WindowLaunchIcon } from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx
 import "messagesProxy";
 import { Image } from "combined";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { HelpdeskArticles } from "ME";
 import { jsx } from "jsxProd";
+import { metadata } from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { WindowLaunchIcon } from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
+import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 let c7 = 150;

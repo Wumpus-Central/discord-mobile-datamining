@@ -1,9 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { PressableCard } from "../../../design/components/Card/native/Card.native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/accept_invite/native/AcceptInvite.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,6 +5,12 @@ import get_ActivityIndicator from "set";
 import { InviteStates } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PressableCard } from "../../../design/components/Card/native/Card.native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 let c10;
 let c5;

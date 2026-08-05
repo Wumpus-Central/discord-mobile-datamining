@@ -1,5 +1,3 @@
-import { ThemeContextProvider } from "../../../../../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx";
-import { items } from "../../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesModalContentScroll.tsx
 import BountiesScrollPromptFooter from "BountiesScrollPromptFooter";
 import getRevealProgress from "getRevealProgress";
@@ -11,6 +9,8 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "v1";
 import PlatformTypes from "PlatformTypes";
 import createCacheKey from "createCacheKey";
+import { ThemeContextProvider } from "../../../../../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx";
+import { items } from "../../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
 
 let c5;
 let c9;

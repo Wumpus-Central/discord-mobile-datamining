@@ -1,7 +1,3 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { now } from "../../../google/protobuf/timestamp.tsx";
-import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
-import { defineProperty } from "rules.tsx";
 // discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -9,6 +5,10 @@ import { MessageType as MessageType2 } from "module_1307";
 import { MessageType as MessageType3 } from "module_1307";
 import { MessageType as MessageType4 } from "module_1307";
 import { MessageType as MessageType5 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { now } from "../../../google/protobuf/timestamp.tsx";
+import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
+import { defineProperty } from "rules.tsx";
 
 const require = arg1;
 let obj = { EXCLUSIVE: 0, [0]: "EXCLUSIVE", SYNCED: 1, [1]: "SYNCED", PRE_ALLOCATED: 2, [2]: "PRE_ALLOCATED" };

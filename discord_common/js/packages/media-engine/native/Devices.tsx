@@ -1,6 +1,6 @@
-import { format } from "../../../../../_runtime/00669_format.js";
 // discord_common/js/packages/media-engine/native/Devices.tsx
 import AudioSubsystems from "AudioSubsystems";
+import { format } from "../../../../../_runtime/00669_format.js";
 
 let c3;
 let c4;

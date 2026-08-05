@@ -1,12 +1,12 @@
-import { registerAsset } from "../../../../../_runtime/07711_registerAsset.js";
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/modules/stage_channels/native/components/StageSparkle.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/07711_registerAsset.js";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 
 let c4;
 let c5;

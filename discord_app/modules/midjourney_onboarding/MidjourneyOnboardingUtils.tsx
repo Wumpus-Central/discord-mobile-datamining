@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";
 import MIDJOURNEY_GUILD_ID from "MIDJOURNEY_GUILD_ID";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let c4;
 let c5;

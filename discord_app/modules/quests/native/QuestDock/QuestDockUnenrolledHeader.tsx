@@ -1,4 +1,3 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockUnenrolledHeader.tsx
 import PressableBase from "PressableBase";
 import importAllResult from "map";
@@ -8,6 +7,7 @@ import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import { ThemeTypes } from "sum";
 import jsxProd from "module_4146";
 import createCacheKey from "createCacheKey";
+import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 
 let QUEST_DOCK_COLLAPSED_HEIGHT;
 let c10;

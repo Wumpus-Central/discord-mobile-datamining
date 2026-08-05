@@ -1,10 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useEmitAppealIngestionEvent } from "../hooks/useEmitAppealIngestionEvent.tsx";
-import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
-import { AppealIngestionActivitySummary } from "AppealIngestionActivitySummary.tsx";
-import { AppealIngestionModal } from "AppealIngestionModal.tsx";
-import { AppealIngestionPolicySummary } from "AppealIngestionPolicySummary.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionSpeedBump.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -13,6 +6,13 @@ import SafetyHubView from "SafetyHubView";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useEmitAppealIngestionEvent } from "../hooks/useEmitAppealIngestionEvent.tsx";
+import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
+import { AppealIngestionActivitySummary } from "AppealIngestionActivitySummary.tsx";
+import { AppealIngestionModal } from "AppealIngestionModal.tsx";
+import { AppealIngestionPolicySummary } from "AppealIngestionPolicySummary.tsx";
 
 let c5;
 let c9;

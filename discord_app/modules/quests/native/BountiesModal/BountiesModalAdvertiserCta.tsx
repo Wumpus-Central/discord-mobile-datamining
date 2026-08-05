@@ -1,6 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
-import { timingNone } from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesModalAdvertiserCta.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import BackgroundBlurView from "BackgroundBlurView";
@@ -10,6 +7,9 @@ import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { timingNone } from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 
 let Pressable;
 let c10;

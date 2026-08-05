@@ -1,9 +1,9 @@
-import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
-import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 // discord_app/modules/oauth2/Authorize.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
+import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
+import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 
 let c5;
 let closure_6;

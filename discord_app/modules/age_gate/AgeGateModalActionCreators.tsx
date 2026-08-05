@@ -1,10 +1,10 @@
+// discord_app/modules/age_gate/AgeGateModalActionCreators.tsx
+import { AgeGateAnalyticAction } from "result";
+import ME from "ME";
 import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { transitionTo } from "../routing/router_utils.tsx";
-// discord_app/modules/age_gate/AgeGateModalActionCreators.tsx
-import { AgeGateAnalyticAction } from "result";
-import ME from "ME";
 
 let c4;
 let c5;

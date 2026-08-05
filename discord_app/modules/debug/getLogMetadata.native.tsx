@@ -1,5 +1,5 @@
-import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 // discord_app/modules/debug/getLogMetadata.native.tsx
+import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
 export default function getLogMetadata() {

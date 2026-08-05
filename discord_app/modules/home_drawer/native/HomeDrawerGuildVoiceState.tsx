@@ -1,8 +1,3 @@
-import { AvatarPile } from "../../../design/components/Pile/native/AvatarPile.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useFetchStreamPreview } from "../../go_live/useFetchStreamPreview.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx
 import apply from "apply";
 import { View } from "useIsHomeDrawerChannelInChannelList";
@@ -15,6 +10,11 @@ import { ChannelTypes } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { AvatarPile } from "../../../design/components/Pile/native/AvatarPile.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useFetchStreamPreview } from "../../go_live/useFetchStreamPreview.tsx";
 
 let closure_12;
 let unpackModuleId;

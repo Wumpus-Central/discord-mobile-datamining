@@ -1,8 +1,3 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx
 import _slicedToArray from "_slicedToArray";
 import ManaContext from "ManaContext";
@@ -10,6 +5,11 @@ import get_ActivityIndicator from "Text";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let StyleSheet;
 let c10;

@@ -1,6 +1,6 @@
-import { MetaStickerType } from "../../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
 // discord_app/modules/stickers/StickersTypes.tsx
 import { TypeTag } from "TypeTag";
+import { MetaStickerType } from "../../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
 
 const result = require("set").fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 

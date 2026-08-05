@@ -1,11 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/07828_registerAsset.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { WrenchIcon } from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowArrow } from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import { TableRowIcon } from "../../../../design/components/TableRow/native/TableRowIcon.native.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsOverview.tsx
 import importAllResult from "useIsSecureFramesUIEnabled";
 import participantFromServer from "participantFromServer";
@@ -22,6 +14,14 @@ import { isStreamParticipant } from "ParticipantTypes";
 import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/07828_registerAsset.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { WrenchIcon } from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowArrow } from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import { TableRowIcon } from "../../../../design/components/TableRow/native/TableRowIcon.native.tsx";
+import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let closure_14;
 let closure_15;

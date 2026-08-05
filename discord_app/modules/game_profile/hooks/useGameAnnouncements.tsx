@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_profile/hooks/useGameAnnouncements.tsx
 import { useEffect } from "noop";
 import getSimilarGames from "getSimilarGames";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let result = require("initialize").fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
 

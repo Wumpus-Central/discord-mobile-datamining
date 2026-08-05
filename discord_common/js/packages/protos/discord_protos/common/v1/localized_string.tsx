@@ -1,8 +1,8 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/discord_protos/common/v1/localized_string.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 import { MessageType as MessageType2 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 
 const require = arg1;
 class LocalizedString$Type extends MessageType {

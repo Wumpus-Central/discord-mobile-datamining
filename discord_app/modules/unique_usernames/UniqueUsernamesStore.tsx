@@ -1,6 +1,6 @@
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/unique_usernames/UniqueUsernamesStore.tsx
 import { Store } from "initialize";
+import { set } from "../../utils/Durations.tsx";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = { validations: null, currentUsernameInvalid: false, retryAfterTime: null, suggestions: null };

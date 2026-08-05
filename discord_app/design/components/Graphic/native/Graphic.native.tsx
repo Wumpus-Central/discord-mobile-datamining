@@ -1,9 +1,9 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/design/components/Graphic/native/Graphic.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 
 const require = arg1;
 function ImageGraphic(source) {

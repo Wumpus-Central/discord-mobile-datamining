@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx
 import importAllResult from "getNickname";
 import { View } from "computeChannelName";
@@ -7,6 +5,8 @@ import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAIN
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
 
 let HAPPENING_NOW_CONTENT_HEIGHT;
 let HAPPENING_NOW_STAGE_PREVIEW_HEIGHT;

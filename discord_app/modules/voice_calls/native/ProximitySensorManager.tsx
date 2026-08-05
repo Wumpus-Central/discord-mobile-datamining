@@ -1,5 +1,3 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { RouteTypes } from "../VoiceCallTypes.tsx";
 // discord_app/modules/voice_calls/native/ProximitySensorManager.tsx
 import participantFromServer from "participantFromServer";
 import reset from "reset";
@@ -8,6 +6,8 @@ import handleAudioRouteChanged from "handleAudioRouteChanged";
 import set from "set";
 import "initialize";
 import set from "reset";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { RouteTypes } from "../VoiceCallTypes.tsx";
 
 const require = arg1;
 function handleChange() {

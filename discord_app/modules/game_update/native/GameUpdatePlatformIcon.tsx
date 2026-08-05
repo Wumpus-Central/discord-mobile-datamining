@@ -1,7 +1,7 @@
-import { PlatformType } from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
 // discord_app/modules/game_update/native/GameUpdatePlatformIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { PlatformType } from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
 
 const require = arg1;
 const result = require("PlatformType").fileFinishedImporting("modules/game_update/native/GameUpdatePlatformIcon.tsx");

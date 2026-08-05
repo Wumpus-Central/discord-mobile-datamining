@@ -1,3 +1,8 @@
+// discord_app/modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx
+import noop from "noop";
+import get_ActivityIndicator from "OrbsIcon";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import { OrbsIcon } from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
@@ -9,11 +14,6 @@ import { ProfileEffectAssetPreview } from "../../../collectibles/native/Collecti
 import { useVirtualCurrencyBalance } from "../../hooks/useVirtualCurrencyBalance.tsx";
 import { OrbCheckoutAmountTag } from "../../native/OrbCheckoutAmountTag.tsx";
 import { useOrbCheckoutModalContextProvider } from "../OrbCheckoutModalContext.tsx";
-// discord_app/modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx
-import noop from "noop";
-import get_ActivityIndicator from "OrbsIcon";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

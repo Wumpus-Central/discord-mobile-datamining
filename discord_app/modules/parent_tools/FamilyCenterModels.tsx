@@ -1,6 +1,6 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 // discord_app/modules/parent_tools/FamilyCenterModels.tsx
 import "toJS";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 
 const require = arg1;
 const frozen = Object.freeze({ 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY });

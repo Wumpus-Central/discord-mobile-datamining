@@ -1,6 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
-import { useAlertStore } from "useAlertStore.native.tsx";
 // discord_app/design/components/AlertModal/native/AlertModal.native.tsx
 import sum from "sum";
 import _slicedToArray from "_slicedToArray";
@@ -10,6 +7,9 @@ import get_ActivityIndicator from "getSystemLocale";
 import jsxProd from "useWindowDimensions";
 import createCacheKey from "createCacheKey";
 import context3 from "asyncGeneratorStep";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
+import { useAlertStore } from "useAlertStore.native.tsx";
 
 let c10;
 let c9;

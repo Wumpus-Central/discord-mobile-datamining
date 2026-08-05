@@ -1,10 +1,10 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getBotLabel } from "../../applications/native/BotTag.tsx";
 // discord_app/modules/user_profile/native/DiscordTag.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getBotLabel } from "../../applications/native/BotTag.tsx";
 
 let c4;
 let c5;

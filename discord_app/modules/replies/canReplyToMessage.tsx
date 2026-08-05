@@ -1,11 +1,11 @@
-import { useUserCommunicationDisabled } from "../guild_communication_disabled/useUserCommunicationDisabled.tsx";
-import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
 // discord_app/modules/replies/canReplyToMessage.tsx
 import _slicedToArray from "_slicedToArray";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Permissions } from "sum";
+import { useUserCommunicationDisabled } from "../guild_communication_disabled/useUserCommunicationDisabled.tsx";
+import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
 
 let c5;
 let closure_6;

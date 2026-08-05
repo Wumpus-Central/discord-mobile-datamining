@@ -1,8 +1,8 @@
+// discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
+import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { messagesProxy } from "../GuildPowerups.messages.js";
 import { getGuildPowerupFormattedDateString } from "../utils/getGuildPowerupFormattedDateString.tsx";
-// discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
-import calculateAppliedBoosts from "calculateAppliedBoosts";
 
 const require = arg1;
 const result = require("VANITY_URL_POWERUP_SKU_ID").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");

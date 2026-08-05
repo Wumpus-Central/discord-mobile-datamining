@@ -1,11 +1,11 @@
+// discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
+import _slicedToArray from "_slicedToArray";
+import fetchFingerprint from "fetchFingerprint";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 import { result } from "../../activities/utils/isInviteActive.tsx";
 import { messagesProxy } from "../RequestToStream.messages.js";
 import { canFulfillStreamRequest } from "../useCanFulfillStreamRequest.tsx";
-// discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;
 const result = require("canFulfillStreamRequest").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");

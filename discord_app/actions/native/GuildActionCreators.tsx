@@ -1,7 +1,7 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/actions/native/GuildActionCreators.tsx
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 function batchChannelUpdate(outer1_0) {
   if (arg1.length > 0) {

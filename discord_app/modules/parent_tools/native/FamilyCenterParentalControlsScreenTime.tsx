@@ -1,9 +1,9 @@
-import { messagesProxy } from "../FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx
 import { View } from "get ActivityIndicator";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { messagesProxy } from "../FamilyCenter.messages.js";
 
 let c5;
 let closure_6;

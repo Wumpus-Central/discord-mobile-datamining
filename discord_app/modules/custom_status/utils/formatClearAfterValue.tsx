@@ -1,9 +1,9 @@
+// discord_app/modules/custom_status/utils/formatClearAfterValue.tsx
+import { ClearAfterValues } from "StatusTypes";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { resetCache } from "../../../utils/DateUtils.tsx";
 import { set } from "../../../utils/Durations.tsx";
 import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-// discord_app/modules/custom_status/utils/formatClearAfterValue.tsx
-import { ClearAfterValues } from "StatusTypes";
 
 let result = require("getSystemLocale").fileFinishedImporting("modules/custom_status/utils/formatClearAfterValue.tsx");
 

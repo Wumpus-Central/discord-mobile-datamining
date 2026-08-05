@@ -1,3 +1,6 @@
+// discord_app/modules/croissant/crepe/Crepe.messages.js
+import 01274__ from "../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../_runtime/03160_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03161_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03162_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../_runtime/03188_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03189_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/03190_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/croissant/crepe/Crepe.messages.js
-import 01274__ from "../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

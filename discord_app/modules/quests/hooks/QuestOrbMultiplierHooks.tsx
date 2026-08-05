@@ -1,8 +1,8 @@
+// discord_app/modules/quests/hooks/QuestOrbMultiplierHooks.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { items } from "../utils/QuestOrbMultiplierUtils.tsx";
-// discord_app/modules/quests/hooks/QuestOrbMultiplierHooks.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {

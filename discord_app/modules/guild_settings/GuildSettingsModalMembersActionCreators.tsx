@@ -1,7 +1,7 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let c3;
 let c4;

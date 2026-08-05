@@ -1,8 +1,8 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearchModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 
 const require = arg1;
 const SEARCH_SCREEN_KEY = "SEARCH_SCREEN_KEY";

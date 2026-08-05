@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

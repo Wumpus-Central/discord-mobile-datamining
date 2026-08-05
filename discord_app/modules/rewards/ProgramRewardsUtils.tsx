@@ -1,11 +1,11 @@
+// discord_app/modules/rewards/ProgramRewardsUtils.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { PremiumTypes } from "GuildFeatures";
 import { isPast } from "../../../_runtime/03708_isPast.js";
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 import { apexExperiment } from "../croissant/crepe/CrepeExperiment.tsx";
 import { PremiumRewardsOrbsTreatment } from "../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx";
 import { RewardProgram } from "ProgramRewardsTypes.tsx";
-// discord_app/modules/rewards/ProgramRewardsUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PremiumTypes } from "GuildFeatures";
 
 const require = arg1;
 function canFetchNitroProgramReward(canUseMonthlyOrbs) {

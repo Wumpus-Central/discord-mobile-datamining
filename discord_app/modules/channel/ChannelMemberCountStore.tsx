@@ -1,8 +1,8 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/channel/ChannelMemberCountStore.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 let closure_4 = Object.freeze({ online: null, total: null });
 let closure_5 = {};

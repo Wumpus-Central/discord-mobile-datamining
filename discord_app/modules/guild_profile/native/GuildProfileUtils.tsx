@@ -1,8 +1,8 @@
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { hasFetchedColors } from "../../avatar/useAvatarColor.tsx";
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { hasFetchedColors } from "../../avatar/useAvatarColor.tsx";
 
 const require = arg1;
 const result = require("getAvatarURL").fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");

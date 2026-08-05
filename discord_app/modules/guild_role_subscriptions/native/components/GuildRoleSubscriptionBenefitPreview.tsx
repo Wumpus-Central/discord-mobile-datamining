@@ -1,15 +1,15 @@
-import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";
-import { getUsedTemplateChannelsForGuild } from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
-import { EmojiIcon } from "EmojiIcon.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";
+import { getUsedTemplateChannelsForGuild } from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
+import { EmojiIcon } from "EmojiIcon.tsx";
 
 let c5;
 let closure_6;

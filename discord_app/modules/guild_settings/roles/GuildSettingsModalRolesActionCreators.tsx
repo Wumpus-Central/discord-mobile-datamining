@@ -1,7 +1,7 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsModalRolesActionCreators.tsx
 import set from "set";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 function updateGuildRole(arg0) {

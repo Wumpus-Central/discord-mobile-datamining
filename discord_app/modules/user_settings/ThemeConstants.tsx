@@ -1,6 +1,6 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 // discord_app/modules/user_settings/ThemeConstants.tsx
 import { ThemeTypes } from "ME";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
 let obj = { DARK: "dark", LIGHT: "light", NO_PREFERENCE: "unknown" };
 obj = { [obj.DARK]: ThemeTypes.DARKER, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARKER };

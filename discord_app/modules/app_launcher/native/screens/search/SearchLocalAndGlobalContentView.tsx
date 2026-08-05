@@ -1,5 +1,3 @@
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { usePlaceholderWidth } from "../../hooks/usePlaceholderSize.tsx";
 // discord_app/modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx
 import EmptyState from "EmptyState";
 import importAllResult from "isActivityInTextSupportedForChannel";
@@ -9,6 +7,8 @@ import { FetchState } from "getSearchResults";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import jsxProd from "ApplicationCommandSectionType";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { usePlaceholderWidth } from "../../hooks/usePlaceholderSize.tsx";
 
 let c10;
 let closure_12;

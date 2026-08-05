@@ -1,3 +1,22 @@
+// discord_app/lib/RTCConnection.tsx
+import fetchFingerprint from "fetchFingerprint";
+import DeviceTypes from "DeviceTypes";
+import updateAveragedStatsHelper from "updateAveragedStatsHelper";
+import items from "items";
+import handleAudioRouteChanged from "handleAudioRouteChanged";
+import closure_9 from "fetchFingerprint";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import createRTCConnection from "createRTCConnection";
+import updateStats from "updateStats";
+import initialize from "initialize";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import { PremiumTypes } from "GuildFeatures";
+import { BROWSER_SUPPORTS_UNIFIED_PLAN as closure_23 } from "parsed";
+import DesktopSources from "DesktopSources";
+import "on";
 import { Integer } from "../../_runtime/00014_Integer.js";
 import { v1 } from "../../_runtime/00514_v1.js";
 import { MurmurHashV3 } from "../../_runtime/01217_MurmurHashV3.js";
@@ -19,25 +38,6 @@ import { create } from "RTCBandwidthMonitor.tsx";
 import { RTCConnectionEvent } from "RTCConnectionEvent.tsx";
 import { noop } from "RTCControlSocket.tsx";
 import { isIncomingVideoEnabled } from "WindowVisibilityVideoManager.tsx";
-// discord_app/lib/RTCConnection.tsx
-import fetchFingerprint from "fetchFingerprint";
-import DeviceTypes from "DeviceTypes";
-import updateAveragedStatsHelper from "updateAveragedStatsHelper";
-import items from "items";
-import handleAudioRouteChanged from "handleAudioRouteChanged";
-import closure_9 from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import updateStats from "updateStats";
-import initialize from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { PremiumTypes } from "GuildFeatures";
-import { BROWSER_SUPPORTS_UNIFIED_PLAN as closure_23 } from "parsed";
-import DesktopSources from "DesktopSources";
-import "on";
 
 let closure_17;
 let closure_18;

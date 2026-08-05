@@ -1,9 +1,9 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { getProfileProperties } from "../user_profile/UserProfileAnalyticsUtils.tsx";
 // discord_app/modules/rtc/SecureFramesTracking.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { getProfileProperties } from "../user_profile/UserProfileAnalyticsUtils.tsx";
 
 const require = arg1;
 const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/rtc/SecureFramesTracking.tsx");

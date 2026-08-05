@@ -1,10 +1,10 @@
-import { expandEventProperties } from "AnalyticsUtils.tsx";
 // discord_app/utils/GuildDiscoveryUtils.tsx
 import transitionTo from "transitionTo";
 import initialize from "initialize";
 import handleInviteData from "handleInviteData";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
+import { expandEventProperties } from "AnalyticsUtils.tsx";
 
 let c10;
 let c9;

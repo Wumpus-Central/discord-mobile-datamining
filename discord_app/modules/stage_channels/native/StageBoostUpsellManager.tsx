@@ -1,5 +1,3 @@
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { useStageHasMedia } from "../StageMediaHooks.tsx";
 // discord_app/modules/stage_channels/native/StageBoostUpsellManager.tsx
 import setContent from "setContent";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +5,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";
 import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH";
 import "initialize";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { useStageHasMedia } from "../StageMediaHooks.tsx";
 
 const require = arg1;
 let c8 = false;

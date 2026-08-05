@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/wishlists/hooks/useWishlistHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +7,7 @@ import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import get from "get";
 import { getWishlistSkuIds } from "fromServer";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getUserWishlistKey(arg0, arg1) {

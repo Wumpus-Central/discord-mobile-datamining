@@ -1,9 +1,9 @@
-import { CustomStatusEntryRow } from "content_inventory/CustomStatusEntryRow.tsx";
-import { items } from "content_inventory/GamingLikeEntryRow.tsx";
 // discord_app/modules/icymi/native/ContentInventoryEntryRow.tsx
 import "noop";
 import upsertRelationship from "upsertRelationship";
 import { jsx } from "jsxProd";
+import { CustomStatusEntryRow } from "content_inventory/CustomStatusEntryRow.tsx";
+import { items } from "content_inventory/GamingLikeEntryRow.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/icymi/native/ContentInventoryEntryRow.tsx");

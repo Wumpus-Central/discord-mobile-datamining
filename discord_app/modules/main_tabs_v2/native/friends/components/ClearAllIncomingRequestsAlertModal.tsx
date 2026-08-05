@@ -1,9 +1,9 @@
-import { getAlertModalItemKey } from "../../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx
 import getSystemLocale from "getSystemLocale";
 import "noop";
 import jsxProd from "jsxProd";
+import { getAlertModalItemKey } from "../../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

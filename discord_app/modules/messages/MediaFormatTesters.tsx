@@ -1,9 +1,9 @@
-import { isIOSWithWebM } from "WebViewWebmSupportTest.native.tsx";
 // discord_app/modules/messages/MediaFormatTesters.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import set from "set";
 import set from "isIOSWithWebM";
+import { isIOSWithWebM } from "WebViewWebmSupportTest.native.tsx";
 
 const require = arg1;
 const re3 = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i;

@@ -1,7 +1,7 @@
-import { BaseConnectionEvent } from "index.tsx";
 // discord_common/js/packages/media-engine/MediaEngineDummy.tsx
 import DesktopSources from "DesktopSources";
 import "on";
+import { BaseConnectionEvent } from "index.tsx";
 
 let c3;
 let c4;

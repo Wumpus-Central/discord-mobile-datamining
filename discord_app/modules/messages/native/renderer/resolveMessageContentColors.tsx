@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 // discord_app/modules/messages/native/renderer/resolveMessageContentColors.tsx
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 
 const result = createCacheKey.experimental_createToken((theme) => {
   const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;

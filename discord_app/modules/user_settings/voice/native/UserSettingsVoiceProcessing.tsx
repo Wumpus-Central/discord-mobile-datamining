@@ -1,14 +1,14 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsVoice } from "UserSettingsVoice.tsx";
-import { handleAutomaticGainControlChange } from "UserSettingsVoiceUtils.tsx";
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx
 import "noop";
 import { View } from "set";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsVoice } from "UserSettingsVoice.tsx";
+import { handleAutomaticGainControlChange } from "UserSettingsVoiceUtils.tsx";
 
 let c5;
 let closure_6;

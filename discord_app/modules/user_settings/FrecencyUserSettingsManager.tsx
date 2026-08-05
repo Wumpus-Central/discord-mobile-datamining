@@ -1,4 +1,3 @@
-import { updateUserGuildSettings } from "UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/user_settings/FrecencyUserSettingsManager.tsx
 import handleStickersStoreUpdate from "handleStickersStoreUpdate";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
@@ -12,6 +11,7 @@ import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { FREQUENCY_ITEM_LIMIT } from "ApplicationTypes";
 import "initialize";
+import { updateUserGuildSettings } from "UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
 function handleConnectionOpen() {

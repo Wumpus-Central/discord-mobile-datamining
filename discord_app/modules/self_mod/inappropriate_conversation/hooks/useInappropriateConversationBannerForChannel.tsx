@@ -1,9 +1,9 @@
+// discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx
+import { SafetyWarningTypes } from "handleConnectionOpen";
 import { useChannelSafetyWarning } from "../../hooks/useChannelSafetyWarning.tsx";
 import { InappropriateConversationExperiment } from "../SelfModInappropriateConversationExperiment.tsx";
 import { useInappropriateConversationWarningsForChannel } from "useInappropriateConversationWarningsForChannel.tsx";
 import { useSafetyAlertsSettingOrDefault } from "useSafetyAlertsSettingOrDefault.tsx";
-// discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx
-import { SafetyWarningTypes } from "handleConnectionOpen";
 
 const result = require("useSafetyAlertsSettingOrDefault").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");
 

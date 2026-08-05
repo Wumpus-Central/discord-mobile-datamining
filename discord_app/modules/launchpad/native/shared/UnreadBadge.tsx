@@ -1,6 +1,3 @@
-import { DEFAULT_BADGE_SIZE } from "../../../main_tabs_v2/native/shared_components/Badge.tsx";
-import { getFontScale } from "../../../screen/native/useFontScale.tsx";
-import { getLayoutStyle } from "getLayoutStyles.tsx";
 // discord_app/modules/launchpad/native/shared/UnreadBadge.tsx
 import { View } from "get ActivityIndicator";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
@@ -8,6 +5,9 @@ import { UnreadSetting } from "ReadStateTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { DEFAULT_BADGE_SIZE } from "../../../main_tabs_v2/native/shared_components/Badge.tsx";
+import { getFontScale } from "../../../screen/native/useFontScale.tsx";
+import { getLayoutStyle } from "getLayoutStyles.tsx";
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });

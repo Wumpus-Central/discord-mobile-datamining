@@ -1,6 +1,6 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/actions/ChangeNicknameActionCreators.tsx
 import { Endpoints } from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 let result = require("trackInvite").fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
 

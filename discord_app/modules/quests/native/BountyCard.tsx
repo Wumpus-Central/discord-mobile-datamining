@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/BountyCard.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CircleCheckIcon";
@@ -10,6 +9,7 @@ import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
 import PlatformTypes from "PlatformTypes";
 import PlatformTypes from "PlatformTypes";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c5;

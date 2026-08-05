@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useUserIsTeen } from "../../hooks/useUserIsTeen.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useUserIsTeen } from "../../hooks/useUserIsTeen.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");

@@ -1,6 +1,6 @@
-import { ExampleButton } from "../../design_system/native/UserSettingsDesignSystemButton.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsButtonSetting.tsx
 import createToggle from "createToggle";
+import { ExampleButton } from "../../design_system/native/UserSettingsDesignSystemButton.tsx";
 
 obj = {
   useTitle() {

@@ -1,7 +1,7 @@
-import { useBackPressHandler } from "../../routing/native/useBackPressHandler.tsx";
 // discord_app/modules/native_menu/native/NativeMenuPresenter.tsx
 import noop from "noop";
 import initialize from "initialize";
+import { useBackPressHandler } from "../../routing/native/useBackPressHandler.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");

@@ -1,6 +1,3 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { ErrorBlock } from "../../components/ErrorBlock.tsx";
-import { WarningNotice } from "../../components/WarningNotice.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
 import encodeProperties from "encodeProperties";
 import Form from "Form";
@@ -10,6 +7,9 @@ import { GuildSettingsSections } from "ME";
 import { CreatorMonetizationOnboardingMarketingSection as closure_10 } from "CreatorMonetizationApplicationState";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { ErrorBlock } from "../../components/ErrorBlock.tsx";
+import { WarningNotice } from "../../components/WarningNotice.tsx";
 
 let closure_12;
 let closure_6;

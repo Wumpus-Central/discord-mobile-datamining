@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/game_console/ConsoleVoiceUpsellStore.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = Object.freeze({ voiceUpsellDismissed: false, showSparkles: false });
 const obj = keys.create(() => closure_2);

@@ -1,7 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/chat/native/ChatLoadingIndicator.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_4146";
@@ -15,6 +11,10 @@ import getState from "getState";
 import { AppStates } from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let closure_14;
 let closure_15;

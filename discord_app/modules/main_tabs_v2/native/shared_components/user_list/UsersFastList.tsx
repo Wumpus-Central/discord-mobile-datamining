@@ -1,5 +1,3 @@
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { styles } from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "UserRowSubLabel";
@@ -7,6 +5,8 @@ import { View } from "useScaledRowHeight";
 import PX_24 from "PX_24";
 import jsxProd from "module_9584";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { styles } from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
 
 let c9;
 let error;

@@ -1,6 +1,6 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/records/ProfileFrameRecord.tsx
 import "fromServer";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const require = arg1;
 let prototype;

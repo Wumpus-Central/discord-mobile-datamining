@@ -1,11 +1,11 @@
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/native/AvatarDecorationSampleV2.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 let c3;
 let c4;

@@ -1,4 +1,3 @@
-import { useMyCurrentStageChannelRole } from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelHeader.tsx
 import registerAsset from "registerAsset";
 import importAllResult from "Themes";
@@ -19,6 +18,7 @@ import { ParticipantTypes } from "ParticipantTypes";
 import { ThemeTypes } from "sum";
 import jsxProd from "CONFIG_NEVER_ANIMATE";
 import createCacheKey from "createCacheKey";
+import { useMyCurrentStageChannelRole } from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
 
 let closure_16;
 let closure_17;

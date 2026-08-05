@@ -1,7 +1,7 @@
+// discord_app/modules/collectibles/utils/getProductName.tsx
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getProductOrbPrice } from "CollectiblesProductUtils.tsx";
-// discord_app/modules/collectibles/utils/getProductName.tsx
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
 
 export const getProductName = function getProductName(product) {

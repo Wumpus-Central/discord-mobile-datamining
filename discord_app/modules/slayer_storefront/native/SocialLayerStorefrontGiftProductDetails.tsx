@@ -1,10 +1,10 @@
-import { SlayerStorefrontItemCard } from "SlayerStorefrontItemCard.tsx";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontGiftProductDetails.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PriceSetAssignmentPurchaseTypes as closure_6 } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SlayerStorefrontItemCard } from "SlayerStorefrontItemCard.tsx";
 
 let c4;
 let c5;

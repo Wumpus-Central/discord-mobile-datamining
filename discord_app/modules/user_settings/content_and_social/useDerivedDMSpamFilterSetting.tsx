@@ -1,11 +1,11 @@
+// discord_app/modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { SettingsDefaultFeature } from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
 import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import { explicitContentFromProto } from "../UserSettings.tsx";
-// discord_app/modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items";
 
 const require = arg1;
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");

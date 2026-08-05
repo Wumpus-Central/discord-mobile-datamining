@@ -1,9 +1,9 @@
-import { _initialize } from "../../media/native/MediaPlayerManager.tsx";
-import { MediaPlaybackPanelController } from "MediaPlaybackPanelController.tsx";
-import { MediaPlaybackPanelUI } from "MediaPlaybackPanelUI.tsx";
 // discord_app/modules/media_panel/native/MediaPlaybackPanelContainer.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { _initialize } from "../../media/native/MediaPlayerManager.tsx";
+import { MediaPlaybackPanelController } from "MediaPlaybackPanelController.tsx";
+import { MediaPlaybackPanelUI } from "MediaPlaybackPanelUI.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function MediaPlaybackPanelContainer() {

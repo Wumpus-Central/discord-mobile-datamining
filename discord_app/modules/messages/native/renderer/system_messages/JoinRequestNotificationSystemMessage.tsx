@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MessageTypes } from "ME";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 
 const require = arg1;
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");

@@ -1,7 +1,7 @@
+// discord_common/js/packages/tokens/native.tsx
 import { n } from "../../../../_runtime/00689_n.js";
 import { mapValues } from "../../../../_runtime/00719_mapValues.js";
 import { interpolate } from "transforms.tsx";
-// discord_common/js/packages/tokens/native.tsx
 const Themes = require("items")._private.Themes;
 const SemanticColors = require("_private")._private.SemanticColors;
 const SemanticColorExperiments = require("_private")._private.SemanticColorExperiments;

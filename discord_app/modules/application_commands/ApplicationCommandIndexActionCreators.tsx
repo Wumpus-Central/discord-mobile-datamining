@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/application_commands/ApplicationCommandIndexActionCreators.tsx
 import expandEventProperties from "expandEventProperties";
 import ME from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let c4;
 let c5;

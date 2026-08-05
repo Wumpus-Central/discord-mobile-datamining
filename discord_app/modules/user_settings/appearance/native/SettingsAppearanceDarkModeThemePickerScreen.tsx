@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ThemeTypes } from "SettingsAppearanceThemePickerScreen.tsx";
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx
 import "noop";
 import { SystemTheme } from "SystemThemeState";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ThemeTypes } from "SettingsAppearanceThemePickerScreen.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx");

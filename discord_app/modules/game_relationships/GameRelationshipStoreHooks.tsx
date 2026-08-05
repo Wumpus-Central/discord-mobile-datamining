@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 // discord_app/modules/game_relationships/GameRelationshipStoreHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import { RelationshipTypes } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");

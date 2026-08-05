@@ -1,9 +1,9 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { createFastConnectSocket } from "../gateway/native/fast_connect.tsx";
 // discord_app/modules/multi_account/MultiAccountSwitchStore.tsx
 import initialize from "initialize";
 import { AnalyticEvents } from "ME";
 import { Store } from "initialize";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { createFastConnectSocket } from "../gateway/native/fast_connect.tsx";
 
 const require = arg1;
 let closure_6 = new require("createFastConnectSocket")("MultiAccountSwitchStore");

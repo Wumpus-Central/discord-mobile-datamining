@@ -1,10 +1,10 @@
+// discord_app/design/components/TextField/native/TextField.native.tsx
+import { jsx } from "jsxProd";
+import importAllResult from "noop";
 import { InputAttachmentContainer } from "../../Input/native/useInputAttachments.native.tsx";
 import { useInputClearButton } from "../../Input/native/useInputClearButton.native.tsx";
 import { BaseTextField } from "BaseTextField.native.tsx";
 import { useTextFieldState } from "useTextField.native.tsx";
-// discord_app/design/components/TextField/native/TextField.native.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
 
 const require = arg1;
 const forwardRefResult = require("noop").forwardRef((onClear, ref) => {

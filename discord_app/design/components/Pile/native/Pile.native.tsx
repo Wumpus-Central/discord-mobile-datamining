@@ -1,10 +1,10 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
 // discord_app/design/components/Pile/native/Pile.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles({ pile: { flexDirection: "row" } });

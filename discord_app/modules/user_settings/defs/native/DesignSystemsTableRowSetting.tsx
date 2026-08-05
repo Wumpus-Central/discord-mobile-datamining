@@ -1,6 +1,6 @@
-import { MyTableRow } from "../../design_system/native/UserSettingsDesignSystemTableRow.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTableRowSetting.tsx
 import createToggle from "createToggle";
+import { MyTableRow } from "../../design_system/native/UserSettingsDesignSystemTableRow.tsx";
 
 obj = {
   useTitle() {

@@ -1,5 +1,5 @@
-import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 // discord_app/modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx
+import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 const result = require("SoundboardIcon").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {

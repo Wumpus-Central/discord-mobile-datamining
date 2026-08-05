@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { sortKey } from "StageChannelParticipants.tsx";
 // discord_app/modules/stage_channels/StageMediaHooks.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateVoiceState from "updateVoiceState";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { sortKey } from "StageChannelParticipants.tsx";
 
 const require = arg1;
 const result = require("getActiveStageChannelIds").fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");

@@ -1,7 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx
 import "registerAsset";
 import get_ActivityIndicator from "useTrackRoleSubscriptionUpsellAnalytics";
@@ -11,6 +7,10 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 import jsxProd from "getCoverImageURI";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

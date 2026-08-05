@@ -1,3 +1,8 @@
+// discord_app/modules/guilds_bar/native/GuildsBarMessages.tsx
+import handleConnectionOpen from "handleConnectionOpen";
+import { ME } from "ME";
+import { jsx } from "jsxProd";
+import importAllResult from "noop";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { ChatIcon } from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
@@ -7,11 +12,6 @@ import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experime
 import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
 import { useGuildsBarBottomRightBadge } from "hooks/useGuildsBarBottomRightBadge.tsx";
 import { transitionGuildsBarToGuildOrOpenSelectedChannel } from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
-// discord_app/modules/guilds_bar/native/GuildsBarMessages.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import { ME } from "ME";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
 
 const require = arg1;
 let closure_6 = {

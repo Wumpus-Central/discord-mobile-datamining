@@ -1,9 +1,9 @@
-import { apexExperiment } from "../../experiments/GiftPromotionReminderExperiment.tsx";
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { SubscriptionPlans } from "GuildFeatures";
+import { apexExperiment } from "../../experiments/GiftPromotionReminderExperiment.tsx";
 
 const require = arg1;
 let result = require("createEmptyPromotionsByType").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");

@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesModalContent.tsx
 import ME from "ME";
 import useBountiesModalVideoAnalytics from "useBountiesModalVideoAnalytics";
@@ -9,6 +8,7 @@ import { AnalyticEvents } from "ME";
 import { ThemeTypes } from "sum";
 import jsxProd from "AdCreativeType";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let closure_12;

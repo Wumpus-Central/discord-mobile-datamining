@@ -1,4 +1,3 @@
-import { MessagesScreen } from "MessagesScreen.tsx";
 // discord_app/modules/search/native/components/tabs/pages/messages/PinsScreen.tsx
 import importAllResult from "noop";
 import handleChannelDelete from "handleChannelDelete";
@@ -9,6 +8,7 @@ import MessageEmbedTypes from "MessageEmbedTypes";
 import { SearchResultContentEntityTypes as closure_11 } from "SearchEntrypointAnalyticsLocations";
 import { SearchTypes } from "ME";
 import { jsx } from "jsxProd";
+import { MessagesScreen } from "MessagesScreen.tsx";
 
 let c10;
 let c9;

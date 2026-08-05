@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_panel/native/utils/useSelfHasVideo.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/voice_panel/native/utils/useSelfHasVideo.tsx");

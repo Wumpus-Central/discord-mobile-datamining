@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../_runtime/08279_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/chat_input/native/ChatInputContextBar.tsx
 import importAllResult from "processColorStrings";
 import get_ActivityIndicator from "useDisplayNameStyles";
@@ -14,6 +7,13 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/08279_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let c10;
 let c4;

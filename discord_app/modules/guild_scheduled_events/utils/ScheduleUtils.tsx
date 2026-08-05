@@ -1,3 +1,8 @@
+// discord_app/modules/guild_scheduled_events/utils/ScheduleUtils.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { RecurrenceOptions } from "RecurrenceOptions";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
+import set from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { t } from "../../../../_runtime/03867_t.js";
 import { m } from "../../../../_runtime/08866_m.js";
@@ -5,11 +10,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { resetCache } from "../../../utils/DateUtils.tsx";
 import { set } from "../../../utils/Durations.tsx";
 import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-// discord_app/modules/guild_scheduled_events/utils/ScheduleUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { RecurrenceOptions } from "RecurrenceOptions";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import set from "GUILD_EVENT_MAX_NAME_LENGTH";
 
 let c5;
 let closure_6;

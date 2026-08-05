@@ -1,6 +1,6 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ChannelSettingsPermissionsActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { dispatcher } from "../Dispatcher.tsx";
 
 const require = arg1;
 function _updatePermission() {

@@ -1,6 +1,6 @@
+// discord_app/modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { parseSkuIdFromServerData } from "../utils/mappers.tsx";
-// discord_app/modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx
 let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {

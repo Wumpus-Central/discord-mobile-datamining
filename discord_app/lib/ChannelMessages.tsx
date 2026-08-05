@@ -1,10 +1,10 @@
+// discord_app/lib/ChannelMessages.tsx
+import ME from "ME";
 import { apply } from "../../_runtime/00012_apply.js";
 import { GuildThemeSourcePreference } from "../flow/Client.tsx";
 import { createMinimalMessageRecord } from "../modules/messages/MessageRecordUtils.tsx";
 import { isIOSPushNotificationRawPayloadFixExperimentEnabled } from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
-// discord_app/lib/ChannelMessages.tsx
-import ME from "ME";
 
 let c4;
 let c5;

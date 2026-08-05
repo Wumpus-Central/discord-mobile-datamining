@@ -1,3 +1,13 @@
+// discord_app/modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx
+import isValidImageAttachment from "isValidImageAttachment";
+import get_ActivityIndicator from "VoiceMessageIcon";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import jsxProd from "preload";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../components_native/common/FastImage.tsx";
@@ -12,16 +22,6 @@ import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { Sticker } from "../../stickers/native/Sticker.tsx";
 import { isBlurDisabled } from "../../visual_effect_view/native/VisualEffectView.tsx";
 import { VoiceMessageIcon } from "hooks/usePreviewableMedia.tsx";
-// discord_app/modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx
-import isValidImageAttachment from "isValidImageAttachment";
-import get_ActivityIndicator from "VoiceMessageIcon";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "preload";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let StyleSheet;
 let c10;

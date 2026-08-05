@@ -1,11 +1,11 @@
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/app_launcher/native/base_components/ViewAllRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ expandCTALabelContainer: { alignItems: "center" } });

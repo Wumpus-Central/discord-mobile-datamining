@@ -1,5 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/verification/native/components/ConfirmEmailChangeStart.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -8,6 +6,8 @@ import get_ActivityIndicator from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 let c10;
 let closure_6;

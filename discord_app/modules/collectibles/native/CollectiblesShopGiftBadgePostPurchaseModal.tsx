@@ -1,3 +1,8 @@
+// discord_app/modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx
+import noop from "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { XSmallIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
@@ -6,11 +11,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../../premium/gifting/GiftingBadge.messages.js";
 import { PostPurchaseFooter } from "../../premium/native/gifting/GiftBadgePostPurchase.tsx";
 import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-// discord_app/modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx
 import map from "map";
 import initialize from "initialize";
@@ -6,6 +5,7 @@ import createUserWidgetFromServer from "createUserWidgetFromServer";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import sortActivity from "sortActivity";
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("createUserWidgetFromServer").fileFinishedImporting("modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx");

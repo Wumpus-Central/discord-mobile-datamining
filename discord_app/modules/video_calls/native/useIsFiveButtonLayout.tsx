@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
 // discord_app/modules/video_calls/native/useIsFiveButtonLayout.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");

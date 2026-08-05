@@ -1,11 +1,11 @@
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { AppealIngestionModal } from "AppealIngestionModal.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionSpam.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { AppealIngestionModal } from "AppealIngestionModal.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });

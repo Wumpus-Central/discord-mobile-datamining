@@ -1,12 +1,3 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { CirclePlusIcon } from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx
 import Header from "Header";
 import { View } from "context";
@@ -16,6 +7,15 @@ import { HelpdeskArticles } from "ME";
 import OperatorTypes from "OperatorTypes";
 import jsxProd from "CirclePlusIcon";
 import createCacheKey from "createCacheKey";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { CirclePlusIcon } from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
 let c10;
 let c9;

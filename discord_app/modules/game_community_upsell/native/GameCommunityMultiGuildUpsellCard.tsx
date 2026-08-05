@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/game_community_upsell/native/GameCommunityMultiGuildUpsellCard.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +8,7 @@ import closure_9 from "createGuildRecordFromRust";
 import ME from "ME";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let closure_12;

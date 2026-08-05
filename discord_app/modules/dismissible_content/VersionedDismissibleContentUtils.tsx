@@ -1,7 +1,7 @@
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 // discord_app/modules/dismissible_content/VersionedDismissibleContentUtils.tsx
 import participantFromServer from "participantFromServer";
 import getMarketingBySurface from "getMarketingBySurface";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 
 const require = arg1;
 const result = require("DismissibleContent").fileFinishedImporting("modules/dismissible_content/VersionedDismissibleContentUtils.tsx");

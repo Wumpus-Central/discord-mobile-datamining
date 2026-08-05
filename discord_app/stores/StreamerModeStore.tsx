@@ -1,9 +1,9 @@
-import { apexExperiment } from "../modules/overlay/OverlayV3Experiment.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/stores/StreamerModeStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { AnalyticEvents } from "ME";
 import { PersistedStore } from "initialize";
+import { apexExperiment } from "../modules/overlay/OverlayV3Experiment.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };

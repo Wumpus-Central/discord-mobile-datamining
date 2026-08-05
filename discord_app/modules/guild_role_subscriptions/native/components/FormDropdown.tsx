@@ -1,7 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13151_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
-import { styles } from "FormStyles.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/FormDropdown.tsx
 import "noop";
 import { Fonts } from "ME";
@@ -9,6 +5,10 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
+import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13151_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { styles } from "FormStyles.tsx";
 
 let c3;
 let c4;

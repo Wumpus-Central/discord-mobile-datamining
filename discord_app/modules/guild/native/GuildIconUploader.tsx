@@ -1,15 +1,15 @@
-import { registerAsset } from "../../../../_runtime/11112_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/11113_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild/native/GuildIconUploader.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { registerAsset } from "../../../../_runtime/11112_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11113_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c3;
 let c4;

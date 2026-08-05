@@ -1,12 +1,12 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsGuildPreviewElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 
 let c4;
 let c5;

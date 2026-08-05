@@ -1,11 +1,11 @@
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 import createToggle from "createToggle";
+import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 function onChange(custom_status_push_notifications) {
   const CustomStatusPushNotifications = explicitContentFromProto /* explicitContentFromProto */.CustomStatusPushNotifications;

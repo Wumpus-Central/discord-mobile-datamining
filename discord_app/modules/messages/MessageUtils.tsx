@@ -1,7 +1,7 @@
-import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
 // discord_app/modules/messages/MessageUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
 
 const require = arg1;
 const result = require("shouldShowAgeGateForVoiceChannel").fileFinishedImporting("modules/messages/MessageUtils.tsx");

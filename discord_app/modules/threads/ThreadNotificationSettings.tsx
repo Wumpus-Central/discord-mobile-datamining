@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/threads/ThreadNotificationSettings.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import storeThread from "storeThread";
 import { ThreadMemberFlags } from "AbortCodes";
 import { UserNotificationSettings } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const require = arg1;
 function computeThreadNotificationSetting(channel) {

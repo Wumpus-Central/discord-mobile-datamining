@@ -1,13 +1,13 @@
-import { GameControllerIcon } from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Form } from "../../../design/void/Form/native/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useGameMentionSearchBarHeight } from "../hooks/native/useGameMentionSearchBarHeight.tsx";
 // discord_app/modules/game_mentions/native/GameMentionSearchBar.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { GameControllerIcon } from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useGameMentionSearchBarHeight } from "../hooks/native/useGameMentionSearchBarHeight.tsx";
 
 let c3;
 let c4;

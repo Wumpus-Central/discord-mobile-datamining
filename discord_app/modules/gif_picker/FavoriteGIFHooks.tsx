@@ -1,6 +1,6 @@
-import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
 // discord_app/modules/gif_picker/FavoriteGIFHooks.tsx
 import noop from "noop";
+import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
 
 const require = arg1;
 let closure_4 = {};

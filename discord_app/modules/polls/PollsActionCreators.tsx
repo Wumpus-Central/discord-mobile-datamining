@@ -1,4 +1,3 @@
-import { set } from "../../actions/AlertActionCreators.tsx";
 // discord_app/modules/polls/PollsActionCreators.tsx
 import handleChanged from "handleChanged";
 import initialize from "initialize";
@@ -11,6 +10,7 @@ import reinjectEphemerals from "reinjectEphemerals";
 import map from "map";
 import useMessagePollInteractions from "useMessagePollInteractions";
 import ME from "ME";
+import { set } from "../../actions/AlertActionCreators.tsx";
 
 let closure_14;
 let closure_15;

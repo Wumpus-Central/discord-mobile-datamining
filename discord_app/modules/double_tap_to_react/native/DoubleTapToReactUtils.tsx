@@ -1,5 +1,3 @@
-import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
-import { parseRawEmojiObject } from "../../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapToReactUtils.tsx
 import DismissibleContent from "DismissibleContent";
 import { isContentShown } from "withContent";
@@ -9,6 +7,8 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import set from "set";
 import { jsx } from "jsxProd";
 import set from "getEmojiToGroupId";
+import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
+import { parseRawEmojiObject } from "../../emojis/UnicodeEmojis.tsx";
 
 let c9;
 let metroImportAll;

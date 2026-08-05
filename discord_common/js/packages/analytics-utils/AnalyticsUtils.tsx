@@ -1,5 +1,5 @@
-import { queueTrackingEventMaker } from "AnalyticsTrackingActionCreators.tsx";
 // discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx
+import { queueTrackingEventMaker } from "AnalyticsTrackingActionCreators.tsx";
 let closure_4 = {};
 let closure_5 = {};
 const result = require("queueTrackingEventMaker").fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx");

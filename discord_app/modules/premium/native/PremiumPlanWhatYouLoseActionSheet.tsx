@@ -1,11 +1,11 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx
 import Background from "Background";
 import { View } from "registerAsset";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let closure_6;
 let error;

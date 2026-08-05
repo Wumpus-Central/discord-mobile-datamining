@@ -1,11 +1,11 @@
-import { t } from "../../_runtime/03867_t.js";
-import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/utils/DateUtils.tsx
 import importDefaultResult from "_getSystemLocale";
 import importDefaultResult1 from "dispatcher";
 import importDefaultResult2 from "dispatcher";
+import { t } from "../../_runtime/03867_t.js";
+import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 
 const require = arg1;
 function resetCache() {

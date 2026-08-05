@@ -1,5 +1,3 @@
-import { SearchTokenTypes } from "../../SearchUtils.tsx";
-import { isComplete } from "SearchQueryTagManager.tsx";
 // discord_app/modules/search/native/stores/SearchQueryStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
@@ -9,6 +7,8 @@ import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
 import ME from "ME";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import { Store } from "initialize";
+import { SearchTokenTypes } from "../../SearchUtils.tsx";
+import { isComplete } from "SearchQueryTagManager.tsx";
 
 let c10;
 let c9;

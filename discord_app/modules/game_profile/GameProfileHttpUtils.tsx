@@ -1,5 +1,3 @@
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/game_profile/GameProfileHttpUtils.tsx
 import dispatcher from "dispatcher";
 import _getSystemLocale from "_getSystemLocale";
@@ -7,6 +5,8 @@ import importDefaultResult from "getSimilarGames";
 import { Endpoints } from "ME";
 import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "set";
 import initialize from "initialize";
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { set } from "../../utils/Durations.tsx";
 
 const require = arg1;
 function _getShopCollection() {

@@ -1,9 +1,9 @@
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/InGameDMsSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
+import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const require = arg1;
 createToggle = {

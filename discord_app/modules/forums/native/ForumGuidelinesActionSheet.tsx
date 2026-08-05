@@ -1,5 +1,3 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/forums/native/ForumGuidelinesActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import Background from "Background";
@@ -7,6 +5,8 @@ import { View } from "ME";
 import { FORUM_GUIDELINES_ACTION_SHEET as closure_6 } from "FORUM_GUIDELINES_ACTION_SHEET";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let c9;
 let error;

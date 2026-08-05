@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { _checkForNewerBuild } from "MobileNativeUpdateUtils.tsx";
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateStore.tsx
 import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL";
 import { Store } from "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { _checkForNewerBuild } from "MobileNativeUpdateUtils.tsx";
 
 let c3;
 let c4;

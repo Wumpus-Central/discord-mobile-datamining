@@ -1,3 +1,8 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx
+import { View } from "get ActivityIndicator";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -5,11 +10,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { resetCache } from "../../../../utils/DateUtils.tsx";
 import { useMaybeGetSortedBoosts } from "../hooks/useMaybeGetSortedBoosts.tsx";
 import { getBoostRowMessageText } from "../utils/getBoostRowMessageText.tsx";
-// discord_app/modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

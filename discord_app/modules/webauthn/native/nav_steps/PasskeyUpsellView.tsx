@@ -1,5 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/13880_registerAsset.js";
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/webauthn/native/nav_steps/PasskeyUpsellView.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -9,6 +7,8 @@ import { HelpdeskArticles } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/13880_registerAsset.js";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
 let c5;
 let closure_12;

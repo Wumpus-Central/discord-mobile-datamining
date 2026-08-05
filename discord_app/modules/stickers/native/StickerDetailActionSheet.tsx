@@ -1,6 +1,3 @@
-import { useStickerPackCategories } from "../StickersHooks.tsx";
-import { openStickerPackDetailActionSheet } from "openStickerPackDetailActionSheet.tsx";
-import { hideStickerDetailActionSheet } from "showStickerDetailActionSheet.tsx";
 // discord_app/modules/stickers/native/StickerDetailActionSheet.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import explicitContentFromProto from "explicitContentFromProto";
@@ -16,6 +13,9 @@ import jsxProd from "dispatcher";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "noop";
+import { useStickerPackCategories } from "../StickersHooks.tsx";
+import { openStickerPackDetailActionSheet } from "openStickerPackDetailActionSheet.tsx";
+import { hideStickerDetailActionSheet } from "showStickerDetailActionSheet.tsx";
 
 let closure_12;
 let closure_14;

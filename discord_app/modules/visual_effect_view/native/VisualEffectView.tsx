@@ -1,6 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { MODERN_ANDROID_BLURRING_AVAILABLE } from "VisualEffectViewAndroid.tsx";
 // discord_app/modules/visual_effect_view/native/VisualEffectView.tsx
 import { View } from "get ActivityIndicator";
 import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides";
@@ -8,6 +5,9 @@ import { jsx } from "jsxProd";
 import set from "set";
 import importAllResult from "noop";
 import set from "useVisualEffectViewOverrides";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { MODERN_ANDROID_BLURRING_AVAILABLE } from "VisualEffectViewAndroid.tsx";
 
 const require = arg1;
 set = set.isAndroid();

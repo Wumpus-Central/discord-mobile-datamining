@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/collectibles/native/useWishlistNUXActionSheet.tsx
 import noop from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import fetchFingerprint from "fetchFingerprint";
 import { ContentDismissActionType } from "ContentDismissActionType";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("fetchFingerprint").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");

@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/application_account_linking/AccountLinkingActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/application_account_linking/AccountLinkingActionCreators.tsx");
 
 export const accountLinkAuthorizationStarted = function accountLinkAuthorizationStarted(id, accountLinkCallbacks) {

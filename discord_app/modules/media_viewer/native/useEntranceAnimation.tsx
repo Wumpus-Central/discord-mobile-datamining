@@ -1,8 +1,8 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/media_viewer/native/useEntranceAnimation.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import keys from "keys";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
 function setUseEntranceAnimationState(arg0) {

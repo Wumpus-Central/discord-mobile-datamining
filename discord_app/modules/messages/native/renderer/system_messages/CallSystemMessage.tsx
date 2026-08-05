@@ -1,12 +1,12 @@
-import { useIsCallActive } from "../../../../calls/mobile/useIsCallActive.tsx";
-import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/CallSystemMessage.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
 import { ME } from "ME";
 import { ParticipantTypes } from "ParticipantTypes";
+import { useIsCallActive } from "../../../../calls/mobile/useIsCallActive.tsx";
+import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 
 const require = arg1;
 const result = require("updateVoiceState").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");

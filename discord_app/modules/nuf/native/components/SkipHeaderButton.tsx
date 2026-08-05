@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { GenericHeaderTitle } from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 // discord_app/modules/nuf/native/components/SkipHeaderButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { GenericHeaderTitle } from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 
 const require = arg1;
 createCacheKey = { button: null, insideNavigatorButton: null };

@@ -1,11 +1,11 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { syncContacts } from "../../../contact_sync/native/components/ContactSyncSettings.tsx";
-import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.tsx";
 // discord_app/modules/user_settings/defs/native/SyncContactsSetting.tsx
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PlatformTypes } from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { syncContacts } from "../../../contact_sync/native/components/ContactSyncSettings.tsx";
+import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.tsx";
 
 const require = arg1;
 createToggle = {

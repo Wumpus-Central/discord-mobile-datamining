@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isInMentionRaidExperiment } from "../guild_automod/ExperimentUtils.tsx";
 // discord_app/modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import computeAlertSettings from "computeAlertSettings";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isInMentionRaidExperiment } from "../guild_automod/ExperimentUtils.tsx";
 
 let c4;
 let c5;

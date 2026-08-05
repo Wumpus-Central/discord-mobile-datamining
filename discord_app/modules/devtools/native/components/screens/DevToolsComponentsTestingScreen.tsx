@@ -1,3 +1,11 @@
+// discord_app/modules/devtools/native/components/screens/DevToolsComponentsTestingScreen.tsx
+import importDefaultResult from "_slicedToArray";
+import noop from "noop";
+import { ScrollView } from "dispatcher";
+import handleConnectionOpen from "handleConnectionOpen";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import flattenComponents from "flattenComponents";
 import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
 import { PressableCard } from "../../../../../design/components/Card/native/Card.native.tsx";
 import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
@@ -7,14 +15,6 @@ import { isInteractionComponent } from "../../../../interaction_components/Compo
 import { SearchableSelectActionComponent } from "../../../../interaction_components/native/actions/SearchableSelectActionComponent.tsx";
 import { StringSelectActionComponent } from "../../../../interaction_components/native/actions/StringSelectActionComponent.tsx";
 import { TextDisplayComponent } from "../../../../interaction_components/native/display/TextDisplayComponent.tsx";
-// discord_app/modules/devtools/native/components/screens/DevToolsComponentsTestingScreen.tsx
-import importDefaultResult from "_slicedToArray";
-import noop from "noop";
-import { ScrollView } from "dispatcher";
-import handleConnectionOpen from "handleConnectionOpen";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import flattenComponents from "flattenComponents";
 
 let closure_12;
 let error;

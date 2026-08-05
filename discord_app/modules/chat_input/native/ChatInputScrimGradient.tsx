@@ -1,10 +1,10 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { getGradientColorByPercentage } from "../../client_themes/native/ClientThemesUtils.tsx";
 // discord_app/modules/chat_input/native/ChatInputScrimGradient.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { getGradientColorByPercentage } from "../../client_themes/native/ClientThemesUtils.tsx";
 
 let c4;
 let c5;

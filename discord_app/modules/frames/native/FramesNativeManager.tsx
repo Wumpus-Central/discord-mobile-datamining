@@ -1,10 +1,3 @@
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { _launchFrameOnNative } from "../FramesActionCreators.native.tsx";
 // discord_app/modules/frames/native/FramesNativeManager.tsx
 import closure_3 from "WebView";
 import map from "map";
@@ -13,6 +6,13 @@ import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_6 } from "items3"
 import WebView from "WebView";
 import PlatformTypes from "PlatformTypes";
 import "prototype";
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { _launchFrameOnNative } from "../FramesActionCreators.native.tsx";
 
 const require = arg1;
 function postMessageToWebView() {

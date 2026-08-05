@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_chat/VoiceChatHooks.tsx
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/voice_chat/VoiceChatHooks.tsx");

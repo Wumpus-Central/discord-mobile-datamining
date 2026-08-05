@@ -1,8 +1,8 @@
+// discord_app/modules/guild_antiraid/GuildAntiRaidUtils.tsx
+import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY";
 import { t } from "../../../_runtime/03867_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { GuildIncidentActionSources } from "GuildAntiRaidTypes.tsx";
-// discord_app/modules/guild_antiraid/GuildAntiRaidUtils.tsx
-import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY";
 
 let c3;
 let c4;

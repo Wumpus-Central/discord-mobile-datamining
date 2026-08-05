@@ -1,12 +1,12 @@
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { addValue } from "../../../../profiling/ComponentProfiler.tsx";
-import { DevToolsProfilingUseStateFromStores } from "DevToolsProfilingUseStateFromStores.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import { addValue } from "../../../../profiling/ComponentProfiler.tsx";
+import { DevToolsProfilingUseStateFromStores } from "DevToolsProfilingUseStateFromStores.tsx";
 
 let StyleSheet;
 let c4;

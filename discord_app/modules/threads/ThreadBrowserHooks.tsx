@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/threads/ThreadBrowserHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +9,7 @@ import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import listKey from "listKey";
 import storeThread from "storeThread";
 import { Permissions } from "sum";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("useReportToModChannelFiltersStore").fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");

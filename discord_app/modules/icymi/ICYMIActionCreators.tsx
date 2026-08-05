@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { generateHydrationId } from "ICYMIUtils.tsx";
 // discord_app/modules/icymi/ICYMIActionCreators.tsx
 import generateHydrationId from "generateHydrationId";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { generateHydrationId } from "ICYMIUtils.tsx";
 
 const require = arg1;
 const result = require("sendRequest").fileFinishedImporting("modules/icymi/ICYMIActionCreators.tsx");

@@ -1,12 +1,12 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { getSystemTheme } from "../themes/getSystemTheme.native.tsx";
 // discord_app/modules/user_settings/UnsyncedUserSettingsStore.tsx
 import { SystemThemeState } from "SystemThemeState";
 import { ListDensityMode } from "MAX_FAVORITES";
 import ME from "ME";
 import { ExpressionPickerWidths } from "ExpressionPickerViewType";
 import { DeviceSettingsStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { getSystemTheme } from "../themes/getSystemTheme.native.tsx";
 
 let CHANNEL_SIDEBAR_WIDTH;
 let c5;

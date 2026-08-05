@@ -1,7 +1,7 @@
-import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/MemberVerificationUtils.tsx
 import items from "items";
 import { GuildFeatures } from "ME";
+import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 
 let c3;
 let obj1;

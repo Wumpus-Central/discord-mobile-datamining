@@ -1,10 +1,10 @@
-import { _typeof } from "../../_runtime/metro/04611__typeof.js";
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 // discord_app/utils/StripeUtils.tsx
 import _typeof from "_typeof";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
+import { _typeof } from "../../_runtime/metro/04611__typeof.js";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 let closure_6;
 let error;

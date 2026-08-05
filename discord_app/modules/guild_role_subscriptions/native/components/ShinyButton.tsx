@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../../_runtime/08610_registerAsset.js";
-import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/ShinyButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/08610_registerAsset.js";
+import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 
 const require = arg1;
 createCacheKey = { container: null, sparkleIcon: null, disabled: null };

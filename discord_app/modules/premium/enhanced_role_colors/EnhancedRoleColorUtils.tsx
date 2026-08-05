@@ -1,6 +1,6 @@
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 // discord_app/modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx
 import { DEFAULT_ROLE_COLOR_HEX } from "ME";
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
 

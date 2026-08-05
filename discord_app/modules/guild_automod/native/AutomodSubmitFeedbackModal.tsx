@@ -1,3 +1,10 @@
+// discord_app/modules/guild_automod/native/AutomodSubmitFeedbackModal.tsx
+import _slicedToArray from "_slicedToArray";
+import AutomodAlertActionType from "AutomodAlertActionType";
+import { View } from "collectGuildAnalyticsMetadata";
+import { AnalyticEvents } from "ME";
+import jsxProd from "NavigationStack";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/07837_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
@@ -6,13 +13,6 @@ import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 import { Feedback } from "../AutomodFeedback.tsx";
-// discord_app/modules/guild_automod/native/AutomodSubmitFeedbackModal.tsx
-import _slicedToArray from "_slicedToArray";
-import AutomodAlertActionType from "AutomodAlertActionType";
-import { View } from "collectGuildAnalyticsMetadata";
-import { AnalyticEvents } from "ME";
-import jsxProd from "NavigationStack";
-import createCacheKey from "createCacheKey";
 
 let error;
 let metroImportAll;

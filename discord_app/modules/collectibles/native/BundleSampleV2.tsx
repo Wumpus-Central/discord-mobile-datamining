@@ -1,3 +1,9 @@
+// discord_app/modules/collectibles/native/BundleSampleV2.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import { BUNDLE_PREVIEW_CONFIG } from "SAMPLE_PROFILE_ASPECT_RATIO";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { 00038__ } from "../../../../_runtime/metro/00038__.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
@@ -7,12 +13,6 @@ import { NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG } from "../nameplates/native/Namepl
 import { getNameplateData } from "../nameplates/utils.tsx";
 import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
 import { ProfileEffectSample } from "ProfileEffectSampleV2.tsx";
-// discord_app/modules/collectibles/native/BundleSampleV2.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { BUNDLE_PREVIEW_CONFIG } from "SAMPLE_PROFILE_ASPECT_RATIO";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let StyleSheet;
 let c3;

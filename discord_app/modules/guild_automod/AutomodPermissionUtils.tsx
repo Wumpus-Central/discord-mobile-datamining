@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_automod/AutomodPermissionUtils.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let items = [, , ];

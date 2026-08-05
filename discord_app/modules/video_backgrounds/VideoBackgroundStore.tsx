@@ -1,11 +1,11 @@
-import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
-import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
 // discord_app/modules/video_backgrounds/VideoBackgroundStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
+import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
+import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
 
 const require = arg1;
 function handleSyncedStoresUpdate() {

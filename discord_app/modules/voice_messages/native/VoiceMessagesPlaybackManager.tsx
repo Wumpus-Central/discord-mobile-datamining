@@ -1,10 +1,10 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 let c3;
 let c4;

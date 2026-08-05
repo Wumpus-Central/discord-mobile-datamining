@@ -1,7 +1,7 @@
-import { isFeatureTeenByDefault } from "RegionalFeatureConfigModels.tsx";
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigStore.tsx
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME";
 import { Store } from "initialize";
+import { isFeatureTeenByDefault } from "RegionalFeatureConfigModels.tsx";
 
 let c3;
 let obj1;

@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../_runtime/07585_registerAsset.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 // discord_app/modules/app_icons/native/AppIconConstants.tsx
 import { intl } from "getSystemLocale";
 import { intl as intl2 } from "getSystemLocale";
@@ -26,6 +23,9 @@ import { intl as intl21 } from "getSystemLocale";
 import { intl as intl22 } from "getSystemLocale";
 import { intl as intl23 } from "getSystemLocale";
 import { intl as intl24 } from "getSystemLocale";
+import { registerAsset } from "../../../../_runtime/07585_registerAsset.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 
 let obj = { id: require("FreemiumAppIconIds").PremiumAppIconIds.IN_RAINBOWS, iconSource: require("registerAsset"), isPremium: true, name: null };
 obj[3] = intl.string(require("getSystemLocale").t.yxJB9E);

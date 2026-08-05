@@ -1,3 +1,10 @@
+// discord_app/components_native/premium/GuildBoostingUpsell.tsx
+import "HeadphonesIcon";
+import get_ActivityIndicator from "StickerIcon";
+import insertUnsortedGuilds from "insertUnsortedGuilds";
+import { FractionalPremiumStates } from "GuildFeatures";
+import jsxProd from "UploadIcon";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../_runtime/12704_registerAsset.js";
 import { registerAsset } from "../../../_runtime/12705_registerAsset.js";
 import { registerAsset } from "../../../_runtime/12706_registerAsset.js";
@@ -17,13 +24,6 @@ import { useTheme } from "../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getSubscriptionPlansLoaded } from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
 import { PremiumFeatureList } from "PremiumFeatureList.tsx";
-// discord_app/components_native/premium/GuildBoostingUpsell.tsx
-import "HeadphonesIcon";
-import get_ActivityIndicator from "StickerIcon";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { FractionalPremiumStates } from "GuildFeatures";
-import jsxProd from "UploadIcon";
-import createCacheKey from "createCacheKey";
 
 let StyleSheet;
 let c3;

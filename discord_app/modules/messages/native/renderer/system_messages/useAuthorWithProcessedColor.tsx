@@ -1,7 +1,7 @@
-import { processColorStrings } from "../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import { useNullableMessageAuthor } from "../../../useMessageAuthor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx
 import { processColor } from "get ActivityIndicator";
+import { processColorStrings } from "../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
+import { useNullableMessageAuthor } from "../../../useMessageAuthor.tsx";
 
 const result = require("processColorStrings").fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
 

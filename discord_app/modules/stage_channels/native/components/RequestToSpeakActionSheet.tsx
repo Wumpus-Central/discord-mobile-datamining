@@ -1,7 +1,3 @@
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useAudienceRequestToSpeakState } from "../../useAudienceRequestToSpeakState.tsx";
-import { useRequestToSpeakPermission } from "../../useRequestToSpeakPermission.tsx";
 // discord_app/modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx
 import TableRowGroupTitle from "TableRowGroupTitle";
 import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint";
@@ -11,6 +7,10 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import { REQUEST_TO_SPEAK_SHEET_KEY as closure_8 } from "MAX_STAGE_TOPIC_LENGTH";
 import jsxProd from "audienceAckRequestToSpeak";
 import createCacheKey from "createCacheKey";
+import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useAudienceRequestToSpeakState } from "../../useAudienceRequestToSpeakState.tsx";
+import { useRequestToSpeakPermission } from "../../useRequestToSpeakPermission.tsx";
 
 let c10;
 let c9;

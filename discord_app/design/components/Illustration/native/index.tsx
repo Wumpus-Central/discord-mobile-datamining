@@ -1,5 +1,5 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/design/components/Illustration/native/index.tsx
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 const result = require("set").fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
 export const getIllustrationSource = function getIllustrationSource(theme, light) {

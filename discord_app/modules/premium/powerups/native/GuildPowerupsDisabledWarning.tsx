@@ -1,10 +1,10 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

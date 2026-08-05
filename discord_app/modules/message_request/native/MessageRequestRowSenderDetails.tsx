@@ -1,10 +1,10 @@
-import { ensureAvatarSource } from "../../../utils/native/AvatarUtils.tsx";
 // discord_app/modules/message_request/native/MessageRequestRowSenderDetails.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ensureAvatarSource } from "../../../utils/native/AvatarUtils.tsx";
 
 let c5;
 let closure_6;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsSensitiveContentFilters } from "../../content_and_social/native/SensitiveContentFiltersScreen.tsx";
 // discord_app/modules/user_settings/defs/native/SensitiveContentFilterSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsSensitiveContentFilters } from "../../content_and_social/native/SensitiveContentFiltersScreen.tsx";
 
 obj = {
   useTitle() {

@@ -1,6 +1,6 @@
+// discord_common/js/packages/markup/native/MarkupParser.tsx
 import { t } from "../../../../../_runtime/03984_t.js";
 import { collectAst } from "../MarkupASTUtils.tsx";
-// discord_common/js/packages/markup/native/MarkupParser.tsx
 function saferParse(arg0, arg1, inline) {
   let ast;
   let hasBailedAst;

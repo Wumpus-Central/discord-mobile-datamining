@@ -1,7 +1,7 @@
-import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/SafetyShieldRight3dIllustration-2x.png.js";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
 // discord_app/design/components/mana-assets/native/generated/SafetyShieldRight3dIllustration.native.tsx
 import { jsx } from "jsxProd";
+import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/SafetyShieldRight3dIllustration-2x.png.js";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SafetyShieldRight3dIllustration.native.tsx");
 

@@ -1,5 +1,5 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
 
 export default function useGuildPowerupColorConfig(arg0) {

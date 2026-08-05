@@ -1,4 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji/HeaderRow.tsx
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +8,7 @@ import ME from "ME";
 import { EMOJI_MAX_FILESIZE_KB } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 let c10;
 let c9;

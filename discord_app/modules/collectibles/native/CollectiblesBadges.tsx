@@ -1,15 +1,15 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { LockIcon } from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { PremiumFeaturesBackground } from "../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 // discord_app/modules/collectibles/native/CollectiblesBadges.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { LockIcon } from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { PremiumFeaturesBackground } from "../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 
 let c5;
 let closure_6;

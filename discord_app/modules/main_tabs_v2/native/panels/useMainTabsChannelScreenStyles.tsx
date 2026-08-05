@@ -1,7 +1,7 @@
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx
 import noop from "noop";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 createCacheKey = { elevation: null };

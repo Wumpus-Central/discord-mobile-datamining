@@ -1,13 +1,13 @@
+// discord_app/modules/safety_flows/native/tasks/EnterEmailScreen.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import { jsx } from "jsxProd";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { TextInput } from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../../SafetyFlows.messages.js";
 import { SafetyFlowTaskScreen } from "../SafetyFlowTaskScreen.tsx";
-// discord_app/modules/safety_flows/native/tasks/EnterEmailScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/safety_flows/native/tasks/EnterEmailScreen.tsx");

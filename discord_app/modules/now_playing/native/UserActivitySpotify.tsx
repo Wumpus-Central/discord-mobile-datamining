@@ -1,12 +1,12 @@
-import { registerAsset } from "../../../../_runtime/08054_registerAsset.js";
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { Linking } from "../../../lib/native/Linking.tsx";
 // discord_app/modules/now_playing/native/UserActivitySpotify.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import WEB_OPEN from "WEB_OPEN";
 import jsxProd from "jsxProd";
+import { registerAsset } from "../../../../_runtime/08054_registerAsset.js";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { Linking } from "../../../lib/native/Linking.tsx";
 
 let c10;
 let c4;

@@ -1,14 +1,14 @@
+// discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx
+import { View } from "set";
+import { HelpdeskArticles } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 import { getContextualEntrypointHeading } from "../../utils/QuestCopyUtils.tsx";
-// discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx
-import { View } from "set";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

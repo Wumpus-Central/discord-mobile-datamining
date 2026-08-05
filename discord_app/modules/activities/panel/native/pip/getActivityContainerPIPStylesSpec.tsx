@@ -1,7 +1,7 @@
-import { t } from "../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
 // discord_app/modules/activities/panel/native/pip/getActivityContainerPIPStylesSpec.tsx
 import { OrientationLockState } from "items3";
 import { LANDSCAPE_ACTIVITY_ASPECT_RATIO } from "ActivityPanelModes";
+import { t } from "../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
 
 const fn = function t(isLandscape) {
   let pipHeight;

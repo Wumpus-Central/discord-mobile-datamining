@@ -1,10 +1,10 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { premiumSince } from "../DisplayProfile.tsx";
 // discord_app/modules/user_profile/hooks/useDisplayProfile.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { premiumSince } from "../DisplayProfile.tsx";
 
 const require = arg1;
 let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new premiumSince(arg0, arg1));

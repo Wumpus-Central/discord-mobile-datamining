@@ -1,4 +1,3 @@
-import { registerAsset } from "../../../../_runtime/07626_registerAsset.js";
 // discord_app/modules/saved_messages/native/ForLaterNitroUpsellBar.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { PremiumTypes } from "GuildFeatures";
 import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/07626_registerAsset.js";
 
 let c10;
 let c4;

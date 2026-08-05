@@ -1,7 +1,7 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/app_database/system/StartupData.native.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 const result = require("enforcing").fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");
 

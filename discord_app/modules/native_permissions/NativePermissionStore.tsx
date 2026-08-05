@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/native_permissions/NativePermissionStore.tsx
 import { NativePermissionStates } from "NativePermissionStatus";
 import { AnalyticEvents } from "ME";
 import { DeviceSettingsStore } from "initialize";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let closure_4 = { permissionStates: {} };
 class NativePermissionStore extends DeviceSettingsStore {

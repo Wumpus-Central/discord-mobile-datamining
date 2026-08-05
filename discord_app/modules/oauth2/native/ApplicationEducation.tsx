@@ -1,12 +1,12 @@
-import { set } from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useIsSocialLayerParentApplication } from "../../applications/useIsSocialLayerParentApplication.tsx";
 // discord_app/modules/oauth2/native/ApplicationEducation.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { MAX_FRIENDS } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useIsSocialLayerParentApplication } from "../../applications/useIsSocialLayerParentApplication.tsx";
 
 let c5;
 let closure_6;

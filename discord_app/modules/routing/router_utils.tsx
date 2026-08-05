@@ -1,8 +1,8 @@
-import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
-import { set } from "RoutingSources.tsx";
 // discord_app/modules/routing/router_utils.tsx
 import ME from "ME";
 import _extends from "_extends";
+import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
+import { set } from "RoutingSources.tsx";
 
 let c5;
 let closure_6;

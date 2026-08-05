@@ -1,8 +1,8 @@
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/forums/native/posts/ForumPostNewTag.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/void/native.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

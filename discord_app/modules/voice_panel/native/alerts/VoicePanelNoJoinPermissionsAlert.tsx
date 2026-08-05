@@ -1,9 +1,9 @@
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { VoicePanelLockedIcon } from "VoicePanelLockedIcon.tsx";
 // discord_app/modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { VoicePanelLockedIcon } from "VoicePanelLockedIcon.tsx";
 
 const require = arg1;
 const result = require("getAlertModalItemKey").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");

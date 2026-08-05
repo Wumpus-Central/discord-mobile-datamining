@@ -1,8 +1,8 @@
+// discord_app/utils/RelationshipUtils.tsx
+import { FriendsSections } from "ME";
 import { NotificationActionCreators } from "../actions/NotificationActionCreators.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { getAvatarURL } from "AvatarUtils.tsx";
-// discord_app/utils/RelationshipUtils.tsx
-import { FriendsSections } from "ME";
 
 const result = require("getAvatarURL").fileFinishedImporting("utils/RelationshipUtils.tsx");
 

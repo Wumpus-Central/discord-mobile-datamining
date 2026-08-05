@@ -1,8 +1,3 @@
-import { v1 } from "../../../../../_runtime/00514_v1.js";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { useEmojiAndSource } from "../../../emojis/hooks/useEmojiAndSource.tsx";
-import { CustomEmojiContent } from "CustomEmojiContent.tsx";
-import { Emoji } from "StandardEmojiContent.tsx";
 // discord_app/modules/messages/native/emoji/MessageEmojiActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -11,6 +6,11 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "ME";
+import { v1 } from "../../../../../_runtime/00514_v1.js";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { useEmojiAndSource } from "../../../emojis/hooks/useEmojiAndSource.tsx";
+import { CustomEmojiContent } from "CustomEmojiContent.tsx";
+import { Emoji } from "StandardEmojiContent.tsx";
 
 const require = arg1;
 function MessageStandardEmojiActionSheet(emojiNode) {

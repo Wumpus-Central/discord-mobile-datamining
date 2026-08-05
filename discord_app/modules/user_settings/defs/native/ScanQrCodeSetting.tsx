@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/ScanQrCodeSetting.tsx
 import { NativePermissionTypes } from "NativePermissionStatus";
 import apply from "apply";
 import importDefaultResult from "module_4490";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 apply = {

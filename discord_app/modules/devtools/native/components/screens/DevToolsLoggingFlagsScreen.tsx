@@ -1,11 +1,11 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx
 import { ScrollView } from "get ActivityIndicator";
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 
 let c4;
 let c5;

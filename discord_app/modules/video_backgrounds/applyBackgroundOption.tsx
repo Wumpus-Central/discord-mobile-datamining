@@ -1,12 +1,12 @@
-import { isVideoBackgroundSupported } from "isVideoBackgroundSupported.tsx";
-import { getLastUsedVideoBackgroundOption } from "LastUsedVideoBackgroundOption.tsx";
-import { _fetchVideoFilterAssets } from "VideoBackgroundActionCreators.tsx";
 // discord_app/modules/video_backgrounds/applyBackgroundOption.tsx
 import 00038__ from "../../../_runtime/metro/00038__.js";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";
 import VideoFilterType from "VideoFilterType";
 import { NOOP } from "ME";
+import { isVideoBackgroundSupported } from "isVideoBackgroundSupported.tsx";
+import { getLastUsedVideoBackgroundOption } from "LastUsedVideoBackgroundOption.tsx";
+import { _fetchVideoFilterAssets } from "VideoBackgroundActionCreators.tsx";
 
 let closure_6;
 let error;

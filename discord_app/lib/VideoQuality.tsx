@@ -1,9 +1,9 @@
+// discord_app/lib/VideoQuality.tsx
+import "on";
 import { apply } from "../../_runtime/00012_apply.js";
 import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 import { parseEncoder } from "VideoQualityStats.tsx";
-// discord_app/lib/VideoQuality.tsx
-import "on";
 
 let require = arg1;
 function round(arg0) {

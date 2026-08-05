@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/collectibles/nameplates/native/NameplatePreview.tsx
 import noop from "noop";
 import { View } from "Text";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let error;
 let metroImportAll;

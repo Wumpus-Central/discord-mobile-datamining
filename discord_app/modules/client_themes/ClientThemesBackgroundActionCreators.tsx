@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/client_themes/ClientThemesBackgroundActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
 
 export const updateBackgroundGradientPreset = function updateBackgroundGradientPreset(id) {

@@ -1,10 +1,10 @@
-import { getWindowId } from "../../../utils/web/WindowIdUtils.tsx";
-import { INTERACTION_EVENTS } from "../../../utils/web/WindowInteractingUtils.tsx";
 // discord_app/modules/main_app_window/web/AppWindowContext.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 import getWindowId from "getWindowId";
+import { getWindowId } from "../../../utils/web/WindowIdUtils.tsx";
+import { INTERACTION_EVENTS } from "../../../utils/web/WindowInteractingUtils.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

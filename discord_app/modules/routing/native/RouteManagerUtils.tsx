@@ -1,13 +1,3 @@
-import { MemoryRouter } from "../../../../_runtime/10860_MemoryRouter.js";
-import { ChannelRTCActionCreators } from "../../../actions/ChannelRTCActionCreators.tsx";
-import { saveLastRoute } from "../../../actions/DefaultRouteActionCreators.tsx";
-import { showTooManyUserGuildsAlert } from "../../../actions/GuildActionCreators.tsx";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { SelectedChannelActionCreators } from "../../../actions/SelectedChannelActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { GuildThemeSourcePreference } from "../../../flow/Client.tsx";
-import { initialize } from "../RouteManager.tsx";
-import { transitionTo } from "../router_utils.tsx";
 // discord_app/modules/routing/native/RouteManagerUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { setVoiceChatDrawerState } from "VoiceChatDrawerState";
@@ -22,6 +12,16 @@ import { RouteParam } from "RouteParam";
 import { RouteParam as RouteParam2 } from "RouteParam";
 import { RouteParam as RouteParam3 } from "RouteParam";
 import { RouteParam as RouteParam4 } from "RouteParam";
+import { MemoryRouter } from "../../../../_runtime/10860_MemoryRouter.js";
+import { ChannelRTCActionCreators } from "../../../actions/ChannelRTCActionCreators.tsx";
+import { saveLastRoute } from "../../../actions/DefaultRouteActionCreators.tsx";
+import { showTooManyUserGuildsAlert } from "../../../actions/GuildActionCreators.tsx";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { SelectedChannelActionCreators } from "../../../actions/SelectedChannelActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { GuildThemeSourcePreference } from "../../../flow/Client.tsx";
+import { initialize } from "../RouteManager.tsx";
+import { transitionTo } from "../router_utils.tsx";
 
 let Routes;
 let unpackModuleId;

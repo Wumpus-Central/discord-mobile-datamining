@@ -1,5 +1,5 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/native_menu/native/NativeMenuActionCreators.tsx
+import { dispatcher } from "../../../Dispatcher.tsx";
 let result = require("IMPACT_LIGHT").fileFinishedImporting("modules/native_menu/native/NativeMenuActionCreators.tsx");
 
 export default {

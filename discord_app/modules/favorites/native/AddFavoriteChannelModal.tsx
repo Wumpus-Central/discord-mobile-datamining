@@ -1,5 +1,3 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { showSearchableDestinationListModal } from "../../share/native/showSearchableDestinationListModal.tsx";
 // discord_app/modules/favorites/native/AddFavoriteChannelModal.tsx
 import UserRowModes from "UserRowModes";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +7,8 @@ import { MAX_FAVORITES_ADD_CHANNEL_COUNT as closure_7 } from "date";
 import { UserRowModes } from "UserRowModes";
 import jsxProd from "SearchableDestinationList";
 import createCacheKey from "createCacheKey";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { showSearchableDestinationListModal } from "../../share/native/showSearchableDestinationListModal.tsx";
 
 let c10;
 let c9;

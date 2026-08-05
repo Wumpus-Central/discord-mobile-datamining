@@ -1,7 +1,7 @@
-import { ThirdPartyGameApplicationWebsiteCategory } from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 // discord_app/modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { ThirdPartyGameApplicationWebsiteCategory } from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 
 const require = arg1;
 const result = require("ThirdPartyGameApplicationWebsiteCategory").fileFinishedImporting("modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx");

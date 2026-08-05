@@ -1,10 +1,10 @@
-import { SearchableUserList } from "../../../main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx";
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserRowModes } from "UserRowModes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SearchableUserList } from "../../../main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

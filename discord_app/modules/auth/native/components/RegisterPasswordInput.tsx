@@ -1,6 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PasswordScore } from "utils/usePasswordScore.tsx";
 // discord_app/modules/auth/native/components/RegisterPasswordInput.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -13,6 +10,9 @@ import { FadeIn } from "module_4146";
 import { FadeOut } from "module_4146";
 import { LinearTransition } from "module_4146";
 import { Easing } from "module_4146";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PasswordScore } from "utils/usePasswordScore.tsx";
 
 let c10;
 let c9;

@@ -1,8 +1,8 @@
-import { Button } from "../../../../../design/void/native.tsx";
-import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/makeUserListPillData.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Button } from "../../../../../design/void/native.tsx";
+import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
 
 const require = arg1;
 const result = require("nameFromUser").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/makeUserListPillData.tsx");

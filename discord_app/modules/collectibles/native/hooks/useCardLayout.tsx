@@ -1,6 +1,6 @@
+// discord_app/modules/collectibles/native/hooks/useCardLayout.tsx
 import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
 import { CollectiblesShopCardInternalV2 } from "../CollectiblesShopCardV2.tsx";
-// discord_app/modules/collectibles/native/hooks/useCardLayout.tsx
 let result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
 
 export const useCardLayout = function useCardLayout() {

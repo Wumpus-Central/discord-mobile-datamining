@@ -1,5 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BountiesModalProgress } from "BountiesModalProgress.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountyVideo.tsx
 import _slicedToArray from "_slicedToArray";
 import preload from "preload";
@@ -8,6 +6,8 @@ import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import jsxProd from "BountiesModalAdvertiserCtaContent";
 import PlatformTypes from "PlatformTypes";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BountiesModalProgress } from "BountiesModalProgress.tsx";
 
 let c10;
 let c5;

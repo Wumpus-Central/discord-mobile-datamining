@@ -1,9 +1,9 @@
-import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
-import { useFavoritesGuildHeaderAction } from "../hooks/useFavoritesGuildHeaderAction.tsx";
-import { handleAddToFavorites } from "FavoritesGuildAddActionSheet.tsx";
 // discord_app/modules/favorites/native/FavoritesGuildHeaderActions.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
+import { useFavoritesGuildHeaderAction } from "../hooks/useFavoritesGuildHeaderAction.tsx";
+import { handleAddToFavorites } from "FavoritesGuildAddActionSheet.tsx";
 
 const require = arg1;
 const result = require("useFavoritesGuildHeaderAction").fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");

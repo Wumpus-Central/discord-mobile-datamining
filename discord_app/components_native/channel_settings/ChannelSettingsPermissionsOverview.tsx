@@ -1,11 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { CircleMinusIcon } from "../../design/components/Icon/native/redesign/generated/CircleMinusIcon.tsx";
-import { useNavigation } from "../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
-import { RoleLabel } from "../../design/void/RoleLabel/native/RoleLabel.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { memoResult1 } from "../../modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsPermissionsOverview.tsx
 import LayoutAnimation from "LayoutAnimation";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -20,6 +12,14 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "TableRowGroupTitle";
 import createCacheKey from "createCacheKey";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleMinusIcon } from "../../design/components/Icon/native/redesign/generated/CircleMinusIcon.tsx";
+import { useNavigation } from "../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
+import { RoleLabel } from "../../design/void/RoleLabel/native/RoleLabel.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { memoResult1 } from "../../modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx";
 
 let closure_14;
 let closure_15;

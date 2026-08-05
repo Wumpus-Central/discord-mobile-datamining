@@ -1,8 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isListeningOnSpotify } from "../modules/activities/utils/isListeningOnSpotify.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/stores/SelfPresenceStore.tsx
 import upsertAccount from "upsertAccount";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -15,6 +10,11 @@ import { sortActivity } from "sortActivity";
 import handleUpdate from "handleUpdate";
 import ME from "ME";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isListeningOnSpotify } from "../modules/activities/utils/isListeningOnSpotify.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 
 let closure_14;
 let closure_15;

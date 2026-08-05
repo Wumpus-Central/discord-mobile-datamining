@@ -1,10 +1,10 @@
+// discord_app/modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx
+import useTheme from "useTheme";
+import { Endpoints } from "ME";
 import { AccessibilityAnnouncer } from "../../design/shared.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getPlatformUserUrl } from "../../lib/Platforms.tsx";
 import { PlatformTypes } from "../connections/ConnectionsHooks.tsx";
-// discord_app/modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx
-import useTheme from "useTheme";
-import { Endpoints } from "ME";
 
 const require = arg1;
 function createFetchKeys(arg0, arr) {

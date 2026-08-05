@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/UseDataForQuestsSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useAdPersonalizationTogglesDisabled } from "../../../ads/hooks/useAdPersonalizationTogglesDisabled.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/UseDataForQuestsSetting.tsx
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

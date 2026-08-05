@@ -1,9 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
-import { isMentioned } from "../messages/isMessageMentioned.tsx";
-import { isSystemMessage } from "../messages/isSystemMessage.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/inbox/RecentMentionsStore.tsx
 import hasFlag from "hasFlag";
 import fetchFingerprint from "fetchFingerprint";
@@ -17,6 +11,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Storage } from "Storage";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
+import { isMentioned } from "../messages/isMessageMentioned.tsx";
+import { isSystemMessage } from "../messages/isSystemMessage.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 let closure_14;
 let closure_15;

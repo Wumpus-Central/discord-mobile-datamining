@@ -1,6 +1,6 @@
-import { generateAcceptInviteOptions } from "../../../actions/InstantInviteActionCreators.tsx";
 // discord_app/modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx
 import scheduledEventSort from "scheduledEventSort";
+import { generateAcceptInviteOptions } from "../../../actions/InstantInviteActionCreators.tsx";
 
 const require = arg1;
 let result = require("InviteTypes").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");

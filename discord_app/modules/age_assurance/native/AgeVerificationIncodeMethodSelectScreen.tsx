@@ -1,9 +1,3 @@
-import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx
 import set from "set";
 import _slicedToArray from "_slicedToArray";
@@ -14,6 +8,12 @@ import { VerificationMethod } from "set";
 import { buildIncodeParamsInjection as closure_9 } from "AGE_VERIFICATION_INCODE_PATH";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
+import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let unpackModuleId;

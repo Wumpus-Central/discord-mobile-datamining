@@ -1,10 +1,10 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/phone/PhoneActionCreators.tsx
 import sendRequest from "sendRequest";
 import fetchFingerprint from "fetchFingerprint";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 const result = require("PHONE_VERIFICATION_MODAL_KEY").fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");

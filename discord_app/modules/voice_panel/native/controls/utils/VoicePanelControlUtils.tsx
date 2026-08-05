@@ -1,5 +1,5 @@
-import { t } from "../../utils/roundToNearestPixel.tsx";
 // discord_app/modules/voice_panel/native/controls/utils/VoicePanelControlUtils.tsx
+import { t } from "../../utils/roundToNearestPixel.tsx";
 function getDrawerSpec(height, top) {
   const diff = height - top;
   return { minHeight: t(0.65 * diff), maxHeight: diff };

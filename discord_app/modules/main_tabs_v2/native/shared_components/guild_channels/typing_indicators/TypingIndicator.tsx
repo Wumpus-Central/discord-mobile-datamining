@@ -1,12 +1,12 @@
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../../../../design/shared.tsx";
-import { Button } from "../../../../../../design/void/native.tsx";
-import { useTheme } from "../../../../../../hooks/useTheme.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/typing_indicators/TypingIndicator.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../../../../design/shared.tsx";
+import { Button } from "../../../../../../design/void/native.tsx";
+import { useTheme } from "../../../../../../hooks/useTheme.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0) => {

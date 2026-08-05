@@ -1,11 +1,11 @@
-import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
-import { hasFetchedColors } from "../../../avatar/useAvatarColor.tsx";
 // discord_app/modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx
 import _slicedToArray from "_slicedToArray";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import noop from "noop";
 import addApplication from "addApplication";
 import { ImageSizes } from "items3";
+import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
+import { hasFetchedColors } from "../../../avatar/useAvatarColor.tsx";
 
 const require = arg1;
 function fetchColors(play) {

@@ -1,6 +1,6 @@
+// discord_app/modules/device/BillingPlatformUtils.tsx
 import { set } from "../../utils/PlatformUtils.tsx";
 import { isMetaQuest } from "MetaQuestUtils.android.tsx";
-// discord_app/modules/device/BillingPlatformUtils.tsx
 const result = require("set").fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
 export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {

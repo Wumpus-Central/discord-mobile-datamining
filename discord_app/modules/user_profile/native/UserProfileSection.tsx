@@ -1,10 +1,10 @@
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { useProfileThemeValues } from "../useProfileThemeValues.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileSection.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { useProfileThemeValues } from "../useProfileThemeValues.native.tsx";
 
 let c3;
 let c4;

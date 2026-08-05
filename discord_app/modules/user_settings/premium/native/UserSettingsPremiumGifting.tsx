@@ -1,4 +1,3 @@
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx
 import getSystemLocale from "getSystemLocale";
 import importAllResult from "useBlockedPaymentsConfig";
@@ -9,6 +8,7 @@ import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "apexExperiment";
 import createCacheKey from "createCacheKey";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let StyleSheet;
 let USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING;

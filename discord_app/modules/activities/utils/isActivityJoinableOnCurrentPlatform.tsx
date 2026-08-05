@@ -1,7 +1,7 @@
-import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { hasFlag } from "hasFlag.tsx";
 // discord_app/modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx
 import ME from "ME";
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { hasFlag } from "hasFlag.tsx";
 
 let c3;
 let c4;

@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { newGetEnglishMessageText } from "../../../../../intl/migration.tsx";
-import { closeActionSheet } from "../../../../feedback/native/FeedbackActionSheet.tsx";
-import { getInAppReportsFeedbackOptions } from "../../../getInAppReportsFeedbackOptions.tsx";
 // discord_app/modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx
 import "noop";
 import { AnalyticEvents } from "ME";
 import { FeedbackType } from "FeedbackRating";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { newGetEnglishMessageText } from "../../../../../intl/migration.tsx";
+import { closeActionSheet } from "../../../../feedback/native/FeedbackActionSheet.tsx";
+import { getInAppReportsFeedbackOptions } from "../../../getInAppReportsFeedbackOptions.tsx";
 
 const require = arg1;
 let result = require("FeedbackRating").fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");

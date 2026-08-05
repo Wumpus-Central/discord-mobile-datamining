@@ -1,11 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getChannelA11yLabel } from "../../../../channel/getChannelA11yLabel.tsx";
-import { FacepileGroupDMAvatar } from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import { GuildIconSizes } from "../../../../guild/native/GuildIcon.tsx";
-import { getRelativeTimestamp } from "../../../../notification_center/NotificationCenterUtils.tsx";
-import { renderChannelWrapper } from "ChannelWrapper.tsx";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx
 import "computeChannelName";
 import { View } from "FacepileGroupDMAvatar";
@@ -15,6 +7,14 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getChannelA11yLabel } from "../../../../channel/getChannelA11yLabel.tsx";
+import { FacepileGroupDMAvatar } from "../../../../group_dm/native/GroupDMAvatar.tsx";
+import { GuildIconSizes } from "../../../../guild/native/GuildIcon.tsx";
+import { getRelativeTimestamp } from "../../../../notification_center/NotificationCenterUtils.tsx";
+import { renderChannelWrapper } from "ChannelWrapper.tsx";
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 
 let c10;
 let c9;

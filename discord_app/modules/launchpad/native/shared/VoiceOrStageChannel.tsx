@@ -1,10 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { sortKey } from "../../../stage_channels/StageChannelParticipants.tsx";
-import { useStageParticipants } from "../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
-import { useIsConnectedToVoiceChannel } from "../../../voice_chat/VoiceChatHooks.tsx";
-import { LaunchpadChannelIcon } from "renderChannelItem.tsx";
-import { useChannelUnreadBadgeState } from "useChannelUnreadBadgeState.tsx";
 // discord_app/modules/launchpad/native/shared/VoiceOrStageChannel.tsx
 import _getSystemLocale from "_getSystemLocale";
 import importAllResult from "transitionTo";
@@ -19,6 +12,13 @@ import { getThemedRippleConfig } from "semanticColor";
 import { StaticChannelRoute } from "set";
 import jsxProd from "hideLaunchPad";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { sortKey } from "../../../stage_channels/StageChannelParticipants.tsx";
+import { useStageParticipants } from "../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
+import { useIsConnectedToVoiceChannel } from "../../../voice_chat/VoiceChatHooks.tsx";
+import { LaunchpadChannelIcon } from "renderChannelItem.tsx";
+import { useChannelUnreadBadgeState } from "useChannelUnreadBadgeState.tsx";
 
 let closure_14;
 let closure_15;

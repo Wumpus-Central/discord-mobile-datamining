@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
-import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx
 import { Image } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";
 import { InviteTypes } from "InviteSendStates";
+import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
+import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
 
 const result = require("InviteSendStates").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
 

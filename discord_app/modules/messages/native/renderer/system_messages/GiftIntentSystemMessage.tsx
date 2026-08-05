@@ -1,8 +1,8 @@
+// discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/07868_registerAsset.js";
 import { createGiftIntentEmbed } from "../row_data/embeds/GiftIntentEmbed.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
-import createCacheKey from "createCacheKey";
 
 let closure_3 = createCacheKey.createNativeStyleProperties({ iconTintColor: require("Themes").colors.BACKGROUND_BRAND, iconDividerColor: require("Themes").colors.ICON_STRONG });
 let obj = { iconTintColor: require("Themes").colors.BACKGROUND_BRAND, iconDividerColor: require("Themes").colors.ICON_STRONG };

@@ -1,5 +1,5 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 // discord_app/intl/locale-data/formatjs.tsx
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 const result = require("prop").fileFinishedImporting("intl/locale-data/formatjs.tsx");
 
 export const formatjsLocales = {

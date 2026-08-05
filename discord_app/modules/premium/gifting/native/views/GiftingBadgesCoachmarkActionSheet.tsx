@@ -1,8 +1,3 @@
-import { metadata } from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { messagesProxy } from "../../GiftingBadge.messages.js";
-import { GiftingBadgeIcon } from "GiftingBadgeIcon.tsx";
 // discord_app/modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx
 import initialize from "initialize";
 import get_ActivityIndicator from "metadata";
@@ -10,6 +5,11 @@ import map from "map";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { metadata } from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { messagesProxy } from "../../GiftingBadge.messages.js";
+import { GiftingBadgeIcon } from "GiftingBadgeIcon.tsx";
 
 let c4;
 let c5;

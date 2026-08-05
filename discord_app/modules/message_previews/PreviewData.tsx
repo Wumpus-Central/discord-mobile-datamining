@@ -1,8 +1,8 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/message_previews/PreviewData.tsx
 import hasFlag from "hasFlag";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 const require = arg1;
 let result = require("createMinimalMessageRecord").fileFinishedImporting("modules/message_previews/PreviewData.tsx");

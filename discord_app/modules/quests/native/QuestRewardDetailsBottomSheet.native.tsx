@@ -1,10 +1,10 @@
-import { useQuests } from "../hooks/QuestHooks.tsx";
 // discord_app/modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx
 import noop from "noop";
 import { View } from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useQuests } from "../hooks/QuestHooks.tsx";
 
 let closure_6;
 let error;

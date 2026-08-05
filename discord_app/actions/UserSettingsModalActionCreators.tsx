@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/UserSettingsModalActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("actions/UserSettingsModalActionCreators.tsx");
 
 export default {

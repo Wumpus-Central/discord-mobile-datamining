@@ -1,8 +1,8 @@
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/relationships/RelationshipManager.tsx
 import { RelationshipTypes } from "ME";
 import "initialize";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 function handleRelationshipAdd(relationship) {
   relationship = relationship.relationship;

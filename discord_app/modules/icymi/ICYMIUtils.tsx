@@ -1,11 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { ContentInventoryAuthorType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx";
-import { ContentInventoryEntryType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { isMediaAttachment } from "../forums/ForumPostMediaUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-import { apexExperiment } from "ICYMIExperiment.tsx";
-import { MessageEmbedTypes } from "ICYMITypes.tsx";
 // discord_app/modules/icymi/ICYMIUtils.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import scheduledEventSort from "scheduledEventSort";
@@ -17,6 +9,14 @@ import generateOldThreadCutoff from "generateOldThreadCutoff";
 import filterStaffGuild from "filterStaffGuild";
 import initialize from "initialize";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { ContentInventoryAuthorType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx";
+import { ContentInventoryEntryType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { isMediaAttachment } from "../forums/ForumPostMediaUtils.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
+import { apexExperiment } from "ICYMIExperiment.tsx";
+import { MessageEmbedTypes } from "ICYMITypes.tsx";
 
 let closure_12;
 let map1;

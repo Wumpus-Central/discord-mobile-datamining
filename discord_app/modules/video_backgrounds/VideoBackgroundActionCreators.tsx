@@ -1,9 +1,9 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/video_backgrounds/VideoBackgroundActionCreators.tsx
 import dispatcher from "dispatcher";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function _fetchVideoFilterAssets() {

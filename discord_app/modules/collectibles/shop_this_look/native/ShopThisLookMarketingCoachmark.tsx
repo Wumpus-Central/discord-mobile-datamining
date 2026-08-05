@@ -1,10 +1,10 @@
-import { BumpingFistsSpotIllustration } from "../../../../design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx";
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { BumpingFistsSpotIllustration } from "../../../../design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx";
 
 const require = arg1;
 function ShopThisLookMarketingCoachmarkImage() {

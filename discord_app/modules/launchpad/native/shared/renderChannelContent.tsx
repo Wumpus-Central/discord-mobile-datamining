@@ -1,8 +1,3 @@
-import { LockIcon } from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { ChannelTitle } from "ChannelTitle.tsx";
-import { getLayoutStyle } from "getLayoutStyles.tsx";
 // discord_app/modules/launchpad/native/shared/renderChannelContent.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -13,6 +8,11 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "hairlineWidth";
+import { LockIcon } from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { ChannelTitle } from "ChannelTitle.tsx";
+import { getLayoutStyle } from "getLayoutStyles.tsx";
 
 let error;
 let metroImportAll;

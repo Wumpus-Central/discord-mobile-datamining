@@ -1,10 +1,10 @@
-import { _extends } from "../../../_runtime/metro/04113__extends.js";
-import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 // discord_app/modules/auth/RedirectUnauthenticated.tsx
 import "noop";
 import { Routes } from "ME";
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
 import { jsx } from "jsxProd";
+import { _extends } from "../../../_runtime/metro/04113__extends.js";
+import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 
 const require = arg1;
 const result = require("CONFERENCE_MODE_ENABLED").fileFinishedImporting("modules/auth/RedirectUnauthenticated.tsx");

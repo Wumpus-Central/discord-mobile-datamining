@@ -1,6 +1,6 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/WebhooksStore.tsx
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 function handleWebhookCreateUpdate(arg0) {
   let guildId;

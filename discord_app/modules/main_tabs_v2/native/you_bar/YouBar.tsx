@@ -1,7 +1,3 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { ConnectionBannerIcon } from "../ConnectionBanner.tsx";
-import { YouBarFloatingShade } from "YouBarFloatingShade.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBar.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import getSystemLocale from "getSystemLocale";
@@ -16,6 +12,10 @@ import { ME } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "module_4146";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ConnectionBannerIcon } from "../ConnectionBanner.tsx";
+import { YouBarFloatingShade } from "YouBarFloatingShade.tsx";
 
 let closure_12;
 let closure_14;

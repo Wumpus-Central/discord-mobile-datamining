@@ -1,3 +1,12 @@
+// discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx
+import "getSystemLocale";
+import { View } from "useCheckboxA11yNative";
+import handleThemeChange from "handleThemeChange";
+import importDefaultResult from "THEME_ITEM_WIDTH";
+import { ThemeTypes } from "sum";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/14410_registerAsset.js";
 import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
@@ -9,15 +18,6 @@ import { PressableBase } from "../../../../../design/void/Pressables/native/Pres
 import { ClientThemeType } from "../../../../client_themes/ClientThemesTypes.tsx";
 import { SynchronizeIcon } from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import { getMixedGradientColor } from "../../../../client_themes/native/ThemedGradient.tsx";
-// discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx
-import "getSystemLocale";
-import { View } from "useCheckboxA11yNative";
-import handleThemeChange from "handleThemeChange";
-import importDefaultResult from "THEME_ITEM_WIDTH";
-import { ThemeTypes } from "sum";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

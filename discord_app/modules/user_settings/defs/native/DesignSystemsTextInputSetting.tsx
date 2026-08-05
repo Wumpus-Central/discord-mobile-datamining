@@ -1,6 +1,6 @@
-import { Sample } from "../../design_system/native/UserSettingsDesignSystemTextInput.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTextInputSetting.tsx
 import createToggle from "createToggle";
+import { Sample } from "../../design_system/native/UserSettingsDesignSystemTextInput.tsx";
 
 obj = {
   useTitle() {

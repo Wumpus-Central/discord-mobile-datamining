@@ -1,9 +1,9 @@
-import { Button } from "../../design/void/native.tsx";
 // discord_app/components_native/common/Carousel.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../design/void/native.tsx";
 
 let c3;
 let c4;

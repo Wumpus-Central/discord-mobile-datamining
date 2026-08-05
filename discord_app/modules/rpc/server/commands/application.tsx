@@ -1,12 +1,12 @@
+// discord_app/modules/rpc/server/commands/application.tsx
+import addApplication from "addApplication";
+import ME from "ME";
 import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { isTestModeForApplication } from "../../../game_store/TestModeUtils.tsx";
 import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 import { getCurrentEmbeddedActivityChannel } from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
 import { prototype } from "../../RPCError.tsx";
 import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
-// discord_app/modules/rpc/server/commands/application.tsx
-import addApplication from "addApplication";
-import ME from "ME";
 
 let RPCCommands;
 let c4;

@@ -1,3 +1,9 @@
+// discord_app/modules/expression_picker/native/ExpressionPickerActionSheet.tsx
+import noop from "noop";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO";
+import { STICKER_FORMATS } from "PADDING_HORIZONTAL";
+import jsxProd from "jsxProd";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
@@ -5,12 +11,6 @@ import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
-// discord_app/modules/expression_picker/native/ExpressionPickerActionSheet.tsx
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { STICKER_FORMATS } from "PADDING_HORIZONTAL";
-import jsxProd from "jsxProd";
 
 let c9;
 let error;

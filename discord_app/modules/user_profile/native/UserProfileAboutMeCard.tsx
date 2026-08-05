@@ -1,13 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
-import { LinkButton } from "../../profile_customization/native/BioText.tsx";
-import { useFriendsSinceDate } from "../hooks/useFriendsSinceDate.tsx";
-import { Divider } from "UserProfileCard.tsx";
 // discord_app/modules/user_profile/native/UserProfileAboutMeCard.tsx
 import GuildIconSizes from "GuildIconSizes";
 import { View } from "DISCORD_EPOCH";
@@ -19,6 +9,16 @@ import { Routes } from "ME";
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import { LinkButton } from "../../profile_customization/native/BioText.tsx";
+import { useFriendsSinceDate } from "../hooks/useFriendsSinceDate.tsx";
+import { Divider } from "UserProfileCard.tsx";
 
 let UserProfileThemeTypes;
 let closure_12;

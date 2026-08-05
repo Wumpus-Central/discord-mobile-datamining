@@ -1,8 +1,8 @@
+// discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import { PlatformTypes } from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import { map } from "../../../../../design/tokens/native/useToken.tsx";
 import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-// discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 
 let c3;
 let c4;

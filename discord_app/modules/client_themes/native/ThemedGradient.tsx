@@ -1,3 +1,9 @@
+// discord_app/modules/client_themes/native/ThemedGradient.tsx
+import ClientThemeType from "ClientThemeType";
+import { View } from "getGuildIdFromNavigationState";
+import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
@@ -6,12 +12,6 @@ import { hslToRgb } from "../../../utils/Color.tsx";
 import { set } from "../../guild_themes/GuildThemePresets.tsx";
 import { getGuildIdFromNavigationState } from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
-// discord_app/modules/client_themes/native/ThemedGradient.tsx
-import ClientThemeType from "ClientThemeType";
-import { View } from "getGuildIdFromNavigationState";
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

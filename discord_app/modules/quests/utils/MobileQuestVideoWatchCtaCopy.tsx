@@ -1,5 +1,5 @@
-import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 // discord_app/modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx
+import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
 export const formatWatchRemainingDurationShort = function formatWatchRemainingDurationShort(targetSeconds) {

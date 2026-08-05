@@ -1,10 +1,10 @@
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
-import { getIsPrivate } from "../ThreadCreationHooks.tsx";
 // discord_app/modules/threads/native/useCreateThread.tsx
 import getIsPrivate from "getIsPrivate";
 import noop from "noop";
 import { DraftType } from "handleChanged";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { getIsPrivate } from "../ThreadCreationHooks.tsx";
 
 const require = arg1;
 const result = require("handleChanged").fileFinishedImporting("modules/threads/native/useCreateThread.tsx");

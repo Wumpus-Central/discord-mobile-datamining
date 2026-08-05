@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/markup/StaticRouteRendering.tsx
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");

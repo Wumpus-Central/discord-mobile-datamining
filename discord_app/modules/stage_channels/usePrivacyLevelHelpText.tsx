@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/stage_channels/usePrivacyLevelHelpText.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { HelpdeskArticles } from "ME";
 import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { Permissions } from "sum";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
 
 const require = arg1;
 const result = require("GUILD_EVENT_MAX_NAME_LENGTH").fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");

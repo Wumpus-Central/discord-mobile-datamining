@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { TableCheckboxRow } from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsChannelPost.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { TableCheckboxRow } from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");

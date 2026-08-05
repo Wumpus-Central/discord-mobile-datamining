@@ -1,6 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getCurrentUserSigningKey } from "../../../rtc/SecureFramesUtils.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx
 import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds";
 import { View } from "map";
@@ -8,6 +5,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserSettingsSections } from "ME";
 import jsxProd from "noop";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getCurrentUserSigningKey } from "../../../rtc/SecureFramesUtils.tsx";
 
 let error;
 let metroImportAll;

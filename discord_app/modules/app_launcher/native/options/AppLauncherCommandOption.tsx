@@ -1,3 +1,9 @@
+// discord_app/modules/app_launcher/native/options/AppLauncherCommandOption.tsx
+import "CircleXIcon";
+import { View } from "AppLauncherChannelOption";
+import { AppLauncherOptionAutoFocusType as closure_4 } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { AttachmentPreviewAppLauncher } from "attachment/AppLauncherAttachmentOption.tsx";
 import { AppLauncherBooleanOption } from "boolean/AppLauncherBooleanOption.tsx";
 import { AppLauncherChannelOption } from "channel/AppLauncherChannelOption.tsx";
@@ -5,12 +11,6 @@ import { AppLauncherChoicesOption } from "choices/AppLauncherChoicesOption.tsx";
 import { MentionableIcon } from "mentionable/AppLauncherMentionableOption.tsx";
 import { AppLauncherRoleOption } from "role/AppLauncherRoleOption.tsx";
 import { AppLauncherUserOption } from "user/AppLauncherUserOption.tsx";
-// discord_app/modules/app_launcher/native/options/AppLauncherCommandOption.tsx
-import "CircleXIcon";
-import { View } from "AppLauncherChannelOption";
-import { AppLauncherOptionAutoFocusType as closure_4 } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

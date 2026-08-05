@@ -1,12 +1,12 @@
-import { areArraysShallowlyEqual } from "../../utils/FunctionUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { ImpersonateType } from "ImpersonateTypes.tsx";
 // discord_app/modules/impersonate/ImpersonateStore.tsx
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildSettingsSections } from "ME";
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES";
 import { Store } from "initialize";
+import { areArraysShallowlyEqual } from "../../utils/FunctionUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { ImpersonateType } from "ImpersonateTypes.tsx";
 
 const require = arg1;
 let closure_8 = {};

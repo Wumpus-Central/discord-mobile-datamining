@@ -1,8 +1,8 @@
+// discord_app/modules/rpc/server/commands/voiceChannelChat.tsx
+import ME from "ME";
 import { toggleVoiceChannelChat } from "../../../calls/toggleVoiceChannelChat.tsx";
 import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 import { prototype } from "../../RPCError.tsx";
-// discord_app/modules/rpc/server/commands/voiceChannelChat.tsx
-import ME from "ME";
 
 const RPCErrors = ME.RPCErrors;
 let obj = {

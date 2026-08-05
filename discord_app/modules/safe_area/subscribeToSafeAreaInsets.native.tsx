@@ -1,5 +1,5 @@
-import { context } from "../window/native/AppEntryKeyContext.tsx";
 // discord_app/modules/safe_area/subscribeToSafeAreaInsets.native.tsx
+import { context } from "../window/native/AppEntryKeyContext.tsx";
 const result = require("set").fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
 
 export default function subscribeToSafeAreaInsets(arg0) {

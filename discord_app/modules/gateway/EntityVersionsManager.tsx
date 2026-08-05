@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getAll } from "../app_database/modules/GuildsRequiringDeletedIdsSync.tsx";
 // discord_app/modules/gateway/EntityVersionsManager.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
@@ -9,6 +6,9 @@ import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getAll } from "../app_database/modules/GuildsRequiringDeletedIdsSync.tsx";
 
 function handleDeletedEntityIds(guild_id) {
   const importDefault = guild_id;

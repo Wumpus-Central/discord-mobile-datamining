@@ -1,6 +1,6 @@
-import { getApplicationFlags } from "utils/ApplicationFlagUtils.tsx";
 // discord_app/modules/applications/isSocialLayerApplication.tsx
 import { ApplicationFlags } from "ME";
+import { getApplicationFlags } from "utils/ApplicationFlagUtils.tsx";
 
 const result = require("items").fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
 

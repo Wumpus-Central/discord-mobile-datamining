@@ -1,6 +1,3 @@
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { guildHasTag } from "../../guild_tag/GuildTagUtils.tsx";
-import { memoResult1 } from "../../guild_tag/native/GuildTag.tsx";
 // discord_app/modules/user_profile/native/UserProfilePrimaryInfo.tsx
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "getRootNavigationRef";
@@ -10,6 +7,9 @@ import ME from "ME";
 import { GuildTagBadgeSize } from "items";
 import jsxProd from "BadgeId";
 import createCacheKey from "createCacheKey";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { guildHasTag } from "../../guild_tag/GuildTagUtils.tsx";
+import { memoResult1 } from "../../guild_tag/native/GuildTag.tsx";
 
 let UserProfileThemeTypes;
 let c4;

@@ -1,3 +1,9 @@
+// discord_app/modules/main_tabs_v2/native/friends/FriendsNavigator.tsx
+import FriendRequestsSettingsScreen from "FriendRequestsSettingsScreen";
+import { View } from "UsernameSearchScreen";
+import jsxProd from "SpamRequestsScreen";
+import createNativeStackNavigator from "createNativeStackNavigator";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/11867_registerAsset.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
@@ -6,12 +12,6 @@ import { getGuildThemeName } from "../../../client_themes/native/useColorThemeBa
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import { GenericHeaderTitle } from "../shared_components/HeaderShared.tsx";
 import { PressableNavigatorButtonWrapper } from "../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-// discord_app/modules/main_tabs_v2/native/friends/FriendsNavigator.tsx
-import FriendRequestsSettingsScreen from "FriendRequestsSettingsScreen";
-import { View } from "UsernameSearchScreen";
-import jsxProd from "SpamRequestsScreen";
-import createNativeStackNavigator from "createNativeStackNavigator";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

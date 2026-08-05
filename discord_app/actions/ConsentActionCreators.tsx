@@ -1,8 +1,8 @@
+// discord_app/actions/ConsentActionCreators.tsx
+import { Endpoints } from "ME";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
-// discord_app/actions/ConsentActionCreators.tsx
-import { Endpoints } from "ME";
 
 function handleRequestSuccess(body) {
   if (tmp) {

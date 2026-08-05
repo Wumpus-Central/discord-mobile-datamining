@@ -1,7 +1,7 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/quests/native/AppStoreOverlayTelemetryManager.tsx
 import { AnalyticEvents } from "ME";
 import "initialize";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 let c3 = null;
 let c4 = null;

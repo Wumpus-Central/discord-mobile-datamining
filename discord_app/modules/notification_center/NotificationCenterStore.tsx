@@ -1,9 +1,9 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
 // discord_app/modules/notification_center/NotificationCenterStore.tsx
 import _slicedToArray from "_slicedToArray";
 import findOrCreateMessageRecord from "findOrCreateMessageRecord";
 import { PersistedStore } from "initialize";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
 
 const require = arg1;
 function handleLoadFinished() {

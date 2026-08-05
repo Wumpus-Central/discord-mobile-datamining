@@ -1,8 +1,8 @@
+// discord_app/modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx
 import { CircleErrorIcon } from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import { CircleInformationIcon } from "../../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { dispatcher } from "../../../../toast/native/ToastActionCreators.tsx";
-// discord_app/modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx
 const result = require("getSystemLocale").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx");
 
 export const showGuildSettingsStickerError = function showGuildSettingsStickerError() {

@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { QUEST_PROGRESS_DIAMETER_BY_SIZE } from "../QuestProgressIndicator.tsx";
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx
 import importAllResult from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { QUEST_PROGRESS_DIAMETER_BY_SIZE } from "../QuestProgressIndicator.tsx";
 
 let c4;
 let c5;

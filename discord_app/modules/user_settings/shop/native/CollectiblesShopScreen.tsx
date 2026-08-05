@@ -1,11 +1,11 @@
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { useGiftCardMobileConsumptionHalfsheet } from "../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx";
-import { useShopOrientationLock } from "../../../collectibles/native/useShopOrientationLock.tsx";
-import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
 // discord_app/modules/user_settings/shop/native/CollectiblesShopScreen.tsx
 import "noop";
 import { CollectiblesMobileShopScreen as closure_3 } from "items";
 import { jsx } from "jsxProd";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { useGiftCardMobileConsumptionHalfsheet } from "../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx";
+import { useShopOrientationLock } from "../../../collectibles/native/useShopOrientationLock.tsx";
+import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");

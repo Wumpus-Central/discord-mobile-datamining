@@ -1,7 +1,3 @@
-import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15071_toNativeHorizontalOffset.js";
-import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Text";
@@ -10,6 +6,10 @@ import upsertRelationship from "upsertRelationship";
 import ME from "ME";
 import jsxProd from "SendMessageIcon";
 import createCacheKey from "createCacheKey";
+import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15071_toNativeHorizontalOffset.js";
+import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 
 let c10;
 let c9;

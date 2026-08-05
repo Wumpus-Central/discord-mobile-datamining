@@ -1,7 +1,7 @@
-import { SubscriptionPlans } from "ProductIds.android.tsx";
 // discord_app/modules/premium/native/PremiumBundledPlansUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import GuildFeatures from "GuildFeatures";
+import { SubscriptionPlans } from "ProductIds.android.tsx";
 
 let c3;
 let c4;

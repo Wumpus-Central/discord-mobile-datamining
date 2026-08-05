@@ -1,9 +1,9 @@
-import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { useIsConnectedToVoiceChannel } from "useIsConnectedToVoiceChannel.tsx";
 // discord_app/modules/voice_panel/native/hooks/useSoundboardConfig.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { useIsConnectedToVoiceChannel } from "useIsConnectedToVoiceChannel.tsx";
 
 const require = arg1;
 let obj = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };

@@ -1,10 +1,10 @@
-import { ICON_SIZE } from "../../Icon/IconSize.tsx";
-import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Input/native/useInputAttachments.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { ICON_SIZE } from "../../Icon/IconSize.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 
 let Platform;
 let c5;

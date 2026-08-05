@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useMessagePreview } from "../../../main_tabs_v2/useMessagePreviews.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useMessagePreview } from "../../../main_tabs_v2/useMessagePreviews.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const require = arg1;
 createToggle = {

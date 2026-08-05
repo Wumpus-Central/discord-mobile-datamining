@@ -1,13 +1,13 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getApplicationCommandsIconSource } from "ApplicationCommandUtils.tsx";
 // discord_app/modules/application_commands/native/ContextMenuCommandItem.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getApplicationCommandsIconSource } from "ApplicationCommandUtils.tsx";
 
 const require = arg1;
 createCacheKey = { commandIcon: null, loadingIcon: null, loadingName: null };

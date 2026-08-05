@@ -1,10 +1,10 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterUsernameHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 
 let c4;
 let c5;

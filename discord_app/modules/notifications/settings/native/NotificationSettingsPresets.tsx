@@ -1,10 +1,10 @@
-import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
-import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsPresets.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
+import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 
 let c4;
 let c5;

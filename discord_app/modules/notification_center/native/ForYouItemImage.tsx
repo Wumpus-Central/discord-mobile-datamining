@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/notification_center/native/ForYouItemImage.tsx
 import importAllResult from "registerAsset";
 import { View } from "Button";
@@ -9,6 +8,7 @@ import PROFILE_BACKGROUND from "PROFILE_BACKGROUND";
 import { jsx } from "initialize";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let FRIEND_BACKGROUND;
 let MESSAGE_BACKGROUND;

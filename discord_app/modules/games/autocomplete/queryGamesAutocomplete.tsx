@@ -1,8 +1,8 @@
-import { GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH } from "GameAutocompleteUtils.tsx";
-import { fetchStore } from "useGameAutocomplete.tsx";
 // discord_app/modules/games/autocomplete/queryGamesAutocomplete.tsx
 import set from "set";
 import importDefaultResult from "debounce";
+import { GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH } from "GameAutocompleteUtils.tsx";
+import { fetchStore } from "useGameAutocomplete.tsx";
 
 const require = arg1;
 const obj = { leading: true, maxWait: null };

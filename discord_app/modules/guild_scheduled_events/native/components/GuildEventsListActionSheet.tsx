@@ -1,4 +1,3 @@
-import { useCanCreateAnEvent } from "../../useCanCreateAnEvent.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventsListActionSheet.tsx
 import Background from "Background";
 import { View } from "expandEventProperties";
@@ -8,6 +7,7 @@ import { AnalyticEvents } from "ME";
 import { ReadStateTypes } from "ReadStateTypes";
 import { jsx } from "useRefValue";
 import createCacheKey from "createCacheKey";
+import { useCanCreateAnEvent } from "../../useCanCreateAnEvent.tsx";
 
 const require = arg1;
 function GuildEventsListHeader(arg0) {

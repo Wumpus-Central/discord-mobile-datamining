@@ -1,9 +1,9 @@
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
-import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
 // discord_app/modules/quarantine/openQuarantineModeInfoModal.native.tsx
 import "noop";
 import { Keyboard } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/quarantine/openQuarantineModeInfoModal.native.tsx");

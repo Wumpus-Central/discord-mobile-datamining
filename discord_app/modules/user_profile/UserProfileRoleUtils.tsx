@@ -1,5 +1,5 @@
-import { compareGuildRoles } from "../../utils/GuildRoleUtils.tsx";
 // discord_app/modules/user_profile/UserProfileRoleUtils.tsx
+import { compareGuildRoles } from "../../utils/GuildRoleUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 
 export const sortRolesByVerification = function sortRolesByVerification(tags, tags2) {

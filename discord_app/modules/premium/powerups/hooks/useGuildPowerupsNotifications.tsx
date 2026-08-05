@@ -1,3 +1,13 @@
+// discord_app/modules/premium/powerups/hooks/useGuildPowerupsNotifications.tsx
+import guildPowerupsAckNotification from "guildPowerupsAckNotification";
+import addVersionedDismissedContent from "addVersionedDismissedContent";
+import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import getState from "getState";
+import calculateAppliedBoosts from "calculateAppliedBoosts";
+import BoostedGuildTiers from "BoostedGuildTiers";
+import ME from "ME";
+import { ContentDismissActionType } from "ContentDismissActionType";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
@@ -15,16 +25,6 @@ import { useFeaturedExpiringPowerup } from "useFeaturedExpiringPowerup.tsx";
 import { useGuildPowerupNewPerkMarketingVersion } from "useGuildPowerupNewPerkMarketingVersion.tsx";
 import { useGuildPowerupRollbackNotificationConfig } from "useGuildPowerupRollbackNotificationConfig.tsx";
 import { useGuildAppliedBoostCount } from "useGuildPowerupsBoostCount.tsx";
-// discord_app/modules/premium/powerups/hooks/useGuildPowerupsNotifications.tsx
-import guildPowerupsAckNotification from "guildPowerupsAckNotification";
-import addVersionedDismissedContent from "addVersionedDismissedContent";
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getState from "getState";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import BoostedGuildTiers from "BoostedGuildTiers";
-import ME from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
 
 let c10;
 let c9;

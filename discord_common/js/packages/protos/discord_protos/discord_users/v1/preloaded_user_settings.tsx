@@ -1,7 +1,3 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { now } from "../../../google/protobuf/timestamp.tsx";
-import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
-import { create } from "user_settings_shared.tsx";
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -58,6 +54,10 @@ import { MessageType as MessageType51 } from "module_1307";
 import { MessageType as MessageType52 } from "module_1307";
 import { MessageType as MessageType53 } from "module_1307";
 import { MessageType as MessageType54 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { now } from "../../../google/protobuf/timestamp.tsx";
+import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
+import { create } from "user_settings_shared.tsx";
 
 const require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", MENTIONS: 1, [1]: "MENTIONS", UNREADS: 2, [2]: "UNREADS", TODOS: 3, [3]: "TODOS", FOR_YOU: 4, [4]: "FOR_YOU", GAME_INVITES: 5, [5]: "GAME_INVITES", BOOKMARKS: 6, [6]: "BOOKMARKS", SCHEDULED: 7, [7]: "SCHEDULED", REMINDERS: 8, [8]: "REMINDERS" };

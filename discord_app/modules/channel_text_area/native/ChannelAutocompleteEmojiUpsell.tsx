@@ -1,11 +1,11 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

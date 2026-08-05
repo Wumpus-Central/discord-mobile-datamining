@@ -1,6 +1,6 @@
-import { useActivityShelfItems } from "useActivityShelfItems.tsx";
 // discord_app/modules/activities/useActivityShelfItemData.tsx
 import noop from "noop";
+import { useActivityShelfItems } from "useActivityShelfItems.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
 

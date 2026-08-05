@@ -1,7 +1,7 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 // discord_app/components_native/add_friend/AddFriendModalActionCreators.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 
 const require = arg1;
 const result = require("AddFriendModalScene").fileFinishedImporting("components_native/add_friend/AddFriendModalActionCreators.tsx");

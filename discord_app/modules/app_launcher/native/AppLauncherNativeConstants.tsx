@@ -1,5 +1,5 @@
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherNativeConstants.tsx
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
 export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = require("registerAsset");

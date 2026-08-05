@@ -1,5 +1,5 @@
-import { __DiscordCreateDateFormatter } from "../modules/system_date_format/SystemDateFormatter.native.tsx";
 // discord_app/lib/makeDateFormatter.tsx
+import { __DiscordCreateDateFormatter } from "../modules/system_date_format/SystemDateFormatter.native.tsx";
 function defaultMeridiem(arg0, arg1, arg2) {
   if (arg0 < 12) {
     let str2 = "AM";

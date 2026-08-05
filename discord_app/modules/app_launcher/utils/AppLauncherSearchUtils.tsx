@@ -1,6 +1,3 @@
-import { PermissionOverwriteType } from "../../../flow/Server.tsx";
-import { computePermissions } from "../../application_commands/CommandPermissionContext.tsx";
-import { getShelfBadgeTypeIfActive } from "AppLauncherUtils.tsx";
 // discord_app/modules/app_launcher/utils/AppLauncherSearchUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import _getEmbedApplication from "_getEmbedApplication";
@@ -11,6 +8,9 @@ import getSearchResults from "getSearchResults";
 import { FetchState } from "getSearchResults";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
 import { COMMAND_SENTINEL } from "regExp";
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { computePermissions } from "../../application_commands/CommandPermissionContext.tsx";
+import { getShelfBadgeTypeIfActive } from "AppLauncherUtils.tsx";
 
 let c10;
 let c9;

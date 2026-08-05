@@ -1,12 +1,12 @@
+// discord_app/modules/reactions/ReactionUtils.tsx
+import fetchFingerprint from "fetchFingerprint";
+import ME from "ME";
+import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 import { ReactionTypes } from "../messages/MessageReactionsTypes.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-// discord_app/modules/reactions/ReactionUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
-import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags";
 
 let c4;
 let c5;

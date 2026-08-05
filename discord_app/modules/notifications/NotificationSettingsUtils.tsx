@@ -1,7 +1,7 @@
-import { knownExperimentConfigs } from "NotificationSettingsExperiments.tsx";
 // discord_app/modules/notifications/NotificationSettingsUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import items2 from "items2";
+import { knownExperimentConfigs } from "NotificationSettingsExperiments.tsx";
 
 let c3;
 let c4;

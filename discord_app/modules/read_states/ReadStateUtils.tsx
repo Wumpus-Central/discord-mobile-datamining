@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/read_states/ReadStateUtils.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UnreadSetting } from "ReadStateTypes";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ReadStateTypes").fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");

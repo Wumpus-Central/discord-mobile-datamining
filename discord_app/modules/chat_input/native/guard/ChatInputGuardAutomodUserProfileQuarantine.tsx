@@ -1,10 +1,10 @@
-import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx
 import importAllResult from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import { jsx } from "jsxProd";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

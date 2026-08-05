@@ -1,11 +1,11 @@
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/changelog/ChangelogStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY";
 import { Store } from "initialize";
 import set from "CHANGELOG_MODAL_KEY";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let c4;
 let c5;

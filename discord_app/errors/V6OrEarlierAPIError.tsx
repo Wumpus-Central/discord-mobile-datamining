@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/errors/V6OrEarlierAPIError.tsx
 import { Links } from "ME";
 import { V6OrEarlierAPIError } from "sendRequest";
+import { getSystemLocale } from "../intl/index.native.tsx";
 
 const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   if (null != arg1) {

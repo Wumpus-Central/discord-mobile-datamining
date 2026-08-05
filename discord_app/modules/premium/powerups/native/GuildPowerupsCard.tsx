@@ -1,4 +1,3 @@
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsCard.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +6,7 @@ import createCacheKey from "createCacheKey";
 import importDefaultResult from "n";
 import importDefaultResult1 from "n";
 import importDefaultResult2 from "n";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
 
 const require = arg1;
 createCacheKey = { cardActive: null, cardExpiring: null, cardRemoving: null };

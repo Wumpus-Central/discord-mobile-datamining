@@ -1,6 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { useMediaItemSpoilerState } from "../useMediaItemSpoilerState.tsx";
 // discord_app/modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -10,6 +7,9 @@ import set from "set";
 import { unsafe_rawColors } from "Themes";
 import importAllResult from "noop";
 import set from "get ActivityIndicator";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { useMediaItemSpoilerState } from "../useMediaItemSpoilerState.tsx";
 
 let c4;
 let c5;

@@ -1,7 +1,7 @@
+// discord_app/modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx
 import { nameFromUser } from "../../../../utils/UserUtils.tsx";
 import { usePremiumGroupMembers } from "usePremiumGroupMembers.tsx";
 import { usePremiumGroupMembership } from "usePremiumGroupMembership.tsx";
-// discord_app/modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx
 const result = require("nameFromUser").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
 export default function usePremiumGroupPrimaryName() {

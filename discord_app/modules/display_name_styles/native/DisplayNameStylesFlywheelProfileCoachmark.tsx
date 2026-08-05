@@ -1,5 +1,3 @@
-import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
 
 let error;
 let metroImportAll;

@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useDisplayNameStyles } from "../../display_name_styles/hooks/useDisplayNameStyles.tsx";
-import { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP } from "../../display_name_styles/native/useDisplayNameStylesFont.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceUserNameItem.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useDisplayNameStyles } from "../../display_name_styles/hooks/useDisplayNameStyles.tsx";
+import { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP } from "../../display_name_styles/native/useDisplayNameStylesFont.tsx";
 
 let closure_6;
 let error;

@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/AndroidFontScaleSetting.tsx
 import noop from "noop";
 import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE";
 import { FontScales } from "MAX_FAVORITES";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let require = arg1;
 createToggle = {

@@ -1,5 +1,3 @@
-import { t } from "../../../../../../_runtime/03867_t.js";
-import { useCountdown } from "../../../../../hooks/useCountdown.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouExpiringTrialOfferCard.tsx
 import Text from "Text";
 import { View } from "useShouldShowExpiringTrialOfferCard";
@@ -9,6 +7,8 @@ import { Gradients } from "items";
 import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
+import { t } from "../../../../../../_runtime/03867_t.js";
+import { useCountdown } from "../../../../../hooks/useCountdown.tsx";
 
 let c9;
 let closure_12;

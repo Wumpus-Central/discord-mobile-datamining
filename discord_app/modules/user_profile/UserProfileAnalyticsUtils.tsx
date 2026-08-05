@@ -1,8 +1,3 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { isUserProfilePerformanceAnalyticsEnabled } from "experiments/UserProfilePerformanceAnalyticsExperiment.tsx";
-import { useDisplayProfile } from "hooks/useDisplayProfile.tsx";
 // discord_app/modules/user_profile/UserProfileAnalyticsUtils.tsx
 import map from "map";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
@@ -17,6 +12,11 @@ import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { TrackUserProfileProperties as closure_13 } from "USER_PROFILE_TOOLTIP_DELAY";
 import ME from "ME";
 import { StatusTypes } from "sum";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { isUserProfilePerformanceAnalyticsEnabled } from "experiments/UserProfilePerformanceAnalyticsExperiment.tsx";
+import { useDisplayProfile } from "hooks/useDisplayProfile.tsx";
 
 let closure_14;
 let closure_15;

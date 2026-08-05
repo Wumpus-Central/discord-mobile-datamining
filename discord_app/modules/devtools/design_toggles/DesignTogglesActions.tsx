@@ -1,6 +1,6 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/devtools/design_toggles/DesignTogglesActions.tsx
 import getUserAgnosticState from "getUserAgnosticState";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");
 

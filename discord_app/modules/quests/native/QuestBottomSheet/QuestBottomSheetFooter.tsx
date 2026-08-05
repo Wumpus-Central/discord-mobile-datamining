@@ -1,10 +1,3 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { RefreshIcon } from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useTrackQuestEventWithImpression } from "../../lib/analytics/AnalyticsHooks.tsx";
-import { useAdContentImpressionTrackerProps } from "../../lib/analytics/ContentImpressionTrackerHooks.tsx";
-import { formatWatchRemainingDurationShort } from "../../utils/MobileQuestVideoWatchCtaCopy.tsx";
-import { useWatchTaskPressHandler } from "QuestBottomSheetHooks.tsx";
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetFooter.tsx
 import apexExperiment from "apexExperiment";
 import useWatchTaskPressHandler from "useWatchTaskPressHandler";
@@ -15,6 +8,13 @@ import initializeState from "initializeState";
 import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_9 } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import jsxProd from "formatWatchRemainingDurationShort";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { RefreshIcon } from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useTrackQuestEventWithImpression } from "../../lib/analytics/AnalyticsHooks.tsx";
+import { useAdContentImpressionTrackerProps } from "../../lib/analytics/ContentImpressionTrackerHooks.tsx";
+import { formatWatchRemainingDurationShort } from "../../utils/MobileQuestVideoWatchCtaCopy.tsx";
+import { useWatchTaskPressHandler } from "QuestBottomSheetHooks.tsx";
 
 let c10;
 let unpackModuleId;

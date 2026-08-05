@@ -1,4 +1,3 @@
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -7,6 +6,7 @@ import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
 let c9;
 let metroImportAll;

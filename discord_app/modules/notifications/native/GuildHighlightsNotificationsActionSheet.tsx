@@ -1,5 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import combined from "combined";
@@ -11,6 +9,8 @@ import { FeedbackRating } from "FeedbackRating";
 import jsxProd from "PressableCard";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c9;
 let closure_12;

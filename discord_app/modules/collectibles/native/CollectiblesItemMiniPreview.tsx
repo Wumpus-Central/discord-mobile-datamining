@@ -1,11 +1,3 @@
-import { metadata } from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { NameplateInner } from "../nameplates/native/Nameplate.tsx";
-import { getNameplateData } from "../nameplates/utils.tsx";
-import { StaticEffect } from "../profile_effects/native/ProfileEffect.tsx";
-import { filterLayer } from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
 // discord_app/modules/collectibles/native/CollectiblesItemMiniPreview.tsx
 import { View } from "NameplateInner";
 import { isAvatarDecorationRecord } from "fromServer";
@@ -16,6 +8,14 @@ import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "PROFILE_FRAME_RESPONSIV
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { metadata } from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { NameplateInner } from "../nameplates/native/Nameplate.tsx";
+import { getNameplateData } from "../nameplates/utils.tsx";
+import { StaticEffect } from "../profile_effects/native/ProfileEffect.tsx";
+import { filterLayer } from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
+import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
 
 let c10;
 let c9;

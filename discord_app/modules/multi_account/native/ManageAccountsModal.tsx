@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/multi_account/native/ManageAccountsModal.tsx
 import DragIcon from "DragIcon";
 import initialize from "initialize";
@@ -15,6 +13,8 @@ import ME from "ME";
 import jsxProd from "CircleMinusIcon";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 
 let closure_12;
 let closure_14;

@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../_runtime/08965_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getRRule } from "../utils/ScheduleUtils.tsx";
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx
 import scheduledEventSort from "scheduledEventSort";
 import { GuildScheduledEventEntityTypes as closure_5 } from "GUILD_EVENT_MAX_NAME_LENGTH";
+import { registerAsset } from "../../../../_runtime/08965_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getRRule } from "../utils/ScheduleUtils.tsx";
 
 let c3;
 let c4;

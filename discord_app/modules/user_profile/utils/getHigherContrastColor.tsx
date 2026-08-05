@@ -1,6 +1,6 @@
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 // discord_app/modules/user_profile/utils/getHigherContrastColor.tsx
 import _slicedToArray from "_slicedToArray";
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getHigherContrastColor.tsx");

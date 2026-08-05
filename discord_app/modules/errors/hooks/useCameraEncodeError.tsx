@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/errors/hooks/useCameraEncodeError.tsx
 import fetchFingerprint from "fetchFingerprint";
 import isAVErrorContextOfType from "isAVErrorContextOfType";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/errors/hooks/useCameraEncodeError.tsx");

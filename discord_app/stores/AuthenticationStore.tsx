@@ -1,3 +1,10 @@
+// discord_app/stores/AuthenticationStore.tsx
+import initialize from "initialize";
+import clearAll from "clearAll";
+import ME from "ME";
+import result from "result";
+import { Store } from "initialize";
+import importDefaultResult from "dispatcher";
 import { extractId } from "../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
@@ -11,13 +18,6 @@ import { isStaff } from "../modules/user/isStaffFromRawUser.tsx";
 import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 import { getToken } from "../utils/AuthenticationUtils.tsx";
 import { SentryUtils.native } from "../utils/SentryUtils.native.tsx";
-// discord_app/stores/AuthenticationStore.tsx
-import initialize from "initialize";
-import clearAll from "clearAll";
-import ME from "ME";
-import result from "result";
-import { Store } from "initialize";
-import importDefaultResult from "dispatcher";
 
 let EXISTING_USER_AGE_GATE_MODAL_KEY;
 let LoginStates;

@@ -1,3 +1,10 @@
+// discord_app/modules/quests/lib/analytics/AnalyticsActions.tsx
+import trackHeartbeat from "trackHeartbeat";
+import initialize from "initialize";
+import refreshSourceMapCookie from "refreshSourceMapCookie";
+import initializeState from "initializeState";
+import { AnalyticEvents } from "ME";
+import set from "refreshSourceMapCookie";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { getOrRefreshAdSession } from "../../../analytics_sessions/SessionAdGenerator.tsx";
 import { trackHeartbeat } from "../../../analytics_sessions/SessionHeartbeatScheduler.tsx";
@@ -7,13 +14,6 @@ import { getQuestDeliveryDataForPlacement } from "../../utils/QuestDataUtils.tsx
 import { getApplicationIdsByTaskTypes } from "../../utils/QuestTaskUtils.tsx";
 import { isSponsoredPlayQuest } from "../../utils/QuestUtils.tsx";
 import { getQuestContentName } from "AnalyticsTypes.tsx";
-// discord_app/modules/quests/lib/analytics/AnalyticsActions.tsx
-import trackHeartbeat from "trackHeartbeat";
-import initialize from "initialize";
-import refreshSourceMapCookie from "refreshSourceMapCookie";
-import initializeState from "initializeState";
-import { AnalyticEvents } from "ME";
-import set from "refreshSourceMapCookie";
 
 const require = arg1;
 function trackQuestEvent(sourceQuestContent) {

@@ -1,6 +1,3 @@
-import { getAnalyticsDataForSKU } from "../modules/game_store/getAnalyticsDataForSKU.tsx";
-import { expandEventProperties } from "AnalyticsUtils.tsx";
-import { set } from "RegexUtils.tsx";
 // discord_app/utils/GiftCodeUtils.tsx
 import closure_3 from "GuildFeatures";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +9,9 @@ import importDefaultResult from "set";
 import ArrayResult from "ME";
 import ArrayResult1 from "set";
 import ArrayResult2 from "mergeGuildAvatar";
+import { getAnalyticsDataForSKU } from "../modules/game_store/getAnalyticsDataForSKU.tsx";
+import { expandEventProperties } from "AnalyticsUtils.tsx";
+import { set } from "RegexUtils.tsx";
 
 let c10;
 let c9;

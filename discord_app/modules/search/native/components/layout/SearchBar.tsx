@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/search/native/components/layout/SearchBar.tsx
 import importAllResult from "module_11647";
 import { View } from "getFontScale";
@@ -12,6 +11,7 @@ import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
 import { SearchTypes } from "ME";
 import { jsx } from "module_11644";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let unpackModuleId;

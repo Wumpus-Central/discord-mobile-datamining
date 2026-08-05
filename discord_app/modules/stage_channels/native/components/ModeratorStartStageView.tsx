@@ -1,9 +1,9 @@
-import { useCurrentUserStageRoles } from "../../useCurrentUserStageRoles.tsx";
 // discord_app/modules/stage_channels/native/components/ModeratorStartStageView.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
+import { useCurrentUserStageRoles } from "../../useCurrentUserStageRoles.tsx";
 
 let c5;
 let closure_6;

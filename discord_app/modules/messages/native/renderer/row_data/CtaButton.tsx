@@ -1,7 +1,7 @@
-import { useAgeVerificationRunner } from "../../../../age_assurance/AgeVerificationUtils.tsx";
-import { CtaButtonType } from "../../../CtaButtonUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/CtaButton.tsx
 import getFpMessageInfo from "getFpMessageInfo";
+import { useAgeVerificationRunner } from "../../../../age_assurance/AgeVerificationUtils.tsx";
+import { CtaButtonType } from "../../../CtaButtonUtils.tsx";
 
 const require = arg1;
 let result = require("useAgeVerificationRunner").fileFinishedImporting("modules/messages/native/renderer/row_data/CtaButton.tsx");

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
 
 const toggle = createToggle.createToggle({
   useTitle() {

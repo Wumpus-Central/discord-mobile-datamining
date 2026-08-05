@@ -1,7 +1,3 @@
-import { dispatcher } from "../../../actions/native/InAppNotificationActionCreators.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
-import { extractMetadataFromNotification } from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
 // discord_app/modules/messages/native/MessageSendFailureNotificationManager.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_4 from "handleConnectionOpen";
@@ -10,6 +6,10 @@ import getState from "getState";
 import ME from "ME";
 import { LocalNotificationTypes } from "LocalNotificationTypes";
 import "initialize";
+import { dispatcher } from "../../../actions/native/InAppNotificationActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
+import { extractMetadataFromNotification } from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
 
 let error;
 let metroImportAll;

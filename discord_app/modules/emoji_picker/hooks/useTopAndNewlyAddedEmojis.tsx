@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { EmojiIntention } from "set";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 let closure_4 = [];

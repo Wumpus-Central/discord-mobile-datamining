@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/harvester/HarvesterUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import harvestType from "harvestType";
 import { REQUEST_DATA_LIMIT_MS } from "REQUEST_DATA_LIMIT_DAYS";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");

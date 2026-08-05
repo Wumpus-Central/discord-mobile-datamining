@@ -1,5 +1,5 @@
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/HeroBlockRecord.tsx
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 let prototype;
 prototype = function HeroBlockRecord(unpublished_at) {
   let summary;

@@ -1,4 +1,3 @@
-import { computeChannelName } from "../channel/useChannelName.tsx";
 // discord_app/modules/game_console/getXboxURIForChannel.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -6,6 +5,7 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import XBOX_URL_BASE from "XBOX_URL_BASE";
 import ME from "ME";
+import { computeChannelName } from "../channel/useChannelName.tsx";
 
 let c9;
 let closure_6;

@@ -1,5 +1,5 @@
-import { items } from "../../tokens/themes/generated/generated-definitions.tsx";
 // discord_common/js/packages/design/utils/ThemeUtils.tsx
+import { items } from "../../tokens/themes/generated/generated-definitions.tsx";
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/utils/ThemeUtils.tsx");
 
 export const isThemeLight = function isThemeLight(arg0) {

@@ -1,7 +1,7 @@
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/logs.tsx
 import ME from "ME";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 let RPCCommands;
 let RPC_APPLICATION_LOGGING_CATEGORY;

@@ -1,12 +1,12 @@
+// discord_app/modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx
+import noop from "noop";
+import { jsx } from "jsxProd";
 import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { HeaderBackImage } from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import { useNavigatorBackPressHandler } from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { EnableCommunityModalActionCreators } from "../../EnableCommunityModalActionCreators.tsx";
 import { EnableCommunityModalSteps } from "EnableCommunitySharedNavigation.tsx";
-// discord_app/modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 function onModalClose() {

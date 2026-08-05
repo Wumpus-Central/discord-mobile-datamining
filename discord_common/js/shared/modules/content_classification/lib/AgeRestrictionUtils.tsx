@@ -1,5 +1,5 @@
-import { AgeRestrictionStatus } from "../../../shared-constants/AgeRestrictionStatus.tsx";
 // discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx
+import { AgeRestrictionStatus } from "../../../shared-constants/AgeRestrictionStatus.tsx";
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
 
 export const compare = function compare(arg0, arg1) {

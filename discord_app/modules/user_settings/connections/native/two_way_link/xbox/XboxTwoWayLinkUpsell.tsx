@@ -1,14 +1,14 @@
+// discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx
+import "noop";
+import ME from "ME";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../../_runtime/14117_registerAsset.js";
 import { DismissibleContent } from "../../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { preload } from "../../../../../../components_native/common/FastImage.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 import { OneWayToTwoWayNewTag } from "../OneWayToTwoWayLinkUpsell.tsx";
-// discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx
-import "noop";
-import ME from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

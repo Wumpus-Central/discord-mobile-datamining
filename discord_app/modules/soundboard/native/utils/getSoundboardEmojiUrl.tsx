@@ -1,5 +1,5 @@
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 // discord_app/modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
 
 export default function getSoundboardEmojiUrl(emojiId) {

@@ -1,7 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { _toPropertyKey } from "../../../discord_common/js/packages/transition-group/TransitionGroup.tsx";
-import { Button } from "../../design/void/native.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/common/UnreadBars.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -11,6 +7,10 @@ import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import importDefaultResult from "createTextStyle";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { _toPropertyKey } from "../../../discord_common/js/packages/transition-group/TransitionGroup.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c4;
 let c5;

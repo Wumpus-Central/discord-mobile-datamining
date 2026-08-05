@@ -1,7 +1,7 @@
-import { SearchTokenTypes } from "../../SearchUtils.tsx";
 // discord_app/modules/search/native/message_parsers/MessageSearchResultParser.tsx
 import hasFlag from "hasFlag";
 import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "MessageEmbedTypes";
+import { SearchTokenTypes } from "../../SearchUtils.tsx";
 
 let require = arg1;
 require("CachedSearchResultParser").CachedSearchResultParser;

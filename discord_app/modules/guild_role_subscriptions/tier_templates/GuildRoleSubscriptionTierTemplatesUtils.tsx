@@ -1,6 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { computeGuildRoleSubscriptionSettingsVisibility } from "../feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
-import { GuildFeatures } from "../GuildRoleSubscriptionsExperimentUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx
 import initialize from "initialize";
 import { useMemo } from "noop";
@@ -11,6 +8,9 @@ import closure_9 from "initialize";
 import { GuildFeatures } from "ME";
 import { ChannelFlags } from "set";
 import importDefaultResult from "allSettled";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { computeGuildRoleSubscriptionSettingsVisibility } from "../feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
+import { GuildFeatures } from "../GuildRoleSubscriptionsExperimentUtils.tsx";
 
 const require = arg1;
 function getUsedTemplateChannelsForGuild(arg0) {

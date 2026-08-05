@@ -1,7 +1,3 @@
-import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { transitionTo } from "../routing/router_utils.tsx";
-import { transitionToGuild } from "../routing/transitionToGuild.native.tsx";
 // discord_app/modules/channel/SelectedChannelManager.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -9,6 +5,10 @@ import { findFirstVoiceChannelId } from "handleConnectionOpen";
 import closure_6 from "handleConnectionOpen";
 import ME from "ME";
 import "initialize";
+import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
+import { transitionToGuild } from "../routing/transitionToGuild.native.tsx";
 
 let c10;
 let c9;

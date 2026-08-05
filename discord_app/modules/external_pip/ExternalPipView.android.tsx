@@ -1,9 +1,9 @@
-import { ExternalPipViewVideoUnavailable } from "ExternalPipViewVideo.android.tsx";
 // discord_app/modules/external_pip/ExternalPipView.android.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import AppFreezeStore from "../panels/morphable/AppFreezeStore.tsx";
 import { jsx } from "jsxProd";
+import { ExternalPipViewVideoUnavailable } from "ExternalPipViewVideo.android.tsx";
 
 function FreezeAfterLayoutPipView() {
   const importDefault = React.useRef(false);

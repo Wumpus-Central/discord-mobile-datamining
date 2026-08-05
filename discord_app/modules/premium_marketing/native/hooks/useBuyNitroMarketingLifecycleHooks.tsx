@@ -1,10 +1,10 @@
-import { MarketingComponentType } from "../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
-import { usePromotionMarketingComponent } from "../../../premium/hooks/usePromotionMarketingComponent.tsx";
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx
 import noop from "noop";
 import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import createCacheKey from "createCacheKey";
+import { MarketingComponentType } from "../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
+import { usePromotionMarketingComponent } from "../../../premium/hooks/usePromotionMarketingComponent.tsx";
 
 let c4;
 let c5;

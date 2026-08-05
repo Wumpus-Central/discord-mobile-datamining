@@ -1,3 +1,7 @@
+// discord_app/modules/media_viewer/native/MediaSourceUtil.tsx
+import presentAddedFriendToast from "presentAddedFriendToast";
+import { NativeModules } from "map";
+import ME from "ME";
 import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { MediaPlayerManager } from "../../../components_native/common/NativePortalView.tsx";
@@ -14,10 +18,6 @@ import { MediaGalleryItemType } from "../../messages/native/renderer/RowGenerato
 import { transformToRowGeneratedComponent } from "../../messages/native/renderer/transformMessageComponents.tsx";
 import { getInitialParserState } from "../../messages/renderMessageMarkup.tsx";
 import { map } from "../../reanimated/native/useStateFromSharedValue.tsx";
-// discord_app/modules/media_viewer/native/MediaSourceUtil.tsx
-import presentAddedFriendToast from "presentAddedFriendToast";
-import { NativeModules } from "map";
-import ME from "ME";
 
 let c5;
 let closure_6;

@@ -1,13 +1,13 @@
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
 // discord_app/modules/user_profile/UserProfileActionCreators.tsx
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
 
 let c10;
 let c5;

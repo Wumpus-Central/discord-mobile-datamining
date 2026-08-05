@@ -1,5 +1,3 @@
-import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/auth/native/components/Login.tsx
 import fetchFingerprint from "fetchFingerprint";
 import KeyIcon from "KeyIcon";
@@ -10,6 +8,8 @@ import closure_8 from "fetchFingerprint";
 import { AuthStates } from "ME";
 import jsxProd from "useAlertStore";
 import createCacheKey from "createCacheKey";
+import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let unpackModuleId;

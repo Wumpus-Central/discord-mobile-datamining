@@ -1,9 +1,9 @@
-import { SettingLayout } from "../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
+import { SettingLayout } from "../../settings/native/renderer/SettingLayout.tsx";
 
 const require = arg1;
 const result = require("MobileSetting").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");

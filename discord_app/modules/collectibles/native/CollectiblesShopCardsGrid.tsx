@@ -1,10 +1,10 @@
-import { CollectiblesShopCardInternalV2 } from "CollectiblesShopCardV2.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopCardsGrid.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CollectiblesShopCardInternalV2 } from "CollectiblesShopCardV2.tsx";
 
 let c4;
 let c5;

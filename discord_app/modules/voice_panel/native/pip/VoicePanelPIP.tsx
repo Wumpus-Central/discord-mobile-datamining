@@ -1,8 +1,3 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
-import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
-import { map } from "../../../reanimated/native/useStateFromSharedValue.tsx";
-import { dismissPanel } from "../VoicePanelStateContext.tsx";
-import { context } from "VoicePanelPIPStateContext.tsx";
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIP.tsx
 import wrapChildrenDefault from "wrapChildrenDefault";
 import importAllResult from "triggerIOSHaptic";
@@ -16,6 +11,11 @@ import { VoicePanelPIPModes } from "VoicePanelPIPModes";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import jsxProd from "initialize";
 import createCacheKey from "createCacheKey";
+import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
+import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { map } from "../../../reanimated/native/useStateFromSharedValue.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
+import { context } from "VoicePanelPIPStateContext.tsx";
 
 let SECONDARY_PIP_TOP_MARGIN;
 let c10;

@@ -1,7 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../age_assurance/AgeAssurance.messages.js";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -9,6 +5,10 @@ import { MobileSetting } from "MobileSetting";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../age_assurance/AgeAssurance.messages.js";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 
 let error;
 let metroImportAll;

@@ -1,9 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useGameRelationshipsByType } from "../../game_relationships/GameRelationshipStoreHooks.tsx";
 // discord_app/modules/user_profile/native/UserProfileYourFriendsCard.tsx
 import _slicedToArray from "_slicedToArray";
 import ChevronSmallRightIcon from "ChevronSmallRightIcon";
@@ -14,6 +8,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { RelationshipTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useGameRelationshipsByType } from "../../game_relationships/GameRelationshipStoreHooks.tsx";
 
 let c10;
 let unpackModuleId;

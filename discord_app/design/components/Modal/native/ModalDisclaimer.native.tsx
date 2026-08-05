@@ -1,9 +1,9 @@
-import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Modal/native/ModalDisclaimer.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../Text/native/Text.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ container: { flexDirection: "column", alignItems: "center" }, disclaimer: { marginBottom: 12 } });

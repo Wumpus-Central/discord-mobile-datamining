@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/age_assurance/AgeVerificationAnalyticsUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/age_assurance/AgeVerificationAnalyticsUtils.tsx");
 

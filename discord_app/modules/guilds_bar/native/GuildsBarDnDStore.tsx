@@ -1,8 +1,8 @@
-import { isIterable } from "../../../../_runtime/03898_isIterable.js";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import identity from "identity";
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let obj = { mode: null, initialX: 0, initialY: 0, absoluteX: 0, absoluteY: 0 };
 let c5 = -1;

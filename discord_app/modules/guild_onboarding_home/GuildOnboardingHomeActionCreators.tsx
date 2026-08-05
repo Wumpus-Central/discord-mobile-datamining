@@ -1,7 +1,3 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { transitionToChannel } from "../routing/transitionToChannel.tsx";
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx
 import closure_3 from "ME";
 import initialize from "initialize";
@@ -9,6 +5,10 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 import set from "set";
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { transitionToChannel } from "../routing/transitionToChannel.tsx";
 
 let c9;
 let metroImportAll;

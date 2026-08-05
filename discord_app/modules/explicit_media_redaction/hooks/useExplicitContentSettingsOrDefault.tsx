@@ -1,8 +1,8 @@
+// discord_app/modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { resolveExplicitContentSettingWithDefaults } from "../SensitiveMediaExplicitRedactionSettingsUtils.tsx";
 import { resolveGoreSettingWithDefaults } from "../SensitiveMediaGoreRedactionSettingsUtils.tsx";
-// discord_app/modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 
 const require = arg1;
 const result = require("resolveExplicitContentSettingWithDefaults").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");

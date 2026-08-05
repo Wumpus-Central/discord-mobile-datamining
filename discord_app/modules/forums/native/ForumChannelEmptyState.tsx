@@ -1,11 +1,11 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/forums/native/ForumChannelEmptyState.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c3;
 let c4;

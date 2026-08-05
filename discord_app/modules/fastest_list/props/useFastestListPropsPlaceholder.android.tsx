@@ -1,6 +1,6 @@
-import { FastestListPropsPlaceholderType } from "FastestListPropsPlaceholder.tsx";
 // discord_app/modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx
 import noop from "noop";
+import { FastestListPropsPlaceholderType } from "FastestListPropsPlaceholder.tsx";
 
 let require = arg1;
 function createNativePlaceholderConfig(type) {

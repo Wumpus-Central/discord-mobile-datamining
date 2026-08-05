@@ -1,8 +1,8 @@
-import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
 // discord_app/modules/calls/toggleVoiceChannelChat.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import getParticipants from "getParticipants";
+import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
 
 const result = require("getParticipants").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 

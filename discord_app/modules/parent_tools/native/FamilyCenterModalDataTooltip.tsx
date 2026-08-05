@@ -1,3 +1,9 @@
+// discord_app/modules/parent_tools/native/FamilyCenterModalDataTooltip.tsx
+import getEmptyActivityFormatter from "getEmptyActivityFormatter";
+import { View } from "messagesProxy";
+import jsxProd from "ModalContent";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Modal } from "../../../design/components/Modal/native/Modal.native.tsx";
@@ -10,12 +16,6 @@ import { messagesProxy } from "../FamilyCenter.messages.js";
 import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
 import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
 import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
-// discord_app/modules/parent_tools/native/FamilyCenterModalDataTooltip.tsx
-import getEmptyActivityFormatter from "getEmptyActivityFormatter";
-import { View } from "messagesProxy";
-import jsxProd from "ModalContent";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let GIFTS;
 let GUILD_ADD;

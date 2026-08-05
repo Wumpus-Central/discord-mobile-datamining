@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/10737_registerAsset.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { useIsRemote } from "../../../game_console/hooks/useIsRemote.tsx";
-import { useIsConnectedToVoiceChannel } from "../../../voice_chat/VoiceChatHooks.tsx";
-import { useIsFiveButtonLayout } from "../useIsFiveButtonLayout.tsx";
-import { stopScreenshare } from "../useScreenshareUtils.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallActionBar.tsx
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert";
 import { View } from "items";
@@ -18,6 +11,13 @@ import initialize from "initialize";
 import { ParticipantTypes } from "ParticipantTypes";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/10737_registerAsset.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useIsRemote } from "../../../game_console/hooks/useIsRemote.tsx";
+import { useIsConnectedToVoiceChannel } from "../../../voice_chat/VoiceChatHooks.tsx";
+import { useIsFiveButtonLayout } from "../useIsFiveButtonLayout.tsx";
+import { stopScreenshare } from "../useScreenshareUtils.tsx";
 
 let closure_14;
 let closure_15;

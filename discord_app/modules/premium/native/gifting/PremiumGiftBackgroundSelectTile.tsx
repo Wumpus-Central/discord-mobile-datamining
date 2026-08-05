@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../gifting/PremiumGifting.messages.js";
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx
 import "set";
 import get_ActivityIndicator from "messagesProxy";
@@ -9,6 +5,10 @@ import { PremiumGiftStyles } from "GuildFeatures";
 import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../gifting/PremiumGifting.messages.js";
 
 let CAKE;
 let CHEST;

@@ -1,7 +1,7 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/actions/NotificationActionCreators.tsx
 import ME from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 
 let c3;
 let c4;

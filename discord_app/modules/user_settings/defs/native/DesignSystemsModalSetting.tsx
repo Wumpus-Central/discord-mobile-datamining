@@ -1,6 +1,6 @@
-import { DemoModal } from "../../design_system/native/UserSettingsDesignSystemModal.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsModalSetting.tsx
 import createToggle from "createToggle";
+import { DemoModal } from "../../design_system/native/UserSettingsDesignSystemModal.tsx";
 
 obj = {
   useTitle() {

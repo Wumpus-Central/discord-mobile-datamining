@@ -1,7 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { resolveTheme } from "../themes/resolveTheme.native.tsx";
-import { updateBackgroundColor } from "../themes/updateBackgroundColor.native.tsx";
-import { updateUserGuildSettings } from "UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/user_settings/ThemeStore.tsx
 import initialize from "initialize";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
@@ -10,6 +6,10 @@ import SystemThemeState from "SystemThemeState";
 import { UserSettingsDelay } from "MAX_FAVORITES";
 import { ThemeTypes } from "ME";
 import { PersistedStore } from "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { resolveTheme } from "../themes/resolveTheme.native.tsx";
+import { updateBackgroundColor } from "../themes/updateBackgroundColor.native.tsx";
+import { updateUserGuildSettings } from "UserSettingsProtoActionCreators.tsx";
 
 let THEME_PREFERENCES_MOBILE;
 let THEME_PREFERENCES_WEB_REFRESH;

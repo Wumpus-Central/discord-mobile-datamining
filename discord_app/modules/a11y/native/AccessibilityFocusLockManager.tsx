@@ -1,7 +1,7 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 // discord_app/modules/a11y/native/AccessibilityFocusLockManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import "initialize";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 
 let c4 = new require("SCREEN_READER_ENABLED_GETTER")("AccessibilityFocusLockManager");
 class AccessibilityFocusLockManager extends tmp3 {

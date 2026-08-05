@@ -1,9 +1,9 @@
-import { isTracing } from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/gateway/GatewaySocketAnalytics.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { isTracing } from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let error;
 let metroImportAll;

@@ -1,4 +1,3 @@
-import { watchStream } from "../../actions/StreamActionCreators.tsx";
 // discord_app/modules/go_live/ApplicationStreamingManager.tsx
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
@@ -13,6 +12,7 @@ import ME from "ME";
 import apply from "set";
 import "initialize";
 import set from "ensureGuildLoaded";
+import { watchStream } from "../../actions/StreamActionCreators.tsx";
 
 let GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT;
 let STREAM_NOTIFY_GUILD_MAX_SIZE;

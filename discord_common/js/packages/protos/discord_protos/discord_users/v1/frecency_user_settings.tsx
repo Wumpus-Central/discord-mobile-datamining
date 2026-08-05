@@ -1,5 +1,3 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { create } from "user_settings_shared.tsx";
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -16,6 +14,8 @@ import { MessageType as MessageType11 } from "module_1307";
 import { MessageType as MessageType12 } from "module_1307";
 import { MessageType as MessageType13 } from "module_1307";
 import { MessageType as MessageType14 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { create } from "user_settings_shared.tsx";
 
 const require = arg1;
 let obj = { NONE: 0, [0]: "NONE", IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO" };

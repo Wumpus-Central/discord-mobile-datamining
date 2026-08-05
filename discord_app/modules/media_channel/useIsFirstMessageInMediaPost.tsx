@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/media_channel/useIsFirstMessageInMediaPost.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");

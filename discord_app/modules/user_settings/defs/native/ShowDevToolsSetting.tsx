@@ -1,6 +1,6 @@
-import { DevToolsScreens } from "../../../devtools/native/components/DevToolsScreens.tsx";
 // discord_app/modules/user_settings/defs/native/ShowDevToolsSetting.tsx
 import createToggle from "createToggle";
+import { DevToolsScreens } from "../../../devtools/native/components/DevToolsScreens.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {

@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/09039_registerAsset.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { ButtonBadge } from "IconActionButton.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +5,9 @@ import processChannel from "processChannel";
 import closure_6 from "processChannel";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09039_registerAsset.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ButtonBadge } from "IconActionButton.tsx";
 
 let error;
 let metroImportAll;

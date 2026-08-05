@@ -1,7 +1,7 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
 // discord_app/modules/collectibles/profile_effects/utils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { apply } from "../../../../_runtime/00012_apply.js";
 
 const require = arg1;
 const result = require("apply").fileFinishedImporting("modules/collectibles/profile_effects/utils.tsx");

@@ -1,5 +1,3 @@
-import { inject } from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/go_live/native/VoiceEngineStreamingManager.tsx
 import closure_3 from "ME";
 import { Linking } from "isStreamKey";
@@ -9,6 +7,8 @@ import importDefaultResult from "handleConnectionOpen";
 import ME from "ME";
 import { getAppIntentScheme } from "items3";
 import "initialize";
+import { inject } from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 let c10;
 let c9;

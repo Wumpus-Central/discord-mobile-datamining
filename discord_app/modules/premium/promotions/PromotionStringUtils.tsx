@@ -1,11 +1,11 @@
+// discord_app/modules/premium/promotions/PromotionStringUtils.tsx
+import addSubscriptionPlan from "addSubscriptionPlan";
+import GuildFeatures from "GuildFeatures";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { combined } from "../../../utils/HelpdeskUtils.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { formatSingleCurrencyPrice } from "../../../utils/PriceUtils.tsx";
-// discord_app/modules/premium/promotions/PromotionStringUtils.tsx
-import addSubscriptionPlan from "addSubscriptionPlan";
-import GuildFeatures from "GuildFeatures";
 
 let c4;
 let c5;

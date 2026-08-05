@@ -1,6 +1,6 @@
-import { openImagePickerUnhandled } from "native/UploadUtils.tsx";
 // discord_app/utils/AttachmentFile.native.tsx
 import items from "items";
+import { openImagePickerUnhandled } from "native/UploadUtils.tsx";
 
 const require = arg1;
 function _getAttachmentFile() {

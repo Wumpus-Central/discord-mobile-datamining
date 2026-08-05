@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { canStreamInChannel } from "../go_live/utils/StreamPermissionUtils.tsx";
 // discord_app/modules/video_calls/useHasVideoPermission.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { canStreamInChannel } from "../go_live/utils/StreamPermissionUtils.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");

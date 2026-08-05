@@ -1,10 +1,10 @@
-import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 // discord_app/components_native/calls/stream/VideoEmptyState.tsx
 import "noop";
 import { View } from "CollapsingText";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 
 let c5;
 let closure_6;

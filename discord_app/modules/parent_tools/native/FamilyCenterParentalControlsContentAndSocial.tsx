@@ -1,13 +1,13 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
-import { createToggle } from "../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingLayout } from "../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
+import { createToggle } from "../../settings/native/renderer/SettingBuilders.tsx";
+import { SettingLayout } from "../../settings/native/renderer/SettingLayout.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");

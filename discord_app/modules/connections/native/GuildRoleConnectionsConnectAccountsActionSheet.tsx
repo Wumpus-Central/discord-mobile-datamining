@@ -1,14 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
-import { officialApplicationIds } from "../ConnectionsUtils.tsx";
 // discord_app/modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx
 import _getSystemLocale from "_getSystemLocale";
 import apply from "apply";
@@ -26,6 +15,17 @@ import OperatorTypes from "OperatorTypes";
 import ME from "ME";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { officialApplicationIds } from "../ConnectionsUtils.tsx";
 
 let closure_17;
 let closure_18;

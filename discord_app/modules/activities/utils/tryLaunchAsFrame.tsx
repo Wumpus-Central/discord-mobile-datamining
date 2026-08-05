@@ -1,7 +1,7 @@
-import { _launchFrameOnNative } from "../../frames/FramesActionCreators.native.tsx";
-import { canLaunchFrame } from "../../frames/utils/canLaunchFrame.tsx";
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
 import addApplication from "addApplication";
+import { _launchFrameOnNative } from "../../frames/FramesActionCreators.native.tsx";
+import { canLaunchFrame } from "../../frames/utils/canLaunchFrame.tsx";
 
 const require = arg1;
 const result = require("_launchFrameOnNative").fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");

@@ -1,10 +1,10 @@
-import { messagesProxy } from "../AgeAssurance.messages.js";
-import { useAgeVerificationMethods } from "../hooks/useAgeVerificationMethods.tsx";
 // discord_app/modules/age_assurance/native/AgeVerificationEmbeddedIntroScreen.tsx
 import set from "set";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { messagesProxy } from "../AgeAssurance.messages.js";
+import { useAgeVerificationMethods } from "../hooks/useAgeVerificationMethods.tsx";
 
 let c5;
 let closure_6;

@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/collectibles/profile_frames/hooks/useProfileFrame.tsx
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";
 import { isProfileFrameRecord } from "fromServer";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("fromServer").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");

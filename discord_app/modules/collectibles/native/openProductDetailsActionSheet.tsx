@@ -1,8 +1,8 @@
+// discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { openCollectiblesShop } from "../CollectiblesActionCreators.tsx";
 import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
-// discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
 let c3 = "Shop Product Preview";
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
 

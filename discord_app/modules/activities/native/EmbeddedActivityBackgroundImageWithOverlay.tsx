@@ -1,10 +1,10 @@
-import { useEmbeddedActivityBackground } from "../utils/useEmbeddedActivityBackground.tsx";
 // discord_app/modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useEmbeddedActivityBackground } from "../utils/useEmbeddedActivityBackground.tsx";
 
 let c4;
 let c5;

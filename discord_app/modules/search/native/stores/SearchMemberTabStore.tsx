@@ -1,9 +1,9 @@
-import { getGuildNameSuggestion } from "../../../../utils/GuildUtils.tsx";
-import { sortByMatchScore } from "../../../autocompleter/index.tsx";
 // discord_app/modules/search/native/stores/SearchMemberTabStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Permissions } from "ME";
 import { Store } from "initialize";
+import { getGuildNameSuggestion } from "../../../../utils/GuildUtils.tsx";
+import { sortByMatchScore } from "../../../autocompleter/index.tsx";
 
 const require = arg1;
 let closure_6 = [];

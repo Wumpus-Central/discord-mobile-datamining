@@ -1,15 +1,15 @@
-import { AccessibilityAnnouncer } from "../design/shared.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { handleConnectionOpen } from "../modules/user_settings/UserGuildSettingsManager.tsx";
-import { UserNotificationSettings } from "../utils/NotificationSettingsUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/actions/NotificationSettingsModalActionCreators.tsx
 import dispatcher from "dispatcher";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { Endpoints } from "ME";
 import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags";
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES";
+import { AccessibilityAnnouncer } from "../design/shared.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { handleConnectionOpen } from "../modules/user_settings/UserGuildSettingsManager.tsx";
+import { UserNotificationSettings } from "../utils/NotificationSettingsUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");

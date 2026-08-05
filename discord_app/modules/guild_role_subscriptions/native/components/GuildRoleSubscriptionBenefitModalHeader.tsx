@@ -1,8 +1,3 @@
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitModalHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -13,6 +8,11 @@ import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
 import importDefaultResult2 from "createTextStyle";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let closure_6;
 let error;

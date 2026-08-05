@@ -1,6 +1,6 @@
+// discord_app/modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx
 import { keys } from "../../../../../ConstantsIOS.tsx";
 import { openPremiumUpsellActionSheet } from "openPremiumUpsellActionSheet.tsx";
-// discord_app/modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx
 const result = require("EntitlementFeatureNames").fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
 
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {

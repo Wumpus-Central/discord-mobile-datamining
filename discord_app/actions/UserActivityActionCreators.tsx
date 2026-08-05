@@ -1,9 +1,9 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { asString } from "../modules/spotify/SpotifyUtils.tsx";
 // discord_app/actions/UserActivityActionCreators.tsx
 import sendRequest from "sendRequest";
 import sortActivity from "sortActivity";
 import { Endpoints } from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
+import { asString } from "../modules/spotify/SpotifyUtils.tsx";
 
 const require = arg1;
 function _getMetadata() {

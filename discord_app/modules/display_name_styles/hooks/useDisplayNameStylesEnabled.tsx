@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { context } from "../DisplayNameStylesContext.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx
 import { useContext } from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { context } from "../DisplayNameStylesContext.tsx";
 
 const result = require("initialize").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
 

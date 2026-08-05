@@ -1,8 +1,8 @@
+// discord_app/modules/channel_permissions/native/ChannelPermissionsUtils.tsx
+import { AnalyticEvents } from "ME";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/channel_permissions/native/ChannelPermissionsUtils.tsx
-import { AnalyticEvents } from "ME";
 
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/channel_permissions/native/ChannelPermissionsUtils.tsx");
 

@@ -1,8 +1,8 @@
-import { getURLForApplication } from "../activities/getURLForApplication.tsx";
 // discord_app/modules/frames/FramesStore.tsx
 import { FrameLayoutModes } from "FrameLayoutModes";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { Store } from "initialize";
+import { getURLForApplication } from "../activities/getURLForApplication.tsx";
 
 let c4 = null;
 const map = new Map();

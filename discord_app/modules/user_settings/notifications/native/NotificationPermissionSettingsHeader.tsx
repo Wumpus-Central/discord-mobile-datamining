@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import ME from "ME";
 import EventActionType from "EventActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c5;

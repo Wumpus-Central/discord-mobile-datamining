@@ -1,6 +1,3 @@
-import { t } from "../../../_runtime/03867_t.js";
-import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/stores/views/PrivateChannelSortStore.tsx
 import processChannel from "processChannel";
 import closure_4 from "processChannel";
@@ -11,6 +8,9 @@ import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
+import { t } from "../../../_runtime/03867_t.js";
+import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 function makeSortedChannel(channel, id) {

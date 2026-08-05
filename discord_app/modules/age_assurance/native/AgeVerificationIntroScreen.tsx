@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/age_assurance/native/AgeVerificationIntroScreen.tsx
 import SafetyHubView from "SafetyHubView";
 import "AgeVerificationModalEntryPoint";
@@ -9,6 +7,8 @@ import { HelpdeskArticles } from "ME";
 import { SafetyHubLinks } from "SafetyHubView";
 import jsxProd from "LinkExternalSmallIcon";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c4;

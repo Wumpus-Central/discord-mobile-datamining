@@ -1,6 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { QUICK_SWITCHER } from "../app_analytics/AnalyticsLocation.tsx";
 // discord_app/modules/content_inventory/ContentInventoryActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -8,6 +5,9 @@ import closure_5 from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateImpressionCaches from "updateImpressionCaches";
 import { AnalyticEvents } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { QUICK_SWITCHER } from "../app_analytics/AnalyticsLocation.tsx";
 
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 

@@ -1,9 +1,9 @@
+// discord_app/modules/guild_profile/GuildProfileBuilders.tsx
+import { EmojiDisambiguations } from "getEmojiToGroupId";
 import { MAX_TRAITS } from "../../../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 import { GuildProfileVisibility } from "GuildProfileTypes.tsx";
-// discord_app/modules/guild_profile/GuildProfileBuilders.tsx
-import { EmojiDisambiguations } from "getEmojiToGroupId";
 
 function getEmoji(guildId) {
   let emojiId;

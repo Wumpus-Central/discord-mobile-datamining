@@ -1,9 +1,9 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 // discord_app/modules/js_watchdog/native/JSWatchdogManager.android.tsx
 import enforcing from "enforcing";
 import ME from "ME";
 import "initialize";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
 let c4;
 let c5;

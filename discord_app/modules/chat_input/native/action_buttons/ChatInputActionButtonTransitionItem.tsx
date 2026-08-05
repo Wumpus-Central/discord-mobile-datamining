@@ -1,11 +1,11 @@
-import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { useChatInputFloatingBounce } from "useChatInputFloatingBounce.tsx";
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta";
 import { jsx } from "jsxProd";
+import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useChatInputFloatingBounce } from "useChatInputFloatingBounce.tsx";
 
 const require = arg1;
 function FadeTransitionItem(state) {

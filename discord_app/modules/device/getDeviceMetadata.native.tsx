@@ -1,5 +1,5 @@
-import { getDeviceMetadata } from "../tti_analytics/native/TTIAnalyticsUtils.tsx";
 // discord_app/modules/device/getDeviceMetadata.native.tsx
+import { getDeviceMetadata } from "../tti_analytics/native/TTIAnalyticsUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/device/getDeviceMetadata.native.tsx");
 
 export default function getDeviceMetadata() {

@@ -1,12 +1,3 @@
-import { registerAsset } from "../../../_runtime/11743_registerAsset.js";
-import { registerAsset } from "../../../_runtime/11867_registerAsset.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { RowButtonWrapper } from "../../design/components/TableRow/native/RowButton.native.tsx";
-import { map } from "../../design/tokens/native/useToken.tsx";
-import { useTheme } from "../../hooks/useTheme.tsx";
-import { PortalAccessibilityWorkaroundView } from "../../modules/a11y/native/PortalAccessibilityWorkaroundView.tsx";
-import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
 // discord_app/components_native/chat/ChatBeginningRow.tsx
 import TextIcon from "TextIcon";
 import participantFromServer from "participantFromServer";
@@ -36,6 +27,15 @@ import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_40 } from "MESSAGE_REQUEST
 import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_41 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../_runtime/11743_registerAsset.js";
+import { registerAsset } from "../../../_runtime/11867_registerAsset.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { RowButtonWrapper } from "../../design/components/TableRow/native/RowButton.native.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
+import { useTheme } from "../../hooks/useTheme.tsx";
+import { PortalAccessibilityWorkaroundView } from "../../modules/a11y/native/PortalAccessibilityWorkaroundView.tsx";
+import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
 
 let closure_25;
 let closure_26;

@@ -1,10 +1,10 @@
-import { Tracking } from "../../../../tracking/Tracking.tsx";
 // discord_app/modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx
 import noop from "noop";
 import handleReaction from "handleReaction";
 import prototype from "prototype";
 import { SearchResultContentEntityTypes as closure_6 } from "SearchEntrypointAnalyticsLocations";
 import { jsx } from "jsxProd";
+import { Tracking } from "../../../../tracking/Tracking.tsx";
 
 const require = arg1;
 let result = require("prototype").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");

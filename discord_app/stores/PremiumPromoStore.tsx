@@ -1,8 +1,8 @@
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/PremiumPromoStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import { Store } from "initialize";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 let closure_4 = 180 * require("set").Millis.DAY;
 let c5 = false;

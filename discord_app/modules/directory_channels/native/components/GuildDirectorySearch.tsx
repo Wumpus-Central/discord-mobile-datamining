@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/11590_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearch.tsx
 import _slicedToArray from "_slicedToArray";
 import HeaderBackImage from "HeaderBackImage";
@@ -11,6 +8,9 @@ import ME from "ME";
 import jsxProd from "_addDirectoryGuildEntry";
 import createCacheKey from "createCacheKey";
 import ArrayResult from "module_5900";
+import { registerAsset } from "../../../../../_runtime/11590_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let Fonts;
 let closure_12;

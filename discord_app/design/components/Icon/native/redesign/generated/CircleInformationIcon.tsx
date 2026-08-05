@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../../../../_runtime/04242_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/04243_registerAsset.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BaseIconImage } from "../../BaseIconImage.tsx";
 // discord_app/design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { registerAsset } from "../../../../../../../_runtime/04242_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/04243_registerAsset.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BaseIconImage } from "../../BaseIconImage.tsx";
 
 let c4;
 let c5;

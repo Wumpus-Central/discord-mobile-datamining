@@ -1,7 +1,7 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/dev_tools/native/UserSettingsJSError.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 const require = arg1;
 const result = require("Text").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsJSError.tsx");

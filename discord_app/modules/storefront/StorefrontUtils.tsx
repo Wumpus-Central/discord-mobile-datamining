@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
-import { StorefrontPromotionRewardType } from "StorefrontTypes.tsx";
 // discord_app/modules/storefront/StorefrontUtils.tsx
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
@@ -9,6 +5,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import resetStoreState from "resetStoreState";
 import ME from "ME";
 import { PremiumTypes } from "GuildFeatures";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
+import { StorefrontPromotionRewardType } from "StorefrontTypes.tsx";
 
 let c10;
 let c9;

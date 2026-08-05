@@ -1,6 +1,6 @@
+// discord_app/intl/migration.tsx
 import { 01274__ } from "../../_runtime/metro/01274__.js";
 import { getSystemLocale } from "index.native.tsx";
-// discord_app/intl/migration.tsx
 const result = require("set").fileFinishedImporting("intl/migration.tsx");
 
 export const improperGetEnglishIntlMessageText = function newGetEnglishMessageText(code) {

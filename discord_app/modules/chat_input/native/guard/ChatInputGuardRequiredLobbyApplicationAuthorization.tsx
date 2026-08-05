@@ -1,9 +1,9 @@
-import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 let obj = { icon: null };

@@ -1,6 +1,3 @@
-import { useCallA11yState } from "../../../calls/useCallA11yState.tsx";
-import { getChannelA11yLabel } from "../../../channel/getChannelA11yLabel.tsx";
-import { getChannelMode } from "../../../guild_sidebar/native/ChannelItem.tsx";
 // discord_app/modules/channel_list_v2/native/items/DMChannel.tsx
 import importAllResult from "noop";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -8,6 +5,9 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UnreadSetting } from "ReadStateTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCallA11yState } from "../../../calls/useCallA11yState.tsx";
+import { getChannelA11yLabel } from "../../../channel/getChannelA11yLabel.tsx";
+import { getChannelMode } from "../../../guild_sidebar/native/ChannelItem.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

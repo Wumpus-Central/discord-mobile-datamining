@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PasswordlessUpsell } from "../../account/native/SettingsAccountScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AccountSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PasswordlessUpsell } from "../../account/native/SettingsAccountScreen.tsx";
 
 obj = {
   useTitle() {

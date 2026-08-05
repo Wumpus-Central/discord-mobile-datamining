@@ -1,6 +1,3 @@
-import { VoiceSensitivity } from "../../../../components_native/common/VoiceSensitivity.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { showSimpleActionSheet } from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +5,9 @@ import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { InputModes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { VoiceSensitivity } from "../../../../components_native/common/VoiceSensitivity.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { showSimpleActionSheet } from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 
 let closure_6;
 let error;

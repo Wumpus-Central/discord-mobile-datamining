@@ -1,8 +1,3 @@
-import { isEqual } from "../../../_runtime/04444_isEqual.js";
-import { parseEncoder } from "../../lib/VideoQualityStats.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
-import { apexExperiment } from "ClipsV3RuntimeExperiment.tsx";
 // discord_app/modules/clips/ClipAnalyticsUtils.tsx
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import reset from "reset";
@@ -11,6 +6,11 @@ import initialize from "initialize";
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 import { ClipSignalTypes } from "result";
 import { AnalyticEvents } from "ME";
+import { isEqual } from "../../../_runtime/04444_isEqual.js";
+import { parseEncoder } from "../../lib/VideoQualityStats.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
+import { apexExperiment } from "ClipsV3RuntimeExperiment.tsx";
 
 const require = arg1;
 function getClipSignalTypes(remoteClipId) {

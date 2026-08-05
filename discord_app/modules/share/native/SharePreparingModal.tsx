@@ -1,9 +1,9 @@
-import { MediaViewerOverlayButton } from "../../media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx";
 // discord_app/modules/share/native/SharePreparingModal.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { MediaViewerOverlayButton } from "../../media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx";
 
 let StyleSheet;
 let c4;

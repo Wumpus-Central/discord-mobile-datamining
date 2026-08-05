@@ -1,7 +1,7 @@
-import { getUpdatedOptions } from "ErrorCommonUtils.tsx";
 // discord_app/utils/SentryUtils.native.tsx
 import { NativeModules } from "get ActivityIndicator";
 import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
+import { getUpdatedOptions } from "ErrorCommonUtils.tsx";
 
 let c5 = new require("addBreadcrumb")("Sentry");
 _maybeBackfillMissingBreadcrumbsFromTelemetryRing = _maybeBackfillMissingBreadcrumbsFromTelemetryRing.initSentry();

@@ -1,8 +1,8 @@
-import { StickerFormat } from "StickersTypes.tsx";
 // discord_app/modules/stickers/StickersPackStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
 import { LibdiscoreStore } from "identity";
+import { StickerFormat } from "StickersTypes.tsx";
 
 let require = arg1;
 function parseServerPackSticker(id) {

@@ -1,12 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { init } from "../../../actions/ChannelSettingsActionCreators.tsx";
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getFontScale } from "../../screen/native/useFontScale.tsx";
-import { dispatcher } from "../GuildSettingsModalChannelsActionCreators.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalChannels.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "Form";
@@ -22,6 +13,15 @@ import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
 import importDefaultResult2 from "createTextStyle";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { init } from "../../../actions/ChannelSettingsActionCreators.tsx";
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getFontScale } from "../../screen/native/useFontScale.tsx";
+import { dispatcher } from "../GuildSettingsModalChannelsActionCreators.tsx";
 
 let Fonts;
 let StyleSheet;

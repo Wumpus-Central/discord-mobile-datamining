@@ -1,7 +1,7 @@
-import { presentAddedFriendToast } from "../toast/native/ToastUtils.tsx";
-import { getSafetyToastTypeContent } from "SafetyToastsUtils.tsx";
 // discord_app/modules/safety_common/SafetyToastsActionCreators.native.tsx
 import { SafetyToastType } from "SafetyToastType";
+import { presentAddedFriendToast } from "../toast/native/ToastUtils.tsx";
+import { getSafetyToastTypeContent } from "SafetyToastsUtils.tsx";
 
 const result = require("getSafetyToastTypeContent").fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");
 

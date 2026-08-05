@@ -1,3 +1,16 @@
+// discord_app/modules/devtools/native/components/screens/DevToolsInAppNotificationTestingScreen.tsx
+import MAX_TIMES_SHOWN from "MAX_TIMES_SHOWN";
+import { ScrollView } from "updateUserGuildSettings";
+import loadSavedGuildStickers from "loadSavedGuildStickers";
+import { createChannelRecord } from "createChannelRecord";
+import hasFlag from "hasFlag";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import handleConnectionOpen from "handleConnectionOpen";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import jsxProd from "DISCORD_EPOCH";
+import createCacheKey from "createCacheKey";
 import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BeakerIcon } from "../../../../../design/components/Icon/native/redesign/generated/BeakerIcon.tsx";
@@ -12,19 +25,6 @@ import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.nativ
 import { StickerFormat } from "../../../../stickers/StickersTypes.tsx";
 import { dispatcher } from "../../../../toast/native/ToastActionCreators.tsx";
 import { updateUserGuildSettings } from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
-// discord_app/modules/devtools/native/components/screens/DevToolsInAppNotificationTestingScreen.tsx
-import MAX_TIMES_SHOWN from "MAX_TIMES_SHOWN";
-import { ScrollView } from "updateUserGuildSettings";
-import loadSavedGuildStickers from "loadSavedGuildStickers";
-import { createChannelRecord } from "createChannelRecord";
-import hasFlag from "hasFlag";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "DISCORD_EPOCH";
-import createCacheKey from "createCacheKey";
 
 let InAppNotificationTypes;
 let closure_12;

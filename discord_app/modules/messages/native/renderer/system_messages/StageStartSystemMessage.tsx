@@ -1,8 +1,8 @@
+// discord_app/modules/messages/native/renderer/system_messages/StageStartSystemMessage.tsx
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/StageStartSystemMessage.tsx
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageStartSystemMessage.tsx");
 
 export const createStageStartSystemMessage = function createStageStartSystemMessage(roleStyle) {

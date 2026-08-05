@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/AgeGroupResetSetting.tsx
+import { jsx } from "jsxProd";
+import createToggle from "createToggle";
 import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../../../age_assurance/AgeAssurance.messages.js";
 import { SettingsAgeGroupResetAlert } from "../../age_group/native/SettingsAgeGroupResetAlert.tsx";
-// discord_app/modules/user_settings/defs/native/AgeGroupResetSetting.tsx
-import { jsx } from "jsxProd";
-import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {

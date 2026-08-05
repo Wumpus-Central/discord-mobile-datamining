@@ -1,10 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getStreamURL } from "../../activities/utils/getStreamURL.tsx";
-import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivityButtons.tsx
 import handleInviteData from "handleInviteData";
 import "getEmbeddedActivityLocationChannelId";
@@ -23,6 +16,13 @@ import ME from "ME";
 import WEB_OPEN from "WEB_OPEN";
 import { jsx } from "getActivityChannelId";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getStreamURL } from "../../activities/utils/getStreamURL.tsx";
+import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
 
 let closure_15;
 let closure_16;

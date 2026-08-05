@@ -1,11 +1,11 @@
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { isActionRequired } from "../core/isActionRequired.tsx";
-import { set } from "DismissibleContentFatigueConfig.tsx";
 // discord_app/modules/dismissible_content/DismissibleContentShownStateStore.tsx
 import handleUpdateUser from "handleUpdateUser";
 import handleRequiredAction from "handleRequiredAction";
 import identity from "identity";
 import { Store } from "initialize";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { isActionRequired } from "../core/isActionRequired.tsx";
+import { set } from "DismissibleContentFatigueConfig.tsx";
 
 const require = arg1;
 function withContent(currentlyShown, content) {

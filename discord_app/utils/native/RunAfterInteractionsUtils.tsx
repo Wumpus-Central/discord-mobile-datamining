@@ -1,6 +1,6 @@
-import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 // discord_app/utils/native/RunAfterInteractionsUtils.tsx
 import { InteractionManager } from "get ActivityIndicator";
+import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 
 function runAfterInteractions(arg0, MINUTE) {
   const _require = arg0;

@@ -1,6 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { experiment } from "../voice_calls/GuildVoiceRingingExperiment.tsx";
-import { sortKey } from "ChannelRTCParticipants.tsx";
 // discord_app/modules/calls/ChannelRTCStore.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -19,6 +16,9 @@ import ParticipantTypes from "ParticipantTypes";
 import ME from "ME";
 import { PersistedStore } from "initialize";
 import set from "set";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { experiment } from "../voice_calls/GuildVoiceRingingExperiment.tsx";
+import { sortKey } from "ChannelRTCParticipants.tsx";
 
 let closure_16;
 let closure_17;

@@ -1,4 +1,3 @@
-import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -6,6 +5,7 @@ import { UserNotificationSettings } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
 import { GuildNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES";
 import { jsx } from "jsxProd";
+import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx");

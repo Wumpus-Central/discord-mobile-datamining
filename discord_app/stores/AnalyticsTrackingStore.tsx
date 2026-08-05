@@ -1,9 +1,9 @@
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { trackHeartbeat } from "../modules/analytics_sessions/SessionHeartbeatScheduler.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/stores/AnalyticsTrackingStore.tsx
 import importDefaultResult from "fetchFingerprint";
 import encodeProperties from "encodeProperties";
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { trackHeartbeat } from "../modules/analytics_sessions/SessionHeartbeatScheduler.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 encodeProperties = {

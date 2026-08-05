@@ -1,11 +1,11 @@
+// discord_app/modules/user_settings/UserSettingsUtils.tsx
+import _slicedToArray from "_slicedToArray";
+import { ZERO_STRING_GUILD_ID } from "ME";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { 01307__ } from "../../../_runtime/metro/01307__.js";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx";
-// discord_app/modules/user_settings/UserSettingsUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { ZERO_STRING_GUILD_ID } from "ME";
 
 let FRECENCY_AND_FAVORITES_SETTINGS;
 let PRELOADED_USER_SETTINGS;

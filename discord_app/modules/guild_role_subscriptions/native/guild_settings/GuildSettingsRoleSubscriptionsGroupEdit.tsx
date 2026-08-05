@@ -1,4 +1,3 @@
-import { ApplicationRejectedNotice } from "GuildSettingsRoleSubscriptionContainer.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
 import closure_4 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -6,6 +5,7 @@ import Content from "Content";
 import { ScrollView } from "Themes";
 import { ApplicationTypes } from "ApplicationTypes";
 import jsxProd from "set";
+import { ApplicationRejectedNotice } from "GuildSettingsRoleSubscriptionContainer.tsx";
 
 let c10;
 let c9;

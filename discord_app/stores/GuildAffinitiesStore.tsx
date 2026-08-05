@@ -1,7 +1,7 @@
-import { fetchGuildAffinities } from "../actions/GuildAffinitiesActionCreators.tsx";
 // discord_app/stores/GuildAffinitiesStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { PersistedStore } from "initialize";
+import { fetchGuildAffinities } from "../actions/GuildAffinitiesActionCreators.tsx";
 
 const require = arg1;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };

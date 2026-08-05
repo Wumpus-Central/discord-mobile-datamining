@@ -1,4 +1,3 @@
-import { Button } from "../../design/void/native.tsx";
 // discord_app/components_native/common/ViewEmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { Fonts } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { Button } from "../../design/void/native.tsx";
 
 let c3;
 let c4;

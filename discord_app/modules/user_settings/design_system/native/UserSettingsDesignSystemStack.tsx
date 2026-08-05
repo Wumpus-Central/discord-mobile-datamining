@@ -1,11 +1,11 @@
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

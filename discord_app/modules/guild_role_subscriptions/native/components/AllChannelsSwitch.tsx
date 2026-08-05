@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/16722_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16723_registerAsset.js";
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -13,6 +7,12 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
+import { registerAsset } from "../../../../../_runtime/16722_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16723_registerAsset.js";
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

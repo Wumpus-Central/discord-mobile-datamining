@@ -1,5 +1,5 @@
-import { Link } from "../../../../../_runtime/01481_Link.js";
 // discord_app/design/components/Navigator/native/useNavigation.native.tsx
+import { Link } from "../../../../../_runtime/01481_Link.js";
 function useNavigation() {
   return Link /* Link */.useNavigation();
 }

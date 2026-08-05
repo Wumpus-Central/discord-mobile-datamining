@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { SubscriptionStatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
 
 let c3;
 let c4;

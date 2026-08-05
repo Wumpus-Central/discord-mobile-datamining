@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = { isSearchActive: false, searchActiveSource: "initial" };
 let obj = keys.create(() => {

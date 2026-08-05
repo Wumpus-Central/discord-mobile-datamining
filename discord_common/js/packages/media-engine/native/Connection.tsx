@@ -1,13 +1,13 @@
-import { BaseConnectionEvent } from "../index.tsx";
-import { items } from "../utils/VideoCodecUtils.tsx";
-import { WantsVideoQuality } from "../VideoQualityManager.tsx";
-import { inject } from "inject.tsx";
-import { VADAggressiveness } from "VoiceEngine.tsx";
 // discord_common/js/packages/media-engine/native/Connection.tsx
 import _slicedToArray from "_slicedToArray";
 import DesktopSources from "DesktopSources";
 import AudioSubsystems from "AudioSubsystems";
 import "destroy";
+import { BaseConnectionEvent } from "../index.tsx";
+import { items } from "../utils/VideoCodecUtils.tsx";
+import { WantsVideoQuality } from "../VideoQualityManager.tsx";
+import { inject } from "inject.tsx";
+import { VADAggressiveness } from "VoiceEngine.tsx";
 
 let c10;
 let c4;

@@ -1,6 +1,3 @@
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { isPerModeThemingActive } from "../../user_settings/isPerModeThemingActive.tsx";
 // discord_app/modules/client_themes/native/CustomThemeMobileStore.tsx
 import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
@@ -9,6 +6,9 @@ import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { PROTO_THEME_MAP_MOBILE } from "SystemThemeState";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { PersistedStore } from "initialize";
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { isPerModeThemingActive } from "../../user_settings/isPerModeThemingActive.tsx";
 
 const require = arg1;
 function reset() {

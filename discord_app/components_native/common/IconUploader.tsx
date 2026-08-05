@@ -1,8 +1,3 @@
-import { registerAsset } from "../../../_runtime/09601_registerAsset.js";
-import { PressableBase } from "../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { GuildIconSizes } from "../../modules/guild/native/GuildIcon.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 // discord_app/components_native/common/IconUploader.tsx
 import closure_3 from "createCacheKey";
 import noop from "noop";
@@ -10,6 +5,11 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { UPLOAD_MEDIUM_SIZE } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../_runtime/09601_registerAsset.js";
+import { PressableBase } from "../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { GuildIconSizes } from "../../modules/guild/native/GuildIcon.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 
 let c10;
 let c5;

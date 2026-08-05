@@ -1,8 +1,3 @@
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
-import { AddPhone } from "../../../verification/native/components/AddPhone.tsx";
 // discord_app/modules/contact_sync/native/components/AddPhoneScreens.tsx
 import ContactSyncModes from "ContactSyncModes";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +7,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { useContactSyncModalStore } from "ContactSyncModes";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
+import { AddPhone } from "../../../verification/native/components/AddPhone.tsx";
 
 let c10;
 let c9;

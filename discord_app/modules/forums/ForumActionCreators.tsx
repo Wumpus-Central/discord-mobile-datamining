@@ -1,12 +1,12 @@
+// discord_app/modules/forums/ForumActionCreators.tsx
+import sendRequest from "sendRequest";
+import ME from "ME";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { markAnalyticsFeedItemSeen } from "../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
 import { maybeMarkSeen } from "../../utils/AnalyticsFeedItemSeenManager.tsx";
 import { prototype } from "tracking/ForumChannelSeenManager.tsx";
-// discord_app/modules/forums/ForumActionCreators.tsx
-import sendRequest from "sendRequest";
-import ME from "ME";
 
 let c4;
 let c5;

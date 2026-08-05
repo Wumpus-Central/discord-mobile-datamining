@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_role_subscriptions/useEmojiByIdOrName.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function useEmojiByIdOrName(guildId, emojiId) {

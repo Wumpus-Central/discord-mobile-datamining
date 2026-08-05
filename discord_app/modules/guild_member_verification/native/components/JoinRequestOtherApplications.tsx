@@ -1,11 +1,11 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useOtherGuildJoinRequestsForUser } from "../../hooks/useOtherGuildJoinRequestsForUser.tsx";
-import { MAX_RESULTS_PER_PAGE } from "../../MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useOtherGuildJoinRequestsForUser } from "../../hooks/useOtherGuildJoinRequestsForUser.tsx";
+import { MAX_RESULTS_PER_PAGE } from "../../MemberVerificationTypes.tsx";
 
 let c4;
 let c5;

@@ -1,6 +1,6 @@
+// discord_app/modules/premium/powerups/native/utils/openGuildPowerupsBottomSheet.tsx
 import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/premium/powerups/native/utils/openGuildPowerupsBottomSheet.tsx
 const GUILD_POWERUPS_BOTTOM_SHEET_KEY = "GUILD_POWERUPS_BOTTOM_SHEET_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsBottomSheet.tsx");
 

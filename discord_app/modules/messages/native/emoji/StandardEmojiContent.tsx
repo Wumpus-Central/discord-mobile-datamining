@@ -1,13 +1,13 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getEmojiUnavailableReason } from "../../../../utils/EmojiUtils.tsx";
-import { styles } from "useSharedMessageEmojiStyles.tsx";
 // discord_app/modules/messages/native/emoji/StandardEmojiContent.tsx
 import noop from "noop";
 import { View } from "_updateEmoji";
 import handleConnectionOpen from "handleConnectionOpen";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getEmojiUnavailableReason } from "../../../../utils/EmojiUtils.tsx";
+import { styles } from "useSharedMessageEmojiStyles.tsx";
 
 let closure_6;
 let error;

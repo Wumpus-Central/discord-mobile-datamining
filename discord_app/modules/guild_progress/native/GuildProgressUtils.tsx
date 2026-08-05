@@ -1,10 +1,3 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { dispatcher } from "../GuildProgressActionCreators.tsx";
-import { usePermissions } from "../GuildProgressHooks.tsx";
 // discord_app/modules/guild_progress/native/GuildProgressUtils.tsx
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -12,6 +5,13 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import completeStep from "completeStep";
 import { Steps } from "Steps";
 import ME from "ME";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { dispatcher } from "../GuildProgressActionCreators.tsx";
+import { usePermissions } from "../GuildProgressHooks.tsx";
 
 let c9;
 let metroImportAll;

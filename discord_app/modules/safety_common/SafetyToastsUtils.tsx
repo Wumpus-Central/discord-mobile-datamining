@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
 // discord_app/modules/safety_common/SafetyToastsUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyToastType } from "SafetyToastType";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
 
 const require = arg1;
 const result = require("SafetyToastType").fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");

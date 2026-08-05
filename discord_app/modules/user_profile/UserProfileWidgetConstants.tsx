@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/user_profile/UserProfileWidgetConstants.tsx
 import addApplication from "addApplication";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 const items = [require("WidgetType").WidgetType.PERSONAL, require("WidgetType").WidgetType.CLIPS_GALLERY, require("WidgetType").WidgetType.APPLICATION, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES, require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES];

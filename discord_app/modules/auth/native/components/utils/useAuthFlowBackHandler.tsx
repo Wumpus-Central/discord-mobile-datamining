@@ -1,8 +1,8 @@
-import { useNavigatorBackPressHandler } from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
-import { NavigatorWithCaptchaHook } from "../Auth.tsx";
 // discord_app/modules/auth/native/components/utils/useAuthFlowBackHandler.tsx
 import noop from "noop";
 import { RegistrationTransitionActionTypes as closure_3 } from "RegistrationTransitionActionTypes";
+import { useNavigatorBackPressHandler } from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
+import { NavigatorWithCaptchaHook } from "../Auth.tsx";
 
 const require = arg1;
 const result = require("NavigatorWithCaptchaHook").fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");

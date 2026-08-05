@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { MagnifyingGlassIcon } from "../../Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
-import { TextField } from "TextField.native.tsx";
 // discord_app/design/components/TextField/native/SearchField.native.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { MagnifyingGlassIcon } from "../../Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
+import { TextField } from "TextField.native.tsx";
 
 const require = arg1;
 const forwardRefResult = require("noop").forwardRef((arg0, arg1) => {

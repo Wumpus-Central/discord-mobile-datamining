@@ -1,7 +1,7 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useInappropriateConversationSafetyToolsWarningForChannel } from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx
 import handleConnectionOpen from "handleConnectionOpen";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useInappropriateConversationSafetyToolsWarningForChannel } from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx");

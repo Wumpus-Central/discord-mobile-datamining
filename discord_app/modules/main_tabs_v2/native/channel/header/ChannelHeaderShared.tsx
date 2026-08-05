@@ -1,3 +1,12 @@
+// discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx
+import _slicedToArray from "_slicedToArray";
+import GuildActionSheetMemberCount from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
+import { View } from "map";
+import upsertRelationship from "upsertRelationship";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { getMinHeaderHeight } from "MIN_HEADER_HEIGHT";
+import jsxProd from "computeChannelName";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../../../design/tokens/native/useToken.tsx";
@@ -8,15 +17,6 @@ import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 import { FacepileGroupDMAvatar } from "../../../../group_dm/native/GroupDMAvatar.tsx";
 import { GuildActionSheetMemberCount } from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-// discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx
-import _slicedToArray from "_slicedToArray";
-import GuildActionSheetMemberCount from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
-import { View } from "map";
-import upsertRelationship from "upsertRelationship";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { getMinHeaderHeight } from "MIN_HEADER_HEIGHT";
-import jsxProd from "computeChannelName";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;

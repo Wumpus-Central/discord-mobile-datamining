@@ -1,11 +1,11 @@
-import { Portal } from "../../../../../_runtime/04156_Portal.js";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { ExpressionPickerCategoriesBackdrop } from "ExpressionPickerCategoriesBackdrop.tsx";
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategories.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Portal } from "../../../../../_runtime/04156_Portal.js";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { ExpressionPickerCategoriesBackdrop } from "ExpressionPickerCategoriesBackdrop.tsx";
 
 let c4;
 let c5;

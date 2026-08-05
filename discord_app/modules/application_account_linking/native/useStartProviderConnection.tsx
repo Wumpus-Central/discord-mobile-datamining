@@ -1,7 +1,7 @@
-import { useProviderConnection } from "../hooks/useProviderConnection.tsx";
 // discord_app/modules/application_account_linking/native/useStartProviderConnection.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import noop from "noop";
+import { useProviderConnection } from "../hooks/useProviderConnection.tsx";
 
 const require = arg1;
 const result = require("useProviderConnection").fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");

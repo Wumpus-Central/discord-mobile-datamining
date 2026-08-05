@@ -1,8 +1,3 @@
-import { QuestSharePolicy } from "../../../../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx";
-import { QuestType } from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
-import { canStreamInChannel } from "../../go_live/utils/StreamPermissionUtils.tsx";
-import { getQuestContentName } from "../lib/analytics/AnalyticsTypes.tsx";
-import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 // discord_app/modules/quests/utils/QuestUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -11,6 +6,11 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateVoiceState from "updateVoiceState";
 import keys from "keys";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
+import { QuestSharePolicy } from "../../../../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx";
+import { QuestType } from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
+import { canStreamInChannel } from "../../go_live/utils/StreamPermissionUtils.tsx";
+import { getQuestContentName } from "../lib/analytics/AnalyticsTypes.tsx";
+import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 
 let c10;
 let c9;

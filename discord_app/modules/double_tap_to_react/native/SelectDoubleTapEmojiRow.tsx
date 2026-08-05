@@ -1,5 +1,3 @@
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/double_tap_to_react/native/SelectDoubleTapEmojiRow.tsx
 import importAllResult from "ReactionIcon";
 import { View } from "EMOJI_PICKER_ACTION_SHEET_KEY";
@@ -11,6 +9,8 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "maybeApplyNoTextColorForLightCustomTheme";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 
 let c10;
 let c9;

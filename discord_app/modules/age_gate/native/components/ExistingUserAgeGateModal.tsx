@@ -1,4 +1,3 @@
-import { openAgeGateModal } from "../../AgeGateModalActionCreators.tsx";
 // discord_app/modules/age_gate/native/components/ExistingUserAgeGateModal.tsx
 import AgeGateUnderage from "AgeGateUnderage";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -6,6 +5,7 @@ import result from "result";
 import { ExistingUserAgeGateScreens as closure_7 } from "ExistingUserAgeGateScreens";
 import { AnalyticEvents } from "ME";
 import { jsx } from "shouldShowAgeGateForVoiceChannel";
+import { openAgeGateModal } from "../../AgeGateModalActionCreators.tsx";
 
 let c5;
 let closure_6;

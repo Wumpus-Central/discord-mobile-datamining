@@ -1,12 +1,12 @@
+// discord_app/modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { jsx } from "jsxProd";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
 import { applyAppleReceipt } from "../../../../actions/native/BillingActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
-// discord_app/modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

@@ -1,9 +1,9 @@
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/channel/getChannelIcon.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ChannelTypes } from "ME";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/channel/getChannelIcon.tsx");

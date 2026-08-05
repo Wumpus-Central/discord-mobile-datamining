@@ -1,10 +1,3 @@
-import { set } from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
-import { QuestVariants } from "../../../../discord_common/js/shared/shared-constants/QuestVariants.tsx";
-import { _openRobloxURLWithRootPlaceId } from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import { getQuestDeliveryDataForPlacement } from "../utils/QuestDataUtils.tsx";
-import { questMatchesActivity } from "../utils/QuestMatchingUtils.tsx";
-import { getApplicationIdsByTaskTypes } from "../utils/QuestTaskUtils.tsx";
-import { isSponsoredPlayQuest } from "../utils/QuestUtils.tsx";
 // discord_app/modules/quests/managers/QuestProgressManager.tsx
 import reset from "reset";
 import "_slicedToArray";
@@ -19,6 +12,13 @@ import set from "set";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import getQuestLogger from "getQuestLogger";
 import "initialize";
+import { set } from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import { QuestVariants } from "../../../../discord_common/js/shared/shared-constants/QuestVariants.tsx";
+import { _openRobloxURLWithRootPlaceId } from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import { getQuestDeliveryDataForPlacement } from "../utils/QuestDataUtils.tsx";
+import { questMatchesActivity } from "../utils/QuestMatchingUtils.tsx";
+import { getApplicationIdsByTaskTypes } from "../utils/QuestTaskUtils.tsx";
+import { isSponsoredPlayQuest } from "../utils/QuestUtils.tsx";
 
 let QuestsExperimentLocations;
 let closure_12;

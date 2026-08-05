@@ -1,7 +1,7 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeClientInfoModule.tsx";
-import { set } from "../PlatformUtils.tsx";
 // discord_app/utils/native/ClientInfoUtils.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeClientInfoModule.tsx";
+import { set } from "../PlatformUtils.tsx";
 
 const result = require("enforcing").fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
 

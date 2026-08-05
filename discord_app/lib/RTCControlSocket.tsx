@@ -1,11 +1,11 @@
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { set } from "../utils/PlatformUtils.tsx";
 // discord_app/lib/RTCControlSocket.tsx
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import DesktopSources from "DesktopSources";
 import "on";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { set } from "../utils/PlatformUtils.tsx";
 
 let c5;
 let closure_6;

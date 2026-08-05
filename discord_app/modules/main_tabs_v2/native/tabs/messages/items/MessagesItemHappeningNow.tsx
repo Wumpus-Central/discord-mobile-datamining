@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useCutoutBackgroundColor } from "../../../../../../design/components/Icon/native/CutoutBackgroundContext.tsx";
-import { map } from "../../../../../../design/tokens/native/useToken.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { renderCard } from "../../../shared_components/happening_now/HappeningNow.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx
 import { View } from "get ActivityIndicator";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
@@ -10,6 +5,11 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
 import set from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useCutoutBackgroundColor } from "../../../../../../design/components/Icon/native/CutoutBackgroundContext.tsx";
+import { map } from "../../../../../../design/tokens/native/useToken.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { renderCard } from "../../../shared_components/happening_now/HappeningNow.tsx";
 
 let HappeningNowItem;
 let c4;

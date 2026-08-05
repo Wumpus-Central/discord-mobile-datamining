@@ -1,3 +1,9 @@
+// discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/12774_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/12775_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/12776_registerAsset.js";
@@ -9,12 +15,6 @@ import { HeartIcon } from "../../../../design/components/Icon/native/redesign/ge
 import { ShieldUserIcon } from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

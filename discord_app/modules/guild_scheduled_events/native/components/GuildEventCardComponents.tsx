@@ -1,11 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { canEveryoneRoleViewEvent } from "../../useCanInviteForGuildEvent.tsx";
-import { useEventException } from "../../useEventException.tsx";
-import { ThrottledButton } from "ThrottledButton.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventCardComponents.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getRRule from "getRRule";
@@ -24,6 +16,14 @@ import ME from "ME";
 import sum from "sum";
 import jsxProd from "openCreateOrEditGuildEventModal";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { canEveryoneRoleViewEvent } from "../../useCanInviteForGuildEvent.tsx";
+import { useEventException } from "../../useEventException.tsx";
+import { ThrottledButton } from "ThrottledButton.tsx";
 
 let Fonts;
 let closure_15;

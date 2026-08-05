@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { prototype } from "../errors/InteractionCallbackError.tsx";
 // discord_app/modules/interactions/interactionCallbackErrorReason.tsx
 import addApplication from "addApplication";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { prototype } from "../errors/InteractionCallbackError.tsx";
 
 const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/interactions/interactionCallbackErrorReason.tsx");

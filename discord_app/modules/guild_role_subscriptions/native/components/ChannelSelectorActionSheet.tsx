@@ -1,4 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/12783_registerAsset.js";
 // discord_app/modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
@@ -11,6 +10,7 @@ import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "SearchField";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { registerAsset } from "../../../../../_runtime/12783_registerAsset.js";
 
 let Fonts;
 let c9;

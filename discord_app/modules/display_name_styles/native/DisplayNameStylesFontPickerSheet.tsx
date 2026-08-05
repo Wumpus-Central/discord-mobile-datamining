@@ -1,4 +1,3 @@
-import { messagesProxy } from "../intl/DisplayNameStyles.messages.js";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFontPickerSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -7,6 +6,7 @@ import { FLYWHEEL_FONTS } from "items3";
 import { Fonts } from "sum";
 import jsxProd from "getDisplayNameStylesFontName";
 import createCacheKey from "createCacheKey";
+import { messagesProxy } from "../intl/DisplayNameStyles.messages.js";
 
 let c10;
 let c5;

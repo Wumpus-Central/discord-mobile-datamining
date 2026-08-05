@@ -1,6 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
-import { useIsStageSpeakingDisabledForCurrentUser } from "useStageSpeakingForCurrentUser.tsx";
 // discord_app/modules/stage_channels/StageChannelRoleStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -9,6 +6,9 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
+import { useIsStageSpeakingDisabledForCurrentUser } from "useStageSpeakingForCurrentUser.tsx";
 
 const require = arg1;
 function buildStageChannelUserRoles(id, closure_0, flag) {

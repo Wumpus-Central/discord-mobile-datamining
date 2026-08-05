@@ -1,6 +1,6 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/auth/experiment/trackAgeGateSubmitted.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 const result = require("t").fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");
 

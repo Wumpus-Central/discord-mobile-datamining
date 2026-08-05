@@ -1,3 +1,12 @@
+// discord_app/stores/GuildMemberStore.tsx
+import { clearCommunicationDisabledNotice as closure_3 } from "DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY";
+import initialize from "initialize";
+import fetchFingerprint from "fetchFingerprint";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { GuildMemberFlags } from "GuildMemberFlags";
+import { Store } from "initialize";
 import { apply } from "../../_runtime/00012_apply.js";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { isActivityParticipantValidGuildMember } from "../modules/activities/isActivityParticipantValidGuildMember.tsx";
@@ -8,15 +17,6 @@ import { items } from "../modules/display_name_styles/DisplayNameStylesUtils.tsx
 import { isCommunicationDisabled } from "../modules/guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import { compareGuildRoles } from "../utils/GuildRoleUtils.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
-// discord_app/stores/GuildMemberStore.tsx
-import { clearCommunicationDisabledNotice as closure_3 } from "DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildMemberFlags } from "GuildMemberFlags";
-import { Store } from "initialize";
 
 function trackCommunicationDisabled(guildId, tmp10Result) {
   if (null != tmp10Result.communicationDisabledUntil) {

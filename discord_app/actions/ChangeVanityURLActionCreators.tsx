@@ -1,7 +1,7 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ChangeVanityURLActionCreators.tsx
 import { Endpoints } from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 
 const result = require("sendRequest").fileFinishedImporting("actions/ChangeVanityURLActionCreators.tsx");
 

@@ -1,4 +1,3 @@
-import { Button } from "../../native.tsx";
 // discord_app/design/void/Form/native/FormTitle.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -7,6 +6,7 @@ import set from "set";
 import set from "set";
 import createCacheKey from "createCacheKey";
 import set from "ME";
+import { Button } from "../../native.tsx";
 
 let Platform;
 let c3;

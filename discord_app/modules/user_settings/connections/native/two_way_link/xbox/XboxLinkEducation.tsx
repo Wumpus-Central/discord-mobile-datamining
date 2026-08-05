@@ -1,15 +1,15 @@
-import { SafeAreaPaddingView } from "../../../../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
-import { styles } from "../TwoWayLinkStyles.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
+import { styles } from "../TwoWayLinkStyles.tsx";
 
 let c4;
 let c5;

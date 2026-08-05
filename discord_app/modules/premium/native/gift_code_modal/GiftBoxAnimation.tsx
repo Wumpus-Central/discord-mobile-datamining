@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { play } from "../../../../components_native/common/LottieAnimationView.tsx";
 // discord_app/modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { PremiumGiftStyles } from "GuildFeatures";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { play } from "../../../../components_native/common/LottieAnimationView.tsx";
 
 const require = arg1;
 const result = require("GuildFeatures").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx");

@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/media_channel/useShouldHideMediaOptions.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelFlags } from "set";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");

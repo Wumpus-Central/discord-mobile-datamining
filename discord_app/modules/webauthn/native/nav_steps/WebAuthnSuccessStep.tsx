@@ -1,7 +1,7 @@
-import { CodeRow } from "../../../user_settings/account/native/UserSettingsAccountBackupCodes.tsx";
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { CodeRow } from "../../../user_settings/account/native/UserSettingsAccountBackupCodes.tsx";
 
 const require = arg1;
 let result = require("useNavigation").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");

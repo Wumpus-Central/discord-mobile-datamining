@@ -1,10 +1,10 @@
-import { useCreatorMonetizationEligibilityItems } from "../../../../creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx";
-import { EligibilityChecklistRow } from "../../components/EligibilityChecklist.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx
 import noop from "noop";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCreatorMonetizationEligibilityItems } from "../../../../creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx";
+import { EligibilityChecklistRow } from "../../components/EligibilityChecklist.tsx";
 
 let c5;
 let closure_6;

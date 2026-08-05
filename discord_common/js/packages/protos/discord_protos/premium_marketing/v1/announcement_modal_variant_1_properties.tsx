@@ -1,7 +1,3 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { create } from "../../common/v1/localized_string.tsx";
-import { create } from "cta_button.tsx";
-import { create } from "help_article.tsx";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/announcement_modal_variant_1_properties.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -9,6 +5,10 @@ import { MessageType as MessageType2 } from "module_1307";
 import { MessageType as MessageType3 } from "module_1307";
 import { MessageType as MessageType4 } from "module_1307";
 import { MessageType as MessageType5 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { create } from "../../common/v1/localized_string.tsx";
+import { create } from "cta_button.tsx";
+import { create } from "help_article.tsx";
 
 const require = arg1;
 class FeatureCard$Type extends MessageType {

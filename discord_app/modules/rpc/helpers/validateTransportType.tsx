@@ -1,7 +1,7 @@
-import { prototype } from "../RPCError.tsx";
 // discord_app/modules/rpc/helpers/validateTransportType.tsx
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCErrors } from "ME";
+import { prototype } from "../RPCError.tsx";
 
 const result = require("prototype").fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
 

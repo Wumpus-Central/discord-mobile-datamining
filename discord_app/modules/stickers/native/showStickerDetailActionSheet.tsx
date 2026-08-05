@@ -1,6 +1,6 @@
+// discord_app/modules/stickers/native/showStickerDetailActionSheet.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/stickers/native/showStickerDetailActionSheet.tsx
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
 

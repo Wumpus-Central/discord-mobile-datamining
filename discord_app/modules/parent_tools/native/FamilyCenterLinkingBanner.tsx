@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../_runtime/14064_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
-import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
-import { FamilyCenterTeenQRCodeButtonInner } from "FamilyCenterBannerButton.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterLinkingBanner.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -13,6 +6,13 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/14064_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
+import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
+import { FamilyCenterTeenQRCodeButtonInner } from "FamilyCenterBannerButton.tsx";
 
 let c3;
 let c4;

@@ -1,7 +1,7 @@
-import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 // discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 
 let obj = { uiViewClassName: "APNGDecorationView", directEventTypes: { topLoad: { registrationName: "onLoad" } }, validAttributes: null };
 obj = { url: true, autoplay: true };

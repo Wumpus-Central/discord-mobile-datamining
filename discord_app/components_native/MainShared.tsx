@@ -1,15 +1,15 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { KeyCommandsView } from "../modules/keyboard/native/KeyCommandsView.tsx";
-import { navigationToRootTabHelper } from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { PictureInPictureGlobal } from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
-import { usePipVideoOrStream } from "../modules/video_calls/native/usePipVideoOrStream.tsx";
-import { isVoicePanelEnabled } from "../modules/voice_panel/VoicePanelUtils.native.tsx";
 // discord_app/components_native/MainShared.tsx
 import ActionSheetPresenter from "ActionSheetPresenter";
 import { NativeModules } from "BurstReactionAnimationContainerInner";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import { jsx } from "MuteDeafen";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { KeyCommandsView } from "../modules/keyboard/native/KeyCommandsView.tsx";
+import { navigationToRootTabHelper } from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { PictureInPictureGlobal } from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
+import { usePipVideoOrStream } from "../modules/video_calls/native/usePipVideoOrStream.tsx";
+import { isVoicePanelEnabled } from "../modules/voice_panel/VoicePanelUtils.native.tsx";
 
 const require = arg1;
 let result = require("ensureGuildLoaded").fileFinishedImporting("components_native/MainShared.tsx");

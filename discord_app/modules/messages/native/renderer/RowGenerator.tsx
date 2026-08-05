@@ -1,12 +1,12 @@
+// discord_app/modules/messages/native/renderer/RowGenerator.tsx
+import handleThemeChange from "handleThemeChange";
+import Changeset from "Changeset";
 import { apply } from "../../../../../_runtime/00012_apply.js";
 import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
 import { generateMessageRowData } from "MessageWithContent.tsx";
 import { generateBlockedGroupRowData } from "rows/BlockedGroup.tsx";
 import { generateLoadingRowData } from "rows/Loading.tsx";
 import { generateSeparatorRowData } from "rows/Separator.tsx";
-// discord_app/modules/messages/native/renderer/RowGenerator.tsx
-import handleThemeChange from "handleThemeChange";
-import Changeset from "Changeset";
 
 let c4;
 let c5;

@@ -1,7 +1,7 @@
-import { QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED } from "QuestDockUtils.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockStore.tsx
 import { QuestDockMode } from "QuestsExperimentLocations";
 import { PersistedStore } from "initialize";
+import { QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED } from "QuestDockUtils.tsx";
 
 let c5 = false;
 let COLLAPSED = QuestDockMode.COLLAPSED;

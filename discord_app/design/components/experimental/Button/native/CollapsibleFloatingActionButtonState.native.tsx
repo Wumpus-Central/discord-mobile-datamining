@@ -1,6 +1,6 @@
-import { ReanimatedRexport } from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx
 import noop from "noop";
+import { ReanimatedRexport } from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let closure_3 = { code: "function CollapsibleFloatingActionButtonStateNativeTsx1({nativeEvent:nativeEvent}){const{initialScrollStart,previousOffset,MINIMUM_SCROLL_DISTANCE_TO_CLOSE,collapseText,SCROLL_OFFSET_THRESHOLD}=this.__closure;if(nativeEvent==null)return;const{contentOffset:{y:currentOffset},contentSize:{height:contentHeight},layoutMeasurement:{height:layoutHeight}}=nativeEvent;if(currentOffset<initialScrollStart)return;const contentHeightAsOffset=currentOffset+layoutHeight;if(contentHeightAsOffset>contentHeight)return;const offsetChanged=currentOffset-previousOffset.get();if(currentOffset<MINIMUM_SCROLL_DISTANCE_TO_CLOSE){collapseText.set(0);}else{if(Math.abs(offsetChanged)>SCROLL_OFFSET_THRESHOLD){collapseText.set(offsetChanged<0?0:1);}}previousOffset.set(currentOffset);}" };

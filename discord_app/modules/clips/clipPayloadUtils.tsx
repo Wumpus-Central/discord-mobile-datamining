@@ -1,9 +1,9 @@
-import { apexExperiment } from "GameEventsOnPlayerExperiment.tsx";
 // discord_app/modules/clips/clipPayloadUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import result from "result";
 import { AnalyticEvents } from "ME";
 import { SpeakingFlags } from "DesktopSources";
+import { apexExperiment } from "GameEventsOnPlayerExperiment.tsx";
 
 let c4;
 let c5;

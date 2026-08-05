@@ -1,4 +1,3 @@
-import { getQuestLogger } from "../lib/getQuestLogger.tsx";
 // discord_app/modules/quests/managers/QuestMobileEmbedVisibilityManager.native.tsx
 import _slicedToArray from "_slicedToArray";
 import setContent from "setContent";
@@ -14,6 +13,7 @@ import initializeState from "initializeState";
 import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN";
 import { MessageStates } from "ME";
 import "initialize";
+import { getQuestLogger } from "../lib/getQuestLogger.tsx";
 
 let error;
 let metroImportAll;

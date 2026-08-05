@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { trackZoomedInHttpRequest } from "trackZoomedInHttpRequest.android.tsx";
 // discord_app/modules/telemetry_ring/trackHttpRequest.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { trackZoomedInHttpRequest } from "trackZoomedInHttpRequest.android.tsx";
 
 const result = require("trackZoomedInHttpRequest").fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
 

@@ -1,8 +1,8 @@
-import { BoostPurchaseNitroBanner } from "../../../premium/native/PremiumPlanSelect.tsx";
-import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { BoostPurchaseNitroBanner } from "../../../premium/native/PremiumPlanSelect.tsx";
+import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
 
 const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");

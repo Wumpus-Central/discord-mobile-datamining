@@ -1,4 +1,3 @@
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx
 import Background from "Background";
 import { Image } from "ACTION_SHEET_HEIGHT_HALF";
@@ -6,6 +5,7 @@ import fetchFingerprint from "fetchFingerprint";
 import { ExperimentEmbedType } from "ExperimentBuckets";
 import { InviteTypes } from "InviteSendStates";
 import { jsx } from "UserExperimentDebugView";
+import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 
 const require = arg1;
 function ExperimentOverrideActionSheet(override) {

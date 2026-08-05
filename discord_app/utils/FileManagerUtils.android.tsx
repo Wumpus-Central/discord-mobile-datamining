@@ -1,6 +1,6 @@
-import { enforcing } from "../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 // discord_app/utils/FileManagerUtils.android.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { enforcing } from "../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 
 function _readFile() {
   const self = this;

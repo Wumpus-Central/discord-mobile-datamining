@@ -1,5 +1,3 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
 // discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/rules.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -46,6 +44,8 @@ import { MessageType as MessageType41 } from "module_1307";
 import { MessageType as MessageType42 } from "module_1307";
 import { MessageType as MessageType43 } from "module_1307";
 import { MessageType as MessageType44 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
 
 const require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", EXCLUDE: 1, [1]: "EXCLUDE", OVERRIDE: 2, [2]: "OVERRIDE", REQUIRE: 3, [3]: "REQUIRE", ASSIGNMENT: 4, [4]: "ASSIGNMENT" };

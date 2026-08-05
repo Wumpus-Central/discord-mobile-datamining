@@ -1,11 +1,11 @@
+// discord_app/modules/collectibles/native/CollectiblesUtils.tsx
+import { PriceSetAssignmentPurchaseTypes as closure_3 } from "ME";
 import { metadata } from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
 import { updateProduct } from "../../../stores/native/IAPStore.android.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { isPremiumGiftingSupported } from "../../device/BillingPlatformUtils.tsx";
 import { BalanceWidgetMode } from "../../virtual_currency/types.tsx";
 import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
-// discord_app/modules/collectibles/native/CollectiblesUtils.tsx
-import { PriceSetAssignmentPurchaseTypes as closure_3 } from "ME";
 
 function hasAtLeastOneGPlaySynced(nextResult) {
   const products = nextResult.products;

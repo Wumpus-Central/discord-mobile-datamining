@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsModal.tsx
 import "EditLinkedLobby";
 import { View } from "WebhookItem";
@@ -6,6 +5,7 @@ import ME from "ME";
 import { SearchTabs } from "MessageEmbedTypes";
 import { jsx } from "handleSetRegion";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c4;
 let c5;

@@ -1,9 +1,9 @@
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 // discord_app/modules/people/strangers/native/AcceptRequestConfirmationModal.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 
 let c4;
 let c5;

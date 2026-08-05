@@ -1,6 +1,6 @@
+// discord_app/utils/ErrorCommonUtils.tsx
 import { add } from "../../discord_common/js/packages/flux/LastFewActions.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
-// discord_app/utils/ErrorCommonUtils.tsx
 const result = require("set").fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {

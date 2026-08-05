@@ -1,10 +1,10 @@
+// discord_app/modules/links/native/BrowserManager.tsx
+import get_ActivityIndicator from "get ActivityIndicator";
+import keys from "keys";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
 import { keys } from "../../../ConstantsIOS.tsx";
 import { Linking } from "../../../lib/native/Linking.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
-// discord_app/modules/links/native/BrowserManager.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import keys from "keys";
 
 let NativeModules;
 let c3;

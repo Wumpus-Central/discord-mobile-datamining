@@ -1,10 +1,10 @@
-import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/collectibles/native/FeaturedBlock.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
 
 const require = arg1;
 function Subblocks(style) {

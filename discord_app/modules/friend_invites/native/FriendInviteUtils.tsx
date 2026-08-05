@@ -1,8 +1,8 @@
-import { generateAcceptInviteOptions } from "../../../actions/InstantInviteActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/friend_invites/native/FriendInviteUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
+import { generateAcceptInviteOptions } from "../../../actions/InstantInviteActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 let result = require("generateAcceptInviteOptions").fileFinishedImporting("modules/friend_invites/native/FriendInviteUtils.tsx");

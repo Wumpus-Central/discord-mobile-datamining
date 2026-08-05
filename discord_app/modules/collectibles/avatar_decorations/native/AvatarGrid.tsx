@@ -1,4 +1,3 @@
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/collectibles/avatar_decorations/native/AvatarGrid.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import sortActivity from "sortActivity";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/void/native.tsx";
 
 let c5;
 let closure_6;

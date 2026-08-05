@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { useInitialRegistrationStep } from "../useInitialRegistrationStep.tsx";
-import { useWideAuthView } from "../useWideAuthView.tsx";
 // discord_app/modules/auth/native/components/RegisterAccountInformation.tsx
 import updateInvite from "updateInvite";
 import _slicedToArray from "_slicedToArray";
@@ -17,6 +13,10 @@ import jsxProd from "useAuthFlowBackHandler";
 import createCacheKey from "createCacheKey";
 import { LinearTransition } from "module_4146";
 import { Easing } from "module_4146";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useInitialRegistrationStep } from "../useInitialRegistrationStep.tsx";
+import { useWideAuthView } from "../useWideAuthView.tsx";
 
 let closure_12;
 let closure_14;

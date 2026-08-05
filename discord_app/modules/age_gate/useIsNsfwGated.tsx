@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/age_gate/useIsNsfwGated.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");

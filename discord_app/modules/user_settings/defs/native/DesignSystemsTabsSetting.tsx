@@ -1,6 +1,6 @@
-import { UserSettingsDesignSystemTabs } from "../../design_system/native/UserSettingsDesignSystemTabs.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTabsSetting.tsx
 import createToggle from "createToggle";
+import { UserSettingsDesignSystemTabs } from "../../design_system/native/UserSettingsDesignSystemTabs.tsx";
 
 obj = {
   useTitle() {

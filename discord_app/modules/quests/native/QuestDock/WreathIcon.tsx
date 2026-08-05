@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../../_runtime/14249_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BaseIconImage } from "../../../../design/components/Icon/native/BaseIconImage.tsx";
 // discord_app/modules/quests/native/QuestDock/WreathIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../_runtime/14249_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BaseIconImage } from "../../../../design/components/Icon/native/BaseIconImage.tsx";
 
 const require = arg1;
 const result = require("Themes").fileFinishedImporting("modules/quests/native/QuestDock/WreathIcon.tsx");

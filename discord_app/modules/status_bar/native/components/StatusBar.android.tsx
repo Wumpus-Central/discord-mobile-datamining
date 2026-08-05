@@ -1,6 +1,6 @@
-import { pushStackEntry } from "StatusBarManager.android.tsx";
 // discord_app/modules/status_bar/native/components/StatusBar.android.tsx
 import { StatusBar } from "get ActivityIndicator";
+import { pushStackEntry } from "StatusBarManager.android.tsx";
 
 class StatusBarAndroid extends StatusBar {
   constructor() {

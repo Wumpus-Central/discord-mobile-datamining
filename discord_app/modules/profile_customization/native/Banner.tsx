@@ -1,11 +1,11 @@
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { preload } from "../../../components_native/common/FastImage.tsx";
 // discord_app/modules/profile_customization/native/Banner.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { BANNER_HEIGHT } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });

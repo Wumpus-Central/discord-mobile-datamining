@@ -1,9 +1,9 @@
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { computeChannelName } from "../channel/useChannelName.tsx";
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { computeChannelName } from "../channel/useChannelName.tsx";
 
 const require = arg1;
 const result = require("computeChannelName").fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");

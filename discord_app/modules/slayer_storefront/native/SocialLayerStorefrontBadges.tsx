@@ -1,7 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ClydeIcon } from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontBadges.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -10,6 +6,10 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import { space } from "Themes";
 import set from "jsxProd";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ClydeIcon } from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c4;
 let c5;

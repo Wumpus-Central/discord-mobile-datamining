@@ -1,9 +1,9 @@
-import { Modal } from "../../../design/components/Modal/native/Modal.native.tsx";
-import { getScreens } from "WebAuthnScreens.tsx";
 // discord_app/modules/webauthn/native/PasskeyUpsellFullModal.tsx
 import "noop";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import { jsx } from "jsxProd";
+import { Modal } from "../../../design/components/Modal/native/Modal.native.tsx";
+import { getScreens } from "WebAuthnScreens.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");

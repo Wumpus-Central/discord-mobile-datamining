@@ -1,6 +1,6 @@
-import { coalesceInvoiceItems } from "../modules/premium/PremiumSubscriptionInvoiceItem.tsx";
 // discord_app/records/InvoiceRecord.tsx
 import "toJS";
+import { coalesceInvoiceItems } from "../modules/premium/PremiumSubscriptionInvoiceItem.tsx";
 
 const require = arg1;
 let BaseInvoiceRecord;

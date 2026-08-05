@@ -1,10 +1,10 @@
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-import { useFavoritesAccess } from "../FavoritesHooks.tsx";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/hooks/useFavoritesGuildResetAction.tsx
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 import { Routes } from "ME";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import { useFavoritesAccess } from "../FavoritesHooks.tsx";
+import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");

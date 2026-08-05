@@ -1,8 +1,3 @@
-import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
-import { watchStream } from "../../actions/StreamActionCreators.tsx";
-import { shouldShowVoiceChannelChangeConfirmation } from "../channel/shouldShowVoiceChannelChangeConfirmation.tsx";
-import { _initialize } from "StageChannelNewUserManager.tsx";
-import { Permissions } from "StageChannelPermissions.tsx";
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import reset from "reset";
@@ -10,6 +5,11 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import closure_9 from "handleConnectionOpen";
+import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
+import { watchStream } from "../../actions/StreamActionCreators.tsx";
+import { shouldShowVoiceChannelChangeConfirmation } from "../channel/shouldShowVoiceChannelChangeConfirmation.tsx";
+import { _initialize } from "StageChannelNewUserManager.tsx";
+import { Permissions } from "StageChannelPermissions.tsx";
 
 const require = arg1;
 function connectToStage(channel, flag) {

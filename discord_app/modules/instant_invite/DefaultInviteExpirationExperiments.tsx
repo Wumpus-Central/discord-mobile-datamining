@@ -1,9 +1,9 @@
-import { isGuildMember } from "../../utils/InstantInviteUtils.tsx";
 // discord_app/modules/instant_invite/DefaultInviteExpirationExperiments.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 import createExperiment from "createExperiment";
 import createExperiment from "createExperiment";
+import { isGuildMember } from "../../utils/InstantInviteUtils.tsx";
 
 let c4;
 let c5;

@@ -1,8 +1,8 @@
-import { getPendingSource } from "../../../design/components/Illustration/native/redesign/generated/Pending.tsx";
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/message_request/native/MessageRequestEmpty.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { getPendingSource } from "../../../design/components/Illustration/native/redesign/generated/Pending.tsx";
+import { Button } from "../../../design/void/native.tsx";
 
 const require = arg1;
 const result = require("Button").fileFinishedImporting("modules/message_request/native/MessageRequestEmpty.tsx");

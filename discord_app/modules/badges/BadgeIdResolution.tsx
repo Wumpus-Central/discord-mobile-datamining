@@ -1,6 +1,6 @@
-import { LEGACY_BADGE_ID_MAP } from "../../../discord_common/js/shared/shared-constants/LegacyBadgeIdMap.tsx";
 // discord_app/modules/badges/BadgeIdResolution.tsx
 import set from "set";
+import { LEGACY_BADGE_ID_MAP } from "../../../discord_common/js/shared/shared-constants/LegacyBadgeIdMap.tsx";
 
 let set = new Set(Object.values(require("LEGACY_BADGE_ID_MAP").LEGACY_BADGE_ID_MAP));
 const result = set.fileFinishedImporting("modules/badges/BadgeIdResolution.tsx");

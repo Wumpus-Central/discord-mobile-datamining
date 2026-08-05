@@ -1,4 +1,3 @@
-import { useIsAppDM } from "../../app_dms/useIsAppDM.tsx";
 // discord_app/modules/user_profile/native/AddOrOpenAppButton.tsx
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import _slicedToArray from "_slicedToArray";
@@ -7,6 +6,7 @@ import { getSection } from "getIndexKey";
 import { AnalyticEvents } from "ME";
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { jsx } from "getBestActiveInput";
+import { useIsAppDM } from "../../app_dms/useIsAppDM.tsx";
 
 const require = arg1;
 function AddAppButton(application) {

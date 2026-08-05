@@ -1,5 +1,3 @@
-import { PermissionOverwriteType } from "../../../flow/Server.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/application_commands/native/ExecutedApplicationCommandPopout.tsx
 import showUserProfileActionSheet from "showUserProfileActionSheet";
 import get_ActivityIndicator from "Button";
@@ -16,6 +14,8 @@ import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import regExp from "regExp";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 
 let Fonts;
 let c5;

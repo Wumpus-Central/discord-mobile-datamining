@@ -1,11 +1,11 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
-import { BaseButton } from "BaseButton.native.tsx";
-import { BaseIconButton } from "BaseIconButton.native.tsx";
 // discord_app/design/components/Button/native/IconButton.native.tsx
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../Text/native/Text.tsx";
+import { BaseButton } from "BaseButton.native.tsx";
+import { BaseIconButton } from "BaseIconButton.native.tsx";
 
 let c3;
 let c4;

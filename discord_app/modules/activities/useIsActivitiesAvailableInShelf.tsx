@@ -1,6 +1,6 @@
-import { useIsActivitiesEnabledForCurrentPlatform } from "useIsActivitiesEnabledForCurrentPlatform.tsx";
 // discord_app/modules/activities/useIsActivitiesAvailableInShelf.tsx
 import noop from "noop";
+import { useIsActivitiesEnabledForCurrentPlatform } from "useIsActivitiesEnabledForCurrentPlatform.tsx";
 
 const require = arg1;
 const result = require("useIsPrivateChannelWithEnabledActivities").fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");

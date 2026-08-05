@@ -1,10 +1,10 @@
-import { EnvelopeIcon } from "../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
-import { SettingsIcon } from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx
 import markGuildsAsRead from "markGuildsAsRead";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { AnalyticsSections } from "ME";
+import { EnvelopeIcon } from "../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
+import { SettingsIcon } from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");

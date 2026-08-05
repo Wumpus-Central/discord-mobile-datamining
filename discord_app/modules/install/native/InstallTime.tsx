@@ -1,8 +1,8 @@
+// discord_app/modules/install/native/InstallTime.tsx
+import fetchFingerprint from "fetchFingerprint";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeInstallTimeModule.tsx";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import { sleep } from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-// discord_app/modules/install/native/InstallTime.tsx
-import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;
 function getFirstInstallTimeMillis(arg0) {

@@ -1,6 +1,6 @@
+// discord_app/modules/billing/hooks/useFPDurationLeft.tsx
 import { useCountdown } from "../../../hooks/useCountdown.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-// discord_app/modules/billing/hooks/useFPDurationLeft.tsx
 function roundFPCountdownUnits(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);

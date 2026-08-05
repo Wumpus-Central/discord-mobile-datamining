@@ -1,10 +1,10 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/age_gate/native/components/AgeGateUnderage.tsx
 import noop from "noop";
 import { View } from "Button";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_6;
 let error;

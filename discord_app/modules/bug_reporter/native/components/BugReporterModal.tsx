@@ -1,4 +1,3 @@
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/bug_reporter/native/components/BugReporterModal.tsx
 import zustandStore from "zustandStore";
 import PressableBase from "PressableBase";
@@ -9,6 +8,7 @@ import closure_9 from "zustandStore";
 import jsxProd from "_fetchBugReportConfig";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "n";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 
 let c10;
 let closure_12;

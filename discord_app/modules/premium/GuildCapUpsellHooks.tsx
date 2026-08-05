@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { HotspotStore } from "../hotspot/index.tsx";
 // discord_app/modules/premium/GuildCapUpsellHooks.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MAX_USER_GUILDS } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { HotspotStore } from "../hotspot/index.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");

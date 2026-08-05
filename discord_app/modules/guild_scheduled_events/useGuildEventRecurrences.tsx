@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { usePrevValue } from "../../hooks/usePrevValue.tsx";
 // discord_app/modules/guild_scheduled_events/useGuildEventRecurrences.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import scheduledEventSort from "scheduledEventSort";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { usePrevValue } from "../../hooks/usePrevValue.tsx";
 
 const require = arg1;
 const result = require("scheduledEventSort").fileFinishedImporting("modules/guild_scheduled_events/useGuildEventRecurrences.tsx");

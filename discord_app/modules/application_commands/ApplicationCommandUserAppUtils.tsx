@@ -1,5 +1,5 @@
-import { EphemeralMessageReason } from "../../../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx";
 // discord_app/modules/application_commands/ApplicationCommandUserAppUtils.tsx
+import { EphemeralMessageReason } from "../../../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx";
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
 export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {

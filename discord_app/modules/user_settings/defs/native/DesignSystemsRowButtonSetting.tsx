@@ -1,6 +1,6 @@
-import { UserSettingsDesignSystemRowButton } from "../../design_system/native/UserSettingsDesignSystemRowButton.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsRowButtonSetting.tsx
 import createToggle from "createToggle";
+import { UserSettingsDesignSystemRowButton } from "../../design_system/native/UserSettingsDesignSystemRowButton.tsx";
 
 obj = {
   useTitle() {

@@ -1,8 +1,8 @@
-import { _generateAnimationSource } from "BurstReactionEffectUtils.tsx";
-import { FadeOutLottieAnimation } from "FadeOutLottieAnimation.tsx";
 // discord_app/modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { _generateAnimationSource } from "BurstReactionEffectUtils.tsx";
+import { FadeOutLottieAnimation } from "FadeOutLottieAnimation.tsx";
 
 const require = arg1;
 const result = require("_generateAnimationSource").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");

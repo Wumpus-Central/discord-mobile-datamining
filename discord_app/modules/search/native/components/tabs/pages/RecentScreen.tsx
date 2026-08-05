@@ -1,6 +1,3 @@
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/search/native/components/tabs/pages/RecentScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import deserialize from "deserialize";
@@ -13,6 +10,9 @@ import MessageEmbedTypes from "MessageEmbedTypes";
 import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";
 import { SearchTypes } from "ME";
 import { jsx } from "Link";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 
 let c10;
 let closure_12;

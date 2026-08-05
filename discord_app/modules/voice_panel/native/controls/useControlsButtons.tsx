@@ -1,3 +1,9 @@
+// discord_app/modules/voice_panel/native/controls/useControlsButtons.tsx
+import VOICE_PANEL_DRAWER_MAX_WIDTH from "VOICE_PANEL_DRAWER_MAX_WIDTH";
+import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import VoicePanelControlsModes from "VoicePanelControlsModes";
+import { InputModes } from "ME";
+import { jsx } from "set";
 import { ChatButton } from "buttons/VoicePanelChatButton.tsx";
 import { ConnectButton } from "buttons/VoicePanelConnectButton.tsx";
 import { DisconnectCancelButton } from "buttons/VoicePanelDisconnectCancelButton.tsx";
@@ -6,12 +12,6 @@ import { PTTButton } from "buttons/VoicePanelMicButton.tsx";
 import { MobilePhoneShareIcon } from "buttons/VoicePanelScreenshareButton.tsx";
 import { SoundboardButton } from "buttons/VoicePanelSoundboardButton.tsx";
 import { VideoButtonRive } from "buttons/VoicePanelVideoButton.tsx";
-// discord_app/modules/voice_panel/native/controls/useControlsButtons.tsx
-import VOICE_PANEL_DRAWER_MAX_WIDTH from "VOICE_PANEL_DRAWER_MAX_WIDTH";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import VoicePanelControlsModes from "VoicePanelControlsModes";
-import { InputModes } from "ME";
-import { jsx } from "set";
 
 let c5;
 let closure_6;

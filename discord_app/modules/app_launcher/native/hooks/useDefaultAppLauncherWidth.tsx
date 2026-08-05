@@ -1,7 +1,7 @@
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { AppLauncherEntrypoint } from "../../AppLauncherTypes.tsx";
 // discord_app/modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { AppLauncherEntrypoint } from "../../AppLauncherTypes.tsx";
 
 const result = require("AppLauncherEntrypoint").fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
 

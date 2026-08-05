@@ -1,7 +1,7 @@
-import { GuildSettingsActionCreators } from "../../guild_settings/GuildSettingsActionCreators.tsx";
 // discord_app/modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx
 import usePriceTiers from "usePriceTiers";
 import { GuildSettingsSections } from "ME";
+import { GuildSettingsActionCreators } from "../../guild_settings/GuildSettingsActionCreators.tsx";
 
 const result = require("module_8943").fileFinishedImporting("modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx");
 

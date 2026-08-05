@@ -1,5 +1,5 @@
-import { sum } from "../../../../../discord_common/js/shared/Constants.tsx";
 // discord_app/modules/rpc/server/commands/platformBehaviors.tsx
+import { sum } from "../../../../../discord_common/js/shared/Constants.tsx";
 const result = require("set").fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
 
 export default {

@@ -1,6 +1,3 @@
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
-import { set } from "../../../../../../../utils/PlatformUtils.tsx";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import { Image } from "get ActivityIndicator";
@@ -12,6 +9,9 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import { InviteTypes } from "InviteSendStates";
+import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
+import { set } from "../../../../../../../utils/PlatformUtils.tsx";
+import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 
 const require = arg1;
 const result = require("GuildNSFWContentLevel").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");

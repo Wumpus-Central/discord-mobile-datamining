@@ -1,8 +1,8 @@
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx
 import importAllResult from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

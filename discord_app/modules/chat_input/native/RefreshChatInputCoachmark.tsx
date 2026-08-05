@@ -1,9 +1,9 @@
-import { useCoachmark } from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 // discord_app/modules/chat_input/native/RefreshChatInputCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
+import { useCoachmark } from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
+import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 
 const require = arg1;
 const result = require("ContentDismissActionType").fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");

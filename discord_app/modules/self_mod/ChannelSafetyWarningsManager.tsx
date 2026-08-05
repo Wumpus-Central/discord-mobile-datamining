@@ -1,8 +1,8 @@
-import { InappropriateConversationExperiment } from "inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
 // discord_app/modules/self_mod/ChannelSafetyWarningsManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";
+import { InappropriateConversationExperiment } from "inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
 
 const require = arg1;
 function handleChannelSelect(channelId) {

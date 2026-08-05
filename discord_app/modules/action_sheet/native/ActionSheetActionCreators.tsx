@@ -1,8 +1,8 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/action_sheet/native/ActionSheetActionCreators.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { jsx } from "jsxProd";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 let closure_3 = ["impressionName", "impressionProperties", "backdropKind", "disableHapticOnOpen", "appEntryKey"];

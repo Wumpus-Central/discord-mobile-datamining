@@ -1,5 +1,5 @@
-import { isLinkTrusted } from "../../utils/MaskedLinkUtils.tsx";
 // discord_app/modules/markup/MarkupReactLinkUtils.tsx
+import { isLinkTrusted } from "../../utils/MaskedLinkUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(target) {

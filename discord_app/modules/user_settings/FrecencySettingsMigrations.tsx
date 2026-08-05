@@ -1,11 +1,11 @@
+// discord_app/modules/user_settings/FrecencySettingsMigrations.tsx
+import MAX_FAVORITES from "MAX_FAVORITES";
+import { ID_REGEX } from "ME";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { b64ToProto } from "UserSettingsUtils.tsx";
-// discord_app/modules/user_settings/FrecencySettingsMigrations.tsx
-import MAX_FAVORITES from "MAX_FAVORITES";
-import { ID_REGEX } from "ME";
 
 let c3;
 let c4;

@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecoration.tsx
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");

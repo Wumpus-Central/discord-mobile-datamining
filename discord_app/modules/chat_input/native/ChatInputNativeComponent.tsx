@@ -1,10 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { hexToRgba } from "../../../utils/ColorUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
 // discord_app/modules/chat_input/native/ChatInputNativeComponent.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -13,6 +6,13 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "get ActivityIndicator";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

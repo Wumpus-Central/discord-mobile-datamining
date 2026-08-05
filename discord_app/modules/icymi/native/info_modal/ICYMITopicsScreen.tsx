@@ -1,4 +1,3 @@
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/icymi/native/info_modal/ICYMITopicsScreen.tsx
 import GuildPrimaryCategory from "GuildPrimaryCategory";
 import initialize from "initialize";
@@ -8,6 +7,7 @@ import getPrimaryCategories from "getPrimaryCategories";
 import { GuildPrimaryCategory } from "GuildPrimaryCategory";
 import jsxProd from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let StyleSheet;
 let c10;

@@ -1,11 +1,11 @@
-import { t } from "../../../../../_runtime/03867_t.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useTieredTenureBadgeForUser } from "useTieredTenureBadgeForUser.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTenureBadging.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
 import GuildFeatures from "GuildFeatures";
+import { t } from "../../../../../_runtime/03867_t.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useTieredTenureBadgeForUser } from "useTieredTenureBadgeForUser.tsx";
 
 let closure_6;
 let error;

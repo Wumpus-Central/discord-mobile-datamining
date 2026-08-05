@@ -1,3 +1,6 @@
+// discord_app/modules/quests/lib/AssetUtils.tsx
+import QuestsExperimentLocations from "QuestsExperimentLocations";
+import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_5 } from "ME";
 import { metadata } from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
 import { metadata } from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
 import { set } from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
@@ -5,9 +8,6 @@ import { QuestRewardTypes } from "../../../../discord_common/js/shared/shared-co
 import { getDevicePixelRatio } from "../../../utils/getDevicePixelRatio.native.tsx";
 import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
 import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
-// discord_app/modules/quests/lib/AssetUtils.tsx
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_5 } from "ME";
 
 let TIER_1;
 let TIER_2;

@@ -1,7 +1,3 @@
-import { ChatIcon } from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
-import { AnimatedCount } from "AnimatedCounter.tsx";
 // discord_app/modules/forums/native/posts/ForumPostMessageCount.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -10,6 +6,10 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "jsxProd";
+import { ChatIcon } from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
+import { AnimatedCount } from "AnimatedCounter.tsx";
 
 let c4;
 let c5;

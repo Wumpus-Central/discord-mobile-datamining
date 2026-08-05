@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { sortKey } from "StageChannelParticipants.tsx";
 // discord_app/modules/stage_channels/useStageBlockedUsersCount.tsx
 import getActiveStageChannelIds from "getActiveStageChannelIds";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { sortKey } from "StageChannelParticipants.tsx";
 
 const require = arg1;
 const result = require("sortKey").fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");

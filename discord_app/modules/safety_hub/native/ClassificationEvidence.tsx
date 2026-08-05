@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ClassificationEvidence } from "ClassificationMessageEvidence.tsx";
 // discord_app/modules/safety_hub/native/ClassificationEvidence.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ClassificationEvidence } from "ClassificationMessageEvidence.tsx";
 
 let c4;
 let c5;

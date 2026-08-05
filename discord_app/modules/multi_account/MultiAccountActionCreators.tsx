@@ -1,10 +1,10 @@
-import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/multi_account/MultiAccountActionCreators.tsx
 import setSecondaryToken from "setSecondaryToken";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import ME from "ME";
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let error;
 let metroImportAll;

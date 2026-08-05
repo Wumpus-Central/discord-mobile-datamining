@@ -1,6 +1,6 @@
-import { GIF_PROVIDER } from "../modules/gif_picker/GifProvider.tsx";
 // discord_app/utils/GIFPickerUtils.tsx
 import { SearchTypes } from "ME";
+import { GIF_PROVIDER } from "../modules/gif_picker/GifProvider.tsx";
 
 const result = require("set").fileFinishedImporting("utils/GIFPickerUtils.tsx");
 

@@ -1,7 +1,7 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/local_push_notification/native/LocalPushNotificationActionCreators.tsx
 import { LocalNotificationTypes } from "LocalNotificationTypes";
 import { AnalyticEvents } from "ME";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 let result = require("getDeviceMetadata").fileFinishedImporting("modules/local_push_notification/native/LocalPushNotificationActionCreators.tsx");
 

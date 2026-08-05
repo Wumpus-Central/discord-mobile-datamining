@@ -1,13 +1,13 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/channel/useChannelName.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 
 let error;
 let metroImportAll;

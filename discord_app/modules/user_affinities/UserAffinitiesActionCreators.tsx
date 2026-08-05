@@ -1,9 +1,9 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/user_affinities/UserAffinitiesActionCreators.tsx
 import hasConsented from "hasConsented";
 import recomputeAffinities from "recomputeAffinities";
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let c5;
 let closure_6;

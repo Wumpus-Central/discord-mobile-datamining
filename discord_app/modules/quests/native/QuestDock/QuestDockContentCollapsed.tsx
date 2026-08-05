@@ -1,12 +1,12 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { QuestDockMode } from "QuestDockGestureContext.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockContentCollapsed.tsx
 import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import { QUEST_DOCK_MODE_CHANGE_PHYSICS as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { QuestDockMode } from "QuestDockGestureContext.tsx";
 
 let require = arg1;
 let c3 = importAllResult;

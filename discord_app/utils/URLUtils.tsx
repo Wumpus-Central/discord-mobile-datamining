@@ -1,9 +1,9 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { isDiscordFrontendDevelopment } from "GlobalUtils.tsx";
-import { isDiscordProxiedAssetUrl } from "URLUtils.tsx";
 // discord_app/utils/URLUtils.tsx
 import { Routes } from "ME";
 import set from "Url";
+import { apply } from "../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "GlobalUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "URLUtils.tsx";
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {
   if (tmp) {

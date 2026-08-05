@@ -1,6 +1,6 @@
-import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
 // discord_app/modules/chat_input/native/ChatInputNativeCommands.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
+import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
 
 let c3;
 let c4;

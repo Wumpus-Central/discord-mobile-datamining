@@ -1,8 +1,3 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { fromBlob } from "../lib/uploader_inline/InlineUploader.tsx";
-import { parseRawEmojiObject } from "../modules/emojis/UnicodeEmojis.tsx";
-import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/actions/EmojiActionCreators.tsx
 import closure_3 from "MAX_FAVORITES";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -10,6 +5,11 @@ import _handleConnectionOpen from "_handleConnectionOpen";
 import handleConnectionOpen from "handleConnectionOpen";
 import { Endpoints } from "ME";
 import MAX_FAVORITES from "MAX_FAVORITES";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { fromBlob } from "../lib/uploader_inline/InlineUploader.tsx";
+import { parseRawEmojiObject } from "../modules/emojis/UnicodeEmojis.tsx";
+import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 
 let c9;
 let metroImportAll;

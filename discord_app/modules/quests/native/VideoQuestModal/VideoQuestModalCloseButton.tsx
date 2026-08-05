@@ -1,9 +1,9 @@
+// discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx
+import { jsx } from "jsxProd";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx
-import { jsx } from "jsxProd";
 
 const result = require("PressableBase").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");
 

@@ -1,7 +1,7 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 // discord_app/modules/discord_md5/native/DiscordMd5Native.tsx
 import { NativeModules } from "get ActivityIndicator";
 import "fromBlob";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 
 const prototype = function DiscordMd5Native() {
   return HermesBuiltin.applyArguments(new.target, new.target);

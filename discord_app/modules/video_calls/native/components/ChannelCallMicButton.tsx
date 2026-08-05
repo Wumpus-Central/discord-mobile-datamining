@@ -1,8 +1,8 @@
-import { getMuteStates } from "../../useMuteStates.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallMicButton.tsx
 import noop from "noop";
 import set from "set";
 import { jsx } from "jsxProd";
+import { getMuteStates } from "../../useMuteStates.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");

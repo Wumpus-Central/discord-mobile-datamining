@@ -1,7 +1,7 @@
-import { useIsSocialLayerParentApplication } from "../applications/useIsSocialLayerParentApplication.tsx";
-import { isAgeRestrictedContentClassification } from "../content_classification/utils.tsx";
 // discord_app/modules/oauth2/Utils.tsx
 import { MarketingURLs } from "ME";
+import { useIsSocialLayerParentApplication } from "../applications/useIsSocialLayerParentApplication.tsx";
+import { isAgeRestrictedContentClassification } from "../content_classification/utils.tsx";
 
 let result = require("getSystemLocale").fileFinishedImporting("modules/oauth2/Utils.tsx");
 

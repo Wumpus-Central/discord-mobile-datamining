@@ -1,12 +1,12 @@
+// discord_app/modules/messages/MessageAttachmentUtils.tsx
+import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import ME from "ME";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { ContentHarmTypeChannel } from "../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import { getEligibleHarmTypesConfigsForContext } from "../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import { ObscureReason } from "../explicit_media_redaction/ObscureMediaModels.tsx";
 import { isMediaAttachment } from "../forums/ForumPostMediaUtils.tsx";
 import { computeGlobalSpoilerDisplay } from "computeGlobalSpoilerDisplay.tsx";
-// discord_app/modules/messages/MessageAttachmentUtils.tsx
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
 
 let c4;
 let c5;

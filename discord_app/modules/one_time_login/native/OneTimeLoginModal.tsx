@@ -1,6 +1,3 @@
-import { getMixedGradientColor } from "../../client_themes/native/ThemedGradient.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/one_time_login/native/OneTimeLoginModal.tsx
 import closure_3 from "ME";
 import CircleErrorIcon from "CircleErrorIcon";
@@ -11,6 +8,9 @@ import ME from "ME";
 import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_12 } from "items1";
 import jsxProd from "getAlertModalItemKey";
 import createCacheKey from "createCacheKey";
+import { getMixedGradientColor } from "../../client_themes/native/ThemedGradient.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 let c10;
 let c5;

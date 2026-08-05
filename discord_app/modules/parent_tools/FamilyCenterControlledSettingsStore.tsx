@@ -1,7 +1,7 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { b64ToProto } from "../user_settings/UserSettingsUtils.tsx";
 // discord_app/modules/parent_tools/FamilyCenterControlledSettingsStore.tsx
 import { Store } from "initialize";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { b64ToProto } from "../user_settings/UserSettingsUtils.tsx";
 
 const require = arg1;
 let c2 = false;

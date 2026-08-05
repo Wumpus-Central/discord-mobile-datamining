@@ -1,5 +1,3 @@
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "AppAnalyticsUtils.tsx";
 // discord_app/modules/app_analytics/useTrackImpression.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +5,8 @@ import handleConnectionOpen from "handleConnectionOpen";
 import closure_6 from "handleConnectionOpen";
 import withEqualityFn from "withEqualityFn";
 import encodeProperties from "encodeProperties";
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "AppAnalyticsUtils.tsx";
 
 let c10;
 let c9;

@@ -1,8 +1,8 @@
-import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherButtonIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");

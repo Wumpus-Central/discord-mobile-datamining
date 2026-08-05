@@ -1,13 +1,13 @@
-import { getNoResultsSource } from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { block } from "ShopBlockItem.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopFeaturedPage.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { CollectiblesMobileShopScreen as closure_4 } from "items";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getNoResultsSource } from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { block } from "ShopBlockItem.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });

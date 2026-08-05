@@ -1,9 +1,9 @@
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsCompletedModal.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let c5;
 let closure_6;

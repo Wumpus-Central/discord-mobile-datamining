@@ -1,4 +1,3 @@
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -6,6 +5,7 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { HighlightSettings } from "ME";
 import { jsx } from "jsxProd";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 
 const require = arg1;
 function Row(guildId) {

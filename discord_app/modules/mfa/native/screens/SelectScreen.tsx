@@ -1,15 +1,15 @@
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { NAV_BAR_HEIGHT } from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useWideAuthView } from "../../../auth/native/useWideAuthView.tsx";
 // discord_app/modules/mfa/native/screens/SelectScreen.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { SELECT_NAMES } from "get webauthn";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { NAV_BAR_HEIGHT } from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useWideAuthView } from "../../../auth/native/useWideAuthView.tsx";
 
 let c5;
 let closure_6;

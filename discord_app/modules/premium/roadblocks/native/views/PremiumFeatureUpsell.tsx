@@ -1,6 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
-import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 // discord_app/modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx
 import LinearGradient from "LinearGradient";
 import get_ActivityIndicator from "registerAsset";
@@ -9,6 +6,9 @@ import ME from "ME";
 import { Gradients } from "items";
 import jsxProd from "CONFIG_NEVER_ANIMATE";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 
 let c10;
 let c4;

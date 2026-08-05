@@ -1,7 +1,7 @@
-import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 // discord_app/modules/masked_link/MaskedLinkModalActionCreators.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 
 const require = arg1;
 const result = require("MaskedLinkModal").fileFinishedImporting("modules/masked_link/MaskedLinkModalActionCreators.native.tsx");

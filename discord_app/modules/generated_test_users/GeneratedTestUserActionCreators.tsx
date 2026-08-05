@@ -1,11 +1,11 @@
-import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/generated_test_users/GeneratedTestUserActionCreators.tsx
 import handleLogout from "handleLogout";
 import createdAt from "createdAt";
 import handleAddUser from "handleAddUser";
 import { Endpoints } from "ME";
 import { SafetyToastType } from "SafetyToastType";
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function _getGeneratedPoolById() {

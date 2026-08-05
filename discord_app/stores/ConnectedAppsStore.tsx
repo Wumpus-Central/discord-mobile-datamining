@@ -1,6 +1,6 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/ConnectedAppsStore.tsx
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 let closure_2 = {};
 class ConnectedAppsStore extends Store {

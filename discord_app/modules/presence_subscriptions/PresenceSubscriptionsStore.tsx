@@ -1,9 +1,9 @@
-import { ActivitiesActionCreators } from "../../actions/ActivitiesActionCreators.tsx";
 // discord_app/modules/presence_subscriptions/PresenceSubscriptionsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import sortActivity from "sortActivity";
 import { INVITE_EXPIRATION_MS } from "items3";
 import { Store } from "initialize";
+import { ActivitiesActionCreators } from "../../actions/ActivitiesActionCreators.tsx";
 
 function handleConnectionOpenOrResumed() {
   let closure_5 = {};

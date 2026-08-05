@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/hub/HubJoinManager.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let require = arg1;
 class HubJoinManager extends tmp2 {

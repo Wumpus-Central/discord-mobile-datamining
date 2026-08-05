@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../GuildPowerups.messages.js";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../GuildPowerups.messages.js";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");

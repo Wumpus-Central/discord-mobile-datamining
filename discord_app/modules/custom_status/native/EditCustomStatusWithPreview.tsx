@@ -1,7 +1,3 @@
-import { registerAsset } from "../../../../_runtime/08279_registerAsset.js";
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/custom_status/native/EditCustomStatusWithPreview.tsx
 import ActivityEmoji from "ActivityEmoji";
 import setCustomStatus from "setCustomStatus";
@@ -12,6 +8,10 @@ import ME from "ME";
 import { EmojiIntention } from "set";
 import jsxProd from "removeCustomStatus";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/08279_registerAsset.js";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let Fonts;
 let c10;

@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 function canToggleCommunicationDisableOnUser(id, id2, items) {
   let obj;

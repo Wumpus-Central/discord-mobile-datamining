@@ -1,3 +1,12 @@
+// discord_app/modules/user_profile/native/UserProfileEditForm.tsx
+import getSystemLocale from "getSystemLocale";
+import get_ActivityIndicator from "setPendingChanges";
+import zustandStore from "zustandStore";
+import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET";
+import ME from "ME";
+import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES";
+import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement";
+import jsxProd from "styles";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -23,15 +32,6 @@ import { UserProfileNameplateEditButton } from "UserProfileNameplateEditButton.t
 import { UserProfilePrimaryGuildEditButton } from "UserProfilePrimaryGuildEditButton.tsx";
 import { DisplayName } from "UserProfilePrimaryInfo.tsx";
 import { useSharedStyles } from "UserProfileSharedStyles.tsx";
-// discord_app/modules/user_profile/native/UserProfileEditForm.tsx
-import getSystemLocale from "getSystemLocale";
-import get_ActivityIndicator from "setPendingChanges";
-import zustandStore from "zustandStore";
-import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET";
-import ME from "ME";
-import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES";
-import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement";
-import jsxProd from "styles";
 
 let c10;
 let c4;

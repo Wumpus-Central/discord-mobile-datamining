@@ -1,11 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { usePrevious } from "../../hooks/usePrevious.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { apexExperiment } from "../parent_tools/FamilyCenterConnectionPrereqExperiment.tsx";
-import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-import { messagesProxy } from "AgeAssurance.messages.js";
 // discord_app/modules/age_assurance/AgeVerificationUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import _slicedToArray from "_slicedToArray";
@@ -21,6 +13,14 @@ import { MessageEmbedTypes } from "ME";
 import result from "result";
 import { SafetyToastType } from "SafetyToastType";
 import set from "noop";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { usePrevious } from "../../hooks/usePrevious.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { apexExperiment } from "../parent_tools/FamilyCenterConnectionPrereqExperiment.tsx";
+import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import { messagesProxy } from "AgeAssurance.messages.js";
 
 let AgeGateSource;
 let closure_14;

@@ -1,9 +1,9 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/utils/UserUtils.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
 
 let c4;
 let c5;

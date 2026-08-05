@@ -1,7 +1,7 @@
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import { mutable } from "../AccessibilityPreferencesSharedValue.native.tsx";
 // discord_app/design/animation/reanimated/spring/spring.tsx
 import { CONFIG_NEVER_ANIMATE } from "CONFIG_NEVER_ANIMATE";
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { mutable } from "../AccessibilityPreferencesSharedValue.native.tsx";
 
 function withSpring(value, SUBTLE_SPRING, fn, fn2) {
   let str = fn;

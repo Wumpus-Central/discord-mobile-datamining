@@ -1,8 +1,8 @@
-import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/stage_channels/native/StageChannelListStore.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import identity from "identity";
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 
 const require = arg1;
 let closure_4 = identity.createWithEqualityFn((arg0) => {

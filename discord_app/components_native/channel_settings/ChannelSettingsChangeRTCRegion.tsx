@@ -1,6 +1,3 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { TableRadioRow } from "../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import { Form } from "../../design/void/Form/native/index.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx
 import _toArray from "_toArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -9,6 +6,9 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { TableRadioRow } from "../../design/components/TableRow/native/TableRadioRow.native.tsx";
+import { Form } from "../../design/void/Form/native/index.tsx";
 
 let require = arg1;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";

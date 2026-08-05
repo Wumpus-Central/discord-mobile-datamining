@@ -1,8 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { MAX_REFERRALS_SENT } from "../hooks/useReferralProgramBannerDetails.tsx";
 // discord_app/modules/premium/referral_program/native/ReferralProgramPerkCard.tsx
 import asyncRequireImpl from "asyncRequireImpl";
 import { View } from "ACTION_SHEET_HEIGHT_HALF";
@@ -10,6 +5,11 @@ import emitChanges from "emitChanges";
 import ME from "ME";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { MAX_REFERRALS_SENT } from "../hooks/useReferralProgramBannerDetails.tsx";
 
 let c9;
 let closure_6;

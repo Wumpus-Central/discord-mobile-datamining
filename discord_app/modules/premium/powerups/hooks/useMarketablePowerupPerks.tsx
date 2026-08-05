@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import BoostedGuildTiers from "BoostedGuildTiers";
 import set from "BoostedGuildTiers";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;

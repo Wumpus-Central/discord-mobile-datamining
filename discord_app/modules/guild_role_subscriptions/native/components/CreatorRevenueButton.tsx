@@ -1,8 +1,8 @@
-import { ShinyButton } from "ShinyButton.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ShinyButton } from "ShinyButton.tsx";
 
 let closure_3 = createCacheKey.createStyles({ container: { borderRadius: 3 } });
 const result = require("createCacheKey").fileFinishedImporting("modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx");

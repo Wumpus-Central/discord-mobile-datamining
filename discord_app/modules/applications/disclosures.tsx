@@ -1,7 +1,7 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
 // discord_app/modules/applications/disclosures.tsx
 import set from "set";
 import { Endpoints } from "ME";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
 
 const require = arg1;
 function _getDisclosures() {

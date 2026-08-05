@@ -1,6 +1,6 @@
+// discord_app/actions/GuildSubscriptionsActionCreators.tsx
 import { dispatcher } from "../Dispatcher.tsx";
 import { reset } from "../lib/guild/GuildChannelSubscriptions.tsx";
-// discord_app/actions/GuildSubscriptionsActionCreators.tsx
 let result = require("set").fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 
 export const subscribeMembers = function subscribeMembers(guildId, userIds) {

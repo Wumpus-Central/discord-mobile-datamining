@@ -1,10 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { useIsSpeaking } from "../../hooks/useIsSpeaking.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { apexExperiment } from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
-import { useAvatarDecoration } from "../collectibles/avatar_decorations/useAvatarDecoration.tsx";
-import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
-import { getParticipantUserKey } from "getParticipantUserKey.tsx";
 // discord_app/modules/calls/ChannelRTCParticipants.tsx
 import participantFromServer from "participantFromServer";
 import reset from "reset";
@@ -19,6 +12,13 @@ import updateVoiceState from "updateVoiceState";
 import ParticipantTypes from "ParticipantTypes";
 import ME from "ME";
 import { MediaEngineContextTypes } from "DesktopSources";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { useIsSpeaking } from "../../hooks/useIsSpeaking.tsx";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
+import { apexExperiment } from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
+import { useAvatarDecoration } from "../collectibles/avatar_decorations/useAvatarDecoration.tsx";
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
+import { getParticipantUserKey } from "getParticipantUserKey.tsx";
 
 let closure_14;
 let closure_15;

@@ -1,6 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useFocusRefOnNavigation } from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
-import { NameValidationState } from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
 // discord_app/modules/auth/native/components/RegisterUsernameInput.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +9,9 @@ import { FadeIn } from "module_4146";
 import { FadeOut } from "module_4146";
 import { LinearTransition } from "module_4146";
 import { Easing } from "module_4146";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useFocusRefOnNavigation } from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
+import { NameValidationState } from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
 
 let c10;
 let c9;

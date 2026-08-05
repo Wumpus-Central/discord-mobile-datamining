@@ -1,5 +1,5 @@
-import { 01858__ } from "../../../../_runtime/metro/01858__.js";
 // discord_common/js/shared/utils/StringUtils.tsx
+import { 01858__ } from "../../../../_runtime/metro/01858__.js";
 const re2 = /[\u0300-\u036f]/g;
 const re3 = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
 if (null == String.prototype.normalize) {

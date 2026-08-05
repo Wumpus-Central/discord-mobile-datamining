@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/experiments/ExperimentManager.tsx
 import getHash from "getHash";
 import { registerExperiment } from "getHash";
 import ExperimentBuckets from "ExperimentBuckets";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let ExposureTypes;
 let c4;

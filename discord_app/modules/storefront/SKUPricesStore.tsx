@@ -1,7 +1,7 @@
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/storefront/SKUPricesStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import { Store } from "initialize";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 function resetStoreState() {

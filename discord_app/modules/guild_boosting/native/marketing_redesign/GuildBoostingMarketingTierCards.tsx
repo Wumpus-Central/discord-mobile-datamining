@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CONTROL_RESOLUTION } from "../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx";
-import { items } from "MarketingCardsScroller.tsx";
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx
 import Button from "Button";
 import importAllResult from "BoostedGuildTiers";
@@ -11,6 +6,11 @@ import ME from "ME";
 import { BoostedGuildFeatures } from "GuildFeatures";
 import jsxProd from "module_4146";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CONTROL_RESOLUTION } from "../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx";
+import { items } from "MarketingCardsScroller.tsx";
 
 let BoostedGuildTiers;
 let c10;

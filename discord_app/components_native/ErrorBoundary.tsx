@@ -1,11 +1,3 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../design/components/Button/native/Button.native.tsx";
-import { getAppCrashSource } from "../design/components/Illustration/native/redesign/generated/AppCrash.tsx";
-import { Text } from "../design/components/Text/native/Text.tsx";
-import { Button } from "../design/void/native.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { SentryUtils.native } from "../utils/SentryUtils.native.tsx";
 // discord_app/components_native/ErrorBoundary.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -14,6 +6,14 @@ import get_ActivityIndicator from "set";
 import getCurrentBuildOverride from "getCurrentBuildOverride";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../design/components/Button/native/Button.native.tsx";
+import { getAppCrashSource } from "../design/components/Illustration/native/redesign/generated/AppCrash.tsx";
+import { Text } from "../design/components/Text/native/Text.tsx";
+import { Button } from "../design/void/native.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { SentryUtils.native } from "../utils/SentryUtils.native.tsx";
 
 let c10;
 let c9;

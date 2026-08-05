@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 // discord_app/modules/dismissible_content/DismissibleContentUnsafeUtils.tsx
 import isSingleUseDismissibleContent from "isSingleUseDismissibleContent";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import handleConnectionOpen from "handleConnectionOpen";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 
 const require = arg1;
 class UNSAFE_isDismissibleContentDismissed {

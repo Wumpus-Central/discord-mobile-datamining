@@ -1,11 +1,11 @@
-import { useNavigation } from "../../../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { TwoWayLinkError } from "../TwoWayLinkError.tsx";
-import { useConnectRetry } from "../useConnectRetry.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx
 import "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
 import { jsx } from "jsxProd";
+import { useNavigation } from "../../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { TwoWayLinkError } from "../TwoWayLinkError.tsx";
+import { useConnectRetry } from "../useConnectRetry.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");

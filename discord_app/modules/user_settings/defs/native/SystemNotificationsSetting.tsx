@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/SystemNotificationsSetting.tsx
 import closure_3 from "EventActionType";
 import { NativeModules } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { AnalyticEvents } from "ME";
 import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus";
 import EventActionType from "EventActionType";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let error;
 let metroImportAll;

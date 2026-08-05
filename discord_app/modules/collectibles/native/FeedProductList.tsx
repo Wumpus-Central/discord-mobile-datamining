@@ -1,11 +1,11 @@
-import { ShopCardGridItem } from "CollectiblesShopCardsGrid.tsx";
-import { CollectiblesShopCardInternalV2 } from "CollectiblesShopCardV2.tsx";
-import { sharedValue } from "SkeletonCard.tsx";
 // discord_app/modules/collectibles/native/FeedProductList.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ShopCardGridItem } from "CollectiblesShopCardsGrid.tsx";
+import { CollectiblesShopCardInternalV2 } from "CollectiblesShopCardV2.tsx";
+import { sharedValue } from "SkeletonCard.tsx";
 
 const require = arg1;
 function SkeletonGrid(accessibilityLabel) {

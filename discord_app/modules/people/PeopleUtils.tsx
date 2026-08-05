@@ -1,8 +1,8 @@
-import { handleRelationshipAddError } from "../../actions/RelationshipActionCreators.tsx";
-import { showRequestFailedAlert } from "../game_relationships/GameRelationshipActionCreators.tsx";
 // discord_app/modules/people/PeopleUtils.tsx
 import upsertRelationship from "upsertRelationship";
 import { AbortCodes } from "ME";
+import { handleRelationshipAddError } from "../../actions/RelationshipActionCreators.tsx";
+import { showRequestFailedAlert } from "../game_relationships/GameRelationshipActionCreators.tsx";
 
 const require = arg1;
 let result = require("showRequestFailedAlert").fileFinishedImporting("modules/people/PeopleUtils.tsx");

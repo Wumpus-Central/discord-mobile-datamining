@@ -1,3 +1,7 @@
+// discord_app/modules/messages/native/renderer/system_messages/createCommonMessage.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/07883_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/07884_registerAsset.js";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
@@ -6,10 +10,6 @@ import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
 import { resetCache } from "../../../../../utils/DateUtils.tsx";
 import { MessageAccessibilityAction } from "../../MessageAccessibilityActions.tsx";
 import { frozen } from "../EmbedUtils.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/createCommonMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {

@@ -1,10 +1,10 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/Form/native/FormSwitch.tsx
 import "noop";
 import { Switch } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 
 const require = arg1;
 createCacheKey = { switch: { marginVertical: -5 }, track: null };

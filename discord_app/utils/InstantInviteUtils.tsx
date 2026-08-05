@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { NOOP } from "AutocompleteUtils.tsx";
 // discord_app/utils/InstantInviteUtils.tsx
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -10,6 +8,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import makeSortedChannel from "makeSortedChannel";
 import { ChannelTypes } from "ME";
 import { InviteTargetTypes } from "InviteSendStates";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { NOOP } from "AutocompleteUtils.tsx";
 
 const require = arg1;
 function isGuildMember(omitGuildId, id) {

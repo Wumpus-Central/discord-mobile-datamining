@@ -1,5 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,6 +5,8 @@ import handleModifyingAppliedBoostStart from "handleModifyingAppliedBoostStart";
 import handleConnectionReset from "handleConnectionReset";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 const result = require("handleModifyingAppliedBoostStart").fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");

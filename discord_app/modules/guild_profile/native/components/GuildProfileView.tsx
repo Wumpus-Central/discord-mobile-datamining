@@ -1,3 +1,10 @@
+// discord_app/modules/guild_profile/native/components/GuildProfileView.tsx
+import Text from "Text";
+import get_ActivityIndicator from "LinearGradient";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { GuildFeatures } from "ME";
+import jsxProd from "TraitEmoji";
+import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
@@ -9,13 +16,6 @@ import { useProfilePrimaryColor } from "../GuildProfileUtils.tsx";
 import { ClickableGameIcon } from "GuildProfileGames.tsx";
 import { styles } from "GuildProfileHeader.tsx";
 import { TraitEmoji } from "GuildProfileTraits.tsx";
-// discord_app/modules/guild_profile/native/components/GuildProfileView.tsx
-import Text from "Text";
-import get_ActivityIndicator from "LinearGradient";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildFeatures } from "ME";
-import jsxProd from "TraitEmoji";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

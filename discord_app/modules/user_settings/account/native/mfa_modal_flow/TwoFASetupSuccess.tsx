@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/13942_registerAsset.js";
-import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { TwoFAModalSetupSections } from "TwoFASetupModal.tsx";
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +5,12 @@ import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/13942_registerAsset.js";
+import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { TwoFAModalSetupSections } from "TwoFASetupModal.tsx";
 
 let c9;
 let closure_6;

@@ -1,11 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { getGuildBadgeSource } from "../../guild/native/GuildBadge.tsx";
-import { render } from "../../guild/native/GuildInviteIcon.tsx";
-import { InviteTypes } from "../../instant_invite/InviteTypeUtils.tsx";
-import { InviteRolesList } from "InviteRolesList.tsx";
 // discord_app/modules/accept_invite/native/InviteDetails.tsx
 import _slicedToArray from "_slicedToArray";
 import getAvatarURL from "getAvatarURL";
@@ -17,6 +9,14 @@ import ME from "ME";
 import { INVITE_ROUTING_HUB_GUILD_ID as closure_11 } from "HubEmailConnectionSteps";
 import jsxProd from "expandEventProperties";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { getGuildBadgeSource } from "../../guild/native/GuildBadge.tsx";
+import { render } from "../../guild/native/GuildInviteIcon.tsx";
+import { InviteTypes } from "../../instant_invite/InviteTypeUtils.tsx";
+import { InviteRolesList } from "InviteRolesList.tsx";
 
 let c10;
 let c9;

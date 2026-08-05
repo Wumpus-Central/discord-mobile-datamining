@@ -1,10 +1,10 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_6;
 let error;

@@ -1,3 +1,9 @@
+// discord_app/modules/safety_flows/native/tasks/PendingRequestList.tsx
+import dispatcher from "dispatcher";
+import get_ActivityIndicator from "registerAsset";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import jsxProd from "AccountAgeTier10LargeBadge";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { QrCodeIcon } from "../../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
@@ -9,12 +15,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useRefreshLinkCodeOnExpiry } from "../../../parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx";
 import { messagesProxy } from "../../SafetyFlows.messages.js";
 import { useDerivedPendingRequests } from "../../usePendingParentRequests.tsx";
-// discord_app/modules/safety_flows/native/tasks/PendingRequestList.tsx
-import dispatcher from "dispatcher";
-import get_ActivityIndicator from "registerAsset";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "AccountAgeTier10LargeBadge";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

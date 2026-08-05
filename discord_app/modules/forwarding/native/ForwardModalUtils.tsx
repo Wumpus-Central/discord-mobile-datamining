@@ -1,11 +1,11 @@
+// discord_app/modules/forwarding/native/ForwardModalUtils.tsx
+import noop from "noop";
+import { jsx } from "jsxProd";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import { showSearchableDestinationListModal } from "../../share/native/showSearchableDestinationListModal.tsx";
 import { trackForwardStart } from "../ForwardingAnalyticsUtils.tsx";
-// discord_app/modules/forwarding/native/ForwardModalUtils.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 let c5 = "forward-modal";

@@ -1,6 +1,6 @@
+// discord_common/js/packages/flux/Store.tsx
 import { isTracing } from "../app-start-performance/AppStartPerformance.tsx";
 import { logger } from "Emitter.tsx";
-// discord_common/js/packages/flux/Store.tsx
 let closure_4 = [];
 let c5 = false;
 const promise = new Promise((arg0) => {

@@ -1,7 +1,7 @@
-import { set } from "../../../discord_common/js/packages/libdave/index.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/rtc/VerifiedKeyStore.tsx
 import { PersistedStore } from "initialize";
+import { set } from "../../../discord_common/js/packages/libdave/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 let closure_3 = {};

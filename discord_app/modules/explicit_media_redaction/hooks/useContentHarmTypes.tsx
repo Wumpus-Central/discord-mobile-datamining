@@ -1,12 +1,12 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
-import { getShouldObscureForSetting } from "../SensitiveMediaRedactionSettingUtils.tsx";
 // discord_app/modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
+import { getShouldObscureForSetting } from "../SensitiveMediaRedactionSettingUtils.tsx";
 
 const require = arg1;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {

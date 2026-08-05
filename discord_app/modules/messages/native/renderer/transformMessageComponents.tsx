@@ -1,12 +1,12 @@
-import { urlMatchesFileExtension } from "../../MediaFormatTesters.tsx";
-import { MediaGalleryItemType } from "RowGeneratorTypes.tsx";
-import { nativeStyleProperties } from "RowGeneratorUtils.tsx";
 // discord_app/modules/messages/native/renderer/transformMessageComponents.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { processColor } from "set";
 import { CheckpointVersions } from "CheckpointPersonas";
 import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS";
 import importDefaultResult from "priv";
+import { urlMatchesFileExtension } from "../../MediaFormatTesters.tsx";
+import { MediaGalleryItemType } from "RowGeneratorTypes.tsx";
+import { nativeStyleProperties } from "RowGeneratorUtils.tsx";
 
 const require = arg1;
 function transformToRowGeneratedComponent(message, accessory) {

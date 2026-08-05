@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../intl/SlayerStorefront.messages.js";
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx
 import _getSystemLocale from "_getSystemLocale";
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
 import { MarketingURLs } from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../intl/SlayerStorefront.messages.js";
 
 const require = arg1;
 let closure_6 = { [arg1(10013).StorefrontPlatform.DESKTOP]: "PC", [arg1(10013).StorefrontPlatform.XBOX]: "Xbox", [arg1(10013).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10013).StorefrontPlatform.SWITCH]: "Switch", [arg1(10013).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10013).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10013).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };

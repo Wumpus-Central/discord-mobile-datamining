@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/formatDurationFromDays.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
 
 export default function formatDurationFromDays(days) {

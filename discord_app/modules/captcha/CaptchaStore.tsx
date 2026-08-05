@@ -1,9 +1,9 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { set } from "../monitoring/MonitoringAgent.tsx";
 // discord_app/modules/captcha/CaptchaStore.tsx
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
+import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { set } from "../monitoring/MonitoringAgent.tsx";
 
 const require = arg1;
 keys = keys.create(() => ({ captchaServeVolume: {} }));

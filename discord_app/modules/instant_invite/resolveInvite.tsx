@@ -1,10 +1,10 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { readSnowflake } from "InviteCodeUtils.tsx";
 // discord_app/modules/instant_invite/resolveInvite.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import InviteSendStates from "InviteSendStates";
 import ME from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { readSnowflake } from "InviteCodeUtils.tsx";
 
 let c10;
 let c5;

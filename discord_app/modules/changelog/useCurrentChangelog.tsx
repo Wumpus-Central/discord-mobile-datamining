@@ -1,9 +1,9 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/changelog/useCurrentChangelog.tsx
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import { ChangelogLoadState } from "CHANGELOG_MODAL_KEY";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 function useChangelog(changelogId, stateFromStores) {

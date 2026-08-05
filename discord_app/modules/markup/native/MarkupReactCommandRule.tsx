@@ -1,7 +1,3 @@
-import { SlashBoxIcon } from "../../../design/components/Icon/native/redesign/generated/SlashBoxIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/markup/native/MarkupReactCommandRule.tsx
 import context from "context";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -9,6 +5,10 @@ import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_IC
 import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME";
 import { COMMAND_SENTINEL } from "regExp";
 import { jsxs } from "getBestActiveInput";
+import { SlashBoxIcon } from "../../../design/components/Icon/native/redesign/generated/SlashBoxIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 let c5;
 let closure_6;

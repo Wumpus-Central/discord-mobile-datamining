@@ -1,9 +1,3 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { allowChannelAccess } from "../../utils/ChannelUtils.tsx";
-import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
-import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
-import { ME } from "../links/LinkUtils.tsx";
 // discord_app/modules/markup/MarkupChannelMentionRule.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -12,6 +6,12 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { allowChannelAccess } from "../../utils/ChannelUtils.tsx";
+import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
+import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import { ME } from "../links/LinkUtils.tsx";
 
 let c10;
 let c9;

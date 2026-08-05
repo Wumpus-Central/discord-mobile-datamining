@@ -1,7 +1,7 @@
-import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 // discord_app/modules/applications/message_embed/utils/getPlayInContext.tsx
 import participantFromServer from "participantFromServer";
 import handleConnectionOpen from "handleConnectionOpen";
+import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");

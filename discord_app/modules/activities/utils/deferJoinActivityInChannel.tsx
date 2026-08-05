@@ -1,5 +1,5 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/activities/utils/deferJoinActivityInChannel.tsx
+import { dispatcher } from "../../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
 
 export default function deferJoinActivityApplication(arg0) {

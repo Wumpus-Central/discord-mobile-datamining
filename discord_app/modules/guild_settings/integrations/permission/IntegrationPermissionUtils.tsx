@@ -1,7 +1,7 @@
-import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
-import { ApplicationCommandSectionType } from "../../../application_commands/ApplicationCommandTypes.tsx";
 // discord_app/modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx
 import _slicedToArray from "_slicedToArray";
+import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
+import { ApplicationCommandSectionType } from "../../../application_commands/ApplicationCommandTypes.tsx";
 
 const require = arg1;
 function commandPermissions(arg0, items) {

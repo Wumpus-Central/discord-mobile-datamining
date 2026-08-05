@@ -1,7 +1,7 @@
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 // discord_app/modules/create_guild/native/components/ListSelectionItem.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 
 const require = arg1;
 const result = require("TableRowInner").fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");

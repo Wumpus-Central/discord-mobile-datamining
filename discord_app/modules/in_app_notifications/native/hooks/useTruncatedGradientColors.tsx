@@ -1,7 +1,7 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx
 import { useMemo } from "noop";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_4 = createCacheKey.createStyles({ gradient: { height: 40 } });
 const result = require("map").fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");

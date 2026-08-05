@@ -1,7 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/stickers/native/premium/StickersPremiumUpsellAlert.tsx
 import componentDidMount from "componentDidMount";
 import get_ActivityIndicator from "useWindowDimensions";
@@ -10,6 +6,10 @@ import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "openPremiumModal";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let c4;

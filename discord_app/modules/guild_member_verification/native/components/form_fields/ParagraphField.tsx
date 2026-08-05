@@ -1,6 +1,3 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { TextArea } from "../../../../../design/components/TextInput/native/TextArea.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/ParagraphField.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +5,9 @@ import { MAX_PARAGRAPH_RESPONSE_LENGTH as closure_3 } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { TextArea } from "../../../../../design/components/TextInput/native/TextArea.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

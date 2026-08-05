@@ -1,6 +1,6 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_panel/native/hooks/useChatBadge.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");

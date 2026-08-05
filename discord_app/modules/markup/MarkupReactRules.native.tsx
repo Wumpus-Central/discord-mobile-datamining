@@ -1,8 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { preload } from "../../components_native/common/FastImage.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { smartOutput } from "MarkupRulesUtils.tsx";
-import { handleTapCommandMention } from "native/MarkupReactCommandRule.tsx";
 // discord_app/modules/markup/MarkupReactRules.native.tsx
 import showUserProfileActionSheet from "showUserProfileActionSheet";
 import get_ActivityIndicator from "getRootNavigationRef";
@@ -17,6 +12,11 @@ import { Fonts } from "sum";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
 import set from "maybeApplyNoTextColorForLightCustomTheme";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { preload } from "../../components_native/common/FastImage.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { smartOutput } from "MarkupRulesUtils.tsx";
+import { handleTapCommandMention } from "native/MarkupReactCommandRule.tsx";
 
 let EMOJI_CHAT_SIZE;
 let c4;

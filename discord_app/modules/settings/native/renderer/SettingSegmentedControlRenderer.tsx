@@ -1,6 +1,3 @@
-import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import { SegmentedControlPage } from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
-import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 // discord_app/modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,6 +6,9 @@ import zustandStore from "zustandStore";
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
+import { SegmentedControlPage } from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
+import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 
 let c10;
 let c9;

@@ -1,12 +1,12 @@
+// discord_app/modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx
+import DesktopNotificationTypes from "DesktopNotificationTypes";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { NotificationActionCreators } from "../../../../actions/NotificationActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { apexExperiment } from "../../../parent_tools/FamilyCenterV3Experiment.tsx";
 import { useUserIsTeenAgeGroup } from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
 import { useUserIdsForLinkStatus } from "../../../parent_tools/hooks/useUserLinks.tsx";
-// discord_app/modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx
-import DesktopNotificationTypes from "DesktopNotificationTypes";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

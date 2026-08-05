@@ -1,11 +1,11 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/utils/native/WelcomeScreenUtils.tsx
 import noop from "noop";
 import handleInviteData from "handleInviteData";
 import { NO_WELCOME_SCREEN } from "handleInviteData";
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
 let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "r" };

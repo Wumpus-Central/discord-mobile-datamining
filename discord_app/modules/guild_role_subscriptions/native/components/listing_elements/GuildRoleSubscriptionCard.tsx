@@ -1,10 +1,10 @@
-import { EmojiGallery } from "GuildRoleSubscriptionEmojiGallery.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionCard.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { EmojiGallery } from "GuildRoleSubscriptionEmojiGallery.tsx";
 
 let closure_6;
 let error;

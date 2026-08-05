@@ -1,11 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
-import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
-import { getFontScale } from "../../screen/native/useFontScale.tsx";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import { t } from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
-import { useStickyServerHeaderSubtitle } from "hooks/useStickyServerHeaderSubtitle.tsx";
 // discord_app/modules/channel_list_v2/native/RedesignGuildHeader.tsx
 import importAllResult from "module_4146";
 import get_ActivityIndicator from "t";
@@ -18,6 +10,14 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
+import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
+import { getFontScale } from "../../screen/native/useFontScale.tsx";
+import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import { t } from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
+import { useStickyServerHeaderSubtitle } from "hooks/useStickyServerHeaderSubtitle.tsx";
 
 let c10;
 let c4;

@@ -1,10 +1,10 @@
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/design/components/Sheet/native/PromoSheet.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let error;
 let metroImportAll;

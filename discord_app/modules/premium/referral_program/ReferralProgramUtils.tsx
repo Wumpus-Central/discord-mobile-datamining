@@ -1,3 +1,6 @@
+// discord_app/modules/premium/referral_program/ReferralProgramUtils.tsx
+import emitChanges from "emitChanges";
+import { ContentDismissActionType } from "ContentDismissActionType";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -6,9 +9,6 @@ import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import { addVersionedDismissedContent } from "../../dismissible_content/DismissibleContentUtils.tsx";
 import { useIsEligibleSenderForReferralProgram } from "hooks/useIsEligibleSenderForReferralProgram.tsx";
-// discord_app/modules/premium/referral_program/ReferralProgramUtils.tsx
-import emitChanges from "emitChanges";
-import { ContentDismissActionType } from "ContentDismissActionType";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");

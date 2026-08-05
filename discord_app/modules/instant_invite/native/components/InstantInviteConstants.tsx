@@ -1,8 +1,3 @@
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { getInviteURL } from "../../getInviteURL.tsx";
-import { showInstantInviteActionSheet } from "../InstantInviteUtils.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteConstants.tsx
 import { Linking } from "set";
 import SHARE_APPS_KEY from "SHARE_APPS_KEY";
@@ -21,6 +16,11 @@ import showInstantInviteActionSheet from "showInstantInviteActionSheet";
 import showInstantInviteActionSheet from "showInstantInviteActionSheet";
 import showInstantInviteActionSheet from "showInstantInviteActionSheet";
 import set from "ME";
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { getInviteURL } from "../../getInviteURL.tsx";
+import { showInstantInviteActionSheet } from "../InstantInviteUtils.tsx";
 
 let closure_6;
 let error;

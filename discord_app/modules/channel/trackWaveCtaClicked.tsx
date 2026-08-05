@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/channel/trackWaveCtaClicked.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/channel/trackWaveCtaClicked.tsx");
 

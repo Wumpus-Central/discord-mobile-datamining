@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { createAutocompleterResultForChannelId } from "../autocompleter/createAutocompleterResultForChannelId.tsx";
-import { sortByMatchScore } from "../autocompleter/index.tsx";
 // discord_app/modules/quickswitcher/QuickSwitcherStore.tsx
 import set from "set";
 import rebuild from "rebuild";
@@ -21,6 +17,10 @@ import closure_18 from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import ME from "ME";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { createAutocompleterResultForChannelId } from "../autocompleter/createAutocompleterResultForChannelId.tsx";
+import { sortByMatchScore } from "../autocompleter/index.tsx";
 
 let closure_20;
 let closure_21;

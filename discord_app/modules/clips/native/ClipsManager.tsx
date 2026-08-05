@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/clips/native/ClipsManager.tsx
 import { CLIPS_TOAST_DURATION } from "result";
 import "handleRTCConnectionState";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 class ClipsManager extends tmp2 {
 }

@@ -1,7 +1,7 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/actions/PruneGuildModalActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 const result = require("sendRequest").fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");

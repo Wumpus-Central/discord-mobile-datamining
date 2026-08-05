@@ -1,11 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useEditStateContext } from "../../edit_state/EditStateContextProvider.tsx";
-import { useRoleSubscriptionSettingsDisabled } from "../../RoleSubscriptionSettingsDisabledContext.tsx";
-import { pickImage } from "FormImagePicker.tsx";
-import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
-import { GuildRoleSubscriptionMemberPreview } from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx
 import _slicedToArray from "_slicedToArray";
 import Header from "Header";
@@ -14,6 +6,14 @@ import { GuildRoleSubscriptionsTierScenes as closure_7 } from "MAX_SUBSCRIPTION_
 import { UPLOAD_SMALL_SIZE } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useEditStateContext } from "../../edit_state/EditStateContextProvider.tsx";
+import { useRoleSubscriptionSettingsDisabled } from "../../RoleSubscriptionSettingsDisabledContext.tsx";
+import { pickImage } from "FormImagePicker.tsx";
+import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
+import { GuildRoleSubscriptionMemberPreview } from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
 
 let c10;
 let c9;

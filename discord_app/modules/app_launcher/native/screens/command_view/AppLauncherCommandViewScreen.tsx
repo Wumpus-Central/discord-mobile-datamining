@@ -1,13 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/11413_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11414_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11490_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11491_registerAsset.js";
-import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
-import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
 // discord_app/modules/app_launcher/native/screens/command_view/AppLauncherCommandViewScreen.tsx
 import closure_4 from "getIndexKey";
 import getCommandContext from "getCommandContext";
@@ -21,6 +11,16 @@ import ME from "ME";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";
 import jsxProd from "CollapsingText";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/11413_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11414_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11490_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11491_registerAsset.js";
+import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
+import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
 
 let DEFAULT_CONTENT_PADDING;
 let c9;

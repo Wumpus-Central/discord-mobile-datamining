@@ -1,4 +1,3 @@
-import { noop } from "../../../../../../discord_common/js/packages/flash-list/index.js";
 // discord_app/modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import { View } from "get ActivityIndicator";
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { noop } from "../../../../../../discord_common/js/packages/flash-list/index.js";
 
 let error;
 let metroImportAll;

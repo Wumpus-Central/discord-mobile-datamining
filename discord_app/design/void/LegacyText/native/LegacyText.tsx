@@ -1,9 +1,9 @@
-import { useLegacyTextMigrationHighlight } from "useLegacyTextMigrationHighlight.tsx";
 // discord_app/design/void/LegacyText/native/LegacyText.tsx
 import { Text } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { useLegacyTextMigrationHighlight } from "useLegacyTextMigrationHighlight.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ text: { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, includeFontPadding: false } });

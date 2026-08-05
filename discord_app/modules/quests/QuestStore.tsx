@@ -1,3 +1,9 @@
+// discord_app/modules/quests/QuestStore.tsx
+import _slicedToArray from "_slicedToArray";
+import useConsoleQuestUIStore from "useConsoleQuestUIStore";
+import _toPropertyKey from "_toPropertyKey";
+import { QuestsExperimentLocations } from "QuestsExperimentLocations";
+import { Store } from "initialize";
 import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import { QuestRewardTypes } from "../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
@@ -6,12 +12,6 @@ import { apexExperiment } from "experiments/NewAdRequestBehaviorExperiment.tsx";
 import { getQuestLogger } from "lib/getQuestLogger.tsx";
 import { getQuestDeliveryDataForPlacement } from "utils/QuestDataUtils.tsx";
 import { progressFromServer } from "utils/QuestServerUtils.tsx";
-// discord_app/modules/quests/QuestStore.tsx
-import _slicedToArray from "_slicedToArray";
-import useConsoleQuestUIStore from "useConsoleQuestUIStore";
-import _toPropertyKey from "_toPropertyKey";
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import { Store } from "initialize";
 
 const require = arg1;
 function initializeState() {

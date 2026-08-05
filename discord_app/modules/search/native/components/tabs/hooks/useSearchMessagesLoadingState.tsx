@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
-import { useFullscreenPlaceholderCount } from "../../../hooks/usePlaceholderStyles.tsx";
 // discord_app/modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx
 import handleReaction from "handleReaction";
 import prototype from "prototype";
 import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "MessageEmbedTypes";
+import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
+import { useFullscreenPlaceholderCount } from "../../../hooks/usePlaceholderStyles.tsx";
 
 const require = arg1;
 const result = require("MessageEmbedTypes").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");

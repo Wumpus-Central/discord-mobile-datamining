@@ -1,7 +1,7 @@
-import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
 // discord_app/modules/app_launcher/native/images/HomeEmptyState.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
 
 let c3;
 let c4;

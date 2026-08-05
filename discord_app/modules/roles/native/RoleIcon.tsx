@@ -1,8 +1,8 @@
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/roles/native/RoleIcon.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Button } from "../../../design/void/native.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");

@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../../../_runtime/07985_registerAsset.js";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { registerAsset } from "../../../../../../_runtime/07985_registerAsset.js";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
 const require = arg1;
 const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");

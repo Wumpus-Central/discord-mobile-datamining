@@ -1,6 +1,6 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/libdiscore/timerUtils.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 function onTimersDelayCallback(timerId, expectedDelay, actualDelay, executionTime) {
   let obj = { timerId, expectedDelay, actualDelay, executionTime };

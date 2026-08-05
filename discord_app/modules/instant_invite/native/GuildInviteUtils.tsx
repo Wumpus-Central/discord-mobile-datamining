@@ -1,6 +1,3 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/instant_invite/native/GuildInviteUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getSystemLocale from "getSystemLocale";
@@ -14,6 +11,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { setSendState } from "setSendState";
 import { InviteSendStates } from "InviteSendStates";
 import ME from "ME";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let closure_14;
 let closure_15;

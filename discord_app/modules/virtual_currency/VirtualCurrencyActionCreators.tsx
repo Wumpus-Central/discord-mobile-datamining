@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/virtual_currency/VirtualCurrencyActionCreators.tsx
 import sendRequest from "sendRequest";
 import addSku from "addSku";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function fetchVirtualCurrencyBalance() {

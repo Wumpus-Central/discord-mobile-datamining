@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { messagesProxy } from "../messages/GiftCard.messages.js";
 // discord_app/modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { messagesProxy } from "../messages/GiftCard.messages.js";
 
 let closure_6;
 let error;

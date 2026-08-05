@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/powerups/utils/powerupListing.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import BoostedGuildTiers from "BoostedGuildTiers";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function orderPowerupListings(items) {

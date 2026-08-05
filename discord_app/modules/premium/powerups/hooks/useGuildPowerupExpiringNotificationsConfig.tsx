@@ -1,7 +1,7 @@
+// discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useGameServerGetExpiringEntitlements } from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
 import { useGetExpiringGuildPowerups } from "useGetExpiringGuildPowerups.tsx";
-// discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {

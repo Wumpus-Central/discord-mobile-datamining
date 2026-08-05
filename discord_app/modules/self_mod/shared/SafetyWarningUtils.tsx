@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/self_mod/shared/SafetyWarningUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 

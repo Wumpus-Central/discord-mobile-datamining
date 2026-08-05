@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_onboarding/DefaultChannelUtils.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let c5;
 let closure_6;

@@ -1,7 +1,7 @@
-import { transformStoreAssetFromServer } from "../modules/game_store/GameStoreAsset.tsx";
 // discord_app/records/StoreListingRecord.tsx
 import "toJS";
 import createdAt from "createdAt";
+import { transformStoreAssetFromServer } from "../modules/game_store/GameStoreAsset.tsx";
 
 const require = arg1;
 let StoreListingRecord;

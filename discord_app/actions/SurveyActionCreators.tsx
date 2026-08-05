@@ -1,12 +1,12 @@
+// discord_app/actions/SurveyActionCreators.tsx
+import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
+import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded";
+import ME from "ME";
 import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
 import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
-// discord_app/actions/SurveyActionCreators.tsx
-import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
-import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded";
-import ME from "ME";
 
 let c5;
 let closure_6;

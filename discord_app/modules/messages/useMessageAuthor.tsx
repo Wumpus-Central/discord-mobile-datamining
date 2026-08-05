@@ -1,5 +1,3 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/messages/useMessageAuthor.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -7,6 +5,8 @@ import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 
 const require = arg1;
 function useNullableMessageAuthor(message) {

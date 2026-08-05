@@ -1,3 +1,10 @@
+// discord_app/modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx
+import initialize from "initialize";
+import { View } from "registerAsset";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { CollectiblesMobileShopScreen as closure_6 } from "items";
+import jsxProd from "useCollectiblesData";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/08098_registerAsset.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -6,13 +13,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
 import { useCollectiblesData } from "../hooks/useCollectiblesData.tsx";
-// discord_app/modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx
-import initialize from "initialize";
-import { View } from "registerAsset";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CollectiblesMobileShopScreen as closure_6 } from "items";
-import jsxProd from "useCollectiblesData";
-import createCacheKey from "createCacheKey";
 
 let error;
 let metroImportAll;

@@ -1,9 +1,9 @@
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx
 import { ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID as closure_3 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 const result = require("jsxProd").fileFinishedImporting("modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx");
 

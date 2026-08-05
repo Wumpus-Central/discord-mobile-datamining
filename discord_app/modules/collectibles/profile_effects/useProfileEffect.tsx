@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/collectibles/profile_effects/useProfileEffect.tsx
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";
 import { isProfileEffectRecord } from "fromServer";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("map").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");

@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
-import { apexExperiment } from "../../../../user_affinities/VoiceUserAffinityExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx
 import importAllResult from "apply";
 import { View } from "apexExperiment";
@@ -12,6 +8,10 @@ import { HappeningNowCardTrackingType as closure_8 } from "HAPPENING_NOW_PANELS_
 import { AnalyticEvents } from "ME";
 import jsxProd from "getNickname";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
+import { apexExperiment } from "../../../../user_affinities/VoiceUserAffinityExperiment.tsx";
 
 let c10;
 let unpackModuleId;

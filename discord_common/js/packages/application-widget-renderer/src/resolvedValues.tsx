@@ -1,6 +1,6 @@
+// discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx
 import { ApplicationWidgetFieldPresentationType } from "../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx";
 import { ApplicationWidgetFieldValueType } from "../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx";
-// discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx
 function resolveFieldValue(image, items, applicationAssets) {
   const _require = image;
   applicationAssets = applicationAssets.applicationAssets;

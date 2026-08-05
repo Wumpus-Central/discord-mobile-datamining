@@ -1,3 +1,5 @@
+// discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
+import { StatusTypes } from "ME";
 import { registerAsset } from "../../../../../_runtime/09751_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/13213_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14414_registerAsset.js";
@@ -12,8 +14,6 @@ import { registerAsset } from "../../../../../_runtime/14422_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14423_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14424_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
-import { StatusTypes } from "ME";
 
 const result = require("registerAsset").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
 

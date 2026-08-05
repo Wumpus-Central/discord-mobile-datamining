@@ -1,9 +1,9 @@
+// discord_app/modules/activities/utils/ActivityFlagUtils.tsx
+import ME from "ME";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 import { isEmbeddedActivity } from "isEmbeddedActivity.tsx";
-// discord_app/modules/activities/utils/ActivityFlagUtils.tsx
-import ME from "ME";
 
 let c3;
 let c4;

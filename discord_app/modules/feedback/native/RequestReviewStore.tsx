@@ -1,3 +1,9 @@
+// discord_app/modules/feedback/native/RequestReviewStore.tsx
+import getHash from "getHash";
+import initialize from "initialize";
+import handleConnectionOpen from "handleConnectionOpen";
+import { AnalyticEvents } from "ME";
+import { Store } from "initialize";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import { sleep } from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import { keys } from "../../../ConstantsIOS.tsx";
@@ -6,12 +12,6 @@ import { getFirstInstallTimeMillis } from "../../install/native/InstallTime.tsx"
 import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import { _showAndroidRatingRequest } from "requestReviewModal.tsx";
 import { apexExperiment } from "RequestReviewNoTTIExperiment.tsx";
-// discord_app/modules/feedback/native/RequestReviewStore.tsx
-import getHash from "getHash";
-import initialize from "initialize";
-import handleConnectionOpen from "handleConnectionOpen";
-import { AnalyticEvents } from "ME";
-import { Store } from "initialize";
 
 const require = arg1;
 function showReviewRequestModal() {

@@ -1,10 +1,10 @@
-import { canViewInviteModal } from "../../instant_invite/canViewInviteModal.tsx";
-import { getCurrentEmbeddedActivityChannel } from "getCurrentEmbeddedActivityChannel.tsx";
 // discord_app/modules/rpc/helpers/validateOpenInviteDialog.tsx
 import map from "map";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { RPCErrors } from "ME";
+import { canViewInviteModal } from "../../instant_invite/canViewInviteModal.tsx";
+import { getCurrentEmbeddedActivityChannel } from "getCurrentEmbeddedActivityChannel.tsx";
 
 const require = arg1;
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");

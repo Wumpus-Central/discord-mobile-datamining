@@ -1,9 +1,9 @@
-import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { VoicePanelSpoilerAlert } from "native/VoicePanelSpoilerAlert.tsx";
-import { isChannelSpoilerGated } from "SpoilerChannelUtils.tsx";
 // discord_app/modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";
+import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { VoicePanelSpoilerAlert } from "native/VoicePanelSpoilerAlert.tsx";
+import { isChannelSpoilerGated } from "SpoilerChannelUtils.tsx";
 
 const require = arg1;
 const result = require("isChannelSpoilerGated").fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");

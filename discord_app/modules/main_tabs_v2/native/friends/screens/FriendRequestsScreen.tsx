@@ -1,4 +1,3 @@
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/FriendRequestsScreen.tsx
 import TableRowInner from "TableRowInner";
 import getRelativeTimestamp from "getRelativeTimestamp";
@@ -11,6 +10,7 @@ import ME from "ME";
 import { MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL as closure_13 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD";
 import jsxProd from "context";
 import createCacheKey from "createCacheKey";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 
 let c10;
 let closure_12;

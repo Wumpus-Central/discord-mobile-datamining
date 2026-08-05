@@ -1,3 +1,9 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsSection.tsx
+import "noop";
+import { isGuildOwner } from "GuildNSFWContentLevel";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import jsxProd from "jsxProd";
 import { registerAsset } from "../../../../../_runtime/16481_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/16482_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/16484_registerAsset.js";
@@ -6,12 +12,6 @@ import { TableRowInner } from "../../../../design/components/TableRow/native/Tab
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { computeGuildRoleSubscriptionSettingsVisibility } from "../../feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsSection.tsx
-import "noop";
-import { isGuildOwner } from "GuildNSFWContentLevel";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "jsxProd";
 
 let c5;
 let closure_6;

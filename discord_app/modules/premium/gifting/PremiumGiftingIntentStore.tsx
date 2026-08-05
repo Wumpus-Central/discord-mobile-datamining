@@ -1,7 +1,3 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-import { getFriendAnniversaryGateConfig } from "FriendAnniversaryGate.native.tsx";
-import { FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS } from "shared/FriendAnniversaryUtils.tsx";
 // discord_app/modules/premium/gifting/PremiumGiftingIntentStore.tsx
 import getHash from "getHash";
 import initialize from "initialize";
@@ -12,6 +8,10 @@ import upsertRelationship from "upsertRelationship";
 import { Consents } from "ME";
 import { PersistedStore } from "initialize";
 import set from "recomputeAffinities";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import { getFriendAnniversaryGateConfig } from "FriendAnniversaryGate.native.tsx";
+import { FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS } from "shared/FriendAnniversaryUtils.tsx";
 
 const require = arg1;
 function getCurrentTime() {

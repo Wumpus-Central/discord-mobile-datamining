@@ -1,6 +1,6 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 // discord_app/modules/collectibles/CollectiblesShopConstants.tsx
 import set from "CollectibleSearchSortType";
+import { set } from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 
 let obj = { HOME: "home", CATALOG: "catalog", ORBS: "orbs", AVATAR_DECORATIONS: "avatar-decorations", PROFILE_EFFECTS: "profile-effects", NAMEPLATES: "nameplates", PROFILE_FRAMES: "profile-frames", BUNDLES: "bundles", COLLABS: "collabs", OFFER_ELIGIBLE: "offer-eligible", LAYOUT: "layout", COLLECTION_INDEX: "collection-index", GAME_SHOPS: "game-shops", GAME_SERVERS: "game-servers" };
 const items = [, , , , ];

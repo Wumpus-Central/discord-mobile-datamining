@@ -1,9 +1,9 @@
-import { Form } from "../../../../../design/void/Form/native/index.tsx";
 // discord_app/modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Form } from "../../../../../design/void/Form/native/index.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

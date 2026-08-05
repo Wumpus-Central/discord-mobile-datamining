@@ -1,6 +1,6 @@
-import { Storage } from "../../packages/storage/Storage.tsx";
 // discord_common/js/shared/lib/TokenManager.tsx
 import sum from "sum";
+import { Storage } from "../../packages/storage/Storage.tsx";
 
 let c3;
 let obj1;

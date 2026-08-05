@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
-import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import { AnimatedRenderItem } from "../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelListPreviewNitroUpsell.tsx
 import importAllResult from "AnimatedRenderItem";
 import get_ActivityIndicator from "Button";
@@ -11,6 +7,10 @@ import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
+import { AnimatedRenderItem } from "../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 
 let c10;
 let c9;

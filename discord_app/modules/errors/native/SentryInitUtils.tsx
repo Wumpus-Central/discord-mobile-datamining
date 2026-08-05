@@ -1,6 +1,3 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { transitionTo } from "../../routing/router_utils.tsx";
 // discord_app/modules/errors/native/SentryInitUtils.tsx
 import timestamp from "timestamp";
 import { NativeModules } from "DCDDeviceManager";
@@ -8,6 +5,9 @@ import ME from "ME";
 import { PRIMARY_DOMAIN } from "sum";
 import addBreadcrumb from "addBreadcrumb";
 import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { transitionTo } from "../../routing/router_utils.tsx";
 
 let Endpoints;
 let closure_6;

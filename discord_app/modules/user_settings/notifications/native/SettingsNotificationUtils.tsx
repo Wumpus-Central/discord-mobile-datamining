@@ -1,6 +1,6 @@
+// discord_app/modules/user_settings/notifications/native/SettingsNotificationUtils.tsx
 import { DCDDeviceManager } from "../../../../utils/native/DeviceUtils.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
-// discord_app/modules/user_settings/notifications/native/SettingsNotificationUtils.tsx
 const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");
 
 export const hasAndroidNotificationChannels = function hasAndroidNotificationChannels() {

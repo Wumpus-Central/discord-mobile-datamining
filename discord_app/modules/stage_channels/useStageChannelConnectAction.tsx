@@ -1,6 +1,6 @@
+// discord_app/modules/stage_channels/useStageChannelConnectAction.tsx
 import { useCurrentUserStageRoles } from "useCurrentUserStageRoles.tsx";
 import { useStageChannelIsLive } from "useStateChannelIsLive.tsx";
-// discord_app/modules/stage_channels/useStageChannelConnectAction.tsx
 const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
 const result = require("set").fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 

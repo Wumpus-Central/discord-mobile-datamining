@@ -1,9 +1,9 @@
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { RaisedHandIcon } from "AudienceTile.tsx";
 // discord_app/modules/stage_channels/native/components/BlankAudienceTile.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { RaisedHandIcon } from "AudienceTile.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(() => {

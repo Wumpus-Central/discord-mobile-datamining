@@ -1,7 +1,3 @@
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/forums/ForumPostMediaUtils.tsx
 import noop from "noop";
 import updateState from "updateState";
@@ -9,6 +5,10 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let c9;
 let metroImportAll;

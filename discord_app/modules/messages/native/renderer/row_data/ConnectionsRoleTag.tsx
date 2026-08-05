@@ -1,8 +1,8 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { int2hslRaw } from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx
 import { processColor } from "get ActivityIndicator";
 import { DEFAULT_ROLE_COLOR_HEX } from "ME";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { int2hslRaw } from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
 const result = require("Themes").fileFinishedImporting("modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx");
 

@@ -1,12 +1,12 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { useGetGuildPowerupBannerImage } from "../hooks/useGetGuildPowerupBannerImage.tsx";
 import { useGuildPowerupRollbackEnabled } from "../hooks/useGuildPowerupRollbackEnabled.tsx";
 import { usePowerupActiveStatus } from "../hooks/usePowerupActiveStatus.tsx";
 import { useCalculatePowerupCardStatus } from "../utils/useCalculatePowerupCardStatus.tsx";
 import { GuildPowerupsPerkCard } from "GuildPowerupsPerkCard.tsx";
 import { useGuildPowerupOnShowMore } from "hooks/useGuildPowerupOnShowMore.tsx";
-// discord_app/modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("useGetGuildPowerupBannerImage").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");

@@ -1,9 +1,9 @@
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
-import { items } from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import jsxProd from "jsxProd";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import { items } from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
 
 let c5;
 let closure_6;

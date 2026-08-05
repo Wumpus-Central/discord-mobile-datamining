@@ -1,8 +1,8 @@
-import { Button } from "../../native.tsx";
 // discord_app/design/void/Form/native/FormIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../native.tsx";
 
 const require = arg1;
 let closure_3 = createCacheKey.createStyles({ icon: { opacity: 0.6 } });

@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx
 import handleFormOpen from "handleFormOpen";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 
 const require = arg1;
 const result = require("nameFromUser").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");

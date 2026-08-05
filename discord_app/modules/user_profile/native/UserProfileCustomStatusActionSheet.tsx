@@ -1,8 +1,3 @@
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { useCustomStatusActivityForUser } from "../../custom_status/utils/useCustomStatusActivityForUser.tsx";
-import { HeaderAvatar } from "../../profile_customization/native/HeaderAvatar.tsx";
-import { EmojiImage } from "UserProfileCustomStatusBubble.tsx";
-import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 // discord_app/modules/user_profile/native/UserProfileCustomStatusActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -10,6 +5,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { useCustomStatusActivityForUser } from "../../custom_status/utils/useCustomStatusActivityForUser.tsx";
+import { HeaderAvatar } from "../../profile_customization/native/HeaderAvatar.tsx";
+import { EmojiImage } from "UserProfileCustomStatusBubble.tsx";
+import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 
 let AVATAR_CONTAINER_SIZE;
 let AVATAR_CUSTOM_STATUS_GAP;

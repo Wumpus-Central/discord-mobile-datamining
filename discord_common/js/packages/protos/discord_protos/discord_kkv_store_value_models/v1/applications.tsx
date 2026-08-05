@@ -1,10 +1,10 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { now } from "../../../google/protobuf/timestamp.tsx";
 // discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 import { MessageType as MessageType2 } from "module_1307";
 import { MessageType as MessageType3 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { now } from "../../../google/protobuf/timestamp.tsx";
 
 const require = arg1;
 let obj = { UNSPECIFIED_DISCLOSURE: 0, [0]: "UNSPECIFIED_DISCLOSURE", IP_LOCATION: 1, [1]: "IP_LOCATION", DISPLAYS_ADVERTISEMENTS: 2, [2]: "DISPLAYS_ADVERTISEMENTS", PARTNER_SDK_DATA_SHARING_MESSAGE: 3, [3]: "PARTNER_SDK_DATA_SHARING_MESSAGE" };

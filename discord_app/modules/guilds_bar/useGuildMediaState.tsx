@@ -1,4 +1,3 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/guilds_bar/useGuildMediaState.tsx
 import participantFromServer from "participantFromServer";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
@@ -13,6 +12,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import updateVoiceState from "updateVoiceState";
 import { BasicPermissions } from "ME";
+import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
 const require = arg1;
 function canConnectToChannel(type) {

@@ -1,9 +1,3 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
-import { ExpandableList } from "../../base_components/ExpandableList.tsx";
-import { AppLauncherHomeListItemType } from "AppLauncherHomeTypes.tsx";
 // discord_app/modules/app_launcher/native/screens/home/AppLauncherHomeScreen.tsx
 import TwinButtons from "TwinButtons";
 import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive";
@@ -19,6 +13,12 @@ import ME from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "ChannelListLayoutTypes";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
+import { ExpandableList } from "../../base_components/ExpandableList.tsx";
+import { AppLauncherHomeListItemType } from "AppLauncherHomeTypes.tsx";
 
 let StyleSheet;
 let c9;

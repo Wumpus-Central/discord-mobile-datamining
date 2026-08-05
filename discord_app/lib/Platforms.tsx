@@ -1,5 +1,3 @@
-import { useIsRiotSocialSDKMigrationEnabled } from "../modules/application_account_linking/experiments/socialSDKMigration.tsx";
-import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
 // discord_app/lib/Platforms.tsx
 import { PlatformTypes } from "ME";
 import { ApplicationIdentityConnections } from "items1";
@@ -22,6 +20,8 @@ import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import importDefaultResult from "registerAsset";
+import { useIsRiotSocialSDKMigrationEnabled } from "../modules/application_account_linking/experiments/socialSDKMigration.tsx";
+import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
 
 let obj = { type: PlatformTypes.TWITCH, name: "Twitch", color: null, icon: null, enabled: true, getPlatformUserUrl: null, domains: null };
 obj[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_TWITCH");

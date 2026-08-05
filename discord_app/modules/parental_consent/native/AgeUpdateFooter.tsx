@@ -1,10 +1,10 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../../safety_flows/SafetyFlows.messages.js";
 // discord_app/modules/parental_consent/native/AgeUpdateFooter.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../../safety_flows/SafetyFlows.messages.js";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ text: { textAlign: "center" } });

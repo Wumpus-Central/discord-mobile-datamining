@@ -1,6 +1,6 @@
-import { Storage } from "../storage/Storage.tsx";
 // discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx
 import _slicedToArray from "_slicedToArray";
+import { Storage } from "../storage/Storage.tsx";
 
 const require = arg1;
 function hasExceededThreshold(name) {

@@ -1,3 +1,6 @@
+// discord_app/modules/quests/utils/QuestPlatformUtils.tsx
+import { QuestTaskPlatform } from "QuestsExperimentLocations";
+import ME from "ME";
 import { set } from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -7,9 +10,6 @@ import { authorizeConnection } from "../../connections/authorizeConnection.nativ
 import { openUserSettings } from "../../user_settings/core/native/openUserSettings.tsx";
 import { apexExperiment } from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
-// discord_app/modules/quests/utils/QuestPlatformUtils.tsx
-import { QuestTaskPlatform } from "QuestsExperimentLocations";
-import ME from "ME";
 
 let c4;
 let c5;

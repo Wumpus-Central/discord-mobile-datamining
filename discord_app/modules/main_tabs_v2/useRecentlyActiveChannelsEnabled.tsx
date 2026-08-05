@@ -1,6 +1,6 @@
-import { useDesignToggle } from "../devtools/design_toggles/useDesignToggle.tsx";
 // discord_app/modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx
 import getUserAgnosticState from "getUserAgnosticState";
+import { useDesignToggle } from "../devtools/design_toggles/useDesignToggle.tsx";
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");
 

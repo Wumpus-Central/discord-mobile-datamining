@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { getEmbeddedActivityLocationChannelId } from "../activities/utils/embeddedActivityLocationUtils.tsx";
 // discord_app/modules/guild_sidebar/ChannelListStore.tsx
 import participantFromServer from "participantFromServer";
 import isSubscriptionGated from "isSubscriptionGated";
@@ -19,6 +15,10 @@ import closure_15 from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { getEmbeddedActivityLocationChannelId } from "../activities/utils/embeddedActivityLocationUtils.tsx";
 
 const require = arg1;
 function handleReset() {

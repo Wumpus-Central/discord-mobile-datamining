@@ -1,7 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { doesThreadMembersActionAffectMe } from "../modules/threads/ThreadActionUtils.tsx";
-import { has } from "../utils/BasicPermissionUtils.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../utils/GuildRecordUtils.tsx";
 // discord_app/stores/PermissionStore.tsx
 import initialize from "initialize";
 import closure_5 from "initialize";
@@ -17,6 +13,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import { MemberSafetyPagePermissions as closure_18 } from "MemberSafetyPagePermissions";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
+import { doesThreadMembersActionAffectMe } from "../modules/threads/ThreadActionUtils.tsx";
+import { has } from "../utils/BasicPermissionUtils.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../utils/GuildRecordUtils.tsx";
 
 let c10;
 let c9;

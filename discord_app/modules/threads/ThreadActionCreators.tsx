@@ -1,9 +1,3 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
-import { dispatcher } from "../../actions/DraftActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { setActiveCommand } from "../application_commands/ApplicationCommandActionCreators.tsx";
 // discord_app/modules/threads/ThreadActionCreators.tsx
 import listKey from "listKey";
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord";
@@ -16,6 +10,12 @@ import storeThread from "storeThread";
 import handleSummarizeThreadFinish from "handleSummarizeThreadFinish";
 import ME from "ME";
 import { ChannelFlags } from "set";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
+import { dispatcher } from "../../actions/DraftActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { setActiveCommand } from "../application_commands/ApplicationCommandActionCreators.tsx";
 
 let closure_12;
 let closure_14;

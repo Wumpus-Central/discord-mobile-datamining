@@ -1,8 +1,8 @@
+// discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
 import { apply } from "../../../_runtime/00012_apply.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { messagesProxy } from "FamilyCenter.messages.js";
 import { setsEqual } from "FamilyCenterRestrictedHoursUtils.tsx";
-// discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
 let Created;
 let Disabled;
 let Enabled;

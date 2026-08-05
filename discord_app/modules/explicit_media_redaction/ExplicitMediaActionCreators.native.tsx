@@ -1,7 +1,7 @@
-import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
 // discord_app/modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx
 import getFpMessageInfo from "getFpMessageInfo";
 import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
+import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
 
 const require = arg1;
 let result = require("redactionSettingToRenderedString").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");

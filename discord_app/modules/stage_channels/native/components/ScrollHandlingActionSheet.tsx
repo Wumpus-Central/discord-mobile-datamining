@@ -1,7 +1,7 @@
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 // discord_app/modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 
 const require = arg1;
 const result = require("Background").fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");

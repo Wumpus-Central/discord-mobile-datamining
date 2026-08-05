@@ -1,14 +1,14 @@
-import { registerAsset } from "../../../_runtime/10879_registerAsset.js";
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { Button } from "../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/activities/confirmExternalAppLaunchAlert.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PRIVATE_APPS_HELP_ARTICLE } from "items3";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../_runtime/10879_registerAsset.js";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { Button } from "../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c3;
 let c4;

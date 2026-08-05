@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/Messages.tsx
 import importAllResult from "useIsMobileVisualRefreshExperimentEnabled";
 import { View } from "useCommonTriggerPoint";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import _handleConnectionOpen from "_handleConnectionOpen";
 import jsxProd from "getRootNavigationRef";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let error;
 let metroImportAll;

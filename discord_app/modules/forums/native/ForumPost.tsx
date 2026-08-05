@@ -1,13 +1,13 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { GIFIcon } from "posts/grid/ForumPostGridBody.tsx";
-import { ForumPostGridFooter } from "posts/grid/ForumPostGridFooter.tsx";
-import { ForumPostGridHeader } from "posts/grid/ForumPostGridHeader.tsx";
 // discord_app/modules/forums/native/ForumPost.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import { useForumChannelStore } from "set";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { GIFIcon } from "posts/grid/ForumPostGridBody.tsx";
+import { ForumPostGridFooter } from "posts/grid/ForumPostGridFooter.tsx";
+import { ForumPostGridHeader } from "posts/grid/ForumPostGridHeader.tsx";
 
 let closure_6;
 let error;

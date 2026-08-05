@@ -1,12 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { TextArea } from "../../../design/components/TextInput/native/TextArea.native.tsx";
-import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { _calculateScrollOffset } from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/guild_communication_disabled/native/GuildDisableCommunication.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -16,6 +7,15 @@ import getFriendlyDurationString from "getFriendlyDurationString";
 import { AnalyticEvents } from "ME";
 import jsxProd from "TextArea";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { TextArea } from "../../../design/components/TextInput/native/TextArea.native.tsx";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { _calculateScrollOffset } from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let DisableCommunicationDuration;
 let c9;

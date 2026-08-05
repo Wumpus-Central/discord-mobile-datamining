@@ -1,8 +1,8 @@
-import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/media_engine/MediaEngineStatsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import { Store } from "initialize";
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
 
 const require = arg1;
 function updateAveragedStatsHelper(arg0, arg1, arg2, arr, arr2) {

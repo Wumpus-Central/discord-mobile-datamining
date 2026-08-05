@@ -1,3 +1,6 @@
+// discord_app/modules/guild_settings/server_monetization/guild_theme/web/GuildSettingsGuildTheme.messages.js
+import 01274__ from "../../../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../../../_runtime/02254_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02255_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02256_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../../../_runtime/02282_registerAsset.js
 import { registerAsset } from "../../../../../../_runtime/02283_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/02284_registerAsset.js";
 import { loadJsonAsset } from "../../../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/guild_settings/server_monetization/guild_theme/web/GuildSettingsGuildTheme.messages.js
-import 01274__ from "../../../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

@@ -1,6 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/threads/ThreadMemberListStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -11,6 +8,9 @@ import filterPlayingActivities from "filterPlayingActivities";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 
 let closure_12;
 let unpackModuleId;

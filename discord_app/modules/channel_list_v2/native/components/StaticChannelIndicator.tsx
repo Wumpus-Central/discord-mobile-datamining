@@ -1,10 +1,10 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/channel_list_v2/native/components/StaticChannelIndicator.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
 
 let StyleSheet;
 let c3;

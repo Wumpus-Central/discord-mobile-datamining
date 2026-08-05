@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/go_live/utils/getStreamIssueReportOptions.tsx
 import { StreamIssueReportReasons } from "StreamIssueReportReasons";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");
 

@@ -1,7 +1,7 @@
-import { matchPath } from "matchPathCompat.tsx";
 // discord_app/modules/routing/KeybindRouterStore.tsx
 import ME from "ME";
 import identity from "identity";
+import { matchPath } from "matchPathCompat.tsx";
 
 let c3;
 let obj1;

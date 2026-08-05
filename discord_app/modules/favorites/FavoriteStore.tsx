@@ -1,11 +1,11 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 // discord_app/modules/favorites/FavoriteStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { createChannelRecord } from "createChannelRecord";
 import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_4 } from "date";
 import ME from "ME";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
 let c5;
 let closure_6;

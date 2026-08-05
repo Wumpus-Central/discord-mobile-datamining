@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/promotions/PromotionsHooks.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { PremiumTypes } from "GuildFeatures";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function useEligibleActiveOutboundPromotions(arg0) {

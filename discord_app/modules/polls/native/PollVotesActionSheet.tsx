@@ -1,7 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/polls/native/PollVotesActionSheet.tsx
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -14,6 +10,10 @@ import reinjectEphemerals from "reinjectEphemerals";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "context";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 
 let closure_14;
 let closure_15;

@@ -1,8 +1,8 @@
-import { t } from "../../../_runtime/04484_t.js";
 // discord_app/lib/native/BundleUpdater.tsx
 import resolveAssetSource from "resolveAssetSource";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";
+import { t } from "../../../_runtime/04484_t.js";
 
 let NativeEventEmitter;
 let NativeModules;

@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/utils/getMutualGuildsLabel.tsx
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
 
 export default function getMutualGuildsLabel(arg0) {

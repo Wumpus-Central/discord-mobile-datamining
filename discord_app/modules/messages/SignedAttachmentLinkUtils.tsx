@@ -1,10 +1,10 @@
-import { set } from "../../utils/Durations.tsx";
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
-import { isImageProxyURL } from "../image_proxy/ImageProxyUtils.tsx";
 // discord_app/modules/messages/SignedAttachmentLinkUtils.tsx
 import sendRequest from "sendRequest";
 import { Endpoints } from "ME";
 import set from "set";
+import { set } from "../../utils/Durations.tsx";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import { isImageProxyURL } from "../image_proxy/ImageProxyUtils.tsx";
 
 let require = arg1;
 function shouldRefreshAttachmentUrl(searchParams) {

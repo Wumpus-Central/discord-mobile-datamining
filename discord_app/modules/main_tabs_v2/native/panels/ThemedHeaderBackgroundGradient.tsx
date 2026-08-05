@@ -1,12 +1,12 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { int2hslRaw } from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { int2hslRaw } from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c3;
 let c4;

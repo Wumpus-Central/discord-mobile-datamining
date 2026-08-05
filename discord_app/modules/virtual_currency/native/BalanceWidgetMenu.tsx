@@ -1,11 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { index } from "../hooks/index.tsx";
-import { BalanceWidgetPillButton } from "BalanceWidgetPillButton.tsx";
 // discord_app/modules/virtual_currency/native/BalanceWidgetMenu.tsx
 import ref from "ref";
 import { View } from "module_9340";
@@ -15,6 +7,14 @@ import ContentDismissActionType from "ContentDismissActionType";
 import { RewardFilterTypes } from "QuestsExperimentLocations";
 import jsxProd from "QUICK_SWITCHER";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { index } from "../hooks/index.tsx";
+import { BalanceWidgetPillButton } from "BalanceWidgetPillButton.tsx";
 
 let c10;
 let error;

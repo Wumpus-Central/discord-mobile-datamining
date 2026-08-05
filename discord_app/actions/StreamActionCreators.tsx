@@ -1,12 +1,3 @@
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { isStreamKey } from "../modules/go_live/utils/StreamKeyUtils.tsx";
-import { transitionToStream } from "../modules/go_live/utils/transitionToStream.native.tsx";
-import { allowChannelAccess } from "../utils/ChannelUtils.tsx";
-import { isPremiumResolution } from "../utils/StreamQualityUtils.tsx";
-import { ChannelActionCreators } from "ChannelActionCreators.tsx";
-import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 // discord_app/actions/StreamActionCreators.tsx
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
@@ -20,6 +11,15 @@ import handleConnectionOpen from "handleConnectionOpen";
 import updateVoiceState from "updateVoiceState";
 import ME from "ME";
 import { StreamTypes } from "StreamIssueReportReasons";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { isStreamKey } from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import { transitionToStream } from "../modules/go_live/utils/transitionToStream.native.tsx";
+import { allowChannelAccess } from "../utils/ChannelUtils.tsx";
+import { isPremiumResolution } from "../utils/StreamQualityUtils.tsx";
+import { ChannelActionCreators } from "ChannelActionCreators.tsx";
+import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 
 let closure_14;
 let closure_15;

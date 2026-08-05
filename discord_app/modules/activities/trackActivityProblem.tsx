@@ -1,6 +1,6 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/activities/trackActivityProblem.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/trackActivityProblem.tsx");
 

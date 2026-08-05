@@ -1,12 +1,12 @@
+// discord_app/modules/mfa/native/screens/MfaOptionScreen.tsx
+import { ScrollView } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
 import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { BackgroundImage } from "../../../auth/native/components/atoms/BackgroundImage.tsx";
 import { useWideAuthView } from "../../../auth/native/useWideAuthView.tsx";
 import { MfaScreenUtils } from "../MfaScreenUtils.tsx";
-// discord_app/modules/mfa/native/screens/MfaOptionScreen.tsx
-import { ScrollView } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

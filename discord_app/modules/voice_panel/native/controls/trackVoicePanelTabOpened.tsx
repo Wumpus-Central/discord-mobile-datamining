@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 

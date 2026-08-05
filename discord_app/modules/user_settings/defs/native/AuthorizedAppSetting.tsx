@@ -1,6 +1,6 @@
-import { AuthorizedAppScreen } from "../../authorized_apps/native/AuthorizedAppScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AuthorizedAppSetting.tsx
 import createToggle from "createToggle";
+import { AuthorizedAppScreen } from "../../authorized_apps/native/AuthorizedAppScreen.tsx";
 
 obj = {
   useTitle() {

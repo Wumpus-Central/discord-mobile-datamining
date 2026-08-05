@@ -1,8 +1,8 @@
-import { Input } from "../../Input/native/Input.native.tsx";
-import { TextAreaField } from "../../TextField/native/TextAreaField.native.tsx";
 // discord_app/design/components/TextInput/native/TextArea.native.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { Input } from "../../Input/native/Input.native.tsx";
+import { TextAreaField } from "../../TextField/native/TextAreaField.native.tsx";
 
 const require = arg1;
 const forwardRefResult = require("noop").forwardRef((arg0, ref) => {

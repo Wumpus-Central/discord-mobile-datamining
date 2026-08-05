@@ -1,8 +1,8 @@
-import { WishlistButtonCoachmark } from "WishlistButtonCoachmark.tsx";
 // discord_app/modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { WishlistButtonCoachmark } from "WishlistButtonCoachmark.tsx";
 
 let c4;
 let c5;

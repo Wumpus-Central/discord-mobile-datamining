@@ -1,7 +1,7 @@
+// discord_app/modules/group_dm/native/showChatGDMCustomizeActionSheet.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/group_dm/native/showChatGDMCustomizeActionSheet.tsx
 const result = require("ChatGDMCustomizeActionSheet").fileFinishedImporting("modules/group_dm/native/showChatGDMCustomizeActionSheet.tsx");
 
 export default function showChatGDMCustomizeActionSheet(closure_0) {

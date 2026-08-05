@@ -1,4 +1,3 @@
-import { messagesProxy } from "../FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/native/FamilyCenterBannerButton.tsx
 import ConnectGuardianBottomSheet from "ConnectGuardianBottomSheet";
 import { View } from "shareGuardianConnectLink";
@@ -10,6 +9,7 @@ import { NativePermissionTypes } from "NativePermissionStatus";
 import jsxProd from "Stack";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { messagesProxy } from "../FamilyCenter.messages.js";
 
 let c9;
 let closure_12;

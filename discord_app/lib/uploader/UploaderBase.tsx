@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/lib/uploader/UploaderBase.tsx
 import apply from "apply";
 import { AbortCodes } from "ME";
 import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING";
 import { EventEmitter } from "EventEmitter";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 let require = arg1;
 let closure_6 = new require("timestamp")("UploaderBase.tsx");

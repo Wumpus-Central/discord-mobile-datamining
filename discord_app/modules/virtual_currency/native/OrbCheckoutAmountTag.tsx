@@ -1,9 +1,9 @@
-import { OrbsIcon } from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/virtual_currency/native/OrbCheckoutAmountTag.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { OrbsIcon } from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

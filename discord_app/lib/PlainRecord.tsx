@@ -1,9 +1,9 @@
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { shallowEqual } from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { areSetsEqual } from "../../discord_common/js/shared/utils/SetUtils.tsx";
 // discord_app/lib/PlainRecord.tsx
 import { TypeTag } from "TypeTag";
 import importDefaultResult from "TypeTag";
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { shallowEqual } from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { areSetsEqual } from "../../discord_common/js/shared/utils/SetUtils.tsx";
 
 const require = arg1;
 function isValueEqual(items, current) {

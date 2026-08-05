@@ -1,6 +1,6 @@
-import { _openRobloxURLWithRootPlaceId } from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 // discord_app/modules/game_detection/GameAnalyticsUtils.tsx
 import gameFromServer from "gameFromServer";
+import { _openRobloxURLWithRootPlaceId } from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");

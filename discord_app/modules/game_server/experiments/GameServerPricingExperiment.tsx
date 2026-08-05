@@ -1,6 +1,6 @@
-import { experiment } from "../GameServerExperiment.tsx";
 // discord_app/modules/game_server/experiments/GameServerPricingExperiment.tsx
 import createExperiment from "createExperiment";
+import { experiment } from "../GameServerExperiment.tsx";
 
 const items = [{ id: 1, label: "Enable Game Server Pricing", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-03_game_server_pricing", label: "Game Server Pricing", defaultConfig: { enabled: false }, treatments: items });

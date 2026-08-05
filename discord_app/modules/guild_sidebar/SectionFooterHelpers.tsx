@@ -1,9 +1,9 @@
-import { computeSubtitle } from "ChannelListState.tsx";
 // discord_app/modules/guild_sidebar/SectionFooterHelpers.tsx
 import incrementVersion from "incrementVersion";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
 import { Permissions } from "ME";
+import { computeSubtitle } from "ChannelListState.tsx";
 
 const require = arg1;
 const result = require("ChannelListGuildActionRow").fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");

@@ -1,9 +1,9 @@
-import { isMetaQuest } from "../../../device/MetaQuestUtils.android.tsx";
-import { goToStandalonePremiumCheckout } from "../../utils/BillingStandaloneUtils.tsx";
-import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../utils/MobileWebRedirectCheckoutUtils.tsx";
 // discord_app/modules/payments/native/utils/BillingStandaloneNativeUtils.tsx
 import { CustomCheckoutFlow } from "CustomCheckoutFlow";
 import { Routes } from "ME";
+import { isMetaQuest } from "../../../device/MetaQuestUtils.android.tsx";
+import { goToStandalonePremiumCheckout } from "../../utils/BillingStandaloneUtils.tsx";
+import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../utils/MobileWebRedirectCheckoutUtils.tsx";
 
 function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
   let tmp4;

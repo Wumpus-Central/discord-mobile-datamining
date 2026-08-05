@@ -1,11 +1,11 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
-import { SettingsAppearanceChannelListPreviewNitroUpsellComponent } from "SettingsAppearanceChannelListPreviewNitroUpsell.tsx";
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import { SettingsAppearanceChannelListPreviewNitroUpsellComponent } from "SettingsAppearanceChannelListPreviewNitroUpsell.tsx";
 
 let StyleSheet;
 let c4;

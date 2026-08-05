@@ -1,8 +1,8 @@
-import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
-import { isSystemMessage } from "isSystemMessage.tsx";
 // discord_app/modules/messages/isMessagePinnable.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
+import { isSystemMessage } from "isSystemMessage.tsx";
 
 let c4;
 let c5;

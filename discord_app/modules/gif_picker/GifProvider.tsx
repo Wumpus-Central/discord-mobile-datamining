@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/gif_picker/GifProvider.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/gif_picker/GifProvider.tsx");
 
 export const GIF_PROVIDER = "klipy";

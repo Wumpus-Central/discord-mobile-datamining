@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");

@@ -1,4 +1,3 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import set from "set";
 import { View } from "Button";
@@ -9,6 +8,7 @@ import { StaticChannelRoute } from "set";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
 
 let c10;
 let unpackModuleId;

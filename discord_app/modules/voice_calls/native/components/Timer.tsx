@@ -1,9 +1,9 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/voice_calls/native/components/Timer.tsx
 import { jsxs } from "jsxProd";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { Button } from "../../../../design/void/native.tsx";
 
 let require = arg1;
 class Timer extends PureComponent {

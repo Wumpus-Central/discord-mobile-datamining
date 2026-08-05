@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { handleDisableAccount } from "../../account/native/handleDisableAccount.tsx";
 // discord_app/modules/user_settings/defs/native/AccountDisableSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { handleDisableAccount } from "../../account/native/handleDisableAccount.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {

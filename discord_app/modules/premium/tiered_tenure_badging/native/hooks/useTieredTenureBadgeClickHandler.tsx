@@ -1,4 +1,3 @@
-import { useIsPremiumSubscriber } from "../../../useIsPremiumSubscriber.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -6,6 +5,7 @@ import { PremiumTypes } from "GuildFeatures";
 import { DEFAULT_PREMIUM_BADGE_ID } from "DEFAULT_PREMIUM_BADGE_ID";
 import ME from "ME";
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
+import { useIsPremiumSubscriber } from "../../../useIsPremiumSubscriber.tsx";
 
 let error;
 let metroImportAll;

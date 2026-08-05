@@ -1,3 +1,8 @@
+// discord_app/modules/parent_tools/native/FamilyCenterFeatureRow.tsx
+import "noop";
+import { View } from "TableRowInner";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/09017_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/11662_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14036_registerAsset.js";
@@ -10,11 +15,6 @@ import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../FamilyCenter.messages.js";
 import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
-// discord_app/modules/parent_tools/native/FamilyCenterFeatureRow.tsx
-import "noop";
-import { View } from "TableRowInner";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

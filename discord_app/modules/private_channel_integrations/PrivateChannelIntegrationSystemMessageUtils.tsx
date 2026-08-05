@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx
 import ME from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
 
 let c3;
 let c4;

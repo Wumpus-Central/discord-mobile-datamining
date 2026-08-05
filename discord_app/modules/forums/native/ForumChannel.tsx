@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useGradientBottom } from "../../client_themes/native/ClientThemesOverrides.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/forums/native/ForumChannel.tsx
 import useLoadForumUnreadCounts from "useLoadForumUnreadCounts";
 import { View } from "Text";
@@ -22,6 +16,12 @@ import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
 import set from "set";
 import set from "initialize";
+import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useGradientBottom } from "../../client_themes/native/ClientThemesOverrides.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 let closure_12;
 let closure_15;

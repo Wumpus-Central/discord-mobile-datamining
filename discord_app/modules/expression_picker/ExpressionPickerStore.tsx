@@ -1,8 +1,8 @@
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/expression_picker/ExpressionPickerStore.tsx
 import { ExpressionPickerViewType } from "ExpressionPickerViewType";
 import identity from "identity";
 import createJSONStorage from "createJSONStorage";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let obj = { activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, searchQuery: "", isSearchSuggestion: false, pickerId: require("uniqueId")("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false };
 let closure_3 = Object.freeze(obj);

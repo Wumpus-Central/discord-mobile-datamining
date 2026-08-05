@@ -1,14 +1,3 @@
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { mergeMessage } from "../../lib/ChannelMessages.tsx";
-import { matchPath } from "../routing/matchPathCompat.tsx";
-import { transitionTo } from "../routing/router_utils.tsx";
-import { SidebarType } from "../sidebar/SidebarActionTypes.tsx";
-import { getMessageLimit } from "getAdaptiveMessageLimit.native.tsx";
-import { shouldRefreshAttachmentUrl } from "SignedAttachmentLinkUtils.tsx";
 // discord_app/modules/messages/MessageManager.tsx
 import _slicedToArray from "_slicedToArray";
 import getParticipants from "getParticipants";
@@ -23,6 +12,17 @@ import closure_12 from "handleConnectionOpen";
 import ME from "ME";
 import { isStaticChannelRoute } from "set";
 import "initialize";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { mergeMessage } from "../../lib/ChannelMessages.tsx";
+import { matchPath } from "../routing/matchPathCompat.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
+import { SidebarType } from "../sidebar/SidebarActionTypes.tsx";
+import { getMessageLimit } from "getAdaptiveMessageLimit.native.tsx";
+import { shouldRefreshAttachmentUrl } from "SignedAttachmentLinkUtils.tsx";
 
 let closure_14;
 let closure_15;

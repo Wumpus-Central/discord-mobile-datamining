@@ -1,5 +1,3 @@
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { getEmbeddedActivityJoinability } from "utils/getEmbeddedActivityJoinability.tsx";
 // discord_app/modules/activities/handlePressJoinActivity.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createExecutable from "createExecutable";
@@ -9,6 +7,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import closure_8 from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import participantFromServer from "participantFromServer";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { getEmbeddedActivityJoinability } from "utils/getEmbeddedActivityJoinability.tsx";
 
 const require = arg1;
 function handlePressJoinActivity(arg0) {

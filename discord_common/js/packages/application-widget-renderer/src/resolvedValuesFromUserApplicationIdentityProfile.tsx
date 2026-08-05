@@ -1,7 +1,7 @@
-import { ProfileDataDynamicType } from "../../../shared/shared-constants/ProfileDataDynamicType.tsx";
-import { resolveFieldValue } from "resolvedValues.tsx";
 // discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx
 import _slicedToArray from "_slicedToArray";
+import { ProfileDataDynamicType } from "../../../shared/shared-constants/ProfileDataDynamicType.tsx";
+import { resolveFieldValue } from "resolvedValues.tsx";
 
 const require = arg1;
 function isVisualUnfurledMedia(value) {

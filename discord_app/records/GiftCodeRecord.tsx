@@ -1,10 +1,10 @@
-import { t } from "../../_runtime/03867_t.js";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/records/GiftCodeRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
 import closure_4 from "createFromServer";
 import { PremiumSubscriptionSKUToPremiumType as closure_5 } from "GuildFeatures";
+import { t } from "../../_runtime/03867_t.js";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const require = arg1;
 const frozen = Object.freeze({ PAYMENT_SOURCE_REQUIRED: 1, EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2, NOT_SELF_REDEEMABLE: 4 });

@@ -1,10 +1,10 @@
+// discord_app/modules/interaction_components/InteractionComponentUtils.tsx
+import { CheckpointVersions } from "CheckpointPersonas";
 import { v1 } from "../../../_runtime/00514_v1.js";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-// discord_app/modules/interaction_components/InteractionComponentUtils.tsx
-import { CheckpointVersions } from "CheckpointPersonas";
 
 function flattenComponents(components) {
   const map = new Map();

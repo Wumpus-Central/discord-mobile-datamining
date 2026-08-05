@@ -1,8 +1,8 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../tokens/native/useToken.tsx";
 // discord_app/design/components/ActivityIndicator/native/ActivityIndicator.native.tsx
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../tokens/native/useToken.tsx";
 
 const result = require("map").fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
 

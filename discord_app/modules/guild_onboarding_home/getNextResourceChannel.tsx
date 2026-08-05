@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_onboarding_home/getNextResourceChannel.tsx
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/getNextResourceChannel.tsx");

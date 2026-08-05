@@ -1,10 +1,10 @@
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/components_native/common/CountDown.tsx
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { set } from "../../utils/Durations.tsx";
 
 const require = arg1;
 class CountDown extends Component {

@@ -1,7 +1,7 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx
 import noop from "noop";
 import getUserAgnosticState from "getUserAgnosticState";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx");

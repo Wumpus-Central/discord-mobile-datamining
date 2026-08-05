@@ -1,10 +1,10 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useDesignToggle } from "useDesignToggle.tsx";
 // discord_app/modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useDesignToggle } from "useDesignToggle.tsx";
 
 let c4;
 let c5;

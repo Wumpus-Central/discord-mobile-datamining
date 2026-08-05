@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import renderDefaultEmpty from "renderDefaultEmpty";
@@ -11,6 +7,10 @@ import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import { STAGE_BLOCKED_USERS_SHEET_KEY as closure_8 } from "MAX_STAGE_TOPIC_LENGTH";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let c9;

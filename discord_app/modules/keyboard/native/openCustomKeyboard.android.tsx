@@ -1,6 +1,6 @@
+// discord_app/modules/keyboard/native/openCustomKeyboard.android.tsx
 import { runAfterInteractions } from "../../../utils/native/RunAfterInteractionsUtils.tsx";
 import { computeEntryState } from "KeyboardUIStore.native.tsx";
-// discord_app/modules/keyboard/native/openCustomKeyboard.android.tsx
 const result = require("zustandStore").fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");
 
 export default function openCustomKeyboard(secondaryTextFieldRef) {

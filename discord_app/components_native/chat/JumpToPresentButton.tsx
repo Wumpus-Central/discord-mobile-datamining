@@ -1,5 +1,3 @@
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../design/tokens/native/useToken.tsx";
 // discord_app/components_native/chat/JumpToPresentButton.tsx
 import "noop";
 import { View } from "memoResult1";
@@ -11,6 +9,8 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "updateChatInputContainerHeight";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
 
 const require = arg1;
 createCacheKey = { container: null, containerIOS: null };

@@ -1,10 +1,3 @@
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../design/void/Pressables/native/Pressables.tsx";
-import { DCDChatList } from "../../modules/chat/native/Chat.android.tsx";
-import { useWindowDimensions } from "../../modules/screen/useWindowDimensions.native.tsx";
-import { ChannelSpoiler } from "../../modules/spoiler_channels/native/ChannelSpoiler.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { GuildNSFW } from "../warnings/GuildNSFW.tsx";
 // discord_app/components_native/common/ChatPreview.tsx
 import importAllResult from "apply";
 import get_ActivityIndicator from "computeScrollData";
@@ -15,6 +8,13 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import Changeset from "Changeset";
 import jsxProd from "handleMessagesTapURLLink";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../design/void/Pressables/native/Pressables.tsx";
+import { DCDChatList } from "../../modules/chat/native/Chat.android.tsx";
+import { useWindowDimensions } from "../../modules/screen/useWindowDimensions.native.tsx";
+import { ChannelSpoiler } from "../../modules/spoiler_channels/native/ChannelSpoiler.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { GuildNSFW } from "../warnings/GuildNSFW.tsx";
 
 let StyleSheet;
 let c10;

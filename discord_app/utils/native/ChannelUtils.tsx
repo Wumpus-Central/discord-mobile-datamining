@@ -1,3 +1,8 @@
+// discord_app/utils/native/ChannelUtils.tsx
+import trackCommunicationDisabled from "trackCommunicationDisabled";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { ChannelTypes } from "ME";
 import { registerAsset } from "../../../_runtime/04746_registerAsset.js";
 import { registerAsset } from "../../../_runtime/04747_registerAsset.js";
 import { registerAsset } from "../../../_runtime/04748_registerAsset.js";
@@ -37,11 +42,6 @@ import { TextIcon } from "../../design/components/Icon/native/redesign/generated
 import { VoiceNormalIcon } from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import { isRoleRequired } from "../../modules/channel/isRoleRequired.tsx";
 import { shouldShowMembershipVerificationGate } from "../../modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
-// discord_app/utils/native/ChannelUtils.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelTypes } from "ME";
 
 const require = arg1;
 function getChannelIcon(channel, ignoreTraits) {

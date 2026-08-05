@@ -1,9 +1,9 @@
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsShieldElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });

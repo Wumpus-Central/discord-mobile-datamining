@@ -1,6 +1,6 @@
+// discord_app/modules/collectibles/native/openGiftModal.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/collectibles/native/openGiftModal.tsx
 let c3 = "Shop Gift Modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/collectibles/native/openGiftModal.tsx");
 

@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/useDeafStates.tsx
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("updateVoiceState").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");

@@ -1,12 +1,12 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/CallStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_5 from "handleConnectionOpen";
 import { Endpoints } from "ME";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 
 const require = arg1;
 function callConnect() {

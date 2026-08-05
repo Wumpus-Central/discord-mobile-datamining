@@ -1,10 +1,10 @@
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 // discord_app/modules/auth/native/components/PromotionalEmailCheckBox.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import setPromoEmailConsentState from "setPromoEmailConsentState";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 
 let c3;
 let c4;

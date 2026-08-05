@@ -1,5 +1,5 @@
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/ImmersiveBannerBlockRecord.tsx
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 let prototype;
 prototype = function ImmersiveBannerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);

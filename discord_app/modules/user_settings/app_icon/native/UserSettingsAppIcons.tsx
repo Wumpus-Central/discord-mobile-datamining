@@ -1,6 +1,3 @@
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { BackwardsCompatibleAppIconRows } from "../../../app_icons/native/AppIconRows.tsx";
-import { NitroUpsellButton } from "../../../premium/components/native/NitroUpsellButton.tsx";
 // discord_app/modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx
 import items from "items";
 import { View } from "openPremiumModal";
@@ -10,6 +7,9 @@ import { getIconById } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "getSystemLocale";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { BackwardsCompatibleAppIconRows } from "../../../app_icons/native/AppIconRows.tsx";
+import { NitroUpsellButton } from "../../../premium/components/native/NitroUpsellButton.tsx";
 
 let c10;
 let c9;

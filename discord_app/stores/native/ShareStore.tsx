@@ -1,7 +1,3 @@
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/stores/native/ShareStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -11,6 +7,10 @@ import closure_10 from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AppStates } from "ME";
 import { Store } from "initialize";
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 function handleTokenUpdated(token) {

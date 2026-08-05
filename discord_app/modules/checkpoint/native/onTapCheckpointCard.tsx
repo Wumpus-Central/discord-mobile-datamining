@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/checkpoint/native/onTapCheckpointCard.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 
 const require = arg1;
 const result = require("expandEventProperties").fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");

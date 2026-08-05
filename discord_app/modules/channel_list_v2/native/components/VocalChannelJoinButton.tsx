@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx
 import importAllResult from "getSystemLocale";
 import get_ActivityIndicator from "useShowConnectedUserLimit";
@@ -7,6 +6,7 @@ import updateVoiceState from "updateVoiceState";
 import ME from "ME";
 import { jsx } from "StageIcon";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c4;
 let c5;

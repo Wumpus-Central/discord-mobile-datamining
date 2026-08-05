@@ -1,6 +1,3 @@
-import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
-import { InAppReportsUpsellsTableRow } from "InAppReportsUpsellsTableRow.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsSettingsUpsellsElement.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -9,6 +6,9 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { InAppReportsUpsellsTableRow } from "InAppReportsUpsellsTableRow.tsx";
 
 let c10;
 let c9;

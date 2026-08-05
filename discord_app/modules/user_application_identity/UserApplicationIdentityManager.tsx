@@ -1,6 +1,6 @@
-import { fetchStore } from "UserApplicationIdentityActionCreators.tsx";
 // discord_app/modules/user_application_identity/UserApplicationIdentityManager.tsx
 import "initialize";
+import { fetchStore } from "UserApplicationIdentityActionCreators.tsx";
 
 const require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {

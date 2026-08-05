@@ -1,8 +1,8 @@
-import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/actions/native/AlertActionCreators.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let c3;
 let c4;

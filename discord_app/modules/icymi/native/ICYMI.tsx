@@ -1,3 +1,17 @@
+// discord_app/modules/icymi/native/ICYMI.tsx
+import generateHydrationId from "generateHydrationId";
+import importAllResult from "asyncRequireImpl";
+import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import fetchFingerprint from "fetchFingerprint";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import initialize from "initialize";
+import filterStaffGuild from "filterStaffGuild";
+import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING";
+import { ContentDismissActionType } from "ContentDismissActionType";
+import jsxProd from "pushICYMIInfoModal";
+import createCacheKey from "createCacheKey";
+import createICYMIStyles from "createICYMIStyles";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
@@ -13,20 +27,6 @@ import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx"
 import { useIsWindowLarge } from "../../screen/native/useIsWindowLarge.tsx";
 import { generateHydrationId } from "../ICYMIUtils.tsx";
 import { context } from "ICYMIContext.tsx";
-// discord_app/modules/icymi/native/ICYMI.tsx
-import generateHydrationId from "generateHydrationId";
-import importAllResult from "asyncRequireImpl";
-import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import fetchFingerprint from "fetchFingerprint";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import initialize from "initialize";
-import filterStaffGuild from "filterStaffGuild";
-import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "pushICYMIInfoModal";
-import createCacheKey from "createCacheKey";
-import createICYMIStyles from "createICYMIStyles";
 
 let c5;
 let closure_14;

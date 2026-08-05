@@ -1,14 +1,14 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
-import { useTimestampTickedNow } from "../../content_inventory/memberlist/useTimestampTickedNow.tsx";
-import { calculateTimestampDurations } from "../../content_inventory/utils.tsx";
-import { shouldShowActivityTimeBar } from "../utils/shouldShowActivityTimeBar.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivityBadges.tsx
 import "set";
 import { View } from "Text";
 import { ActivityTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
+import { useTimestampTickedNow } from "../../content_inventory/memberlist/useTimestampTickedNow.tsx";
+import { calculateTimestampDurations } from "../../content_inventory/utils.tsx";
+import { shouldShowActivityTimeBar } from "../utils/shouldShowActivityTimeBar.tsx";
 
 let c5;
 let closure_6;

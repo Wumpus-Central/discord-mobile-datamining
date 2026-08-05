@@ -1,10 +1,10 @@
-import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/main_tabs_v2/UserSearchUtils.tsx
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
+import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 
 const require = arg1;
 const result = require("upsertRelationship").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");

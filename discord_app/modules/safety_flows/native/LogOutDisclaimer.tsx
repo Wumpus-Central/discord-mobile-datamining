@@ -1,9 +1,9 @@
+// discord_app/modules/safety_flows/native/LogOutDisclaimer.tsx
+import { jsx } from "jsxProd";
 import { ModalDisclaimer } from "../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../SafetyFlows.messages.js";
-// discord_app/modules/safety_flows/native/LogOutDisclaimer.tsx
-import { jsx } from "jsxProd";
 
 const result = require("Text").fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
 

@@ -1,6 +1,6 @@
-import { set } from "../../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/auth/native/components/utils/getDeviceCountry.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { set } from "../../../../../utils/PlatformUtils.tsx";
 
 const result = require("enforcing").fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 

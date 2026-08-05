@@ -1,9 +1,9 @@
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/stores/game_store/StoreListingStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createFromServer from "createFromServer";
 import { Store } from "initialize";
 import set from "initialize";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 function addRegularStoreListing(id) {

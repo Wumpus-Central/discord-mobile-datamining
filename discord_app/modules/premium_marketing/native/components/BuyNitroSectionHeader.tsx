@@ -1,6 +1,6 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx
 import jsxProd from "jsxProd";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

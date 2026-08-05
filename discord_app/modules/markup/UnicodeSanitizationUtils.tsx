@@ -1,5 +1,5 @@
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/markup/UnicodeSanitizationUtils.tsx
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
   const result = isDiscordProxiedAssetUrl.safeDecodeURIComponent(hash);

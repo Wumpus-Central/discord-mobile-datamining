@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../_runtime/11006_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/11011_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/11016_registerAsset.js";
 // discord_app/modules/feedback/native/RatingSelector.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -8,6 +5,9 @@ import FeedbackRating from "FeedbackRating";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/11006_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11011_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11016_registerAsset.js";
 
 let c3;
 let c4;

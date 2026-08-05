@@ -1,3 +1,12 @@
+// discord_app/modules/launchpad/native/LaunchPadSearchResults.tsx
+import importAllResult from "renderChannelBadge";
+import { View } from "GuildIconSizes";
+import _getSystemLocale from "_getSystemLocale";
+import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import { UnreadSetting } from "ReadStateTypes";
+import jsxProd from "module_15929";
+import createCacheKey from "createCacheKey";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { sortByMatchScore } from "../../autocompleter/index.tsx";
 import { renderCategoryItem } from "../../channel_list_v2/native/items/RedesignCategory.tsx";
@@ -13,15 +22,6 @@ import { renderChannelWrapper } from "shared/renderChannelWrapper.tsx";
 import { TextChannel } from "shared/TextChannel.tsx";
 import { UnreadBadge } from "shared/UnreadBadge.tsx";
 import { handleVoiceOrStageChannelConnectPress } from "shared/VoiceOrStageChannel.tsx";
-// discord_app/modules/launchpad/native/LaunchPadSearchResults.tsx
-import importAllResult from "renderChannelBadge";
-import { View } from "GuildIconSizes";
-import _getSystemLocale from "_getSystemLocale";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "module_15929";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;

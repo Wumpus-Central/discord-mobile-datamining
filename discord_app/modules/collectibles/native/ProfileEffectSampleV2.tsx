@@ -1,10 +1,10 @@
-import { metadata } from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { StaticEffect } from "../profile_effects/native/ProfileEffect.tsx";
 // discord_app/modules/collectibles/native/ProfileEffectSampleV2.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { metadata } from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { StaticEffect } from "../profile_effects/native/ProfileEffect.tsx";
 
 let c3;
 let c4;

@@ -1,5 +1,5 @@
-import { isTracing } from "../packages/app-start-performance/AppStartPerformance.tsx";
 // discord_common/js/shared/timeRequire.native.tsx
+import { isTracing } from "../packages/app-start-performance/AppStartPerformance.tsx";
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
 
 export default function timeRequire(arg0, arg1) {

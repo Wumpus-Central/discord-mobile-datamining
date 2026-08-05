@@ -1,13 +1,13 @@
-import { Background } from "../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/premium/OutboundPromotionCard.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchActivePromotions from "fetchActivePromotions";
 import get_ActivityIndicator from "OutboundPromotionClaimAlert";
 import jsxProd from "ACTION_SHEET_HEIGHT_HALF";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

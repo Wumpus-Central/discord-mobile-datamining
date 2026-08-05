@@ -1,7 +1,3 @@
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { getParticipantUserKey } from "../calls/getParticipantUserKey.tsx";
-import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
-import { getHighestHoistedRole } from "useGuildMemberDisplayRole.tsx";
 // discord_app/modules/stage_channels/StageChannelParticipants.tsx
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -13,6 +9,10 @@ import updateVoiceState from "updateVoiceState";
 import { getComparator } from "getVoiceStatesForGuild";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
+import { getParticipantUserKey } from "../calls/getParticipantUserKey.tsx";
+import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
+import { getHighestHoistedRole } from "useGuildMemberDisplayRole.tsx";
 
 const require = arg1;
 function sortKey(speaker) {

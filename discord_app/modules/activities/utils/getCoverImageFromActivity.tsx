@@ -1,6 +1,6 @@
-import { updateAssets } from "../../../utils/ApplicationAssetUtils.tsx";
 // discord_app/modules/activities/utils/getCoverImageFromActivity.tsx
 import { ACTIVITY_INVITE_COVER_IMAGE_SIZE as closure_2 } from "items3";
+import { updateAssets } from "../../../utils/ApplicationAssetUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");
 

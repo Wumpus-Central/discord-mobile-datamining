@@ -1,6 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -8,6 +5,9 @@ import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
 import PlatformTypes from "PlatformTypes";
 import PlatformTypes from "PlatformTypes";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let c4;
 let c5;

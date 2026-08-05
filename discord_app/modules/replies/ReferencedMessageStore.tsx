@@ -1,6 +1,3 @@
-import { priv } from "../../../_runtime/01386_priv.js";
-import { redactionSettingToRenderedString } from "../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/replies/ReferencedMessageStore.tsx
 import _slicedToArray from "_slicedToArray";
 import removePendingListFetch from "removePendingListFetch";
@@ -9,6 +6,9 @@ import reinjectEphemerals from "reinjectEphemerals";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "ensureGuildLoaded";
+import { priv } from "../../../_runtime/01386_priv.js";
+import { redactionSettingToRenderedString } from "../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 let error;
 let metroImportAll;

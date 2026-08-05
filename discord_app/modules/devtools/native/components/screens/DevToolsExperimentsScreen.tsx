@@ -1,12 +1,3 @@
-import { apply } from "../../../../../../_runtime/00012_apply.js";
-import { extractId } from "../../../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
-import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { useExperimentAssignment } from "../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
-import { trackExposureToExperiment } from "../../../../experiments/ExperimentManager.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx
 import Background from "Background";
 import importAllResult from "module_8337";
@@ -17,6 +8,15 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ExperimentBuckets from "ExperimentBuckets";
 import jsxProd from "trackExposureToExperiment";
 import createCacheKey from "createCacheKey";
+import { apply } from "../../../../../../_runtime/00012_apply.js";
+import { extractId } from "../../../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { useExperimentAssignment } from "../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
+import { trackExposureToExperiment } from "../../../../experiments/ExperimentManager.tsx";
 
 let c10;
 let c9;

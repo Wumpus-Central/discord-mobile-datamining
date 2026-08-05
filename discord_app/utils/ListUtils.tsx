@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/utils/ListUtils.tsx
+import { getSystemLocale } from "../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("utils/ListUtils.tsx");
 
 export const getListSummaryLabel = function getListSummaryLabel(names, length) {

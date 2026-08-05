@@ -1,11 +1,3 @@
-import { metadata } from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { items } from "../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useTrackQuestEventWithImpression } from "../lib/analytics/AnalyticsHooks.tsx";
-import { BountiesBannerBackground } from "BountiesBannerBackground.tsx";
-import { openBountiesNuxPromoSheet } from "openBountiesNuxPromoSheet.tsx";
 // discord_app/modules/quests/native/BountiesCtaHeader.tsx
 import importAllResult from "metadata";
 import get_ActivityIndicator from "BOUNTIES_MODAL_KEY";
@@ -14,6 +6,14 @@ import getOrCreateSet from "getOrCreateSet";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { metadata } from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { items } from "../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useTrackQuestEventWithImpression } from "../lib/analytics/AnalyticsHooks.tsx";
+import { BountiesBannerBackground } from "BountiesBannerBackground.tsx";
+import { openBountiesNuxPromoSheet } from "openBountiesNuxPromoSheet.tsx";
 
 let StyleSheet;
 let c10;

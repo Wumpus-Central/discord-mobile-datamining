@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/mfa/MFAConstants.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const obj = {};
 Object.defineProperty(obj, "webauthn", {
   get: () => {

@@ -1,7 +1,7 @@
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/guild_profile/GuildProfileUtils.tsx
 import { createChannelRecordFromInvite as closure_2 } from "createChannelRecord";
 import { GuildFeatures } from "ME";
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 
 const result = require("fromGuildPropertiesWithAdditionalFields").fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 

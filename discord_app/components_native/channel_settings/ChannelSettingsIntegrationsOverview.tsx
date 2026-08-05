@@ -1,13 +1,13 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { useNavigation } from "../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx
 import "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { useNavigation } from "../../design/components/Navigator/native/useNavigation.native.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 
 let c5;
 let closure_6;

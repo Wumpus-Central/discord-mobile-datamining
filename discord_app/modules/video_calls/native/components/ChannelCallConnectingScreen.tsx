@@ -1,9 +1,3 @@
-import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { UserSettingsVoice } from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
-import { ChannelCallMicButton } from "ChannelCallMicButton.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallConnectingScreen.tsx
 import VoiceChatCallScreenHeaderIconInner from "VoiceChatCallScreenHeaderIconInner";
 import { View } from "useIsVoiceChannelFull";
@@ -16,6 +10,12 @@ import { InstantInviteSources } from "ME";
 import { Permissions } from "sum";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { UserSettingsVoice } from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
+import { ChannelCallMicButton } from "ChannelCallMicButton.tsx";
 
 let closure_12;
 let closure_14;

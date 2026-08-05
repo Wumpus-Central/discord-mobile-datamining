@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");

@@ -1,7 +1,7 @@
-import { MessageBlock } from "MessageBlock.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/ErrorBlock.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { MessageBlock } from "MessageBlock.tsx";
 
 const require = arg1;
 const result = require("MessageBlock").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ErrorBlock.tsx");

@@ -1,5 +1,3 @@
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
-import { AppLauncherCommandOption } from "../../options/AppLauncherCommandOption.tsx";
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "maybeApplyNoTextColorForLightCustomTheme";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import { AppLauncherCommandOption } from "../../options/AppLauncherCommandOption.tsx";
 
 let c5;
 let closure_6;

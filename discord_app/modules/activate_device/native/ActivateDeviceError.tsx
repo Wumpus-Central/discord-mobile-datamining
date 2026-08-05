@@ -1,13 +1,13 @@
-import { registerAsset } from "../../../../_runtime/10470_registerAsset.js";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { innerContent } from "ActivateDeviceSharedStyles.tsx";
 // discord_app/modules/activate_device/native/ActivateDeviceError.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/10470_registerAsset.js";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { innerContent } from "ActivateDeviceSharedStyles.tsx";
 
 let c3;
 let c4;

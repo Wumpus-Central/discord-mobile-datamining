@@ -1,9 +1,9 @@
-import { buildSteamStoreUrl } from "../../hooks/useSteamWebsiteUrl.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileReviews.tsx
 import noop from "noop";
 import get_ActivityIndicator from "SteamReleaseStatus";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { buildSteamStoreUrl } from "../../hooks/useSteamWebsiteUrl.tsx";
 
 let c4;
 let c5;

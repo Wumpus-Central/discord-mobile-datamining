@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 // discord_app/modules/activities/useEmbeddedAppsForChannel.tsx
 import noop from "noop";
 import sortActivity from "sortActivity";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import participantFromServer from "participantFromServer";
 import { NO_ACTIVITIES } from "participantFromServer";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 
 const require = arg1;
 function useEmbeddedApps(arr, arg1) {

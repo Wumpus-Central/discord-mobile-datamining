@@ -1,10 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { defineProperty } from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
-import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import { ChannelListLayoutTypes } from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
-import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 // discord_app/modules/user_settings/UserSettings.tsx
 import updateExistingSettings from "updateExistingSettings";
 import MAX_FAVORITES from "MAX_FAVORITES";
@@ -135,6 +128,13 @@ import set from "defineProtoSetting";
 import set from "defineProtoSetting";
 import set from "defineProtoSetting";
 import set from "items";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { defineProperty } from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
+import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import { ChannelListLayoutTypes } from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 
 let ListDensityMode;
 let StatusTypes;

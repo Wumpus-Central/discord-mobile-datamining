@@ -1,9 +1,9 @@
-import { n } from "../../../../../_runtime/00689_n.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { flattenColorOverOpaqueBackground } from "../../../utils/shared/colors.tsx";
 // discord_app/design/components/Icon/native/CutoutBackgroundContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { n } from "../../../../../_runtime/00689_n.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { flattenColorOverOpaqueBackground } from "../../../utils/shared/colors.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

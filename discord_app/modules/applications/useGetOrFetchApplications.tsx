@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/applications/useGetOrFetchApplications.tsx
 import noop from "noop";
 import addApplication from "addApplication";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("shallowEqual").fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");

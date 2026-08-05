@@ -1,6 +1,6 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/voice_messages/VoiceMessageAnalytics.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/voice_messages/VoiceMessageAnalytics.tsx");
 

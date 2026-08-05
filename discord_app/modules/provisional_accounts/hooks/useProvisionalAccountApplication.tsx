@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 
 const require = arg1;
 const result = require("useGetOrFetchApplications").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");

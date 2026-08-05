@@ -1,4 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/GuildChannelStore.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -13,6 +12,7 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 let ChannelTypes;
 let c9;

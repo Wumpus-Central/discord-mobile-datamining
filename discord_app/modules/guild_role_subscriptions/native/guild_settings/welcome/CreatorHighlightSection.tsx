@@ -1,14 +1,14 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorHighlightSection.tsx
+import noop from "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/08610_registerAsset.js";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorHighlightSection.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

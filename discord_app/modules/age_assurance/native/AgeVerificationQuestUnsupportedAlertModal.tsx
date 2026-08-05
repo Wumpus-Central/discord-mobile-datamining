@@ -1,9 +1,9 @@
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../AgeAssurance.messages.js";
 // discord_app/modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../AgeAssurance.messages.js";
 
 const require = arg1;
 const result = require("getAlertModalItemKey").fileFinishedImporting("modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx");

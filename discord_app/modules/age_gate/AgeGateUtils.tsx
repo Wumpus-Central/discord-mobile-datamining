@@ -1,10 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
-import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-import { openAgeGateModal } from "AgeGateModalActionCreators.tsx";
 // discord_app/modules/age_gate/AgeGateUtils.tsx
 import { isGuildNSFW } from "GuildNSFWContentLevel";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,6 +7,13 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { AgeGateSource } from "result";
 import ME from "ME";
 import set from "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
+import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import { openAgeGateModal } from "AgeGateModalActionCreators.tsx";
 
 let GuildNSFWContentLevel;
 let c9;

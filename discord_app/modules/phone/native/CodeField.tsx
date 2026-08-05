@@ -1,11 +1,11 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { KeyboardAwareView } from "../../keyboard/native/KeyboardAwareView.tsx";
 // discord_app/modules/phone/native/CodeField.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { KeyboardAwareView } from "../../keyboard/native/KeyboardAwareView.tsx";
 
 let c5;
 let closure_6;

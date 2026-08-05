@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../_runtime/08422_registerAsset.js";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/share/native/ShareUtils.tsx
 import dispatcher from "dispatcher";
 import { DraftType } from "handleChanged";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { registerAsset } from "../../../../_runtime/08422_registerAsset.js";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 const require = arg1;
 function _sendShareMessage() {

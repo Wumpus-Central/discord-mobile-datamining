@@ -1,9 +1,9 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useResourceChannels } from "../useResourceChannels.tsx";
 // discord_app/modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx
 import "noop";
 import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";
 import { jsx } from "jsxProd";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useResourceChannels } from "../useResourceChannels.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");

@@ -1,9 +1,9 @@
-import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/GuildVersions.tsx
 import _slicedToArray from "_slicedToArray";
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import set from "createGuildRecordFromRust";
+import { items } from "../DatabaseDaos.tsx";
 
 let closure_6 = new require("timestamp")("GuildVersions");
 class GuildVersions {

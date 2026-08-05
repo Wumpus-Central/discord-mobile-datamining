@@ -1,10 +1,10 @@
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/CreateChannelActionCreators.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import ME from "ME";
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES";
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 
 let c4;
 let c5;

@@ -1,8 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { track } from "../../../../actions/AnalyticsTrackingActionCreators.tsx";
-import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/SyncThemeSetting.tsx
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import initialize from "initialize";
@@ -10,6 +5,11 @@ import handleThemeChange from "handleThemeChange";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { AnalyticEvents } from "ME";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { track } from "../../../../actions/AnalyticsTrackingActionCreators.tsx";
+import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 const require = arg1;
 createToggle = {

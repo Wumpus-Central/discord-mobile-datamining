@@ -1,8 +1,8 @@
-import { maybeFetchTopEmojisByGuild } from "TopEmojisUtils.tsx";
 // discord_app/modules/emojis/top_emojis/TopEmojisDataManager.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import { EmojiInteractionPoint } from "set";
 import "initialize";
+import { maybeFetchTopEmojisByGuild } from "TopEmojisUtils.tsx";
 
 const require = arg1;
 class TopEmojisDataManager extends tmp2 {

@@ -1,8 +1,8 @@
-import { parseRawEmojiObject } from "../../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/custom_status/utils/userSettingToActivity.tsx
 import { useMemo } from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { ActivityTypes } from "ME";
+import { parseRawEmojiObject } from "../../emojis/UnicodeEmojis.tsx";
 
 function _activityFromSetting(emojiName) {
   if (null != arg1) {

@@ -1,7 +1,7 @@
+// discord_app/modules/user_settings/account/native/showInvalidUsernameToastNative.tsx
 import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
-// discord_app/modules/user_settings/account/native/showInvalidUsernameToastNative.tsx
 const result = require("registerAsset").fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
 
 export const showInvalidUsernameToast = function showInvalidUsernameToast() {

@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/dismissible_content/DismissibleContentFrameworkActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkActionCreators.tsx");
 
 export const handleDCShownToUser = function handleDCShownToUser(dismissibleContent, guildId) {

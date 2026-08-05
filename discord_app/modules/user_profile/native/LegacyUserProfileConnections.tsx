@@ -1,5 +1,3 @@
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_profile/native/LegacyUserProfileConnections.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "Button";
@@ -11,6 +9,8 @@ import ME from "ME";
 import { MetadataFields } from "OperatorTypes";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let c10;
 let c4;

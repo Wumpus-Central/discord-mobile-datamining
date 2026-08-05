@@ -1,6 +1,6 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/media_engine/dispatchAutoDisableVideo.tsx
 import { MediaEngineContextTypes } from "DesktopSources";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const result = require("set").fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");
 

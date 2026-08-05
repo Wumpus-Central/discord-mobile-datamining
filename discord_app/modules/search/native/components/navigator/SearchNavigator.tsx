@@ -1,4 +1,3 @@
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/search/native/components/navigator/SearchNavigator.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +7,7 @@ import { SearchTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createNativeStackNavigator from "createNativeStackNavigator";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c9;
 let metroImportAll;

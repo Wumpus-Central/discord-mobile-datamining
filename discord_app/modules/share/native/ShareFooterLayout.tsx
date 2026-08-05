@@ -1,13 +1,13 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
-import { SUBTLE_SPRING } from "../../../design/animation/reanimated/spring/springPresets.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/share/native/ShareFooterLayout.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../design/animation/reanimated/spring/springPresets.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let c4;
 let c5;

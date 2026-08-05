@@ -1,5 +1,3 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/rpc/server/RPCServerManager.tsx
 import _slicedToArray from "_slicedToArray";
 import initializeState from "initializeState";
@@ -17,6 +15,8 @@ import ME from "ME";
 import { ActivityLayoutMode } from "items3";
 import { FrameLayoutModes } from "FrameLayoutModes";
 import { MediaEngineContextTypes } from "DesktopSources";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 let closure_15;
 let closure_16;

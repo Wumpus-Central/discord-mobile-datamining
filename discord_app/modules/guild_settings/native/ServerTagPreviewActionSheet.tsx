@@ -1,10 +1,10 @@
-import { GuildSettingsServerTagPreview } from "GuildSettingsServerTagPreview.tsx";
 // discord_app/modules/guild_settings/native/ServerTagPreviewActionSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { GuildProfileFetchStatus } from "handleUpdateStart";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { GuildSettingsServerTagPreview } from "GuildSettingsServerTagPreview.tsx";
 
 let closure_6;
 let error;

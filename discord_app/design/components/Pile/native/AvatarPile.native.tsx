@@ -1,11 +1,11 @@
+// discord_app/design/components/Pile/native/AvatarPile.native.tsx
+import noop from "noop";
+import jsxProd from "jsxProd";
 import { getListSummaryLabel } from "../../../../utils/ListUtils.tsx";
 import { StaticNativeCutoutAvatarImage } from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 import { SolidCutout } from "../../Icon/native/ClipView.tsx";
 import { Pile } from "Pile.native.tsx";
 import { map } from "PileOverflow.native.tsx";
-// discord_app/design/components/Pile/native/AvatarPile.native.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

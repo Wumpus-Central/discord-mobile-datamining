@@ -1,7 +1,7 @@
+// discord_app/design/tokens/native/SemanticColorContext.native.tsx
 import { n } from "../../../../_runtime/00689_n.js";
 import { getGradientColorByPercentage } from "../../../modules/client_themes/native/ClientThemesUtils.tsx";
 import { getGradientThemeFromFlags } from "../../components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx";
-// discord_app/design/tokens/native/SemanticColorContext.native.tsx
 const result = require("getNodeText").fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
 export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(themeContext) {

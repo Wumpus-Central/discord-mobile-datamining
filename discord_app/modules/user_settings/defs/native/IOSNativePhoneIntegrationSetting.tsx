@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 import { apexExperiment } from "../../../voice_calls/CallKitMetricCollectionExperiment.tsx";
-// discord_app/modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

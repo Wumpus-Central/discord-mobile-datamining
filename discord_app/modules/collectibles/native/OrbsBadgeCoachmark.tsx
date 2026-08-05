@@ -1,10 +1,10 @@
-import { metadata } from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
-import { useCoachmark } from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
 // discord_app/modules/collectibles/native/OrbsBadgeCoachmark.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { metadata } from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
+import { useCoachmark } from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
 
 let c4;
 let c5;

@@ -1,12 +1,12 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/authorized_apps/native/InfoBox.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

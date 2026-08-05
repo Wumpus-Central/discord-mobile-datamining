@@ -1,10 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { BottomSheetModal } from "../../../_runtime/05340_BottomSheetModal.js";
-import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { set } from "../../modules/core/native/NativeView.tsx";
-import { ReanimatedRexport } from "../../modules/reanimated/ReanimatedRexport.tsx";
-import { refObjectUnionAsProp } from "../../modules/typescript/refObjectUnionAsProp.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/lib/native/FastList.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +5,13 @@ import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importDefaultResult from "module_4146";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { BottomSheetModal } from "../../../_runtime/05340_BottomSheetModal.js";
+import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { set } from "../../modules/core/native/NativeView.tsx";
+import { ReanimatedRexport } from "../../modules/reanimated/ReanimatedRexport.tsx";
+import { refObjectUnionAsProp } from "../../modules/typescript/refObjectUnionAsProp.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 
 let StyleSheet;
 let c10;

@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx
 import messagesProxy from "messagesProxy";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -9,6 +8,7 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import { ThemeTypes } from "sum";
 import { jsx } from "metadata";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c9;

@@ -1,4 +1,3 @@
-import { memoResult1 } from "VoicePanelChatView.tsx";
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -6,6 +5,7 @@ import get_ActivityIndicator from "set";
 import VoicePanelModes from "VoicePanelModes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { memoResult1 } from "VoicePanelChatView.tsx";
 
 let c10;
 let c5;

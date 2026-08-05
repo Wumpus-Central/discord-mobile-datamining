@@ -1,10 +1,10 @@
+// discord_app/design/components/Sheet/native/ActionSheetCloseButton.native.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
 import { XSmallIcon } from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
-// discord_app/design/components/Sheet/native/ActionSheetCloseButton.native.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 let closure_4 = Object.freeze({ radius: 12 });

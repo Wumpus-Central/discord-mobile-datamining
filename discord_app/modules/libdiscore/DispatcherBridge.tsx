@@ -1,5 +1,3 @@
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { items } from "libdiscoreExperiments.tsx";
 // discord_app/modules/libdiscore/DispatcherBridge.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 import importDefaultResult from "fromServer";
@@ -10,6 +8,8 @@ import importDefaultResult3 from "createGuildRoleRecordFromRust";
 import { AnalyticEvents } from "ME";
 import importDefaultResult4 from "createGuildRecordFromRust";
 import set from "parseServerGuildSticker";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
+import { items } from "libdiscoreExperiments.tsx";
 
 const require = arg1;
 let closure_6 = new require("getNote")("DispatcherBridge");

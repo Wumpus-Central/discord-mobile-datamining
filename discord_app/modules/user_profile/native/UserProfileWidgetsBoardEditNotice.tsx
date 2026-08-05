@@ -1,13 +1,13 @@
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { SelectedDismissibleContent } from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
 // discord_app/modules/user_profile/native/UserProfileWidgetsBoardEditNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { SelectedDismissibleContent } from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
 
 let c5;
 let closure_6;

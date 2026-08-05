@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_identity/GuildIdentityActionCreators.tsx
 import SafetyScannedUploadSurface from "SafetyScannedUploadSurface";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function _saveGuildIdentityChanges() {

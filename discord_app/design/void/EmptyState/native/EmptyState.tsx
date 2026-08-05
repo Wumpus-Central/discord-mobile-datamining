@@ -1,9 +1,9 @@
-import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/EmptyState/native/EmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 
 let c3;
 let c4;

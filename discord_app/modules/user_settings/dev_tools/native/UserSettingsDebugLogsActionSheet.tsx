@@ -1,3 +1,6 @@
+// discord_app/modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx
+import "noop";
+import jsxProd from "jsxProd";
 import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
@@ -7,9 +10,6 @@ import { TableRowGroupTitle } from "../../../../design/components/TableRow/nativ
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx
-import "noop";
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

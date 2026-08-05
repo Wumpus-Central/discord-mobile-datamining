@@ -1,8 +1,8 @@
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/user_settings/core/native/openUserSettings.tsx
 import handleFormClose from "handleFormClose";
 import { UserSettingsSections } from "ME";
+import { dispatcher } from "../../../../Dispatcher.tsx";
+import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const result = require("getRootNavigationRef").fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 

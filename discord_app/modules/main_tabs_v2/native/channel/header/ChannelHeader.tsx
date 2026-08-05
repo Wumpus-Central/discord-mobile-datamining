@@ -1,13 +1,13 @@
-import { set } from "../../../../../utils/PlatformUtils.tsx";
-import { GuildRoleSubscriptionsChannelHeader } from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
-import { HomeChannelHeader } from "HomeChannelHeader.tsx";
-import { GroupDmMemberCount } from "PrivateChannelHeader.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx
 import "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ComponentActions } from "ME";
 import { StaticChannelRoute } from "set";
 import { jsx } from "jsxProd";
+import { set } from "../../../../../utils/PlatformUtils.tsx";
+import { GuildRoleSubscriptionsChannelHeader } from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
+import { HomeChannelHeader } from "HomeChannelHeader.tsx";
+import { GroupDmMemberCount } from "PrivateChannelHeader.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");

@@ -1,8 +1,8 @@
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/media_viewer/native/MediaViewerDimensionsContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 let context = importAllResult.createContext(null);
 const result = require("useWindowDimensions").fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");

@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import GuildBadge from "GuildBadge";
@@ -6,6 +5,7 @@ import { View } from "Stack";
 import items from "items";
 import jsxProd from "SegmentedControl";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c9;

@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const require = arg1;
 createToggle = {

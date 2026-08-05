@@ -1,15 +1,15 @@
-import { format } from "../../../../../_runtime/00669_format.js";
-import { BaseConnectionEvent } from "../index.tsx";
-import { create } from "Connection.tsx";
-import { sanitizeDevices } from "Devices.tsx";
-import { inject } from "inject.tsx";
-import { Video } from "ui/Video.tsx";
 // discord_common/js/packages/media-engine/native/index.tsx
 import _slicedToArray from "_slicedToArray";
 import Video from "Video";
 import DesktopSources from "DesktopSources";
 import AudioSubsystems from "AudioSubsystems";
 import "on";
+import { format } from "../../../../../_runtime/00669_format.js";
+import { BaseConnectionEvent } from "../index.tsx";
+import { create } from "Connection.tsx";
+import { sanitizeDevices } from "Devices.tsx";
+import { inject } from "inject.tsx";
+import { Video } from "ui/Video.tsx";
 
 let c10;
 let c5;

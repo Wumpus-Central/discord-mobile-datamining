@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import get from "get";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("get").fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");

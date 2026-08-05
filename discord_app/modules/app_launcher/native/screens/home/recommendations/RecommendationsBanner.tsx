@@ -1,8 +1,3 @@
-import { preload } from "../../../../../../components_native/common/FastImage.tsx";
-import { getAvatarURL } from "../../../../../../utils/AvatarUtils.tsx";
-import { useEmbeddedActivityBackground } from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
-import { hasFetchedColors } from "../../../../../avatar/useAvatarColor.tsx";
-import { useDisplayProfile } from "../../../../../user_profile/hooks/useDisplayProfile.tsx";
 // discord_app/modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -10,6 +5,11 @@ import createdAt from "createdAt";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../../../components_native/common/FastImage.tsx";
+import { getAvatarURL } from "../../../../../../utils/AvatarUtils.tsx";
+import { useEmbeddedActivityBackground } from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import { hasFetchedColors } from "../../../../../avatar/useAvatarColor.tsx";
+import { useDisplayProfile } from "../../../../../user_profile/hooks/useDisplayProfile.tsx";
 
 let closure_6;
 let error;

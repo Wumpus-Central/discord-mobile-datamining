@@ -1,9 +1,9 @@
-import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
 // discord_app/modules/mfa/native/screens/TotpScreen.tsx
 import MFAOptionScreen from "MFAOptionScreen";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
 
 const require = arg1;
 function isValidClipboardCode(arg0) {

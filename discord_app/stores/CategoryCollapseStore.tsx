@@ -1,5 +1,3 @@
-import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 // discord_app/stores/CategoryCollapseStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +5,8 @@ import handleConnectionOpen from "handleConnectionOpen";
 import comparator from "comparator";
 import { ChannelTypes } from "ME";
 import { PersistedStore } from "initialize";
+import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 
 const require = arg1;
 function incrementVersion() {

@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { canViewInviteModal } from "../instant_invite/canViewInviteModal.tsx";
 // discord_app/modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -9,6 +7,8 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { isGuildEventEnded } from "scheduledEventSort";
 import { GuildScheduledEventEntityTypes as closure_9 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { canViewInviteModal } from "../instant_invite/canViewInviteModal.tsx";
 
 const require = arg1;
 function canEveryoneRoleViewEvent(guildEvent, items1) {

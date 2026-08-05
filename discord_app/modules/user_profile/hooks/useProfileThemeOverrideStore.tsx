@@ -1,9 +1,9 @@
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getProfileTheme } from "../UserProfileGradientUtils.tsx";
 // discord_app/modules/user_profile/hooks/useProfileThemeOverrideStore.tsx
 import { ThemeTypes } from "ME";
 import keys from "keys";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getProfileTheme } from "../UserProfileGradientUtils.tsx";
 
 let tmp2 = keys.create()((arg0) => {
   let closure_0 = arg0;

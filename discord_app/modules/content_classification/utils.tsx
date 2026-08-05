@@ -1,6 +1,6 @@
+// discord_app/modules/content_classification/utils.tsx
 import { contentClassificationToAgeRestrictionConclusion } from "../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx";
 import { AgeRestrictionStatus } from "../../../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx";
-// discord_app/modules/content_classification/utils.tsx
 let result = require("set").fileFinishedImporting("modules/content_classification/utils.tsx");
 
 export const isAgeRestrictedContentClassification = function isAgeRestrictedContentClassification(contentClassification) {

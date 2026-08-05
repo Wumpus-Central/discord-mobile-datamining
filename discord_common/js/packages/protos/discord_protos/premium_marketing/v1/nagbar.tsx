@@ -1,10 +1,10 @@
+// discord_common/js/packages/protos/discord_protos/premium_marketing/v1/nagbar.tsx
+import _slicedToArray from "_slicedToArray";
+import { MessageType } from "module_1307";
 import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
 import { create } from "../../common/v1/localized_string.tsx";
 import { create } from "help_article.tsx";
-// discord_common/js/packages/protos/discord_protos/premium_marketing/v1/nagbar.tsx
-import _slicedToArray from "_slicedToArray";
-import { MessageType } from "module_1307";
 
 const require = arg1;
 class Nagbar$Type extends MessageType {

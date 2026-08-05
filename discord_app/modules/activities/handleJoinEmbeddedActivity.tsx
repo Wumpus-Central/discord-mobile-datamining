@@ -1,4 +1,3 @@
-import { shouldOpenActivityInPopoutWindow } from "ActivityPopoutUtils.native.tsx";
 // discord_app/modules/activities/handleJoinEmbeddedActivity.tsx
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";
@@ -7,6 +6,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import closure_8 from "participantFromServer";
 import { SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES as closure_9 } from "items3";
+import { shouldOpenActivityInPopoutWindow } from "ActivityPopoutUtils.native.tsx";
 
 const require = arg1;
 function _handleJoinEmbeddedActivityInternal() {

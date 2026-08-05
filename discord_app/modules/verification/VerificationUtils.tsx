@@ -1,7 +1,7 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/verification/VerificationUtils.tsx
 import ME from "ME";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let EMAIL;
 let PHONE;

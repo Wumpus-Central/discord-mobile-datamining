@@ -1,13 +1,13 @@
-import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../PremiumGroup.messages.js";
 // discord_app/modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx
 import { View } from "get ActivityIndicator";
 import { HELP_CENTER_LINK } from "SubscriptionStatusTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../PremiumGroup.messages.js";
 
 let c5;
 let closure_6;

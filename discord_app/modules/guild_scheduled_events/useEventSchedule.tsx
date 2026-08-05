@@ -1,8 +1,8 @@
+// discord_app/modules/guild_scheduled_events/useEventSchedule.tsx
+import scheduledEventSort from "scheduledEventSort";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useEventException } from "useEventException.tsx";
 import { getRRule } from "utils/ScheduleUtils.tsx";
-// discord_app/modules/guild_scheduled_events/useEventSchedule.tsx
-import scheduledEventSort from "scheduledEventSort";
 
 const require = arg1;
 const result = require("useEventException").fileFinishedImporting("modules/guild_scheduled_events/useEventSchedule.tsx");

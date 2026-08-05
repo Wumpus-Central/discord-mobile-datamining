@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { openIncodeAgeVerificationModal } from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import { AgeVerificationModalEntryPoint } from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import { useAgeVerificationRunner } from "../../../age_assurance/AgeVerificationUtils.tsx";
 import { isFeatureAgeGated } from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-// discord_app/modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx
-import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {

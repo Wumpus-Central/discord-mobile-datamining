@@ -1,5 +1,3 @@
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { handleNameInputScreenOrSuggestions } from "../ContactSyncModalActionCreators.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncSettings.tsx
 import closure_3 from "jsxProd";
 import "asyncRequireImpl";
@@ -7,6 +5,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import setStoredContacts from "setStoredContacts";
 import ME from "ME";
 import jsxProd from "jsxProd";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { handleNameInputScreenOrSuggestions } from "../ContactSyncModalActionCreators.tsx";
 
 let c10;
 let c5;

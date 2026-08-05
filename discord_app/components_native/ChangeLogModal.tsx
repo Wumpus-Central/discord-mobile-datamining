@@ -1,9 +1,3 @@
-import { 14623__ } from "../../_runtime/metro/14623__.js";
-import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
-import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { LHeading } from "ChangeLogStandardTemplate.tsx";
-import { VideoComponent } from "common/Video.tsx";
 // discord_app/components_native/ChangeLogModal.tsx
 import importAllResult from "useWindowDimensions";
 import { View } from "Button";
@@ -12,6 +6,12 @@ import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY";
 import jsxProd from "Link";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { 14623__ } from "../../_runtime/metro/14623__.js";
+import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
+import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { LHeading } from "ChangeLogStandardTemplate.tsx";
+import { VideoComponent } from "common/Video.tsx";
 
 let error;
 let metroImportAll;

@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../_runtime/13884_registerAsset.js";
 // discord_app/modules/webauthn/native/WebAuthnDeleteActionSheet.tsx
 import "set";
 import get_ActivityIndicator from "registerAsset";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/13884_registerAsset.js";
 
 let c3;
 let c4;

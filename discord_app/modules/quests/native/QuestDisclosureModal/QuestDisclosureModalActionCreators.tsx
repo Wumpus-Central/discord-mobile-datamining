@@ -1,8 +1,8 @@
+// discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { apexExperiment } from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import { getApplicationIdsByTaskTypes } from "../../utils/QuestTaskUtils.tsx";
-// discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
 let result = require("emitClickEventWithCreative").fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx");
 

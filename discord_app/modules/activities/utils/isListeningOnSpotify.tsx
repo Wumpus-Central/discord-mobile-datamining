@@ -1,7 +1,7 @@
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 // discord_app/modules/activities/utils/isListeningOnSpotify.tsx
 import ME from "ME";
 import { isSpotifyParty } from "WEB_OPEN";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 
 let c3;
 let obj1;

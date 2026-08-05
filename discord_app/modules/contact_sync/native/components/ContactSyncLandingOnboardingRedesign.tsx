@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/11960_registerAsset.js";
-import { ContactSyncError } from "ContactSyncError.tsx";
-import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
 import closure_3 from "createCacheKey";
 import noop from "noop";
@@ -8,6 +5,9 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/11960_registerAsset.js";
+import { ContactSyncError } from "ContactSyncError.tsx";
+import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 
 let c10;
 let c5;

@@ -1,11 +1,11 @@
-import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
-import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
-import { getChannelAndRecipientsFromInvite } from "getChannelAndRecipientsFromInvite.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { InviteTypes } from "InviteSendStates";
+import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
+import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
+import { getChannelAndRecipientsFromInvite } from "getChannelAndRecipientsFromInvite.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");

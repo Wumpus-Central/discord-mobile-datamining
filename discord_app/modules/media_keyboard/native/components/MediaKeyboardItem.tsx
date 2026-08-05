@@ -1,11 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/09882_registerAsset.js";
-import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import { ImageIcon } from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardItem.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "openImagePickerUnhandled";
@@ -18,6 +10,14 @@ import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09882_registerAsset.js";
+import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
+import { ImageIcon } from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
 
 let Pressable;
 let c10;

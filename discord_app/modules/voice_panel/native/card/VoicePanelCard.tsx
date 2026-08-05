@@ -1,4 +1,3 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelCard.tsx
 import map from "map";
 import importAllResult from "watchStream";
@@ -16,6 +15,7 @@ import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 
 let c10;
 let c9;

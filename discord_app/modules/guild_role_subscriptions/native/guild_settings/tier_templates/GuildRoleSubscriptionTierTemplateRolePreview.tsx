@@ -1,3 +1,9 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -5,12 +11,6 @@ import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
 import { RoleIcon } from "../../../../roles/native/RoleIcon.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

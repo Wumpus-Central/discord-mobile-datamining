@@ -1,10 +1,10 @@
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_profile/native/UserProfileStackedActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

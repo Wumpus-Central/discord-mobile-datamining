@@ -1,5 +1,3 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
-import { SUBTLE_SPRING } from "../../../animation/reanimated/spring/springPresets.tsx";
 // discord_app/design/components/Forms/native/FormSwitch.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +6,8 @@ import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
 import IconSizes from "IconSizes";
 import importDefaultResult1 from "module_4146";
+import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../animation/reanimated/spring/springPresets.tsx";
 
 const require = arg1;
 let closure_6 = require("module_4146").createAnimatedComponent(require("set").Pressable);

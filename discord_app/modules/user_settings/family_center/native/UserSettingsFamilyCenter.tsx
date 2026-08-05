@@ -1,4 +1,3 @@
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 // discord_app/modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx
 import openAgeGateModal from "openAgeGateModal";
 import defaultAreStatesEqual from "defaultAreStatesEqual";
@@ -11,6 +10,7 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import items from "items";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 
 let FamilyCenterSubPages;
 let c5;

@@ -1,8 +1,8 @@
-import { AccessibilityView } from "../../AccessibilityView/AccessibilityView.native.tsx";
 // discord_app/design/components/Dialog/native/Dialog.native.tsx
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { AccessibilityView } from "../../AccessibilityView/AccessibilityView.native.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");

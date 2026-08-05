@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../_runtime/10436_registerAsset.js";
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/oauth2/native/ErrorResult.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/10436_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

@@ -1,7 +1,7 @@
-import { GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH } from "GameAutocompleteUtils.tsx";
 // discord_app/modules/games/autocomplete/GameAutocompleteStore.tsx
 import { Store } from "initialize";
 import set from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH";
+import { GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH } from "GameAutocompleteUtils.tsx";
 
 const require = arg1;
 let set = new Set();

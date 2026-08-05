@@ -1,8 +1,8 @@
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx");

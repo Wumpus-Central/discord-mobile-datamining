@@ -1,7 +1,7 @@
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/DefaultRouteStore.tsx
 import { Routes } from "ME";
 import { PersistedStore } from "initialize";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 
 let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
 const LAST_VIEWED_PATH = "LAST_VIEWED_PATH";

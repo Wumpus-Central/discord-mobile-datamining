@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { UserProfileVoiceActivityIcon } from "../../user_profile/native/UserProfileVoiceActivityIcon.tsx";
-import { ActivityStatusText } from "ActivityStatusText.tsx";
 // discord_app/modules/activity_status/native/VoiceActivityStatus.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { UserProfileVoiceActivityIcon } from "../../user_profile/native/UserProfileVoiceActivityIcon.tsx";
+import { ActivityStatusText } from "ActivityStatusText.tsx";
 
 let c3;
 let c4;

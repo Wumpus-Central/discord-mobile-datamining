@@ -1,5 +1,3 @@
-import { useMessagePreview } from "../../main_tabs_v2/useMessagePreviews.tsx";
-import { MobileHomeDrawerExperiment } from "HomeDrawerExperiment.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerDM.tsx
 import MobileHomeDrawerExperiment from "MobileHomeDrawerExperiment";
 import { View } from "ChannelListLayoutTypes";
@@ -10,6 +8,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { NOOP } from "sum";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { useMessagePreview } from "../../main_tabs_v2/useMessagePreviews.tsx";
+import { MobileHomeDrawerExperiment } from "HomeDrawerExperiment.tsx";
 
 let c10;
 let unpackModuleId;

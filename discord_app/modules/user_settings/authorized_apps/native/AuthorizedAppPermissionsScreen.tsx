@@ -1,8 +1,8 @@
-import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
-import { UserSettingsAuthedAppPermissions } from "UserSettingsAuthedAppPermissions.tsx";
 // discord_app/modules/user_settings/authorized_apps/native/AuthorizedAppPermissionsScreen.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
+import { UserSettingsAuthedAppPermissions } from "UserSettingsAuthedAppPermissions.tsx";
 
 const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppPermissionsScreen.tsx");

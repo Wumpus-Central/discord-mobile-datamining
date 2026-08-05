@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 // discord_app/design/components/Button/native/ButtonConstants.native.tsx
 import IconSizes from "IconSizes";
 import IconSizes from "IconSizes";
 import IconSizes from "IconSizes";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 
 const SMALL = require("IconSizes").IconSizes.SMALL;
 const SMALL_20 = require("IconSizes").IconSizes.SMALL_20;

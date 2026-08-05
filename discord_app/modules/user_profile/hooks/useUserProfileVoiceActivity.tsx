@@ -1,7 +1,7 @@
-import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
 // discord_app/modules/user_profile/hooks/useUserProfileVoiceActivity.tsx
 import sortActivity from "sortActivity";
 import updateVoiceState from "updateVoiceState";
+import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
 
 const require = arg1;
 const result = require("isEmbeddedActivity").fileFinishedImporting("modules/user_profile/hooks/useUserProfileVoiceActivity.tsx");

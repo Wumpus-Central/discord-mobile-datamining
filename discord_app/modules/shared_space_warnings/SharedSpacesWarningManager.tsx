@@ -1,6 +1,3 @@
-import { keys } from "../../ConstantsIOS.tsx";
-import { showGdmBlockedUserModal } from "show_gdm_modal/showGdmBlockedUserModal.native.tsx";
-import { showVoiceChannelBlockedUserWarning } from "show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx";
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -8,6 +5,9 @@ import upsertRelationship from "upsertRelationship";
 import useSharedSpacesWarningStore from "useSharedSpacesWarningStore";
 import init from "init";
 import "initialize";
+import { keys } from "../../ConstantsIOS.tsx";
+import { showGdmBlockedUserModal } from "show_gdm_modal/showGdmBlockedUserModal.native.tsx";
+import { showVoiceChannelBlockedUserWarning } from "show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx";
 
 let c5;
 let c9;

@@ -1,10 +1,10 @@
-import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx";
 // discord_app/components_native/common/FastImage.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx";
 
 let c3;
 let obj1;

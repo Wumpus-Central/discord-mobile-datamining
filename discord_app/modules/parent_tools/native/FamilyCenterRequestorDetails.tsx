@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
-import { FamilyCenterUsernameHeader } from "FamilyCenterUsernameHeader.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterRequestorDetails.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
+import { FamilyCenterUsernameHeader } from "FamilyCenterUsernameHeader.tsx";
 
 let c4;
 let c5;

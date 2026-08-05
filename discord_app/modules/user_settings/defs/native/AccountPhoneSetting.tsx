@@ -1,12 +1,12 @@
+// discord_app/modules/user_settings/defs/native/AccountPhoneSetting.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY";
+import createToggle from "createToggle";
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
-// discord_app/modules/user_settings/defs/native/AccountPhoneSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

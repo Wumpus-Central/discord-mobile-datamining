@@ -1,9 +1,3 @@
-import { RTCConnectionEvent } from "../../lib/RTCConnectionEvent.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { removeExecutablePathPrefix } from "../game_detection/GameAnalyticsUtils.tsx";
-import { getSoundshareAnalyticsContext } from "utils/getSoundshareAnalyticsContext.tsx";
-import { getStreamSourceMetadata } from "utils/getStreamSourceMetadata.native.tsx";
-import { isStreamKey } from "utils/StreamKeyUtils.tsx";
 // discord_app/modules/go_live/StreamRTCConnection.tsx
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo";
@@ -18,6 +12,12 @@ import initialize from "initialize";
 import ME from "ME";
 import { MediaEngineContextTypes } from "DesktopSources";
 import "getEventHistoryString";
+import { RTCConnectionEvent } from "../../lib/RTCConnectionEvent.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { removeExecutablePathPrefix } from "../game_detection/GameAnalyticsUtils.tsx";
+import { getSoundshareAnalyticsContext } from "utils/getSoundshareAnalyticsContext.tsx";
+import { getStreamSourceMetadata } from "utils/getStreamSourceMetadata.native.tsx";
+import { isStreamKey } from "utils/StreamKeyUtils.tsx";
 
 let closure_14;
 let closure_15;

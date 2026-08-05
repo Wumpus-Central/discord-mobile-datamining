@@ -1,9 +1,9 @@
-import { ApplicationConnectionCard } from "ApplicationConnectionCard.tsx";
-import { ProviderConnectionCard } from "ProviderConnectionCard.tsx";
 // discord_app/modules/guild_onboarding/native/ConnectionCard.tsx
 import "noop";
 import { OnboardingConnectionType } from "serverPromptToClientPrompt";
 import { jsx } from "jsxProd";
+import { ApplicationConnectionCard } from "ApplicationConnectionCard.tsx";
+import { ProviderConnectionCard } from "ProviderConnectionCard.tsx";
 
 const result = require("jsxProd").fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");
 

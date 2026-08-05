@@ -1,12 +1,12 @@
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 // discord_app/modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 
 let closure_6;
 let error;

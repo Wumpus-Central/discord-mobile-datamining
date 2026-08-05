@@ -1,6 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useAuthorizedSlayerApplications } from "../../authorized_apps/useAuthorizedSlayerApplications.tsx";
 // discord_app/modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -9,6 +6,9 @@ import { MobileSetting } from "MobileSetting";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useAuthorizedSlayerApplications } from "../../authorized_apps/useAuthorizedSlayerApplications.tsx";
 
 let c10;
 let c5;

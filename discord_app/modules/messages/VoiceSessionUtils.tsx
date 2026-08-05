@@ -1,11 +1,11 @@
-import { maybeSortByProbability } from "../user_affinities/maybeSortByProbability.tsx";
-import { getHumanizedCallDuration } from "getHumanizedCallDuration.tsx";
-import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 // discord_app/modules/messages/VoiceSessionUtils.tsx
 import noop from "noop";
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { maybeSortByProbability } from "../user_affinities/maybeSortByProbability.tsx";
+import { getHumanizedCallDuration } from "getHumanizedCallDuration.tsx";
+import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 
 const require = arg1;
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx");

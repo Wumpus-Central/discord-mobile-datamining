@@ -1,6 +1,3 @@
-import { matchPath } from "../modules/routing/matchPathCompat.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
-import { RouteParam } from "../modules/routing/RouteUtils.tsx";
 // discord_app/stores/SelectedGuildStore.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import fetchFingerprint from "fetchFingerprint";
@@ -8,6 +5,9 @@ import initialize from "initialize";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 import { PersistedStore } from "initialize";
+import { matchPath } from "../modules/routing/matchPathCompat.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { RouteParam } from "../modules/routing/RouteUtils.tsx";
 
 let closure_6;
 let error;

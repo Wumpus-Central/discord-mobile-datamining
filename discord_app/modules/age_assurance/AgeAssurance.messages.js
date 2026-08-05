@@ -1,3 +1,6 @@
+// discord_app/modules/age_assurance/AgeAssurance.messages.js
+import 01274__ from "../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../_runtime/02804_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02805_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02806_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../_runtime/02832_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02833_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02834_registerAsset.js";
 import { loadJsonAsset } from "../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/age_assurance/AgeAssurance.messages.js
-import 01274__ from "../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

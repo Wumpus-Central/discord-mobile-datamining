@@ -1,4 +1,3 @@
-import { isIterable } from "../../../_runtime/03898_isIterable.js";
 // discord_app/modules/guild_automod/AutomodStore.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_3 from "identity";
@@ -6,6 +5,7 @@ import noop from "noop";
 import { AutomodTriggerType } from "AutomodEventType";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import identity from "identity";
+import { isIterable } from "../../../_runtime/03898_isIterable.js";
 
 const require = arg1;
 let closure_7 = {};

@@ -1,5 +1,5 @@
-import { experiment } from "AutomodExperiment.tsx";
 // discord_app/modules/guild_automod/ExperimentUtils.tsx
+import { experiment } from "AutomodExperiment.tsx";
 const result = require("set").fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 
 export const isInMentionRaidExperiment = function isInMentionRaidExperiment(guildId) {

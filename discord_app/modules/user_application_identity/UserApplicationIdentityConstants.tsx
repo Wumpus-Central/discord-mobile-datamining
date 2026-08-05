@@ -1,5 +1,5 @@
-import { useIsRiotSocialSDKMigrationEnabled } from "../application_account_linking/experiments/socialSDKMigration.tsx";
 // discord_app/modules/user_application_identity/UserApplicationIdentityConstants.tsx
+import { useIsRiotSocialSDKMigrationEnabled } from "../application_account_linking/experiments/socialSDKMigration.tsx";
 let obj = { RIOT_GAMES: "1443033465766281327", BATTLENET: "1356665549089800303" };
 obj = {
   applicationId: obj.RIOT_GAMES,

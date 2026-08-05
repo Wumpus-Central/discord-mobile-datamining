@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useFavoritesAccess } from "../FavoritesHooks.tsx";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx
 import noop from "noop";
 import { Routes } from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useFavoritesAccess } from "../FavoritesHooks.tsx";
+import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 
 const require = arg1;
 const result = require("useFavoritesAccess").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");

@@ -1,7 +1,7 @@
-import { getFlattenedChannelList } from "../modules/channel/getFlattedChannelList.tsx";
 // discord_app/utils/ChannelSortingUtils.tsx
 import createChannelRecord from "createChannelRecord";
 import { ChannelTypes } from "ME";
+import { getFlattenedChannelList } from "../modules/channel/getFlattedChannelList.tsx";
 
 let c3;
 let obj1;

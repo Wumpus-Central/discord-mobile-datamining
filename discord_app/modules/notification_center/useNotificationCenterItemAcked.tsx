@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 // discord_app/modules/notification_center/useNotificationCenterItemAcked.tsx
 import handleLoadFinished from "handleLoadFinished";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 
 const require = arg1;
 const result = require("getRelativeTimestamp").fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");

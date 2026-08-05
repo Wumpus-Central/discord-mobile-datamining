@@ -1,10 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/local_app_detection/native/RobloxConnectionCoachmark.tsx
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed";
 import getSystemLocale from "getSystemLocale";
@@ -16,6 +9,13 @@ import ME from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "WindowLaunchIcon";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c9;

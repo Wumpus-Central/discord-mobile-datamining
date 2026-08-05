@@ -1,10 +1,10 @@
-import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
 // discord_app/modules/settings/native/search/SettingSearchBar.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import zustandStore from "zustandStore";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

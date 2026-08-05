@@ -1,9 +1,3 @@
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { ApplicationCommandSectionType } from "../application_commands/ApplicationCommandTypes.tsx";
-import { apexExperiment } from "ContentClassificationEmbeddedActivityFilterExperiment.tsx";
-import { getURLForApplication } from "getURLForApplication.tsx";
-import { getEmbeddedActivityLocationChannelId } from "utils/embeddedActivityLocationUtils.tsx";
-import { getPlatform } from "utils/getPlatform.tsx";
 // discord_app/modules/activities/EmbeddedActivitiesStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -14,6 +8,12 @@ import ActivityPanelModes from "ActivityPanelModes";
 import ME from "ME";
 import { PersistedStore } from "initialize";
 import set from "ensureGuildLoaded";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { ApplicationCommandSectionType } from "../application_commands/ApplicationCommandTypes.tsx";
+import { apexExperiment } from "ContentClassificationEmbeddedActivityFilterExperiment.tsx";
+import { getURLForApplication } from "getURLForApplication.tsx";
+import { getEmbeddedActivityLocationChannelId } from "utils/embeddedActivityLocationUtils.tsx";
+import { getPlatform } from "utils/getPlatform.tsx";
 
 let c10;
 let unpackModuleId;

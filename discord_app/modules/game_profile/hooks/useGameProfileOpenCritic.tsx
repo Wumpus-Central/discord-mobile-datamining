@@ -1,9 +1,9 @@
+// discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
 import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
 import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
 import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
 import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
 import { OpenCriticTier } from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
-// discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
 const result = require("metadata").fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {

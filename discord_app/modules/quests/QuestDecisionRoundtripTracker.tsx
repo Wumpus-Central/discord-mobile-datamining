@@ -1,13 +1,13 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isForegrounded } from "../analytics_sessions/SessionForegroundUtils.native.tsx";
-import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
-import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
-import { apexExperiment } from "experiments/NewAdRequestBehaviorExperiment.tsx";
 // discord_app/modules/quests/QuestDecisionRoundtripTracker.tsx
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import initializeState from "initializeState";
 import { AnalyticEvents } from "ME";
 import set from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { isForegrounded } from "../analytics_sessions/SessionForegroundUtils.native.tsx";
+import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
+import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
+import { apexExperiment } from "experiments/NewAdRequestBehaviorExperiment.tsx";
 
 const require = arg1;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {

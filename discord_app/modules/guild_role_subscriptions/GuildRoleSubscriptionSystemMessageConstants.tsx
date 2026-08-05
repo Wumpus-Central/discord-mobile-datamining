@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 let obj = { id: "781323471249604648", format_type: require("StickerFormat").StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" };
 let items = [obj, , , , ];
 obj = { id: "781324642736144424", format_type: require("StickerFormat").StickerFormat.APNG, description: "Cheerful Choco preens against window", name: "Affection" };

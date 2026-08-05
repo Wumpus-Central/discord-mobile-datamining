@@ -1,7 +1,7 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getFavoritesAwareGuildName } from "../../modules/favorites/FavoritesUtils.tsx";
 // discord_app/lib/guild/GuildSubscriptions.tsx
 import { ME } from "ME";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getFavoritesAwareGuildName } from "../../modules/favorites/FavoritesUtils.tsx";
 
 const result = require("reset").fileFinishedImporting("lib/guild/GuildSubscriptions.tsx");
 class GuildSubscriptions {

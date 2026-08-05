@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../../../../_runtime/09105_registerAsset.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BaseIconImage } from "../../BaseIconImage.tsx";
 // discord_app/design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../../../_runtime/09105_registerAsset.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BaseIconImage } from "../../BaseIconImage.tsx";
 
 const require = arg1;
 const result = require("Themes").fileFinishedImporting("design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx");

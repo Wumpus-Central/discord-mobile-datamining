@@ -1,9 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/safety_hub/native/ClassificationDetail.tsx
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useSafetyHubClassifications";
@@ -13,6 +7,12 @@ import SafetyHubView from "SafetyHubView";
 import { AnalyticEvents } from "ME";
 import jsxProd from "ClassificationEvidence";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c4;

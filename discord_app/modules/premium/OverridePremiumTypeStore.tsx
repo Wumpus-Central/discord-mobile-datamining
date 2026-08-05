@@ -1,7 +1,7 @@
-import { validatePremiumType } from "../user/UserStoreUtils.tsx";
 // discord_app/modules/premium/OverridePremiumTypeStore.tsx
 import GuildFeatures from "GuildFeatures";
 import { PersistedStore } from "initialize";
+import { validatePremiumType } from "../user/UserStoreUtils.tsx";
 
 function setPremiumTypeActual(user) {
   closure_4.premiumTypeActual = validatePremiumType /* validatePremiumType */.getPremiumTypeFromRawValue(user.user.premium_type);

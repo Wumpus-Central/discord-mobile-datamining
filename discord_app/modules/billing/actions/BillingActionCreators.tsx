@@ -1,7 +1,3 @@
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { performRedirect } from "HandleConfirmPaymentRegistry.tsx";
 // discord_app/modules/billing/actions/BillingActionCreators.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_5 from "ME";
@@ -11,6 +7,10 @@ import reset from "reset";
 import ME from "ME";
 import { UserLazyPerkSyncLevels } from "set";
 import sum from "sum";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { performRedirect } from "HandleConfirmPaymentRegistry.tsx";
 
 let c10;
 let c9;

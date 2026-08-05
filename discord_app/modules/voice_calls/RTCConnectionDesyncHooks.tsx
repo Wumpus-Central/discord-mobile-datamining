@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_calls/RTCConnectionDesyncHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,6 +10,7 @@ import retryFailedUsers from "retryFailedUsers";
 import createRTCConnection from "createRTCConnection";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("getParticipants").fileFinishedImporting("modules/voice_calls/RTCConnectionDesyncHooks.tsx");

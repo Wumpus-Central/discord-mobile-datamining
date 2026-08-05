@@ -1,9 +1,9 @@
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/config.tsx
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
+import { dispatcher } from "../../../../Dispatcher.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
 
 let RPC_AUTHENTICATED_SCOPE;
 let obj1;

@@ -1,3 +1,10 @@
+// discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
+import importAllResult from "useCurrentUser";
+import { View } from "TagIcon";
+import updateProduct from "updateProduct";
+import ME from "ME";
+import jsxProd from "CollectiblesItemType";
+import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -7,13 +14,6 @@ import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { useCanPurchaseFrames } from "../hooks/useCanPurchaseFrames.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
 import { getProductName } from "../utils/getProductName.tsx";
-// discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
-import importAllResult from "useCurrentUser";
-import { View } from "TagIcon";
-import updateProduct from "updateProduct";
-import ME from "ME";
-import jsxProd from "CollectiblesItemType";
-import createCacheKey from "createCacheKey";
 
 let c9;
 let closure_6;

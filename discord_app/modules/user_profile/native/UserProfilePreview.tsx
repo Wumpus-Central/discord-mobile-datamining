@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_profile/native/UserProfilePreview.tsx
 import _slicedToArray from "_slicedToArray";
 import ManaContext from "ManaContext";
@@ -7,6 +6,7 @@ import handleFormOpen from "handleFormOpen";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "ProfileFrameLayerOrder";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c9;

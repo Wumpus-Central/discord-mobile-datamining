@@ -1,8 +1,8 @@
-import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
 // discord_app/modules/collectibles/native/FractionalNitroCoinIllustration.tsx
 import "noop";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
 import { jsx } from "jsxProd";
+import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");

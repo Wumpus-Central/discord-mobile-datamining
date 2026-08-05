@@ -1,12 +1,12 @@
-import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
-import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/saved_messages/native/ForLaterCardHeader.tsx
 import { View } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c5;
 let closure_6;

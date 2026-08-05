@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -9,6 +7,8 @@ import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
 import { UPLOAD_BANNER_SIZE } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
 
 let c10;
 let c9;

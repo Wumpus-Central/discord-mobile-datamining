@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../../_runtime/10810_registerAsset.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useSelectedParticipant } from "../../useSelectedParticipant.tsx";
-import { ChannelCallNavigatorIcon } from "ChannelCallNavigatorIcon.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallHeaderButtons.tsx
 import "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../_runtime/10810_registerAsset.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useSelectedParticipant } from "../../useSelectedParticipant.tsx";
+import { ChannelCallNavigatorIcon } from "ChannelCallNavigatorIcon.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/video_calls/native/components/ChannelCallHeaderButtons.tsx");

@@ -1,7 +1,7 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { SubscriptionPlans } from "../../premium/native/ProductIds.android.tsx";
 // discord_app/modules/billing/native/GenericIAPStore.tsx
 import { Store } from "initialize";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { SubscriptionPlans } from "../../premium/native/ProductIds.android.tsx";
 
 const require = arg1;
 let c3 = null;

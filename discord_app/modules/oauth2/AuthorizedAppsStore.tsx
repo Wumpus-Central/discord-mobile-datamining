@@ -1,10 +1,10 @@
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/oauth2/AuthorizedAppsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import isConnected from "isConnected";
 import reinjectEphemerals from "reinjectEphemerals";
 import { Store } from "initialize";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 function recomputeFromAppTokens() {

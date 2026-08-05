@@ -1,3 +1,12 @@
+// discord_app/modules/autocompleter/native/Autocomplete.tsx
+import getChannelIcon from "getChannelIcon";
+import { View } from "getSystemLocale";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import upsertRelationship from "upsertRelationship";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import jsxProd from "Text";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/08038_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -13,15 +22,6 @@ import { computeChannelName } from "../../channel/useChannelName.tsx";
 import { getGameMediaRefURL } from "../../games/getGameMediaRefURL.tsx";
 import { Sticker } from "../../stickers/native/Sticker.tsx";
 import { useStickerPackCategories } from "../../stickers/StickersHooks.tsx";
-// discord_app/modules/autocompleter/native/Autocomplete.tsx
-import getChannelIcon from "getChannelIcon";
-import { View } from "getSystemLocale";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
 
 let Fonts;
 let c10;

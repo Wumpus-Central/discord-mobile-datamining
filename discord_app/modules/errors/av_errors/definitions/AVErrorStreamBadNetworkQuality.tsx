@@ -1,7 +1,7 @@
-import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx
 import initialize from "initialize";
 import { RTCConnectionQuality } from "ME";
+import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 const result = require("mapped").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");

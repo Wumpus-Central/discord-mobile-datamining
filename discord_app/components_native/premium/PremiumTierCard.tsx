@@ -1,8 +1,3 @@
-import { LinearGradient } from "../../../_runtime/04706_LinearGradient.js";
-import { keys } from "../../ConstantsIOS.tsx";
-import { PressableCard } from "../../design/components/Card/native/Card.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 // discord_app/components_native/premium/PremiumTierCard.tsx
 import "set";
 import get_ActivityIndicator from "registerAsset";
@@ -10,6 +5,11 @@ import { getPremiumGradientColor } from "items";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../_runtime/04706_LinearGradient.js";
+import { keys } from "../../ConstantsIOS.tsx";
+import { PressableCard } from "../../design/components/Card/native/Card.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
 let c3;
 let c4;

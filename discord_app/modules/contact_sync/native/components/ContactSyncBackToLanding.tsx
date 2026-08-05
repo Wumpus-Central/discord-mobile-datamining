@@ -1,6 +1,6 @@
+// discord_app/modules/contact_sync/native/components/ContactSyncBackToLanding.tsx
 import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-// discord_app/modules/contact_sync/native/components/ContactSyncBackToLanding.tsx
 let result = require("handleNameInputScreenOrSuggestions").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
 export default function ContactSyncBackToLanding(arg0) {

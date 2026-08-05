@@ -1,12 +1,12 @@
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 // discord_app/modules/auth/register.tsx
 import closure_4 from "t";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
 import result from "result";
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 
 let c10;
 let c9;

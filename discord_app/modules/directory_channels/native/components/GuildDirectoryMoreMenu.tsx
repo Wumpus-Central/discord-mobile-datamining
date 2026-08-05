@@ -1,7 +1,7 @@
-import { useCanManageGuildDirectoryEntry } from "../../useCanManageGuildDirectoryEntry.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { useCanManageGuildDirectoryEntry } from "../../useCanManageGuildDirectoryEntry.tsx";
 
 const require = arg1;
 let result = require("useCanManageGuildDirectoryEntry").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx");

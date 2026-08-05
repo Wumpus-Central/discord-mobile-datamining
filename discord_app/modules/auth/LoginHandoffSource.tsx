@@ -1,7 +1,7 @@
-import { ME } from "../links/LinkUtils.tsx";
 // discord_app/modules/auth/LoginHandoffSource.tsx
 import { StaticChannelRoute } from "set";
 import { UserSettingsPath } from "MAX_FAVORITES";
+import { ME } from "../links/LinkUtils.tsx";
 
 let obj = { ROLE_SUBSCRIPTION: "role_subscription", ROLE_SUBSCRIPTION_SETTING: "role_subscription_setting" };
 const result = require("ME").fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");

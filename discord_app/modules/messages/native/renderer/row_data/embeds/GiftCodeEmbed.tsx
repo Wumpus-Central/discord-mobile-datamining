@@ -1,3 +1,11 @@
+// discord_app/modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx
+import get_ActivityIndicator from "registerAsset";
+import fetchFingerprint from "fetchFingerprint";
+import updateGiftCode from "updateGiftCode";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import addSku from "addSku";
+import ME from "ME";
+import GuildFeatures from "GuildFeatures";
 import { registerAsset } from "../../../../../../../_runtime/12485_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/12486_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/12487_registerAsset.js";
@@ -12,14 +20,6 @@ import { registerAsset } from "../../../../../../../_runtime/12495_registerAsset
 import { metadata } from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import { getGradientColorByPercentage } from "../../../../../client_themes/native/ClientThemesUtils.tsx";
 import { getEmbedThemeColors } from "getEmbedThemeColors.tsx";
-// discord_app/modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx
-import get_ActivityIndicator from "registerAsset";
-import fetchFingerprint from "fetchFingerprint";
-import updateGiftCode from "updateGiftCode";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import addSku from "addSku";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
 
 let c10;
 let c3;

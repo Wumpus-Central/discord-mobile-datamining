@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsConfirmPasswordWrapped } from "../../account/native/UserSettingsConfirmPassword.tsx";
 // discord_app/modules/user_settings/defs/native/AccountConfirmPasswordSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsConfirmPasswordWrapped } from "../../account/native/UserSettingsConfirmPassword.tsx";
 
 obj = {
   useTitle() {

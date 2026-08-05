@@ -1,6 +1,6 @@
-import { unsafe_getRawColor } from "../../../discord_common/js/packages/tokens/shims.native.tsx";
 // discord_app/modules/poggermode/PoggermodeUtils.tsx
 import ConfettiLocation from "ConfettiLocation";
+import { unsafe_getRawColor } from "../../../discord_common/js/packages/tokens/shims.native.tsx";
 
 let c3;
 let c4;

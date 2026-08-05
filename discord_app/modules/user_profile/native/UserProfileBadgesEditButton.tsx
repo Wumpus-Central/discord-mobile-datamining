@@ -1,10 +1,10 @@
-import { apexExperiment } from "../../badges/BadgeManagementExperiment.tsx";
 // discord_app/modules/user_profile/native/UserProfileBadgesEditButton.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getBadgeAssetFromCDN } from "USER_PROFILE_TOOLTIP_DELAY";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { apexExperiment } from "../../badges/BadgeManagementExperiment.tsx";
 
 let c4;
 let c5;

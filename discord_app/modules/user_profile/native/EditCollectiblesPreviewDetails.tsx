@@ -1,14 +1,14 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { getItemRecordsFromPurchases } from "../../collectibles/CollectiblesUtils.tsx";
-import { useCollectiblesData } from "../../collectibles/hooks/useCollectiblesData.tsx";
 // discord_app/modules/user_profile/native/EditCollectiblesPreviewDetails.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { getItemRecordsFromPurchases } from "../../collectibles/CollectiblesUtils.tsx";
+import { useCollectiblesData } from "../../collectibles/hooks/useCollectiblesData.tsx";
 
 let c5;
 let closure_6;

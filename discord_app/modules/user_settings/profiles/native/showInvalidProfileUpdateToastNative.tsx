@@ -1,7 +1,7 @@
+// discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
 import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
-// discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
 const result = require("Themes").fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
 
 export const showGenericProfileUpdateFailureToast = function showGenericProfileUpdateFailureToast(avatar) {

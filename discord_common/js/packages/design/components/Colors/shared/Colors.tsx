@@ -1,6 +1,6 @@
-import { n } from "../../../../../../../_runtime/00689_n.js";
 // discord_common/js/packages/design/components/Colors/shared/Colors.tsx
 import _slicedToArray from "_slicedToArray";
+import { n } from "../../../../../../../_runtime/00689_n.js";
 
 let obj = { NonText: 3, Text: 4.5, HighContrastText: 7 };
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Colors/shared/Colors.tsx");

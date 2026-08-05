@@ -1,4 +1,3 @@
-import { useSpeakerTooltips } from "../hooks/useSpeakerTooltips.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderSpeaker.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "useCanConnect";
@@ -11,6 +10,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import handleUpdate from "handleUpdate";
 import { PlatformTypes } from "ME";
 import jsxProd from "showAudioOutputSelector";
+import { useSpeakerTooltips } from "../hooks/useSpeakerTooltips.tsx";
 
 let closure_14;
 let closure_15;

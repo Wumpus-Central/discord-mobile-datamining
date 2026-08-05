@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/threads/MessageCountUtils.tsx
 import AbortCodes from "AbortCodes";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 let c3;
 let c4;

@@ -1,3 +1,7 @@
+// discord_app/modules/guilds_bar/native/GuildsBarActivityIndicator.tsx
+import importAllResult from "canConnectToChannel";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/07612_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/07823_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/08965_registerAsset.js";
@@ -14,10 +18,6 @@ import { VoiceNormalIcon } from "../../../design/components/Icon/native/redesign
 import { map } from "../../../design/tokens/native/useToken.tsx";
 import { set } from "../../core/native/NativeView.tsx";
 import { canConnectToChannel } from "../useGuildMediaState.tsx";
-// discord_app/modules/guilds_bar/native/GuildsBarActivityIndicator.tsx
-import importAllResult from "canConnectToChannel";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let require = arg1;
 function getMediaIcon(closure_3) {

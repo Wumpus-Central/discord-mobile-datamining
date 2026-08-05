@@ -1,7 +1,7 @@
-import { useChatLayout } from "../../../chat/native/useChatLayout.tsx";
-import { useBaseAppContainerDimensions } from "../useBaseAppContainerDimensions.tsx";
 // discord_app/modules/screen/native/drawer/useDrawerWidth.tsx
 import { DM_WIDTH } from "ME";
+import { useChatLayout } from "../../../chat/native/useChatLayout.tsx";
+import { useBaseAppContainerDimensions } from "../useBaseAppContainerDimensions.tsx";
 
 const sum = 260 + DM_WIDTH;
 let c3 = sum;

@@ -1,13 +1,13 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let StyleSheet;
 let c4;

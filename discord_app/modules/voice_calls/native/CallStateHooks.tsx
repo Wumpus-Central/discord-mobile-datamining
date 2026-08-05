@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_calls/native/CallStateHooks.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
@@ -6,6 +5,7 @@ import callConnect from "callConnect";
 import createRTCConnection from "createRTCConnection";
 import ME from "ME";
 import { ParticipantTypes } from "ParticipantTypes";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let error;
 let metroImportAll;

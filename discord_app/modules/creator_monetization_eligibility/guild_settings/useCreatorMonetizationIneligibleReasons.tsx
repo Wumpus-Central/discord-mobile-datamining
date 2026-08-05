@@ -1,5 +1,5 @@
-import { useCreatorMonetizationEligibilityItems } from "useCreatorMonetizationEligibilityItems.tsx";
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx
+import { useCreatorMonetizationEligibilityItems } from "useCreatorMonetizationEligibilityItems.tsx";
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
 
 export const useCreatorMonetizationIneligibleReasons = function useCreatorMonetizationIneligibleReasons(eligibility) {

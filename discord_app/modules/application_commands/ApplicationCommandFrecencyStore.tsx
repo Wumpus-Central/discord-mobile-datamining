@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/application_commands/ApplicationCommandFrecencyStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { PersistedStore } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 let c3;
 let c4;

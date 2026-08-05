@@ -1,11 +1,11 @@
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
 import { AnalyticsLocations } from "ME";
 import { getMigratedApplicationIdentityConnectionsScreenApplications as closure_4 } from "items1";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 
 let c5;
 let closure_6;

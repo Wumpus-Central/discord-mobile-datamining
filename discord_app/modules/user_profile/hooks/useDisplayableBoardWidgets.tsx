@@ -1,8 +1,8 @@
+// discord_app/modules/user_profile/hooks/useDisplayableBoardWidgets.tsx
+import noop from "noop";
 import { toSubmission } from "../UserProfileApplicationWidgetTypes.tsx";
 import { items } from "../UserProfileGameWidgetTypes.tsx";
 import { useUserProfileWidgets } from "useUserProfileWidgets.tsx";
-// discord_app/modules/user_profile/hooks/useDisplayableBoardWidgets.tsx
-import noop from "noop";
 
 const require = arg1;
 function isNonEmptyBoardWidget(games) {

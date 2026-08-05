@@ -1,3 +1,9 @@
+// discord_app/modules/user_profile/native/UserProfileEditFormControls.tsx
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { FormSwitch } from "../../../design/components/Forms/native/FormSwitch.native.tsx";
 import { Input } from "../../../design/components/Input/native/Input.native.tsx";
 import { TableRowArrow } from "../../../design/components/TableRow/native/TableRowArrow.native.tsx";
@@ -5,12 +11,6 @@ import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
-// discord_app/modules/user_profile/native/UserProfileEditFormControls.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

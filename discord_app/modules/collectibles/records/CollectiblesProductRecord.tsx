@@ -1,5 +1,3 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getPricesFromServer } from "../../skus/utils/getPricesFromServer.tsx";
 // discord_app/modules/collectibles/records/CollectiblesProductRecord.tsx
 import _slicedToArray from "_slicedToArray";
 import fromServer from "fromServer";
@@ -7,6 +5,8 @@ import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFr
 import "fromServer";
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items";
 import ME from "ME";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { getPricesFromServer } from "../../skus/utils/getPricesFromServer.tsx";
 
 let c5;
 let c9;

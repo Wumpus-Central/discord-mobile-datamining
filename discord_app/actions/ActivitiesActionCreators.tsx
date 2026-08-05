@@ -1,9 +1,9 @@
-import { ChannelActionCreators } from "ChannelActionCreators.tsx";
 // discord_app/actions/ActivitiesActionCreators.tsx
 import sendRequest from "sendRequest";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { ChannelActionCreators } from "ChannelActionCreators.tsx";
 
 let c5;
 let closure_6;

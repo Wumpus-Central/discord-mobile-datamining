@@ -1,8 +1,8 @@
-import { subscribeGuildMembers } from "../../../../../lib/guild/subscribeGuildMembers.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useEnsureHydratedUsers.tsx
 import noop from "noop";
 import handleConnectionReset from "handleConnectionReset";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { subscribeGuildMembers } from "../../../../../lib/guild/subscribeGuildMembers.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useEnsureHydratedUsers.tsx");

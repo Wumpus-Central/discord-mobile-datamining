@@ -1,6 +1,3 @@
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
-import { set } from "PlatformUtils.tsx";
 // discord_app/utils/StoreUtils.tsx
 import closure_2 from "ME";
 import fetchFingerprint from "fetchFingerprint";
@@ -10,6 +7,9 @@ import reset from "reset";
 import ME from "ME";
 import { isMobile } from "isTablet";
 import importDefaultResult from "allSettled";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
+import { set } from "PlatformUtils.tsx";
 
 let error;
 let metroImportAll;

@@ -1,10 +1,10 @@
+// discord_app/modules/guild_verification/GuildVerificationManager.tsx
+import { GuildFeatures } from "ME";
+import "initialize";
 import { set } from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { HubUtils.native } from "../hub/HubUtils.native.tsx";
 import { inviteGuildHasPendingMemberDisabledVerification } from "GuildVerificationUtils.tsx";
-// discord_app/modules/guild_verification/GuildVerificationManager.tsx
-import { GuildFeatures } from "ME";
-import "initialize";
 
 function handleInviteData(invite) {
   const guild = invite.invite.guild;

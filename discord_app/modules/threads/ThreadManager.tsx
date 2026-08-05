@@ -1,8 +1,8 @@
-import { withErrorHandling } from "../forums/ForumActionCreators.tsx";
 // discord_app/modules/threads/ThreadManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import "initialize";
+import { withErrorHandling } from "../forums/ForumActionCreators.tsx";
 
 class ThreadManager extends tmp2 {
   constructor() {

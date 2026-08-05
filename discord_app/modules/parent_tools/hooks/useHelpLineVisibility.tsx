@@ -1,9 +1,9 @@
-import { useIsInAdultAgeGroup } from "useIsInAdultAgeGroup.tsx";
 // discord_app/modules/parent_tools/hooks/useHelpLineVisibility.tsx
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import set from "freshTeenActivityWithMap";
+import { useIsInAdultAgeGroup } from "useIsInAdultAgeGroup.tsx";
 
 const require = arg1;
 let set = new Set(["US"]);

@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/multi_account/useMultiAccount.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
 import { MultiAccountTokenStatus } from "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("initialize").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");

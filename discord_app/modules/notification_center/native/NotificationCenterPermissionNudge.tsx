@@ -1,8 +1,3 @@
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { apexExperiment } from "../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
-import { _requestPushNotificationPermission } from "../../nuf/native/NotificationPermissionUtil.tsx";
 // discord_app/modules/notification_center/native/NotificationCenterPermissionNudge.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "DismissibleContent";
@@ -12,6 +7,11 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import EventActionType from "EventActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { apexExperiment } from "../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
+import { _requestPushNotificationPermission } from "../../nuf/native/NotificationPermissionUtil.tsx";
 
 let c10;
 let c4;

@@ -1,7 +1,7 @@
+// discord_app/modules/haptics/HapticUtils.native.tsx
 import { useHaptics } from "../../../_runtime/04256_useHaptics.js";
 import { set } from "../../utils/PlatformUtils.tsx";
 import { IMPACT_LIGHT } from "HapticFeedbackTypes.tsx";
-// discord_app/modules/haptics/HapticUtils.native.tsx
 const result = require("set").fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
 
 export const HapticFeedbackTypes = require("IMPACT_LIGHT");

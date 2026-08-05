@@ -1,7 +1,7 @@
-import { getChildMapping } from "TransitionChildMapping.tsx";
 // discord_common/js/packages/transition-group/TransitionGroup.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
+import { getChildMapping } from "TransitionChildMapping.tsx";
 
 let require = arg1;
 function _toPropertyKey(obj) {

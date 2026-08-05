@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../game_mentions/GameMentionsMobileExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/GameMentionsAutocompleteSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../game_mentions/GameMentionsMobileExperiment.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

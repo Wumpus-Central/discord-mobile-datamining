@@ -1,8 +1,8 @@
-import { isPublicSystemMessage } from "../../../public_guilds/PublicGuildsUtils.tsx";
-import { isCrosspost } from "../../isCrosspost.tsx";
 // discord_app/modules/messages/native/renderer/getTagProperties.tsx
 import { Image } from "get ActivityIndicator";
 import { MessageTagTypes } from "MESSAGE_GROUP_SPACING";
+import { isPublicSystemMessage } from "../../../public_guilds/PublicGuildsUtils.tsx";
+import { isCrosspost } from "../../isCrosspost.tsx";
 
 const result = require("isPublicSystemMessage").fileFinishedImporting("modules/messages/native/renderer/getTagProperties.tsx");
 

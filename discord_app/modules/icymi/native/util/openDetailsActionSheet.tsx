@@ -1,7 +1,7 @@
+// discord_app/modules/icymi/native/util/openDetailsActionSheet.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { ICYMIActionCreators } from "../../ICYMIActionCreators.tsx";
-// discord_app/modules/icymi/native/util/openDetailsActionSheet.tsx
 const result = require("ItemDetailsActionSheet").fileFinishedImporting("modules/icymi/native/util/openDetailsActionSheet.tsx");
 
 export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {

@@ -1,10 +1,10 @@
-import { context } from "../window/native/AppEntryKeyContext.tsx";
-import { subscribeToSafeAreaInsets } from "subscribeToSafeAreaInsets.native.tsx";
 // discord_app/modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx
 import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsets from "useSafeAreaInsets";
 import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsets from "useSafeAreaInsets";
+import { context } from "../window/native/AppEntryKeyContext.tsx";
+import { subscribeToSafeAreaInsets } from "subscribeToSafeAreaInsets.native.tsx";
 
 let obj = { main: null, share: null };
 obj = {};

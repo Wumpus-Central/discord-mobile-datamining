@@ -1,13 +1,13 @@
-import { registerAsset } from "../../../../../../_runtime/08243_registerAsset.js";
-import { componentDidMount } from "../../../../../components_native/common/Alert.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { DownloadLinks } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/08243_registerAsset.js";
+import { componentDidMount } from "../../../../../components_native/common/Alert.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

@@ -1,6 +1,6 @@
+// discord_app/modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx
 const BOUNTIES_MODAL = "BOUNTIES_MODAL";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
 

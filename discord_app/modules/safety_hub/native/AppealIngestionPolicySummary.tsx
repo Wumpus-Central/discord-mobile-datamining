@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { hexToRgba } from "../../../utils/ColorUtils.tsx";
-import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionPolicySummary.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
 
 let c3;
 let c4;

@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "useContentHarmTypes.tsx";
 // discord_app/modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx
 import reinjectEphemerals from "reinjectEphemerals";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "useContentHarmTypes.tsx";
 
 const require = arg1;
 const result = require("useEnabledHarmTypesBitmaskForChannelAndAuthorId").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");

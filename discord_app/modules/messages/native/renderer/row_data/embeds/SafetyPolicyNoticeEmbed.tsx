@@ -1,11 +1,11 @@
-import { t } from "../../../../../../../_runtime/03867_t.js";
-import { registerAsset } from "../../../../../../../_runtime/07773_registerAsset.js";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { frozen } from "../../EmbedUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx
 import { Image } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
 import { SafetyHubPolicyNoticeKeys } from "SafetyHubView";
+import { t } from "../../../../../../../_runtime/03867_t.js";
+import { registerAsset } from "../../../../../../../_runtime/07773_registerAsset.js";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { frozen } from "../../EmbedUtils.tsx";
 
 const result = require("SafetyHubView").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
 

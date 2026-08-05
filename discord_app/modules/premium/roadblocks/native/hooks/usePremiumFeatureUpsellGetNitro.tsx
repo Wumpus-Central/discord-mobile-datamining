@@ -1,4 +1,3 @@
-import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import reset from "reset";
 import emitChanges from "emitChanges";
 import { PremiumTypes } from "GuildFeatures";
 import { AnalyticsObjectTypes } from "ME";
+import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
 
 const require = arg1;
 let result = require("reset").fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");

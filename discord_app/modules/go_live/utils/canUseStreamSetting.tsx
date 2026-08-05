@@ -1,7 +1,7 @@
-import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/go_live/utils/canUseStreamSetting.tsx
 import { StreamQualities } from "GuildFeatures";
+import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 let result = require("getGuildTierFromGuild").fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");
 

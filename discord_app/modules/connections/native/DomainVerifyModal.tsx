@@ -1,9 +1,3 @@
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { EXAMPLE_DOMAIN } from "../DomainVerifyUtils.tsx";
 // discord_app/modules/connections/native/DomainVerifyModal.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,6 +5,12 @@ import { View } from "NavigationStack";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { EXAMPLE_DOMAIN } from "../DomainVerifyUtils.tsx";
 
 let c9;
 let closure_6;

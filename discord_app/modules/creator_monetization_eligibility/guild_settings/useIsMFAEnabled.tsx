@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx
 import handleFormInit from "handleFormInit";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MFALevels } from "ME";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");

@@ -1,12 +1,12 @@
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/premium/native/SubscriptionRenewalMutationsNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { isNoneSubscription } from "createFromServer";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 let c5;
 let closure_6;

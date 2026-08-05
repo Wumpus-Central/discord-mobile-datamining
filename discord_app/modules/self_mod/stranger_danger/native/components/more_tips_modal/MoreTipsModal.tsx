@@ -1,10 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { NavigationStack } from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../../../safe_area/useSafeAreaInsets.native.tsx";
-import { SafetyTipsContainer } from "../../../../shared/native/SafetyTipsSection.tsx";
-import { WasThisHelpfulSection } from "WasThisHelpfulSection.tsx";
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx
 import set from "set";
 import get_ActivityIndicator from "trackViewedEvent";
@@ -12,6 +5,13 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { AnalyticEvents } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { NavigationStack } from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { SafetyTipsContainer } from "../../../../shared/native/SafetyTipsSection.tsx";
+import { WasThisHelpfulSection } from "WasThisHelpfulSection.tsx";
 
 let c4;
 let c5;

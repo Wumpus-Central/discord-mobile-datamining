@@ -1,9 +1,9 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/age_assurance/AgeVerificationURLActionCreators.tsx
 import sendRequest from "sendRequest";
 import fetchFingerprint from "fetchFingerprint";
 import { VerificationVendorName } from "set";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function requestAgeVerification(arg0) {

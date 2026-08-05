@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/interactions/FileTypeFiltering.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 function fileTypesFormattedStringHelper(arr, locale) {

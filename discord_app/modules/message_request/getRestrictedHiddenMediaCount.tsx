@@ -1,6 +1,6 @@
+// discord_app/modules/message_request/getRestrictedHiddenMediaCount.tsx
 import { getForwardInfo } from "../forwarding/formatMessageForwards.tsx";
 import { getStickerExtensionFromFormatType } from "../stickers/StickersUtils.tsx";
-// discord_app/modules/message_request/getRestrictedHiddenMediaCount.tsx
 let result = require("set").fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
 
 export default function getRestrictedHiddenMediaCount(message) {

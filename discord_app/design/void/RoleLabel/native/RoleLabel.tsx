@@ -1,11 +1,11 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Form } from "../../Form/native/index.tsx";
 // discord_app/design/void/RoleLabel/native/RoleLabel.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Form } from "../../Form/native/index.tsx";
 
 let c4;
 let c5;

@@ -1,14 +1,14 @@
+// discord_app/modules/channel_list_v2/native/components/NewBadge.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 import { useIsUsingClientTheme } from "../../../client_themes/native/useIsUsingClientTheme.tsx";
-// discord_app/modules/channel_list_v2/native/components/NewBadge.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0, arg1) => {

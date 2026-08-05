@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/spoiler_channels/SpoilerChannelUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import initialize from "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function isChannelSpoilerGated(channel) {

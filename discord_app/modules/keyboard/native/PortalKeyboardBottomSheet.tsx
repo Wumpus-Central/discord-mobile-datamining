@@ -1,6 +1,3 @@
-import { TwinButtons } from "../../../design/components/experimental/native.tsx";
-import { SCREEN_READER_ENABLED_GETTER } from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/keyboard/native/PortalKeyboardBottomSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "dismissGlobalKeyboard";
@@ -10,6 +7,9 @@ import jsxProd from "map";
 import set from "set";
 import createCacheKey from "createCacheKey";
 import set from "get ActivityIndicator";
+import { TwinButtons } from "../../../design/components/experimental/native.tsx";
+import { SCREEN_READER_ENABLED_GETTER } from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let Platform;
 let c5;

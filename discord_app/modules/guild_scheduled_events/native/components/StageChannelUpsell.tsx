@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08913_registerAsset.js";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx
 import _slicedToArray from "_slicedToArray";
 import "asyncRequireImpl";
@@ -15,6 +8,13 @@ import { CREATE_GUILD_EVENT_MODAL_KEY as closure_8 } from "CREATE_GUILD_EVENT_MO
 import { ChannelTypes } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08913_registerAsset.js";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let c4;

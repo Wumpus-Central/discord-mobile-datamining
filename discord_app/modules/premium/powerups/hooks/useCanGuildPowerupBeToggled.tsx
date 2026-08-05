@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 // discord_app/modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { PowerupActiveStatusType } from "BoostedGuildTiers";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 
 const require = arg1;
 const result = require("BoostedGuildTiers").fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");

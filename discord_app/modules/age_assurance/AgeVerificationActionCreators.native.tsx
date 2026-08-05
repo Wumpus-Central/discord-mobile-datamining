@@ -1,4 +1,3 @@
-import { Linking } from "../../lib/native/Linking.tsx";
 // discord_app/modules/age_assurance/AgeVerificationActionCreators.native.tsx
 import SafetyToastType from "SafetyToastType";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -8,6 +7,7 @@ import { NativePermissionTypes } from "NativePermissionStatus";
 import { SafetyToastType } from "SafetyToastType";
 import { jsx } from "MethodsScreen";
 import set from "set";
+import { Linking } from "../../lib/native/Linking.tsx";
 
 let c5;
 let closure_6;

@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/game_relationships/GameRelationshipManager.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
 import { RelationshipTypes } from "ME";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 class GameRelationshipManager extends tmp2 {
   constructor() {

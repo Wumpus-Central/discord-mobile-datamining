@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/multi_account/StatusUtils.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
 export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {

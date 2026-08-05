@@ -1,8 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/07811_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10621_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10622_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10623_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/video_calls/native/components/UserTile.tsx
 import Emoji from "Emoji";
 import importAllResult from "getSystemLocale";
@@ -19,6 +14,11 @@ import jsxProd from "map";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
+import { registerAsset } from "../../../../../_runtime/07811_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10621_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10622_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10623_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_14;
 let closure_15;

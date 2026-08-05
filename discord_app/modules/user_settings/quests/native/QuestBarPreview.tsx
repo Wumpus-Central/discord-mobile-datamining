@@ -1,12 +1,12 @@
-import { QuestDockWithGestureAnimation } from "../../../quests/native/QuestDock/QuestDock.tsx";
-import { getDeliveredQuest } from "../../../quests/native/QuestDock/QuestDockCreativeContext.tsx";
-import { QuestDockMode } from "../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx";
-import { context } from "../../../quests/native/QuestDock/QuestDockVisibilityContext.tsx";
 // discord_app/modules/user_settings/quests/native/QuestBarPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { QuestDockWithGestureAnimation } from "../../../quests/native/QuestDock/QuestDock.tsx";
+import { getDeliveredQuest } from "../../../quests/native/QuestDock/QuestDockCreativeContext.tsx";
+import { QuestDockMode } from "../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx";
+import { context } from "../../../quests/native/QuestDock/QuestDockVisibilityContext.tsx";
 
 const require = arg1;
 let closure_5 = { isRendered: true, isVisibleToUser: true };

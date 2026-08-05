@@ -1,6 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { formatUsernameOnClick } from "../../messages/native/renderer/system_messages/formatUsernameOnClick.tsx";
-import { getMediaPostEmbedCommonData } from "../MediaPostEmbedUtils.tsx";
 // discord_app/modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx
 import get_ActivityIndicator from "MAX_THUMBNAIL_COUNT";
 import getUserAgnosticState from "getUserAgnosticState";
@@ -10,6 +7,9 @@ import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getMediaPostEmbed from "getMediaPostEmbed";
 import { FetchState } from "getMediaPostEmbed";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { formatUsernameOnClick } from "../../messages/native/renderer/system_messages/formatUsernameOnClick.tsx";
+import { getMediaPostEmbedCommonData } from "../MediaPostEmbedUtils.tsx";
 
 let c3;
 let c4;

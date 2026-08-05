@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../_runtime/08652_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15871_registerAsset.js";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/app_icons/native/AppIconsCoachmark.tsx
 import noop from "noop";
 import get_ActivityIndicator from "fetchCurrentAppIcon";
@@ -8,6 +5,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/08652_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15871_registerAsset.js";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 let c4;
 let c5;

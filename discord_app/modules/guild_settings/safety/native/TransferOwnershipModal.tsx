@@ -1,9 +1,9 @@
-import { TransferOwnershipModalActionCreators } from "TransferOwnershipModalActionCreators.tsx";
 // discord_app/modules/guild_settings/safety/native/TransferOwnershipModal.tsx
 import encodeProperties from "encodeProperties";
 import noop from "noop";
 import TransferOwnershipModalScenes from "TransferOwnershipModalScenes";
 import { jsx } from "jsxProd";
+import { TransferOwnershipModalActionCreators } from "TransferOwnershipModalActionCreators.tsx";
 
 let c5;
 let closure_6;

@@ -1,4 +1,3 @@
-import { styleProperties } from "ButtonHooks.native.tsx";
 // discord_app/design/components/Button/native/BaseTextButton.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";
@@ -12,6 +11,7 @@ import createCacheKey from "createCacheKey";
 import { LARGE_BUTTON_HEIGHT } from "MINIMUM_HIT_AREA";
 import { LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA";
 import importDefaultResult from "module_4146";
+import { styleProperties } from "ButtonHooks.native.tsx";
 
 let Platform;
 let c5;

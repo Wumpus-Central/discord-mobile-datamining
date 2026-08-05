@@ -1,3 +1,8 @@
+// discord_app/components_native/reactions/BurstReactionFirstSendActionSheet.tsx
+import "dispatcher";
+import get_ActivityIndicator from "onDismiss";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { Button } from "../../design/components/Button/native/Button.native.tsx";
 import { Background } from "../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -9,11 +14,6 @@ import { getDeviceSpecificString } from "../../modules/intl/overrides/getDeviceS
 import { ReactionTypes } from "../../modules/messages/MessageReactionsTypes.tsx";
 import { BurstReactionAnimationPreview } from "../../modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx";
 import { _generateAnimationSource } from "../../modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx";
-// discord_app/components_native/reactions/BurstReactionFirstSendActionSheet.tsx
-import "dispatcher";
-import get_ActivityIndicator from "onDismiss";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let StyleSheet;
 let c3;

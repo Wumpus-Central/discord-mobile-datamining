@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ChatOverlays } from "../useAllowedChatOverlays.tsx";
 // discord_app/modules/messages/native/ChatBanner.tsx
 import Button from "Button";
 import get_ActivityIndicator from "Text";
@@ -9,6 +7,8 @@ import { ChatOverlays } from "ChatOverlays";
 import ME from "ME";
 import jsxProd from "patchThread";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ChatOverlays } from "../useAllowedChatOverlays.tsx";
 
 let StyleSheet;
 let c10;

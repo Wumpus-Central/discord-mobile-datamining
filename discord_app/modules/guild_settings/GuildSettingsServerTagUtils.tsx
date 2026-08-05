@@ -1,9 +1,9 @@
-import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
-import { apexExperiment } from "MobileServerTagExperiment.tsx";
 // discord_app/modules/guild_settings/GuildSettingsServerTagUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
+import { apexExperiment } from "MobileServerTagExperiment.tsx";
 
 const require = arg1;
 const GuildSettingsServerTag = "GuildSettingsServerTag";

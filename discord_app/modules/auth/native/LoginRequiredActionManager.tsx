@@ -1,9 +1,9 @@
-import { handleLogout } from "../../../actions/AuthenticationActionCreators.tsx";
 // discord_app/modules/auth/native/LoginRequiredActionManager.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleUpdateUser from "handleUpdateUser";
 import ME from "ME";
 import "initialize";
+import { handleLogout } from "../../../actions/AuthenticationActionCreators.tsx";
 
 let c5;
 let closure_6;

@@ -1,8 +1,8 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/stores/views/GIFPickerViewStore.tsx
 import { GIFType } from "create";
 import { Store } from "initialize";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 function getFormatFromUrl(src) {
   try {

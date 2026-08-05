@@ -1,9 +1,9 @@
+// discord_app/modules/messages/native/renderer/row_data/ForumPostActions.tsx
+import { HelpdeskArticles } from "ME";
 import { getAvatarURL } from "../../../../../utils/AvatarUtils.tsx";
 import { getEmojiUnavailableReason } from "../../../../../utils/EmojiUtils.tsx";
 import { apexExperiment } from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 import { frozen } from "../EmbedUtils.tsx";
-// discord_app/modules/messages/native/renderer/row_data/ForumPostActions.tsx
-import { HelpdeskArticles } from "ME";
 
 let result = require("registerAsset").fileFinishedImporting("modules/messages/native/renderer/row_data/ForumPostActions.tsx");
 

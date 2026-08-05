@@ -1,4 +1,3 @@
-import { VolumeSlider } from "../../../../components_native/common/VolumeSlider.tsx";
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +7,7 @@ import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { MediaEngineContextTypes } from "DesktopSources";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { VolumeSlider } from "../../../../components_native/common/VolumeSlider.tsx";
 
 let c10;
 let c9;

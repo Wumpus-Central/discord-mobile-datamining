@@ -1,7 +1,3 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { hasPendingMemberAction } from "../guild_onboarding_home/hasPendingMemberAction.tsx";
-import { Presets } from "../notifications/settings/utils/notificationSettingsPresetUtils.tsx";
 // discord_app/modules/app_analytics/AppAnalyticsUtils.tsx
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
@@ -25,6 +21,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import ME from "ME";
 import { isStaticChannelRoute } from "set";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { hasPendingMemberAction } from "../guild_onboarding_home/hasPendingMemberAction.tsx";
+import { Presets } from "../notifications/settings/utils/notificationSettingsPresetUtils.tsx";
 
 let closure_25;
 let closure_26;

@@ -1,5 +1,3 @@
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
-import { WidgetRenderer } from "UserProfileWidgetsBoard.tsx";
 // discord_app/modules/user_profile/native/UserProfileContent.tsx
 import useBadges from "useBadges";
 import importAllResult from "asyncRequireImpl";
@@ -16,6 +14,8 @@ import { RelationshipTypes } from "ME";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "EmojiImage";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
+import { WidgetRenderer } from "UserProfileWidgetsBoard.tsx";
 
 let c5;
 let closure_14;

@@ -1,9 +1,9 @@
+// discord_app/modules/markup/PlatformMarkupRules.native.tsx
+import { Image } from "get ActivityIndicator";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 import { MarkupAttachmentLinkRule } from "MarkupAttachmentLinkRule.tsx";
 import { getChannel } from "MarkupChannelMentionRule.tsx";
-// discord_app/modules/markup/PlatformMarkupRules.native.tsx
-import { Image } from "get ActivityIndicator";
 
 const re4 = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;
 obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };

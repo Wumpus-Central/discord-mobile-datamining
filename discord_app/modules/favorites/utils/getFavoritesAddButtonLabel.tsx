@@ -1,6 +1,6 @@
+// discord_app/modules/favorites/utils/getFavoritesAddButtonLabel.tsx
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
-// discord_app/modules/favorites/utils/getFavoritesAddButtonLabel.tsx
 const result = require("set").fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {

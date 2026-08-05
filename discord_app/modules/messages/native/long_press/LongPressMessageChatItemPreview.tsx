@@ -1,8 +1,8 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { DCDChatItem } from "../../../../components_native/chat/ChatItem.tsx";
 // discord_app/modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { DCDChatItem } from "../../../../components_native/chat/ChatItem.tsx";
 
 let obj = { chatItem: null };
 obj = { maxHeight: 2 * require("Themes").space.PX_80 };

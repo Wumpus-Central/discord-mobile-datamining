@@ -1,6 +1,6 @@
-import { MFAModal } from "native/MFAModal.tsx";
 // discord_app/modules/mfa/MFAActionCreators.tsx
 import { SELECT_NAMES } from "get webauthn";
+import { MFAModal } from "native/MFAModal.tsx";
 
 const result = require("finishMFACheck").fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
 

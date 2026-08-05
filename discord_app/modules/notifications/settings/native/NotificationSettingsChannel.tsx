@@ -1,3 +1,9 @@
+// discord_app/modules/notifications/settings/native/NotificationSettingsChannel.tsx
+import NotificationSettingsChannelPost from "NotificationSettingsChannelPost";
+import { View } from "NotificationSettingsMessageNotification";
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import jsxProd from "set";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Form } from "../../../../design/void/Form/native/index.tsx";
@@ -7,12 +13,6 @@ import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFla
 import { NotificationSettingsMessageNotification } from "NotificationSettingsMessageNotification.tsx";
 import { NotificationSettingsMessageUnread } from "NotificationSettingsMessageUnread.tsx";
 import { NotificationSettingsPresets } from "NotificationSettingsPresets.tsx";
-// discord_app/modules/notifications/settings/native/NotificationSettingsChannel.tsx
-import NotificationSettingsChannelPost from "NotificationSettingsChannelPost";
-import { View } from "NotificationSettingsMessageNotification";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

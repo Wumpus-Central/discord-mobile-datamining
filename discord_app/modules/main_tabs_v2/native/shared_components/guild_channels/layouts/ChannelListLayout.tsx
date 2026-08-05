@@ -1,6 +1,6 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx
 import { explicitContentFromProto } from "../../../../../user_settings/UserSettings.tsx";
 import { ChannelListLayoutTypes } from "../../../../ChannelListLayoutTypes.tsx";
-// discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx
 function getLayoutStyles(layout, launchpad) {
   let flag = launchpad;
   if (launchpad === undefined) {

@@ -1,11 +1,11 @@
-import { items } from "../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx";
-import { MobileShopButtonCoachmark } from "MobileShopButtonCoachmark.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopEntryButton.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import getMarketingBySurface from "getMarketingBySurface";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
+import { items } from "../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx";
+import { MobileShopButtonCoachmark } from "MobileShopButtonCoachmark.tsx";
 
 let closure_6;
 let error;

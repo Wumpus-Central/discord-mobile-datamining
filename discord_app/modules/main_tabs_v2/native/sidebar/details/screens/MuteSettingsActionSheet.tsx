@@ -1,5 +1,3 @@
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsActionSheet.tsx
 import set from "set";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +6,8 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserNotificationSettings } from "ME";
 import jsxProd from "jsxProd";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 
 let c10;
 let c9;

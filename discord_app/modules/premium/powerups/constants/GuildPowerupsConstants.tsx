@@ -1,3 +1,7 @@
+// discord_app/modules/premium/powerups/constants/GuildPowerupsConstants.tsx
+import { BoostedGuildFeatures } from "GuildFeatures";
+import ME from "ME";
+import set from "str11";
 import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getGuildTierFromGuild } from "../../../../utils/GuildBoostingUtils.tsx";
@@ -7,10 +11,6 @@ import { experiment } from "../experiments/FileUpload250MbPowerupExperiment.tsx"
 import { apexExperiment } from "../experiments/FileUploadPowerupHoldoutExperiment.tsx";
 import { experiment } from "../experiments/ServerThemeExperiment.tsx";
 import { apexExperiment } from "../experiments/ServerThemeUserExperiment.tsx";
-// discord_app/modules/premium/powerups/constants/GuildPowerupsConstants.tsx
-import { BoostedGuildFeatures } from "GuildFeatures";
-import ME from "ME";
-import set from "str11";
 
 let TIER_1;
 let TIER_12;

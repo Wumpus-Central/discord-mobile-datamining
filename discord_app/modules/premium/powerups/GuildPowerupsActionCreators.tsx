@@ -1,10 +1,10 @@
+// discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
+import BoostedGuildTiers from "BoostedGuildTiers";
+import { Endpoints } from "ME";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
 import { items } from "mocks/GuildPowerupMocks.tsx";
-// discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
-import BoostedGuildTiers from "BoostedGuildTiers";
-import { Endpoints } from "ME";
 
 let c3;
 let c4;

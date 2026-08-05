@@ -1,5 +1,5 @@
-import { items } from "../../modules/billing/native/iapProducts.tsx";
 // discord_app/utils/native/IAPUtils.mock.tsx
+import { items } from "../../modules/billing/native/iapProducts.tsx";
 const result = require("set").fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {

@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_console/useGameConsoleAccounts.tsx
 import set from "set";
 import { PlatformTypes } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");

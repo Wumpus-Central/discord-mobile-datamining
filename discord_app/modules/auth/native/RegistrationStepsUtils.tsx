@@ -1,4 +1,3 @@
-import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 // discord_app/modules/auth/native/RegistrationStepsUtils.tsx
 import closure_3 from "RegistrationTransitionActionTypes";
 import "ChangePhoneReason";
@@ -8,6 +7,7 @@ import useRegistrationUIStore from "useRegistrationUIStore";
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import { AuthStates } from "ME";
 import { jsx } from "RegisterAgeGate";
+import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 
 let c10;
 let c9;

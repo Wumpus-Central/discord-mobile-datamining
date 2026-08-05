@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/QuestHomeSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getIsEligibleForQuests } from "../../../quests/lib/QuestsEligibility.tsx";
 import { QuestHomeSetting } from "../../../quests/native/QuestHomeSetting.tsx";
-// discord_app/modules/user_settings/defs/native/QuestHomeSetting.tsx
-import createToggle from "createToggle";
 
 obj = {
   useTitle() {

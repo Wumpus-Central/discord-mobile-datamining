@@ -1,6 +1,3 @@
-import { Button } from "../design/void/native.tsx";
-import { IntlLink } from "native/migration.tsx";
-import { getAvailableLocales } from "util.tsx";
 // discord_app/intl/index.native.tsx
 import "noop";
 import { Fonts } from "ME";
@@ -10,6 +7,9 @@ import set from "set";
 import getAvailableLocales from "getAvailableLocales";
 import 01274__ from "../../_runtime/metro/01274__.js";
 import set from "jsxProd";
+import { Button } from "../design/void/native.tsx";
+import { IntlLink } from "native/migration.tsx";
+import { getAvailableLocales } from "util.tsx";
 
 const require = arg1;
 let obj = { fontFamily: Fonts.PRIMARY_SEMIBOLD };

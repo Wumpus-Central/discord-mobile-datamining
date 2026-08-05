@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/chat_input/native/ChatInput.tsx
 import INITIAL_STATE from "INITIAL_STATE";
 import getChatInputMaxHeight from "getChatInputMaxHeight";
@@ -22,6 +21,7 @@ import { EmojiInteractionPoint } from "set";
 import DRAG_HANDLE from "DRAG_HANDLE";
 import jsxProd from "Themes";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_18;
 let closure_19;

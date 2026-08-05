@@ -1,6 +1,6 @@
-import { hexToRgba } from "../../utils/ColorUtils.tsx";
 // discord_app/modules/messages/BurstReactionEffectUtils.tsx
 import apply from "apply";
+import { hexToRgba } from "../../utils/ColorUtils.tsx";
 
 const memoizeResult = apply.memoize((str) => {
   let length;

@@ -1,7 +1,7 @@
-import { useConnectionBannerHeight } from "useConnectionBannerHeight.tsx";
-import { useYouBarHorizontalMargin } from "useYouBarMargins.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx
 import { YOU_BAR_HEIGHT } from "CONNECTION_BANNER_HEIGHT";
+import { useConnectionBannerHeight } from "useConnectionBannerHeight.tsx";
+import { useYouBarHorizontalMargin } from "useYouBarMargins.tsx";
 
 const result = require("useConnectionBannerHeight").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");
 

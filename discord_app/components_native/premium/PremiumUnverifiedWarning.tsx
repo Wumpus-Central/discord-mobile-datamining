@@ -1,5 +1,3 @@
-import { Button } from "../../design/void/native.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/premium/PremiumUnverifiedWarning.tsx
 import importDefaultResult from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
@@ -7,6 +5,8 @@ import createCacheKey from "createCacheKey";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
 import importDefaultResult1 from "initialize";
+import { Button } from "../../design/void/native.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 createCacheKey = { warning: null };

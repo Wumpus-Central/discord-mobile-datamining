@@ -1,8 +1,8 @@
-import { getLocalizedLink } from "../modules/links/getLocalizedLink.tsx";
-import { set } from "PlatformUtils.tsx";
 // discord_app/utils/HelpdeskUtils.tsx
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
+import { getLocalizedLink } from "../modules/links/getLocalizedLink.tsx";
+import { set } from "PlatformUtils.tsx";
 
 const require = arg1;
 const LocalizedLinks = ME.LocalizedLinks;

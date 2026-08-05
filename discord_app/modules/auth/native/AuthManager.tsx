@@ -1,4 +1,3 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/auth/native/AuthManager.tsx
 import NewUserTypes from "NewUserTypes";
 import get_ActivityIndicator from "set";
@@ -7,6 +6,7 @@ import { ME } from "ME";
 import { NotificationAuthorizationStatus as closure_8 } from "NativePermissionStatus";
 import { NewUserTypes } from "NewUserTypes";
 import "initialize";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 let c4;
 let c5;

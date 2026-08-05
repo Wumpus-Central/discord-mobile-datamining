@@ -1,7 +1,3 @@
-import { Form } from "../design/void/Form/native/index.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { computeChannelName } from "../modules/channel/useChannelName.tsx";
-import { ChannelSettingsNotificationsGuard } from "channel_settings/ChannelSettingsNotifications.tsx";
 // discord_app/components_native/InAppNotificationSettingsModal.tsx
 import importAllResult from "noop";
 import { isMultiUserDM } from "createChannelRecord";
@@ -11,6 +7,10 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "jsxProd";
+import { Form } from "../design/void/Form/native/index.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { computeChannelName } from "../modules/channel/useChannelName.tsx";
+import { ChannelSettingsNotificationsGuard } from "channel_settings/ChannelSettingsNotifications.tsx";
 
 let c10;
 let c9;

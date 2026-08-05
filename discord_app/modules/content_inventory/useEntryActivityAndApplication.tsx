@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/content_inventory/useEntryActivityAndApplication.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
 import entryToKey from "entryToKey";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("entryToKey").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");

@@ -1,7 +1,3 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { useFavoritesAccess } from "../favorites/FavoritesHooks.tsx";
-import { initialize } from "../threads/LazyLoadedThreadManager.tsx";
-import { computeSubtitle } from "ChannelListState.tsx";
 // discord_app/modules/guild_sidebar/FavoritesGuildChannelList.tsx
 import _slicedToArray from "_slicedToArray";
 import computeSubtitle from "computeSubtitle";
@@ -22,6 +18,10 @@ import importDefaultResult11 from "updateUserGuildSettingsInternal";
 import importDefaultResult3 from "scheduledEventSort";
 import { Permissions } from "sum";
 import date from "date";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { useFavoritesAccess } from "../favorites/FavoritesHooks.tsx";
+import { initialize } from "../threads/LazyLoadedThreadManager.tsx";
+import { computeSubtitle } from "ChannelListState.tsx";
 
 let c10;
 let closure_12;

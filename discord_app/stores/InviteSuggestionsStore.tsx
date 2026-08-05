@@ -1,4 +1,3 @@
-import { isGuildMember } from "../utils/InstantInviteUtils.tsx";
 // discord_app/stores/InviteSuggestionsStore.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import recomputeAffinities from "recomputeAffinities";
@@ -9,6 +8,7 @@ import ME from "ME";
 import { InviteTargetTypes } from "InviteSendStates";
 import { Store } from "initialize";
 import set from "ensureGuildLoaded";
+import { isGuildMember } from "../utils/InstantInviteUtils.tsx";
 
 let closure_14;
 let map1;

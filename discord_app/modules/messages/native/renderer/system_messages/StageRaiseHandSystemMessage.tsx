@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
 let c9;
 let closure_6;

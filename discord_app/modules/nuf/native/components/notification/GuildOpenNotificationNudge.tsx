@@ -1,4 +1,3 @@
-import { NotificationNudgeBottomSheet } from "NotificationNudgeBottomSheet.tsx";
 // discord_app/modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx
 import _slicedToArray from "_slicedToArray";
 import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken";
@@ -11,6 +10,7 @@ import { PermissionPromptType } from "set";
 import EventActionType from "EventActionType";
 import ME from "ME";
 import { jsx } from "GuildOpenNotificationNudge";
+import { NotificationNudgeBottomSheet } from "NotificationNudgeBottomSheet.tsx";
 
 let closure_12;
 let closure_14;

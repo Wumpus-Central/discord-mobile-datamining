@@ -1,4 +1,3 @@
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_home/useActiveChannels.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +6,7 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import truncateOldMessageData from "truncateOldMessageData";
 import { Permissions } from "ME";
 import { ChannelFlags } from "set";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
 

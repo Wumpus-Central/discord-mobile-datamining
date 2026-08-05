@@ -1,5 +1,5 @@
-import { enforcing } from "../rtn-codegen/js/NativeDeviceLocaleModule.tsx";
 // discord_common/js/packages/i18n/getSystemLocale.tsx
+import { enforcing } from "../rtn-codegen/js/NativeDeviceLocaleModule.tsx";
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
 
 export const getSystemLocale = function getSystemLocale() {

@@ -1,9 +1,9 @@
+// discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx
+import { jsx } from "jsxProd";
 import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
 import { HeaderActionButton } from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx
-import { jsx } from "jsxProd";
 
 function CloseButton() {
   const obj = { source: null, onPress: null, accessibilityLabel: null };

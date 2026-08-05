@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
-import { set } from "../../../../../utils/PlatformUtils.tsx";
-import { useAPNGPlayerControls } from "../../../../image/native/APNGPlayer.android.tsx";
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx
 import registerAsset from "registerAsset";
 import getUploadFileSizeSum from "getUploadFileSizeSum";
@@ -17,6 +13,10 @@ import { ApplicationStreamFPS } from "RESOLUTION_720";
 import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX";
 import jsxProd from "ForLaterFreemiumConfig";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import { set } from "../../../../../utils/PlatformUtils.tsx";
+import { useAPNGPlayerControls } from "../../../../image/native/APNGPlayer.android.tsx";
 
 let closure_12;
 let closure_14;

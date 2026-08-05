@@ -1,3 +1,7 @@
+// discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
+import { EmojiCategories } from "EmojiCategoryTypes";
+import { jsx } from "jsxProd";
+import importAllResult from "noop";
 import { BicycleIcon } from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import { ClockIcon } from "../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import { FlagIcon } from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
@@ -10,10 +14,6 @@ import { ObjectIcon } from "../../../../../design/components/Icon/native/redesig
 import { ReactionIcon } from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import { StarIcon } from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import { TrophyIcon } from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
-// discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
-import { EmojiCategories } from "EmojiCategoryTypes";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
 
 const require = arg1;
 const memoResult = require("noop").memo(function EmojiPickerCategoryIcon(id) {

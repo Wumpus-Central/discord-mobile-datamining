@@ -1,7 +1,7 @@
-import { GenericHeaderTitle } from "../HeaderShared.tsx";
-import { PressableNavigatorButtonWrapper } from "PressableNavigatorButtonWrapper.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx
 import { jsx } from "jsxProd";
+import { GenericHeaderTitle } from "../HeaderShared.tsx";
+import { PressableNavigatorButtonWrapper } from "PressableNavigatorButtonWrapper.tsx";
 
 const result = require("GenericHeaderTitle").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
 

@@ -1,7 +1,7 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gradient.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 
 const require = arg1;
 class Gradient$Type extends MessageType {

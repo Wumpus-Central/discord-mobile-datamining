@@ -1,13 +1,13 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { CollapsingText } from "../../../design/components/Button/native/BaseTextButton.native.tsx";
-import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import { useOpenNitroSubscribeActionSheet } from "useOpenNitroSubscribeActionSheet.tsx";
 // discord_app/modules/collectibles/native/UnlockWithNitroButton.tsx
 import "noop";
 import updateProduct from "updateProduct";
 import map from "map";
 import { ShopCtaEnum } from "items";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { CollapsingText } from "../../../design/components/Button/native/BaseTextButton.native.tsx";
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { useOpenNitroSubscribeActionSheet } from "useOpenNitroSubscribeActionSheet.tsx";
 
 const require = arg1;
 const result = require("map").fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");

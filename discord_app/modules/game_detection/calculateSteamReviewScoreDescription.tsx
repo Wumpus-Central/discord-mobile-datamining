@@ -1,5 +1,5 @@
-import { GameTheme } from "GameDetectionTypes.tsx";
 // discord_app/modules/game_detection/calculateSteamReviewScoreDescription.tsx
+import { GameTheme } from "GameDetectionTypes.tsx";
 const result = require("set").fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
 export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {

@@ -1,15 +1,15 @@
-import { registerAsset } from "../../../../_runtime/07837_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { FamilyCenterAvatarPair } from "FamilyCenterAvatarPair.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterModalDisconnect.tsx
 import _slicedToArray from "_slicedToArray";
 import FamilyCenterInlineWarningNotice from "FamilyCenterInlineWarningNotice";
 import { View } from "registerAsset";
 import jsxProd from "Checkbox";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/07837_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { FamilyCenterAvatarPair } from "FamilyCenterAvatarPair.tsx";
 
 let closure_6;
 let error;

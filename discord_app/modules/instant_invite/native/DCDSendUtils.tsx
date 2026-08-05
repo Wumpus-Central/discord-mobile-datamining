@@ -1,6 +1,6 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx";
 // discord_app/modules/instant_invite/native/DCDSendUtils.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx";
 
 let c3;
 let c4;

@@ -1,7 +1,7 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/connections/ConnectionsRoleActionCreators.tsx
 import set from "set";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _putRoleConnectionsConfigurations() {

@@ -1,10 +1,3 @@
-import { Button } from "../../../../../design/void/native.tsx";
-import { updateAssets } from "../../../../../utils/ApplicationAssetUtils.tsx";
-import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
-import { useDominantRGBFromImage } from "../../../../calls/native/VideoBackground.tsx";
-import { useFetchStreamPreview } from "../../../../go_live/useFetchStreamPreview.tsx";
-import { HappeningNowAvatarStack } from "HappeningNowAvatarStack.tsx";
-import { useLiveStageData } from "useLiveStageData.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx
 import importAllResult from "HappeningNowCardPlaceholder";
 import get_ActivityIndicator from "asyncRequireImpl";
@@ -14,6 +7,13 @@ import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAIN
 import ME from "ME";
 import jsxProd from "HAPPENING_NOW_CONTENT_HEIGHT";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../../design/void/native.tsx";
+import { updateAssets } from "../../../../../utils/ApplicationAssetUtils.tsx";
+import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
+import { useDominantRGBFromImage } from "../../../../calls/native/VideoBackground.tsx";
+import { useFetchStreamPreview } from "../../../../go_live/useFetchStreamPreview.tsx";
+import { HappeningNowAvatarStack } from "HappeningNowAvatarStack.tsx";
+import { useLiveStageData } from "useLiveStageData.tsx";
 
 let HAPPENING_NOW_CONTENT_HEIGHT;
 let HAPPENING_NOW_STAGE_PREVIEW_HEIGHT;

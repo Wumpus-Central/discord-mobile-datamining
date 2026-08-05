@@ -1,8 +1,3 @@
-import { EmojiTypes } from "../modules/emojis/EmojiTypes.tsx";
-import { getAvatarURL } from "AvatarUtils.tsx";
-import { getURL } from "EmojiUtilsPlatformed.native.tsx";
-import { fit } from "ImageUtils.tsx";
-import { getPremiumPlanItem } from "PremiumUtils.tsx";
 // discord_app/utils/EmojiUtils.tsx
 import closure_3 from "set";
 import createChannelRecord from "createChannelRecord";
@@ -11,6 +6,11 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import set from "set";
 import set from "getUncachedChannelPermissions";
+import { EmojiTypes } from "../modules/emojis/EmojiTypes.tsx";
+import { getAvatarURL } from "AvatarUtils.tsx";
+import { getURL } from "EmojiUtilsPlatformed.native.tsx";
+import { fit } from "ImageUtils.tsx";
+import { getPremiumPlanItem } from "PremiumUtils.tsx";
 
 let EmojiDisabledReasons;
 let c10;

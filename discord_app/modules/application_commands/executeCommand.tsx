@@ -1,4 +1,3 @@
-import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
 // discord_app/modules/application_commands/executeCommand.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -9,6 +8,7 @@ import closure_9 from "mergeGuildAvatar";
 import handleInit from "handleInit";
 import ME from "ME";
 import { DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE as closure_15 } from "MESSAGE_GROUP_SPACING";
+import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
 
 let closure_12;
 let closure_14;

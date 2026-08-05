@@ -1,6 +1,6 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
 // discord_app/modules/markup/MarkupListRule.tsx
 import closure_10 from "t";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
 
 const re2 = /\n{2,}$/;
 const re3 = /(?:^|\n)( *)$/;

@@ -1,8 +1,3 @@
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { _uploadContacts } from "../ContactSyncUtils.tsx";
-import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 // discord_app/modules/contact_sync/native/components/RedesignContactSyncModal.tsx
 import getState from "getState";
 import ContactSyncLandingImage from "ContactSyncLandingImage";
@@ -16,6 +11,11 @@ import { AnalyticEvents } from "ME";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import jsxProd from "initialize";
 import createCacheKey from "createCacheKey";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { _uploadContacts } from "../ContactSyncUtils.tsx";
+import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 
 let c10;
 let c9;

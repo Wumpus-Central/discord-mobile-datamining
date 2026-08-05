@@ -1,3 +1,9 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx
+import _slicedToArray from "_slicedToArray";
+import ModalDisclaimer from "ModalDisclaimer";
+import get_ActivityIndicator from "Text";
+import jsxProd from "ModalFloatingAction";
+import createCacheKey from "createCacheKey";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Modal } from "../../../../design/components/Modal/native/Modal.native.tsx";
@@ -6,12 +12,6 @@ import { ModalScreen } from "../../../../design/components/Modal/native/ModalScr
 import { StepModal } from "../../../../design/components/Modal/native/StepModal.native.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
-// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx
-import _slicedToArray from "_slicedToArray";
-import ModalDisclaimer from "ModalDisclaimer";
-import get_ActivityIndicator from "Text";
-import jsxProd from "ModalFloatingAction";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

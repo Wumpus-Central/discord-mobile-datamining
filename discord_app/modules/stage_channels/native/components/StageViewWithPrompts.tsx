@@ -1,13 +1,13 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { FocusedControlsHeader } from "../../../video_calls/native/components/FocusedControls.tsx";
-import { StageSparkleInner } from "StageSparkle.tsx";
 // discord_app/modules/stage_channels/native/components/StageViewWithPrompts.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ThemeTypes } from "sum";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { FocusedControlsHeader } from "../../../video_calls/native/components/FocusedControls.tsx";
+import { StageSparkleInner } from "StageSparkle.tsx";
 
 let c3;
 let c4;

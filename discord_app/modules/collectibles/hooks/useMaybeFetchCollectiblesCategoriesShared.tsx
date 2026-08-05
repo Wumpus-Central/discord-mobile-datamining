@@ -1,10 +1,10 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import items from "items";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let c3;
 let c4;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/FamilyCenterConstants.tsx
 import getAuthenticationPath from "getAuthenticationPath";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
 
 const require = arg1;
 const result = 30 * require("set").Millis.SECOND;

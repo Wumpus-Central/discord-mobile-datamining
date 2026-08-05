@@ -1,4 +1,3 @@
-import { BaseChannelSubtitle } from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 // discord_app/modules/hub/native/components/HubSidebar.tsx
 import "UserPlusIcon";
 import { View } from "PlusMediumIcon";
@@ -7,6 +6,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { InstantInviteSources } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { BaseChannelSubtitle } from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 
 let error;
 let metroImportAll;

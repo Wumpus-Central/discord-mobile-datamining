@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 // discord_app/modules/guild_communication_disabled/useUserCommunicationDisabled.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");

@@ -1,6 +1,6 @@
+// discord_app/modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx
 import { set } from "../../../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx
 const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx");
 
 export const showDataPrivacyRateLimitAlert = function showDataPrivacyRateLimitAlert(message) {

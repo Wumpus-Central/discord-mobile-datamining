@@ -1,7 +1,7 @@
-import { updateDevToolsSettings } from "../DevToolsActionCreators.tsx";
 // discord_app/modules/devtools/native/useSortedDevToolsScreens.tsx
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
+import { updateDevToolsSettings } from "../DevToolsActionCreators.tsx";
 
 const require = arg1;
 function getSortedDevToolsScreens() {

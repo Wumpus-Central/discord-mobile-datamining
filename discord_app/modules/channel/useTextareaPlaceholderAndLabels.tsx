@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { computeChannelName } from "useChannelName.tsx";
 // discord_app/modules/channel/useTextareaPlaceholderAndLabels.tsx
 import ME from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { computeChannelName } from "useChannelName.tsx";
 
 let c3;
 let c4;

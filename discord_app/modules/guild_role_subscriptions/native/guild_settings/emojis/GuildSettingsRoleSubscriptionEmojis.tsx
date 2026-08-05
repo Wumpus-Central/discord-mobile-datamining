@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { computeEmojiItem } from "../../../../guild_settings/native/GuildSettingsModalEmoji.tsx";
-import { getMaxRoleSubscriptionEmojiSlots } from "../../../getMaxRoleSubscriptionEmojiSlots.tsx";
-import { ApplicationRejectedNotice } from "../GuildSettingsRoleSubscriptionContainer.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { jsx } from "jsxProd";
 import importDefaultResult from "asyncRequireImpl";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { computeEmojiItem } from "../../../../guild_settings/native/GuildSettingsModalEmoji.tsx";
+import { getMaxRoleSubscriptionEmojiSlots } from "../../../getMaxRoleSubscriptionEmojiSlots.tsx";
+import { ApplicationRejectedNotice } from "../GuildSettingsRoleSubscriptionContainer.tsx";
 
 const require = arg1;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {

@@ -1,3 +1,7 @@
+// discord_app/modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx
+import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS";
+import jsxProd from "jsxProd";
+import importAllResult from "noop";
 import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
 import { LeftPanelContent } from "../../../../../components_native/MainChannels.tsx";
 import { getGuildThemeName } from "../../../../client_themes/native/useColorThemeBackground.tsx";
@@ -5,10 +9,6 @@ import { getIsEligibleForQuests } from "../../../../quests/lib/QuestsEligibility
 import { QuestDockMode } from "../../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx";
 import { YouBar } from "../../you_bar/YouBar.tsx";
 import { trackTabPressed } from "../TabsPerformanceTracker.tsx";
-// discord_app/modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS";
-import jsxProd from "jsxProd";
-import importAllResult from "noop";
 
 let c4;
 let c5;

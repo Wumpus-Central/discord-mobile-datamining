@@ -1,8 +1,8 @@
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { AppRowLabel } from "../screens/home/AppLauncherHomeScreen.tsx";
 // discord_app/modules/app_launcher/native/base_components/RecommendationAppRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { AppRowLabel } from "../screens/home/AppLauncherHomeScreen.tsx";
 
 const require = arg1;
 const result = require("getAvatarURL").fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");

@@ -1,10 +1,10 @@
-import { IconSizes } from "../../Icon/native/Icon.tsx";
-import { LegacyText } from "../../LegacyText/native/LegacyText.tsx";
 // discord_app/design/void/IconPill/native/IconPill.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { IconSizes } from "../../Icon/native/Icon.tsx";
+import { LegacyText } from "../../LegacyText/native/LegacyText.tsx";
 
 let c3;
 let c4;

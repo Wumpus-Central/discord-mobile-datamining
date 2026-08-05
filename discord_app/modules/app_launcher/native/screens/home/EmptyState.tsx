@@ -1,13 +1,13 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
-import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
-import { SvgComponent } from "../../images/HomeEmptyState.tsx";
 // discord_app/modules/app_launcher/native/screens/home/EmptyState.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
+import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
+import { SvgComponent } from "../../images/HomeEmptyState.tsx";
 
 let c4;
 let c5;

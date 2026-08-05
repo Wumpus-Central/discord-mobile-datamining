@@ -1,6 +1,6 @@
-import { prototype } from "../RPCError.tsx";
 // discord_app/modules/rpc/helpers/unavailableCommand.tsx
 import { RPCErrors } from "ME";
+import { prototype } from "../RPCError.tsx";
 
 let obj = {
   handler(cmd) {

@@ -1,8 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISPLAY_NAME_STYLES_EFFECT_NAMES } from "../hooks/useDisplayNameStylesEffectConfigs.tsx";
-import { messagesProxy } from "../intl/DisplayNameStyles.messages.js";
-import { DisplayNameStyleColorPreset } from "../types.tsx";
-import { AVERAGE_FONT_WIDTH_RATIO } from "UsernameWithEffects.tsx";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import AVERAGE_FONT_WIDTH_RATIO from "AVERAGE_FONT_WIDTH_RATIO";
@@ -10,6 +5,11 @@ import get_ActivityIndicator from "Stack";
 import { FLYWHEEL_EFFECTS } from "items3";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { DISPLAY_NAME_STYLES_EFFECT_NAMES } from "../hooks/useDisplayNameStylesEffectConfigs.tsx";
+import { messagesProxy } from "../intl/DisplayNameStyles.messages.js";
+import { DisplayNameStyleColorPreset } from "../types.tsx";
+import { AVERAGE_FONT_WIDTH_RATIO } from "UsernameWithEffects.tsx";
 
 let c5;
 let c9;

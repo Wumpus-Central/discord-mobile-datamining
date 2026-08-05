@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../GuildPowerups.messages.js";
 // discord_app/modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx
 import { BoostInfoType } from "BoostedGuildTiers";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../GuildPowerups.messages.js";
 
 const result = require("messagesProxy").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx");
 

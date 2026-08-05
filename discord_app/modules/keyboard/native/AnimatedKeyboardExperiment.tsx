@@ -1,6 +1,6 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/keyboard/native/AnimatedKeyboardExperiment.tsx
 import ApexExperiment from "ApexExperiment";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 let obj = { 1: null };
 obj[1] = { enabled: true };

@@ -1,8 +1,8 @@
-import { HANDSHAKE } from "../RPCOpcodes.tsx";
 // discord_app/modules/rpc/transports/PostMessageProxySocket.tsx
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCCloseCodes } from "ME";
 import "checkRpcVersion";
+import { HANDSHAKE } from "../RPCOpcodes.tsx";
 
 class WindowProxySocket extends tmp2 {
   constructor(arg0) {

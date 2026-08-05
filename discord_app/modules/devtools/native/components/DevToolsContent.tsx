@@ -1,12 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { ArrowSmallDownIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallDownIcon.tsx";
-import { ArrowSmallUpIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { getSortedDevToolsScreens } from "../useSortedDevToolsScreens.tsx";
 // discord_app/modules/devtools/native/components/DevToolsContent.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "TableRowGroupTitle";
@@ -16,6 +7,15 @@ import getHash from "getHash";
 import initialize from "initialize";
 import jsxProd from "dispatcher";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ArrowSmallDownIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallDownIcon.tsx";
+import { ArrowSmallUpIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { getSortedDevToolsScreens } from "../useSortedDevToolsScreens.tsx";
 
 let c10;
 let c5;

@@ -1,6 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/recent_channels/NewChannelsStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import fetchFingerprint from "fetchFingerprint";
@@ -14,6 +11,9 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "ensureGuildLoaded";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 let closure_12;
 let closure_14;

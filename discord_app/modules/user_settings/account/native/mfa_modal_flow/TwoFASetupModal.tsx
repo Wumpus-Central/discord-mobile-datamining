@@ -1,12 +1,12 @@
-import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { useInitialValue } from "../../../../../hooks/useInitialValue.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx
 import NavigationStack from "NavigationStack";
 import { View } from "useInitialValue";
 import { TwoFAModalSetupSections } from "frozen";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useInitialValue } from "../../../../../hooks/useInitialValue.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let closure_6;
 let error;

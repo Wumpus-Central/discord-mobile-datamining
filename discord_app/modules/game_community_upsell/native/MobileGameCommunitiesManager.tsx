@@ -1,10 +1,10 @@
-import { DetectableAppNames } from "../../local_app_detection/LocalAppDetectionTypes.tsx";
-import { DETECTABLE_GAME_TO_APPLICATION_ID_MAP } from "GameCommunityConfig.tsx";
-import { GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT } from "GameCommunityUpsellExperiment.tsx";
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx
 import initialize from "initialize";
 import set from "set";
 import "initialize";
+import { DetectableAppNames } from "../../local_app_detection/LocalAppDetectionTypes.tsx";
+import { DETECTABLE_GAME_TO_APPLICATION_ID_MAP } from "GameCommunityConfig.tsx";
+import { GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT } from "GameCommunityUpsellExperiment.tsx";
 
 let require = arg1;
 class MobileGameCommunitiesManager extends tmp2 {

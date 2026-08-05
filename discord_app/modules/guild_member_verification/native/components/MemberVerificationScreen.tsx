@@ -1,7 +1,3 @@
-import { ActivityIndicator } from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { MemberVerificationModal } from "MemberVerificationModal.tsx";
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationScreen.tsx
 import closure_4 from "makeAuthenticated";
 import { View } from "useSafeAreaInsets";
@@ -12,6 +8,10 @@ import { Routes } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import makeAuthenticated from "makeAuthenticated";
+import { ActivityIndicator } from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { MemberVerificationModal } from "MemberVerificationModal.tsx";
 
 const require = arg1;
 function Loading() {

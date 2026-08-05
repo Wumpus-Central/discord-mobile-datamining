@@ -1,3 +1,6 @@
+// discord_app/modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createCacheKey from "createCacheKey";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { ensureAvatarSource } from "../../../../../utils/native/AvatarUtils.tsx";
 import { getTagProperties } from "../getTagProperties.tsx";
@@ -5,9 +8,6 @@ import { result } from "../resolveMessageContentColors.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 createCacheKey = { automodUsernameColor: require("Themes").colors.TEXT_BRAND };

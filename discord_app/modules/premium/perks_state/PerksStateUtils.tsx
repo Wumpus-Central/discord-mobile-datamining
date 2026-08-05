@@ -1,7 +1,7 @@
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import { PerkConfigType } from "types.tsx";
 // discord_app/modules/premium/perks_state/PerksStateUtils.tsx
 import _slicedToArray from "_slicedToArray";
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import { PerkConfigType } from "types.tsx";
 
 const require = arg1;
 function parseServerPerkConfigKind(kind) {

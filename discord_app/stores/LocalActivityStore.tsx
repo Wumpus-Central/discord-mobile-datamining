@@ -1,4 +1,3 @@
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
 // discord_app/stores/LocalActivityStore.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -15,6 +14,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import handleUpdate from "handleUpdate";
 import ME from "ME";
 import { Store } from "initialize";
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
 
 let closure_16;
 let closure_17;

@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ModalStackNavigator } from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 // discord_app/modules/image_upload/native/AddImageDescriptionModal.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -8,6 +6,8 @@ import { DraftType } from "handleChanged";
 import map from "map";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ModalStackNavigator } from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 
 let c10;
 let c5;

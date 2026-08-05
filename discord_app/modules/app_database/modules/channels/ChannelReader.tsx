@@ -1,6 +1,6 @@
-import { items } from "../../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/channels/ChannelReader.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { items } from "../../DatabaseDaos.tsx";
 
 let c3 = new require("set")("ChannelReader");
 const tmp2 = new require("set")("ChannelReader");

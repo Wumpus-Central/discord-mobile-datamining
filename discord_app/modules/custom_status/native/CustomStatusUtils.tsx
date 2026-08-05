@@ -1,6 +1,6 @@
+// discord_app/modules/custom_status/native/CustomStatusUtils.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/custom_status/native/CustomStatusUtils.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/custom_status/native/CustomStatusUtils.tsx");
 
 export const openEditCustomStatusModal = function openEditCustomStatusModal(arg0) {

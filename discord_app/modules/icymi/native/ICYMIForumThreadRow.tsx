@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/ICYMIForumThreadRow.tsx
 import getDefaultRules from "get defaultRules";
 import { View } from "PressableBase";
@@ -6,6 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "AddEmojiButton";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let error;
 let metroImportAll;

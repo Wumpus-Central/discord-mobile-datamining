@@ -1,5 +1,5 @@
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
 // discord_app/modules/applications/ApplicationInteractionInfoUtils.tsx
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
 export const canViewInteractionInfo = function canViewInteractionInfo(message) {

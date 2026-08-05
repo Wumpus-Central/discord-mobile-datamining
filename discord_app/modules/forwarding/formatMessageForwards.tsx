@@ -1,6 +1,3 @@
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { resetCache } from "../../utils/DateUtils.tsx";
-import { isForwardMessage } from "isForwardMessage.tsx";
 // discord_app/modules/forwarding/formatMessageForwards.tsx
 import getGuild from "getGuild";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +5,9 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { resetCache } from "../../utils/DateUtils.tsx";
+import { isForwardMessage } from "isForwardMessage.tsx";
 
 const require = arg1;
 class MessageForward {

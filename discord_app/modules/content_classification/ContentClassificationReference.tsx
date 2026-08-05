@@ -1,5 +1,5 @@
-import { isAgeRestrictedContentClassification } from "utils.tsx";
 // discord_app/modules/content_classification/ContentClassificationReference.tsx
+import { isAgeRestrictedContentClassification } from "utils.tsx";
 let result = require("set").fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 
 export const isAgeRestrictedClassificationReference = function isAgeRestrictedClassificationReference(contentClassification) {

@@ -1,6 +1,3 @@
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import { expandEventProperties } from "AnalyticsUtils.tsx";
 // discord_app/utils/NotificationSettingsUtils.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -10,6 +7,9 @@ import ME from "ME";
 import { NotificationSettingsUpdateType as closure_9 } from "AccountNotificationFlags";
 import { UnreadSetting } from "ReadStateTypes";
 import MAX_FAVORITES from "MAX_FAVORITES";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { expandEventProperties } from "AnalyticsUtils.tsx";
 
 let UserNotificationSettings;
 let closure_12;

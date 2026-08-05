@@ -1,4 +1,3 @@
-import { PictureInPicturePositions } from "PictureInPicture.tsx";
 // discord_app/modules/video_calls/native/components/PictureInPictureGlobal.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import importAllResult from "useShouldForcePipOrientation";
@@ -13,6 +12,7 @@ import { ParticipantTypes } from "ParticipantTypes";
 import jsxProd from "usePipDimensions";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
+import { PictureInPicturePositions } from "PictureInPicture.tsx";
 
 let c5;
 let closure_15;

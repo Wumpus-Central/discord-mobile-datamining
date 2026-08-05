@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { createThreadEmbed } from "createMessageContent.tsx";
 // discord_app/modules/messages/native/renderer/MessageWithContent.tsx
 import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";
 import { RowType } from "Changeset";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { createThreadEmbed } from "createMessageContent.tsx";
 
 const require = arg1;
 const result = require("createThreadEmbed").fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");

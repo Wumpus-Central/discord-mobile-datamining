@@ -1,7 +1,7 @@
-import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
-import { useCurrentEmbeddedActivity } from "useCurrentEmbeddedActivity.tsx";
 // discord_app/modules/activities/utils/useCurrentEmbeddedApplication.tsx
 import _slicedToArray from "_slicedToArray";
+import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
+import { useCurrentEmbeddedActivity } from "useCurrentEmbeddedActivity.tsx";
 
 const result = require("useGetOrFetchApplications").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
 

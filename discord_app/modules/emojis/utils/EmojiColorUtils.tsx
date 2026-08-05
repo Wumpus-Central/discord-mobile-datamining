@@ -1,7 +1,7 @@
+// discord_app/modules/emojis/utils/EmojiColorUtils.tsx
 import { hslToRgb } from "../../../utils/Color.tsx";
 import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 import { getURL } from "../../../utils/EmojiUtilsPlatformed.native.tsx";
-// discord_app/modules/emojis/utils/EmojiColorUtils.tsx
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   let colors;
   let saturationFactor;

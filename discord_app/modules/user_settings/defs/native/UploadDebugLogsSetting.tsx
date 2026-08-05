@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/UploadDebugLogsSetting.tsx
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { DebugLogCategory } from "ME";
 import { jsx } from "jsxProd";
 import keys from "keys";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 function _handleUploadDebugLogSettingPress() {

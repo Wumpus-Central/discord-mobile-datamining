@@ -1,7 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/08307_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10827_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/stage_channels/native/components/SpeakerTileStatuses.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -10,6 +6,10 @@ import updateVoiceState from "updateVoiceState";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/08307_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10827_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 
 const require = arg1;
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };

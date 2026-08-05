@@ -1,11 +1,11 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { set } from "../CreatorMonetizationEligibilityExperimentUtils.tsx";
-import { getCreatorMonetizationAcceptTermsCheckboxText } from "CreatorMonetizationAcceptTermCheckboxText.tsx";
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx
 import noop from "noop";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { set } from "../CreatorMonetizationEligibilityExperimentUtils.tsx";
+import { getCreatorMonetizationAcceptTermsCheckboxText } from "CreatorMonetizationAcceptTermCheckboxText.tsx";
 
 let closure_6;
 let error;

@@ -1,8 +1,3 @@
-import { registerAsset } from "../../../../_runtime/11182_registerAsset.js";
-import { componentDidMount } from "../../../components_native/common/Alert.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_automod/native/AutomodUserProfileQuarantineAlert.tsx
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -16,6 +11,11 @@ import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import jsxProd from "GuildMemberFlags";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/11182_registerAsset.js";
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let closure_14;
 let closure_16;

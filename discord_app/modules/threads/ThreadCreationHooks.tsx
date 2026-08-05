@@ -1,5 +1,3 @@
-import { rebuild } from "../messages/MessageParser.tsx";
-import { useCanUnarchiveThread } from "ThreadHooks.tsx";
 // discord_app/modules/threads/ThreadCreationHooks.tsx
 import snowflakeSequence from "snowflakeSequence";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,6 +12,8 @@ import { SlowmodeType } from "setCooldown";
 import AbortCodes from "AbortCodes";
 import ME from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { rebuild } from "../messages/MessageParser.tsx";
+import { useCanUnarchiveThread } from "ThreadHooks.tsx";
 
 let closure_14;
 let closure_15;

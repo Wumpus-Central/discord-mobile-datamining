@@ -1,6 +1,6 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 
 const require = arg1;
 const ShopProductPurchaseSuccessModal = "ShopProductPurchaseSuccessModal";

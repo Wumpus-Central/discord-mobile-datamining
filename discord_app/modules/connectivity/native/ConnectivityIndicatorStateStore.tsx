@@ -1,4 +1,3 @@
-import { awaitOnline } from "../../../utils/NetworkUtils.tsx";
 // discord_app/modules/connectivity/native/ConnectivityIndicatorStateStore.tsx
 import handleClearCaches from "handleClearCaches";
 import fetchFingerprint from "fetchFingerprint";
@@ -7,6 +6,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import getState from "getState";
 import { AppStates } from "ME";
 import { Store } from "initialize";
+import { awaitOnline } from "../../../utils/NetworkUtils.tsx";
 
 function updateState() {
   if (!c19) {

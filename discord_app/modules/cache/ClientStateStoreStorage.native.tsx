@@ -1,6 +1,6 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
 // discord_app/modules/cache/ClientStateStoreStorage.native.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
 
 const result = require("enforcing").fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
 

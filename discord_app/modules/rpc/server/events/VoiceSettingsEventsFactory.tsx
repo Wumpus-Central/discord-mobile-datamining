@@ -1,7 +1,7 @@
-import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 // discord_app/modules/rpc/server/events/VoiceSettingsEventsFactory.tsx
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import { RPCEvents } from "ME";
+import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 
 let c3;
 let c4;

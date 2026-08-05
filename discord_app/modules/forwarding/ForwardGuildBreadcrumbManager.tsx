@@ -1,7 +1,7 @@
-import { _fetchBasicGuild } from "../guild/BasicGuildActionCreators.tsx";
 // discord_app/modules/forwarding/ForwardGuildBreadcrumbManager.tsx
 import { MessageReferenceTypes } from "ME";
 import "initialize";
+import { _fetchBasicGuild } from "../guild/BasicGuildActionCreators.tsx";
 
 function fetchForwardReferencedGuilds(message_reference) {
   message_reference = message_reference.message_reference;

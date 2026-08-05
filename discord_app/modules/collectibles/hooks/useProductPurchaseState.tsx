@@ -1,8 +1,8 @@
+// discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
+import map from "map";
 import { compact } from "../../../../_runtime/09332_compact.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-// discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
-import map from "map";
 
 const require = arg1;
 function getProductPurchaseState(outer1_5, skuId) {

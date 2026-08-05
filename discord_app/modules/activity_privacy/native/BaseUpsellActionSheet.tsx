@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CircleCheckIcon } from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/activity_privacy/native/BaseUpsellActionSheet.tsx
 import noop from "noop";
 import get_ActivityIndicator from "Button";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleCheckIcon } from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c4;
 let c5;

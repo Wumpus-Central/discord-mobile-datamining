@@ -1,12 +1,12 @@
-import { set } from "../../../core/native/NativeView.tsx";
-import { useVoicePanelCardUserStateIcons } from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import { areStableParticipantsEqual } from "../utils/useStableParticipant.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderUserState.tsx
 import importAllResult from "noop";
 import getParticipants from "getParticipants";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { set } from "../../../core/native/NativeView.tsx";
+import { useVoicePanelCardUserStateIcons } from "../hooks/useVoicePanelCardUserStateIcons.tsx";
+import { areStableParticipantsEqual } from "../utils/useStableParticipant.tsx";
 
 const require = arg1;
 function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {

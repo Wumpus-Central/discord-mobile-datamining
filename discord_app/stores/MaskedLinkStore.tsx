@@ -1,10 +1,10 @@
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
-import { getHostname } from "MaskedLinkStoreMethodsAdditional.native.tsx";
 // discord_app/stores/MaskedLinkStore.tsx
 import { SPOTIFY_HOSTNAMES } from "WEB_OPEN";
 import { Store } from "initialize";
 import set from "isDiscordProxiedAssetUrl";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
+import { getHostname } from "MaskedLinkStoreMethodsAdditional.native.tsx";
 
 const MaskedLinkStore = "MaskedLinkStore";
 let set = new Set();

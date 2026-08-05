@@ -1,8 +1,8 @@
-import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_3 from "handleConnectionOpen";
 import { ME } from "ME";
+import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");

@@ -1,5 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../regional_feature_config/RegionalTeenUtils.tsx";
 // discord_app/modules/nuf/native/NotificationPermissionUtil.tsx
 import _slicedToArray from "_slicedToArray";
 import EventActionType from "EventActionType";
@@ -9,6 +7,8 @@ import set from "set";
 import { EventActionType } from "EventActionType";
 import { AnalyticEvents } from "ME";
 import { NotificationAuthorizationStatus as closure_10 } from "NativePermissionStatus";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../regional_feature_config/RegionalTeenUtils.tsx";
 
 const require = arg1;
 function _requestPushNotificationPermission() {

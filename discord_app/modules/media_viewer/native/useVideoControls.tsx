@@ -1,4 +1,3 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/media_viewer/native/useVideoControls.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import { jsx } from "jsxProd";
 import keys from "keys";
 import createCacheKey from "createCacheKey";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
 keys = keys.create(() => ({ controls: "ct", paused: "Array" }));

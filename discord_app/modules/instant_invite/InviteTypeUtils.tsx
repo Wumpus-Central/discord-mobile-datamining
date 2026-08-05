@@ -1,8 +1,8 @@
-import { getEstablishedDate } from "../guild_profile/GuildProfileUtils.tsx";
 // discord_app/modules/instant_invite/InviteTypeUtils.tsx
 import { isEventUpcoming } from "scheduledEventSort";
 import createChannelRecord from "createChannelRecord";
 import InviteSendStates from "InviteSendStates";
+import { getEstablishedDate } from "../guild_profile/GuildProfileUtils.tsx";
 
 let c3;
 let c4;

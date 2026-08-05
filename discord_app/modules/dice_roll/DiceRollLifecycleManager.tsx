@@ -1,6 +1,3 @@
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { rebuild } from "../messages/MessageParser.tsx";
 // discord_app/modules/dice_roll/DiceRollLifecycleManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -9,6 +6,9 @@ import { INITIAL_STATE } from "INITIAL_STATE";
 import ROLL_DURATION_MS from "ROLL_DURATION_MS";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
 import "initialize";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { rebuild } from "../messages/MessageParser.tsx";
 
 let c10;
 let c9;

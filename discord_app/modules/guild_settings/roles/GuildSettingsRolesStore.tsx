@@ -1,6 +1,3 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { calculatePositionDeltas } from "../../../utils/DragAndDropUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesStore.tsx
 import { set } from "isValueEqual";
 import map from "map";
@@ -12,6 +9,9 @@ import ME from "ME";
 import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS";
 import { Store } from "initialize";
 import set from "GuildRoleRecordTypeTag";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { calculatePositionDeltas } from "../../../utils/DragAndDropUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 let FormStates;
 let closure_15;

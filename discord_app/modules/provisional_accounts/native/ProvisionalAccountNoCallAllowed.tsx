@@ -1,12 +1,12 @@
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { CircleErrorIcon } from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx
 import "noop";
 import { HelpdeskArticles } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { CircleErrorIcon } from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ header: { alignSelf: "center" } });

@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { KrispLogo } from "../../voice/native/SettingsVoiceScreen.tsx";
 // discord_app/modules/user_settings/defs/native/VoiceSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ME from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { KrispLogo } from "../../voice/native/SettingsVoiceScreen.tsx";
 
 let UserSettingsSections;
 let c3;

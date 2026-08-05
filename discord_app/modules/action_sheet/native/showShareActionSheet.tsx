@@ -1,6 +1,6 @@
-import { trackAppClickInNativeShareSheet } from "ShowShareActionSheetUtils.tsx";
 // discord_app/modules/action_sheet/native/showShareActionSheet.tsx
 import PlatformTypes from "PlatformTypes";
+import { trackAppClickInNativeShareSheet } from "ShowShareActionSheetUtils.tsx";
 
 if (PlatformTypes.isAndroid()) {
   const nativeEventEmitter = new require("get ActivityIndicator").NativeEventEmitter(require("enforcing"));

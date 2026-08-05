@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/soundpacks/SoundpackActions.tsx
 import Soundpacks from "Soundpacks";
 import { AnalyticEvents } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 

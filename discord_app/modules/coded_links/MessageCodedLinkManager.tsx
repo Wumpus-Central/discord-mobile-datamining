@@ -1,9 +1,9 @@
-import { getPathsFromURL } from "findCodedLinks.tsx";
 // discord_app/modules/coded_links/MessageCodedLinkManager.tsx
 import queueMessageLinkFetch from "queueMessageLinkFetch";
 import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
 import updateInvite from "updateInvite";
 import "initialize";
+import { getPathsFromURL } from "findCodedLinks.tsx";
 
 const require = arg1;
 function resolveMessageCodedLinks(content) {

@@ -1,9 +1,9 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { Linking } from "../lib/native/Linking.tsx";
 // discord_app/actions/GamesActionCreators.native.tsx
 import Linking from "../lib/native/Linking.tsx";
 import ME from "ME";
 import { ActivityIntent } from "items3";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { Linking } from "../lib/native/Linking.tsx";
 
 let c4;
 let c5;

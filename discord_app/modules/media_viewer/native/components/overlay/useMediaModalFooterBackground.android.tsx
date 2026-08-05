@@ -1,8 +1,8 @@
+// discord_app/modules/media_viewer/native/components/overlay/useMediaModalFooterBackground.android.tsx
+import _slicedToArray from "_slicedToArray";
 import { n } from "../../../../../../_runtime/00689_n.js";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../../design/tokens/native/useToken.tsx";
-// discord_app/modules/media_viewer/native/components/overlay/useMediaModalFooterBackground.android.tsx
-import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
 const result = require("map").fileFinishedImporting("modules/media_viewer/native/components/overlay/useMediaModalFooterBackground.android.tsx");

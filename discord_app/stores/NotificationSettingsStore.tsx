@@ -1,7 +1,7 @@
-import { set } from "../utils/PlatformUtils.tsx";
 // discord_app/stores/NotificationSettingsStore.tsx
 import ME from "ME";
 import { DeviceSettingsStore } from "initialize";
+import { set } from "../utils/PlatformUtils.tsx";
 
 let TTSNotificationTypes;
 let c3;

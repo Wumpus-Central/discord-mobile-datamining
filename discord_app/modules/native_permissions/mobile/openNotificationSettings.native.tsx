@@ -1,6 +1,6 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 // discord_app/modules/native_permissions/mobile/openNotificationSettings.native.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 
 let result = require("enforcing").fileFinishedImporting("modules/native_permissions/mobile/openNotificationSettings.native.tsx");
 

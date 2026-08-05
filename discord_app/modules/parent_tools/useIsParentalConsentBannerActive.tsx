@@ -1,6 +1,6 @@
+// discord_app/modules/parent_tools/useIsParentalConsentBannerActive.tsx
 import { frozen } from "ParentalConsentWarningTypes.tsx";
 import { useParentalConsentWarning } from "useParentalConsentWarning.tsx";
-// discord_app/modules/parent_tools/useIsParentalConsentBannerActive.tsx
 const result = require("set").fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
 export const useIsParentalConsentBannerActive = function useIsParentalConsentBannerActive() {

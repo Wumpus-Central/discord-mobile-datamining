@@ -1,8 +1,8 @@
+// discord_app/modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx
+import { jsx } from "jsxProd";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../FamilyCenter.messages.js";
-// discord_app/modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx
-import { jsx } from "jsxProd";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
 

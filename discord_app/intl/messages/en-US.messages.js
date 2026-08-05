@@ -1,3 +1,6 @@
+// discord_app/intl/messages/en-US.messages.js
+import 01274__ from "../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../_runtime/01240_registerAsset.js";
 import { registerAsset } from "../../../_runtime/01242_registerAsset.js";
 import { registerAsset } from "../../../_runtime/01243_registerAsset.js";
@@ -31,9 +34,6 @@ import { registerAsset } from "../../../_runtime/01270_registerAsset.js";
 import { registerAsset } from "../../../_runtime/01272_registerAsset.js";
 import { registerAsset } from "../../../_runtime/01273_registerAsset.js";
 import { loadJsonAsset } from "../../modules/asset_json/native/AssetJsonUtils.tsx";
-// discord_app/intl/messages/en-US.messages.js
-import 01274__ from "../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

@@ -1,4 +1,3 @@
-import { getUnitId } from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
 // discord_app/stores/SpeakingStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +7,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { Permissions } from "ME";
 import DesktopSources from "DesktopSources";
 import { Store } from "initialize";
+import { getUnitId } from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
 
 let c10;
 let c9;

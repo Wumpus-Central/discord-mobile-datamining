@@ -1,7 +1,7 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/collectibles/hooks/useShopProductItems.tsx
 import noop from "noop";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 class ItemsSortingHat {

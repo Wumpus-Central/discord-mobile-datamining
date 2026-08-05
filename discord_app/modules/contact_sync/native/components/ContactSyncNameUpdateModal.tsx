@@ -1,5 +1,3 @@
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +7,8 @@ import { ContactSyncScenes } from "ContactSyncLandingPage";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import HeaderBackImage from "HeaderBackImage";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 function onClose() {

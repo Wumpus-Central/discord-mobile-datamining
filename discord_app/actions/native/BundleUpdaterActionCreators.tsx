@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../AlertActionCreators.tsx";
 // discord_app/actions/native/BundleUpdaterActionCreators.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { set } from "../AlertActionCreators.tsx";
 
 let c4 = false;
 const result = require("getSystemLocale").fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");

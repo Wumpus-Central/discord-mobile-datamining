@@ -1,6 +1,6 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
 // discord_app/modules/chat_input/native/ChatInputParser.tsx
 import { processColor } from "get ActivityIndicator";
+import { apply } from "../../../../_runtime/00012_apply.js";
 
 const result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");
 class ChatInputParser {

@@ -1,5 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarUser.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let c10;
 let c9;

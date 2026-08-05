@@ -1,6 +1,6 @@
-import { HapticFeedbackTypes } from "../../../haptics/HapticUtils.native.tsx";
 // discord_app/modules/panels/morphable/native/triggerIOSHaptic.tsx
 import { IS_IOS } from "MIN_PAN_GESTURE_MOVE";
+import { HapticFeedbackTypes } from "../../../haptics/HapticUtils.native.tsx";
 
 let result = require("set").fileFinishedImporting("modules/panels/morphable/native/triggerIOSHaptic.tsx");
 

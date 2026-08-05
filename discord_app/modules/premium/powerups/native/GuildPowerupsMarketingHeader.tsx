@@ -1,12 +1,12 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useHasAllocateBoostPermission } from "../hooks/useHasAllocateBoostPermission.tsx";
-import { set } from "../hooks/useMarketablePowerupPerks.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useHasAllocateBoostPermission } from "../hooks/useHasAllocateBoostPermission.tsx";
+import { set } from "../hooks/useMarketablePowerupPerks.tsx";
 
 const require = arg1;
 function PerkText(children) {

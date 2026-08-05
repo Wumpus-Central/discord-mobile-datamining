@@ -1,14 +1,14 @@
+// discord_app/modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx
+import noop from "noop";
+import { ComponentActions } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ChatIcon } from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { set } from "../../../core/native/NativeView.tsx";
 import { useChatBadge } from "../hooks/useChatBadge.tsx";
 import { VoicePanelIconButton } from "../shared/VoicePanelIconButton.tsx";
-// discord_app/modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx
-import noop from "noop";
-import { ComponentActions } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

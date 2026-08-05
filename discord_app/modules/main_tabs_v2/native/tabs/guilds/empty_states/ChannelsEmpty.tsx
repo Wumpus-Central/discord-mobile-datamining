@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../../../../_runtime/15259_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15260_registerAsset.js";
-import { messagesProxy } from "../../../../../favorites/intl/FavoritesGuild.messages.js";
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "RowButtonWrapper";
@@ -8,6 +5,9 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../../_runtime/15259_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15260_registerAsset.js";
+import { messagesProxy } from "../../../../../favorites/intl/FavoritesGuild.messages.js";
 
 let c4;
 let c5;

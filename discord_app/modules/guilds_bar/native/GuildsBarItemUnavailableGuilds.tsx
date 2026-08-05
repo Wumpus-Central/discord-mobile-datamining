@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../_runtime/15335_registerAsset.js";
 // discord_app/modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleConnectionOpen from "handleConnectionOpen";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { registerAsset } from "../../../../_runtime/15335_registerAsset.js";
 
 let c3;
 let c4;

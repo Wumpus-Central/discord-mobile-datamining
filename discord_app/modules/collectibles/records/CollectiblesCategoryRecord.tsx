@@ -1,7 +1,7 @@
-import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
 // discord_app/modules/collectibles/records/CollectiblesCategoryRecord.tsx
 import fromServer from "fromServer";
 import "fromServer";
+import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
 
 const require = arg1;
 let prototype;

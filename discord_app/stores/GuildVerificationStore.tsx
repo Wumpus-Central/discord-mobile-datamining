@@ -1,5 +1,3 @@
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/GuildVerificationStore.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -10,6 +8,8 @@ import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import { Store } from "initialize";
 import set from "createGuildRoleRecordFromRust";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 let c10;
 let c9;

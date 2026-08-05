@@ -1,10 +1,10 @@
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventStepContainer.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let c4;
 let c5;

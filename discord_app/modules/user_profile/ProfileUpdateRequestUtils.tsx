@@ -1,7 +1,7 @@
+// discord_app/modules/user_profile/ProfileUpdateRequestUtils.tsx
 import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { AssetOriginTypes } from "../recent_avatars/RecentAvatarsTypes.tsx";
 import { getCurrentUserProfile } from "utils/getCurrentUserProfile.tsx";
-// discord_app/modules/user_profile/ProfileUpdateRequestUtils.tsx
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
 export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(outer1_0, id) {

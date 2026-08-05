@@ -1,12 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { HeaderSection } from "GuildSettingsRoleEditConnectionsControls.tsx";
-import { GuildSettingsRoleEditDisplay } from "GuildSettingsRoleEditDisplay.tsx";
-import { GuildSettingsRoleEditPermission } from "GuildSettingsRoleEditPermissions.tsx";
-import { onMembersLoadFail } from "GuildSettingsRoleMembers.tsx";
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEdit.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import fetchFingerprint from "fetchFingerprint";
@@ -25,6 +16,15 @@ import ME from "ME";
 import { HOLOGRAPHIC_ROLE_COLORS } from "HOLOGRAPHIC_ROLE_COLORS";
 import jsxProd from "collectGuildAnalyticsMetadata";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { HeaderSection } from "GuildSettingsRoleEditConnectionsControls.tsx";
+import { GuildSettingsRoleEditDisplay } from "GuildSettingsRoleEditDisplay.tsx";
+import { GuildSettingsRoleEditPermission } from "GuildSettingsRoleEditPermissions.tsx";
+import { onMembersLoadFail } from "GuildSettingsRoleMembers.tsx";
 
 let closure_18;
 let closure_19;

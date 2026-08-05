@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
 // discord_app/modules/guild_action_sheet/native/openGuildActionSheet.tsx
 import ME from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
 
 let c3;
 let c4;

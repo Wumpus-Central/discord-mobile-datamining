@@ -1,8 +1,8 @@
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopPricePlaceholder.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 createCacheKey = { skeletonContainer: null };

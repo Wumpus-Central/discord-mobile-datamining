@@ -1,8 +1,3 @@
-import { t } from "../../../../../../_runtime/04484_t.js";
-import { registerAsset } from "../../../../../../_runtime/11468_registerAsset.js";
-import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
-import { Button } from "../../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "t";
@@ -13,6 +8,11 @@ import jsxProd from "Button";
 import _executeCommand from "_executeCommand";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "defaultAreStatesEqual";
+import { t } from "../../../../../../_runtime/04484_t.js";
+import { registerAsset } from "../../../../../../_runtime/11468_registerAsset.js";
+import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
+import { Button } from "../../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c10;
 let c9;

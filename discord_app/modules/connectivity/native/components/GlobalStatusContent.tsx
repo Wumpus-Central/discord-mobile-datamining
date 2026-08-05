@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useVoiceStateForRemoteSession } from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
-import { useCanCurrentUserSpeakInChannel } from "../../../stage_channels/useCanSpeakInChannel.tsx";
-import { useIsInvitedToSpeak } from "../../../stage_channels/useIsInvitedToSpeak.tsx";
 // discord_app/modules/connectivity/native/components/GlobalStatusContent.tsx
 import "ChannelCallCameraPreview";
 import { View } from "getIsScreenLandscape";
@@ -13,6 +9,10 @@ import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT";
 import { RTCConnectionStates } from "ME";
 import jsxProd from "useSafeAreaInsets";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useVoiceStateForRemoteSession } from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
+import { useCanCurrentUserSpeakInChannel } from "../../../stage_channels/useCanSpeakInChannel.tsx";
+import { useIsInvitedToSpeak } from "../../../stage_channels/useIsInvitedToSpeak.tsx";
 
 let c10;
 let unpackModuleId;

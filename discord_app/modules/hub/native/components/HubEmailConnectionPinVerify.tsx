@@ -1,5 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/09039_registerAsset.js";
-import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "jsxProd";
@@ -8,6 +6,8 @@ import get_ActivityIndicator from "registerAsset";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09039_registerAsset.js";
+import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 
 let c10;
 let c9;

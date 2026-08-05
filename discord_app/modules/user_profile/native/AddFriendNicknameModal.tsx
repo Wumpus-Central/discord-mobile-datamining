@@ -1,7 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { TextField } from "../../../design/components/TextField/native/TextField.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/AddFriendNicknameModal.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +7,10 @@ import upsertRelationship from "upsertRelationship";
 import closure_8 from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { TextField } from "../../../design/components/TextField/native/TextField.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c9;

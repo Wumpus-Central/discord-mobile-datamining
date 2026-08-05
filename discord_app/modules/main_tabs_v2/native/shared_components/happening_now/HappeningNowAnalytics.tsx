@@ -1,7 +1,7 @@
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 
 function convertNullableArrayToItemAndItemIndex(arg0) {
   const items = [];

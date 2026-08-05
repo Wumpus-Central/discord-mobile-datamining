@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/header/PrivateChannelButtons.tsx
 import importAllResult from "useIsCallActive";
 import { View } from "initialize";
@@ -15,6 +14,7 @@ import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY";
 import { SearchEntrypointAnalyticsLocations as closure_17 } from "SearchEntrypointAnalyticsLocations";
 import jsxProd from "getPrivateChannelCall";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_12;
 let closure_14;

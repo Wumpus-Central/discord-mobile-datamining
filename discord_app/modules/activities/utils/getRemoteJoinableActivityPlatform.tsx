@@ -1,8 +1,8 @@
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/activities/utils/getRemoteJoinableActivityPlatform.tsx
 import isConnected from "isConnected";
 import handleUpdate from "handleUpdate";
 import ME from "ME";
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 let c4;
 let c5;

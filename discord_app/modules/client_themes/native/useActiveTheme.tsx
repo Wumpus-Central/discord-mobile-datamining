@@ -1,10 +1,10 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getGuildIdFromNavigationState } from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 // discord_app/modules/client_themes/native/useActiveTheme.tsx
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import reset from "reset";
 import SystemThemeState from "SystemThemeState";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getGuildIdFromNavigationState } from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 
 let closure_6;
 let error;

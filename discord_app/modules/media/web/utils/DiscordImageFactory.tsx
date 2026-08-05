@@ -1,6 +1,6 @@
+// discord_app/modules/media/web/utils/DiscordImageFactory.tsx
 import { detectFile } from "../../../../../_runtime/04867_detectFile.js";
 import { create } from "DiscordImagePng.tsx";
-// discord_app/modules/media/web/utils/DiscordImageFactory.tsx
 const result = require("set").fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
 const prototype = function DiscordImageFactory() {
   return Object.create(new.target.prototype);

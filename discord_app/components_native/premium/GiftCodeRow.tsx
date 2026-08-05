@@ -1,10 +1,10 @@
-import { resolveGiftCode } from "../../actions/GiftCodeActionCreators.tsx";
 // discord_app/components_native/premium/GiftCodeRow.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { AnalyticsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { resolveGiftCode } from "../../actions/GiftCodeActionCreators.tsx";
 
 let StyleSheet;
 let c3;

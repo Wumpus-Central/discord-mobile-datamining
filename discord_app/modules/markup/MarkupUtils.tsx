@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { combineMarkupRules } from "combineMarkupRules.tsx";
-import { MarkupText } from "MarkupReactRules.native.tsx";
-import { parseLink } from "MarkupRules.tsx";
 // discord_app/modules/markup/MarkupUtils.tsx
 import importDefaultResult from "apply";
 import importDefaultResult1 from "apply";
@@ -32,6 +28,10 @@ import importDefaultResult25 from "apply";
 import importDefaultResult26 from "apply";
 import importDefaultResult27 from "apply";
 import importDefaultResult28 from "apply";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { combineMarkupRules } from "combineMarkupRules.tsx";
+import { MarkupText } from "MarkupReactRules.native.tsx";
+import { parseLink } from "MarkupRules.tsx";
 
 let closure_3 = ["url", "autolink", "link", "mailto", "tel"];
 let obj = { enableBuildOverrides: false, enableEmojiClick: true };

@@ -1,14 +1,14 @@
+// discord_app/modules/activate_device/native/ActivateDeviceSuccess.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { innerContent } from "ActivateDeviceSharedStyles.tsx";
-// discord_app/modules/activate_device/native/ActivateDeviceSuccess.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

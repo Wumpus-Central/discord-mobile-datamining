@@ -1,9 +1,9 @@
+// discord_app/modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
 import { result } from "../resolveMessageContentColors.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;
 const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");

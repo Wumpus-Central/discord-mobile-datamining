@@ -1,3 +1,8 @@
+// discord_app/modules/forums/native/composer/ForumComposerHeader.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ForumIcon } from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -5,11 +10,6 @@ import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { computeChannelName } from "../../../channel/useChannelName.tsx";
-// discord_app/modules/forums/native/composer/ForumComposerHeader.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

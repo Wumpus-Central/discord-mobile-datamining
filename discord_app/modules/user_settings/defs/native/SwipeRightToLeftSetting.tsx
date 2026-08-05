@@ -1,9 +1,9 @@
+// discord_app/modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx
+import createToggle from "createToggle";
 import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { UserSettingsSwipeRightToLeft } from "../../chat/native/SwipeRightToLeftScreen.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx
-import createToggle from "createToggle";
 
 obj = {
   useTitle() {

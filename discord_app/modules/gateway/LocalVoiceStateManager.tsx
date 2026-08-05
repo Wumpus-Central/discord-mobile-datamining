@@ -1,6 +1,3 @@
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isClipsEnabled } from "../clips/isClipsEnabled.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/gateway/LocalVoiceStateManager.tsx
 import initialize from "initialize";
 import reset from "reset";
@@ -9,6 +6,9 @@ import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import closure_6 from "initialize";
 import ME from "ME";
 import "shouldCommit";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isClipsEnabled } from "../clips/isClipsEnabled.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let c9;
 let error;

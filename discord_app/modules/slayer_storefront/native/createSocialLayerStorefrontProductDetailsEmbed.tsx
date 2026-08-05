@@ -1,7 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
-import { useSKUPrice } from "../../storefront/StorefrontUtils.tsx";
-import { getPrice } from "../SlayerStorefrontUtils.tsx";
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import useGetOrFetchApplications from "useGetOrFetchApplications";
@@ -9,6 +5,10 @@ import addApplication from "addApplication";
 import addSku from "addSku";
 import { PaymentGateways } from "ME";
 import { InviteTypes } from "InviteSendStates";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import { useSKUPrice } from "../../storefront/StorefrontUtils.tsx";
+import { getPrice } from "../SlayerStorefrontUtils.tsx";
 
 const require = arg1;
 let result = require("addApplication").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");

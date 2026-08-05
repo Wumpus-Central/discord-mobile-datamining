@@ -1,4 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
@@ -9,6 +8,7 @@ import { AnalyticEvents } from "ME";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "openPremiumPlanSelectionActionSheet";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 let c5;
 let closure_12;

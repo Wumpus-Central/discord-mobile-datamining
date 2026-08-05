@@ -1,7 +1,7 @@
-import { GoLiveVideoPresetResolutionExperiment } from "../GoLiveVideoPresetResolutionExperiment.tsx";
-import { canStreamWithSettings } from "canStreamWithSettings.tsx";
 // discord_app/modules/go_live/utils/getStreamSettingsForPreset.tsx
 import RESOLUTION_720 from "RESOLUTION_720";
+import { GoLiveVideoPresetResolutionExperiment } from "../GoLiveVideoPresetResolutionExperiment.tsx";
+import { canStreamWithSettings } from "canStreamWithSettings.tsx";
 
 let c3;
 let c4;

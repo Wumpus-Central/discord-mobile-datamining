@@ -1,5 +1,3 @@
-import { Button } from "../design/void/native.tsx";
-import { defaultRules } from "../utils/ChangeLogUtils.tsx";
 // discord_app/components_native/ChangeLogStandardTemplate.tsx
 import importAllResult from "getLocalizedLink";
 import get_ActivityIndicator from "XNeutralIcon";
@@ -7,6 +5,8 @@ import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
 import jsxProd from "InstagramNeutralIcon";
 import createCacheKey from "createCacheKey";
+import { Button } from "../design/void/native.tsx";
+import { defaultRules } from "../utils/ChangeLogUtils.tsx";
 
 let Fonts;
 let StyleSheet;

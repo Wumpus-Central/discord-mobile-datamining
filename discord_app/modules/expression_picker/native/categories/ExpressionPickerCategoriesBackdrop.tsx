@@ -1,10 +1,10 @@
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { VisualEffectViewThemed } from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategoriesBackdrop.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { VisualEffectViewThemed } from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 
 let StyleSheet;
 let c3;

@@ -1,9 +1,9 @@
-import { AccessibilityAnnouncer } from "../../../../../shared.tsx";
-import { getIllustrationSource } from "../../index.tsx";
 // discord_app/design/components/Illustration/native/redesign/generated/ChannelSetup.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { AccessibilityAnnouncer } from "../../../../../shared.tsx";
+import { getIllustrationSource } from "../../index.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/ChannelSetup.tsx");

@@ -1,9 +1,9 @@
-import { EmojiTypes } from "EmojiTypes.tsx";
 // discord_app/modules/emojis/RawGuildEmojiStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
 import { LibdiscoreStore } from "identity";
 import { LibdiscoreBatchStoreRefactorExperiment } from "items";
+import { EmojiTypes } from "EmojiTypes.tsx";
 
 const require = arg1;
 function fromServer(guildId) {

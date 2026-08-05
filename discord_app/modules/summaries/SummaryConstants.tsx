@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/summaries/SummaryConstants.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 const require = arg1;
 let obj = { DUPLICATED: "DUPLICATED", TOO_GENERIC: "TOO_GENERIC", TOO_MANY: "TOO_MANY", INACCURATE: "INACCURATE", NOT_USEFUL: "NOT_USEFUL", OTHER: "OTHER" };
 const result = 5 * require("set").Millis.SECOND;

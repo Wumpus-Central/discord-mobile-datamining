@@ -1,12 +1,12 @@
+// discord_app/modules/user_profile/hooks/native/useUserProfileColors.tsx
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { ThemeTypes } from "sum";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { useProfileThemeValues } from "../../useProfileThemeValues.native.tsx";
-// discord_app/modules/user_profile/hooks/native/useUserProfileColors.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { ThemeTypes } from "sum";
 
 const require = arg1;
 let result = require("useTheme").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");

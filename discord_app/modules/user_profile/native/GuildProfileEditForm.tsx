@@ -1,7 +1,3 @@
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
-import { ProfilePreviewButton } from "UserProfileEditBannerButton.tsx";
 // discord_app/modules/user_profile/native/GuildProfileEditForm.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import usePremiumUpsellConfig from "usePremiumUpsellConfig";
@@ -12,6 +8,10 @@ import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET";
 import ME from "ME";
 import { PremiumUpsellTypes } from "GuildFeatures";
 import jsxProd from "styles";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { ProfilePreviewButton } from "UserProfileEditBannerButton.tsx";
 
 let AnalyticsPages;
 let AnalyticsSections;

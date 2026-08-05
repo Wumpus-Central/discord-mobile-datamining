@@ -1,9 +1,9 @@
-import { Button } from "../../Button/native/Button.native.tsx";
 // discord_app/design/components/Modal/native/ModalActionButton.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../Button/native/Button.native.tsx";
 
 let c3;
 let c4;

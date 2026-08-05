@@ -1,9 +1,3 @@
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BoostGemIcon } from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
-import { usePowerupActiveStatus } from "../hooks/usePowerupActiveStatus.tsx";
-import { importDefaultResult1 } from "GuildPowerupsCard.tsx";
-import { useGuildPowerupOnShowMore } from "hooks/useGuildPowerupOnShowMore.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelCard.tsx
 import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive";
 import { View } from "useGuildPowerupOnShowMore";
@@ -12,6 +6,12 @@ import ME from "ME";
 import { TIER_CARDS } from "BoostedGuildTiers";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BoostGemIcon } from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import { usePowerupActiveStatus } from "../hooks/usePowerupActiveStatus.tsx";
+import { importDefaultResult1 } from "GuildPowerupsCard.tsx";
+import { useGuildPowerupOnShowMore } from "hooks/useGuildPowerupOnShowMore.tsx";
 
 let c10;
 let c5;

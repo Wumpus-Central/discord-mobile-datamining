@@ -1,10 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { items } from "../../../../utils/ChatRestrictions.tsx";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
-import { isMediaAttachment } from "../../../forums/ForumPostMediaUtils.tsx";
-import { KESTREL_GA_UPLOAD_LIMIT_MB } from "../../../media_uploads/experiments/KestrelExperiment.tsx";
-import { rebuild } from "../../../messages/MessageParser.tsx";
-import { useMessageMaxLength } from "../../../messages/useMessageMaxLength.tsx";
 // discord_app/modules/chat_input/native/accessories/ChatInputSendUtils.tsx
 import closure_3 from "ME";
 import { DraftType } from "handleChanged";
@@ -14,6 +7,13 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
 import { PremiumUpsellTypes } from "GuildFeatures";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { items } from "../../../../utils/ChatRestrictions.tsx";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import { isMediaAttachment } from "../../../forums/ForumPostMediaUtils.tsx";
+import { KESTREL_GA_UPLOAD_LIMIT_MB } from "../../../media_uploads/experiments/KestrelExperiment.tsx";
+import { rebuild } from "../../../messages/MessageParser.tsx";
+import { useMessageMaxLength } from "../../../messages/useMessageMaxLength.tsx";
 
 let c10;
 let c9;

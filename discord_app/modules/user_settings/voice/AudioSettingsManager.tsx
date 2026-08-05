@@ -1,7 +1,3 @@
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { AudioSettingsDefaultVolumes } from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
-import { updateUserGuildSettings } from "../UserSettingsProtoActionCreators.tsx";
-import { getPendingAudioSettings } from "AudioSettingsPending.tsx";
 // discord_app/modules/user_settings/voice/AudioSettingsManager.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -12,6 +8,10 @@ import { MediaEngineContextTypes } from "DesktopSources";
 import importDefaultResult from "apply";
 import "initialize";
 import importDefaultResult1 from "apply";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { AudioSettingsDefaultVolumes } from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
+import { updateUserGuildSettings } from "../UserSettingsProtoActionCreators.tsx";
+import { getPendingAudioSettings } from "AudioSettingsPending.tsx";
 
 const require = arg1;
 function handleConnectionOpen() {

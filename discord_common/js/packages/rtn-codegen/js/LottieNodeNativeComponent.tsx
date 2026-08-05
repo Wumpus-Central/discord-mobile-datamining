@@ -1,6 +1,6 @@
-import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 // discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 
 let obj = { uiViewClassName: "NativeLottieNode", validAttributes: {} };
 obj = {

@@ -1,4 +1,3 @@
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/feedback/native/FeedbackActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import BottomSheetModal from "BottomSheetModal";
@@ -6,6 +5,7 @@ import { View } from "RedesignBottomSheetTitleHeaderBase";
 import { FeedbackRating } from "FeedbackRating";
 import jsxProd from "RatingSelector";
 import createCacheKey from "createCacheKey";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let error;
 let metroImportAll;

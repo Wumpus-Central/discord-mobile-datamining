@@ -1,10 +1,10 @@
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 // discord_app/modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { SelfStreamAndVideoAlertType as closure_4 } from "SelfStreamAndVideoAlertType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 
 let c5;
 let closure_6;

@@ -1,10 +1,10 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import closure_5 from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 
 let c3;
 let c4;

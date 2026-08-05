@@ -1,4 +1,3 @@
-import { getOverlayMessageAnalyticsLocation } from "../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx";
 // discord_app/lib/MessageQueue.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import getUserAgnosticState from "getUserAgnosticState";
@@ -7,6 +6,7 @@ import handleConnectionInfoChange from "handleConnectionInfoChange";
 import ME from "ME";
 import { MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS as closure_12 } from "MESSAGE_GROUP_SPACING";
 import "enqueue";
+import { getOverlayMessageAnalyticsLocation } from "../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx";
 
 let c10;
 let c9;

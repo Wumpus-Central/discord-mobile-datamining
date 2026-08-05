@@ -1,9 +1,9 @@
-import { Pagination } from "../../../../../_runtime/13339_Pagination.js";
 // discord_app/design/void/CarouselPagination/native/CarouselPagination.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Pagination } from "../../../../../_runtime/13339_Pagination.js";
 
 const require = arg1;
 let obj = { container: { position: "relative", top: -16, marginBottom: -16 }, dot: null };

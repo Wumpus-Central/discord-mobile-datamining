@@ -1,12 +1,12 @@
+// discord_app/modules/message_request/MessageRequestModalActionCreators.native.tsx
+import { MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL as closure_3 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL";
+import { AnalyticEvents } from "ME";
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 import { componentDidMount } from "../../components_native/common/Alert.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/message_request/MessageRequestModalActionCreators.native.tsx
-import { MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL as closure_3 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL";
-import { AnalyticEvents } from "ME";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
 

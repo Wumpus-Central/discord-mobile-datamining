@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/InAppNotificationsSetting.tsx
 import { AnalyticEvents } from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

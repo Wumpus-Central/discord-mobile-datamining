@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickers.tsx
 import get_ActivityIndicator from "useLoadGuildStickersWithCreator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -13,6 +12,7 @@ import { intl as intl3 } from "getSystemLocale";
 import { intl as intl4 } from "getSystemLocale";
 import createCacheKey from "createCacheKey";
 import importAllResult from "getGuildTierFromGuild";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let BoostedGuildTiers;
 let c3;

@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../../../_runtime/13890_registerAsset.js";
 // discord_app/modules/mfa/native/components/KeyImage.tsx
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/13890_registerAsset.js";
 
 let closure_4 = createCacheKey.createStyles({ icon: { width: 128, height: 128, marginBottom: 8 } });
 const result = require("createCacheKey").fileFinishedImporting("modules/mfa/native/components/KeyImage.tsx");

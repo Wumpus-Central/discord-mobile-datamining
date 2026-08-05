@@ -1,4 +1,3 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/design/components/Coachmark/native/Coachmark.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -7,6 +6,7 @@ import get_ActivityIndicator from "TwinButtons";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 
 let Pressable;
 let c10;

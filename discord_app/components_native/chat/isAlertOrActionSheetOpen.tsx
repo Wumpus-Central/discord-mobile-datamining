@@ -1,7 +1,7 @@
-import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 // discord_app/components_native/chat/isAlertOrActionSheetOpen.tsx
 import setContent from "setContent";
 import getAlert from "getAlert";
+import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 
 const require = arg1;
 const result = require("useAlertStore").fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");

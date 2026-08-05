@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx
 import { UserNotificationSettings } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx");
 

@@ -1,9 +1,9 @@
-import { useLabFeature } from "../labs/useLabFeature.tsx";
 // discord_app/modules/icymi/ICYMIExperiment.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
+import { useLabFeature } from "../labs/useLabFeature.tsx";
 
 const hide_icymi_tab = "hide_icymi_tab";
 ApexExperiment = { 1: null };

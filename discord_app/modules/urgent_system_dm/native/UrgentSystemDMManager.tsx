@@ -1,7 +1,7 @@
+// discord_app/modules/urgent_system_dm/native/UrgentSystemDMManager.tsx
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { navigateToSystemDM } from "../navigateToSystemDM.tsx";
-// discord_app/modules/urgent_system_dm/native/UrgentSystemDMManager.tsx
 const require = arg1;
 const tmp2 = new require("maybeShowUrgentMessageModal")(() => {
   let obj = AlertActionCreators;

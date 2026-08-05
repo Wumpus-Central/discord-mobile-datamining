@@ -1,8 +1,8 @@
-import { MessageReferenceTypes } from "../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx";
-import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
 // discord_app/modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
+import { MessageReferenceTypes } from "../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx";
+import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
 
 const require = arg1;
 function getSoundFromSounds(arr) {

@@ -1,6 +1,6 @@
+// discord_app/modules/user_profile/utils/native/openEditNoteModal.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/user_profile/utils/native/openEditNoteModal.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
 
 export default function openEditNoteModal(closure_0) {

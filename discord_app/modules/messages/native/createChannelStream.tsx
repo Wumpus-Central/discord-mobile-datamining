@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/messages/native/createChannelStream.tsx
 import initialize from "initialize";
 import closure_4 from "initialize";
 import closure_5 from "initialize";
 import Changeset from "Changeset";
 import { MessageFlags } from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c9;
 let closure_6;

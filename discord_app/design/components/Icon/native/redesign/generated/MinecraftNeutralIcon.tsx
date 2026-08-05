@@ -1,12 +1,12 @@
+// discord_app/design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
 import { registerAsset } from "../../../../../../../_runtime/09220_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/09221_registerAsset.js";
 import { registerAsset } from "../../../../../../../_runtime/09222_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
-// discord_app/design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

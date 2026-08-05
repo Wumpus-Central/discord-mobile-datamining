@@ -1,3 +1,10 @@
+// discord_app/modules/channel_permissions/native/components/ChannelOverwritesItem.tsx
+import "useCheckboxA11yNative";
+import { View } from "registerAsset";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { RowType } from "RowType";
+import jsxProd from "set";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/08929_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/08930_registerAsset.js";
 import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
@@ -6,13 +13,6 @@ import { ShieldUserIcon } from "../../../../design/components/Icon/native/redesi
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
-// discord_app/modules/channel_permissions/native/components/ChannelOverwritesItem.tsx
-import "useCheckboxA11yNative";
-import { View } from "registerAsset";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { RowType } from "RowType";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
 
 let error;
 let metroImportAll;

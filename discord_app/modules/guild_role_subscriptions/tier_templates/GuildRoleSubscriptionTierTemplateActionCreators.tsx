@@ -1,7 +1,7 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 function _getTemplates() {

@@ -1,9 +1,9 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/animations/native/DeprecatedLayoutAnimation.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import obj from "module_150";
 import obj from "module_150";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 let LayoutAnimation;
 let obj1;

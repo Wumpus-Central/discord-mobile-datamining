@@ -1,9 +1,9 @@
-import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx
 import useIsMessageRequestRestrictedViewer from "useIsMessageRequestRestrictedViewer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(channel) {

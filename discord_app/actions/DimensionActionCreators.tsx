@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/DimensionActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 let result = require("set").fileFinishedImporting("actions/DimensionActionCreators.tsx");
 
 export default {

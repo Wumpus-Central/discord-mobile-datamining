@@ -1,8 +1,8 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { getWindowId } from "../../utils/web/WindowIdUtils.tsx";
 // discord_app/stores/web/WindowStore.tsx
 import { Store } from "initialize";
 import set from "getWindowId";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { getWindowId } from "../../utils/web/WindowIdUtils.tsx";
 
 const require = arg1;
 let c3 = null;

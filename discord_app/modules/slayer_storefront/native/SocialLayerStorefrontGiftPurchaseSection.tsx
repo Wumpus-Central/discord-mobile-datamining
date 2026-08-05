@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontGiftPurchaseSection.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -9,6 +8,7 @@ import { AnalyticEvents } from "ME";
 import { GiftingOrigin } from "GuildFeatures";
 import jsxProd from "SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let unpackModuleId;

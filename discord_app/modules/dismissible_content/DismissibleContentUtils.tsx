@@ -1,13 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
-import { set } from "DismissibleContentFatigueConfig.tsx";
-import { handleDCShownToUser } from "DismissibleContentFrameworkActionCreators.tsx";
-import { isSingleUseDismissibleContent } from "DismissibleContentTypes.tsx";
-import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 // discord_app/modules/dismissible_content/DismissibleContentUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "withContent";
@@ -18,6 +8,16 @@ import withContent from "withContent";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { AnalyticEvents } from "ME";
 import set from "handleConnectionClosedOrResumed";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import { set } from "DismissibleContentFatigueConfig.tsx";
+import { handleDCShownToUser } from "DismissibleContentFrameworkActionCreators.tsx";
+import { isSingleUseDismissibleContent } from "DismissibleContentTypes.tsx";
+import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 
 let c10;
 let c9;

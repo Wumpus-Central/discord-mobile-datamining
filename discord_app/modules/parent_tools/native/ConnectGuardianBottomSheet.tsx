@@ -1,10 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useOnNewPendingRequest } from "../hooks/useOnNewPendingRequest.tsx";
-import { ConnectGuardianCard } from "ConnectGuardianCard.tsx";
 // discord_app/modules/parent_tools/native/ConnectGuardianBottomSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -12,6 +5,13 @@ import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { useOnNewPendingRequest } from "../hooks/useOnNewPendingRequest.tsx";
+import { ConnectGuardianCard } from "ConnectGuardianCard.tsx";
 
 let error;
 let metroImportAll;

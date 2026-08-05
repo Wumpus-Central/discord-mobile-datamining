@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_templates/AcceptGuildTemplateActionCreators.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");

@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useFetchListingsForGuild } from "GuildRoleSubscriptionsHooks.tsx";
 // discord_app/modules/guild_role_subscriptions/useSubscriptionRole.tsx
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useFetchListingsForGuild } from "GuildRoleSubscriptionsHooks.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/guild_role_subscriptions/useSubscriptionRole.tsx");

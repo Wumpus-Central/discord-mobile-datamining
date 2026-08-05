@@ -1,5 +1,5 @@
-import { updateUserGuildSettings } from "../../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx
+import { updateUserGuildSettings } from "../../user_settings/UserSettingsProtoActionCreators.tsx";
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
 
 export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(arg0) {

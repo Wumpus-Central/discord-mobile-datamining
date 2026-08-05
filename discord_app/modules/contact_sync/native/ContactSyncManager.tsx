@@ -1,4 +1,3 @@
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/contact_sync/native/ContactSyncManager.tsx
 import ME from "ME";
 import set from "set";
@@ -7,6 +6,7 @@ import setStoredContacts from "setStoredContacts";
 import { ContactPermissions } from "ContactSyncLandingPage";
 import { PlatformTypes } from "ME";
 import "initialize";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 let c5;
 let closure_6;

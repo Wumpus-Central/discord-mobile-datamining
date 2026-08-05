@@ -1,5 +1,3 @@
-import { Emoji } from "../../emojis/native/Emoji.tsx";
-import { getSoundboardEmojiUrl } from "utils/getSoundboardEmojiUrl.tsx";
 // discord_app/modules/soundboard/native/SoundButton.tsx
 import importAllResult from "getPremiumPlanItem";
 import { View } from "QUICK_SWITCHER";
@@ -10,6 +8,8 @@ import importDefaultResult from "module_4146";
 import set from "set";
 import importDefaultResult1 from "module_4146";
 import set from "mergeGuildAvatar";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
+import { getSoundboardEmojiUrl } from "utils/getSoundboardEmojiUrl.tsx";
 
 let closure_6;
 let error;

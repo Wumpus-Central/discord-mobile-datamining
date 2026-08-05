@@ -1,4 +1,3 @@
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx
 import "noop";
 import { View } from "set";
@@ -8,6 +7,7 @@ import { HelpdeskArticles } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
 let c9;
 let metroImportAll;

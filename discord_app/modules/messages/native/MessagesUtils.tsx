@@ -1,3 +1,18 @@
+// discord_app/modules/messages/native/MessagesUtils.tsx
+import trackForumChannelSeenBatch from "trackForumChannelSeenBatch";
+import trackCommunicationDisabled from "trackCommunicationDisabled";
+import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight";
+import processMessage from "processMessage";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import closure_8 from "trackCommunicationDisabled";
+import recomputeGuild from "recomputeGuild";
+import reinjectEphemerals from "reinjectEphemerals";
+import handleConnectionInfoChange from "handleConnectionInfoChange";
+import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import generateOldThreadCutoff from "generateOldThreadCutoff";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import Changeset from "Changeset";
+import ME from "ME";
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
 import { GuildThemeSourcePreference } from "../../../flow/Client.tsx";
@@ -23,21 +38,6 @@ import { presentAddedFriendToast } from "../../toast/native/ToastUtils.tsx";
 import { serialize } from "../../tti_analytics/TTITracker.tsx";
 import { urlMatchesFileExtension } from "../MediaFormatTesters.tsx";
 import { getVoiceInviteEmbedRenderInfo } from "MessageImpressionAnalyticsHelpers.tsx";
-// discord_app/modules/messages/native/MessagesUtils.tsx
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight";
-import processMessage from "processMessage";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_8 from "trackCommunicationDisabled";
-import recomputeGuild from "recomputeGuild";
-import reinjectEphemerals from "reinjectEphemerals";
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import Changeset from "Changeset";
-import ME from "ME";
 
 let closure_15;
 let closure_16;

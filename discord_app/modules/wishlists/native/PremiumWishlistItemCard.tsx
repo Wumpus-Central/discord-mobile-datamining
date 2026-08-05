@@ -1,7 +1,7 @@
-import { SourceIcon } from "WishlistItemCardBase.tsx";
 // discord_app/modules/wishlists/native/PremiumWishlistItemCard.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { SourceIcon } from "WishlistItemCardBase.tsx";
 
 const require = arg1;
 const result = require("CollectiblesPreview").fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");

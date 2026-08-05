@@ -1,10 +1,10 @@
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/search/native/components/tabs/pages/ErrorScreen.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let require = arg1;
 let c3 = importAllResult;

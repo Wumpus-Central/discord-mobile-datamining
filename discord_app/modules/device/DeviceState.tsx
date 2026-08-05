@@ -1,5 +1,5 @@
-import { _getDeviceState } from "native/DeviceState.tsx";
 // discord_app/modules/device/DeviceState.tsx
+import { _getDeviceState } from "native/DeviceState.tsx";
 const result = require("ThermalState").fileFinishedImporting("modules/device/DeviceState.tsx");
 
 export const DeviceState = require("ThermalState").DeviceState;

@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { SuperReactionIcon } from "../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
 // discord_app/modules/reactions/native/useBurstToggleCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +6,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SuperReactionIcon } from "../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
 
 const require = arg1;
 function EducationCoachmarkImg() {

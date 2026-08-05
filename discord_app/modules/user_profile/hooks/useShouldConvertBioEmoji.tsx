@@ -1,5 +1,5 @@
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/hooks/useShouldConvertBioEmoji.tsx
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
 
 export default function useShouldConvertBioEmoji() {

@@ -1,9 +1,9 @@
-import { getSoundPack } from "../soundpacks/getSoundsForPack.tsx";
-import { _createSound } from "native/SoundUtils.tsx";
 // discord_app/modules/sound_playback/SoundUtils.tsx
 import Soundpacks from "Soundpacks";
 import initialize from "initialize";
 import { SoundOutputChannel } from "SoundOutputChannel";
+import { getSoundPack } from "../soundpacks/getSoundsForPack.tsx";
+import { _createSound } from "native/SoundUtils.tsx";
 
 const require = arg1;
 let closure_6 = new require("timestamp")("SoundUtils");

@@ -1,3 +1,8 @@
+// discord_app/modules/oauth2/native/ApplicationDetails.tsx
+import "Text";
+import { View } from "RobotIcon";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { set } from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import { LockIcon } from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
@@ -7,11 +12,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 import { items } from "../scopes.tsx";
 import { getApplicationDetailsText } from "../Utils.tsx";
-// discord_app/modules/oauth2/native/ApplicationDetails.tsx
-import "Text";
-import { View } from "RobotIcon";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

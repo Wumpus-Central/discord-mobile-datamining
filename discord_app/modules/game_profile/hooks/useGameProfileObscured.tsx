@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
 // discord_app/modules/game_profile/hooks/useGameProfileObscured.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
 
 const require = arg1;
 let result = require("initialize").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");

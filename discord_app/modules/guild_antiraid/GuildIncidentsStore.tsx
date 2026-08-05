@@ -1,10 +1,10 @@
-import { DATE_CONFIG } from "GuildAntiRaidUtils.tsx";
 // discord_app/modules/guild_antiraid/GuildIncidentsStore.tsx
 import getHash from "getHash";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Store } from "initialize";
+import { DATE_CONFIG } from "GuildAntiRaidUtils.tsx";
 
 const require = arg1;
 function computeAlertSettings() {

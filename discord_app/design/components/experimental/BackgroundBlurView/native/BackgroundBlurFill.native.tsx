@@ -1,6 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { isBlurDisabled } from "../../../../../modules/visual_effect_view/native/VisualEffectView.tsx";
-import { animatedComponent } from "../../../../../modules/visual_effect_view/native/VisualEffectViewAnimated.tsx";
 // discord_app/design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -9,6 +6,9 @@ import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { isBlurDisabled } from "../../../../../modules/visual_effect_view/native/VisualEffectView.tsx";
+import { animatedComponent } from "../../../../../modules/visual_effect_view/native/VisualEffectViewAnimated.tsx";
 
 const require = arg1;
 const BLACK = require("Themes").unsafe_rawColors.BLACK;

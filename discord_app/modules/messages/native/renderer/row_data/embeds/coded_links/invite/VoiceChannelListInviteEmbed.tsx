@@ -1,4 +1,3 @@
-import { getChannelAndRecipientsFromInvite } from "getChannelAndRecipientsFromInvite.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx
 import { processColor } from "frozen";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -15,6 +14,7 @@ import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import { BasicPermissions } from "ME";
 import { InviteTypes } from "InviteSendStates";
+import { getChannelAndRecipientsFromInvite } from "getChannelAndRecipientsFromInvite.tsx";
 
 const result = require("_toTimestampMs").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx");
 

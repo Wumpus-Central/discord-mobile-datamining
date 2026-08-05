@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "PremiumGroup.messages.js";
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
 import ME from "ME";
 import importDefaultResult from "combined";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "PremiumGroup.messages.js";
 
 let HelpdeskArticles;
 let SubscriptionStatusTypes;

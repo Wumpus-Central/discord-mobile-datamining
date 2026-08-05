@@ -1,9 +1,9 @@
-import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
-import { usePrevious } from "../../../../hooks/usePrevious.tsx";
 // discord_app/modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx
 import noop from "noop";
 import getState from "getState";
 import zustandStore from "zustandStore";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { usePrevious } from "../../../../hooks/usePrevious.tsx";
 
 const require = arg1;
 let result = require("zustandStore").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");

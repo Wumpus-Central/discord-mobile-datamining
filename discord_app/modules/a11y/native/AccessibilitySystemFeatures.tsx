@@ -1,11 +1,11 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { u } from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
-import { setFontSize } from "../AccessibilityActionCreators.tsx";
-import { A11Y_FEATURE_MAP } from "AccessibilityPreferencesSharedValue.tsx";
 // discord_app/modules/a11y/native/AccessibilitySystemFeatures.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { u } from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import { setFontSize } from "../AccessibilityActionCreators.tsx";
+import { A11Y_FEATURE_MAP } from "AccessibilityPreferencesSharedValue.tsx";
 
 let c3;
 let c4;

@@ -1,9 +1,9 @@
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx
 import "noop";
 import computeAlertSettings from "computeAlertSettings";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 
 let c4;
 let c5;

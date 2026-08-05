@@ -1,7 +1,7 @@
+// discord_app/modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx
 import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import { getUnitId } from "../../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
-// discord_app/modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx
 const result = require("GUILD_POWERUP_NOTIFICATION_COOLDOWN").fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
 
 export const usePerksCoachmarkDCF = function usePerksCoachmarkDCF(arg0) {

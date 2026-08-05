@@ -1,7 +1,7 @@
-import { usePrevious } from "../../hooks/usePrevious.tsx";
 // discord_app/modules/activate_device/useActivateDeviceStepTracking.tsx
 import noop from "noop";
 import { AnalyticEvents } from "ME";
+import { usePrevious } from "../../hooks/usePrevious.tsx";
 
 const require = arg1;
 let result = require("usePrevious").fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");

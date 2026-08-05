@@ -1,5 +1,5 @@
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/media/FileExtensionUtils.tsx
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 let closure_2 = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
 const result = require("set").fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 

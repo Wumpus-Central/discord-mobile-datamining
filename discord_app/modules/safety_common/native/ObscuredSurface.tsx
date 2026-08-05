@@ -1,12 +1,12 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ImageWarningIcon } from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { context } from "../ObscuredSurfaceContext.tsx";
 // discord_app/modules/safety_common/native/ObscuredSurface.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ImageWarningIcon } from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { context } from "../ObscuredSurfaceContext.tsx";
 
 let c4;
 let c5;

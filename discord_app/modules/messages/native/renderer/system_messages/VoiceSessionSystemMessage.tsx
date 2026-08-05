@@ -1,8 +1,8 @@
+// discord_app/modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
 import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
 import { getSortedVoiceSessionParticipants } from "../../../VoiceSessionUtils.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;
 const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx");

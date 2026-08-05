@@ -1,4 +1,3 @@
-import { ContactSyncNameInput } from "../../../contact_sync/native/components/ContactSyncNameInput.tsx";
 // discord_app/modules/nuf/native/components/DiscoverabilityModal.tsx
 import set from "set";
 import { View } from "NavigationStack";
@@ -6,6 +5,7 @@ import { useContactSyncModalStore } from "ContactSyncModes";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ContactSyncNameInput } from "../../../contact_sync/native/components/ContactSyncNameInput.tsx";
 
 const require = arg1;
 function DiscoverabilityLandingScene() {

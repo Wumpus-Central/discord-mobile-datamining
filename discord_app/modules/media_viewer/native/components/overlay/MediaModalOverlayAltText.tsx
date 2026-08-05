@@ -1,8 +1,8 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles((arg0) => {

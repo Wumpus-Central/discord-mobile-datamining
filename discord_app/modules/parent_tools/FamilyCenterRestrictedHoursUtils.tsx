@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx
 import set from "messagesProxy";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
 
 function setsEqual(set, set2) {
   if (set.size !== set2.size) {

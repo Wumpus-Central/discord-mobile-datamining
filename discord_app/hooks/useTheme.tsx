@@ -1,6 +1,6 @@
-import { AccessibilityAnnouncer } from "../design/shared.tsx";
 // discord_app/hooks/useTheme.tsx
 import { ThemeTypes } from "ME";
+import { AccessibilityAnnouncer } from "../design/shared.tsx";
 
 function useTheme() {
   return AccessibilityAnnouncer /* AccessibilityAnnouncer */.useThemeContext().theme;

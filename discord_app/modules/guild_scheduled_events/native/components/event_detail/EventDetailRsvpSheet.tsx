@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/09067_registerAsset.js";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Form } from "../../../../../design/void/Form/native/index.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { StageSparkleInner } from "../../../../stage_channels/native/components/StageSparkle.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx
 import importAllResult from "nameFromUser";
 import { View } from "Button";
@@ -13,6 +7,12 @@ import { Fonts } from "sum";
 import jsxProd from "isRemainingUsersGroup";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { registerAsset } from "../../../../../../_runtime/09067_registerAsset.js";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../../../design/void/Form/native/index.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { StageSparkleInner } from "../../../../stage_channels/native/components/StageSparkle.tsx";
 
 let error;
 let metroImportAll;

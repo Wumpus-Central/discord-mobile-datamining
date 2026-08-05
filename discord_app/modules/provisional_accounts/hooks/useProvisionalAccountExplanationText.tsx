@@ -1,7 +1,7 @@
-import { useProvisionalAccountApplication } from "useProvisionalAccountApplication.tsx";
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
+import { useProvisionalAccountApplication } from "useProvisionalAccountApplication.tsx";
 
 const require = arg1;
 const result = require("useProvisionalAccountApplication").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");

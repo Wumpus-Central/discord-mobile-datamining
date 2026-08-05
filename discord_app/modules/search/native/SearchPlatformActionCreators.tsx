@@ -1,9 +1,9 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { SearchTokenTypes } from "../SearchUtils.tsx";
 // discord_app/modules/search/native/SearchPlatformActionCreators.tsx
 import { SearchTypes } from "ME";
 import handleSearchQuery from "handleSearchQuery";
 import prototype from "prototype";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { SearchTokenTypes } from "../SearchUtils.tsx";
 
 const result = require("prototype").fileFinishedImporting("modules/search/native/SearchPlatformActionCreators.tsx");
 

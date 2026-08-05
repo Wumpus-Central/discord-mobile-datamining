@@ -1,9 +1,9 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/search/native/components/list/SearchListSection.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

@@ -1,11 +1,11 @@
-import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
-import { KeyboardAwareView } from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
 // discord_app/design/components/Navigator/native/PostponeRender.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { KeyboardAwareView } from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
 
 let StyleSheet;
 let c5;

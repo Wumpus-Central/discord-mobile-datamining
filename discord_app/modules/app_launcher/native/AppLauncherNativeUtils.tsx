@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../_runtime/01855_registerAsset.js";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { getShelfBadgeTypeIfActive } from "../utils/AppLauncherUtils.tsx";
-import { context } from "AppLauncherContext.tsx";
-import { Placeholder } from "screens/home/FrecencySection.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import postMessageToWebView from "postMessageToWebView";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -11,6 +5,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { AnalyticEvents } from "ME";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
+import { registerAsset } from "../../../../_runtime/01855_registerAsset.js";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import { getShelfBadgeTypeIfActive } from "../utils/AppLauncherUtils.tsx";
+import { context } from "AppLauncherContext.tsx";
+import { Placeholder } from "screens/home/FrecencySection.tsx";
 
 let error;
 let metroImportAll;

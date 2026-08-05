@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/premium/native/PremiumSettingScreen.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { dispatcher } from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
 import { UserSettingsPremium } from "UserSettingsPremium.tsx";
-// discord_app/modules/user_settings/premium/native/PremiumSettingScreen.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/premium/native/PremiumSettingScreen.tsx");

@@ -1,3 +1,9 @@
+// discord_app/modules/guild_sidebar/native/VoiceUsers.tsx
+import { View } from "get ActivityIndicator";
+import trackCommunicationDisabled from "trackCommunicationDisabled";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { HeadphonesIcon } from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -6,12 +12,6 @@ import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClie
 import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import { VoiceUsersItem } from "VoiceUsersItem.tsx";
-// discord_app/modules/guild_sidebar/native/VoiceUsers.tsx
-import { View } from "get ActivityIndicator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let c5;
 let closure_6;

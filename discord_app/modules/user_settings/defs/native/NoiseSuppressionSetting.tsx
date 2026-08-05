@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { handleAutomaticGainControlChange } from "../../voice/native/UserSettingsVoiceUtils.tsx";
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { handleAutomaticGainControlChange } from "../../voice/native/UserSettingsVoiceUtils.tsx";
 
 const require = arg1;
 createToggle = {

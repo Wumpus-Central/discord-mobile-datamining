@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx
+import { MobileSetting } from "MobileSetting";
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useUserIsConsideredAdult } from "../../../parent_tools/hooks/useUserIsConsideredAdult.tsx";
 import { InappropriateConversationsDefaultOn } from "../../../self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx";
 import { InappropriateConversationExperiment } from "../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
-// discord_app/modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx
-import { MobileSetting } from "MobileSetting";
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

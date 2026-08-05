@@ -1,15 +1,15 @@
-import { registerAsset } from "../../../../../../_runtime/10102_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11310_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11311_registerAsset.js";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/forums/native/posts/grid/ForumPostGridBody.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/10102_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11310_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11311_registerAsset.js";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
 
 let closure_6;
 let error;

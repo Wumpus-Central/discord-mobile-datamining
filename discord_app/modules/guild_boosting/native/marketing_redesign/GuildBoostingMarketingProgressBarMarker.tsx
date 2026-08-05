@@ -1,4 +1,3 @@
-import { useTheme } from "../../../../hooks/useTheme.tsx";
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import noop from "noop";
 import get_ActivityIndicator from "getGuildTierFromGuild";
@@ -6,6 +5,7 @@ import { BoostedGuildTiers } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
 
 let TIER_1;
 let TIER_2;

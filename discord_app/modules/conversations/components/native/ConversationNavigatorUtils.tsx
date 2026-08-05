@@ -1,6 +1,6 @@
+// discord_app/modules/conversations/components/native/ConversationNavigatorUtils.tsx
 import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import { transitionToChannel } from "../../../routing/transitionToChannel.tsx";
-// discord_app/modules/conversations/components/native/ConversationNavigatorUtils.tsx
 const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
 
 export const closeConversationsAndJumpToMessage = function closeConversationsAndJumpToMessage(channelId, id) {

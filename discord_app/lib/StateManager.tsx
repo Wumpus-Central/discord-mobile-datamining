@@ -1,5 +1,5 @@
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
 // discord_app/lib/StateManager.tsx
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
 const result = require("set").fileFinishedImporting("lib/StateManager.tsx");
 class StateManager {
   constructor() {

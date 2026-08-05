@@ -1,9 +1,9 @@
-import { DevToolsFocusedPidsTrackMode } from "../overlay/OverlayTypes.tsx";
 // discord_app/modules/game_detection/RunningGameStore.native.tsx
 import handleLoadMessages from "handleLoadMessages";
 import gameFromServer from "gameFromServer";
 import setLibraryApplications from "setLibraryApplications";
 import { Store } from "initialize";
+import { DevToolsFocusedPidsTrackMode } from "../overlay/OverlayTypes.tsx";
 
 const require = arg1;
 class RunningGameStore extends Store {

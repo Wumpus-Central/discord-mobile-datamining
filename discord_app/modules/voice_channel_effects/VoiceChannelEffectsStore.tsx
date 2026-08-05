@@ -1,11 +1,11 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { VoiceChannelEffectAnimationType } from "VoiceChannelEffectsUtils.tsx";
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsStore.tsx
 import { EMOJI_PICKER_EMOJI_TO_SHOW_COUNT as closure_4 } from "ParticipantTypes";
 import apply from "apply";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { VoiceChannelEffectAnimationType } from "VoiceChannelEffectsUtils.tsx";
 
 let closure_5 = [];
 let closure_6 = {};

@@ -1,7 +1,7 @@
-import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-import { shouldRefreshAttachmentUrl } from "../../messages/SignedAttachmentLinkUtils.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerUtils.tsx
 import noop from "noop";
+import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
+import { shouldRefreshAttachmentUrl } from "../../messages/SignedAttachmentLinkUtils.tsx";
 
 const require = arg1;
 function transformFavoriteGifUrl(url) {

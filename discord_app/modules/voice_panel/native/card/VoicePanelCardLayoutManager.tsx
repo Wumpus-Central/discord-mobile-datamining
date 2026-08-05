@@ -1,4 +1,3 @@
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelCardLayoutManager.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +7,7 @@ import VoicePanelModes from "VoicePanelModes";
 import CARD_SIZE from "CARD_SIZE";
 import { ParticipantTypes } from "ParticipantTypes";
 import set from "get ActivityIndicator";
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 
 let c10;
 let c9;

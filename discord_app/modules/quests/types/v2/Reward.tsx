@@ -1,6 +1,6 @@
+// discord_app/modules/quests/types/v2/Reward.tsx
 import { QuestRewardTypes } from "../../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
-// discord_app/modules/quests/types/v2/Reward.tsx
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {
   const obj = {};
   const keys = Object.keys(redemption_instructions_by_platform);

@@ -1,7 +1,7 @@
-import { useDiscountOffer } from "useDiscountOffer.tsx";
 // discord_app/modules/premium/hooks/usePremiumDiscountOffer.android.tsx
 import updateProduct from "updateProduct";
 import GuildFeatures from "GuildFeatures";
+import { useDiscountOffer } from "useDiscountOffer.tsx";
 
 let c4;
 let c5;

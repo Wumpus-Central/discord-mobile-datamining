@@ -1,7 +1,7 @@
-import { items } from "../../_runtime/01296_items.js";
-import { messagesProxy } from "messages/en-US.messages.js";
 // discord_app/intl/util.tsx
 import noop from "noop";
+import { items } from "../../_runtime/01296_items.js";
+import { messagesProxy } from "messages/en-US.messages.js";
 
 const require = arg1;
 const result = require("module_1274").fileFinishedImporting("intl/util.tsx");

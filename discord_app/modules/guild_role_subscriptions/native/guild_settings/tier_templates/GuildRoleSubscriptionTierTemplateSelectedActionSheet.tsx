@@ -1,10 +1,10 @@
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateSelectedActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c5;
 let closure_6;

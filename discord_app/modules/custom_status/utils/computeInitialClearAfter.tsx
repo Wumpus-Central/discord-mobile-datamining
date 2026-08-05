@@ -1,6 +1,6 @@
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/custom_status/utils/computeInitialClearAfter.tsx
 import { ClearAfterValues } from "StatusTypes";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const items = [, , ];
 ({ MINUTES_30: arr[0], HOURS_1: arr[1], HOURS_4: arr[2] } = ClearAfterValues);

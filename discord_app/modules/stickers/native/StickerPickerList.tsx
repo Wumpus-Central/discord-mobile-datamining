@@ -1,7 +1,3 @@
-import { registerAsset } from "../../../../_runtime/09900_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/stickers/native/StickerPickerList.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "apply";
@@ -11,6 +7,10 @@ import { useStickerPickerStore } from "useStickerPickerStore";
 import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
 import jsxProd from "module_9902";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/09900_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c9;

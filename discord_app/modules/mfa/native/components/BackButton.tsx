@@ -1,6 +1,6 @@
-import { MFAButton } from "button.tsx";
 // discord_app/modules/mfa/native/components/BackButton.tsx
 import { jsx } from "jsxProd";
+import { MFAButton } from "button.tsx";
 
 const result = require("MFAButton").fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
 

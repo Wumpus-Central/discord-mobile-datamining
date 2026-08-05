@@ -1,4 +1,3 @@
-import { renderDefaultEmpty } from "../../../lib/native/FastList.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarUnreadBars.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";
@@ -11,6 +10,7 @@ import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE";
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { renderDefaultEmpty } from "../../../lib/native/FastList.tsx";
 
 let GUILD_LIST_WIDTH;
 let c10;

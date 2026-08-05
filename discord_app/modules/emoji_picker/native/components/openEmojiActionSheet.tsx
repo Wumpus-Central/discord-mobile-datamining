@@ -1,9 +1,9 @@
+// discord_app/modules/emoji_picker/native/components/openEmojiActionSheet.tsx
+import { EMOJI_URL_BASE_SIZE } from "set";
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 import { dismissGlobalKeyboard } from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/emoji_picker/native/components/openEmojiActionSheet.tsx
-import { EMOJI_URL_BASE_SIZE } from "set";
 
 let result = require("dismissGlobalKeyboard").fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
 

@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../../../_runtime/08622_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../_runtime/08622_registerAsset.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 
 const result = require("preload").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
 

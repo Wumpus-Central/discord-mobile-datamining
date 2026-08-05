@@ -1,4 +1,3 @@
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/soundboard/native/SoundboardHooks.tsx
 import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO";
 import noop from "noop";
@@ -6,6 +5,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import handleThemeChange from "handleThemeChange";
 import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 let error;
 let metroImportAll;

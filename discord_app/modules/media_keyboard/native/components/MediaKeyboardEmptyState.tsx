@@ -1,14 +1,14 @@
-import { registerAsset } from "../../../../../_runtime/09947_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09948_registerAsset.js";
-import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { NativePermissionStatus } from "NativePermissionStatus";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/09947_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09948_registerAsset.js";
+import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
+import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c3;
 let c4;

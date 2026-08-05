@@ -1,12 +1,12 @@
+// discord_app/modules/safety_flows/native/SafetyFlowTaskScreen.tsx
+import "noop";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { ModalContent } from "../../../design/components/Modal/native/ModalContent.native.tsx";
 import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { LogOutDisclaimer } from "LogOutDisclaimer.tsx";
-// discord_app/modules/safety_flows/native/SafetyFlowTaskScreen.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

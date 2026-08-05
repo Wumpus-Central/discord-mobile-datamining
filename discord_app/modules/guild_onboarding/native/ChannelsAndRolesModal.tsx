@@ -1,7 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ModalStackNavigator } from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
-import { useGuildOnboardingAvailable } from "../useGuildOnboardingAvailable.tsx";
 // discord_app/modules/guild_onboarding/native/ChannelsAndRolesModal.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +6,10 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildOnboardingTab } from "serverPromptToClientPrompt";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ModalStackNavigator } from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import { useGuildOnboardingAvailable } from "../useGuildOnboardingAvailable.tsx";
 
 let c9;
 let metroImportAll;

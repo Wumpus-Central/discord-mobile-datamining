@@ -1,5 +1,5 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx
+import { dispatcher } from "../../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
 
 export default {

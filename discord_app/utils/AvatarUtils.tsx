@@ -1,3 +1,8 @@
+// discord_app/utils/AvatarUtils.tsx
+import ME from "ME";
+import { AVATAR_DECORATION_SIZE } from "DECORATION_TO_AVATAR_RATIO";
+import set from "set";
+import set from "ensureAvatarSource";
 import { Integer } from "../../_runtime/00014_Integer.js";
 import { parse } from "../../_runtime/01464_parse.js";
 import { Url } from "../../_runtime/01469_Url.js";
@@ -8,11 +13,6 @@ import { ensureAvatarSource } from "native/AvatarUtils.tsx";
 import { shortenAndLocalizeNumber } from "NumberUtils.tsx";
 import { set } from "PlatformUtils.tsx";
 import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
-// discord_app/utils/AvatarUtils.tsx
-import ME from "ME";
-import { AVATAR_DECORATION_SIZE } from "DECORATION_TO_AVATAR_RATIO";
-import set from "set";
-import set from "ensureAvatarSource";
 
 let c3;
 let c4;

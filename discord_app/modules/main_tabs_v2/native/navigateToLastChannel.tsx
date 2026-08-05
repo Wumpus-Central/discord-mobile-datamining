@@ -1,7 +1,7 @@
+// discord_app/modules/main_tabs_v2/native/navigateToLastChannel.tsx
 import { transitionToChannel } from "../../routing/transitionToChannel.tsx";
 import { navigationToRootTabHelper } from "../helpers/NavigationRouteUtils.native.tsx";
 import { getNavigatorCurrentRoute } from "../navigator/getNavigatorCurrentRoute.tsx";
-// discord_app/modules/main_tabs_v2/native/navigateToLastChannel.tsx
 const result = require("transitionToChannel").fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {

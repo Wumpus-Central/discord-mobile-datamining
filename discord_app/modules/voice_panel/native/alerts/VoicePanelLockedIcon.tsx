@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../../_runtime/16128_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
-import { set } from "../../../core/native/NativeView.tsx";
 // discord_app/modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/16128_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
 
 const require = arg1;
 createCacheKey = { container: null, icon: null };

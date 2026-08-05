@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMockChannels.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

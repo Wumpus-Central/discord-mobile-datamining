@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/explicit_media_redaction/ExplicitMediaFalsePositiveActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 function disableFalsePositiveButton(channelId, messageId) {
   let obj = dispatcher;
   obj = { type: "MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT", messageId, channelId };

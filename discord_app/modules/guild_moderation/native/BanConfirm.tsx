@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_moderation/native/BanConfirm.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "TextArea";
@@ -7,6 +6,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c5;

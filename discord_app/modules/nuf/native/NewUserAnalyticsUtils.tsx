@@ -1,6 +1,6 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/nuf/native/NewUserAnalyticsUtils.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 let c3 = 0;
 let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserAnalyticsUtils.tsx");

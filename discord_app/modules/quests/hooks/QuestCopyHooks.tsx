@@ -1,3 +1,12 @@
+// discord_app/modules/quests/hooks/QuestCopyHooks.tsx
+import closure_3 from "QuestsExperimentLocations";
+import _slicedToArray from "_slicedToArray";
+import GameProfileEmbedAction from "GameProfileEmbedAction";
+import _getSystemLocale from "_getSystemLocale";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import QuestsExperimentLocations from "QuestsExperimentLocations";
+import { HelpdeskArticles } from "ME";
+import { PremiumTypes } from "GuildFeatures";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { combined } from "../../../utils/HelpdeskUtils.tsx";
@@ -9,15 +18,6 @@ import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
 import { getApplicationIdsByTaskTypes } from "../utils/QuestTaskUtils.tsx";
 import { isSponsoredPlayQuest } from "../utils/QuestUtils.tsx";
 import { useQuests } from "QuestHooks.tsx";
-// discord_app/modules/quests/hooks/QuestCopyHooks.tsx
-import closure_3 from "QuestsExperimentLocations";
-import _slicedToArray from "_slicedToArray";
-import GameProfileEmbedAction from "GameProfileEmbedAction";
-import _getSystemLocale from "_getSystemLocale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { HelpdeskArticles } from "ME";
-import { PremiumTypes } from "GuildFeatures";
 
 let c10;
 let c9;

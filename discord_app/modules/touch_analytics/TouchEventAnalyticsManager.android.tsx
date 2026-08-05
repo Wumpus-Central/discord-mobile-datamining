@@ -1,8 +1,8 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx";
-import { apexExperiment } from "../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx";
 // discord_app/modules/touch_analytics/TouchEventAnalyticsManager.android.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx";
+import { apexExperiment } from "../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx";
 
 const require = arg1;
 function updateEnabledState() {

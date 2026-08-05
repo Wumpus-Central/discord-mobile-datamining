@@ -1,6 +1,6 @@
-import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 // discord_app/modules/gateway/BasicWorkScheduler.tsx
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS";
+import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 
 let c3;
 let c4;

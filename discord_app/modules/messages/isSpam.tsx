@@ -1,7 +1,7 @@
-import { getDecisionOutcomeFromMessage } from "../guild_automod/AutomodMessageUtils.tsx";
 // discord_app/modules/messages/isSpam.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { getDecisionOutcomeFromMessage } from "../guild_automod/AutomodMessageUtils.tsx";
 
 let c3;
 let c4;

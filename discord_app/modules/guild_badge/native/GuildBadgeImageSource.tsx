@@ -1,7 +1,7 @@
+// discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
 import { BadgeCategory } from "../BadgeCategory.tsx";
 import { GuildVisibility } from "../GuildTraits.tsx";
-// discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 const require = arg1;
 let obj = {};
 obj = { imageSource: null };

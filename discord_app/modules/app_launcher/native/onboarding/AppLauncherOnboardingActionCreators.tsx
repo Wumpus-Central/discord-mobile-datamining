@@ -1,5 +1,5 @@
-import { dispatcher } from "../../../../Dispatcher.tsx";
 // discord_app/modules/app_launcher/native/onboarding/AppLauncherOnboardingActionCreators.tsx
+import { dispatcher } from "../../../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/AppLauncherOnboardingActionCreators.tsx");
 
 export const setLastSeenTimeMs = function setLastSeenTimeMs() {

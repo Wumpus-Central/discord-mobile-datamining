@@ -1,12 +1,12 @@
-import { CircleInformationIcon } from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/message_request/native/RestrictedMessagePreviewList.tsx
 import RestrictedBlockedMessageGroup from "RestrictedBlockedMessageGroup";
 import { View } from "DCDChatItem";
 import reinjectEphemerals from "reinjectEphemerals";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { CircleInformationIcon } from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let closure_6;
 let error;

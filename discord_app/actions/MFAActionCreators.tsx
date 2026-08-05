@@ -1,8 +1,8 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/MFAActionCreators.tsx
 import getVerificationKey from "getVerificationKey";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 
 const require = arg1;
 const result = require("sendRequest").fileFinishedImporting("actions/MFAActionCreators.tsx");

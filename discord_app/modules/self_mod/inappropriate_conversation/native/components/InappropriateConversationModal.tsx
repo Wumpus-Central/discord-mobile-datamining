@@ -1,12 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { AccountAgeTier10LargeBadge } from "../../../../../design/assets/native.tsx";
-import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
-import { SafetyTipsContainer } from "../../../shared/native/SafetyTipsSection.tsx";
-import { TakeActionButtons } from "TakeActionScreen.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationModal.tsx
 import _slicedToArray from "_slicedToArray";
 import useSafetyToolsButtonTooltipForChannel from "useSafetyToolsButtonTooltipForChannel";
@@ -16,6 +7,15 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE";
 import jsxProd from "dismissChannelSafetyWarnings";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { AccountAgeTier10LargeBadge } from "../../../../../design/assets/native.tsx";
+import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
+import { SafetyTipsContainer } from "../../../shared/native/SafetyTipsSection.tsx";
+import { TakeActionButtons } from "TakeActionScreen.tsx";
 
 let c10;
 let c9;

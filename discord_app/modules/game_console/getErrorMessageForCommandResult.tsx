@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/game_console/getErrorMessageForCommandResult.tsx
 import { GameConsoleCommandResultErrorCodes as closure_3 } from "XBOX_URL_BASE";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
 
 const result = require("combined").fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");
 

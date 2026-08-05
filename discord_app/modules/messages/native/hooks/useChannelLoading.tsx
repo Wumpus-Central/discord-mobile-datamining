@@ -1,7 +1,7 @@
-import { useMountEffect } from "../../../../../discord_common/js/shared/hooks/useMountEffect.tsx";
 // discord_app/modules/messages/native/hooks/useChannelLoading.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { useMountEffect } from "../../../../../discord_common/js/shared/hooks/useMountEffect.tsx";
 
 const require = arg1;
 let result = require("start").fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");

@@ -1,13 +1,13 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
-import { useTheme } from "../../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
 // discord_app/modules/app_launcher/native/screens/home/NoPermsState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
+import { useTheme } from "../../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
 
 let c3;
 let c4;

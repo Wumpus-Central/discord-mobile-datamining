@@ -1,6 +1,6 @@
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
 // discord_app/modules/gateway/useRequestGatewaySocket.tsx
 import noop from "noop";
+import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
 
 const result = require("setRequestedBy").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 

@@ -1,5 +1,5 @@
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/ShelfBlockRecord.tsx
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 let prototype;
 prototype = function ShelfBlockRecord(show_button) {
   let category_sku_id;

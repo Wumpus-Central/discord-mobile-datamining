@@ -1,8 +1,8 @@
-import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { useFrameMonitor } from "useFrameMonitor.tsx";
 // discord_app/modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { useFrameMonitor } from "useFrameMonitor.tsx";
 
 const require = arg1;
 const result = require("useFrameMonitor").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");

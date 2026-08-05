@@ -1,10 +1,3 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { set } from "../../../actions/AlertActionCreators.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/reactions/native/ReactionUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -13,6 +6,13 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { EmojiIntention } from "set";
 import { jsx } from "registerAsset";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { set } from "../../../actions/AlertActionCreators.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 
 let c9;
 let error;

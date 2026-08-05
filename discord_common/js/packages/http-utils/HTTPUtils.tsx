@@ -1,7 +1,7 @@
-import { _createForOfIteratorHelper } from "../../../../_runtime/00531__createForOfIteratorHelper.js";
-import { fails } from "../backoff/Backoff.tsx";
 // discord_common/js/packages/http-utils/HTTPUtils.tsx
 import set from "fails";
+import { _createForOfIteratorHelper } from "../../../../_runtime/00531__createForOfIteratorHelper.js";
+import { fails } from "../backoff/Backoff.tsx";
 
 function sendRequest(arg0, signal) {
   let closure_0 = arg0;

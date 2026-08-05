@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCustomStatus.tsx
 import closure_3 from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
 import _slicedToArray from "_slicedToArray";
@@ -9,6 +8,7 @@ import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAIN
 import { StatusTypes } from "sum";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_12;
 let closure_14;

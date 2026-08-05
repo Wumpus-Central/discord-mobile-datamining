@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../_runtime/08201_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/game_community_upsell/native/GameCommunityMultiGuildUpsellModal.tsx
 import Text from "Text";
 import { View } from "useGradientBottom";
@@ -9,6 +6,9 @@ import { AnalyticEvents } from "ME";
 import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT";
 import jsxProd from "fetchMobileGameCommunities";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/08201_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c9;

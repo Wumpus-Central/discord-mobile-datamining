@@ -1,9 +1,9 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 const require = arg1;
 createCacheKey = { skeleton: null };

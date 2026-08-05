@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_profile/native/UserProfileWishlistGrid.tsx
 import get from "get";
 import Themes from "Themes";
@@ -18,6 +17,7 @@ import { CollectiblesMobileShopScreen as closure_19 } from "items";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "ManaContext";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_15;
 let closure_16;

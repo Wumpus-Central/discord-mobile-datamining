@@ -1,6 +1,3 @@
-import { useTheme } from "../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 // discord_app/components_native/premium/PremiumActivatedAlert.tsx
 import "registerAsset";
 import get_ActivityIndicator from "registerAsset";
@@ -9,6 +6,9 @@ import jsxProd from "AccessibilityAnnouncer";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { useTheme } from "../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
 let c3;
 let c4;

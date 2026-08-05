@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { apexExperiment } from "../../ConnectionIndicatorExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx
 import updateState from "updateState";
 import { ConnectivityIndicatorState as closure_4 } from "updateState";
 import { CONNECTION_BANNER_HEIGHT } from "CONNECTION_BANNER_HEIGHT";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { apexExperiment } from "../../ConnectionIndicatorExperiment.tsx";
 
 const require = arg1;
 const result = require("apexExperiment").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");

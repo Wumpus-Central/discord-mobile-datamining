@@ -1,6 +1,6 @@
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 // discord_app/modules/in_app_reports/showReportModal.native.tsx
 import asyncRequireImpl from "asyncRequireImpl";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 
 const require = arg1;
 function _showReportModal() {

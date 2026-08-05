@@ -1,5 +1,3 @@
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getChannelRoleSubscriptionStatus } from "../../../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/StandaloneChannelScreen.tsx
 import importAllResult from "useIsSwipeToMemberListEnabled";
 import get_ActivityIndicator from "ChannelHeader";
@@ -8,6 +6,8 @@ import ME from "ME";
 import { StaticChannelRoute } from "set";
 import jsxProd from "useCanSeeOnboardingHome";
 import createCacheKey from "createCacheKey";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getChannelRoleSubscriptionStatus } from "../../../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
 
 let MIDNIGHT_BORDER_WIDTH;
 let StyleSheet;

@@ -1,10 +1,10 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { Version } from "../../build_overrides/BuildOverrideUtils.tsx";
 // discord_app/modules/experiments/apex/ApexExperimentStore.tsx
 import _slicedToArray from "_slicedToArray";
 import "_toPropertyKey";
 import fetchFingerprint from "fetchFingerprint";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { Version } from "../../build_overrides/BuildOverrideUtils.tsx";
 
 const require = arg1;
 class ApexExperimentStore extends tmp2 {

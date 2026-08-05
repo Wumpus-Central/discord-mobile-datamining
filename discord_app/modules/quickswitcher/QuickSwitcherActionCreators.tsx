@@ -1,7 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/ValidationUtils.tsx";
-import { sortByMatchScore } from "../autocompleter/index.tsx";
 // discord_app/modules/quickswitcher/QuickSwitcherActionCreators.tsx
 import setLibraryApplications from "setLibraryApplications";
 import _slicedToArray from "_slicedToArray";
@@ -15,6 +11,10 @@ import closure_11 from "handleConnectionOpen";
 import ME from "ME";
 import { isStaticChannelRoute } from "set";
 import { CollectibleShopTab } from "items";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/ValidationUtils.tsx";
+import { sortByMatchScore } from "../autocompleter/index.tsx";
 
 let Layers;
 let closure_12;

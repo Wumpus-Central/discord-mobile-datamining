@@ -1,11 +1,3 @@
-import { NativeNotifSettingsModule } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { messagesProxy } from "../NotificationSettings.messages.js";
-import { apexExperiment } from "NotifSettingsExperiments.tsx";
-import { inferImportanceFromBehavior } from "NotifSettingsUtils.android.tsx";
 // discord_app/modules/notifications/native/NotificationTokenManager.tsx
 import { NativeModules } from "expandEventProperties";
 import initialize from "initialize";
@@ -15,6 +7,14 @@ import fetchFingerprint from "fetchFingerprint";
 import { NOTIF_SETTINGS } from "items2";
 import { AnalyticEvents } from "ME";
 import "initialize";
+import { NativeNotifSettingsModule } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { messagesProxy } from "../NotificationSettings.messages.js";
+import { apexExperiment } from "NotifSettingsExperiments.tsx";
+import { inferImportanceFromBehavior } from "NotifSettingsUtils.android.tsx";
 
 class NotificationTokenManager extends tmp2 {
   constructor() {

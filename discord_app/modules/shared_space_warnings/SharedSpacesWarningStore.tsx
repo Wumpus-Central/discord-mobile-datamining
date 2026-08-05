@@ -1,8 +1,8 @@
-import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningStore.tsx
 import keys from "keys";
 import createJSONStorage from "createJSONStorage";
 import createJSONStorage from "createJSONStorage";
+import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 
 let obj = { name: "shared-spaces-warning-storage", storage: null };
 obj[1] = createJSONStorage.createJSONStorage(() => frozen);

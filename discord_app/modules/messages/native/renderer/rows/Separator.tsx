@@ -1,7 +1,7 @@
-import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/messages/native/renderer/rows/Separator.tsx
 import Changeset from "Changeset";
 import createCacheKey from "createCacheKey";
+import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
 
 let c3;
 let obj1;

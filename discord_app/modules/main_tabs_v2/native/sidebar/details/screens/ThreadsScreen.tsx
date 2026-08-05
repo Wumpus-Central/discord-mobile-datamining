@@ -1,5 +1,3 @@
-import { useSafeAreaInsetsKeyboardAware } from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import { ThreadListSection } from "../../../../../threads/native/components/redesign/ThreadList.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +6,8 @@ import { SearchTypes } from "ME";
 import { OpenThreadAnalyticsLocations as closure_7 } from "AbortCodes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import { ThreadListSection } from "../../../../../threads/native/components/redesign/ThreadList.tsx";
 
 const require = arg1;
 function ThreadsScreen(channel) {

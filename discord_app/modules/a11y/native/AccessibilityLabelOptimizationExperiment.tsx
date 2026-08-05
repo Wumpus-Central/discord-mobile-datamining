@@ -1,6 +1,6 @@
-import { SCREEN_READER_ENABLED_GETTER } from "useIsScreenReaderEnabled.native.tsx";
 // discord_app/modules/a11y/native/AccessibilityLabelOptimizationExperiment.tsx
 import ApexExperiment from "ApexExperiment";
+import { SCREEN_READER_ENABLED_GETTER } from "useIsScreenReaderEnabled.native.tsx";
 
 let obj = { 1: null };
 obj[1] = { enabled: true };

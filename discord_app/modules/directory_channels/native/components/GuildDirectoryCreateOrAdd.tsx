@@ -1,9 +1,3 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useRefValue";
@@ -12,6 +6,12 @@ import isFetching from "isFetching";
 import { GuildDirectoryCreate } from "GuildDirectoryCreate";
 import jsxProd from "GuildDirectoryAddModal";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
+import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c5;

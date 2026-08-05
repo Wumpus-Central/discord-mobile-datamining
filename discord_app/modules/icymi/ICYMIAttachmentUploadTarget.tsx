@@ -1,6 +1,6 @@
-import { items } from "../../utils/UploadUtils.tsx";
 // discord_app/modules/icymi/ICYMIAttachmentUploadTarget.tsx
 import ME from "ME";
+import { items } from "../../utils/UploadUtils.tsx";
 
 let c3;
 let c4;

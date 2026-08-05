@@ -1,10 +1,10 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/guild_progress/GuildProgressStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Steps } from "Steps";
 import { PersistedStore } from "initialize";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 function completeStep(guild_id, CHANNEL) {
   let tmp = null != obj;

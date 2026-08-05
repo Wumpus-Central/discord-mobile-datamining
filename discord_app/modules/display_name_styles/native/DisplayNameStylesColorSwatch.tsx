@@ -1,10 +1,10 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { DisplayNameEffect } from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import { GummyStripes } from "effects/GummyStripes.tsx";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { DisplayNameEffect } from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
+import { GummyStripes } from "effects/GummyStripes.tsx";
 
 let obj = { colorSwatch: null, gummySwatch: null };
 obj = { width: 24, height: 24, borderRadius: require("Themes").radii.xs };

@@ -1,3 +1,6 @@
+// discord_app/modules/asset_json/native/AssetJsonUtils.tsx
+import registerAsset from "registerAsset";
+import get_ActivityIndicator from "registerAsset";
 import { registerAsset } from "../../../../_runtime/01240_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/01242_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/01243_registerAsset.js";
@@ -28,9 +31,6 @@ import { registerAsset } from "../../../../_runtime/01267_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/01268_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/01269_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/01270_registerAsset.js";
-// discord_app/modules/asset_json/native/AssetJsonUtils.tsx
-import registerAsset from "registerAsset";
-import get_ActivityIndicator from "registerAsset";
 
 let c4;
 let c5;

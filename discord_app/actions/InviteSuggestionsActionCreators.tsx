@@ -1,7 +1,7 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { fetchUserAffinitiesV2 } from "../modules/user_affinities/UserAffinitiesActionCreators.tsx";
 // discord_app/actions/InviteSuggestionsActionCreators.tsx
 import _computeRows from "_computeRows";
+import { dispatcher } from "../Dispatcher.tsx";
+import { fetchUserAffinitiesV2 } from "../modules/user_affinities/UserAffinitiesActionCreators.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
 

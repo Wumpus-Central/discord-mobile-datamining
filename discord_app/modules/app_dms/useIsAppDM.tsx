@@ -1,6 +1,6 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/app_dms/useIsAppDM.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");

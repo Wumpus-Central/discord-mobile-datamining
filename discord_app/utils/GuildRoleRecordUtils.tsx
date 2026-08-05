@@ -1,8 +1,8 @@
-import { int2hslRaw } from "../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { extractColorStringsFromServerColors } from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 // discord_app/utils/GuildRoleRecordUtils.tsx
 import isValueEqual from "isValueEqual";
 import { GuildRoleRecordTypeTag } from "GuildRoleRecordTypeTag";
+import { int2hslRaw } from "../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { extractColorStringsFromServerColors } from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 
 let c3;
 let c4;

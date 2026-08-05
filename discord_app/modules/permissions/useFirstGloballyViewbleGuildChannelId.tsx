@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx
 import comparator from "comparator";
 import { Permissions } from "sum";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");

@@ -1,14 +1,14 @@
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { firstAvatarDecoration } from "../../hooks/useShopProductItems.tsx";
-import { getNameplateData } from "../utils.tsx";
 // discord_app/modules/collectibles/nameplates/native/NameplateProductPreview.tsx
 import Button from "Button";
 import { View } from "AVERAGE_FONT_WIDTH_RATIO";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "TableRowInner";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { firstAvatarDecoration } from "../../hooks/useShopProductItems.tsx";
+import { getNameplateData } from "../utils.tsx";
 
 let closure_6;
 let error;

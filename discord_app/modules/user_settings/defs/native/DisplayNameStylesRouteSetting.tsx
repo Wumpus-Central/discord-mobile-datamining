@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { messagesProxy } from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import { ApplyButton } from "../../../display_name_styles/native/DisplayNameStylesEditScreen.tsx";
-// discord_app/modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx
-import createToggle from "createToggle";
 
 obj = {
   useTitle() {

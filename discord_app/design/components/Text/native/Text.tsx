@@ -1,8 +1,3 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { NativeText } from "../../../../../_runtime/00299_NativeText.js";
-import { useTypographyVariantRemap } from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useManaTextMigrationHighlight } from "useManaTextMigrationHighlight.tsx";
 // discord_app/design/components/Text/native/Text.tsx
 import importAllResult from "noop";
 import { Text } from "get ActivityIndicator";
@@ -12,6 +7,11 @@ import { TextVariantsFlat } from "TEXT_VARIANT";
 import useManaTextMigrationHighlight from "useManaTextMigrationHighlight";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { NativeText } from "../../../../../_runtime/00299_NativeText.js";
+import { useTypographyVariantRemap } from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useManaTextMigrationHighlight } from "useManaTextMigrationHighlight.tsx";
 
 const require = arg1;
 let closure_5 = require("module_4146").createAnimatedComponent(Text);

@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/stage_channels/useIsOnStartStageScreenStore.tsx
 import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";
 import keys from "keys";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
 keys = keys.create(() => ({ isOnStartStageScreen: true }));

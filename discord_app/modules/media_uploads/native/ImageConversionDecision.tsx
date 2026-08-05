@@ -1,6 +1,6 @@
+// discord_app/modules/media_uploads/native/ImageConversionDecision.tsx
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { _initialize } from "../../media/native/IosImageTypesManager.tsx";
-// discord_app/modules/media_uploads/native/ImageConversionDecision.tsx
 const result = require("set").fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
 export const isPhotoKitAsset = function isPhotoKitAsset(closure_0, outer1_1) {

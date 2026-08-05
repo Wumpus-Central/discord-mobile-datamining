@@ -1,6 +1,6 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/devtools/DevToolsActionCreators.tsx
 import initialize from "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const result = require("set").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 

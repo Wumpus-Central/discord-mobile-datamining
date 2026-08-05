@@ -1,3 +1,10 @@
+// discord_app/modules/remote_auth/components/native/RemoteAuthModal.tsx
+import _slicedToArray from "_slicedToArray";
+import ModalActionCreators from "../../../../actions/ModalActionCreators.tsx";
+import get_ActivityIndicator from "ButtonGroup";
+import { Endpoints } from "ME";
+import jsxProd from "registerAsset";
+import createCacheKey from "createCacheKey";
 import { apply } from "../../../../../_runtime/00012_apply.js";
 import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/13118_registerAsset.js";
@@ -11,13 +18,6 @@ import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-// discord_app/modules/remote_auth/components/native/RemoteAuthModal.tsx
-import _slicedToArray from "_slicedToArray";
-import ModalActionCreators from "../../../../actions/ModalActionCreators.tsx";
-import get_ActivityIndicator from "ButtonGroup";
-import { Endpoints } from "ME";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c5;

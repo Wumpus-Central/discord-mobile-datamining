@@ -1,6 +1,6 @@
+// discord_app/modules/guilds_bar/GuildsTree.tsx
 import { apply } from "../../../_runtime/00012_apply.js";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
-// discord_app/modules/guilds_bar/GuildsTree.tsx
 let obj = { ROOT: "root", FOLDER: "folder", GUILD: "guild" };
 const result = require("set").fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");
 class GuildsTree {

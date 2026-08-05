@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/user_settings/defs/native/AndroidNotificationVibrationsSetting.tsx
 import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 
 let obj1;
 let setAndroidNotificationVibrationsEnabled;

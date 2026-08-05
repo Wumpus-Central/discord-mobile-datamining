@@ -1,10 +1,10 @@
+// discord_app/modules/display_name_styles/DisplayNameStylesUtils.tsx
+import _slicedToArray from "_slicedToArray";
+import items3 from "items3";
 import { n } from "../../../_runtime/00689_n.js";
 import { DisplayNameEffect } from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import { DisplayNameFont } from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import { int2hslRaw } from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-// discord_app/modules/display_name_styles/DisplayNameStylesUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import items3 from "items3";
 
 let c4;
 let c5;

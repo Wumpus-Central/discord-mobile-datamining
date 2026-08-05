@@ -1,7 +1,7 @@
-import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
 // discord_app/modules/errors/av_errors/AVErrorStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { Store } from "initialize";
+import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
 
 const require = arg1;
 function isAVErrorContextOfType(type, CAMERA_SEND_LOW_FPS) {

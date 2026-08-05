@@ -1,3 +1,7 @@
+// discord_app/modules/user_settings/defs/native/AppearanceSetting.tsx
+import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
+import { ActiveThemeType } from "SystemThemeState";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -5,10 +9,6 @@ import { getThemeForColor } from "../../../client_themes/ClientThemesUtils.tsx";
 import { useActiveThemeType } from "../../../client_themes/native/useActiveTheme.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { SettingsAppearanceScreen } from "../../appearance/native/SettingsAppearanceScreen.tsx";
-// discord_app/modules/user_settings/defs/native/AppearanceSetting.tsx
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import { ActiveThemeType } from "SystemThemeState";
-import createToggle from "createToggle";
 
 const require = arg1;
 function useAppearanceSettingTrailing() {

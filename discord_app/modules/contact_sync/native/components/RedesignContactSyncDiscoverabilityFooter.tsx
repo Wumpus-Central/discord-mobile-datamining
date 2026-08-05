@@ -1,10 +1,10 @@
+// discord_app/modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx
+import { HelpdeskArticles } from "ME";
+import { jsx } from "jsxProd";
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { combined } from "../../../../utils/HelpdeskUtils.tsx";
-// discord_app/modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx
-import { HelpdeskArticles } from "ME";
-import { jsx } from "jsxProd";
 
 const result = require("TableRowGroupTitle").fileFinishedImporting("modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx");
 

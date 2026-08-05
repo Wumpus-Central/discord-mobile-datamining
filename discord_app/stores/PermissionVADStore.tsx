@@ -1,4 +1,3 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/PermissionVADStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +7,7 @@ import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";
 import ME from "ME";
 import { Store } from "initialize";
+import { dispatcher } from "../Dispatcher.tsx";
 
 let c9;
 let metroImportAll;

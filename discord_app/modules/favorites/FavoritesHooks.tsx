@@ -1,9 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { FREE_FAVORITE_LIMIT } from "../../../discord_common/js/shared/shared-constants/FavoritesLimits.tsx";
-import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
-import { getFavoritesAwareGuildName } from "FavoritesUtils.tsx";
 // discord_app/modules/favorites/FavoritesHooks.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -11,6 +5,12 @@ import initializeFromUserSettings from "initializeFromUserSettings";
 import { useFavoritesNotificationStore as closure_6 } from "useFavoritesNotificationStore";
 import { MAX_FAVORITE_CHANNELS } from "date";
 import { PremiumTypes } from "GuildFeatures";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { FREE_FAVORITE_LIMIT } from "../../../discord_common/js/shared/shared-constants/FavoritesLimits.tsx";
+import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
+import { getFavoritesAwareGuildName } from "FavoritesUtils.tsx";
 
 const require = arg1;
 function useFavoritesAccess(FavoritesGuildChannelList) {

@@ -1,9 +1,9 @@
-import { MediaKeyboardBottomSheetHandle } from "MediaKeyboardBottomSheetHandle.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { MediaKeyboardBottomSheetHandle } from "MediaKeyboardBottomSheetHandle.tsx";
 
 let obj = { headerHandleOnlyWrap: null };
 obj = { height: require("DRAG_HANDLE").HEADER_HANDLE_HEIGHT, paddingBottom: require("Themes").space.PX_4 };

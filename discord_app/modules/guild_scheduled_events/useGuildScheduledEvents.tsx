@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useGuildScheduledEvents.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +9,7 @@ import closure_9 from "scheduledEventSort";
 import initialize from "initialize";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let closure_12;
 let closure_14;

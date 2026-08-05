@@ -1,11 +1,11 @@
+// discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx
+import setContent from "setContent";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { useAlertStore } from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import { updateContextMenuState } from "../../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import { set } from "../../../../../utils/PlatformUtils.tsx";
 import { navigationToRootTabHelper } from "../../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { getVideoQuestWatchCtaText } from "../../../utils/VideoQuestUtils.tsx";
-// discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx
-import setContent from "setContent";
 
 const require = arg1;
 const result = require("navigationToRootTabHelper").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");

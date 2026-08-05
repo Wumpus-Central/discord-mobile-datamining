@@ -1,10 +1,10 @@
-import { set } from "../../utils/PlatformUtils.tsx";
-import { initialize } from "../foreground_service/mobile/ForegroundServiceManager.android.tsx";
 // discord_app/modules/messages/BackgroundTaskManager.native.tsx
 import closure_3 from "set";
 import { NativeModules } from "get ActivityIndicator";
 import set from "set";
 import set from "set";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { initialize } from "../foreground_service/mobile/ForegroundServiceManager.android.tsx";
 
 const require = arg1;
 function startBackgroundTask(arg0) {

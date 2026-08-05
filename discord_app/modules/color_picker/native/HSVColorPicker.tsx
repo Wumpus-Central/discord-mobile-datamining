@@ -1,10 +1,10 @@
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { ColorBox } from "SaturationValueColorPicker.tsx";
 // discord_app/modules/color_picker/native/HSVColorPicker.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { ColorBox } from "SaturationValueColorPicker.tsx";
 
 let c4;
 let c5;

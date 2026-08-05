@@ -1,13 +1,13 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { NameplateInner } from "Nameplate.tsx";
 // discord_app/modules/collectibles/nameplates/native/NameplateDummyUserPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { NameplateInner } from "Nameplate.tsx";
 
 let c5;
 let closure_6;

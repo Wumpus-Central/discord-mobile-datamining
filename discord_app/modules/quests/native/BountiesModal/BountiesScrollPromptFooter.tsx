@@ -1,3 +1,10 @@
+// discord_app/modules/quests/native/BountiesModal/BountiesScrollPromptFooter.tsx
+import noop from "noop";
+import { StyleSheet } from "get ActivityIndicator";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { QuestsExperimentLocations } from "QuestsExperimentLocations";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
@@ -7,13 +14,6 @@ import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import { apexExperiment } from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
 import { useVisibilityTransition } from "useVisibilityTransition.tsx";
-// discord_app/modules/quests/native/BountiesModal/BountiesScrollPromptFooter.tsx
-import noop from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let error;
 let metroImportAll;

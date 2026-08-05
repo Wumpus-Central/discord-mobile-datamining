@@ -1,15 +1,3 @@
-import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
-import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNickname } from "../../../../utils/NicknameUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { useGuildOnboardingAvailable } from "../../../guild_onboarding/useGuildOnboardingAvailable.tsx";
-import { experiment } from "../../../guild/TidaWebformExperiment.tsx";
-import { useOpenProfileSettings } from "../../../profile_customization/useOpenProfileSettings.tsx";
-import { DiscordTag } from "../../../user_profile/native/DiscordTag.tsx";
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetActions.tsx
 import getSystemLocale from "getSystemLocale";
 import { View } from "initialize";
@@ -27,6 +15,18 @@ import { GuildTagBadgeSize } from "items";
 import { ReadStateTypes } from "ReadStateTypes";
 import jsxProd from "useGuildOnboardingAvailable";
 import createCacheKey from "createCacheKey";
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../utils/NicknameUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useGuildOnboardingAvailable } from "../../../guild_onboarding/useGuildOnboardingAvailable.tsx";
+import { experiment } from "../../../guild/TidaWebformExperiment.tsx";
+import { useOpenProfileSettings } from "../../../profile_customization/useOpenProfileSettings.tsx";
+import { DiscordTag } from "../../../user_profile/native/DiscordTag.tsx";
 
 let Fonts;
 let closure_14;

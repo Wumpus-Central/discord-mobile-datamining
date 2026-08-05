@@ -1,7 +1,7 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/activities/panel/native/utils/ActivityPanelUtils.tsx
 import participantFromServer from "participantFromServer";
 import { ActivityPanelModes } from "ActivityPanelModes";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");

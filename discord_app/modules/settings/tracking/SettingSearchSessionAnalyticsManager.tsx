@@ -1,6 +1,6 @@
+// discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
 import { v1 } from "../../../../_runtime/00514_v1.js";
 import { trackSettingSearchInputFocused } from "Tracking.tsx";
-// discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
 class SettingSearchSessionAnalyticsManager {
 }
 const prototype = SettingSearchSessionAnalyticsManager.prototype;

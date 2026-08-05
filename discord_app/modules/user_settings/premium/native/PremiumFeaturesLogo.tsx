@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../../_runtime/06810_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08550_registerAsset.js";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../_runtime/06810_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08550_registerAsset.js";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");

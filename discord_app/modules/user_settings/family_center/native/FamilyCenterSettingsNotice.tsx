@@ -1,9 +1,9 @@
-import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
-import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
 // discord_app/modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx
 import "noop";
 import { SafetySettingsNoticeType } from "SafetyToastType";
 import { jsx } from "jsxProd";
+import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
+import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");

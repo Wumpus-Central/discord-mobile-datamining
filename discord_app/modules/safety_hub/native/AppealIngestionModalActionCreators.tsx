@@ -1,7 +1,7 @@
+// discord_app/modules/safety_hub/native/AppealIngestionModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
-// discord_app/modules/safety_hub/native/AppealIngestionModalActionCreators.tsx
 const APPEAL_INGESTION_MODAL_KEY = "APPEAL_INGESTION_MODAL_KEY";
 const result = require("AppealIngestionModal").fileFinishedImporting("modules/safety_hub/native/AppealIngestionModalActionCreators.tsx");
 

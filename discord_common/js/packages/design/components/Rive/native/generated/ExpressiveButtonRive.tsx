@@ -1,9 +1,9 @@
-import { BaseRive } from "../BaseRive.tsx";
-import { getDerivedStateFromError } from "../RiveErrorBoundary.tsx";
 // discord_common/js/packages/design/components/Rive/native/generated/ExpressiveButtonRive.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { BaseRive } from "../BaseRive.tsx";
+import { getDerivedStateFromError } from "../RiveErrorBoundary.tsx";
 
 const require = arg1;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];

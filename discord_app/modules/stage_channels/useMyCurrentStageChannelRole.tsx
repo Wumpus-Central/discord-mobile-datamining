@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/useMyCurrentStageChannelRole.tsx
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("buildStageChannelUserRoles").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");

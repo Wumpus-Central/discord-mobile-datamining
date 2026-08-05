@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/hotspot/HotspotActionCreators.tsx
 import { AnalyticEvents } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("modules/hotspot/HotspotActionCreators.tsx");
 

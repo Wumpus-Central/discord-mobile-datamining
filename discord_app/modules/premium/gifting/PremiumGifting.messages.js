@@ -1,3 +1,6 @@
+// discord_app/modules/premium/gifting/PremiumGifting.messages.js
+import 01274__ from "../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../_runtime/02350_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02351_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02352_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../_runtime/02378_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02379_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02380_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/premium/gifting/PremiumGifting.messages.js
-import 01274__ from "../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

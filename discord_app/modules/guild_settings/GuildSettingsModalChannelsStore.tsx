@@ -1,4 +1,3 @@
-import { getFlattenedChannelList } from "../channel/getFlattedChannelList.tsx";
 // discord_app/modules/guild_settings/GuildSettingsModalChannelsStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import createChannelRecord from "createChannelRecord";
@@ -8,6 +7,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import { Store } from "initialize";
 import importDefaultResult from "apply";
+import { getFlattenedChannelList } from "../channel/getFlattedChannelList.tsx";
 
 let c10;
 let c4;

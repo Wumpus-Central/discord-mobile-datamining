@@ -1,9 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { dispatcher } from "../Dispatcher.tsx";
-import { _tryLoadAsync } from "../modules/app_database/app/TryLoad.tsx";
-import { items } from "../modules/app_database/DatabaseDaos.tsx";
-import { deserializeChannels } from "../modules/cache/deserializeChannels.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/ChannelStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -16,6 +10,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { ChannelTypes } from "ME";
 import { Store } from "initialize";
 import set from "hasChannel";
+import { apply } from "../../_runtime/00012_apply.js";
+import { dispatcher } from "../Dispatcher.tsx";
+import { _tryLoadAsync } from "../modules/app_database/app/TryLoad.tsx";
+import { items } from "../modules/app_database/DatabaseDaos.tsx";
+import { deserializeChannels } from "../modules/cache/deserializeChannels.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 let c10;
 let c9;

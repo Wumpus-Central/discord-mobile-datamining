@@ -1,7 +1,7 @@
-import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
 
 const require = arg1;
 let closure_4 = importAllResult.lazy(() => asyncRequireImpl /* asyncRequireImpl */(11811, dependencyMap.paths));

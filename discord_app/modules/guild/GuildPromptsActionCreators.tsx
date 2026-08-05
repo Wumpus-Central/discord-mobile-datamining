@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild/GuildPromptsActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 function viewPrompt(REAL_NAME_PROMPT, closure_0) {
   const importDefault = REAL_NAME_PROMPT;
   const dependencyMap = closure_0;

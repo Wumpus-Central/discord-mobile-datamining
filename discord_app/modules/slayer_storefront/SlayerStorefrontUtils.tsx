@@ -1,10 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
-import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
-import { useSKUPrice } from "../storefront/StorefrontUtils.tsx";
 // discord_app/modules/slayer_storefront/SlayerStorefrontUtils.tsx
 import addApplication from "addApplication";
 import { WishlistRecommendationReason as closure_4 } from "fromServer";
@@ -15,6 +8,13 @@ import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID";
 import ME from "ME";
 import { CollectibleShopTab } from "items";
 import { CurrencyCodes } from "sum";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
+import { useSKUPrice } from "../storefront/StorefrontUtils.tsx";
 
 let c10;
 let c9;

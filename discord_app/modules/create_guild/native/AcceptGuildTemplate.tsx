@@ -1,10 +1,3 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { Divider } from "../../../design/void/Form/native/FormDivider.tsx";
-import { FreeFormInputGroup } from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
-import { renderIcon } from "../../guild/native/GuildIconUploader.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/create_guild/native/AcceptGuildTemplate.tsx
 import "Divider";
 import get_ActivityIndicator from "module_8276";
@@ -16,6 +9,13 @@ import jsxProd from "apply";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { Divider } from "../../../design/void/Form/native/FormDivider.tsx";
+import { FreeFormInputGroup } from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import { renderIcon } from "../../guild/native/GuildIconUploader.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let Fonts;
 let c4;

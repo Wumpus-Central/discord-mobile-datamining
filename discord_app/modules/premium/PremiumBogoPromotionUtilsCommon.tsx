@@ -1,3 +1,12 @@
+// discord_app/modules/premium/PremiumBogoPromotionUtilsCommon.tsx
+import createEmptyPromotionsByType from "createEmptyPromotionsByType";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import reset from "reset";
+import emitChanges from "emitChanges";
+import addEntitlement from "addEntitlement";
+import closure_8 from "createEmptyPromotionsByType";
+import GuildFeatures from "GuildFeatures";
+import ME from "ME";
 import { t } from "../../../_runtime/03867_t.js";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { isTablet } from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
@@ -9,15 +18,6 @@ import { usePremiumDiscountOffer } from "hooks/usePremiumDiscountOffer.android.t
 import { usePremiumTrialOffer } from "hooks/usePremiumTrialOffer.android.tsx";
 import { useScheduledForcedUpdate } from "hooks/useScheduledForcedUpdate.tsx";
 import { useEligibleActiveOutboundPromotions } from "promotions/PromotionsHooks.tsx";
-// discord_app/modules/premium/PremiumBogoPromotionUtilsCommon.tsx
-import createEmptyPromotionsByType from "createEmptyPromotionsByType";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import emitChanges from "emitChanges";
-import addEntitlement from "addEntitlement";
-import closure_8 from "createEmptyPromotionsByType";
-import GuildFeatures from "GuildFeatures";
-import ME from "ME";
 
 let c10;
 let c9;

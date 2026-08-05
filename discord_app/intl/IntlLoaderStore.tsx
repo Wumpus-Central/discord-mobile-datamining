@@ -1,7 +1,7 @@
-import { code } from "../../_runtime/01948_code.js";
 // discord_app/intl/IntlLoaderStore.tsx
 import 01274__ from "../../_runtime/metro/01274__.js";
 import identity from "identity";
+import { code } from "../../_runtime/01948_code.js";
 
 const require = arg1;
 function _setAppLocale() {

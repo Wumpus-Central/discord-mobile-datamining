@@ -1,10 +1,10 @@
-import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { NOOP } from "ME";
 import jsxProd from "jsxProd";
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 
 let StyleSheet;
 let c5;

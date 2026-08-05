@@ -1,9 +1,9 @@
-import { validateTransportType } from "../../helpers/validateTransportType.tsx";
-import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/store.tsx
 import prototype from "prototype";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
+import { validateTransportType } from "../../helpers/validateTransportType.tsx";
+import { prototype } from "../../RPCError.tsx";
 
 let RPCCommands;
 let RPC_AUTHENTICATED_SCOPE;

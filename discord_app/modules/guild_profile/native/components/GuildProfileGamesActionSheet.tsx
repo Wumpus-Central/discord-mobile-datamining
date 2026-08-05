@@ -1,12 +1,12 @@
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
-import { useOpenGameProfileModal } from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
-import { styles } from "GameIcon.tsx";
 // discord_app/modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx
 import noop from "noop";
 import { View } from "TableRowGroupTitle";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
+import { useOpenGameProfileModal } from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
+import { styles } from "GameIcon.tsx";
 
 const require = arg1;
 function GuildProfileGameRow(activityLevel) {

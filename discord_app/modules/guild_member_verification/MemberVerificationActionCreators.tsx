@@ -1,5 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/guild_member_verification/MemberVerificationActionCreators.tsx
 import closure_3 from "ME";
 import initialize from "initialize";
@@ -7,6 +5,8 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import updateInvite from "updateInvite";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let c9;
 let metroImportAll;

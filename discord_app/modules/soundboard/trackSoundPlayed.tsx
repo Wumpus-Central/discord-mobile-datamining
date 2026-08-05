@@ -1,4 +1,3 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/soundboard/trackSoundPlayed.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +6,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
 import { AnalyticEvents } from "ME";
 import GuildFeatures from "GuildFeatures";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let c9;
 let metroImportAll;

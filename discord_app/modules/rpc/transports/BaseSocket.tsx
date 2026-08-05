@@ -1,6 +1,6 @@
-import { prototype } from "../RPCError.tsx";
 // discord_app/modules/rpc/transports/BaseSocket.tsx
 import ME from "ME";
+import { prototype } from "../RPCError.tsx";
 
 let c3;
 let obj1;

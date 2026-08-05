@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/CaughtUpRow.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import _slicedToArray from "_slicedToArray";
@@ -7,6 +6,7 @@ import { View } from "Button";
 import jsxProd from "n";
 import createICYMIStyles from "createICYMIStyles";
 import importDefaultResult from "module_4146";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let error;
 let metroImportAll;

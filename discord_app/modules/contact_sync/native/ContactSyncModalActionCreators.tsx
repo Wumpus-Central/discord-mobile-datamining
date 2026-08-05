@@ -1,8 +1,3 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { showInstantInviteActionSheet } from "../../instant_invite/native/InstantInviteUtils.tsx";
-import { Steps } from "ContactSyncAnalyticsUtils.tsx";
-import { _uploadContacts } from "ContactSyncUtils.tsx";
 // discord_app/modules/contact_sync/native/ContactSyncModalActionCreators.tsx
 import closure_3 from "ContactSyncLandingPage";
 import set from "set";
@@ -12,6 +7,11 @@ import setStoredContacts from "setStoredContacts";
 import ContactSyncLandingPage from "ContactSyncLandingPage";
 import ME from "ME";
 import NativePermissionStatus from "NativePermissionStatus";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { showInstantInviteActionSheet } from "../../instant_invite/native/InstantInviteUtils.tsx";
+import { Steps } from "ContactSyncAnalyticsUtils.tsx";
+import { _uploadContacts } from "ContactSyncUtils.tsx";
 
 let c10;
 let c9;

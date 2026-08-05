@@ -1,10 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
-import { GameProfileEmbedAction } from "../../game_profile/GameProfileAnalyticUtils.tsx";
-import { useOpenGameProfileModal } from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
-import { useGameNameAndCoverImage } from "../../games/hooks/useGameNameAndCoverImage.tsx";
-import { toSubmission } from "../UserProfileApplicationWidgetTypes.tsx";
-import { UserProfileApplicationWidgetCard } from "UserProfileApplicationWidgetCard.tsx";
 // discord_app/modules/user_profile/native/UserProfileWidgetsBoard.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "WidgetType";
@@ -13,6 +6,13 @@ import fetchFingerprint from "fetchFingerprint";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
 import jsxProd from "Divider";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
+import { GameProfileEmbedAction } from "../../game_profile/GameProfileAnalyticUtils.tsx";
+import { useOpenGameProfileModal } from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
+import { useGameNameAndCoverImage } from "../../games/hooks/useGameNameAndCoverImage.tsx";
+import { toSubmission } from "../UserProfileApplicationWidgetTypes.tsx";
+import { UserProfileApplicationWidgetCard } from "UserProfileApplicationWidgetCard.tsx";
 
 let c10;
 let c5;

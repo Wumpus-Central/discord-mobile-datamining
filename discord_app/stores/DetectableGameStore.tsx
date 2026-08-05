@@ -1,10 +1,3 @@
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { GameTheme } from "../modules/game_detection/GameDetectionTypes.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
-import { set } from "../utils/PlatformUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/DetectableGameStore.tsx
 import { createExecutable } from "createExecutable";
 import { AnalyticEvents } from "ME";
@@ -13,6 +6,13 @@ import { Storage } from "Storage";
 import set from "set";
 import { PersistedStore } from "initialize";
 import set from "ApplicationTypes";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { GameTheme } from "../modules/game_detection/GameDetectionTypes.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
+import { set } from "../utils/PlatformUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 function gameFromServer(id) {
   const obj = { id: id.id, name: id.name, executables: null, aliases: null, thirdPartySkus: null };

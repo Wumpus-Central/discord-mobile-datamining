@@ -1,10 +1,10 @@
+// discord_app/modules/messages/native/renderer/system_messages/transformSticker.tsx
+import noop from "noop";
+import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { apexExperiment } from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 import { getStickerExtensionFromFormatType } from "../../../../stickers/StickersUtils.tsx";
 import { explicitContentFromProto } from "../../../../user_settings/UserSettings.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/transformSticker.tsx
-import noop from "noop";
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
 
 const require = arg1;
 function transform(id, isPreview) {

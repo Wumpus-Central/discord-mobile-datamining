@@ -1,14 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03867_t.js";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { _fetchGuildIntegrationsApplications } from "GuildSettingsFetchActionCreators.tsx";
-import { canUseMobileServerTagSettings } from "GuildSettingsServerTagUtils.tsx";
-import { fetchVanityUrl } from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
-import { getDefaultGuildSettingsSection } from "utils/getDefaultGuildSettingsSection.tsx";
 // discord_app/modules/guild_settings/GuildSettingsStore.tsx
 import { set } from "isValueEqual";
 import handleUpdateStart from "handleUpdateStart";
@@ -23,6 +12,17 @@ import { DEFAULT_DISCOVERY_CATEGORY_ID } from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
 import { Store } from "initialize";
 import set from "createChannelRecord";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { t } from "../../../_runtime/03867_t.js";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { _fetchGuildIntegrationsApplications } from "GuildSettingsFetchActionCreators.tsx";
+import { canUseMobileServerTagSettings } from "GuildSettingsServerTagUtils.tsx";
+import { fetchVanityUrl } from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
+import { getDefaultGuildSettingsSection } from "utils/getDefaultGuildSettingsSection.tsx";
 
 let closure_23;
 let closure_24;

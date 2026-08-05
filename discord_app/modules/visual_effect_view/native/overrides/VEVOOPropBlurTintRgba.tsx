@@ -1,6 +1,3 @@
-import { FormSwitch } from "../../../../design/components/Forms/native/FormSwitch.native.tsx";
-import { Form } from "../../../../design/void/Form/native/index.tsx";
-import { VisualEffectViewOverrideOverlay_ } from "VEVOO.tsx";
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOPropBlurTintRgba.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -8,6 +5,9 @@ import { View } from "get ActivityIndicator";
 import useVisualEffectViewOverrides from "useVisualEffectViewOverrides";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { FormSwitch } from "../../../../design/components/Forms/native/FormSwitch.native.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { VisualEffectViewOverrideOverlay_ } from "VEVOO.tsx";
 
 let c10;
 let c9;

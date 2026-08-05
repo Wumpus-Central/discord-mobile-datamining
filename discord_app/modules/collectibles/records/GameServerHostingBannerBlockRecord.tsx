@@ -1,5 +1,5 @@
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/GameServerHostingBannerBlockRecord.tsx
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 let prototype;
 prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
   const obj = Object.create(new.target.prototype);

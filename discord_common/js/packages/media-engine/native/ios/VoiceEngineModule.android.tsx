@@ -1,6 +1,6 @@
-import { enforcing } from "../../../rtn-codegen/js/NativeMediaEngineModule.tsx";
 // discord_common/js/packages/media-engine/native/ios/VoiceEngineModule.android.tsx
 import importDefaultResult from "enforcing";
+import { enforcing } from "../../../rtn-codegen/js/NativeMediaEngineModule.tsx";
 
 const constants = require("enforcing").getConstants();
 let closure_3 = ["getConstants", "setInputDevice", "setInputDeviceById", "setOutputDevice", "setOutputDeviceById", "setVideoInputDevice", "setVideoInputDeviceById", "addListener", "removeListeners"];

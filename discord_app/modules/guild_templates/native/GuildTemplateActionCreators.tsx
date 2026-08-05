@@ -1,9 +1,9 @@
+// discord_app/modules/guild_templates/native/GuildTemplateActionCreators.tsx
+import merged from "map";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { map } from "../GuildTemplateActionCreators.tsx";
-// discord_app/modules/guild_templates/native/GuildTemplateActionCreators.tsx
-import merged from "map";
 
 const require = arg1;
 const GUILD_TEMPLATE_MODAL_KEY = "GUILD_TEMPLATE_MODAL_KEY";

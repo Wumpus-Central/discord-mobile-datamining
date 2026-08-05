@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildAppliedBoostCount } from "useGuildPowerupsBoostCount.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useGuildAppliedBoostCount } from "useGuildPowerupsBoostCount.tsx";
 
 let c4;
 let c5;

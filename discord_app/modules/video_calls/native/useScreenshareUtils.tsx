@@ -1,3 +1,8 @@
+// discord_app/modules/video_calls/native/useScreenshareUtils.tsx
+import apexExperiment from "apexExperiment";
+import reset from "reset";
+import { ApplicationStreamStates } from "ME";
+import DCDDeviceManager from "DCDDeviceManager";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { inject } from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
 import { trackDeviceChanged } from "../../../actions/AudioActionCreators.tsx";
@@ -8,11 +13,6 @@ import { apexExperiment } from "../../go_live/native/MobileGoLiveUpsellExperimen
 import { isStreamKey } from "../../go_live/utils/StreamKeyUtils.tsx";
 import { _handleToggleVideo } from "../../voice_calls/native/CallsUtils.tsx";
 import { useHasVideoPermission } from "../useHasVideoPermission.tsx";
-// discord_app/modules/video_calls/native/useScreenshareUtils.tsx
-import apexExperiment from "apexExperiment";
-import reset from "reset";
-import { ApplicationStreamStates } from "ME";
-import DCDDeviceManager from "DCDDeviceManager";
 
 const require = arg1;
 function stopScreenshare() {

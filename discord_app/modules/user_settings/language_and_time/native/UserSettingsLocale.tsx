@@ -1,7 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/language_and_time/native/UserSettingsLocale.tsx
 import jsxProd from "jsxProd";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -10,6 +6,10 @@ import _getSystemLocale from "_getSystemLocale";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

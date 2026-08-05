@@ -1,10 +1,10 @@
-import { Input } from "../../../../design/components/Input/native/Input.native.tsx";
-import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
-import { isInteractionComponent } from "../../ComponentStateContext.tsx";
 // discord_app/modules/interaction_components/native/layouts/LabelLayoutComponent.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { Input } from "../../../../design/components/Input/native/Input.native.tsx";
+import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
+import { isInteractionComponent } from "../../ComponentStateContext.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");

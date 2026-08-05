@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useRequest } from "../../hooks/useRequest.tsx";
-import { useGroupListingsFetchContext } from "GroupListingsFetchContext.tsx";
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
@@ -8,6 +5,9 @@ import noop from "noop";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import { FetchState } from "makeGroupListingIndexSubscriptionListingTag";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useRequest } from "../../hooks/useRequest.tsx";
+import { useGroupListingsFetchContext } from "GroupListingsFetchContext.tsx";
 
 const require = arg1;
 function useFetchListingsForGuild(guildId) {

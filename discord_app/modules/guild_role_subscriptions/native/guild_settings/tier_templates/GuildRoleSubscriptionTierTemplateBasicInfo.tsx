@@ -1,4 +1,3 @@
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { SubscriptionIntervalTypes } from "GuildFeatures";
 import { CurrencyCodes } from "sum";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
 
 let closure_6;
 let error;

@@ -1,6 +1,6 @@
-import { SearchAppsRequestSource } from "../../../../discord_common/js/shared/shared-constants/SearchAppsRequestSource.tsx";
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx
 import { Store } from "initialize";
+import { SearchAppsRequestSource } from "../../../../discord_common/js/shared/shared-constants/SearchAppsRequestSource.tsx";
 
 const require = arg1;
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };

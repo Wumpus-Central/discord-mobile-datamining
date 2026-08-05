@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/media_viewer/MediaViewerAnalyticsManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 import keys from "keys";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let c3;
 let c4;

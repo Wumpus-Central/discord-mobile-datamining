@@ -1,8 +1,8 @@
+// discord_app/modules/launchpad/native/LaunchPadPullTabCache.tsx
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
-// discord_app/modules/launchpad/native/LaunchPadPullTabCache.tsx
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
 
 let c3;
 let c4;

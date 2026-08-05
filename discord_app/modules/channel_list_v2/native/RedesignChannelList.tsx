@@ -1,12 +1,3 @@
-import { NsfwGateGuildSidebar } from "../../age_gate/native/components/NsfwGateGuildSidebar.tsx";
-import { GuildUpsellChannelList } from "../../game_community_upsell/native/GuildUpsellChannelList.tsx";
-import { getMissingFavoriteThreadIds } from "../../guild_sidebar/FavoritesGuildChannelList.tsx";
-import { useShouldRenderChannelList } from "../../guild_sidebar/native/useShouldRenderChannelList.tsx";
-import { ChannelsEmpty } from "../../main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx";
-import { handleJoinGuild } from "../../main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx";
-import { TTIFirstContentfulPaint } from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
-import { ChannelListPanelBackdrop } from "components/ChannelListPanelBackdrop.tsx";
-import { ChannelListStickyHeader } from "components/ChannelListStickyHeader.tsx";
 // discord_app/modules/channel_list_v2/native/RedesignChannelList.tsx
 import useYouBarTotalHeight from "useYouBarTotalHeight";
 import importAllResult from "context";
@@ -19,6 +10,15 @@ import handleConnectionOpen from "handleConnectionOpen";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import ME from "ME";
 import jsxProd from "GuildInfoHeader";
+import { NsfwGateGuildSidebar } from "../../age_gate/native/components/NsfwGateGuildSidebar.tsx";
+import { GuildUpsellChannelList } from "../../game_community_upsell/native/GuildUpsellChannelList.tsx";
+import { getMissingFavoriteThreadIds } from "../../guild_sidebar/FavoritesGuildChannelList.tsx";
+import { useShouldRenderChannelList } from "../../guild_sidebar/native/useShouldRenderChannelList.tsx";
+import { ChannelsEmpty } from "../../main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx";
+import { handleJoinGuild } from "../../main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx";
+import { TTIFirstContentfulPaint } from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
+import { ChannelListPanelBackdrop } from "components/ChannelListPanelBackdrop.tsx";
+import { ChannelListStickyHeader } from "components/ChannelListStickyHeader.tsx";
 
 let closure_12;
 let closure_14;

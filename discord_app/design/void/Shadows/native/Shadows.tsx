@@ -1,5 +1,5 @@
-import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/design/void/Shadows/native/Shadows.tsx
+import { set } from "../../../../utils/PlatformUtils.tsx";
 const result = require("set").fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
 export const generateBoxShadowStyle = (arg0) => {

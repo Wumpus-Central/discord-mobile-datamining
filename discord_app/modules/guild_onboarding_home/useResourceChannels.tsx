@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/guild_onboarding_home/useResourceChannels.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");

@@ -1,11 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { messagesProxy } from "../../gifting/GiftingBadge.messages.js";
-import { GiftingBadgeLevelUpProgress } from "../../gifting/native/views/GiftingBadgeLevelUpProgress.tsx";
-import { GiftingBadgeProgressBar } from "../../gifting/native/views/GiftingBadgeProgress.tsx";
 // discord_app/modules/premium/native/gifting/GiftBadgePostPurchase.tsx
 import GiftingBadgeIcon from "GiftingBadgeIcon";
 import { View } from "HapticFeedbackTypes";
@@ -14,6 +6,14 @@ import getTierForProgress from "getTierForProgress";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "UNSAFE_isDismissibleContentDismissed";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { messagesProxy } from "../../gifting/GiftingBadge.messages.js";
+import { GiftingBadgeLevelUpProgress } from "../../gifting/native/views/GiftingBadgeLevelUpProgress.tsx";
+import { GiftingBadgeProgressBar } from "../../gifting/native/views/GiftingBadgeProgress.tsx";
 
 let c10;
 let closure_6;

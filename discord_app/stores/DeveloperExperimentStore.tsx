@@ -1,10 +1,10 @@
-import { validatePremiumType } from "../modules/user/UserStoreUtils.tsx";
 // discord_app/stores/DeveloperExperimentStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ExperimentBuckets } from "ExperimentBuckets";
 import { Environments } from "Environments";
 import { Store } from "initialize";
+import { validatePremiumType } from "../modules/user/UserStoreUtils.tsx";
 
 const require = arg1;
 let tmp2 = "production" === Environments.DEVELOPMENT;

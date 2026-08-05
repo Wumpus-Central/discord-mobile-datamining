@@ -1,6 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsEditGuildProfile } from "UserSettingsEditGuildProfile.tsx";
-import { UserSettingsEditUserProfile } from "UserSettingsEditUserProfile.tsx";
 // discord_app/modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx
 import zustandStore from "zustandStore";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -13,6 +10,9 @@ import { ProfileCustomizationSubsection } from "MAX_FAVORITES";
 import ME from "ME";
 import jsxProd from "getBestActiveInput";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsEditGuildProfile } from "UserSettingsEditGuildProfile.tsx";
+import { UserSettingsEditUserProfile } from "UserSettingsEditUserProfile.tsx";
 
 let closure_14;
 let closure_15;

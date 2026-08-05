@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/InputModeSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { InputModes } from "DesktopSources";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 createToggle = {

@@ -1,10 +1,10 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/contact_sync/native/ContactSyncModalStore.tsx
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContactPermissions } from "ContactSyncLandingPage";
 import { PlatformTypes } from "ME";
 import keys from "keys";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
 let obj = { NORMAL: 0, [0]: "NORMAL", ONBOARDING: 1, [1]: "ONBOARDING", ONBOARDING_INVITE: 2, [2]: "ONBOARDING_INVITE" };

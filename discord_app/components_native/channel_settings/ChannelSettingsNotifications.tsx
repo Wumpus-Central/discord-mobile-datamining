@@ -1,3 +1,14 @@
+// discord_app/components_native/channel_settings/ChannelSettingsNotifications.tsx
+import importAllResult from "computeChannelName";
+import createChannelRecord from "createChannelRecord";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import handleInviteData from "handleInviteData";
+import upsertRelationship from "upsertRelationship";
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import jsxProd from "TableRowInner";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
 import { Stack } from "../../design/components/Stack/native/Stack.native.tsx";
@@ -12,17 +23,6 @@ import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
 import { MutedUntilText } from "../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx";
 import { getMuteTimeOptions } from "../../modules/notifications/NotificationUtils.tsx";
 import { NotificationSettingsChannel } from "../../modules/notifications/settings/native/NotificationSettingsChannel.tsx";
-// discord_app/components_native/channel_settings/ChannelSettingsNotifications.tsx
-import importAllResult from "computeChannelName";
-import createChannelRecord from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleInviteData from "handleInviteData";
-import upsertRelationship from "upsertRelationship";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "TableRowInner";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

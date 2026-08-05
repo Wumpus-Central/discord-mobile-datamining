@@ -1,6 +1,3 @@
-import { dismissGlobalKeyboard } from "../../../../../../utils/native/KeyboardManagerUtils.tsx";
-import { QUICK_SWITCHER } from "../../../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/search/native/components/tabs/pages/MembersScreen.tsx
 import importAllResult from "dismissGlobalKeyboard";
 import { View } from "useFullscreenPlaceholderCount";
@@ -16,6 +13,9 @@ import { SearchResultContentEntityTypes as closure_15 } from "SearchEntrypointAn
 import ME from "ME";
 import { jsx } from "showUserProfileActionSheet";
 import createCacheKey from "createCacheKey";
+import { dismissGlobalKeyboard } from "../../../../../../utils/native/KeyboardManagerUtils.tsx";
+import { QUICK_SWITCHER } from "../../../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../../../app_analytics/useAnalyticsLocations.tsx";
 
 let closure_14;
 let closure_16;

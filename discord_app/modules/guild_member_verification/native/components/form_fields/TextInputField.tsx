@@ -1,6 +1,3 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/TextInputField.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +5,9 @@ import { MAX_TEXT_RESPONSE_LENGTH } from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c4;
 let c5;

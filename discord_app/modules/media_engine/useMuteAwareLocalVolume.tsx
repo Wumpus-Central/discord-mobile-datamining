@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/media_engine/useMuteAwareLocalVolume.tsx
 import noop from "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");

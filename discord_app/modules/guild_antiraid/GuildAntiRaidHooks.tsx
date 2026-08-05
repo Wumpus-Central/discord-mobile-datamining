@@ -1,6 +1,3 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { DATE_CONFIG } from "GuildAntiRaidUtils.tsx";
 // discord_app/modules/guild_antiraid/GuildAntiRaidHooks.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -10,6 +7,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import computeAlertSettings from "computeAlertSettings";
 import { IncidentAlertModeratorPermissions as closure_10 } from "GUILD_REPORT_RAID_MOBILE_KEY";
 import ME from "ME";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { DATE_CONFIG } from "GuildAntiRaidUtils.tsx";
 
 let closure_12;
 let unpackModuleId;

@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_progress/GuildProgressHooks.tsx
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
@@ -11,6 +10,7 @@ import handlePopAllLayers from "handlePopAllLayers";
 import reinjectEphemerals from "reinjectEphemerals";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let closure_14;
 let closure_15;

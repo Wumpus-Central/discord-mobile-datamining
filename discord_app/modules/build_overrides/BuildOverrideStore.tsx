@@ -1,6 +1,6 @@
-import { Version } from "BuildOverrideUtils.tsx";
 // discord_app/modules/build_overrides/BuildOverrideStore.tsx
 import { Store } from "initialize";
+import { Version } from "BuildOverrideUtils.tsx";
 
 const require = arg1;
 let obj = { NotResolved: 0, [0]: "NotResolved", Resolving: 1, [1]: "Resolving", Resolved: 2, [2]: "Resolved", Invalid: 3, [3]: "Invalid" };

@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/CategoryCollapseActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
 export const categoryCollapse = function categoryCollapse(id) {

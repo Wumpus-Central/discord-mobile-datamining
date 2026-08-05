@@ -1,13 +1,13 @@
-import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_profile/native/UserProfileCard.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let CARD_PADDING;
 let CARD_ROWS_COLUMN_GAP;

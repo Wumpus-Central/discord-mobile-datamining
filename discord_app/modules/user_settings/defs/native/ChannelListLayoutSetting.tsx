@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/ChannelListLayoutSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ChannelListLayoutTypes } from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/ChannelListLayoutSetting.tsx
-import createToggle from "createToggle";
 
 function useChannelListLayoutPredicate() {
   return false;

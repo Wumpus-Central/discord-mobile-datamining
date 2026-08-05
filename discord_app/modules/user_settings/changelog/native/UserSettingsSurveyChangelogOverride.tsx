@@ -1,3 +1,11 @@
+// discord_app/modules/user_settings/changelog/native/UserSettingsSurveyChangelogOverride.tsx
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "TableRowGroupTitle";
+import { ScrollView } from "initialize";
+import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
+import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
+import jsxProd from "Text";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
@@ -7,14 +15,6 @@ import { TableRowInner } from "../../../../design/components/TableRow/native/Tab
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { usePrevious } from "../../../../hooks/usePrevious.tsx";
-// discord_app/modules/user_settings/changelog/native/UserSettingsSurveyChangelogOverride.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "TableRowGroupTitle";
-import { ScrollView } from "initialize";
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
-import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;

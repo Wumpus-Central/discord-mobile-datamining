@@ -1,9 +1,9 @@
-import { Placeholder } from "../components/Placeholder.tsx";
-import { UnavailableNotice } from "../components/UnavailableNotice.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { jsx } from "jsxProd";
+import { Placeholder } from "../components/Placeholder.tsx";
+import { UnavailableNotice } from "../components/UnavailableNotice.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx");

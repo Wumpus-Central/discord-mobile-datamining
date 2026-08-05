@@ -1,3 +1,9 @@
+// discord_app/modules/user_settings/defs/native/AccountSmsBackupSetting.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { UserFlags } from "ME";
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";
+import apply from "asyncRequireImpl";
+import createToggle from "createToggle";
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { MFAActionCreators } from "../../../../actions/MFAActionCreators.tsx";
@@ -7,12 +13,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
 import { getSMSBackupDisabledMessage } from "../../account/MFAUtils.tsx";
 import { showUserSettingsInputAlert } from "../../account/native/showUserSettingsInputAlert.tsx";
-// discord_app/modules/user_settings/defs/native/AccountSmsBackupSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserFlags } from "ME";
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";
-import apply from "asyncRequireImpl";
-import createToggle from "createToggle";
 
 const require = arg1;
 let closure_6 = apply.debounce(function toggleSMS(user) {

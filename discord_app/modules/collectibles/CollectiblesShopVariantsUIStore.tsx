@@ -1,6 +1,6 @@
-import { useDefaultVariantIndex } from "hooks/useDefaultVariantIndex.tsx";
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
 import identity from "identity";
+import { useDefaultVariantIndex } from "hooks/useDefaultVariantIndex.tsx";
 
 let closure_2 = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: null };

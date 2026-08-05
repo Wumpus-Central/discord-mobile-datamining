@@ -1,9 +1,9 @@
-import { isTracing } from "../app-start-performance/AppStartPerformance.tsx";
-import { Storage } from "../storage/Storage.tsx";
 // discord_common/js/packages/flux/PersistedStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { Store } from "initialize";
 import set from "Storage";
+import { isTracing } from "../app-start-performance/AppStartPerformance.tsx";
+import { Storage } from "../storage/Storage.tsx";
 
 const require = arg1;
 let closure_3 = ["_state", "_version"];

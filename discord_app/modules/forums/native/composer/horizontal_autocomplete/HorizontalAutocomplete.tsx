@@ -1,12 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/08038_registerAsset.js";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { useMountLayoutEffect } from "../../../../../hooks/useMountEffect.tsx";
-import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
-import { RoleIcon } from "../../../../roles/native/RoleIcon.tsx";
 // discord_app/modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx
 import "getRoleIconData";
 import get_ActivityIndicator from "Text";
@@ -19,6 +10,15 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { registerAsset } from "../../../../../../_runtime/08038_registerAsset.js";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { useMountLayoutEffect } from "../../../../../hooks/useMountEffect.tsx";
+import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import { RoleIcon } from "../../../../roles/native/RoleIcon.tsx";
 
 let Fonts;
 let StyleSheet;

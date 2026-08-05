@@ -1,5 +1,3 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { context } from "../CollectiblesAnalyticsContext.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheet.tsx
 import initialize from "initialize";
 import apexExperiment from "apexExperiment";
@@ -13,6 +11,8 @@ import jsxProd from "context";
 import createCacheKey from "createCacheKey";
 import ManaContext from "ManaContext";
 import ManaContext from "ManaContext";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { context } from "../CollectiblesAnalyticsContext.tsx";
 
 let c5;
 let closure_12;

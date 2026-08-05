@@ -1,10 +1,10 @@
-import { getToken } from "../../utils/AuthenticationUtils.tsx";
 // discord_app/modules/themes/resolveTheme.native.tsx
 import reset from "reset";
 import initialize from "initialize";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import SystemThemeState from "SystemThemeState";
+import { getToken } from "../../utils/AuthenticationUtils.tsx";
 
 let c9;
 let closure_6;

@@ -1,7 +1,7 @@
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import { getAccessibilityLabelFormatter } from "../ThreadUtils.tsx";
 // discord_app/modules/threads/native/showThreadBrowserModal.tsx
 import { ChannelDetailsNavigatorScreens as closure_2 } from "ChannelDetailsNavigatorScreens";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import { getAccessibilityLabelFormatter } from "../ThreadUtils.tsx";
 
 let result = require("getRootNavigationRef").fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
 

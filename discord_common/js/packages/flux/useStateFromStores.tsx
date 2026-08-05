@@ -1,7 +1,7 @@
-import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 // discord_common/js/packages/flux/useStateFromStores.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 
 let c4;
 let c5;

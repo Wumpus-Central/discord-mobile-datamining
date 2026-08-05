@@ -1,9 +1,3 @@
-import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
-import { DEFAULT_CONTENT_PADDING } from "screens/app_list_view/AppLauncherViewAllScreen.tsx";
-import { AppLauncherApplicationViewScreenInner } from "screens/application_view/AppLauncherApplicationViewScreen.tsx";
-import { AppLauncherCommandViewFooter } from "screens/command_view/AppLauncherCommandViewScreen.tsx";
-import { AppRowLabel } from "screens/home/AppLauncherHomeScreen.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherNavigator.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "context";
@@ -12,6 +6,12 @@ import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { DEFAULT_CONTENT_PADDING } from "screens/app_list_view/AppLauncherViewAllScreen.tsx";
+import { AppLauncherApplicationViewScreenInner } from "screens/application_view/AppLauncherApplicationViewScreen.tsx";
+import { AppLauncherCommandViewFooter } from "screens/command_view/AppLauncherCommandViewScreen.tsx";
+import { AppRowLabel } from "screens/home/AppLauncherHomeScreen.tsx";
 
 let c9;
 let metroImportAll;

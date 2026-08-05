@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
 // discord_app/modules/stage_channels/useToggleRequestToSpeak.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
 
 const require = arg1;
 let result = require("fetchFingerprint").fileFinishedImporting("modules/stage_channels/useToggleRequestToSpeak.tsx");

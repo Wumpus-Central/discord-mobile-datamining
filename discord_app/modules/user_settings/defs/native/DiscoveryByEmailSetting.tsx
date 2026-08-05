@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/DiscoveryByEmailSetting.tsx
+import { FriendDiscoveryFlags } from "ME";
+import createToggle from "createToggle";
 import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { _updateDiscoverability } from "../../../contact_sync/native/ContactSyncActionCreators.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/DiscoveryByEmailSetting.tsx
-import { FriendDiscoveryFlags } from "ME";
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

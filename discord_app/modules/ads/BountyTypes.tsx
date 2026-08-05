@@ -1,5 +1,5 @@
-import { resolveAsset } from "../quests/lib/AssetUtils.tsx";
 // discord_app/modules/ads/BountyTypes.tsx
+import { resolveAsset } from "../quests/lib/AssetUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {

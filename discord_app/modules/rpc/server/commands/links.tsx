@@ -1,6 +1,3 @@
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/links.tsx
 import closure_3 from "items3";
 import participantFromServer from "participantFromServer";
@@ -10,6 +7,9 @@ import ME from "ME";
 import items3 from "items3";
 import createRPCCommand from "createRPCCommand";
 import set from "addApplication";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 let RPCCommands;
 let RPC_AUTHENTICATED_SCOPE;

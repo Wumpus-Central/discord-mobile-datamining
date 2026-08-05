@@ -1,13 +1,13 @@
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { useFetchCollectiblesProduct } from "../../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
-import { useOrbCheckoutModalContextProvider } from "../OrbCheckoutModalContext.tsx";
-import { OrbCheckoutErrorCard } from "OrbCheckoutModalComponents.tsx";
 // discord_app/modules/virtual_currency/checkout/native/OrbCheckoutModal.tsx
 import HeaderBackImage from "HeaderBackImage";
 import noop from "HeaderBackImage";
 import ME from "ME";
 import { InternalPaymentGateways } from "sum";
 import jsxProd from "set";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { useFetchCollectiblesProduct } from "../../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
+import { useOrbCheckoutModalContextProvider } from "../OrbCheckoutModalContext.tsx";
+import { OrbCheckoutErrorCard } from "OrbCheckoutModalComponents.tsx";
 
 let c4;
 let c5;

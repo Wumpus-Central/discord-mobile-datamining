@@ -1,12 +1,12 @@
-import { getOrRefreshPushSyncToken } from "../../actions/native/PushNotificationActionCreators.tsx";
-import { NativeModules } from "../../lib/pushnotification/PushNotification.tsx";
-import { createSoundForPack } from "../../modules/sound_playback/SoundUtils.tsx";
-import { expandEventProperties } from "../AnalyticsUtils.tsx";
 // discord_app/utils/native/NotificationUtils.tsx
 import expandEventProperties from "expandEventProperties";
 import { NativeModules } from "get ActivityIndicator";
 import { PermissionStateType } from "set";
 import { AnalyticEvents } from "ME";
+import { getOrRefreshPushSyncToken } from "../../actions/native/PushNotificationActionCreators.tsx";
+import { NativeModules } from "../../lib/pushnotification/PushNotification.tsx";
+import { createSoundForPack } from "../../modules/sound_playback/SoundUtils.tsx";
+import { expandEventProperties } from "../AnalyticsUtils.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("utils/native/NotificationUtils.tsx");

@@ -1,14 +1,14 @@
+// discord_app/modules/app_launcher/native/base_components/AppLauncherList.tsx
+import { View } from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { registerAsset } from "../../../../../_runtime/11468_registerAsset.js";
 import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import { useAppLauncherFlashListProps } from "AppLauncherFlashList.tsx";
-// discord_app/modules/app_launcher/native/base_components/AppLauncherList.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ searchBarContainer: { marginBottom: 16 }, emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" }, emptyStateImage: { flex: 0 } });

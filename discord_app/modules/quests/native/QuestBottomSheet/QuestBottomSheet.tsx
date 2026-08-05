@@ -1,10 +1,3 @@
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { useQuests } from "../../hooks/QuestHooks.tsx";
-import { getApplicationIdsByTaskTypes } from "../../utils/QuestTaskUtils.tsx";
-import { isSponsoredPlayQuest } from "../../utils/QuestUtils.tsx";
-import { useIsMobileQuestDockRenderedBase } from "../QuestHooks.native.tsx";
-import { useQuestRewardClaimHandler } from "QuestBottomSheetFooter.tsx";
-import { QuestBottomSheetHeader } from "QuestBottomSheetHeader.tsx";
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheet.tsx
 import NonInlineConsoleConnection from "NonInlineConsoleConnection";
 import importDefaultResult from "getApplicationIdsByTaskTypes";
@@ -14,6 +7,13 @@ import initializeState from "initializeState";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import jsxProd from "QuestBottomSheetHeader";
 import createCacheKey from "createCacheKey";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { useQuests } from "../../hooks/QuestHooks.tsx";
+import { getApplicationIdsByTaskTypes } from "../../utils/QuestTaskUtils.tsx";
+import { isSponsoredPlayQuest } from "../../utils/QuestUtils.tsx";
+import { useIsMobileQuestDockRenderedBase } from "../QuestHooks.native.tsx";
+import { useQuestRewardClaimHandler } from "QuestBottomSheetFooter.tsx";
+import { QuestBottomSheetHeader } from "QuestBottomSheetHeader.tsx";
 
 let c10;
 let c9;

@@ -1,6 +1,6 @@
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/messages/isCrosspost.tsx
 import ME from "ME";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 let c3;
 let c4;

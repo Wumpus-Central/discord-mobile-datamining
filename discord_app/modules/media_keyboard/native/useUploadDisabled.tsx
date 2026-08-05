@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/media_keyboard/native/useUploadDisabled.tsx
 import { DraftType } from "handleChanged";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import map from "map";
 import ME from "ME";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let c5;
 let closure_6;

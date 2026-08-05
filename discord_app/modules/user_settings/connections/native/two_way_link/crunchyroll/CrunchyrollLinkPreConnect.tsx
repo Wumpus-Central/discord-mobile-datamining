@@ -1,4 +1,3 @@
-import { registerAsset } from "../../../../../../../_runtime/10489_registerAsset.js";
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes";
@@ -6,6 +5,7 @@ import { PlatformTypes } from "ME";
 import { CRUNCHYROLL_LINK_DEST_ORIGIN as closure_6 } from "CRUNCHYROLL_LINK_DEST_ORIGIN";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../../_runtime/10489_registerAsset.js";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ image: { width: 152, height: 123 } });

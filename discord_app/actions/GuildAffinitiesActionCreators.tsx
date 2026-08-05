@@ -1,6 +1,6 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/actions/GuildAffinitiesActionCreators.tsx
 import { Endpoints } from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
 

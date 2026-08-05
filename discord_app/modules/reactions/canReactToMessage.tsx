@@ -1,12 +1,12 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 // discord_app/modules/reactions/canReactToMessage.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 
 let c9;
 let closure_6;

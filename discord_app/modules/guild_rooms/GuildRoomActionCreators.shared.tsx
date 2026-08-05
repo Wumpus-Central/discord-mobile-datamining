@@ -1,10 +1,10 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { trackGuildRoomObjectInteracted } from "GuildRoomAnalytics.tsx";
 // discord_app/modules/guild_rooms/GuildRoomActionCreators.shared.tsx
 import serverGuildRoomObjectToClient from "serverGuildRoomObjectToClient";
 import fetchFingerprint from "fetchFingerprint";
 import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { trackGuildRoomObjectInteracted } from "GuildRoomAnalytics.tsx";
 
 const require = arg1;
 function _guildRoomConnect() {

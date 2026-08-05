@@ -1,3 +1,15 @@
+// discord_app/modules/collectibles/native/ProductDetailsActionSheetPurchaseSection.tsx
+import Text from "Text";
+import useProductDisableState from "useProductDisableState";
+import { View } from "getSystemLocale";
+import { useNativeCheckoutStore } from "context";
+import map from "map";
+import items from "items";
+import ME from "ME";
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
+import GuildFeatures from "GuildFeatures";
+import jsxProd from "useNavigation";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -11,18 +23,6 @@ import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
 import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 import { useVirtualCurrencyData } from "hooks/useVirtualCurrencyData.tsx";
 import { useHandleUseNow } from "useHandleUseNow.tsx";
-// discord_app/modules/collectibles/native/ProductDetailsActionSheetPurchaseSection.tsx
-import Text from "Text";
-import useProductDisableState from "useProductDisableState";
-import { View } from "getSystemLocale";
-import { useNativeCheckoutStore } from "context";
-import map from "map";
-import items from "items";
-import ME from "ME";
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "useNavigation";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;

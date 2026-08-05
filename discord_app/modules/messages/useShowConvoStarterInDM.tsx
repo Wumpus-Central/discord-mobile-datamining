@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 // discord_app/modules/messages/useShowConvoStarterInDM.tsx
 import { useRef } from "noop";
 import processChannel from "processChannel";
@@ -8,6 +6,8 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { ChannelFlags } from "set";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 
 let error;
 let metroImportAll;

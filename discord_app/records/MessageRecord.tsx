@@ -1,9 +1,9 @@
-import { ApplicationIntegrationType } from "../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isForwardMessage } from "../modules/forwarding/isForwardMessage.tsx";
 // discord_app/records/MessageRecord.tsx
 import "toJS";
 import ME from "ME";
+import { ApplicationIntegrationType } from "../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isForwardMessage } from "../modules/forwarding/isForwardMessage.tsx";
 
 let c3;
 let c4;

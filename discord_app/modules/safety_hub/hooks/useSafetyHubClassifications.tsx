@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/safety_hub/hooks/useSafetyHubClassifications.tsx
 import noop from "noop";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 import { ViolationType } from "SafetyHubView";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("SafetyHubView").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");

@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../../../../_runtime/13310_registerAsset.js";
-import { LottieIcon } from "../LottieIcon.tsx";
 // discord_app/design/components/LottieIcon/native/generated/NitroGem6Lottie.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { registerAsset } from "../../../../../../_runtime/13310_registerAsset.js";
+import { LottieIcon } from "../LottieIcon.tsx";
 
 const require = arg1;
 let closure_3 = ["I"];

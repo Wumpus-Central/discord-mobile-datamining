@@ -1,7 +1,7 @@
-import { Video } from "MediaEngineDummy.tsx";
-import { destroy } from "native/index.tsx";
 // discord_common/js/packages/media-engine/index.tsx
 import DesktopSources from "DesktopSources";
+import { Video } from "MediaEngineDummy.tsx";
+import { destroy } from "native/index.tsx";
 
 let closure_2 = DesktopSources.MediaEngineImplementations;
 const result = require("Video").fileFinishedImporting("../discord_common/js/packages/media-engine/index.tsx");

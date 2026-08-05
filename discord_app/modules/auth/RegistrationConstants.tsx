@@ -1,5 +1,5 @@
-import { keys } from "../../ConstantsIOS.tsx";
 // discord_app/modules/auth/RegistrationConstants.tsx
+import { keys } from "../../ConstantsIOS.tsx";
 const obj = { ACCOUNT_IDENTITY: "Account Identity", ACCOUNT_DISPLAY_NAME: "Account Display Name", ACCOUNT_INFORMATION: "Account Information", AGE_GATE: "Age Gate", AGE_GATE_UNDERAGE: "Age Gate Underage", PHONE_VERIFICATION: "Phone Verification", REGISTER: "Register", CAPTCHA: "Captcha" };
 const result = require("set").fileFinishedImporting("modules/auth/RegistrationConstants.tsx");
 

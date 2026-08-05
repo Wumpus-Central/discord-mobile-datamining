@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../_runtime/11496_registerAsset.js";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/polls/native/PollCreation.tsx
 import importAllResult from "trackImpression";
 import get_ActivityIndicator from "TableRowInner";
@@ -12,6 +6,12 @@ import jsxProd from "useSafeAreaInsetsKeyboardAware";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "POLL_ATTACHMENT_FOLDER";
+import { registerAsset } from "../../../../_runtime/11496_registerAsset.js";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c4;

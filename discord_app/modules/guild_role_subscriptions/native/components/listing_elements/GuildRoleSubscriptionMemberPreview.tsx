@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
 
 let closure_6;
 let error;

@@ -1,12 +1,3 @@
-import { Link } from "../../_runtime/01481_Link.js";
-import { useNavigationTheme } from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
-import { useTheme } from "../hooks/useTheme.tsx";
-import { _maybeBackfillMissingBreadcrumbsFromTelemetryRing } from "../modules/errors/native/SentryInitUtils.tsx";
-import { DiscordGestureHandlerRootView } from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
-import { enqueue } from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
-import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/components_native/AppContainer.tsx
 import set from "set";
 import designConfig from "designConfig";
@@ -19,6 +10,15 @@ import { isStaticChannelRoute } from "set";
 import jsxProd from "getChannelDetailsFromRoute";
 import createCacheKey from "createCacheKey";
 import ReanimatedRexport from "../modules/reanimated/ReanimatedRexport.tsx";
+import { Link } from "../../_runtime/01481_Link.js";
+import { useNavigationTheme } from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
+import { useTheme } from "../hooks/useTheme.tsx";
+import { _maybeBackfillMissingBreadcrumbsFromTelemetryRing } from "../modules/errors/native/SentryInitUtils.tsx";
+import { DiscordGestureHandlerRootView } from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
+import { enqueue } from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 let c10;
 let closure_12;

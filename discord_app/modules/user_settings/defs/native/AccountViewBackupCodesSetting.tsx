@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CodeRow } from "../../account/native/UserSettingsAccountBackupCodes.tsx";
 // discord_app/modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx
 import noop from "noop";
 import ME from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CodeRow } from "../../account/native/UserSettingsAccountBackupCodes.tsx";
 
 let UserSettingsSections;
 let c4;

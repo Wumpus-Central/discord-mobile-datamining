@@ -1,6 +1,6 @@
+// discord_app/modules/keyboard/native/useCustomKeyboardHeight.tsx
 import { context } from "../../window/native/AppEntryKeyContext.tsx";
 import { computeEntryState } from "KeyboardUIStore.native.tsx";
-// discord_app/modules/keyboard/native/useCustomKeyboardHeight.tsx
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
 
 export default function useCustomKeyboardHeight() {

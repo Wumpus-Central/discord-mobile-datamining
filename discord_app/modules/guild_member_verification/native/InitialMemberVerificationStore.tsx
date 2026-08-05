@@ -1,6 +1,6 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/guild_member_verification/native/InitialMemberVerificationStore.tsx
 import { Store } from "initialize";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const map = new Map();
 class InitialMemberVerificationStore extends Store {

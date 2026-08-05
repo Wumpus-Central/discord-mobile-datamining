@@ -1,8 +1,8 @@
-import { Link } from "../../../../../_runtime/01481_Link.js";
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Link } from "../../../../../_runtime/01481_Link.js";
+import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 
 const require = arg1;
 const result = require("Link").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");

@@ -1,10 +1,10 @@
-import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventManager.tsx
 import closure_2 from "set";
 import handleConnectionOpen from "handleConnectionOpen";
 import scheduledEventSort from "scheduledEventSort";
 import "initialize";
 import set from "scheduledEventSort";
+import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
 
 function getGuildEventsForCurrentUser() {
   const self = this;

@@ -1,8 +1,8 @@
+// discord_app/modules/messages/native/renderer/ExplicitMediaUtils.tsx
+import { MessageAttachmentFlags } from "ME";
 import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { ContentHarmTypeChannel } from "../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import { getEligibleHarmTypesConfigsForContext } from "../../../explicit_media_redaction/ObscuredMediaUtils.tsx";
-// discord_app/modules/messages/native/renderer/ExplicitMediaUtils.tsx
-import { MessageAttachmentFlags } from "ME";
 
 const result = require("getEligibleHarmTypesConfigsForContext").fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
 

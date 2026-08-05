@@ -1,10 +1,10 @@
+// discord_app/modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx
+import { GUILD_THEME_POWERUP_BOOST_PRICE as closure_3 } from "BoostedGuildTiers";
 import { experiment } from "../experiments/ServerThemeExperiment.tsx";
 import { apexExperiment } from "../experiments/ServerThemeUserExperiment.tsx";
 import { useGuildAppliedBoostCount } from "useGuildPowerupsBoostCount.tsx";
 import { useHasAllocateBoostPermission } from "useHasAllocateBoostPermission.tsx";
 import { useIsGuildThemePerkEnabled } from "useIsGuildThemePerkEnabled.tsx";
-// discord_app/modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx
-import { GUILD_THEME_POWERUP_BOOST_PRICE as closure_3 } from "BoostedGuildTiers";
 
 const result = require("experiment").fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
 

@@ -1,9 +1,9 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { isForegrounded } from "SessionForegroundUtils.native.tsx";
 // discord_app/modules/analytics_sessions/SessionAdManager.tsx
 import importDefaultResult from "fetchFingerprint";
 import ME from "ME";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { isForegrounded } from "SessionForegroundUtils.native.tsx";
 
 let c4;
 let c5;

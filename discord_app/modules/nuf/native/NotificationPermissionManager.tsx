@@ -1,5 +1,3 @@
-import { t } from "../../../../_runtime/03867_t.js";
-import { getOrRefreshPushSyncToken } from "../../../actions/native/PushNotificationActionCreators.tsx";
 // discord_app/modules/nuf/native/NotificationPermissionManager.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { NativeModules } from "expandEventProperties";
@@ -13,6 +11,8 @@ import EventActionType from "EventActionType";
 import ME from "ME";
 import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus";
 import "initialize";
+import { t } from "../../../../_runtime/03867_t.js";
+import { getOrRefreshPushSyncToken } from "../../../actions/native/PushNotificationActionCreators.tsx";
 
 let closure_12;
 let closure_14;

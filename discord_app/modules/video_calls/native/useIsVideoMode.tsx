@@ -1,10 +1,10 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/native/useIsVideoMode.tsx
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateVoiceState from "updateVoiceState";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");

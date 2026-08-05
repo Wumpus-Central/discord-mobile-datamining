@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

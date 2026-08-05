@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/badges/BadgeDirectoryActionCreators.tsx
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let c5;
 let closure_6;

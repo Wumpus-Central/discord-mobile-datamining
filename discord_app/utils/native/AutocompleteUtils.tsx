@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/utils/native/AutocompleteUtils.tsx
+import { getSystemLocale } from "../../intl/index.native.tsx";
 require("ME").AutoCompleteResultTypes;
 const items = [["game", "gameMentionInput"]];
 const map = new Map(items);

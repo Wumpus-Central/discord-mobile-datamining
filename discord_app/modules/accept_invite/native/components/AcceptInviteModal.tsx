@@ -1,8 +1,8 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/accept_invite/native/components/AcceptInviteModal.tsx
 import noop from "noop";
 import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics";
 import { jsx } from "jsxProd";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/accept_invite/native/components/AcceptInviteModal.tsx");

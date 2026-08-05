@@ -1,10 +1,10 @@
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource";
 import { View } from "AdCreativeType";
 import ME from "ME";
 import jsxProd from "TableRowGroupTitle";
 import createCacheKey from "createCacheKey";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
 let Fragment;
 let c4;

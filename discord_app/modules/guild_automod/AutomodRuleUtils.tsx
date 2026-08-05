@@ -1,11 +1,11 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { buildCommand } from "../application_commands/ApplicationCommandUtils.tsx";
-import { getRuleDefaultActionsFromConfig } from "AutomodActionUtils.tsx";
-import { AutomodTriggerType } from "AutomodTriggerConfigs.tsx";
 // discord_app/modules/guild_automod/AutomodRuleUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { getRuleCountByTriggerType } from "withEqualityFn";
 import AutomodEventType from "AutomodEventType";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { buildCommand } from "../application_commands/ApplicationCommandUtils.tsx";
+import { getRuleDefaultActionsFromConfig } from "AutomodActionUtils.tsx";
+import { AutomodTriggerType } from "AutomodTriggerConfigs.tsx";
 
 let c10;
 let c4;

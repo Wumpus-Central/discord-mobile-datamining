@@ -1,10 +1,10 @@
-import { ScrollHandlingActionSheet } from "ScrollHandlingActionSheet.tsx";
 // discord_app/modules/stage_channels/native/components/EndStageActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "MAX_STAGE_TOPIC_LENGTH";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ScrollHandlingActionSheet } from "ScrollHandlingActionSheet.tsx";
 
 let c5;
 let closure_6;

@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { maybeFetchCollectiblesForInvoices } from "../../../parent_tools/FamilyCenterActionCreators.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { Consents } from "ME";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { maybeFetchCollectiblesForInvoices } from "../../../parent_tools/FamilyCenterActionCreators.tsx";
+import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 
 const require = arg1;
 createToggle = {

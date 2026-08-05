@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { updateImpersonating } from "../impersonate/ImpersonateActionCreators.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingActionCreators.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
@@ -14,6 +10,10 @@ import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import { ReadStateTypes } from "ReadStateTypes";
 import importDefaultResult from "module_1208";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { updateImpersonating } from "../impersonate/ImpersonateActionCreators.tsx";
 
 let c10;
 let closure_12;

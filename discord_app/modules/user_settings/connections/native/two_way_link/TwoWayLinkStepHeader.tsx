@@ -1,9 +1,9 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { styles } from "TwoWayLinkStyles.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { styles } from "TwoWayLinkStyles.tsx";
 
 const require = arg1;
 const result = require("styles").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx");

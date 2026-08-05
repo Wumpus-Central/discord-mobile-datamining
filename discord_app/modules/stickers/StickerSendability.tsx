@@ -1,9 +1,9 @@
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 // discord_app/modules/stickers/StickerSendability.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import parseServerPackSticker from "parseServerPackSticker";
 import { Permissions } from "ME";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 
 const require = arg1;
 function getStickerSendability(stickerById, trackCommunicationDisabled, channel) {

@@ -1,9 +1,9 @@
-import { getCreateAttachmentURL } from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
-import { getCreateAttachmentURL } from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
-import { items } from "../../utils/UploadUtils.tsx";
 // discord_app/lib/uploader/UploadTargets.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
+import { getCreateAttachmentURL } from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
+import { getCreateAttachmentURL } from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
+import { items } from "../../utils/UploadUtils.tsx";
 
 let c5;
 let closure_6;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/age_assurance/AgeVerificationConstants.tsx
 import { HelpdeskArticles } from "ME";
 import set from "getSystemLocale";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let items = [require("AgeVerificationModalEntryPoint").AgeVerificationModalEntryPoint.NSFW_GUILD];
 let set = new Set(items);

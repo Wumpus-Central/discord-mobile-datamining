@@ -1,10 +1,10 @@
-import { isEqual } from "../../../_runtime/04444_isEqual.js";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
+import { isEqual } from "../../../_runtime/04444_isEqual.js";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
 
 const require = arg1;
 const result = require("createUserWidgetFromServer").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");

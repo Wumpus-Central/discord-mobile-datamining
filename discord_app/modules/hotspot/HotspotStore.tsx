@@ -1,8 +1,8 @@
-import { get } from "../../utils/ProcessArgs.tsx";
 // discord_app/modules/hotspot/HotspotStore.tsx
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
 import { PersistedStore } from "initialize";
 import set from "get";
+import { get } from "../../utils/ProcessArgs.tsx";
 
 let set = new Set();
 let closure_4 = {};

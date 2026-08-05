@@ -1,8 +1,3 @@
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useIsMobileWishlistSuggestionsEnabled } from "../../wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx";
-import { useCardGridLayout } from "../hooks/native/useCardGridLayout.tsx";
-import { useWishlistSuggestionsDismissibleContent } from "../hooks/useWishlistSuggestionsDismissibleContent.tsx";
 // discord_app/modules/user_profile/native/UserProfileWishlistSuggestionsGrid.tsx
 import v1 from "v1";
 import { View } from "context";
@@ -14,6 +9,11 @@ import { SKUProductLines } from "ME";
 import { CollectiblesMobileShopScreen as closure_11 } from "items";
 import jsxProd from "getUserWishlistKey";
 import createCacheKey from "createCacheKey";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useIsMobileWishlistSuggestionsEnabled } from "../../wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx";
+import { useCardGridLayout } from "../hooks/native/useCardGridLayout.tsx";
+import { useWishlistSuggestionsDismissibleContent } from "../hooks/useWishlistSuggestionsDismissibleContent.tsx";
 
 let c9;
 let closure_12;

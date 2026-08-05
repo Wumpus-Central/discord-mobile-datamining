@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { _generateAnimationSource } from "BurstReactionEffectUtils.tsx";
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimation.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { _generateAnimationSource } from "BurstReactionEffectUtils.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ content: { width: "100%" } });

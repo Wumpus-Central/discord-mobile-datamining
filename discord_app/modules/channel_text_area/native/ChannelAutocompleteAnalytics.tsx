@@ -1,7 +1,7 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 
 const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx");
 

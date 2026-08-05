@@ -1,15 +1,3 @@
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { maybeFetchTopEmojisByGuild } from "../emojis/top_emojis/TopEmojisUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { withEqualityFn } from "../expression_picker/ExpressionPickerGridStores.tsx";
-import { getSoundmojiSendExperiment } from "../premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx";
-import { useEmojiHotrail } from "hooks/useEmojiHotrail.tsx";
-import { useTopAndNewlyAddedEmojis } from "hooks/useTopAndNewlyAddedEmojis.tsx";
 // discord_app/modules/emoji_picker/EmojiPickerUtils.tsx
 import getSystemLocale from "getSystemLocale";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -23,6 +11,18 @@ import { ExpressionPickerViewType } from "ExpressionPickerViewType";
 import { PremiumUpsellTypes } from "GuildFeatures";
 import apply from "collectGuildAnalyticsMetadata";
 import set from "createGuildRecordFromRust";
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { maybeFetchTopEmojisByGuild } from "../emojis/top_emojis/TopEmojisUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { withEqualityFn } from "../expression_picker/ExpressionPickerGridStores.tsx";
+import { getSoundmojiSendExperiment } from "../premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx";
+import { useEmojiHotrail } from "hooks/useEmojiHotrail.tsx";
+import { useTopAndNewlyAddedEmojis } from "hooks/useTopAndNewlyAddedEmojis.tsx";
 
 let c10;
 let c9;

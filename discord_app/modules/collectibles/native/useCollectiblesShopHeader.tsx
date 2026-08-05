@@ -1,5 +1,3 @@
-import { ShopIcon } from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/collectibles/native/useCollectiblesShopHeader.tsx
 import ref from "ref";
 import { View } from "CheckmarkSmallIcon";
@@ -10,6 +8,8 @@ import { RewardFilterTypes } from "QuestsExperimentLocations";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
 import jsxProd from "expandEventProperties";
 import createCacheKey from "createCacheKey";
+import { ShopIcon } from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c10;
 let unpackModuleId;

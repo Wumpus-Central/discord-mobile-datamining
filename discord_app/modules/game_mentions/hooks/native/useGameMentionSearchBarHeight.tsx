@@ -1,6 +1,6 @@
-import { map } from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 // discord_app/modules/game_mentions/hooks/native/useGameMentionSearchBarHeight.tsx
 import { StyleSheet } from "get ActivityIndicator";
+import { map } from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 
 let c3 = "text-sm/semibold";
 let c4 = "text-sm/medium";

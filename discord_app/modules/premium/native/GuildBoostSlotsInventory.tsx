@@ -1,12 +1,3 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { registerAsset } from "../../../../_runtime/12678_registerAsset.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSubscriptionPlaceholderPatternSource } from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useCountdown } from "../../../hooks/useCountdown.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/premium/native/GuildBoostSlotsInventory.tsx
 import initialize from "initialize";
 import get_ActivityIndicator from "GuildIconSizes";
@@ -17,6 +8,15 @@ import reset from "reset";
 import jsxProd from "getSubscriptionPlaceholderPatternSource";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { registerAsset } from "../../../../_runtime/12678_registerAsset.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSubscriptionPlaceholderPatternSource } from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useCountdown } from "../../../hooks/useCountdown.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c5;
 let closure_12;

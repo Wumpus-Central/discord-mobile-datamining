@@ -1,6 +1,6 @@
-import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
 // discord_app/modules/launchpad/native/showLaunchPad.tsx
 import { ComponentActions } from "ME";
+import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/showLaunchPad.tsx");
 

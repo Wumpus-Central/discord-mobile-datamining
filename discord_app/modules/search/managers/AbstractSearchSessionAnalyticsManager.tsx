@@ -1,6 +1,6 @@
+// discord_app/modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx
 import { v1 } from "../../../../_runtime/00514_v1.js";
 import { SearchTokenTypes } from "../SearchUtils.tsx";
-// discord_app/modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx
 let result = require("set").fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
 class AbstractSearchSessionAnalyticsManager {
   constructor() {

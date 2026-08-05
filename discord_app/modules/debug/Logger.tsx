@@ -1,6 +1,6 @@
-import { log } from "../../../discord_common/js/packages/logger/Logger.tsx";
 // discord_app/modules/debug/Logger.tsx
 import log from "log";
+import { log } from "../../../discord_common/js/packages/logger/Logger.tsx";
 
 let timestamp = Date.now();
 log.setLogFn((name) => {

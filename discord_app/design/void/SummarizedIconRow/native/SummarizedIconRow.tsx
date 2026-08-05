@@ -1,9 +1,9 @@
-import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/SummarizedIconRow/native/SummarizedIconRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../components/Text/native/Text.tsx";
 
 const require = arg1;
 function OverflowSquircle(arg0) {

@@ -1,10 +1,10 @@
-import { componentDidMount } from "../../../../../components_native/common/Alert.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlert.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { componentDidMount } from "../../../../../components_native/common/Alert.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 
 let c4;
 let c5;

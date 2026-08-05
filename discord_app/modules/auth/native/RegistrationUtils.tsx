@@ -1,6 +1,3 @@
-import { Background } from "../../../../_runtime/05245_Background.js";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { NavigatorWithCaptchaHook } from "components/Auth.tsx";
 // discord_app/modules/auth/native/RegistrationUtils.tsx
 import noop from "noop";
 import updateInvite from "updateInvite";
@@ -9,6 +6,9 @@ import useRegistrationUIStore from "useRegistrationUIStore";
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
+import { Background } from "../../../../_runtime/05245_Background.js";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { NavigatorWithCaptchaHook } from "components/Auth.tsx";
 
 let c9;
 let closure_6;

@@ -1,9 +1,9 @@
+// discord_app/modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { MessageAccessibilityAction } from "../../MessageAccessibilityActions.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx
 const result = require("getSystemLocale").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {

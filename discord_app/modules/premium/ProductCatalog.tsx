@@ -1,8 +1,8 @@
-import { apexExperiment } from "experiments/DenormalizedPerksReadExperiment.tsx";
 // discord_app/modules/premium/ProductCatalog.tsx
 import GuildFeatures from "GuildFeatures";
 import "set";
 import importDefaultResult1 from "set";
+import { apexExperiment } from "experiments/DenormalizedPerksReadExperiment.tsx";
 
 let PremiumSubscriptionSKUs;
 let c3;

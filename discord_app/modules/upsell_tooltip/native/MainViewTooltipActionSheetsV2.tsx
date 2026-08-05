@@ -1,6 +1,3 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx
 import _slicedToArray from "_slicedToArray";
 import CatEarsBackdrop from "CatEarsBackdrop";
@@ -10,6 +7,9 @@ import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { AnalyticEvents } from "ME";
 import { DismissibleContentGroupName as closure_11 } from "ContentDismissActionType";
 import { jsx } from "isSingleUseDismissibleContent";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 
 let c5;
 let closure_6;

@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/go_live/useFetchStreamPreview.tsx
 import noop from "noop";
 import reset from "reset";
@@ -6,6 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";
 import { BasicPermissions } from "sum";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");

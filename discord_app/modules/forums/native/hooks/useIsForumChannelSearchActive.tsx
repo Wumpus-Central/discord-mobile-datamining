@@ -1,7 +1,7 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useCanSearchForumPostsByChannelId } from "useCanSearchForumPostsByChannelId.tsx";
 // discord_app/modules/forums/native/hooks/useIsForumChannelSearchActive.tsx
 import initialize from "initialize";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useCanSearchForumPostsByChannelId } from "useCanSearchForumPostsByChannelId.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");

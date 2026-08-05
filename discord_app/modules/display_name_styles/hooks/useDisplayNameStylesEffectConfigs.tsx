@@ -1,6 +1,6 @@
-import { useDisplayNameStylesEffectDefaultColors } from "useDisplayNameStylesEffectDefaultColors.native.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx
 import noop from "noop";
+import { useDisplayNameStylesEffectDefaultColors } from "useDisplayNameStylesEffectDefaultColors.native.tsx";
 
 const require = arg1;
 let obj = {};

@@ -1,11 +1,11 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/actions/ChangeLogActionCreators.tsx
 import explicitContentFromProto from "explicitContentFromProto";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import { Endpoints } from "ME";
 import { ChangelogPlatforms } from "CHANGELOG_MODAL_KEY";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 
 const require = arg1;
 function cacheBustParam() {

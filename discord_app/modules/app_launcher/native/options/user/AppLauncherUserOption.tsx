@@ -1,10 +1,10 @@
-import { AppLauncherSelectOptionFormRow } from "../../base_components/AppLauncherSelectOptionFormRow.tsx";
 // discord_app/modules/app_launcher/native/options/user/AppLauncherUserOption.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { AppLauncherSelectOptionFormRow } from "../../base_components/AppLauncherSelectOptionFormRow.tsx";
 
 const require = arg1;
 createCacheKey = { iconWrapper: null };

@@ -1,6 +1,6 @@
+// discord_app/modules/quests/utils/QuestOrbMultiplierUtils.tsx
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { parseServerPerkConfigKind } from "../../premium/perks_state/PerksStateUtils.tsx";
-// discord_app/modules/quests/utils/QuestOrbMultiplierUtils.tsx
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
 obj = { NITRO: "nitro", CREPE: "crepe" };
 const items = [, ];

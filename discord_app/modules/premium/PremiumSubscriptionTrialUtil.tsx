@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
 import emitChanges from "emitChanges";
 import GuildFeatures from "GuildFeatures";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let c5;
 let c9;

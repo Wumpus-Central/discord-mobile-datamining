@@ -1,8 +1,8 @@
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 // discord_app/modules/rpc/server/commands/guilds.tsx
 import { getGuildIconURL } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 
 let RPCCommands;
 let c4;

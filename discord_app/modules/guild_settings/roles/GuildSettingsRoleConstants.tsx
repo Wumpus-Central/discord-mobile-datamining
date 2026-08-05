@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsRoleConstants.tsx
 import { RoleColorsStyle } from "handleSetSection";
 import ME from "ME";
@@ -11,6 +10,7 @@ import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let DEFAULT_GRADIENT_ROLE_COLORS;
 let DEFAULT_ROLE_COLOR;

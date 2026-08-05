@@ -1,7 +1,7 @@
-import { ProfileFrameLayerType } from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx";
 // discord_app/modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx
 import _toArray from "_toArray";
 import set from "ProfileFrameLayerType";
+import { ProfileFrameLayerType } from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx";
 
 const require = arg1;
 const preview = "preview";

@@ -1,12 +1,12 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TrendingType } from "../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
-import { calculateTimestampDurations } from "../../../content_inventory/utils.tsx";
 // discord_app/modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx
 import ICYMIActionCreators from "../../ICYMIActionCreators.tsx";
 import { View } from "Screenshot";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "useReplyActions";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TrendingType } from "../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
+import { calculateTimestampDurations } from "../../../content_inventory/utils.tsx";
 
 let c9;
 let error;

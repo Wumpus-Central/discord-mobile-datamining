@@ -1,9 +1,9 @@
-import { getChatPlaceholderRowWidth } from "getChatPlaceholderRowWidth.tsx";
 // discord_app/modules/chat/native/placeholder/ChatPlaceholderRow.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { getChatPlaceholderRowWidth } from "getChatPlaceholderRowWidth.tsx";
 
 let c3;
 let c4;

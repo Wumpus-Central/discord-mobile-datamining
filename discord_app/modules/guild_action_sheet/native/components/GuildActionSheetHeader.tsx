@@ -1,5 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/09182_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09185_registerAsset.js";
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx
 import useIsWindowLarge from "useIsWindowLarge";
 import get_ActivityIndicator from "Button";
@@ -10,6 +8,8 @@ import { GuildFeatures } from "ME";
 import jsxProd from "fromGuildPropertiesWithAdditionalFields";
 import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
+import { registerAsset } from "../../../../../_runtime/09182_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09185_registerAsset.js";
 
 let c10;
 let c4;

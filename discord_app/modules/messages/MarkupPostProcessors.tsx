@@ -1,7 +1,7 @@
-import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 // discord_app/modules/messages/MarkupPostProcessors.tsx
 import ME from "ME";
 import set from "Version";
+import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 
 let MessageEmbedTypes;
 let c3;

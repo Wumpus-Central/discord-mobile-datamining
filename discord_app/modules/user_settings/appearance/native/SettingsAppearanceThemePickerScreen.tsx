@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ThemeDarkIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx";
-import { ThemeLightIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
-import { ThemeMidnightIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceThemePickerScreen.tsx
 import useSegmentedControlState from "useSegmentedControlState";
 import useWindowDimensions from "useWindowDimensions";
@@ -34,6 +29,11 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import set from "get ActivityIndicator";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ThemeDarkIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx";
+import { ThemeLightIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
+import { ThemeMidnightIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let closure_12;
 let closure_14;

@@ -1,5 +1,3 @@
-import { NavigationStack } from "../../design/components/Navigator/native/Navigator.native.tsx";
-import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/components_native/add_friend/AddFriendModal.tsx
 import _slicedToArray from "_slicedToArray";
 import HeaderActionButton from "HeaderActionButton";
@@ -10,6 +8,8 @@ import { ContactPermissions } from "ContactSyncLandingPage";
 import jsxProd from "HeaderBackImage";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { NavigationStack } from "../../design/components/Navigator/native/Navigator.native.tsx";
+import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 
 let Fonts;
 let c10;

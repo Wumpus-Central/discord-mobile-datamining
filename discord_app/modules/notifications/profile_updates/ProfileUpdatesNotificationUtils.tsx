@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/notifications/profile_updates/ProfileUpdatesNotificationUtils.tsx
 import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/notifications/profile_updates/ProfileUpdatesNotificationUtils.tsx");
 

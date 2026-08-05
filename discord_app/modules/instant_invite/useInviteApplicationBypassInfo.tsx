@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/instant_invite/useInviteApplicationBypassInfo.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let c3;
 let c4;

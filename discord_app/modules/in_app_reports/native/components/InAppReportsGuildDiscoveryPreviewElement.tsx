@@ -1,15 +1,15 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../../../utils/GuildRecordUtils.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../../../../utils/GuildRecordUtils.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 
 let c5;
 let closure_6;

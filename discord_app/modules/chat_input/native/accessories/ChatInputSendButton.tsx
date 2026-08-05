@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { useChatInputFloatingWidth } from "../action_buttons/useChatInputFloatingWidth.tsx";
 // discord_app/modules/chat_input/native/accessories/ChatInputSendButton.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_4146";
@@ -11,6 +7,10 @@ import setCooldown from "setCooldown";
 import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_8 } from "TextAreaCta";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useChatInputFloatingWidth } from "../action_buttons/useChatInputFloatingWidth.tsx";
 
 const require = arg1;
 function renderChatInputSendButton(type, arg1, state, cleanup) {

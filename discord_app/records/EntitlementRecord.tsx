@@ -1,10 +1,10 @@
-import { set } from "../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx";
-import { getPremiumPlanItem } from "../utils/PremiumUtils.tsx";
 // discord_app/records/EntitlementRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
 import createdAt from "createdAt";
 import { EntitlementTypes } from "ME";
+import { set } from "../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx";
+import { getPremiumPlanItem } from "../utils/PremiumUtils.tsx";
 
 const require = arg1;
 let EntitlementRecord;

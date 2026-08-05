@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_antiraid/GuildAntiRaidConstants.tsx
 import { Permissions } from "sum";
 import importAllResult from "fromString";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const combineResult = require("fromString").combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
 const result = require("fromString").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");

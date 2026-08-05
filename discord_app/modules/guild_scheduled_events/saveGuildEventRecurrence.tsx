@@ -1,7 +1,7 @@
+// discord_app/modules/guild_scheduled_events/saveGuildEventRecurrence.tsx
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
 import { getRRule } from "utils/ScheduleUtils.tsx";
-// discord_app/modules/guild_scheduled_events/saveGuildEventRecurrence.tsx
 let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
 export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {

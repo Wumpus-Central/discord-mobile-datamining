@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
+import createToggle from "createToggle";
 import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { apexExperiment } from "../../../user_profile/PrivateProfilesExperiment.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
-import createToggle from "createToggle";
 
 const radio = createToggle.createRadio({
   useTitle() {

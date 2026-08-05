@@ -1,6 +1,6 @@
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/messages/logMessageSendFailure.tsx
 import { AnalyticEvents } from "ME";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");
 

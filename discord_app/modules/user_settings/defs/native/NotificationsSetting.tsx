@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SystemNotificationsSubLabel } from "../../notifications/native/SettingsNotificationScreen.tsx";
 // discord_app/modules/user_settings/defs/native/NotificationsSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SystemNotificationsSubLabel } from "../../notifications/native/SettingsNotificationScreen.tsx";
 
 obj = {
   useTitle() {

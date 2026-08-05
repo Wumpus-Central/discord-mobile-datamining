@@ -1,11 +1,11 @@
-import { combined } from "../../../../../utils/HelpdeskUtils.tsx";
-import { useGetOrFetchApplications } from "../../../../applications/useGetOrFetchApplications.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { combined } from "../../../../../utils/HelpdeskUtils.tsx";
+import { useGetOrFetchApplications } from "../../../../applications/useGetOrFetchApplications.tsx";
 
 let c5;
 let closure_6;

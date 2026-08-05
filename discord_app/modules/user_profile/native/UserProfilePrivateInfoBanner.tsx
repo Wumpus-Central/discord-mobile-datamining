@@ -1,9 +1,9 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/UserProfilePrivateInfoBanner.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let obj = { banner: null };
 obj = { padding: require("Themes").space.PX_12, borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };

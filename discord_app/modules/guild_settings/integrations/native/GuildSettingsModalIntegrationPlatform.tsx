@@ -1,4 +1,3 @@
-import { getPlatformUserUrl } from "../../../../lib/Platforms.tsx";
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx
 import get_ActivityIndicator from "module_4624";
 import handleFormInit from "handleFormInit";
@@ -7,6 +6,7 @@ import jsxProd from "initialize";
 import createCacheKey from "createCacheKey";
 import { Component } from "map";
 import importAllResult from "map";
+import { getPlatformUserUrl } from "../../../../lib/Platforms.tsx";
 
 let c10;
 let c3;

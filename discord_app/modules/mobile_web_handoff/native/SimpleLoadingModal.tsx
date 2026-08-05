@@ -1,6 +1,6 @@
+// discord_app/modules/mobile_web_handoff/native/SimpleLoadingModal.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/mobile_web_handoff/native/SimpleLoadingModal.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
 export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4, arg1) {

@@ -1,3 +1,11 @@
+// discord_app/modules/search/native/SearchPlatformUtils.tsx
+import handleReaction from "handleReaction";
+import prototype from "prototype";
+import MessageEmbedTypes from "MessageEmbedTypes";
+import SEARCH_TEXT_INPUT_DEBOUNCE_TIME from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";
+import ME from "ME";
+import importDefaultResult from "isDiscordProxiedAssetUrl";
+import importDefaultResult1 from "isDiscordProxiedAssetUrl";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { ClydeIcon } from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import { LinkIcon } from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
@@ -7,14 +15,6 @@ import { SearchActionCreators } from "../SearchActionCreators.tsx";
 import { SearchTokenTypes } from "../SearchUtils.tsx";
 import { SearchPlatformActionCreators } from "SearchPlatformActionCreators.tsx";
 import { Tracking } from "tracking/Tracking.tsx";
-// discord_app/modules/search/native/SearchPlatformUtils.tsx
-import handleReaction from "handleReaction";
-import prototype from "prototype";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import SEARCH_TEXT_INPUT_DEBOUNCE_TIME from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";
-import ME from "ME";
-import importDefaultResult from "isDiscordProxiedAssetUrl";
-import importDefaultResult1 from "isDiscordProxiedAssetUrl";
 
 let SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 let c10;

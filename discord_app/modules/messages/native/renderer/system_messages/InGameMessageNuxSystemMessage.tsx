@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { result } from "../resolveMessageContentColors.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx
 import addApplication from "addApplication";
 import { HelpdeskArticles } from "ME";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { result } from "../resolveMessageContentColors.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
 const require = arg1;
 const result = require("result").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");

@@ -1,15 +1,15 @@
-import { metadata } from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ProfileFrameLayerOrder } from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
-import { map } from "../../../../../design/tokens/native/useToken.tsx";
-import { scaleProfileFrame } from "../../scaleProfileFrame.tsx";
-import { ProfileFrameLayer } from "../ProfileFrame.tsx";
 // discord_app/modules/collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { metadata } from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ProfileFrameLayerOrder } from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
+import { map } from "../../../../../design/tokens/native/useToken.tsx";
+import { scaleProfileFrame } from "../../scaleProfileFrame.tsx";
+import { ProfileFrameLayer } from "../ProfileFrame.tsx";
 
 let c3;
 let c4;

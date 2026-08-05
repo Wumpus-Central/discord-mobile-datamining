@@ -1,12 +1,3 @@
-import { PermissionOverwriteType } from "../../../flow/Server.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { getPlatform } from "../../activities/utils/getPlatform.tsx";
-import { buildCommand } from "../../application_commands/ApplicationCommandUtils.tsx";
-import { getApplicationFlags } from "../../applications/utils/ApplicationFlagUtils.tsx";
-import { canInstallApplication } from "../../applications/utils/ApplicationInstallUtils.tsx";
-import { AppLauncherEntrypoint } from "../AppLauncherTypes.tsx";
 // discord_app/modules/app_launcher/utils/AppLauncherUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import ME from "ME";
@@ -16,6 +7,15 @@ import handleDismissWithDismissed from "handleDismissWithDismissed";
 import { ApplicationFlags } from "ME";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { getPlatform } from "../../activities/utils/getPlatform.tsx";
+import { buildCommand } from "../../application_commands/ApplicationCommandUtils.tsx";
+import { getApplicationFlags } from "../../applications/utils/ApplicationFlagUtils.tsx";
+import { canInstallApplication } from "../../applications/utils/ApplicationInstallUtils.tsx";
+import { AppLauncherEntrypoint } from "../AppLauncherTypes.tsx";
 
 const require = arg1;
 function getShelfBadgeTypeIfActive(application) {

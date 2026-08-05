@@ -1,4 +1,3 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/RelationshipStore.tsx
 import _slicedToArray from "_slicedToArray";
 import hasFlag from "hasFlag";
@@ -6,6 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { RelationshipTypes } from "ME";
 import { Store } from "initialize";
 import set from "mergeGuildAvatar";
+import { dispatcher } from "../Dispatcher.tsx";
 
 function upsertRelationship(arg0, arg1) {
   let value = map.get(arg0);

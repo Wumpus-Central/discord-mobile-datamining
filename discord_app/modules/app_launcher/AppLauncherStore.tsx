@@ -1,6 +1,6 @@
-import { AppLauncherEntrypoint } from "AppLauncherTypes.tsx";
 // discord_app/modules/app_launcher/AppLauncherStore.tsx
 import { Store } from "initialize";
+import { AppLauncherEntrypoint } from "AppLauncherTypes.tsx";
 
 const require = arg1;
 function handleDismissWithDismissed() {

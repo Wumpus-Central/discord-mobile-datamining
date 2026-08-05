@@ -1,9 +1,9 @@
+// discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
 import { t } from "../../../../_runtime/03984_t.js";
 import { ChannelListLayoutTypes } from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import { combineMarkupRules } from "../../markup/combineMarkupRules.tsx";
 import { parseLink } from "../../markup/MarkupRules.tsx";
 import { defaultReactFn } from "../../markup/native/MarkupMessagePreviewReactRules.tsx";
-// discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
 const require = arg1;
 function getOrParseMessagePreviewMarkupAST(arg0) {
   let color;

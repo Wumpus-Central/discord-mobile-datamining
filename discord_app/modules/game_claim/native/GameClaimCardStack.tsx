@@ -1,4 +1,3 @@
-import { PlusSmallIcon } from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
 // discord_app/modules/game_claim/native/GameClaimCardStack.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -7,6 +6,7 @@ import importDefaultResult from "n";
 import importDefaultResult1 from "n";
 import importDefaultResult2 from "n";
 import createCacheKey from "createCacheKey";
+import { PlusSmallIcon } from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
 
 let c3;
 let c4;

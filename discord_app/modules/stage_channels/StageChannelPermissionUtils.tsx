@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { Permissions } from "StageChannelPermissions.tsx";
 // discord_app/modules/stage_channels/StageChannelPermissionUtils.tsx
 import initialize from "initialize";
 import { isGuildOwner } from "GuildNSFWContentLevel";
@@ -9,6 +7,8 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Permissions } from "StageChannelPermissions.tsx";
 
 let c10;
 let unpackModuleId;

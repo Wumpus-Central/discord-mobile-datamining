@@ -1,5 +1,3 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/nuf/native/components/NUFGuildTemplates.tsx
 import GuildTemplateId from "GuildTemplateId";
 import CreationIntent from "CreationIntent";
@@ -9,6 +7,8 @@ import ME from "ME";
 import { GuildTemplateId } from "GuildTemplateId";
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 import { jsx } from "getSystemLocale";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c9;
 let closure_12;

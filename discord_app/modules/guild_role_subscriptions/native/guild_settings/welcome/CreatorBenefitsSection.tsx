@@ -1,3 +1,9 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorBenefitsSection.tsx
+import "set";
+import { View } from "registerAsset";
+import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/16659_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/16662_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/16663_registerAsset.js";
@@ -9,12 +15,6 @@ import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
 import { useTheme } from "../../../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorBenefitsSection.tsx
-import "set";
-import { View } from "registerAsset";
-import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

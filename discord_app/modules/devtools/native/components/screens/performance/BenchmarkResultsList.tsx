@@ -1,8 +1,8 @@
-import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 // discord_app/modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
 let c3;
 let obj1;

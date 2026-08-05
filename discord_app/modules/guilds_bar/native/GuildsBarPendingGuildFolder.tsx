@@ -1,10 +1,10 @@
-import { usePendingFolderGuildIds } from "../usePendingFolderGuildIds.tsx";
-import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx
 import importAllResult from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import { jsx } from "jsxProd";
+import { usePendingFolderGuildIds } from "../usePendingFolderGuildIds.tsx";
+import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

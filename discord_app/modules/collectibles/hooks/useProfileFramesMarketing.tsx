@@ -1,11 +1,11 @@
+// discord_app/modules/collectibles/hooks/useProfileFramesMarketing.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { apexExperiment } from "../experiments/CollectiblesProfileFrameGiftingExperiment.tsx";
 import { apexExperiment } from "../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx";
 import { apexExperiment } from "../experiments/CollectiblesProfileFramesExperiment.tsx";
 import { apexExperiment } from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
 import { useCanPurchaseFrames } from "useCanPurchaseFrames.tsx";
-// discord_app/modules/collectibles/hooks/useProfileFramesMarketing.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 const result = require("apexExperiment").fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");

@@ -1,7 +1,7 @@
+// discord_app/modules/markup/TimestampUtils.tsx
 import { t } from "../../../_runtime/03867_t.js";
 import { resetCache } from "../../utils/DateUtils.tsx";
 import { set } from "../../utils/Durations.tsx";
-// discord_app/modules/markup/TimestampUtils.tsx
 let obj = {
   t(date) {
     return resetCache /* resetCache */.dateFormat(date, "LT");

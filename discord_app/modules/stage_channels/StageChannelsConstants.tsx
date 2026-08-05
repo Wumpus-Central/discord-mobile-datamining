@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelsConstants.tsx
 import { HelpdeskArticles } from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
 
 const result = require("combined").fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
 

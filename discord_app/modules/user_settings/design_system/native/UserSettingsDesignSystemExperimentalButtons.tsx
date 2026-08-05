@@ -1,3 +1,7 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx
+import "noop";
+import get_ActivityIndicator from "set";
+import jsxProd from "jsxProd";
 import { registerAsset } from "../../../../../_runtime/04234_registerAsset.js";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { registerAsset } from "../../../../../_runtime/05323_registerAsset.js";
@@ -12,10 +16,6 @@ import { RowButtonWrapper } from "../../../../design/components/TableRow/native/
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
-// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx
-import "noop";
-import get_ActivityIndicator from "set";
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

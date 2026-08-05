@@ -1,7 +1,7 @@
-import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx
 import reset from "reset";
 import initialize from "initialize";
+import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
 
 const require = arg1;
 const result = require("isStreamKey").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx");

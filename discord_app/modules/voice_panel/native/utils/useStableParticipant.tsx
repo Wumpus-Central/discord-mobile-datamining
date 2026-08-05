@@ -1,11 +1,11 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/modules/voice_panel/native/utils/useStableParticipant.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ParticipantTypes } from "ParticipantTypes";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 
 const require = arg1;
 function areStableParticipantsEqual(arg0, arg1) {

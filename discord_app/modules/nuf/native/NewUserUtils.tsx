@@ -1,7 +1,3 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { NEW_USER_MODAL_KEY } from "components/NewUserModalTypes.tsx";
-import { trackNUFStep } from "NewUserAnalyticsUtils.tsx";
 // discord_app/modules/nuf/native/NewUserUtils.tsx
 import importDefaultResult from "ME";
 import { NativeModules } from "transitionTo";
@@ -11,6 +7,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { ContactPermissions } from "ContactSyncLandingPage";
 import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { NEW_USER_MODAL_KEY } from "components/NewUserModalTypes.tsx";
+import { trackNUFStep } from "NewUserAnalyticsUtils.tsx";
 
 let c9;
 let metroImportAll;

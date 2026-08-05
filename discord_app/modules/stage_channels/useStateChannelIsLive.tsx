@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/useStateChannelIsLive.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useStateChannelIsLive.tsx");

@@ -1,10 +1,10 @@
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { useChannelSafeAreaBottomStyles } from "useChannelSafeAreaBottomStyles.tsx";
-import { useChannelSafeAreaHeightSharedValue } from "useChannelSafeAreaHeightSharedValue.android.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useChannelSafeAreaBottomStyles } from "useChannelSafeAreaBottomStyles.tsx";
+import { useChannelSafeAreaHeightSharedValue } from "useChannelSafeAreaHeightSharedValue.android.tsx";
 
 let c3;
 let c4;

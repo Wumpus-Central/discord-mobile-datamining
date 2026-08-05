@@ -1,8 +1,8 @@
-import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 // discord_app/modules/user_profile/native/UserProfileGameFriendsCard.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ card: { flexDirection: "column" } });

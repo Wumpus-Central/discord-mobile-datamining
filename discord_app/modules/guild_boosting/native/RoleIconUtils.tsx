@@ -1,9 +1,9 @@
-import { getRoleIconData } from "../RoleIconUtils.tsx";
 // discord_app/modules/guild_boosting/native/RoleIconUtils.tsx
 import noop from "noop";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { jsx } from "jsxProd";
+import { getRoleIconData } from "../RoleIconUtils.tsx";
 
 const require = arg1;
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_boosting/native/RoleIconUtils.tsx");

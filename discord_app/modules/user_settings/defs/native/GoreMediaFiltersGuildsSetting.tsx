@@ -1,3 +1,5 @@
+// discord_app/modules/user_settings/defs/native/GoreMediaFiltersGuildsSetting.tsx
+import createToggle from "createToggle";
 import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
@@ -5,8 +7,6 @@ import { useExplicitContentSettingOrDefault } from "../../../explicit_media_reda
 import { handleSensitiveMediaFilterPress } from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import { resolveGoreSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
 import { useUserIsTeen } from "../../../self_mod/hooks/useUserIsTeen.tsx";
-// discord_app/modules/user_settings/defs/native/GoreMediaFiltersGuildsSetting.tsx
-import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle: function getTitle() {

@@ -1,3 +1,9 @@
+// discord_app/modules/devtools/native/components/screens/DevToolsShopScreen.tsx
+import "noop";
+import { ScrollView } from "get ActivityIndicator";
+import getUserAgnosticState from "getUserAgnosticState";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
@@ -8,12 +14,6 @@ import { TableRowGroupTitle } from "../../../../../design/components/TableRow/na
 import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import { useToggleDismissibleContentDismissState } from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-// discord_app/modules/devtools/native/components/screens/DevToolsShopScreen.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import getUserAgnosticState from "getUserAgnosticState";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

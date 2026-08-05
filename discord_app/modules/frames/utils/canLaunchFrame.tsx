@@ -1,6 +1,6 @@
-import { getShelfBadgeTypeIfActive } from "../../app_launcher/utils/AppLauncherUtils.tsx";
 // discord_app/modules/frames/utils/canLaunchFrame.tsx
 import { ApplicationFlags } from "ME";
+import { getShelfBadgeTypeIfActive } from "../../app_launcher/utils/AppLauncherUtils.tsx";
 
 const result = require("getApplicationFlags").fileFinishedImporting("modules/frames/utils/canLaunchFrame.tsx");
 

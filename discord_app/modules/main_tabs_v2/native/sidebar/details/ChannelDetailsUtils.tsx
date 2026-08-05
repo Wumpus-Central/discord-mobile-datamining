@@ -1,6 +1,6 @@
-import { set } from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx
 import { ChannelDetailsButtonTypes } from "ChannelDetailsNavigatorScreens";
+import { set } from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 

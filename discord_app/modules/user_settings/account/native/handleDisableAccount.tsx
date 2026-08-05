@@ -1,8 +1,8 @@
-import { set } from "../../../../actions/AlertActionCreators.tsx";
-import { showUserSettingsInputAlert } from "showUserSettingsInputAlert.tsx";
 // discord_app/modules/user_settings/account/native/handleDisableAccount.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { set } from "../../../../actions/AlertActionCreators.tsx";
+import { showUserSettingsInputAlert } from "showUserSettingsInputAlert.tsx";
 
 const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");

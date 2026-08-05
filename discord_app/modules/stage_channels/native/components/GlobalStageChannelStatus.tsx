@@ -1,5 +1,3 @@
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
-import { useIsInvitedToSpeak } from "../../useIsInvitedToSpeak.tsx";
 // discord_app/modules/stage_channels/native/components/GlobalStageChannelStatus.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import set from "set";
@@ -10,6 +8,8 @@ import closure_9 from "handleStageInstanceCreateOrUpdate";
 import { Fonts } from "ME";
 import jsxProd from "openStageChannelSettings";
 import createCacheKey from "createCacheKey";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { useIsInvitedToSpeak } from "../../useIsInvitedToSpeak.tsx";
 
 let c10;
 let unpackModuleId;

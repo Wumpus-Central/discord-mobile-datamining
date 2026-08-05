@@ -1,6 +1,6 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/storefront/native/StorefrontNativeUtils.android.tsx
 import noop from "noop";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");

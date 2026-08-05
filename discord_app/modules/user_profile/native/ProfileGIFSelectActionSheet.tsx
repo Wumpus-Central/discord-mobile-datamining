@@ -1,8 +1,3 @@
-import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { GIFPicker } from "../../gif_picker/native/GIFPicker.tsx";
 // discord_app/modules/user_profile/native/ProfileGIFSelectActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "createCacheKey";
@@ -10,6 +5,11 @@ import noop from "noop";
 import { View } from "module_9848";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { GIFPicker } from "../../gif_picker/native/GIFPicker.tsx";
 
 let error;
 let metroImportAll;

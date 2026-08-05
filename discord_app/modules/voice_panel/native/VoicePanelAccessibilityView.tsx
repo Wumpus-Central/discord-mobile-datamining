@@ -1,8 +1,8 @@
-import { context } from "pip/VoicePanelPIPStateContext.tsx";
 // discord_app/modules/voice_panel/native/VoicePanelAccessibilityView.tsx
 import { VoicePanelPIPModes } from "VoicePanelPIPModes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { context } from "pip/VoicePanelPIPStateContext.tsx";
 
 const require = arg1;
 let closure_4 = require("noop").memo(require("AccessibilityView").AccessibilityViewAnimated);

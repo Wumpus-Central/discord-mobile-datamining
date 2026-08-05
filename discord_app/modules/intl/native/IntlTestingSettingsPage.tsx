@@ -1,3 +1,12 @@
+// discord_app/modules/intl/native/IntlTestingSettingsPage.tsx
+import _slicedToArray from "_slicedToArray";
+import _getSystemLocale from "_getSystemLocale";
+import Text from "Text";
+import get_ActivityIndicator from "module_1274";
+import { setAppLocale } from "_setAppLocale";
+import closure_9 from "_getSystemLocale";
+import jsxProd from "messagesProxy";
+import createCacheKey from "createCacheKey";
 import { t } from "../../../../_runtime/03867_t.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -9,15 +18,6 @@ import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../messages/SecondTest.messages.js";
 import { messagesProxy } from "../messages/Test.messages.js";
-// discord_app/modules/intl/native/IntlTestingSettingsPage.tsx
-import _slicedToArray from "_slicedToArray";
-import _getSystemLocale from "_getSystemLocale";
-import Text from "Text";
-import get_ActivityIndicator from "module_1274";
-import { setAppLocale } from "_setAppLocale";
-import closure_9 from "_getSystemLocale";
-import jsxProd from "messagesProxy";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let closure_6;

@@ -1,9 +1,9 @@
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/captcha/CaptchaUtils.native.tsx
 import setContent from "setContent";
 import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS";
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");

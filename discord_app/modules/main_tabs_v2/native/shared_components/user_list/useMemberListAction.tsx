@@ -1,5 +1,3 @@
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useScaledRowHeight } from "useScaledRowHeight.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
@@ -11,6 +9,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { jsx } from "UNSAFE_isDismissibleContentDismissed";
 import createCacheKey from "createCacheKey";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useScaledRowHeight } from "useScaledRowHeight.tsx";
 
 let c10;
 let closure_12;

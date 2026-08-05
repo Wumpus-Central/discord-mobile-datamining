@@ -1,3 +1,6 @@
+// discord_app/modules/devtools/native/components/DevToolsScreens.tsx
+import "LanguageIcon";
+import { jsx } from "DownloadIcon";
 import { FramePreviewOverrideSection } from "../../../collectibles/native/tooling/CollectiblesTool.tsx";
 import { MultiGuildDevTools } from "../../../game_community_upsell/native/GameCommunityUpsellDevTools.tsx";
 import { TestLocaleSelector } from "../../../intl/native/IntlTestingSettingsPage.tsx";
@@ -24,9 +27,6 @@ import { handleNewUserOnboarding } from "screens/DevToolsQuickActionsScreen.tsx"
 import { describeServerError } from "screens/DevToolsRevenuePlaygroundScreen.tsx";
 import { DevToolsShopScreen } from "screens/DevToolsShopScreen.tsx";
 import { fuzzySearchToggle } from "screens/DevToolsTogglesScreen.tsx";
-// discord_app/modules/devtools/native/components/DevToolsScreens.tsx
-import "LanguageIcon";
-import { jsx } from "DownloadIcon";
 
 const require = arg1;
 let obj = { analytics: null, buildOverride: null, experiments: null, loggingFlags: null, cacheStats: null, generatedTestUsers: null, dataStorage: null, designSystems: null, dismissibleContent: null, gameCommunityUpsell: null, i18n: null, otatest: null, profiling: null, quickActions: null, revenuePlayground: null, surveyOverride: null, toggles: null, ageVerification: null, components: null, shop: null, shopProductPreview: null, actionSheets: null, accountLinking: null, performanceTesting: null, inAppNotificationTesting: null };

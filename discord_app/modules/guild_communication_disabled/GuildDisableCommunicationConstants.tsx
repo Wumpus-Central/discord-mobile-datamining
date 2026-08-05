@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx
 import importDefaultResult from "combined";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 function getFriendlyDurationString(arg0) {

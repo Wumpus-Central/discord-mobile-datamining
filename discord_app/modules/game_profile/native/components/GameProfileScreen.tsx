@@ -1,5 +1,3 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import getGameProfileStoreWebsiteData from "getGameProfileStoreWebsiteData";
@@ -7,6 +5,8 @@ import get_ActivityIndicator from "CONFIG_NEVER_ANIMATE_TIMING";
 import getSimilarGames from "getSimilarGames";
 import jsxProd from "GameProfileStoreLinksActionSheet";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c5;
 let c9;

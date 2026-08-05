@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/polls/usePollDurationOptions.tsx
 import { PollDurations } from "POLL_ATTACHMENT_FOLDER";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");
 

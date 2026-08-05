@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SafetyTipsContainer } from "SafetyTipsSection.tsx";
-import { SafetyToolsActionSheetWrapper } from "SafetyToolsActionSheetWrapper.tsx";
 // discord_app/modules/self_mod/shared/native/SafetyToolsSafetyTipsActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { getInappropriateConversationsSafetyTips as closure_4 } from "LOCATION_CONTEXT_MOBILE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SafetyTipsContainer } from "SafetyTipsSection.tsx";
+import { SafetyToolsActionSheetWrapper } from "SafetyToolsActionSheetWrapper.tsx";
 
 const require = arg1;
 createCacheKey = { safetyTipsContainer: null };

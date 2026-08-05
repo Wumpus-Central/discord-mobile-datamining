@@ -1,11 +1,11 @@
-import { SearchFilterButton } from "autocomplete/SearchFilterButton.tsx";
-import { SearchFilterPrefixRow } from "autocomplete/SearchFilterSuggestions.tsx";
-import { SearchBar } from "SearchBar.tsx";
 // discord_app/modules/search/native/components/layout/SearchScreenSearchBar.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SearchFilterButton } from "autocomplete/SearchFilterButton.tsx";
+import { SearchFilterPrefixRow } from "autocomplete/SearchFilterSuggestions.tsx";
+import { SearchBar } from "SearchBar.tsx";
 
 let c3;
 let c4;

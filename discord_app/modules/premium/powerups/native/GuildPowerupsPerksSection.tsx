@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../GuildPowerups.messages.js";
-import { GuildPowerupsSectionHeader } from "GuildPowerupsSectionHeader.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsPerksSection.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../GuildPowerups.messages.js";
+import { GuildPowerupsSectionHeader } from "GuildPowerupsSectionHeader.tsx";
 
 let c4;
 let c5;

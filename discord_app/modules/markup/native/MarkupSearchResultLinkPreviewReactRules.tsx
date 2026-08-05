@@ -1,6 +1,6 @@
+// discord_app/modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx
 import { Button } from "../../../design/void/native.tsx";
 import { defaultReactFn } from "MarkupMessagePreviewReactRules.tsx";
-// discord_app/modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx
 const result = require("set").fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 
 export const createSearchResultLinkPreviewReactRules = function createSearchResultLinkPreviewReactRules() {

@@ -1,6 +1,6 @@
+// discord_app/modules/guild_mod_dash_member_safety/DateUtils.tsx
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getTimestampString } from "../threads/getTimestampString.tsx";
-// discord_app/modules/guild_mod_dash_member_safety/DateUtils.tsx
 function getJoinedAtDateFormatter() {
   return { seconds: getSystemLocale /* getSystemLocale */.t["FsBhl/"], minutes: getSystemLocale /* getSystemLocale */.t["4d1mgT"], hours: getSystemLocale /* getSystemLocale */.t["2wkczD"], days: getSystemLocale /* getSystemLocale */.t["ocdS+f"], months: getSystemLocale /* getSystemLocale */.t["az14+h"], years: getSystemLocale /* getSystemLocale */.t["5Gk1ns"] };
 }

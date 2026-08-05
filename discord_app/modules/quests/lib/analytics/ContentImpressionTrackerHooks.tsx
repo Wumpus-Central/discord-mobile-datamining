@@ -1,7 +1,7 @@
-import { set } from "ContentImpressionTracker.tsx";
 // discord_app/modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx
 import noop from "noop";
 import initializeState from "initializeState";
+import { set } from "ContentImpressionTracker.tsx";
 
 const require = arg1;
 const result = require("AdCreativeType").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");

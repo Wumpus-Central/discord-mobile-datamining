@@ -1,6 +1,3 @@
-import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { createEmptyState } from "slate/SlateUtils.tsx";
 // discord_app/modules/channel_text_area/PlaintextResolvers.tsx
 import _slicedToArray from "_slicedToArray";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -16,6 +13,9 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
 import { EmojiIntention } from "set";
+import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { createEmptyState } from "slate/SlateUtils.tsx";
 
 const require = arg1;
 function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {

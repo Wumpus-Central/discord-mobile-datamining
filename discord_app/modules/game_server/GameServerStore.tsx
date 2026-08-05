@@ -1,6 +1,6 @@
-import { gameServerResponseToInstance } from "utils/gameServerResponseToInstance.tsx";
 // discord_app/modules/game_server/GameServerStore.tsx
 import { PersistedStore } from "initialize";
+import { gameServerResponseToInstance } from "utils/gameServerResponseToInstance.tsx";
 
 function handleGameServerInstanceCreated(arg0) {
   let gameServer;

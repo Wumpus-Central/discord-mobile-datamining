@@ -1,6 +1,3 @@
-import { set } from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
-import { useChatWidth } from "../../../chat/native/useChatWidth.tsx";
-import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
 // discord_app/modules/forums/native/posts/ForumPostUsername.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -8,6 +5,9 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import { useForumChannelStore } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import { useChatWidth } from "../../../chat/native/useChatWidth.tsx";
+import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
 
 let closure_6;
 let error;

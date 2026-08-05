@@ -1,9 +1,9 @@
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

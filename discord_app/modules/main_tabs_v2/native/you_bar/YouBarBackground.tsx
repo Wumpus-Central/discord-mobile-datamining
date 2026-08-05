@@ -1,3 +1,9 @@
+// discord_app/modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx
+import { View } from "get ActivityIndicator";
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { n } from "../../../../../_runtime/00689_n.js";
 import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { _isNativeReflectConstruct } from "../../../../../_runtime/05260__isNativeReflectConstruct.js";
@@ -6,12 +12,6 @@ import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/sp
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 import { useQuestDockAnimatedBorderRadius } from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-// discord_app/modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx
-import { View } from "get ActivityIndicator";
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let closure_6;
 let error;

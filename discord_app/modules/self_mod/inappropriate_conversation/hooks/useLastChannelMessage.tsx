@@ -1,6 +1,6 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx
 import reinjectEphemerals from "reinjectEphemerals";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");

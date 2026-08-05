@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CreatorRevenueButton } from "CreatorRevenueButton.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CreatorRevenueButton } from "CreatorRevenueButton.tsx";
 
 const require = arg1;
 let closure_3 = createCacheKey.createStyles({ crButton: { marginVertical: 16 } });

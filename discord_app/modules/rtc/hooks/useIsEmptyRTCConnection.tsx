@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/rtc/hooks/useIsEmptyRTCConnection.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");

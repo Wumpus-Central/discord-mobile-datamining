@@ -1,4 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/13872_registerAsset.js";
 // discord_app/modules/webauthn/native/nav_steps/PasskeyInitStep.tsx
 import _slicedToArray from "_slicedToArray";
 import TableRowGroupTitle from "TableRowGroupTitle";
@@ -7,6 +6,7 @@ import hasFetchedCredentials from "hasFetchedCredentials";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import jsxProd from "useAuthSessions";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/13872_registerAsset.js";
 
 let c10;
 let c5;

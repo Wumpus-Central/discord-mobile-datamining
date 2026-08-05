@@ -1,10 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { mergeMessage } from "../lib/ChannelMessages.tsx";
-import { items } from "../lib/MessageQueue.tsx";
-import { redactionSettingToRenderedString } from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { _handleConnectionOpen } from "../modules/gateway/GatewayConnectionStore.tsx";
-import { MAX_REACTIONS } from "../modules/reactions/ReactionUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/MessageStore.tsx
 import canEditMessage from "canEditMessage";
 import fetchFingerprint from "fetchFingerprint";
@@ -25,6 +18,13 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
+import { mergeMessage } from "../lib/ChannelMessages.tsx";
+import { items } from "../lib/MessageQueue.tsx";
+import { redactionSettingToRenderedString } from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import { _handleConnectionOpen } from "../modules/gateway/GatewayConnectionStore.tsx";
+import { MAX_REACTIONS } from "../modules/reactions/ReactionUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 let closure_19;
 let closure_20;

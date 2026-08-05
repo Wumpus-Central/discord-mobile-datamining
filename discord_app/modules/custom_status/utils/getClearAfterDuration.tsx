@@ -1,7 +1,7 @@
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/custom_status/utils/getClearAfterDuration.tsx
 import { ClearAfterValues } from "StatusTypes";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { set } from "../../../utils/Durations.tsx";
 
 const result = require("module_38").fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");
 

@@ -1,9 +1,9 @@
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/utils/LibraryApplicationUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import addSku from "addSku";
 import ME from "ME";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 
 let c5;
 let closure_6;

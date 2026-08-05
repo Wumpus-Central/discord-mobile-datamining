@@ -1,8 +1,8 @@
-import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx
 import noop from "noop";
 import zustandStore from "zustandStore";
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
+import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 const require = arg1;
 const result = require("GUILD_SELECT_ALL_SERVERS_OPTION_ID").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");

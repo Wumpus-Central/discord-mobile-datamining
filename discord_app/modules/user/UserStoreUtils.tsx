@@ -1,8 +1,8 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/user/UserStoreUtils.tsx
 import { Environments } from "Environments";
 import ME from "ME";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 let c4;
 let c5;

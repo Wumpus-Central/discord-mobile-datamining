@@ -1,10 +1,10 @@
-import { fails } from "../backoff/Backoff.tsx";
-import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 // discord_common/js/packages/flux/createFetchStore.tsx
 import closure_3 from "keys";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import keys from "keys";
+import { fails } from "../backoff/Backoff.tsx";
+import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 
 let c5;
 let closure_6;

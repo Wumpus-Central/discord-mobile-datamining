@@ -1,15 +1,15 @@
-import { Directions } from "../../../../../_runtime/05368_Directions.js";
-import { registerAsset } from "../../../../../_runtime/10591_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useParticipantTileTapGesture } from "../useParticipantTileTapGesture.tsx";
 // discord_app/modules/video_calls/native/components/ScreenshareTile.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { NOOP } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Directions } from "../../../../../_runtime/05368_Directions.js";
+import { registerAsset } from "../../../../../_runtime/10591_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useParticipantTileTapGesture } from "../useParticipantTileTapGesture.tsx";
 
 let c3;
 let c4;

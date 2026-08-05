@@ -1,9 +1,3 @@
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { isForegrounded } from "SessionForegroundUtils.native.tsx";
-import { isActiveUserRoute } from "SessionRouteUtils.native.tsx";
-import { result } from "SessionUtils.tsx";
 // discord_app/modules/analytics_sessions/SessionHeartbeatScheduler.tsx
 import closure_3 from "ME";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -13,6 +7,12 @@ import importDefaultResult1 from "createRTCConnection";
 import ME from "ME";
 import isForegrounded from "isForegrounded";
 import isActiveUserRoute from "isActiveUserRoute";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
+import { isForegrounded } from "SessionForegroundUtils.native.tsx";
+import { isActiveUserRoute } from "SessionRouteUtils.native.tsx";
+import { result } from "SessionUtils.tsx";
 
 let c10;
 let c9;

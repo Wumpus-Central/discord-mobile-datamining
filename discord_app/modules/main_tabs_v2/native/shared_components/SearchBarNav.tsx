@@ -1,12 +1,12 @@
-import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 
 let StyleSheet;
 let c3;

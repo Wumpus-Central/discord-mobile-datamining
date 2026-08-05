@@ -1,10 +1,10 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/interaction_components/native/InteractionModal.tsx
 import "noop";
 import get_ActivityIndicator from "Button";
 import { InteractionModalState } from "getModalState";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 
 let c3;
 let c4;

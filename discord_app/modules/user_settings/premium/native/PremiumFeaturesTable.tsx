@@ -1,11 +1,3 @@
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
-import { registerAsset } from "../../../../../_runtime/12654_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesTable.tsx
 import _slicedToArray from "_slicedToArray";
 import PremiumTier0LogoSmall from "PremiumTier0LogoSmall";
@@ -15,6 +7,14 @@ import GuildFeatures from "GuildFeatures";
 import jsxProd from "preload";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { registerAsset } from "../../../../../_runtime/12654_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let c9;

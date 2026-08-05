@@ -1,7 +1,7 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx
 import ComponentDispatcher from "ComponentDispatcher";
 import { ComponentActions } from "ME";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 function AsyncFromSyncIterator(arg0) {

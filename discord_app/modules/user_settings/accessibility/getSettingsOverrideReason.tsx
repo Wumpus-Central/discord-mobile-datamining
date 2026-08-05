@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/accessibility/getSettingsOverrideReason.tsx
 import updateExistingSettings from "updateExistingSettings";
 import { SettingsOverrideReasonKeys as closure_3 } from "MAX_FAVORITES";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");

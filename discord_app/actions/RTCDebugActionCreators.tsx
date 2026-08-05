@@ -1,8 +1,8 @@
+// discord_app/actions/RTCDebugActionCreators.tsx
+import updateStats from "updateStats";
 import { dispatcher } from "../Dispatcher.tsx";
 import { set } from "../lib/DiscordNative.tsx";
 import { trackVoiceAndVideoDebuggingSettingsUpdated } from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
-// discord_app/actions/RTCDebugActionCreators.tsx
-import updateStats from "updateStats";
 
 const result = require("trackVoiceAndVideoDebuggingSettingsUpdated").fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 

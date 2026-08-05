@@ -1,11 +1,11 @@
-import { _fetchProfile } from "../../actions/UserActionCreators.tsx";
-import { hasFetchedColors } from "../avatar/useAvatarColor.tsx";
-import { openCollectiblesShop } from "../collectibles/CollectiblesActionCreators.tsx";
-import { officialApplicationIds } from "../connections/ConnectionsUtils.tsx";
 // discord_app/modules/user_profile/maybeFetchUserProfile.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
+import { _fetchProfile } from "../../actions/UserActionCreators.tsx";
+import { hasFetchedColors } from "../avatar/useAvatarColor.tsx";
+import { openCollectiblesShop } from "../collectibles/CollectiblesActionCreators.tsx";
+import { officialApplicationIds } from "../connections/ConnectionsUtils.tsx";
 
 const require = arg1;
 let result = require("createUserWidgetFromServer").fileFinishedImporting("modules/user_profile/maybeFetchUserProfile.tsx");

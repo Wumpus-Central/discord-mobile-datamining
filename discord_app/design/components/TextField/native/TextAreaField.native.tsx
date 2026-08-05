@@ -1,11 +1,11 @@
-import { getNodeText } from "../../../utils/native.tsx";
-import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
-import { useTextFieldState } from "useTextField.native.tsx";
 // discord_app/design/components/TextField/native/TextAreaField.native.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { getNodeText } from "../../../utils/native.tsx";
+import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
+import { useTextFieldState } from "useTextField.native.tsx";
 
 let c3;
 let c4;

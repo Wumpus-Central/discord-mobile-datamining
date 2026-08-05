@@ -1,11 +1,11 @@
-import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
-import { getUnitId } from "../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
 // discord_app/modules/premium/powerups/GuildPowerupsManager.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import "initialize";
+import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
+import { getUnitId } from "../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
 
 const require = arg1;
 class GuildPowerupsManager extends tmp2 {

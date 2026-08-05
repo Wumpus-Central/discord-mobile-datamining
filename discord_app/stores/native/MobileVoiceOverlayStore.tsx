@@ -1,9 +1,9 @@
-import { isMetaQuest } from "../../modules/device/MetaQuestUtils.android.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/stores/native/MobileVoiceOverlayStore.tsx
 import { AnalyticEvents } from "ME";
 import { DeviceSettingsStore } from "initialize";
+import { isMetaQuest } from "../../modules/device/MetaQuestUtils.android.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 
 let c4 = false;
 class MobileVoiceOverlayStore extends DeviceSettingsStore {

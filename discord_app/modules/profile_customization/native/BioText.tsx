@@ -1,4 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/profile_customization/native/BioText.tsx
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import { AnalyticEvents } from "ME";
 import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 
 let c9;
 let error;

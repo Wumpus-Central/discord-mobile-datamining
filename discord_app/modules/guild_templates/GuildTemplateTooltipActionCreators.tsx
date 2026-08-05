@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
 import set from "set";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const result = require("ME").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 

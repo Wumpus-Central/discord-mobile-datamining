@@ -1,12 +1,12 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { UserProfileBanner } from "UserProfileBanner.tsx";
 // discord_app/modules/user_profile/native/UserProfileOverscrollBanner.tsx
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import VisualEffectViewThemed from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import importDefaultResult from "module_4146";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { UserProfileBanner } from "UserProfileBanner.tsx";
 
 let c4;
 let c5;

@@ -1,6 +1,6 @@
-import { useInitialValue } from "../../../../../../../hooks/useInitialValue.tsx";
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx
 import noop from "noop";
+import { useInitialValue } from "../../../../../../../hooks/useInitialValue.tsx";
 
 let closure_3 = function SearchFetchPendingManager() {
   const obj = Object.create(new.target.prototype);

@@ -1,9 +1,3 @@
-import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
-import { set } from "../../../core/native/NativeView.tsx";
-import { VoiceBadges } from "../shared/FormComponents.tsx";
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx
 import set from "set";
 import useGetOrFetchApplications from "useGetOrFetchApplications";
@@ -26,6 +20,12 @@ import ME from "ME";
 import { VoiceChannelWarningSurfaces as closure_22 } from "GdmWarningMedium";
 import jsxProd from "t";
 import createCacheKey from "createCacheKey";
+import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
+import { VoiceBadges } from "../shared/FormComponents.tsx";
 
 let closure_19;
 let closure_20;

@@ -1,8 +1,8 @@
+// discord_app/modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx
+import { GuildFeatures } from "ME";
 import { useShouldHideGuildPurchaseEntryPoints } from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 import { useGuildEligibleForGuildProducts } from "../../guild_products/GuildProductsEligibility.tsx";
 import { computeCanEveryoneInGuildSeeRoleSubscriptions } from "../../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx";
-// discord_app/modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx
-import { GuildFeatures } from "ME";
 
 let result = require("computeCanEveryoneInGuildSeeRoleSubscriptions").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 

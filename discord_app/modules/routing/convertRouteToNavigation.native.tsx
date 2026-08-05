@@ -1,6 +1,6 @@
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/routing/convertRouteToNavigation.native.tsx
 import { Routes } from "ME";
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 
 let result = require("navigationToRootTabHelper").fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");
 

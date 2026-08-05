@@ -1,3 +1,17 @@
+// discord_app/modules/guild_settings/native/GuildSettingsModalOverview.tsx
+import { isGuildOwnerWithRequiredMfaLevel as closure_3 } from "GuildNSFWContentLevel";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import comparator from "comparator";
+import handleInviteData from "handleInviteData";
+import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import upsertRelationship from "upsertRelationship";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import handleFormInit from "handleFormInit";
+import ME from "ME";
+import jsxProd from "showSimpleActionSheet";
+import createCacheKey from "createCacheKey";
+import { PureComponent } from "openChannelPicker";
+import importAllResult from "openChannelPicker";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { MAX_TRAITS } from "../../../../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx";
 import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -16,20 +30,6 @@ import { apexExperiment } from "../../premium/powerups/experiments/MobileBoostPr
 import { presentAddedFriendToast } from "../../toast/native/ToastUtils.tsx";
 import { GuildSettingsActionCreators } from "../GuildSettingsActionCreators.tsx";
 import { getSource } from "AssetChooser.tsx";
-// discord_app/modules/guild_settings/native/GuildSettingsModalOverview.tsx
-import { isGuildOwnerWithRequiredMfaLevel as closure_3 } from "GuildNSFWContentLevel";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import handleInviteData from "handleInviteData";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import upsertRelationship from "upsertRelationship";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleFormInit from "handleFormInit";
-import ME from "ME";
-import jsxProd from "showSimpleActionSheet";
-import createCacheKey from "createCacheKey";
-import { PureComponent } from "openChannelPicker";
-import importAllResult from "openChannelPicker";
 
 let c5;
 let closure_12;

@@ -1,6 +1,3 @@
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { useMediaItemSpoilerState } from "../useMediaItemSpoilerState.tsx";
 // discord_app/modules/media_viewer/native/components/MediaViewerThumbnails.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -8,6 +5,9 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { useMediaItemSpoilerState } from "../useMediaItemSpoilerState.tsx";
 
 let THUMBNAIL_HEIGHT;
 let THUMBNAIL_MARGIN;

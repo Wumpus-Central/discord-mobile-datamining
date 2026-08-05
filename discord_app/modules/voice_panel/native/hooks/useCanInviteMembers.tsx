@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/voice_panel/native/hooks/useCanInviteMembers.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("sum").fileFinishedImporting("modules/voice_panel/native/hooks/useCanInviteMembers.tsx");

@@ -1,6 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { UserCircleIcon } from "../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx";
-import { styles } from "../../base_components/AppLauncherOptionIcon.tsx";
 // discord_app/modules/app_launcher/native/options/mentionable/AppLauncherMentionableOption.tsx
 import _slicedToArray from "_slicedToArray";
 import asyncRequireImpl from "asyncRequireImpl";
@@ -10,6 +7,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { StatusTypes } from "sum";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { UserCircleIcon } from "../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx";
+import { styles } from "../../base_components/AppLauncherOptionIcon.tsx";
 
 const require = arg1;
 function MentionableIcon(mentionable) {

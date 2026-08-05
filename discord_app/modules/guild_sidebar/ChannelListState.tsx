@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { hasStream } from "ChannelListUtils.tsx";
 // discord_app/modules/guild_sidebar/ChannelListState.tsx
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";
@@ -31,6 +27,10 @@ import ME from "ME";
 import { ChannelFlags } from "set";
 import { Permissions } from "sum";
 import set from "handleConnectionReset";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { hasStream } from "ChannelListUtils.tsx";
 
 let closure_14;
 let closure_15;

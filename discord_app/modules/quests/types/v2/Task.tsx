@@ -1,6 +1,6 @@
+// discord_app/modules/quests/types/v2/Task.tsx
 import { QuestTaskConfigTypes } from "../../../../../discord_common/js/shared/shared-constants/QuestTaskConfigTypes.tsx";
 import { QuestTaskJoinOperator } from "../../../../../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx";
-// discord_app/modules/quests/types/v2/Task.tsx
 function _firstPartyTasksFromServer(tasks) {
   let obj = {};
   const keys = Object.keys(tasks);

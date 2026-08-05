@@ -1,3 +1,9 @@
+// discord_app/modules/stage_channels/StageChannelActionCreators.tsx
+import 00038__ from "../../../_runtime/metro/00038__.js";
+import handleConnectionOpen from "handleConnectionOpen";
+import updateVoiceState from "updateVoiceState";
+import ME from "ME";
+import { SafetyToastType } from "SafetyToastType";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { ChannelActionCreators } from "../../actions/ChannelActionCreators.tsx";
@@ -6,12 +12,6 @@ import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 import { fillChunk } from "StageChannelUtils.tsx";
 import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
-// discord_app/modules/stage_channels/StageChannelActionCreators.tsx
-import 00038__ from "../../../_runtime/metro/00038__.js";
-import handleConnectionOpen from "handleConnectionOpen";
-import updateVoiceState from "updateVoiceState";
-import ME from "ME";
-import { SafetyToastType } from "SafetyToastType";
 
 let c9;
 let error;

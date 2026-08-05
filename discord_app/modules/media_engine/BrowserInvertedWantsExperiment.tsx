@@ -1,6 +1,6 @@
-import { PlatformTypes } from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 // discord_app/modules/media_engine/BrowserInvertedWantsExperiment.tsx
 import ApexExperiment from "ApexExperiment";
+import { PlatformTypes } from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 let obj = { 1: null };
 obj[1] = { invertWants: true };

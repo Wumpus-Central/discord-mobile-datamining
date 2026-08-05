@@ -1,6 +1,6 @@
-import { getFontScale } from "../../../../screen/native/useFontScale.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useScaledSectionHeight.tsx
 import PX_24 from "PX_24";
+import { getFontScale } from "../../../../screen/native/useFontScale.tsx";
 
 let c3;
 let obj1;

@@ -1,8 +1,8 @@
-import { StreamTextOverlay } from "StreamTile.tsx";
 // discord_app/modules/video_calls/native/components/SingleStream.tsx
 import "noop";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
 import { jsx } from "jsxProd";
+import { StreamTextOverlay } from "StreamTile.tsx";
 
 let c3;
 let c4;

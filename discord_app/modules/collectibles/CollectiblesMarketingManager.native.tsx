@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/collectibles/CollectiblesMarketingManager.native.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 class CollectiblesMarketingManager extends tmp2 {

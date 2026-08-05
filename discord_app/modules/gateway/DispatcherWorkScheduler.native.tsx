@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/gateway/DispatcherWorkScheduler.native.tsx
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS";
 import { AppStates } from "ME";
 import { BasicWorkScheduler } from "_trackAppBackgrounded";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let c3;
 let c4;

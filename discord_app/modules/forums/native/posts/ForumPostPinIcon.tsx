@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../../_runtime/11307_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/forums/native/posts/ForumPostPinIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/11307_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
 
 const require = arg1;
 createCacheKey = { pin: null, pinIcon: null };

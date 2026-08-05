@@ -1,7 +1,7 @@
+// discord_app/modules/screen/native/useScaledTextLineHeight.android.tsx
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFontModule.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getFontScale } from "useFontScale.tsx";
-// discord_app/modules/screen/native/useScaledTextLineHeight.android.tsx
 const map = new Map();
 let result = require("getFontScale").fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
 

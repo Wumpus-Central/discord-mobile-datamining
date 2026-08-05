@@ -1,12 +1,12 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx
+import "noop";
+import { ScrollView } from "get ActivityIndicator";
+import { jsx } from "jsxProd";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { TEXT_VARIANT } from "../../../../../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
-// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx");

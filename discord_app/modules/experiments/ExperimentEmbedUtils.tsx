@@ -1,7 +1,7 @@
+// discord_app/modules/experiments/ExperimentEmbedUtils.tsx
 import { getFirstEligibleUserExperiment } from "../../utils/ExperimentUtils.tsx";
 import { getExperimentVariantsForDevTools } from "devtools/ExperimentDevToolsUtils.tsx";
 import { trackExposureToExperiment } from "ExperimentManager.tsx";
-// discord_app/modules/experiments/ExperimentEmbedUtils.tsx
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 const result = require("getExperimentVariantsForDevTools").fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
 

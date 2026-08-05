@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { hasFetchedColors } from "../../../../avatar/useAvatarColor.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
-import { AppLauncherBackButton } from "../../base_components/AppLauncherBackButton.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/Header.tsx
 import "Button";
 import { View } from "AppLauncherBackButton";
@@ -11,6 +7,10 @@ import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_IC
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { hasFetchedColors } from "../../../../avatar/useAvatarColor.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import { AppLauncherBackButton } from "../../base_components/AppLauncherBackButton.tsx";
 
 let DEFAULT_CONTENT_PADDING;
 let SCREEN_BACKGROUND_COLOR;

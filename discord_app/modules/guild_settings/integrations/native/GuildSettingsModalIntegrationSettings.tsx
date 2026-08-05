@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/16552_registerAsset.js";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationSettings.tsx
 import get_ActivityIndicator from "getPlatformUserUrl";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
@@ -12,6 +6,12 @@ import jsxProd from "Stack";
 import createCacheKey from "createCacheKey";
 import { PureComponent } from "AccessibilityAnnouncer";
 import importAllResult from "AccessibilityAnnouncer";
+import { registerAsset } from "../../../../../_runtime/16552_registerAsset.js";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c3;
 let c4;

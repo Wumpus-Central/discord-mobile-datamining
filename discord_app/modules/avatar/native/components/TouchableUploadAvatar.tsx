@@ -1,14 +1,14 @@
+// discord_app/modules/avatar/native/components/TouchableUploadAvatar.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../_runtime/12036_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/avatar/native/components/TouchableUploadAvatar.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

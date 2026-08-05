@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { context } from "../ICYMIContext.tsx";
 // discord_app/modules/icymi/native/content_inventory/ReactActionSheet.tsx
 import set from "set";
 import SendMessageIcon from "SendMessageIcon";
@@ -9,6 +7,8 @@ import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import { EmojiIntention } from "set";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { context } from "../ICYMIContext.tsx";
 
 let c10;
 let c9;

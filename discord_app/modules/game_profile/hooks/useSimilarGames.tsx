@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { _getShopCollection } from "../GameProfileHttpUtils.tsx";
 // discord_app/modules/game_profile/hooks/useSimilarGames.tsx
 import handleLoadMessages from "handleLoadMessages";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { _getShopCollection } from "../GameProfileHttpUtils.tsx";
 
 let require = arg1;
 let closure_5 = [];

@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { throttleStateFn } from "../../hooks/useThrottle.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 // discord_app/modules/stage_channels/useStageChannelGridParticipants.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getParticipants from "getParticipants";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { throttleStateFn } from "../../hooks/useThrottle.tsx";
+import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 
 const require = arg1;
 let closure_6 = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };

@@ -1,8 +1,8 @@
-import { getAvatarURL } from "../../../../../utils/AvatarUtils.tsx";
-import { hasFetchedColors } from "../../../../avatar/useAvatarColor.tsx";
 // discord_app/modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
+import { getAvatarURL } from "../../../../../utils/AvatarUtils.tsx";
+import { hasFetchedColors } from "../../../../avatar/useAvatarColor.tsx";
 
 let c3 = "#000000";
 let items = [hexToRgba.hexToRgba(require("Themes").unsafe_rawColors.PRIMARY_760), ];

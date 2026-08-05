@@ -1,8 +1,8 @@
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
-import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
 // discord_app/modules/guild_member_verification/UserGuildJoinRequestStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
+import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
 
 const require = arg1;
 function handleGatewayJoinRequestUpdate(arg0) {

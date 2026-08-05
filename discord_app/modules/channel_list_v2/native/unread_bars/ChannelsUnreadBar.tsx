@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ArrowSmallUpIcon";
@@ -7,6 +6,7 @@ import { AnalyticEvents } from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c5;
 let c9;

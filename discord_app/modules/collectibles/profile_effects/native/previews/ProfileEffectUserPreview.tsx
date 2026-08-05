@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { filterLayer } from "../../../../user_profile/native/UserProfilePreview.tsx";
 // discord_app/modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { filterLayer } from "../../../../user_profile/native/UserProfilePreview.tsx";
 
 const require = arg1;
 const result = require("filterLayer").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");

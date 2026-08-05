@@ -1,6 +1,6 @@
-import { XBOX_DISCORD_OCID } from "../../activities/utils/distributorStoreUrls.tsx";
 // discord_app/modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx
 import { Distributors } from "ME";
+import { XBOX_DISCORD_OCID } from "../../activities/utils/distributorStoreUrls.tsx";
 
 const result = require("XBOX_DISCORD_OCID").fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");
 

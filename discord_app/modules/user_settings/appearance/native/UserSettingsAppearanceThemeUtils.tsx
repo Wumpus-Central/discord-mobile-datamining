@@ -1,8 +1,3 @@
-import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
-import { isThemeLight } from "../../../../design/utils/shared/themes.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { ClientThemeType } from "../../../client_themes/ClientThemesTypes.tsx";
-import { setSystemTheme } from "../../ThemeActionCreators.tsx";
 // discord_app/modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import reset from "reset";
@@ -11,6 +6,11 @@ import SystemThemeState from "SystemThemeState";
 import ME from "ME";
 import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_10 } from "items1";
 import { AnalyticsPremiumFeatureNames as closure_11 } from "GuildFeatures";
+import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
+import { isThemeLight } from "../../../../design/utils/shared/themes.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { ClientThemeType } from "../../../client_themes/ClientThemesTypes.tsx";
+import { setSystemTheme } from "../../ThemeActionCreators.tsx";
 
 let c9;
 let closure_6;

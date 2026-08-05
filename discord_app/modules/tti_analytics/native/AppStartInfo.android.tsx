@@ -1,7 +1,7 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx";
 // discord_app/modules/tti_analytics/native/AppStartInfo.android.tsx
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx";
 
 let closure_4 = {};
 const result = require("enforcing").fileFinishedImporting("modules/tti_analytics/native/AppStartInfo.android.tsx");

@@ -1,8 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import { areSetsEqual } from "../../../discord_common/js/shared/utils/SetUtils.tsx";
-import { getCreationDefaultFormatter } from "ForumUtils.tsx";
 // discord_app/modules/forums/ForumActivePostStore.tsx
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import updateState from "updateState";
@@ -13,6 +8,11 @@ import handleConnectionOpen from "handleConnectionOpen";
 import importDefaultResult from "areSetsEqual";
 import { Store } from "initialize";
 import set from "fetchFingerprint";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
+import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import { areSetsEqual } from "../../../discord_common/js/shared/utils/SetUtils.tsx";
+import { getCreationDefaultFormatter } from "ForumUtils.tsx";
 
 const require = arg1;
 function maybeRebuildState() {

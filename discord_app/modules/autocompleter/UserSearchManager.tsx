@@ -1,6 +1,3 @@
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { UserSearchWorkerManager } from "native/UserSearch.worker.tsx";
 // discord_app/modules/autocompleter/UserSearchManager.tsx
 import { isPrivate } from "createChannelRecord";
 import createdAt from "createdAt";
@@ -10,6 +7,9 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserFlags } from "ME";
 import "initialize";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
+import { UserSearchWorkerManager } from "native/UserSearch.worker.tsx";
 
 function getTransformedUser(author) {
   if (null != author) {

@@ -1,4 +1,3 @@
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
 // discord_app/modules/user_profile/native/EditWishlistActionSheet.tsx
 import IconButton from "IconButton";
 import useCardGridLayout from "useCardGridLayout";
@@ -15,6 +14,7 @@ import createCacheKey from "createCacheKey";
 import { LinearTransition } from "module_4146";
 import get BatchedBridge from "../../../../_runtime/00300_get_BatchedBridge.js";
 import dampingResult from "module_100";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
 
 let c5;
 let closure_14;

@@ -1,8 +1,8 @@
+// discord_common/js/packages/flux/Dispatcher.tsx
+import set from "isTracing";
 import { 00038__ } from "../../../../_runtime/metro/00038__.js";
 import { mark } from "../../shared/utils/profiling.tsx";
 import { logger } from "Emitter.tsx";
-// discord_common/js/packages/flux/Dispatcher.tsx
-import set from "isTracing";
 
 function setDisplayName(arg0, displayName) {
   arg0.displayName = displayName;

@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx
 import set from "set";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -9,6 +8,7 @@ import createRTCConnection from "createRTCConnection";
 import { InputModes } from "ME";
 import { StaticChannelRoute } from "set";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const require = arg1;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };

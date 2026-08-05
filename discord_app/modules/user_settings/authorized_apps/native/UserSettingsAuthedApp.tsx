@@ -1,9 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { postMessageToWebView } from "../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
-import { tokensToAppTokensMap } from "../../../oauth2/AuthorizedAppsActionCreators.tsx";
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx
 import tokensToAppTokensMap from "tokensToAppTokensMap";
 import get_ActivityIndicator from "Link";
@@ -18,6 +12,12 @@ import { ChannelDetailsNavigatorScreens as closure_15 } from "ChannelDetailsNavi
 import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_16 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY";
 import jsxProd from "useIsSocialLayerParentApplication";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { postMessageToWebView } from "../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
+import { tokensToAppTokensMap } from "../../../oauth2/AuthorizedAppsActionCreators.tsx";
 
 let c4;
 let c5;

@@ -1,13 +1,13 @@
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { apexExperiment } from "../../cache/NotificationLoadMessagesExperiment.tsx";
-import { shouldEnableYYTextReplacement } from "../../messages/YYTextReplacementExperiment.tsx";
 // discord_app/modules/chat/native/NativeExperimentBridgeManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import fetchFingerprint from "fetchFingerprint";
 import "initialize";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { apexExperiment } from "../../cache/NotificationLoadMessagesExperiment.tsx";
+import { shouldEnableYYTextReplacement } from "../../messages/YYTextReplacementExperiment.tsx";
 
 function syncYYTextReplacementExperiment() {
   if (obj.isIOS()) {

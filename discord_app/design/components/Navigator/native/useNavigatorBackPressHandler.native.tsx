@@ -1,6 +1,6 @@
-import { Link } from "../../../../../_runtime/01481_Link.js";
 // discord_app/design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx
 import noop from "noop";
+import { Link } from "../../../../../_runtime/01481_Link.js";
 
 const require = arg1;
 require("get ActivityIndicator").BackHandler;

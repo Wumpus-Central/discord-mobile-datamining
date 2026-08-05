@@ -1,6 +1,6 @@
+// discord_app/modules/wishlists/CollectiblesWishlistUtils.tsx
 import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { getItemRecordsFromPurchases } from "../collectibles/CollectiblesUtils.tsx";
-// discord_app/modules/wishlists/CollectiblesWishlistUtils.tsx
 let result = require("getItemRecordsFromPurchases").fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 
 export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSku(sku) {

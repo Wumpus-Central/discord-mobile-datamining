@@ -1,12 +1,12 @@
-import { FlashIcon } from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useICYMITabBadge } from "../../../icymi/useICYMITabBadge.tsx";
-import { YouBarButtonIcon } from "YouBarButton.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx
 import { YOU_BAR_BUTTON_ICON_SIZE } from "CONNECTION_BANNER_HEIGHT";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { FlashIcon } from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useICYMITabBadge } from "../../../icymi/useICYMITabBadge.tsx";
+import { YouBarButtonIcon } from "YouBarButton.tsx";
 
 const require = arg1;
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: null };

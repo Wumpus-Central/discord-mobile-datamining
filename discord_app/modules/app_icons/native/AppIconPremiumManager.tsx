@@ -1,10 +1,10 @@
-import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 // discord_app/modules/app_icons/native/AppIconPremiumManager.tsx
 import FreemiumAppIconIds from "FreemiumAppIconIds";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getIconById } from "items";
 import { AnalyticEvents } from "ME";
 import "initialize";
+import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 
 let require = arg1;
 const error = new require("ME")("AppIconPremiumManager");

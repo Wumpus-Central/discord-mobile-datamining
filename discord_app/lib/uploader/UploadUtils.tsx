@@ -1,6 +1,6 @@
+// discord_app/lib/uploader/UploadUtils.tsx
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { cancel } from "Upload.tsx";
-// discord_app/lib/uploader/UploadUtils.tsx
 const result = require("_getAttachmentFile").fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {
 }

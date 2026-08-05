@@ -1,8 +1,8 @@
-import { apply } from "../../../../../../_runtime/00012_apply.js";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
+import { apply } from "../../../../../../_runtime/00012_apply.js";
 
 let c5;
 let closure_6;

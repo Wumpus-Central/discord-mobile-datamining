@@ -1,8 +1,8 @@
-import { getReportInboundErrors } from "../AVErrorUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
+import { getReportInboundErrors } from "../AVErrorUtils.tsx";
 
 const require = arg1;
 let closure_5 = 20 * require("set").Millis.SECOND;

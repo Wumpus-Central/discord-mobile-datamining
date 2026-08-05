@@ -1,7 +1,7 @@
+// discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { trackForumChannelSeenBatch } from "../../tracking/Tracking.tsx";
-// discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
 let c3 = "create-forum-post";
 let result = require("ForumComposerModal").fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 

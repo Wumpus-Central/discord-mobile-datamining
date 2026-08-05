@@ -1,9 +1,9 @@
-import { Button } from "../../../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { Button } from "../../../../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function MessagesItemChannelWave(hasNameplate) {

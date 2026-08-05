@@ -1,12 +1,12 @@
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx
 import useAlertStore from "useAlertStore";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 
 let c4;
 let c5;

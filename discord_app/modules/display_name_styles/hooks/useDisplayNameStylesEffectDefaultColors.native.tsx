@@ -1,9 +1,9 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx
 import noop from "noop";
 import items3 from "items3";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
 
 let c4;
 let c5;

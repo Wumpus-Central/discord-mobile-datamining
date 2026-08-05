@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
 // discord_app/modules/voice_panel/native/card/DominantColorUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
 
 let c5;
 let closure_6;

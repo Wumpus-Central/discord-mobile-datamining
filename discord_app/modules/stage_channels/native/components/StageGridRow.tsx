@@ -1,9 +1,9 @@
-import { getIsScreenLandscape } from "../../../screen/useIsScreenLandscape.native.tsx";
 // discord_app/modules/stage_channels/native/components/StageGridRow.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { getIsScreenLandscape } from "../../../screen/useIsScreenLandscape.native.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center" }, containerLandscape: { justifyContent: "center" } });

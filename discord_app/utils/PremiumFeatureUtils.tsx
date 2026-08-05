@@ -1,8 +1,8 @@
-import { isPremiumAtLeast } from "PremiumTypeUtils.tsx";
 // discord_app/utils/PremiumFeatureUtils.tsx
 import setPremiumTypeActual from "setPremiumTypeActual";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
+import { isPremiumAtLeast } from "PremiumTypeUtils.tsx";
 
 let c3;
 let c4;

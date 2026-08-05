@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildAppliedBoostCount } from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 // discord_app/components_native/premium/GuildBoostingGuildList.tsx
 import "set";
 import get_ActivityIndicator from "getSystemLocale";
@@ -8,6 +6,8 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING as closure_7 } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useGuildAppliedBoostCount } from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 
 let c3;
 let c4;

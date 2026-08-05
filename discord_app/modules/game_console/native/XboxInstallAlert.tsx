@@ -1,10 +1,10 @@
-import { componentDidMount } from "../../../components_native/common/Alert.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/game_console/native/XboxInstallAlert.tsx
 import "noop";
 import XBOX_URL_BASE from "XBOX_URL_BASE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c3;
 let c4;

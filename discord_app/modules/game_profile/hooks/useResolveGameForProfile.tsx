@@ -1,7 +1,7 @@
+// discord_app/modules/game_profile/hooks/useResolveGameForProfile.tsx
 import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 import { importDefaultResult1 } from "../../games/hooks/useGame.tsx";
 import { useResolveGame } from "../../games/hooks/useResolveGame.tsx";
-// discord_app/modules/game_profile/hooks/useResolveGameForProfile.tsx
 let result = require("useResolveGame").fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 
 export default function useResolveGameForProfile(arg0) {

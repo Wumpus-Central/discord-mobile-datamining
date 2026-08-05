@@ -1,11 +1,11 @@
-import { Directions } from "../../../../_runtime/05368_Directions.js";
-import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
-import { BuyNitroPurchaseButton } from "components/purchase_button/BuyNitroPurchaseButton.tsx";
 // discord_app/modules/premium_marketing/native/BuyNitroMarketingFooter.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Directions } from "../../../../_runtime/05368_Directions.js";
+import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
+import { BuyNitroPurchaseButton } from "components/purchase_button/BuyNitroPurchaseButton.tsx";
 
 let Platform;
 let c4;

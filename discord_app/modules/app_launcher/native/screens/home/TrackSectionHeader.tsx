@@ -1,7 +1,7 @@
-import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { trackImpression } from "../../../../app_analytics/useTrackImpression.tsx";
 // discord_app/modules/app_launcher/native/screens/home/TrackSectionHeader.tsx
 import handleDismissWithDismissed from "handleDismissWithDismissed";
+import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { trackImpression } from "../../../../app_analytics/useTrackImpression.tsx";
 
 const require = arg1;
 const result = require("encodeProperties").fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");

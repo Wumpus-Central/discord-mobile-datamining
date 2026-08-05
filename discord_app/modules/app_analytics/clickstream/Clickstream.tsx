@@ -1,11 +1,11 @@
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { getClickstreamDrainEvent } from "ClickstreamEvents.tsx";
-import { clickstreamExperimentEnabled } from "ClickstreamExperiment.tsx";
 // discord_app/modules/app_analytics/clickstream/Clickstream.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { getClickstreamDrainEvent } from "ClickstreamEvents.tsx";
+import { clickstreamExperimentEnabled } from "ClickstreamExperiment.tsx";
 
 const require = arg1;
 function isClickstreamEnabled(flag) {

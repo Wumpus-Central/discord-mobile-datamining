@@ -1,14 +1,14 @@
+// discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/13937_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { TwoFAModalSetupSections } from "TwoFASetupModal.tsx";
 import { styles } from "TwoFASetupStyles.tsx";
-// discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c3;
 let c4;

@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_onboarding/getDefaultProviderDescription.tsx
 import { PlatformTypes } from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/getDefaultProviderDescription.tsx");
 

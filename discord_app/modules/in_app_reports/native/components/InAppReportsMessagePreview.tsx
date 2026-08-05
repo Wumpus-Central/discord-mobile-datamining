@@ -1,12 +1,12 @@
-import { DCDChatItem } from "../../../../components_native/chat/ChatItem.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsMessagePreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { DCDChatItem } from "../../../../components_native/chat/ChatItem.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
 
 let c4;
 let c5;

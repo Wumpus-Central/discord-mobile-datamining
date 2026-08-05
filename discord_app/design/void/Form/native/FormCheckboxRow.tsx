@@ -1,10 +1,10 @@
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { FormCheckbox } from "FormCheckbox.tsx";
-import { FormRow } from "FormRow.tsx";
 // discord_app/design/void/Form/native/FormCheckboxRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { FormCheckbox } from "FormCheckbox.tsx";
+import { FormRow } from "FormRow.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ checkboxWrapperStyle: { flexShrink: 0 } });

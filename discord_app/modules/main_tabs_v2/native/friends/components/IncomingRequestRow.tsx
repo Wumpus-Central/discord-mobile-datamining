@@ -1,5 +1,3 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -7,6 +5,8 @@ import addApplication from "addApplication";
 import { UserRowModes } from "UserRowModes";
 import { RelationshipTypes } from "ME";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
 
 const require = arg1;
 function IncomingRequestRow(user) {

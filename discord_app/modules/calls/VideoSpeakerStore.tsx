@@ -1,4 +1,3 @@
-import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/calls/VideoSpeakerStore.tsx
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
@@ -8,6 +7,7 @@ import getParticipants from "getParticipants";
 import { ParticipantTypes } from "ParticipantTypes";
 import { Store } from "initialize";
 import importDefaultResult from "apply";
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
 
 const require = arg1;
 function updateSpeaker(arg0) {

@@ -1,7 +1,7 @@
-import { context } from "../../window/native/AppEntryKeyContext.tsx";
-import { computeEntryState } from "KeyboardUIStore.native.tsx";
 // discord_app/modules/keyboard/native/useKeyboardType.tsx
 import noop from "noop";
+import { context } from "../../window/native/AppEntryKeyContext.tsx";
+import { computeEntryState } from "KeyboardUIStore.native.tsx";
 
 const require = arg1;
 let result = require("computeEntryState").fileFinishedImporting("modules/keyboard/native/useKeyboardType.tsx");

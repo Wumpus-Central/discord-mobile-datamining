@@ -1,10 +1,10 @@
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import "noop";
 import { Gradients } from "items";
 import { PremiumTypes } from "GuildFeatures";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 
 const require = arg1;
 createCacheKey = { cardContainer: null };

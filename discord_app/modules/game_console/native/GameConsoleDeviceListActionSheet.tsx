@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../_runtime/10782_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10783_registerAsset.js";
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/game_console/native/GameConsoleDeviceListActionSheet.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -13,6 +7,12 @@ import set from "set";
 import { ComponentActions } from "ME";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/10782_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10783_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c9;
 let closure_12;

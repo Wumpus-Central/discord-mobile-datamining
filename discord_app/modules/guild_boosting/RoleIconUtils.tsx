@@ -1,10 +1,10 @@
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/guild_boosting/RoleIconUtils.tsx
 import ME from "ME";
 import set from "set";
 import set from "parseRawEmojiObject";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 
 let c3;
 let c4;

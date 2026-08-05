@@ -1,6 +1,6 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/collectibles/CollectiblesPurchaseStore.tsx
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 let map = new Map();

@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { BaseActivityPanelController } from "../../../activities/panel/native/ActivityPanelController.tsx";
-import { _launchFrameOnNative } from "../../FramesActionCreators.native.tsx";
-import { context } from "FramePanelStateContext.tsx";
 // discord_app/modules/frames/panel/native/FramePanelController.tsx
 import "noop";
 import addApplication from "addApplication";
 import map from "map";
 import { jsx } from "jsxProd";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { BaseActivityPanelController } from "../../../activities/panel/native/ActivityPanelController.tsx";
+import { _launchFrameOnNative } from "../../FramesActionCreators.native.tsx";
+import { context } from "FramePanelStateContext.tsx";
 
 const require = arg1;
 const result = require("map").fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");

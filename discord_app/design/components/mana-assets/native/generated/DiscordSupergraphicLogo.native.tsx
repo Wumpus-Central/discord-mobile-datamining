@@ -1,9 +1,9 @@
-import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordSupergraphicLogo-2x.png.js";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../tokens/native/useToken.tsx";
 // discord_app/design/components/mana-assets/native/generated/DiscordSupergraphicLogo.native.tsx
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordSupergraphicLogo-2x.png.js";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../tokens/native/useToken.tsx";
 
 const result = require("Themes").fileFinishedImporting("design/components/mana-assets/native/generated/DiscordSupergraphicLogo.native.tsx");
 

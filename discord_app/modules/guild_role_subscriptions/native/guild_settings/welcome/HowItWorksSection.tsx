@@ -1,3 +1,8 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/HowItWorksSection.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../_runtime/16655_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/16656_registerAsset.js";
 import { registerAsset } from "../../../../../../_runtime/16657_registerAsset.js";
@@ -5,11 +10,6 @@ import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/HowItWorksSection.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

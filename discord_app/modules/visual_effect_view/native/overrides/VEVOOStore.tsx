@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOStore.tsx
 import keys from "keys";
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = {};
 let closure_3 = keys.create(() => closure_2);

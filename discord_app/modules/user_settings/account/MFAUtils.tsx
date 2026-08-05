@@ -1,11 +1,11 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { _crypto } from "../../../utils/MFAUtils.tsx";
 // discord_app/modules/user_settings/account/MFAUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { _crypto } from "../../../utils/MFAUtils.tsx";
 
 let c5;
 let closure_6;

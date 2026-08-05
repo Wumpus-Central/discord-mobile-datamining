@@ -1,6 +1,6 @@
-import { getPlatformUserUrl } from "../lib/Platforms.tsx";
 // discord_app/records/XboxApplicationRecord.tsx
 import "createExecutable";
+import { getPlatformUserUrl } from "../lib/Platforms.tsx";
 
 let c2 = "xbox:";
 const result = require("set").fileFinishedImporting("records/XboxApplicationRecord.tsx");

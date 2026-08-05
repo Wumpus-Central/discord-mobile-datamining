@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { AccountEditPassword } from "../../account/native/AccountEditPassword.tsx";
 // discord_app/modules/user_settings/defs/native/AccountChangePasswordSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { AccountEditPassword } from "../../account/native/AccountEditPassword.tsx";
 
 obj = {
   useTitle() {

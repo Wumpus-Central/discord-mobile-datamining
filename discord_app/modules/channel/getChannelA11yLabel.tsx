@@ -1,12 +1,12 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-import { isRoleRequired } from "isRoleRequired.tsx";
-import { computeChannelName } from "useChannelName.tsx";
 // discord_app/modules/channel/getChannelA11yLabel.tsx
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
+import { isRoleRequired } from "isRoleRequired.tsx";
+import { computeChannelName } from "useChannelName.tsx";
 
 let closure_6;
 let error;

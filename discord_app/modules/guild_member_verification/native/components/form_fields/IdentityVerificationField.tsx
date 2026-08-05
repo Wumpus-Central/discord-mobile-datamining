@@ -1,10 +1,10 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { MAX_RESULTS_PER_PAGE } from "../../../MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx
 import "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { MAX_RESULTS_PER_PAGE } from "../../../MemberVerificationTypes.tsx";
 
 let c4;
 let c5;

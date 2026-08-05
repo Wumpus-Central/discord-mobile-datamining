@@ -1,5 +1,5 @@
-import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 // discord_app/modules/guild_rooms/GuildRoomUtils.tsx
+import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === GuildRoomObjectTypes /* GuildRoomObjectTypes */.GuildRoomObjectTypes.PLANT) {
     let obj = { objectType: null };

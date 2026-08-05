@@ -1,5 +1,3 @@
-import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
-import { getCurrentUserSigningKey } from "SecureFramesUtils.tsx";
 // discord_app/modules/rtc/SecureFramesVerifiedStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
@@ -8,6 +6,8 @@ import map from "map";
 import closure_6 from "initialize";
 import { RTCConnectionStates } from "ME";
 import { Store } from "initialize";
+import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
+import { getCurrentUserSigningKey } from "SecureFramesUtils.tsx";
 
 const require = arg1;
 function computeCallVerification() {

@@ -1,8 +1,8 @@
+// discord_app/modules/keyboard/native/useKeyboardIsOpen.tsx
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 import { context } from "../../window/native/AppEntryKeyContext.tsx";
 import { KeyboardTypes } from "KeyboardTypes.tsx";
 import { computeEntryState } from "KeyboardUIStore.native.tsx";
-// discord_app/modules/keyboard/native/useKeyboardIsOpen.tsx
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 
 const require = arg1;
 let closure_4 = {};

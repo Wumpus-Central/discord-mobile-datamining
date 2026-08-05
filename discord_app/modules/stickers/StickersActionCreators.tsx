@@ -1,5 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/stickers/StickersActionCreators.tsx
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -9,6 +7,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import closure_8 from "loadSavedGuildStickers";
 import { Endpoints } from "ME";
 import MAX_FAVORITES from "MAX_FAVORITES";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 let c10;
 let unpackModuleId;

@@ -1,9 +1,9 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/premium/premium_group/PremiumGroupStore.tsx
 import reset from "reset";
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
 import { NOOP_NULL } from "ME";
 import { Store } from "initialize";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 let c4;
 let c5;

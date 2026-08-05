@@ -1,10 +1,10 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getHash from "getHash";
 import initialize from "initialize";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let closure_7 = {};

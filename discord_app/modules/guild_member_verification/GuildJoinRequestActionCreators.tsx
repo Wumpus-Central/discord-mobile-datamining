@@ -1,11 +1,11 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { trackMemberApplicationViewed } from "GuildJoinRequestAnalyticUtils.tsx";
 // discord_app/modules/guild_member_verification/GuildJoinRequestActionCreators.tsx
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE";
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord";
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate";
 import ME from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { trackMemberApplicationViewed } from "GuildJoinRequestAnalyticUtils.tsx";
 
 let error;
 let metroImportAll;

@@ -1,4 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/FrecencyStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +7,7 @@ import closure_6 from "handleConnectionOpen";
 import { ID_REGEX } from "ME";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 import { PersistedStore } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 function handleChannelSelect(arg0) {
   let channelId;

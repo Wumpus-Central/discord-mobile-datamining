@@ -1,12 +1,3 @@
-import { registerAsset } from "../../../../_runtime/08422_registerAsset.js";
-import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { parseQuery } from "../../../utils/native/parseURL.tsx";
-import { fetchMessages } from "../../messages/MessageManager.tsx";
-import { voiceRouteRewriter } from "../../routing/native/RouteManagerUtils.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/push_notifications/native/receiveNotification.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import scheduledEventSort from "scheduledEventSort";
@@ -18,6 +9,15 @@ import ME from "ME";
 import { StreamTypes } from "StreamIssueReportReasons";
 import { GuildScheduledEventEntityTypes as closure_16 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { MultiAccountSwitchLocation as closure_17 } from "MAX_ACCOUNTS";
+import { registerAsset } from "../../../../_runtime/08422_registerAsset.js";
+import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { parseQuery } from "../../../utils/native/parseURL.tsx";
+import { fetchMessages } from "../../messages/MessageManager.tsx";
+import { voiceRouteRewriter } from "../../routing/native/RouteManagerUtils.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 let closure_12;
 let closure_14;

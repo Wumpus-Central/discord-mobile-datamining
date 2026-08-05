@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { isSystemMessage } from "../../../../messages/isSystemMessage.tsx";
-import { getStickerExtensionFromFormatType } from "../../../../stickers/StickersUtils.tsx";
 // discord_app/modules/forums/native/posts/hooks/useNativeForumPostContent.tsx
 import { MessageFlags } from "ME";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { isSystemMessage } from "../../../../messages/isSystemMessage.tsx";
+import { getStickerExtensionFromFormatType } from "../../../../stickers/StickersUtils.tsx";
 
 let closure_4 = createCacheKey.createStyles({ italics: { fontStyle: "italic" } });
 const result = require("getSystemLocale").fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");

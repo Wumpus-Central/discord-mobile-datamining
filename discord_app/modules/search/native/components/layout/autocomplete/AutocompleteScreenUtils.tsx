@@ -1,7 +1,3 @@
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
-import { ForwardingIcon } from "../../../../../forwarding/native/ForwardingIcon.tsx";
-import { SearchTokenTypes } from "../../../../SearchUtils.tsx";
 // discord_app/modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";
@@ -9,6 +5,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import prototype from "prototype";
 import { SearchListItemTypes } from "MessageEmbedTypes";
 import { RelationshipTypes } from "ME";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
+import { ForwardingIcon } from "../../../../../forwarding/native/ForwardingIcon.tsx";
+import { SearchTokenTypes } from "../../../../SearchUtils.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");

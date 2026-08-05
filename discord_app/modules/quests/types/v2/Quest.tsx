@@ -1,6 +1,6 @@
+// discord_app/modules/quests/types/v2/Quest.tsx
 import { _rewardRedemptionInstructionsFromServer } from "Reward.tsx";
 import { _firstPartyTasksFromServer } from "Task.tsx";
-// discord_app/modules/quests/types/v2/Quest.tsx
 const result = require("questCtaConfigFromServer").fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
 export const questFromServerV2 = function questFromServerV2(id) {

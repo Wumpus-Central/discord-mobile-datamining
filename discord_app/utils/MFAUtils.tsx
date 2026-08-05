@@ -1,6 +1,6 @@
+// discord_app/utils/MFAUtils.tsx
 import { encode } from "../../_runtime/08290_encode.js";
 import { SentryUtils.native } from "SentryUtils.native.tsx";
-// discord_app/utils/MFAUtils.tsx
 let _crypto;
 if (window != null) {
   _crypto = window.crypto;

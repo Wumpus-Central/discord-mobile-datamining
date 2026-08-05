@@ -1,4 +1,3 @@
-import { isSubscriptionRole } from "PremiumRoleUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/SubscriptionRoleStore.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import { hasPermission } from "GuildRoleRecordTypeTag";
@@ -9,6 +8,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "trackCommunicationDisabled";
+import { isSubscriptionRole } from "PremiumRoleUtils.tsx";
 
 let c9;
 let metroImportAll;

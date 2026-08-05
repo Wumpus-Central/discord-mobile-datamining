@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useIsCreatorMonetizationEnabledGuild } from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
-import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
-import { computeHasRoleSubscriptionsInGuild } from "useHasRoleSubscriptionInGuild.tsx";
 // discord_app/modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx
 import initialize from "initialize";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useIsCreatorMonetizationEnabledGuild } from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
+import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
+import { computeHasRoleSubscriptionsInGuild } from "useHasRoleSubscriptionInGuild.tsx";
 
 const require = arg1;
 function computeCanEveryoneInGuildSeeRoleSubscriptions(c0) {

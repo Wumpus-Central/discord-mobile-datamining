@@ -1,15 +1,15 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { _getQuestsInstructionsToWinReward } from "../../hooks/QuestCopyHooks.tsx";
-import { useQuests } from "../../hooks/QuestHooks.tsx";
-import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
-import { QUEST_PROGRESS_DIAMETER_BY_SIZE } from "../QuestProgressIndicator.tsx";
-import { getDeliveredQuest } from "QuestDockCreativeContext.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { _getQuestsInstructionsToWinReward } from "../../hooks/QuestCopyHooks.tsx";
+import { useQuests } from "../../hooks/QuestHooks.tsx";
+import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
+import { QUEST_PROGRESS_DIAMETER_BY_SIZE } from "../QuestProgressIndicator.tsx";
+import { getDeliveredQuest } from "QuestDockCreativeContext.tsx";
 
 let c5;
 let closure_6;

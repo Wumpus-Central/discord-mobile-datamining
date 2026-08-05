@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/applications/ApplicationActionCreators.tsx
 import dispatcher from "dispatcher";
 import set from "set";
@@ -6,6 +5,7 @@ import createExecutable from "createExecutable";
 import importDefaultResult from "addApplication";
 import ME from "ME";
 import initialize from "initialize";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 let error;
 let metroImportAll;

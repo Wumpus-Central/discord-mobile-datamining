@@ -1,10 +1,10 @@
-import { getAvatarURL } from "../../../../../../utils/AvatarUtils.tsx";
 // discord_app/modules/app_launcher/native/screens/home/recommendations/RecommendationsBannerCard.tsx
 import noop from "noop";
 import { View } from "TableRowArrow";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getAvatarURL } from "../../../../../../utils/AvatarUtils.tsx";
 
 let closure_6;
 let error;

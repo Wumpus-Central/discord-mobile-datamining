@@ -1,10 +1,10 @@
-import { LegacyText } from "../../LegacyText/native/LegacyText.tsx";
 // discord_app/design/void/CardSection/native/CardSection.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { LegacyText } from "../../LegacyText/native/LegacyText.tsx";
 
 let c3;
 let c4;

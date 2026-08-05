@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/instant_invite/native/useInviteSuggestionRows.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +7,7 @@ import _computeRows from "_computeRows";
 import { InviteTargetTypes } from "InviteSendStates";
 import { AnalyticEvents } from "ME";
 import { NOOP_NULL } from "sum";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/instant_invite/native/useInviteSuggestionRows.tsx");

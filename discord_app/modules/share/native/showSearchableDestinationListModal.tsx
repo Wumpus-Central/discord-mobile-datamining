@@ -1,6 +1,6 @@
+// discord_app/modules/share/native/showSearchableDestinationListModal.tsx
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { getBestActiveInput } from "../../../utils/native/ChatInputUtils.tsx";
-// discord_app/modules/share/native/showSearchableDestinationListModal.tsx
 const result = require("set").fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
 
 export default function showSearchableDestinationListModal(outer1_1, closure_0, closure_4) {

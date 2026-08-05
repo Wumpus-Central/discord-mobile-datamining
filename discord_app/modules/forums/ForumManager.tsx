@@ -1,8 +1,8 @@
-import { loadForumPostData } from "ForumPostDataLoader.tsx";
 // discord_app/modules/forums/ForumManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { isStaticChannelRoute } from "set";
 import "initialize";
+import { loadForumPostData } from "ForumPostDataLoader.tsx";
 
 const require = arg1;
 class ForumManager extends tmp2 {

@@ -1,9 +1,9 @@
+// discord_app/modules/ato_alerts/hooks/useLikelyAtoWarning.tsx
+import { SafetyWarningTypes } from "handleConnectionOpen";
 import { useIsMessageRequest } from "../../message_request/hooks/useIsMessageRequest.tsx";
 import { useIsSpamMessageRequest } from "../../message_request/hooks/useIsSpamMessageRequest.tsx";
 import { useChannelSafetyWarning } from "../../self_mod/hooks/useChannelSafetyWarning.tsx";
 import { useInappropriateConversationWarningsForChannel } from "../../self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx";
-// discord_app/modules/ato_alerts/hooks/useLikelyAtoWarning.tsx
-import { SafetyWarningTypes } from "handleConnectionOpen";
 
 const result = require("useIsMessageRequest").fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
 

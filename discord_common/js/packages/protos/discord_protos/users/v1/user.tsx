@@ -1,7 +1,3 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { now } from "../../../google/protobuf/timestamp.tsx";
-import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
-import { create } from "../../safety_common/v1/safety_state.tsx";
 // discord_common/js/packages/protos/discord_protos/users/v1/user.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -35,6 +31,10 @@ import { MessageType as MessageType28 } from "module_1307";
 import { MessageType as MessageType29 } from "module_1307";
 import { MessageType as MessageType30 } from "module_1307";
 import { MessageType as MessageType31 } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { now } from "../../../google/protobuf/timestamp.tsx";
+import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
+import { create } from "../../safety_common/v1/safety_state.tsx";
 
 const require = arg1;
 let obj = { DAY_OF_WEEK_UNSPECIFIED: 0, [0]: "DAY_OF_WEEK_UNSPECIFIED", MONDAY: 1, [1]: "MONDAY", TUESDAY: 2, [2]: "TUESDAY", WEDNESDAY: 3, [3]: "WEDNESDAY", THURSDAY: 4, [4]: "THURSDAY", FRIDAY: 5, [5]: "FRIDAY", SATURDAY: 6, [6]: "SATURDAY", SUNDAY: 7, [7]: "SUNDAY" };

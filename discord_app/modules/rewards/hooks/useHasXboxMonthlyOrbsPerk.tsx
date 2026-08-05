@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 const require = arg1;
 const result = require("getPremiumPlanItem").fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");

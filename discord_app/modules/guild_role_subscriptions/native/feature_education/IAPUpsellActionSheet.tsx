@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx
 import "noop";
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx");

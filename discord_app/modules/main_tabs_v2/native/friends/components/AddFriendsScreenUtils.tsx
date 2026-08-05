@@ -1,10 +1,10 @@
-import { handleRelationshipAddError } from "../../../../../actions/RelationshipActionCreators.tsx";
-import { PeopleUtils } from "../../../../people/PeopleUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
 import ChannelActionCreators from "../../../../../actions/ChannelActionCreators.tsx";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticsSections } from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { handleRelationshipAddError } from "../../../../../actions/RelationshipActionCreators.tsx";
+import { PeopleUtils } from "../../../../people/PeopleUtils.tsx";
 
 const require = arg1;
 function _sendWave() {

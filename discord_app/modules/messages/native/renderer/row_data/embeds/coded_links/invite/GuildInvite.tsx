@@ -1,14 +1,3 @@
-import { registerAsset } from "../../../../../../../../../_runtime/11992_registerAsset.js";
-import { Themes } from "../../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../../../../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
-import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../../../../../../../utils/GuildRecordUtils.tsx";
-import { combined } from "../../../../../../../../utils/HelpdeskUtils.tsx";
-import { getDescriptiveInviteError } from "../../../../../../../../utils/InviteErrorUtils.tsx";
-import { getHeaderTextForInvite } from "../../../../../../getHeaderTextForInvite.tsx";
-import { frozen } from "../../../../EmbedUtils.tsx";
-import { processColorOrThrow } from "../../../../RowGeneratorStyleSheet.tsx";
-import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildInvite.tsx
 import { Image } from "AccessibilityAnnouncer";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
@@ -22,6 +11,17 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import ME from "ME";
 import InviteSendStates from "InviteSendStates";
+import { registerAsset } from "../../../../../../../../../_runtime/11992_registerAsset.js";
+import { Themes } from "../../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../../../../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../../../../../../../../utils/GuildRecordUtils.tsx";
+import { combined } from "../../../../../../../../utils/HelpdeskUtils.tsx";
+import { getDescriptiveInviteError } from "../../../../../../../../utils/InviteErrorUtils.tsx";
+import { getHeaderTextForInvite } from "../../../../../../getHeaderTextForInvite.tsx";
+import { frozen } from "../../../../EmbedUtils.tsx";
+import { processColorOrThrow } from "../../../../RowGeneratorStyleSheet.tsx";
+import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
 
 let c4;
 let c5;

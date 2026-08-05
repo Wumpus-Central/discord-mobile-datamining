@@ -1,12 +1,3 @@
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { registerAsset } from "../../../../_runtime/09793_registerAsset.js";
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
-import { _runPrimaryAppCommandOrJoinEmbeddedActivity } from "../EmbeddedActivitiesActionCreators.tsx";
 // discord_app/modules/activities/native/EmbeddedActivitiesNativeManager.tsx
 import items3 from "items3";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -18,6 +9,15 @@ import WebView from "WebView";
 import set from "set";
 import "getShelfItemTrackingProperties";
 import set from "ensureGuildLoaded";
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { registerAsset } from "../../../../_runtime/09793_registerAsset.js";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
+import { _runPrimaryAppCommandOrJoinEmbeddedActivity } from "../EmbeddedActivitiesActionCreators.tsx";
 
 let c9;
 let metroImportAll;

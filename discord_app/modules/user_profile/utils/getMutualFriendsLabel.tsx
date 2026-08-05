@@ -1,5 +1,5 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/utils/getMutualFriendsLabel.tsx
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
 
 export default function getMutualFriendsLabel(arg0) {

@@ -1,5 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useCanReplyToMessage } from "../../replies/canReplyToMessage.tsx";
 // discord_app/modules/notification_center/native/ForYouItemActionButtons.tsx
 import closure_3 from "ME";
 import handleSupportedURL from "handleSupportedURL";
@@ -9,6 +7,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "NotificationCenterScenes";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useCanReplyToMessage } from "../../replies/canReplyToMessage.tsx";
 
 let c10;
 let c9;

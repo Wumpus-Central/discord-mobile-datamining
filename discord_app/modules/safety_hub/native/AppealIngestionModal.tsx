@@ -1,7 +1,3 @@
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionModal.tsx
 import closure_4 from "SafetyHubView";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +8,10 @@ import SafetyHubView from "SafetyHubView";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import jsxProd from "HeaderBackImage";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
 
 let c10;
 let c9;

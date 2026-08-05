@@ -1,7 +1,7 @@
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/a11y/native/useIsScreenReaderEnabled.native.tsx
 import { AccessibilityInfo } from "get ActivityIndicator";
 import keys from "keys";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {
   return screenReaderEnabled.screenReaderEnabled;

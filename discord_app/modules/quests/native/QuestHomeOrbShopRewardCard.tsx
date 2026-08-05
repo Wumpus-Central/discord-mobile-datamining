@@ -1,11 +1,11 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getProductName } from "../../collectibles/utils/getProductName.tsx";
 // discord_app/modules/quests/native/QuestHomeOrbShopRewardCard.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getProductName } from "../../collectibles/utils/getProductName.tsx";
 
 let closure_6;
 let error;

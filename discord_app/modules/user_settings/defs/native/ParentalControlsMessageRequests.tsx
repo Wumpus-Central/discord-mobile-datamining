@@ -1,3 +1,6 @@
+// discord_app/modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx
+import freshTeenActivityWithMap from "freshTeenActivityWithMap";
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { openIncodeAgeVerificationModal } from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
@@ -5,9 +8,6 @@ import { useParentalControlledExplicitContentSettings } from "../../../parent_to
 import { useSelectedTeen } from "../../../parent_tools/hooks/useSelectedTeen.tsx";
 import { shouldAgeVerifyForDMDefaultOff } from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
 import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

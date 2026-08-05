@@ -1,12 +1,12 @@
-import { registerAsset } from "../../../../_runtime/07841_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionExternalLink.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/07841_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 
 let c4;
 let c5;

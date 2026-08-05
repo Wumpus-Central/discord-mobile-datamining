@@ -1,5 +1,3 @@
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/providers.tsx
 import importDefaultResult from "sum";
 import closure_5 from "set";
@@ -8,6 +6,8 @@ import ME from "ME";
 import items3 from "items3";
 import sum from "sum";
 import set from "RPC_SCOPE_CONFIG";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 let AM_HARMONY_PRD_APPLICATION_ID;
 let AM_HARMONY_STG_APPLICATION_ID;

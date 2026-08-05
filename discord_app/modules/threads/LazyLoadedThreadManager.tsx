@@ -1,5 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 // discord_app/modules/threads/LazyLoadedThreadManager.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createChannelRecord from "createChannelRecord";
@@ -7,6 +5,8 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
 import { isStaticChannelRoute } from "set";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 
 let c4;
 let c5;

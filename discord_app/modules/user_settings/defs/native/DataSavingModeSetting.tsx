@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/DataSavingModeSetting.tsx
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { UserSettingsText } from "../../chat/native/UserSettingsText.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/DataSavingModeSetting.tsx
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

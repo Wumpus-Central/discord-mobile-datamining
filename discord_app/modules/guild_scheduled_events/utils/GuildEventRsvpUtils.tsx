@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useEventException } from "../useEventException.tsx";
-import { useEventSchedule } from "../useEventSchedule.tsx";
 // discord_app/modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import scheduledEventSort from "scheduledEventSort";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useEventException } from "../useEventException.tsx";
+import { useEventSchedule } from "../useEventSchedule.tsx";
 
 let c4;
 let c5;

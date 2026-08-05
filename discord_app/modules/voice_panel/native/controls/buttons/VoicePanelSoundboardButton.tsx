@@ -1,10 +1,10 @@
-import { useSoundboardConfig } from "../../hooks/useSoundboardConfig.tsx";
-import { dismissPanel } from "../../VoicePanelStateContext.tsx";
-import { useVoicePanelButtonStyles } from "VoicePanelStyles.tsx";
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useSoundboardConfig } from "../../hooks/useSoundboardConfig.tsx";
+import { dismissPanel } from "../../VoicePanelStateContext.tsx";
+import { useVoicePanelButtonStyles } from "VoicePanelStyles.tsx";
 
 let c4;
 let c5;

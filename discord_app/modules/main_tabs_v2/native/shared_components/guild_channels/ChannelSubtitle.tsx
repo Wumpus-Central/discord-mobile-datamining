@@ -1,9 +1,9 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getChannelSubtitleData } from "../../../../channel/native/getChannelSubtitleData.tsx";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getChannelSubtitleData } from "../../../../channel/native/getChannelSubtitleData.tsx";
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 
 const require = arg1;
 function ChannelSubtitle(arg0) {

@@ -1,8 +1,8 @@
-import { ReactionTypes } from "../../MessageReactionsTypes.tsx";
-import { BurstReactionAnimation } from "BurstReactionAnimation.tsx";
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { ReactionTypes } from "../../MessageReactionsTypes.tsx";
+import { BurstReactionAnimation } from "BurstReactionAnimation.tsx";
 
 const require = arg1;
 const result = require("ReactionTypes").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx");

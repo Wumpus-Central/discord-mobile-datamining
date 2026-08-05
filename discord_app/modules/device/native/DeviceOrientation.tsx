@@ -1,5 +1,3 @@
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/device/native/DeviceOrientation.tsx
 import noop from "noop";
 import { AppState } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import keys from "keys";
 import importDefaultResult from "get ActivityIndicator";
 import importDefaultResult1 from "get ActivityIndicator";
 import importDefaultResult2 from "get ActivityIndicator";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 function handleOrientationChange(initialOrientation) {

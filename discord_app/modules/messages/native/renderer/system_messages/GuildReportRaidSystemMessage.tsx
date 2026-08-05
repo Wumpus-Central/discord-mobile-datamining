@@ -1,12 +1,12 @@
+// discord_app/modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { ensureAvatarSource } from "../../../../../utils/native/AvatarUtils.tsx";
 import { getTagProperties } from "../getTagProperties.tsx";
 import { result } from "../resolveMessageContentColors.tsx";
 import { nativeStyleProperties } from "GuildAlertModeSystemMessage.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
 
 const require = arg1;
 const result = require("result").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx");

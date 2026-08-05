@@ -1,11 +1,11 @@
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { InteractionState } from "InteractionTypes.tsx";
 // discord_app/modules/interactions/InteractionStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { InteractionState } from "InteractionTypes.tsx";
 
 const require = arg1;
 function deleteNonce(first) {

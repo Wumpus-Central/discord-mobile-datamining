@@ -1,5 +1,3 @@
-import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/relationships/native/IgnoreConfirmationActionSheet.tsx
 import encodeProperties from "encodeProperties";
 import importAllResult from "QUICK_SWITCHER";
@@ -11,6 +9,8 @@ import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHE
 import ME from "ME";
 import jsxProd from "expandEventProperties";
 import createCacheKey from "createCacheKey";
+import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c9;

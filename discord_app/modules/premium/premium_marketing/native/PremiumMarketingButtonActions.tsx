@@ -1,8 +1,8 @@
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
 // discord_app/modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { PremiumTypes } from "GuildFeatures";
 import ME from "ME";
+import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
 
 let c5;
 let closure_6;

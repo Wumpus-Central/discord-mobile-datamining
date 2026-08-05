@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/media_uploads/getAttachmentUploadAbortAlert.tsx
 import { AbortCodes } from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const result = require("items").fileFinishedImporting("modules/media_uploads/getAttachmentUploadAbortAlert.tsx");
 

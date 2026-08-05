@@ -1,13 +1,13 @@
-import { parse } from "../../../_runtime/01464_parse.js";
-import { t } from "../../../_runtime/03984_t.js";
-import { getPathsFromURL } from "../../modules/coded_links/findCodedLinks.tsx";
-import { _resolveGiftCode } from "../GiftCodeUtils.tsx";
 // discord_app/utils/native/parseURL.tsx
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
 import items from "items";
 import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
 import CustomCheckoutFlow from "CustomCheckoutFlow";
+import { parse } from "../../../_runtime/01464_parse.js";
+import { t } from "../../../_runtime/03984_t.js";
+import { getPathsFromURL } from "../../modules/coded_links/findCodedLinks.tsx";
+import { _resolveGiftCode } from "../GiftCodeUtils.tsx";
 
 let c4;
 let c5;

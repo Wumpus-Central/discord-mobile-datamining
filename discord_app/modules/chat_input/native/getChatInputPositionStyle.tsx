@@ -1,5 +1,5 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/chat_input/native/getChatInputPositionStyle.tsx
+import { set } from "../../../utils/PlatformUtils.tsx";
 let obj = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 obj.top = undefined;

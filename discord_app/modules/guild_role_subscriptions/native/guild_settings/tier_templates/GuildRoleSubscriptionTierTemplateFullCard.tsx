@@ -1,3 +1,8 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx
+import "noop";
+import { View } from "set";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { BottomSheetModal } from "../../../../../../_runtime/05340_BottomSheetModal.js";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -8,11 +13,6 @@ import { SectionTitle } from "../../components/listing_elements/GuildRoleSubscri
 import { SubscriptionGatedChannelIcon } from "../../premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import { GuildRoleSubscriptionTierTemplateBasicInfo } from "GuildRoleSubscriptionTierTemplateBasicInfo.tsx";
 import { GuildRoleSubscriptionRolePreview } from "GuildRoleSubscriptionTierTemplateRolePreview.tsx";
-// discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx
-import "noop";
-import { View } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

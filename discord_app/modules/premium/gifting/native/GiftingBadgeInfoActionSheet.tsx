@@ -1,10 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { messagesProxy } from "../GiftingBadge.messages.js";
 // discord_app/modules/premium/gifting/native/GiftingBadgeInfoActionSheet.tsx
 import noop from "noop";
 import { View } from "set";
@@ -14,6 +7,13 @@ import { getSingleRequirementThreshold as closure_7 } from "map";
 import { AnalyticEvents } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { messagesProxy } from "../GiftingBadge.messages.js";
 
 let c10;
 let c9;

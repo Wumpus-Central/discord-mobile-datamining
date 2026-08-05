@@ -1,11 +1,11 @@
-import { ForumChannelCloseSearchButton } from "../../../../forums/native/ForumChannelSearch.tsx";
-import { useIsForumChannelSearchActive } from "../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx";
-import { GuildChannelMemberCount } from "GuildChannelHeader.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { ForumChannelCloseSearchButton } from "../../../../forums/native/ForumChannelSearch.tsx";
+import { useIsForumChannelSearchActive } from "../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx";
+import { GuildChannelMemberCount } from "GuildChannelHeader.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: require("MIN_HEADER_HEIGHT").MIN_HEADER_HEIGHT } });

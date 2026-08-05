@@ -1,6 +1,6 @@
+// discord_app/modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx
 import { _getPrimaryAppCommand } from "../application_commands/getPrimaryAppCommand.tsx";
 import { useIsAppDM } from "useIsAppDM.tsx";
-// discord_app/modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx
 const result = require("canLaunchFrame").fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 
 export default function useShowTryItOutButtonInAppLauncher(arg0) {

@@ -1,10 +1,10 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { _fetchProfile } from "../../../actions/UserActionCreators.tsx";
-import { canReportMessageToMods } from "../ReportToModUtils.tsx";
 // discord_app/modules/report_to_mod/hooks/useReportToModHooks.tsx
 import { useEffect } from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import reinjectEphemerals from "reinjectEphemerals";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { _fetchProfile } from "../../../actions/UserActionCreators.tsx";
+import { canReportMessageToMods } from "../ReportToModUtils.tsx";
 
 const result = require("reinjectEphemerals").fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
 

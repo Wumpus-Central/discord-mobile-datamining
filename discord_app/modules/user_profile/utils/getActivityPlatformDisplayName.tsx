@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/utils/getActivityPlatformDisplayName.tsx
 import { PlatformTypes } from "ME";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const result = require("isOnMetaHorizon").fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");
 

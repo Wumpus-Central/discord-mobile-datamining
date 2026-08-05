@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/collectibles/hooks/useBadBundleFilter.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import map from "map";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 
 require("noop").useCallback;
 let result = require("map").fileFinishedImporting("modules/collectibles/hooks/useBadBundleFilter.tsx");

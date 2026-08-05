@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useIsActivityFocused } from "../../../activities/useIsActivityFocused.tsx";
-import { areParticipantStatesEqual } from "../useIsPrivateAudioOnlyCall.tsx";
 // discord_app/modules/video_calls/native/components/RevealProvider.tsx
 import importAllResult from "noop";
 import setContent from "setContent";
 import set from "set";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
 import jsxProd from "jsxProd";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useIsActivityFocused } from "../../../activities/useIsActivityFocused.tsx";
+import { areParticipantStatesEqual } from "../useIsPrivateAudioOnlyCall.tsx";
 
 let c10;
 let c9;

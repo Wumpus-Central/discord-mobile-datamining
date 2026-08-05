@@ -1,9 +1,9 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 // discord_app/modules/notification_center/NotificationCenterItemsActions.tsx
 import encodeProperties from "encodeProperties";
 import _validate from "_validate";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 
 const require = arg1;
 function _fetchNotificationCenterItems() {

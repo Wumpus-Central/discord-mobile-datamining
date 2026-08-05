@@ -1,6 +1,6 @@
-import { fetch } from "../SearchFetcher.tsx";
 // discord_app/modules/search/managers/SearchFetchManager.tsx
 import { AbstractSearchFetchManager } from "cleanUp";
+import { fetch } from "../SearchFetcher.tsx";
 
 class SearchFetchManager extends AbstractSearchFetchManager {
 }

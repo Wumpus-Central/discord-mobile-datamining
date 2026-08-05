@@ -1,5 +1,3 @@
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { SearchTokenTypes } from "../../SearchUtils.tsx";
 // discord_app/modules/search/native/stores/SearchTabsLayoutStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleReaction from "handleReaction";
@@ -9,6 +7,8 @@ import teardown from "teardown";
 import prototype from "prototype";
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { Store } from "initialize";
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { SearchTokenTypes } from "../../SearchUtils.tsx";
 
 let c10;
 let c9;

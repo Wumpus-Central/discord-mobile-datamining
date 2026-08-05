@@ -1,8 +1,8 @@
+// discord_app/modules/activities/utils/getCanSendInvite.tsx
+import ME from "ME";
 import { getPartySize } from "getPartySize.tsx";
 import { hasPartySize } from "hasPartySize.tsx";
 import { result } from "isInviteActive.tsx";
-// discord_app/modules/activities/utils/getCanSendInvite.tsx
-import ME from "ME";
 
 let c3;
 let c4;

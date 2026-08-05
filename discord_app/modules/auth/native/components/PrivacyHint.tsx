@@ -1,7 +1,3 @@
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PromotionalEmailCheckBox } from "PromotionalEmailCheckBox.tsx";
 // discord_app/modules/auth/native/components/PrivacyHint.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -10,6 +6,10 @@ import { useRegistrationUIStore } from "useRegistrationUIStore";
 import { MarketingURLs } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PromotionalEmailCheckBox } from "PromotionalEmailCheckBox.tsx";
 
 let c3;
 let c4;

@@ -1,3 +1,9 @@
+// discord_app/modules/video_calls/native/components/FocusedControls.tsx
+import importAllResult from "FocusedControlsExpanded";
+import get_ActivityIndicator from "QUICK_SWITCHER";
+import { AnalyticEvents } from "ME";
+import jsxProd from "set";
+import createCacheKey from "createCacheKey";
 import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
 import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import { nativeEventEmitter } from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
@@ -5,12 +11,6 @@ import { useGlobalStatusIndicatorState } from "../../../connectivity/native/useG
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
 import { useRevealProviderValue } from "RevealProvider.tsx";
-// discord_app/modules/video_calls/native/components/FocusedControls.tsx
-import importAllResult from "FocusedControlsExpanded";
-import get_ActivityIndicator from "QUICK_SWITCHER";
-import { AnalyticEvents } from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

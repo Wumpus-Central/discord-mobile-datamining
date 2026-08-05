@@ -1,6 +1,6 @@
-import { BackdropCard } from "../../design_system/native/UserSettingsDesignSystemBackdrop.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemBackdropSetting.tsx
 import createToggle from "createToggle";
+import { BackdropCard } from "../../design_system/native/UserSettingsDesignSystemBackdrop.tsx";
 
 obj = {
   useTitle() {

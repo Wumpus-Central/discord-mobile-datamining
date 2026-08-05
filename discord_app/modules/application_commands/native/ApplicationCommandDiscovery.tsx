@@ -1,7 +1,3 @@
-import { PermissionOverwriteType } from "../../../flow/Server.tsx";
-import { getFontScale } from "../../screen/native/useFontScale.tsx";
-import { useCommandDiscoveryManager } from "../ApplicationCommandDiscoveryManager.tsx";
-import { ScoreMethod } from "../ApplicationCommandQueryTypes.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandDiscovery.tsx
 import _slicedToArray from "_slicedToArray";
 import apply from "apply";
@@ -12,6 +8,10 @@ import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT";
 import ME from "ME";
 import jsxProd from "ApplicationCommandSectionType";
 import createCacheKey from "createCacheKey";
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { getFontScale } from "../../screen/native/useFontScale.tsx";
+import { useCommandDiscoveryManager } from "../ApplicationCommandDiscoveryManager.tsx";
+import { ScoreMethod } from "../ApplicationCommandQueryTypes.tsx";
 
 let c9;
 let closure_12;

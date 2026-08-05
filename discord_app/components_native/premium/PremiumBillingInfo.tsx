@@ -1,6 +1,3 @@
-import { QUICK_SWITCHER } from "../../modules/app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../modules/app_analytics/useAnalyticsLocations.tsx";
-import { createSubscriptionInvoicePreview } from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 // discord_app/components_native/premium/PremiumBillingInfo.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -8,6 +5,9 @@ import { View } from "get ActivityIndicator";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { QUICK_SWITCHER } from "../../modules/app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../modules/app_analytics/useAnalyticsLocations.tsx";
+import { createSubscriptionInvoicePreview } from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 
 let USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING;
 let c5;

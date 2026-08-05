@@ -1,11 +1,11 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportModal.tsx
 import HeaderActionButton from "HeaderActionButton";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE";
 import { jsx } from "jsxProd";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 let result = require("noop").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");

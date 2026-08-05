@@ -1,6 +1,6 @@
-import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/guild_scheduled_events/utils/getGuildEventImage.tsx
 import { Endpoints } from "ME";
+import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
 
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
 

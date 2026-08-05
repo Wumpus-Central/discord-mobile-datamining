@@ -1,13 +1,13 @@
+// discord_app/stores/IdleStore.tsx
+import fetchFingerprint from "fetchFingerprint";
+import ME from "ME";
+import { SpeakingFlags } from "DesktopSources";
 import { SelectedChannelActionCreators } from "../actions/SelectedChannelActionCreators.tsx";
 import { dispatcher } from "../Dispatcher.tsx";
 import { set } from "../lib/DiscordNative.tsx";
 import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 import { set } from "../utils/Durations.tsx";
 import { set } from "../utils/PlatformUtils.tsx";
-// discord_app/stores/IdleStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
-import { SpeakingFlags } from "DesktopSources";
 
 let c5;
 let closure_6;

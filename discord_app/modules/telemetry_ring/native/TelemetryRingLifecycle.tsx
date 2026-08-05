@@ -1,12 +1,12 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getHermesInstrumentedStatsSummary } from "../../../utils/ProcessUtils.native.tsx";
-import { shouldRun } from "channels/ZoomedInTelemetry.tsx";
 // discord_app/modules/telemetry_ring/native/TelemetryRingLifecycle.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getState from "getState";
 import { AppStates } from "ME";
 import "initialize";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getHermesInstrumentedStatsSummary } from "../../../utils/ProcessUtils.native.tsx";
+import { shouldRun } from "channels/ZoomedInTelemetry.tsx";
 
 class TelemetryRingLifecycleImpl extends tmp2 {
   constructor() {

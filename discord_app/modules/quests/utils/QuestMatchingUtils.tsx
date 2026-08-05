@@ -1,11 +1,11 @@
-import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
-import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 // discord_app/modules/quests/utils/QuestMatchingUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import addApplication from "addApplication";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import { ActivityGamePlatforms } from "ME";
 import { XBOX_ACTIVITY_APPLICATION_ID as closure_8 } from "items3";
+import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
+import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 
 let c4;
 let c5;

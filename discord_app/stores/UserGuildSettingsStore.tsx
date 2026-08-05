@@ -1,5 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { reset } from "../lib/MuteTimers.tsx";
 // discord_app/stores/UserGuildSettingsStore.tsx
 import initialize from "initialize";
 import storeThread from "storeThread";
@@ -13,6 +11,8 @@ import { UnreadSetting } from "ReadStateTypes";
 import MAX_FAVORITES from "MAX_FAVORITES";
 import { PersistedStore } from "initialize";
 import set from "createChannelRecord";
+import { apply } from "../../_runtime/00012_apply.js";
+import { reset } from "../lib/MuteTimers.tsx";
 
 let closure_14;
 let closure_15;

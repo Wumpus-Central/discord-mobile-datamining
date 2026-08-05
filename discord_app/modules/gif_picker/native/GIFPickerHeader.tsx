@@ -1,11 +1,11 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { GIF_PROVIDER } from "../GifProvider.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Text";
 import { View } from "PressableBase";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { GIF_PROVIDER } from "../GifProvider.tsx";
 
 let c9;
 let error;

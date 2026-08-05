@@ -1,7 +1,7 @@
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/activities/DeveloperActivityShelfStore.tsx
 import { ApplicationFlags } from "ME";
 import { PersistedStore } from "initialize";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let closure_3 = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };
 let obj = { INITIALIZED: "INITIALIZED", LOADING: "LOADING", LOADED: "LOADED", ERROR: "ERROR" };

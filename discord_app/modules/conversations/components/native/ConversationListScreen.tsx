@@ -1,6 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ConversationListItemBase } from "ConversationListItem.tsx";
 // discord_app/modules/conversations/components/native/ConversationListScreen.tsx
 import closure_3 from "CONVERSATION_COLORS";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +8,9 @@ import CONVERSATION_COLORS from "CONVERSATION_COLORS";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ConversationListItemBase } from "ConversationListItem.tsx";
 
 let c10;
 let c9;

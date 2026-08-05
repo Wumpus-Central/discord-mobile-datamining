@@ -1,10 +1,10 @@
+// discord_app/modules/content_inventory/utils.tsx
 import { t } from "../../../_runtime/03867_t.js";
 import { 03510__ } from "../../../_runtime/metro/03510__.js";
 import { ContentInventoryEntryType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { set } from "../../utils/Durations.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-// discord_app/modules/content_inventory/utils.tsx
 function calculateTimestampDurations(end, now) {
   const bound = Math.max(end - now, 0);
   const result = bound / set.Millis.SECOND;

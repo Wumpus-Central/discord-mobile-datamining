@@ -1,5 +1,5 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 const result = require("set").fileFinishedImporting("modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx");
 
 export const getFallbackHeroColor = function getFallbackHeroColor(stateFromStores1, saturation) {

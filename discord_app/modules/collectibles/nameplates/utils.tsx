@@ -1,9 +1,9 @@
-import { decodeImage } from "../../../../_runtime/01904_decodeImage.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { NAMEPLATE_PALETTES } from "constants.tsx";
 // discord_app/modules/collectibles/nameplates/utils.tsx
 import { isNameplateRecord } from "fromServer";
 import { ThemeTypes } from "sum";
+import { decodeImage } from "../../../../_runtime/01904_decodeImage.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NAMEPLATE_PALETTES } from "constants.tsx";
 
 const result = require("NAMEPLATE_PALETTES").fileFinishedImporting("modules/collectibles/nameplates/utils.tsx");
 

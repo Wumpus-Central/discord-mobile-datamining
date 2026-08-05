@@ -1,10 +1,10 @@
+// discord_app/modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx
+import { CustomCheckoutFlow } from "CustomCheckoutFlow";
+import ME from "ME";
 import { keysSorter } from "../../../../_runtime/05140_keysSorter.js";
 import { _extends } from "../../../../_runtime/metro/04108__extends.js";
 import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
 import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
-// discord_app/modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx
-import { CustomCheckoutFlow } from "CustomCheckoutFlow";
-import ME from "ME";
 
 let c4;
 let c5;

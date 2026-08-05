@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/oauth2/permissions.tsx
 import { Permissions } from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let ADD_REACTIONS;
 let ADMINISTRATOR;

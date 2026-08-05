@@ -1,8 +1,8 @@
+// discord_app/modules/premium/native/MobileTrialUtils.tsx
+import { PremiumSubscriptionSKUToPremiumType as closure_2 } from "GuildFeatures";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import { usePremiumTrialOffer } from "../hooks/usePremiumTrialOffer.android.tsx";
-// discord_app/modules/premium/native/MobileTrialUtils.tsx
-import { PremiumSubscriptionSKUToPremiumType as closure_2 } from "GuildFeatures";
 
 let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
 

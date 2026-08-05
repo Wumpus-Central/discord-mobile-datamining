@@ -1,4 +1,3 @@
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/conversations/ConversationsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +7,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
 import CONVERSATION_COLORS from "CONVERSATION_COLORS";
 import { Store } from "initialize";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 
 let MAX_CHANNELS_WITH_CONVERSATIONS;
 let c10;

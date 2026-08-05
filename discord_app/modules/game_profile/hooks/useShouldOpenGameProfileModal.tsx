@@ -1,9 +1,9 @@
-import { GameFlags } from "../../../../discord_common/js/shared/shared-constants/GameFlags.tsx";
-import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
 // discord_app/modules/game_profile/hooks/useShouldOpenGameProfileModal.tsx
 import noop from "noop";
 import handleLoadMessages from "handleLoadMessages";
 import { AnalyticEvents } from "ME";
+import { GameFlags } from "../../../../discord_common/js/shared/shared-constants/GameFlags.tsx";
+import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
 
 const require = arg1;
 let closure_7 = { NoMatch: "no match", NSFW: "nsfw", Disabled: "profile disabled" };

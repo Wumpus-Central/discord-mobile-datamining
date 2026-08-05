@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/main_tabs_v2/useRecipientsLabel.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");

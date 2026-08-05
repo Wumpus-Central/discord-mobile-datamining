@@ -1,7 +1,7 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/icymi/native/navigator/ICYMINavigator.tsx
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 let c3;
 let obj1;

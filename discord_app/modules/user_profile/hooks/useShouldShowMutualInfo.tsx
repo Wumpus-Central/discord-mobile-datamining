@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useIsUserProfileObfuscated } from "useIsUserProfileObfuscated.tsx";
 // discord_app/modules/user_profile/hooks/useShouldShowMutualInfo.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useIsUserProfileObfuscated } from "useIsUserProfileObfuscated.tsx";
 
 const require = arg1;
 const result = require("useIsUserProfileObfuscated").fileFinishedImporting("modules/user_profile/hooks/useShouldShowMutualInfo.tsx");

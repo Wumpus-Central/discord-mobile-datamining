@@ -1,10 +1,10 @@
-import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 // discord_app/design/components/TableRow/native/TableRowIcon.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 
 const require = arg1;
 let closure_3 = ["color"];

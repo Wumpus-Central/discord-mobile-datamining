@@ -1,10 +1,10 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/game_profile/native/components/GameDetectionReportModal.tsx
 import _slicedToArray from "_slicedToArray";
 import TextArea from "TextArea";
 import get_ActivityIndicator from "TextInput";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 let c5;
 let c9;

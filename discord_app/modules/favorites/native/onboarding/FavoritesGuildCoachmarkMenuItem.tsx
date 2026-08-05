@@ -1,4 +1,3 @@
-import { items1 } from "../../FavoritesDismissibleContent.tsx";
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import initializeFromUserSettings from "initializeFromUserSettings";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import set from "initializeFromUserSettings";
+import { items1 } from "../../FavoritesDismissibleContent.tsx";
 
 const require = arg1;
 function FavoritesGuildCoachmarkMenuItemContent(arg0) {

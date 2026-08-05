@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/safety_flows/usePendingParentRequests.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserLinkStatus } from "items";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("freshTeenActivityWithMap").fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");

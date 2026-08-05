@@ -1,6 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
-import { experiment } from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 // discord_app/modules/calls/useCanRing.tsx
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
@@ -12,6 +9,9 @@ import sortActivity from "sortActivity";
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import { experiment } from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 
 let closure_12;
 let closure_14;

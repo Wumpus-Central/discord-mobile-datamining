@@ -1,5 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/conversations/components/native/ConversationCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,6 +5,8 @@ import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 function NewBadge() {

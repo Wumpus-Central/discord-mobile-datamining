@@ -1,13 +1,13 @@
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { NativeAPNGView } from "../../../components_native/common/NativeAPNGView.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { StickerFormat } from "../StickersTypes.tsx";
-import { NativeLottieView } from "NativeLottieView.tsx";
 // discord_app/modules/stickers/native/Sticker.tsx
 import "noop";
 import { PixelRatio } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
 import { jsx } from "jsxProd";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { NativeAPNGView } from "../../../components_native/common/NativeAPNGView.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { StickerFormat } from "../StickersTypes.tsx";
+import { NativeLottieView } from "NativeLottieView.tsx";
 
 const require = arg1;
 const result = require("handleThemeChange").fileFinishedImporting("modules/stickers/native/Sticker.tsx");

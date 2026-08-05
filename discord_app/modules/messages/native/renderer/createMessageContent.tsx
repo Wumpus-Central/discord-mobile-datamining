@@ -1,8 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
-import { _formatMessageCountLabel } from "../../../threads/MessageCountUtils.tsx";
-import { getEmbedThemeColors } from "row_data/embeds/getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/createMessageContent.tsx
 import { processColor } from "upsertRelationship";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -29,6 +24,11 @@ import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
 import { ReferencedMessageRowState } from "Changeset";
 import ME from "ME";
 import { GuildTagBadgeSize } from "items";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { _formatMessageCountLabel } from "../../../threads/MessageCountUtils.tsx";
+import { getEmbedThemeColors } from "row_data/embeds/getEmbedThemeColors.tsx";
 
 let closure_24;
 let closure_25;

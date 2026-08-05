@@ -1,11 +1,11 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { SettingsAppearanceDarkModeThemePickerScreen } from "../../appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx";
-import { useSyncedModeThemeName } from "useSyncedModeThemeName.tsx";
 // discord_app/modules/user_settings/defs/native/DarkModeThemeSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import { SystemTheme } from "SystemThemeState";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { SettingsAppearanceDarkModeThemePickerScreen } from "../../appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx";
+import { useSyncedModeThemeName } from "useSyncedModeThemeName.tsx";
 
 const require = arg1;
 createToggle = {

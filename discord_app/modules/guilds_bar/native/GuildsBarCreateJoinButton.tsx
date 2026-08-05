@@ -1,9 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CirclePlusIcon } from "../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { HomeDrawerAddServerRowExpandedChildren } from "../../home_drawer/native/HomeDrawerAddServerRow.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx
 import jsxProd from "jsxProd";
 import { View } from "CirclePlusIcon";
@@ -12,6 +6,12 @@ import { PremiumUpsellTypes } from "GuildFeatures";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "set";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CirclePlusIcon } from "../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { HomeDrawerAddServerRowExpandedChildren } from "../../home_drawer/native/HomeDrawerAddServerRow.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
 
 let c5;
 let closure_6;

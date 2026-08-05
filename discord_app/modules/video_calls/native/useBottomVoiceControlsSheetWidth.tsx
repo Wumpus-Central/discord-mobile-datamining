@@ -1,6 +1,6 @@
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 let c3;
 let obj1;

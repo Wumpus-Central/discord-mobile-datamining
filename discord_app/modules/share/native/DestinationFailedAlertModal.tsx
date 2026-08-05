@@ -1,9 +1,3 @@
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
-import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
 // discord_app/modules/share/native/DestinationFailedAlertModal.tsx
 import "getAlertModalItemKey";
 import { View } from "GuildIconWithChannelTypeSizes";
@@ -15,6 +9,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { StatusTypes } from "sum";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
 
 let c10;
 let closure_12;

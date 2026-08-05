@@ -1,4 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/rtc/SecureFramesActionCreators.tsx
 import ME from "ME";
 import fetchFingerprint from "fetchFingerprint";
@@ -6,6 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import updateVoiceState from "updateVoiceState";
 import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
 import { ChannelTypes } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function savePersistentCodesEnabled() {

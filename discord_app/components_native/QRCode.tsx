@@ -1,12 +1,12 @@
-import { QRCode } from "../../_runtime/09021_QRCode.js";
-import { registerAsset } from "../../_runtime/09035_registerAsset.js";
-import { VisualEffectViewThemed } from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
 // discord_app/components_native/QRCode.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { QRCode } from "../../_runtime/09021_QRCode.js";
+import { registerAsset } from "../../_runtime/09035_registerAsset.js";
+import { VisualEffectViewThemed } from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
 
 let c5;
 let c9;

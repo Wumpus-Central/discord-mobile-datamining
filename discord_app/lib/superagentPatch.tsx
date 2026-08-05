@@ -1,4 +1,3 @@
-import { getTimeZone } from "getTimeZone.native.tsx";
 // discord_app/lib/superagentPatch.tsx
 import getHash from "getHash";
 import { AbortCodes } from "ME";
@@ -8,6 +7,7 @@ import sendRequest from "sendRequest";
 import sendRequest from "sendRequest";
 import sendRequest from "sendRequest";
 import importDefaultResult1 from "dispatcher";
+import { getTimeZone } from "getTimeZone.native.tsx";
 
 let closure_0 = arg1;
 function isAnalyticsEndpoint(pathname) {

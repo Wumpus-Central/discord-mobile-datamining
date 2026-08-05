@@ -1,4 +1,3 @@
-import { useCanCurrentUserSpeakInChannel } from "../../useCanSpeakInChannel.tsx";
 // discord_app/modules/stage_channels/native/components/StageChannelExpandedControls.tsx
 import { View } from "get ActivityIndicator";
 import reset from "reset";
@@ -8,6 +7,7 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import importAllResult from "noop";
+import { useCanCurrentUserSpeakInChannel } from "../../useCanSpeakInChannel.tsx";
 
 const require = arg1;
 let obj = { container: null };

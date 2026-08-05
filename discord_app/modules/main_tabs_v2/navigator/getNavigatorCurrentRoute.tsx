@@ -1,5 +1,5 @@
-import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx
+import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
 
 export default function getNavigatorCurrentRoute() {

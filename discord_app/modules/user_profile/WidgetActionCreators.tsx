@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/user_profile/WidgetActionCreators.tsx
 import convertClip from "convertClip";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");

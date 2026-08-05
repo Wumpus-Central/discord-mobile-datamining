@@ -1,7 +1,7 @@
-import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 // discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
+import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 
 let obj = { uiViewClassName: "DCDChatInput", directEventTypes: { topChangeContentSize: { registrationName: "onChangeContentSize" }, topEndBlur: { registrationName: "onEndBlur" }, topBeginFocus: { registrationName: "onBeginFocus" }, topSelectionOrTextChange: { registrationName: "onSelectionOrTextChange" }, topTextFlushed: { registrationName: "onTextFlushed" }, topPasteImage: { registrationName: "onPasteImage" }, topPasteCommand: { registrationName: "onPasteCommand" }, topRequestSend: { registrationName: "onRequestSend" }, topTapAction: { registrationName: "onTapAction" } }, validAttributes: null };
 obj = { textColor: true, editable: true, shouldShowCursor: true, placeholder: true, placeholderColor: true, markAsSpoilerTitle: true, keyboardAppearance: true, selectionColor: true, setNoExtractUI: true, keyboardType: true, maxHeight: true, verticalInset: true };

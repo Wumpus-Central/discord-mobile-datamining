@@ -1,11 +1,11 @@
-import { logger } from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
-import { extractId } from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/experiments/apex/ApexExperiment.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
+import { logger } from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
+import { extractId } from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 function getUnitId(arg0, guildId) {

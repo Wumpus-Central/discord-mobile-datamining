@@ -1,11 +1,3 @@
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
-import { setSystemTheme } from "../user_settings/ThemeActionCreators.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { getThemeForColor } from "ClientThemesUtils.tsx";
 // discord_app/modules/client_themes/ClientThemesBackgroundStore.tsx
 import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
@@ -17,6 +9,14 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "items1";
 import { SystemThemeState } from "SystemThemeState";
 import { PersistedStore } from "initialize";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
+import { setSystemTheme } from "../user_settings/ThemeActionCreators.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { getThemeForColor } from "ClientThemesUtils.tsx";
 
 const require = arg1;
 function isSyncedModeThemesEnabled() {

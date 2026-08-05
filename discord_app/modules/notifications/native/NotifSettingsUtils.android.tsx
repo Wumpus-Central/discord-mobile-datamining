@@ -1,8 +1,8 @@
+// discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
+import items2 from "items2";
 import { NativeNotifSettingsModule } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-// discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
-import items2 from "items2";
 
 let c3;
 let c4;

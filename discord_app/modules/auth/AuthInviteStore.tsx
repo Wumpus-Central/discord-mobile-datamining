@@ -1,6 +1,6 @@
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/auth/AuthInviteStore.tsx
 import { Store } from "initialize";
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 
 const require = arg1;
 let closure_2 = {};

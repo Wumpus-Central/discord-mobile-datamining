@@ -1,7 +1,7 @@
-import { getUnitId } from "../../application_commands/AgeRestrictedApplicationCommandsExperiment.tsx";
-import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
 // discord_app/modules/applications/utils/isApplicationAgeRestricted.tsx
 import addApplication from "addApplication";
+import { getUnitId } from "../../application_commands/AgeRestrictedApplicationCommandsExperiment.tsx";
+import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
 
 const require = arg1;
 const result = require("isAgeRestrictedContentClassification").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");

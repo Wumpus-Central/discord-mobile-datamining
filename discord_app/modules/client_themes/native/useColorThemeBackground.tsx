@@ -1,10 +1,10 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getCustomThemesName } from "MobileThemesUtils.tsx";
 // discord_app/modules/client_themes/native/useColorThemeBackground.tsx
 import noop from "noop";
 import handleThemeChange from "handleThemeChange";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getCustomThemesName } from "MobileThemesUtils.tsx";
 
 let require = arg1;
 function getGuildThemeName() {

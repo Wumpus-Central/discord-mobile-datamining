@@ -1,4 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/hub/useIsHubRealNamePromptShowing.tsx
 import noop from "noop";
 import initialize from "initialize";
@@ -7,6 +6,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { GuildFeatures } from "ME";
 import { GuildPrompts } from "GuildPrompts";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");

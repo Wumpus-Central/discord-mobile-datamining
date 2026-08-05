@@ -1,13 +1,13 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { FreeFormInputGroup } from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/accept_invite/native/JoinServer.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { FreeFormInputGroup } from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 let c10;
 let c4;

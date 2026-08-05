@@ -1,9 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Integer } from "../../../_runtime/00014_Integer.js";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { commandPermissions } from "../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx";
-import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
 // discord_app/modules/application_commands/ApplicationCommandUtils.tsx
 import { isReadableType } from "createChannelRecord";
 import { DraftType } from "handleChanged";
@@ -12,6 +6,12 @@ import ME from "ME";
 import { Permissions } from "sum";
 import deserializeResult from "createChannelRecord";
 import importAllResult from "fromString";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Integer } from "../../../_runtime/00014_Integer.js";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { commandPermissions } from "../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx";
+import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
 
 let c9;
 let closure_6;

@@ -1,4 +1,3 @@
-import { HANDSHAKE } from "../RPCOpcodes.tsx";
 // discord_app/modules/rpc/transports/PostMessageTransport.tsx
 import closure_3 from "set";
 import _slicedToArray from "_slicedToArray";
@@ -7,6 +6,7 @@ import { RPC_EMBEDDED_APP_SCOPE } from "RPC_SCOPE_CONFIG";
 import ME from "ME";
 import { EventEmitter } from "EventEmitter";
 import set from "participantFromServer";
+import { HANDSHAKE } from "../RPCOpcodes.tsx";
 
 let c10;
 let c9;

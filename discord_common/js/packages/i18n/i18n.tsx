@@ -1,4 +1,3 @@
-import { format } from "parse.tsx";
 // discord_common/js/packages/i18n/i18n.tsx
 import 16178__ from "../../../../_runtime/metro/16178__.js";
 import 16179__ from "../../../../_runtime/metro/16179__.js";
@@ -29,6 +28,7 @@ import 16203__ from "../../../../_runtime/metro/16203__.js";
 import 16204__ from "../../../../_runtime/metro/16204__.js";
 import 16205__ from "../../../../_runtime/metro/16205__.js";
 import { EventEmitter } from "EventEmitter";
+import { format } from "parse.tsx";
 
 let require = arg1;
 global.IntlMessageFormat = require("module_16169");

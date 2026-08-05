@@ -1,6 +1,6 @@
+// discord_app/modules/polls/native/EditPollCreationImageAltTextModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-// discord_app/modules/polls/native/EditPollCreationImageAltTextModalActionCreators.tsx
 let c3 = "edit-poll-creation-image-alt-text-modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/native/EditPollCreationImageAltTextModalActionCreators.tsx");
 

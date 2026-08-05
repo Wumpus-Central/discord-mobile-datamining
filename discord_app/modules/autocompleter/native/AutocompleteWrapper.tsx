@@ -1,6 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { AutocompleteLabel } from "Autocomplete.tsx";
 // discord_app/modules/autocompleter/native/AutocompleteWrapper.tsx
 import toggleGuildExpandedState from "toggleGuildExpandedState";
 import importAllResult from "useSafeAreaInsetsKeyboardAware";
@@ -17,6 +14,9 @@ import { AutocompleteTypes } from "AutocompleteTypes";
 import { EmojiInteractionPoint } from "set";
 import jsxProd from "initialize";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { AutocompleteLabel } from "Autocomplete.tsx";
 
 let StyleSheet;
 let c5;

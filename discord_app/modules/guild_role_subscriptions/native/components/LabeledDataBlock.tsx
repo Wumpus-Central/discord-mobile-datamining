@@ -1,10 +1,10 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c3;
 let c4;

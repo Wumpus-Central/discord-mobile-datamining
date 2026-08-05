@@ -1,10 +1,10 @@
+// discord_app/modules/collectibles/hooks/useCanGiftProduct.tsx
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
 import { apexExperiment } from "../experiments/CollectiblesProfileFrameGiftingExperiment.tsx";
 import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 import { useCurrentUser } from "useCurrentUser.tsx";
-// discord_app/modules/collectibles/hooks/useCanGiftProduct.tsx
 let result = require("getItemRecordsFromPurchases").fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = function useCanGiftProduct(product) {

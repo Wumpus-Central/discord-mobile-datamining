@@ -1,8 +1,8 @@
+// discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
+import ME from "ME";
 import { v1 } from "../../../../_runtime/00514_v1.js";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-// discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
-import ME from "ME";
 
 let c3;
 let c4;

@@ -1,6 +1,6 @@
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 
 const require = arg1;
 const HUB_EMAIL_CONNECTION_MODAL_KEY = "HUB_EMAIL_CONNECTION_MODAL_KEY";

@@ -1,7 +1,7 @@
-import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/user_settings/account/native/showUserSettingsInputAlert.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
 
 const require = arg1;
 const result = require("module_4624").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");

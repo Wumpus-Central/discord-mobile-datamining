@@ -1,4 +1,3 @@
-import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 // discord_app/modules/calls/native/VideoBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -7,6 +6,7 @@ import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "useDisplayProfile";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 
 let c10;
 let c5;

@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/components/Tabs/native/Tabs.native.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -6,6 +5,7 @@ import _getSystemLocale from "_getSystemLocale";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "module_4146";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let ScrollView;
 let c4;

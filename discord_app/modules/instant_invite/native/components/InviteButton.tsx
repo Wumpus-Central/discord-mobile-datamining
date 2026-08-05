@@ -1,11 +1,11 @@
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/instant_invite/native/components/InviteButton.tsx
 import { View } from "get ActivityIndicator";
 import { InviteSendStates } from "InviteSendStates";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });

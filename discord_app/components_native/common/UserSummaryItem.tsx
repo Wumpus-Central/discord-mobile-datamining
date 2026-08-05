@@ -1,11 +1,11 @@
-import { Button } from "../../design/void/native.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 // discord_app/components_native/common/UserSummaryItem.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Button } from "../../design/void/native.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 
 const require = arg1;
 createCacheKey = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: null, plusCountContainer: null, cutout: null };

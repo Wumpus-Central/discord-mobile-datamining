@@ -1,10 +1,10 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { FriendSuggestionActionCreators } from "FriendSuggestionActionCreators.tsx";
-import { maybeDispatchDevOnlyDummyFriendSuggestions } from "maybeDispatchDevOnlyDummyFriendSuggestions.tsx";
 // discord_app/modules/friend_suggestions/FriendSuggestionStore.tsx
 import createdAt from "createdAt";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { FriendSuggestionActionCreators } from "FriendSuggestionActionCreators.tsx";
+import { maybeDispatchDevOnlyDummyFriendSuggestions } from "maybeDispatchDevOnlyDummyFriendSuggestions.tsx";
 
 let closure_4 = {};
 let c5 = 0;

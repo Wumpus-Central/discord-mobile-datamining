@@ -1,9 +1,3 @@
-import { isAlertOrActionSheetOpen } from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
-import { isLinkTrusted } from "../../../../utils/MaskedLinkUtils.tsx";
-import { parseQuery } from "../../../../utils/native/parseURL.tsx";
-import { GameProfileActionCreators.native } from "../../../game_profile/GameProfileActionCreators.native.tsx";
-import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
-import { isLinkTrusted } from "../../../markup/MarkupReactLinkUtils.tsx";
 // discord_app/modules/messages/native/handlers/handleMessagesTapLink.tsx
 import { getSection } from "getIndexKey";
 import addApplication from "addApplication";
@@ -19,6 +13,12 @@ import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { StaticChannelRoute } from "set";
 import { NotificationTypes } from "str2";
 import { OpenThreadAnalyticsLocations as closure_18 } from "AbortCodes";
+import { isAlertOrActionSheetOpen } from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
+import { isLinkTrusted } from "../../../../utils/MaskedLinkUtils.tsx";
+import { parseQuery } from "../../../../utils/native/parseURL.tsx";
+import { GameProfileActionCreators.native } from "../../../game_profile/GameProfileActionCreators.native.tsx";
+import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
+import { isLinkTrusted } from "../../../markup/MarkupReactLinkUtils.tsx";
 
 let closure_12;
 let closure_14;

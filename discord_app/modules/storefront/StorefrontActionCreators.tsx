@@ -1,4 +1,3 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/storefront/StorefrontActionCreators.tsx
 import parseSkuIds from "parseSkuIds";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
@@ -7,6 +6,7 @@ import getPromotionIdOverride from "getPromotionIdOverride";
 import handleReset from "handleReset";
 import closure_7 from "parseSkuIds";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function shouldFetchStorefrontPromotions(arg0) {

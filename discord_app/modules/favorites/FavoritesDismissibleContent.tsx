@@ -1,12 +1,12 @@
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { canShowTimeRecurringContent } from "../dismissible_content/useGetDismissibleContent.tsx";
-import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
 // discord_app/modules/favorites/FavoritesDismissibleContent.tsx
 import _slicedToArray from "_slicedToArray";
 import withContent from "withContent";
 import closure_5 from "withContent";
 import { ContentDismissActionType } from "ContentDismissActionType";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { canShowTimeRecurringContent } from "../dismissible_content/useGetDismissibleContent.tsx";
+import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
 
 let c3;
 let c4;

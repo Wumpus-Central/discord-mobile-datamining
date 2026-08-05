@@ -1,7 +1,7 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/friend_suggestions/FriendSuggestionActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 const result = require("sendRequest").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");

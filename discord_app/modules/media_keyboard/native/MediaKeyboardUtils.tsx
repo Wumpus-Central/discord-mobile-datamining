@@ -1,3 +1,13 @@
+// discord_app/modules/media_keyboard/native/MediaKeyboardUtils.tsx
+import map from "map";
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import { DraftType } from "handleChanged";
+import handleConnectionOpen from "handleConnectionOpen";
+import closure_8 from "map";
+import DRAG_HANDLE from "DRAG_HANDLE";
+import ME from "ME";
+import { NativePermissionTypes } from "NativePermissionStatus";
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { dispatcher } from "../../../actions/UploadAttachmentActionCreators.tsx";
 import { cancel } from "../../../lib/uploader/Upload.tsx";
@@ -9,16 +19,6 @@ import { NativePermissionsRequestOptions } from "../../native_permissions/Native
 import { openGiftModal } from "../../premium/native/utils/openGiftModal.tsx";
 import { navigateToThreadCreation } from "../../threads/native/navigateToThreadCreation.tsx";
 import { hideMediaKeyboardActionSheet } from "showMediaKeyboardActionSheet.tsx";
-// discord_app/modules/media_keyboard/native/MediaKeyboardUtils.tsx
-import map from "map";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { DraftType } from "handleChanged";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_8 from "map";
-import DRAG_HANDLE from "DRAG_HANDLE";
-import ME from "ME";
-import { NativePermissionTypes } from "NativePermissionStatus";
 
 let c10;
 let c9;

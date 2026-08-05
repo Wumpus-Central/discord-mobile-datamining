@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/nuf/NUFActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
 
 export const setNewUser = function setNewUser(ORGANIC_REGISTERED) {

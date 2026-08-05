@@ -1,6 +1,6 @@
-import { items } from "../../lib/MessageQueue.tsx";
 // discord_app/modules/messages/MessageQueueManager.tsx
 import "initialize";
+import { items } from "../../lib/MessageQueue.tsx";
 
 class MessageQueueManager extends tmp2 {
   constructor() {

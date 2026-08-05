@@ -1,3 +1,6 @@
+// discord_app/modules/user_profile/native/UserProfileAlertUtils.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import { UserProfileAlertUserReported } from "UserProfileAlertUserReported.tsx";
 import { UserProfileConfirmCancelFriendRequest } from "UserProfileConfirmCancelFriendRequest.tsx";
@@ -5,9 +8,6 @@ import { UserProfileConfirmRemoveFriend } from "UserProfileConfirmRemoveFriend.t
 import { UserProfileConfirmRemoveGameFriend } from "UserProfileConfirmRemoveGameFriend.tsx";
 import { UserProfileConfirmThreadRemove } from "UserProfileConfirmThreadRemove.tsx";
 import { UserProfileConfirmVideoUnstableConnection } from "UserProfileConfirmVideoUnstableConnection.tsx";
-// discord_app/modules/user_profile/native/UserProfileAlertUtils.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("useAlertStore").fileFinishedImporting("modules/user_profile/native/UserProfileAlertUtils.tsx");

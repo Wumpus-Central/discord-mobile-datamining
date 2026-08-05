@@ -1,3 +1,9 @@
+// discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx
+import _slicedToArray from "_slicedToArray";
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -6,12 +12,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { SectionTitle } from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import { TruncatedText } from "Elements.tsx";
 import { emphasisHook } from "SubscribeButton.tsx";
-// discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

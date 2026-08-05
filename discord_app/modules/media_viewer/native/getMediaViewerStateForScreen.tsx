@@ -1,5 +1,5 @@
-import { isValidImageAttachment } from "MediaSourceUtil.tsx";
 // discord_app/modules/media_viewer/native/getMediaViewerStateForScreen.tsx
+import { isValidImageAttachment } from "MediaSourceUtil.tsx";
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
 export default function getMediaViewerStateForScreen(arg0, arg1, closure_1) {

@@ -1,15 +1,15 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TimerIcon } from "../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { set } from "../../../../utils/Durations.tsx";
-import { calculateTimestampDurations } from "../../../content_inventory/utils.tsx";
 // discord_app/modules/icymi/native/content_inventory/Badges.tsx
 import set from "set";
 import { View } from "RetryIcon";
 import _getSystemLocale from "_getSystemLocale";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TimerIcon } from "../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { set } from "../../../../utils/Durations.tsx";
+import { calculateTimestampDurations } from "../../../content_inventory/utils.tsx";
 
 let closure_6;
 let error;

@@ -1,9 +1,9 @@
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useProfileThemeValues } from "../../useProfileThemeValues.native.tsx";
 // discord_app/modules/user_profile/hooks/native/useUserProfileGradientColors.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useProfileThemeValues } from "../../useProfileThemeValues.native.tsx";
 
 const require = arg1;
 let result = require("initialize").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");

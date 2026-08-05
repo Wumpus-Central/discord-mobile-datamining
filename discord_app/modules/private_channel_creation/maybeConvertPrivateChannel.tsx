@@ -1,7 +1,7 @@
-import { ChannelActionCreators } from "../../actions/ChannelActionCreators.tsx";
-import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 // discord_app/modules/private_channel_creation/maybeConvertPrivateChannel.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
+import { ChannelActionCreators } from "../../actions/ChannelActionCreators.tsx";
+import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 
 const require = arg1;
 const result = require("module_4295").fileFinishedImporting("modules/private_channel_creation/maybeConvertPrivateChannel.tsx");

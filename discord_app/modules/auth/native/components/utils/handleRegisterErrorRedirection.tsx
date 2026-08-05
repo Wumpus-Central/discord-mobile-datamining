@@ -1,10 +1,10 @@
+// discord_app/modules/auth/native/components/utils/handleRegisterErrorRedirection.tsx
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
+import { AbortCodes } from "ME";
 import { keys } from "../../../../../ConstantsIOS.tsx";
 import { getError } from "../../getError.tsx";
 import { headerTitle } from "../../RegistrationStepsUtils.tsx";
 import { trackRegTransition } from "../../RegistrationUtils.tsx";
-// discord_app/modules/auth/native/components/utils/handleRegisterErrorRedirection.tsx
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
-import { AbortCodes } from "ME";
 
 let c3;
 let c4;

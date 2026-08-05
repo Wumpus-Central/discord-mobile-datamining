@@ -1,7 +1,7 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { areSetsEqual } from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
 // discord_app/modules/search/tokens/hooks/useValidFilterTokens.tsx
 import initialize from "initialize";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { areSetsEqual } from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
 
 const require = arg1;
 const result = require("getValidOrderedFilterTokens").fileFinishedImporting("modules/search/tokens/hooks/useValidFilterTokens.tsx");

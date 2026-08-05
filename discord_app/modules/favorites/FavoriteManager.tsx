@@ -1,6 +1,6 @@
-import { getNextPositionFromChannels } from "FavoritesActionCreators.tsx";
 // discord_app/modules/favorites/FavoriteManager.tsx
 import "initialize";
+import { getNextPositionFromChannels } from "FavoritesActionCreators.tsx";
 
 const require = arg1;
 function handleChannelDelete(channel) {

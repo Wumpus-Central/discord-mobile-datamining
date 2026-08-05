@@ -1,5 +1,3 @@
-import { NativePaymentContextProvider } from "../../../payments/native/NativePaymentContext.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/user_settings/billing/native/PaymentFlowTest.android.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -7,6 +5,8 @@ import { ScrollView } from "NativePaymentContextProvider";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { NativePaymentContextProvider } from "../../../payments/native/NativePaymentContext.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let error;
 let metroImportAll;

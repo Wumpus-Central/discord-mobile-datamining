@@ -1,5 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getComboId } from "../../utils/LibraryApplicationUtils.tsx";
 // discord_app/stores/game_store/EntitlementStore.tsx
 import createFromServer from "createFromServer";
 import setLibraryApplications from "setLibraryApplications";
@@ -8,6 +6,8 @@ import ME from "ME";
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures";
 import { Store } from "initialize";
 import set from "addSku";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getComboId } from "../../utils/LibraryApplicationUtils.tsx";
 
 let closure_6;
 let error;

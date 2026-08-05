@@ -1,8 +1,8 @@
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/collectibles/native/CollectiblesProgressiveImage.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let c3;
 let c4;

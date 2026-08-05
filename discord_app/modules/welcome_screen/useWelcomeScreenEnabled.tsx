@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/welcome_screen/useWelcomeScreenEnabled.tsx
 import { isGuildTextChannelType } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/welcome_screen/useWelcomeScreenEnabled.tsx");
 

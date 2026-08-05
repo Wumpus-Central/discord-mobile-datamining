@@ -1,7 +1,3 @@
-import { setLevels } from "../modules/app_startup/StartupProfiler.tsx";
-import { getAuthComponent } from "../modules/main_tabs_v2/native/MainNavigator.tsx";
-import { serialize } from "../modules/tti_analytics/TTITracker.tsx";
-import { GestureWrapper } from "AppContainer.tsx";
 // discord_app/components_native/App.tsx
 import closure_3 from "ApexExperiment";
 import { NativeModules } from "handleSetLocationMetadata";
@@ -25,6 +21,10 @@ import "map";
 import ApexExperiment from "ApexExperiment";
 import { jsx } from "reactNativeCorePlugins";
 import set from "checkForNewerBuild";
+import { setLevels } from "../modules/app_startup/StartupProfiler.tsx";
+import { getAuthComponent } from "../modules/main_tabs_v2/native/MainNavigator.tsx";
+import { serialize } from "../modules/tti_analytics/TTITracker.tsx";
+import { GestureWrapper } from "AppContainer.tsx";
 
 const require = arg1;
 if (global.__DEV__) {

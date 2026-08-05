@@ -1,10 +1,10 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { nameFromUser } from "UserUtils.tsx";
 // discord_app/utils/NicknameUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { nameFromUser } from "UserUtils.tsx";
 
 const require = arg1;
 function getNickname(id, arg1, id) {

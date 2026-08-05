@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/soundboard/BaseSoundboardManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 class BaseSoundboardManager extends tmp2 {
   constructor() {

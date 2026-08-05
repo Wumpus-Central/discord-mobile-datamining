@@ -1,6 +1,6 @@
+// discord_app/modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { trackImpression } from "../useTrackImpression.tsx";
-// discord_app/modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx
 const result = require("set").fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
 export const useTrackNavigatorScreenImpression = function useTrackNavigatorScreenImpression(impressionProperties, params) {

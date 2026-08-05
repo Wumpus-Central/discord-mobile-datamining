@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/QuestRewardTile.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,6 +6,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_6;
 let error;

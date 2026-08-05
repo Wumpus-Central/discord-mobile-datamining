@@ -1,7 +1,3 @@
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { addVersionedDismissedContent } from "../../dismissible_content/DismissibleContentUtils.tsx";
-import { CountryListMode } from "constants.tsx";
 // discord_app/modules/premium/promotions/PromotionUtils.tsx
 import closure_3 from "ME";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -10,6 +6,10 @@ import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { PromotionFlags } from "GuildFeatures";
 import ME from "ME";
 import { ActivityPlatform } from "items3";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { addVersionedDismissedContent } from "../../dismissible_content/DismissibleContentUtils.tsx";
+import { CountryListMode } from "constants.tsx";
 
 let c10;
 let c9;

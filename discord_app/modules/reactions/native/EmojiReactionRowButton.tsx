@@ -1,9 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ReactionIcon } from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { EmojiTypes } from "../../emojis/EmojiTypes.tsx";
 // discord_app/modules/reactions/native/EmojiReactionRowButton.tsx
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
@@ -11,6 +5,12 @@ import { EMOJI_URL_BASE_SIZE } from "set";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ReactionIcon } from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { EmojiTypes } from "../../emojis/EmojiTypes.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {

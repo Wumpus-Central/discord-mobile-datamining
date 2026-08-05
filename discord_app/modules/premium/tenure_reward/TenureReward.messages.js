@@ -1,3 +1,6 @@
+// discord_app/modules/premium/tenure_reward/TenureReward.messages.js
+import 01274__ from "../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../_runtime/02934_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02935_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02936_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../_runtime/02962_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02963_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02964_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/premium/tenure_reward/TenureReward.messages.js
-import 01274__ from "../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

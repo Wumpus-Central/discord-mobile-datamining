@@ -1,7 +1,7 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockUtils.tsx
 import { PixelRatio } from "get ActivityIndicator";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
+import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 
 const QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED;
 const QUEST_DOCK_COLLAPSED_MAX_WIDTH = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_COLLAPSED_MAX_WIDTH;

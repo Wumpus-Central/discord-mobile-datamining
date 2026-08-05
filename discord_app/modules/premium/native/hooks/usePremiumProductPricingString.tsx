@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
-import { SubscriptionPlans } from "../ProductIds.android.tsx";
 // discord_app/modules/premium/native/hooks/usePremiumProductPricingString.tsx
 import updateProduct from "updateProduct";
 import { PRICE_PLACEHOLDER } from "GuildFeatures";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import { SubscriptionPlans } from "../ProductIds.android.tsx";
 
 const require = arg1;
 const result = require("getPremiumPlanItem").fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");

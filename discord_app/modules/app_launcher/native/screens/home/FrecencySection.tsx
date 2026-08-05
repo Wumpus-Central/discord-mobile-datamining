@@ -1,5 +1,3 @@
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { usePlaceholderWidth } from "../../hooks/usePlaceholderSize.tsx";
 // discord_app/modules/app_launcher/native/screens/home/FrecencySection.tsx
 import ApplicationCommandSectionType from "ApplicationCommandSectionType";
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
@@ -10,6 +8,8 @@ import { FrecencySectionSelection } from "initialize";
 import { AnalyticEvents } from "ME";
 import jsxProd from "CheckmarkSmallBoldIcon";
 import createCacheKey from "createCacheKey";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { usePlaceholderWidth } from "../../hooks/usePlaceholderSize.tsx";
 
 let c5;
 let closure_12;

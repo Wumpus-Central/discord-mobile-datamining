@@ -1,7 +1,7 @@
-import { guildDirectoryEntryFromServer } from "GuildDirectoryUtils.tsx";
 // discord_app/modules/directory_channels/GuildDirectoryStore.tsx
 import { DirectoryEntryCategories } from "DirectoryEntryTypes";
 import { Store } from "initialize";
+import { guildDirectoryEntryFromServer } from "GuildDirectoryUtils.tsx";
 
 let closure_3 = Object.freeze({});
 let c4 = false;

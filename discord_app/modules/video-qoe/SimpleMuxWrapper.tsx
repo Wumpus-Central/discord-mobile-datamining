@@ -1,6 +1,6 @@
+// discord_app/modules/video-qoe/SimpleMuxWrapper.tsx
 import { U } from "../../../_runtime/14283_U.js";
 import { mapDiscordToMuxMetadata } from "integrations/MuxIntegration.tsx";
-// discord_app/modules/video-qoe/SimpleMuxWrapper.tsx
 const logger = new require("set").Logger("SimpleMuxWrapper");
 const result = require("mapDiscordToMuxMetadata").fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
 class SimpleMuxWrapper {

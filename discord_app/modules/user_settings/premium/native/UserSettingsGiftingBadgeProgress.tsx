@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/premium/native/UserSettingsGiftingBadgeProgress.tsx
 import _slicedToArray from "_slicedToArray";
 import getGiftingBadgeProgressPercent from "getGiftingBadgeProgressPercent";
@@ -10,6 +6,10 @@ import map from "map";
 import { getSingleRequirementThreshold as closure_8 } from "map";
 import jsxProd from "ChevronSmallDownIcon";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
 let c10;
 let c5;

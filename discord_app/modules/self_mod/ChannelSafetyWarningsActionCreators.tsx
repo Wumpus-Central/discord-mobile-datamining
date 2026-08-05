@@ -1,8 +1,8 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/self_mod/ChannelSafetyWarningsActionCreators.tsx
 import { SafetyWarningTypes } from "handleConnectionOpen";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsActionCreators.tsx");
 

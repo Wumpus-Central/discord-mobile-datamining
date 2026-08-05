@@ -1,6 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useGetOrFetchApplications } from "../../../applications/useGetOrFetchApplications.tsx";
-import { InviteActivityButton } from "InviteActivityButton.tsx";
 // discord_app/modules/activities/panel/native/ActivityPanelHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "QuestActivityButtonInner";
@@ -11,6 +8,9 @@ import { ThemeTypes } from "sum";
 import jsxProd from "useActivityWebViewLock";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useGetOrFetchApplications } from "../../../applications/useGetOrFetchApplications.tsx";
+import { InviteActivityButton } from "InviteActivityButton.tsx";
 
 let StyleSheet;
 let c10;

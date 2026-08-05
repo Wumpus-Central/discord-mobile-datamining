@@ -1,8 +1,8 @@
+// discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { makeClientVariant } from "../client_override_hooks/useApexExperiments.tsx";
 import { parseRegisteredExperiments } from "../client_override_hooks/useLegacyExperiments.tsx";
-// discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
 

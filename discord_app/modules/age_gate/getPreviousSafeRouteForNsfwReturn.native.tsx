@@ -1,10 +1,10 @@
-import { shouldShowAgeGateForVoiceChannel } from "AgeGateUtils.tsx";
 // discord_app/modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx
 import getIdFromHistoryItem from "getIdFromHistoryItem";
 import closure_5 from "getIdFromHistoryItem";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
 import { ME } from "ME";
+import { shouldShowAgeGateForVoiceChannel } from "AgeGateUtils.tsx";
 
 let c3;
 let c4;

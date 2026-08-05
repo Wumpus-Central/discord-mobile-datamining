@@ -1,8 +1,8 @@
-import { getChannelFromEvent } from "EntityUtils.tsx";
-import { getRRule } from "ScheduleUtils.tsx";
 // discord_app/modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
+import { getChannelFromEvent } from "EntityUtils.tsx";
+import { getRRule } from "ScheduleUtils.tsx";
 
 let c3;
 let c4;

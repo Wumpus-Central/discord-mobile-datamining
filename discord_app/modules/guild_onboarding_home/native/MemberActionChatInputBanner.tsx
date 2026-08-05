@@ -1,6 +1,3 @@
-import { registerAsset } from "../../../../_runtime/11115_registerAsset.js";
-import { newMemberActionFromServer } from "../GuildOnboardingHomeTypes.tsx";
-import { useMemberActionsForChannel } from "../MemberActionUtils.tsx";
 // discord_app/modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getAvatarURL";
@@ -13,6 +10,9 @@ import { Routes } from "ME";
 import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "useMemberActionsForChannel";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/11115_registerAsset.js";
+import { newMemberActionFromServer } from "../GuildOnboardingHomeTypes.tsx";
+import { useMemberActionsForChannel } from "../MemberActionUtils.tsx";
 
 let closure_12;
 let closure_14;

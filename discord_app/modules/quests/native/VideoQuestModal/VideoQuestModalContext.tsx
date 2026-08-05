@@ -1,6 +1,6 @@
-import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx
 import importAllResult from "noop";
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 
 let context = importAllResult.createContext({ quest: null, videoSessionId: "" });
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx");

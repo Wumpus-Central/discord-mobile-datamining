@@ -1,10 +1,10 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { transformUser } from "helpers/transformUser.tsx";
 // discord_app/modules/rpc/RPCServer.tsx
 import prototype from "prototype";
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import ME from "ME";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { transformUser } from "helpers/transformUser.tsx";
 
 let c4;
 let c5;

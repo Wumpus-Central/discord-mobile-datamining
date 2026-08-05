@@ -1,5 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/guild/markGuildsAsRead.tsx
 import handleUpdate from "handleUpdate";
 import rebuild from "rebuild";
@@ -8,6 +6,8 @@ import comparator from "comparator";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { AnalyticEvents } from "ME";
 import { ReadStateTypes } from "ReadStateTypes";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const require = arg1;
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");

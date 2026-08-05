@@ -1,6 +1,6 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/device/native/getDeviceMediaPhotos.tsx
 import { NativeModules } from "get ActivityIndicator";
+import { set } from "../../../utils/PlatformUtils.tsx";
 
 let c4 = new require("set")("DeviceMedia.tsx");
 const tmp2 = new require("set")("DeviceMedia.tsx");

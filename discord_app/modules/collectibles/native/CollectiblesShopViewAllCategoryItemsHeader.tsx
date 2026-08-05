@@ -1,13 +1,13 @@
-import { registerAsset } from "../../../../_runtime/08197_registerAsset.js";
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { GenericHeaderTitle } from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import { useYouBarSettingsCustomHeaderPaddingTop } from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/08197_registerAsset.js";
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { GenericHeaderTitle } from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import { useYouBarSettingsCustomHeaderPaddingTop } from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 
 let c3;
 let c4;

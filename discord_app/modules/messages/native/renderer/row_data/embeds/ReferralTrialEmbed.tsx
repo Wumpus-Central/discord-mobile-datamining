@@ -1,5 +1,3 @@
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -8,6 +6,8 @@ import emitChanges from "emitChanges";
 import updateProduct from "updateProduct";
 import { HelpdeskArticles } from "ME";
 import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "GuildFeatures";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let result = require("reset").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx");

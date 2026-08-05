@@ -1,10 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
-import { timingNone } from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import { AnimatedRenderItem } from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
-import { apexExperiment } from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
-import { useVisibilityTransition } from "useVisibilityTransition.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollEndCard.tsx
 import initialize from "initialize";
 import get_ActivityIndicator from "RetryIcon";
@@ -12,6 +5,13 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import jsxProd from "AnimatedRenderItem";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { timingNone } from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
+import { AnimatedRenderItem } from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
+import { apexExperiment } from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
+import { useVisibilityTransition } from "useVisibilityTransition.tsx";
 
 let c10;
 let c4;

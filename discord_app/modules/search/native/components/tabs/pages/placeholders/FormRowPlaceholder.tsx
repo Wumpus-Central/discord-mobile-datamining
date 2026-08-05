@@ -1,10 +1,10 @@
-import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
-import { useFullscreenPlaceholderCount } from "../../../../hooks/usePlaceholderStyles.tsx";
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import { useFullscreenPlaceholderCount } from "../../../../hooks/usePlaceholderStyles.tsx";
 
 let c4;
 let c5;

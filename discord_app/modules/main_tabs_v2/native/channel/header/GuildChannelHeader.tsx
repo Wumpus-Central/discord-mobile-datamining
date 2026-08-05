@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/header/GuildChannelHeader.tsx
 import set from "set";
 import importAllResult from "ICON_SIZE";
@@ -15,6 +14,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "getSystemLocale";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_15;
 let closure_16;

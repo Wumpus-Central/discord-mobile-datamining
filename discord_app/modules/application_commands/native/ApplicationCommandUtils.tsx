@@ -1,13 +1,13 @@
+// discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
+import { DraftType } from "handleChanged";
+import map from "map";
+import { BuiltInSectionId } from "TRUE_OPTION_NAME";
 import { registerAsset } from "../../../../_runtime/01855_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/11515_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/11516_registerAsset.js";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { showUploadPreviewActionSheet } from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
 import { ApplicationCommandSectionType } from "../ApplicationCommandTypes.tsx";
-// discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
-import { DraftType } from "handleChanged";
-import map from "map";
-import { BuiltInSectionId } from "TRUE_OPTION_NAME";
 
 let result = require("TRUE_OPTION_NAME").fileFinishedImporting("modules/application_commands/native/ApplicationCommandUtils.tsx");
 

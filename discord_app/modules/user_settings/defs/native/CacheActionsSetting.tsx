@@ -1,3 +1,8 @@
+// discord_app/modules/user_settings/defs/native/CacheActionsSetting.tsx
+import CircleInformationIcon from "CircleInformationIcon";
+import _handleConnectionOpen from "_handleConnectionOpen";
+import jsxProd from "jsxProd";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { FileUpIcon } from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
 import { FileWarningIcon } from "../../../../design/components/Icon/native/redesign/generated/FileWarningIcon.tsx";
@@ -8,11 +13,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/CacheActionsSetting.tsx
-import CircleInformationIcon from "CircleInformationIcon";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import jsxProd from "jsxProd";
-import createToggle from "createToggle";
 
 let c5;
 let closure_6;

@@ -1,6 +1,6 @@
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/guild_products/GuildProductsStore.tsx
 import { Store } from "initialize";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 let closure_3 = {};

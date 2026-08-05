@@ -1,11 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { handleDCShownToUser } from "../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
-import { useFavoritesAccess } from "FavoritesHooks.tsx";
 // discord_app/modules/favorites/FavoritesActionCreators.tsx
 import { resetFatigueCooldown } from "withContent";
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
@@ -14,6 +6,14 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import initializeFromUserSettings from "initializeFromUserSettings";
 import { Permissions } from "sum";
 import date from "date";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { handleDCShownToUser } from "../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import { useFavoritesAccess } from "FavoritesHooks.tsx";
 
 let c9;
 let metroImportAll;

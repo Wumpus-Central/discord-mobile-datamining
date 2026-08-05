@@ -1,9 +1,9 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/premium/native/components/LinkButton.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 
 let c3;
 let obj1;

@@ -1,3 +1,8 @@
+// discord_app/modules/game_profile/native/components/GameProfileStoreLinksActionSheet.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -6,11 +11,6 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { Linking } from "../../../../lib/native/Linking.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import { _getDeepLinkUrl } from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
-// discord_app/modules/game_profile/native/components/GameProfileStoreLinksActionSheet.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

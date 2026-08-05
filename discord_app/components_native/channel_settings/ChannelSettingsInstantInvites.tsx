@@ -1,5 +1,3 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsInstantInvites.tsx
 import _slicedToArray from "_slicedToArray";
 import FastestList.android from "../../modules/fastest_list/FastestList.android.tsx";
@@ -9,6 +7,8 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelSettingsSections } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 
 let c10;
 let c9;

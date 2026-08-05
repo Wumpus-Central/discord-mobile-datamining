@@ -1,9 +1,9 @@
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { EditUserProfileBanner } from "../../../user_profile/native/UserProfileEditForm.tsx";
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { EditUserProfileBanner } from "../../../user_profile/native/UserProfileEditForm.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");

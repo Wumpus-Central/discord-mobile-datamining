@@ -1,11 +1,11 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { transformFavoriteGifUrl } from "GIFPickerUtils.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerCategoriesPage.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import getFormatFromUrl from "getFormatFromUrl";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { transformFavoriteGifUrl } from "GIFPickerUtils.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

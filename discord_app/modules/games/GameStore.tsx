@@ -1,8 +1,8 @@
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/games/GameStore.tsx
 import applicationId from "applicationId";
 import { Store } from "initialize";
 import set from "isDiscordProxiedAssetUrl";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 
 function handleLoadMessages(messages) {
   messages = messages.messages;

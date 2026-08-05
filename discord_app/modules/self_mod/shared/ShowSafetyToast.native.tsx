@@ -1,7 +1,7 @@
+// discord_app/modules/self_mod/shared/ShowSafetyToast.native.tsx
 import { registerAsset } from "../../../../_runtime/10147_registerAsset.js";
 import { ShieldIcon } from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
-// discord_app/modules/self_mod/shared/ShowSafetyToast.native.tsx
 const result = require("ShieldIcon").fileFinishedImporting("modules/self_mod/shared/ShowSafetyToast.native.tsx");
 
 export const showSafetyToast = function showSafetyToast(arg0) {

@@ -1,14 +1,14 @@
-import { registerAsset } from "../../../../../_runtime/07648_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/07751_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08054_registerAsset.js";
-import { ContentInventoryEntryType } from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-import { getNickname } from "../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/messages/native/renderer/transformContentInventoryEntryMessageComponent.tsx
 import { Image } from "registerAsset";
 import addApplication from "addApplication";
 import _getSystemLocale from "_getSystemLocale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ImageSizes } from "items3";
+import { registerAsset } from "../../../../../_runtime/07648_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07751_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08054_registerAsset.js";
+import { ContentInventoryEntryType } from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import { getNickname } from "../../../../utils/NicknameUtils.tsx";
 
 let items = [{ r: 0, g: 0, b: 0, a: 1 }, { r: 0, g: 0, b: 0, a: 1 }];
 const result = require("_getSystemLocale").fileFinishedImporting("modules/messages/native/renderer/transformContentInventoryEntryMessageComponent.tsx");

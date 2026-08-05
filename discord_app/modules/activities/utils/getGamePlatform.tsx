@@ -1,6 +1,6 @@
-import { isOnXbox } from "isOnXbox.tsx";
 // discord_app/modules/activities/utils/getGamePlatform.tsx
 import ME from "ME";
+import { isOnXbox } from "isOnXbox.tsx";
 
 let c3;
 let obj1;

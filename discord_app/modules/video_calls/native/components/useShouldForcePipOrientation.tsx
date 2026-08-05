@@ -1,10 +1,10 @@
-import { usePipVideoOrStream } from "../usePipVideoOrStream.tsx";
 // discord_app/modules/video_calls/native/components/useShouldForcePipOrientation.tsx
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import { OrientationLockState } from "items3";
 import ParticipantTypes from "ParticipantTypes";
+import { usePipVideoOrStream } from "../usePipVideoOrStream.tsx";
 
 let error;
 let metroImportAll;

@@ -1,5 +1,3 @@
-import { useQuests } from "../../hooks/QuestHooks.tsx";
-import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDock.tsx
 import closure_3 from "QuestsExperimentLocations";
 import Backdrop from "Backdrop";
@@ -13,6 +11,8 @@ import { ThemeTypes } from "sum";
 import jsxProd from "useQuestDockAnimatedBorderRadius";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { useQuests } from "../../hooks/QuestHooks.tsx";
+import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
 
 let StyleSheet;
 let c10;

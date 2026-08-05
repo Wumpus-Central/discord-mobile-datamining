@@ -1,6 +1,3 @@
-import { TagIcon } from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
-import { useKeyboardType } from "../../../keyboard/native/useKeyboardType.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/forums/native/composer/ForumComposer.tsx
 import handleThemeChange from "handleThemeChange";
 import useSafeAreaInsetsKeyboardAware from "useSafeAreaInsetsKeyboardAware";
@@ -25,6 +22,9 @@ import { OpenThreadAnalyticsLocations as closure_27 } from "AbortCodes";
 import sum from "sum";
 import jsxProd from "Themes";
 import createCacheKey from "createCacheKey";
+import { TagIcon } from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
+import { useKeyboardType } from "../../../keyboard/native/useKeyboardType.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let Fonts;
 let StyleSheet;

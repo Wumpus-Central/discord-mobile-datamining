@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { savePersistentCodesEnabled } from "../../../rtc/SecureFramesActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/SecureFramesPersistentCodesSetting.tsx
 import items from "items";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { savePersistentCodesEnabled } from "../../../rtc/SecureFramesActionCreators.tsx";
 
 const require = arg1;
 createToggle = {

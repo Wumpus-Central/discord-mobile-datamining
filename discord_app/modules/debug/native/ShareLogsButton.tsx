@@ -1,9 +1,9 @@
-import { ShareIcon } from "../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/debug/native/ShareLogsButton.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { ShareIcon } from "../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function ShareLogsButton() {

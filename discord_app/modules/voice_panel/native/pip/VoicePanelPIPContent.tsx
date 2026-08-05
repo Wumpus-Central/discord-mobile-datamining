@@ -1,6 +1,3 @@
-import { ComponentDispatcher } from "../../../../utils/ComponentDispatchUtils.tsx";
-import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
-import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPContent.tsx
 import canRenderParticipantVideo from "canRenderParticipantVideo";
 import importAllResult from "cleanUp";
@@ -19,6 +16,9 @@ import items3 from "items3";
 import ParticipantTypes from "ParticipantTypes";
 import jsxProd from "ComponentDispatcher";
 import createCacheKey from "createCacheKey";
+import { ComponentDispatcher } from "../../../../utils/ComponentDispatchUtils.tsx";
+import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 
 let StyleSheet;
 let c5;

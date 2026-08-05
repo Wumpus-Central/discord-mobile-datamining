@@ -1,11 +1,11 @@
-import { useMountLayoutEffect } from "../../hooks/useMountEffect.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/emojis/useTrackOpenPopout.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import { EmojiInteractionPoint } from "set";
 import { AnalyticEvents } from "ME";
+import { useMountLayoutEffect } from "../../hooks/useMountEffect.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 const require = arg1;
 let result = require("handleConnectionOpen").fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");

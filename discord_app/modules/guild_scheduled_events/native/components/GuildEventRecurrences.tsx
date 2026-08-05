@@ -1,9 +1,9 @@
-import { useGuildEventRecurrences } from "../../useGuildEventRecurrences.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useGuildEventRecurrences } from "../../useGuildEventRecurrences.tsx";
 
 let c4;
 let c5;

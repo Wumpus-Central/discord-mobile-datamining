@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getSystemTheme } from "../themes/getSystemTheme.native.tsx";
 // discord_app/modules/user_settings/ThemeActionCreators.tsx
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import { SystemThemeState } from "SystemThemeState";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getSystemTheme } from "../themes/getSystemTheme.native.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("modules/user_settings/ThemeActionCreators.tsx");
 

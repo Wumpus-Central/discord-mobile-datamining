@@ -1,7 +1,7 @@
-import { useOpenProfileSettings } from "../../profile_customization/useOpenProfileSettings.tsx";
 // discord_app/modules/collectibles/native/useHandleUseNow.tsx
 import noop from "noop";
 import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
+import { useOpenProfileSettings } from "../../profile_customization/useOpenProfileSettings.tsx";
 
 const require = arg1;
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");

@@ -1,10 +1,10 @@
+// discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { ActivitiesBanner } from "ActivitiesBanner.tsx";
 import { AppsBaner } from "AppsBanner.tsx";
 import { BotsBanner } from "BotsBanner.tsx";
-// discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("DismissibleContent").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx");

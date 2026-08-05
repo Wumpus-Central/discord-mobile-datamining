@@ -1,6 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getDecorationSizeForAvatarSize } from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
-import { StaticNativeCutoutAvatarImage } from "../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 // discord_app/design/void/Avatar/native/Avatar.tsx
 import importAllResult from "noop";
 import { View } from "registerAsset";
@@ -8,6 +5,9 @@ import { StatusTypes } from "ME";
 import STATUS_PADDING from "STATUS_PADDING";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getDecorationSizeForAvatarSize } from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
+import { StaticNativeCutoutAvatarImage } from "../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 
 let c9;
 let closure_6;

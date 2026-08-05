@@ -1,14 +1,14 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
-import { TrackSectionHeader } from "TrackSectionHeader.tsx";
 // discord_app/modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
+import { TrackSectionHeader } from "TrackSectionHeader.tsx";
 
 let closure_6;
 let error;

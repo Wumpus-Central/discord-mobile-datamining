@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useThermalState } from "../../device/useThermalState.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/activities/native/ActivitiesDebugOverlay.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useThermalState } from "../../device/useThermalState.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c4;
 let c5;

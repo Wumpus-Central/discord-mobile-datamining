@@ -1,7 +1,7 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { fromString } from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 // discord_app/records/GuildRoleRecord.tsx
 import { TypeTag } from "isValueEqual";
+import { apply } from "../../_runtime/00012_apply.js";
+import { fromString } from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const result = require("apply").fileFinishedImporting("records/GuildRoleRecord.tsx");
 

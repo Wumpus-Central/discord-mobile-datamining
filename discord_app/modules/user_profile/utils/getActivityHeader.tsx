@@ -1,9 +1,9 @@
+// discord_app/modules/user_profile/utils/getActivityHeader.tsx
+import ME from "ME";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { unpackStageChannelParty } from "../../stage_channels/StageChannelRichPresenceUtils.tsx";
 import { PlatformTypes } from "getActivityPlatform.tsx";
 import { parseProviderRouteHeadlessSessionId } from "parseProviderRouteHeadlessSessionId.tsx";
-// discord_app/modules/user_profile/utils/getActivityHeader.tsx
-import ME from "ME";
 
 let c3;
 let c4;

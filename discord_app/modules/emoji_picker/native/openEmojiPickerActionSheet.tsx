@@ -1,8 +1,8 @@
+// discord_app/modules/emoji_picker/native/openEmojiPickerActionSheet.tsx
+import { EmojiInteractionPoint } from "set";
 import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { toggleGuildExpandedState } from "../../emojis/EmojiActionCreators.tsx";
-// discord_app/modules/emoji_picker/native/openEmojiPickerActionSheet.tsx
-import { EmojiInteractionPoint } from "set";
 
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
 let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/emoji_picker/native/openEmojiPickerActionSheet.tsx");

@@ -1,5 +1,3 @@
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { LocationText } from "MessageNotificationHeader.tsx";
 // discord_app/modules/in_app_notifications/native/NotificationContent.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,6 +5,8 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { LocationText } from "MessageNotificationHeader.tsx";
 
 let c5;
 let c9;

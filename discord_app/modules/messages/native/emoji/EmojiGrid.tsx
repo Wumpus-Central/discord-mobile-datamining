@@ -1,9 +1,9 @@
-import { Emoji } from "../../../emojis/native/Emoji.tsx";
 // discord_app/modules/messages/native/emoji/EmojiGrid.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Emoji } from "../../../emojis/native/Emoji.tsx";
 
 const require = arg1;
 function Emoji(guildEmoji) {

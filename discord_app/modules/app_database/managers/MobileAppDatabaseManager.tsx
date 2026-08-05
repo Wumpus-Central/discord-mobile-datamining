@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/managers/MobileAppDatabaseManager.tsx
 import { handleBackgroundSync } from "../modules/Channels.tsx";
 import { hasBasicChannelChanged } from "../modules/GuildBasicChannels.tsx";
 import { getAsync } from "../modules/GuildEmojis.tsx";
@@ -14,7 +15,6 @@ import { getAll } from "../modules/ReadStates.tsx";
 import { getAll } from "../modules/UserGuildSettings.tsx";
 import { getAll } from "../modules/UserSearchItems.tsx";
 import { getAll } from "../modules/UserSettingsProto.tsx";
-// discord_app/modules/app_database/managers/MobileAppDatabaseManager.tsx
 const items = [
   {
     name: "Channels",

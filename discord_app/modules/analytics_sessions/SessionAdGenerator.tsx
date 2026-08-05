@@ -1,8 +1,8 @@
+// discord_app/modules/analytics_sessions/SessionAdGenerator.tsx
 import { v1 } from "../../../_runtime/00514_v1.js";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 import { result } from "SessionUtils.tsx";
-// discord_app/modules/analytics_sessions/SessionAdGenerator.tsx
 const require = arg1;
 let closure_3 = 12 * require("set").Millis.HOUR;
 let c4 = null;

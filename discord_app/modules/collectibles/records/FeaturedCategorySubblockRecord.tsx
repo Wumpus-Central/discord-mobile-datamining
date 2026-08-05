@@ -1,5 +1,5 @@
-import { FeaturedSubblockType } from "../../../../discord_common/js/shared/shared-constants/FeaturedSubblockType.tsx";
 // discord_app/modules/collectibles/records/FeaturedCategorySubblockRecord.tsx
+import { FeaturedSubblockType } from "../../../../discord_common/js/shared/shared-constants/FeaturedSubblockType.tsx";
 let prototype;
 prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);

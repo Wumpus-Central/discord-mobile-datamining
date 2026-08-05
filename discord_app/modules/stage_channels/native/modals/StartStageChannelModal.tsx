@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/07870_registerAsset.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
-import { StageSparkleInner } from "../components/StageSparkle.tsx";
 // discord_app/modules/stage_channels/native/modals/StartStageChannelModal.tsx
 import closure_4 from "MAX_STAGE_TOPIC_LENGTH";
 import GuildStageChannelSelection from "GuildStageChannelSelection";
@@ -16,6 +9,13 @@ import { AnalyticEvents } from "ME";
 import { GuildScheduledEventPrivacyLevel as closure_13 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/07870_registerAsset.js";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import { StageSparkleInner } from "../components/StageSparkle.tsx";
 
 let c10;
 let closure_14;

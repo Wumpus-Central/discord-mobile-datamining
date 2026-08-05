@@ -1,11 +1,11 @@
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/relationships.tsx
 import _slicedToArray from "_slicedToArray";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import createRPCCommand from "createRPCCommand";
+import { prototype } from "../../RPCError.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 let RPCCommands;
 let c9;

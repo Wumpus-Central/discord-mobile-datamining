@@ -1,6 +1,6 @@
-import { usePremiumSince } from "useTenureBadging.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx
 import GuildFeatures from "GuildFeatures";
+import { usePremiumSince } from "useTenureBadging.tsx";
 
 let c3;
 let obj1;

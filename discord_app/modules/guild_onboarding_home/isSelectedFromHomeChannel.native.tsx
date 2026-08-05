@@ -1,9 +1,9 @@
-import { navigationToRootTabHelper } from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx
 import "handlePermissionsChange";
 import "handleConnectionOpen";
 import { isGuildHomeChannel } from "set";
+import { navigationToRootTabHelper } from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");

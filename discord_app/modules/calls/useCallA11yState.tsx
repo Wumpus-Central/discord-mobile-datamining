@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/calls/useCallA11yState.tsx
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/calls/useCallA11yState.tsx");

@@ -1,8 +1,8 @@
-import { callback } from "../actions/ConnectedAccountsActionCreators.tsx";
 // discord_app/stores/ConnectedAccountsStore.tsx
 import toString from "toString";
 import { Store } from "initialize";
 import set from "getPlatformUserUrl";
+import { callback } from "../actions/ConnectedAccountsActionCreators.tsx";
 
 const require = arg1;
 const items = [require("ME").PlatformTypes.CONTACTS];

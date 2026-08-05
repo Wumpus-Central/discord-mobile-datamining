@@ -1,9 +1,9 @@
+// discord_app/modules/chat/native/useChatWidth.tsx
+import noop from "noop";
 import { sum } from "../../screen/native/drawer/useDrawerWidth.tsx";
 import { useBaseAppContainerDimensions } from "../../screen/native/useBaseAppContainerDimensions.tsx";
 import { context } from "ChatViewWidthContext.tsx";
 import { useChatLayout } from "useChatLayout.tsx";
-// discord_app/modules/chat/native/useChatWidth.tsx
-import noop from "noop";
 
 const require = arg1;
 const result = require("useBaseAppContainerDimensions").fileFinishedImporting("modules/chat/native/useChatWidth.tsx");

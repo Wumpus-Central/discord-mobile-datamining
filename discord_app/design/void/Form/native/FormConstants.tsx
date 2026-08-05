@@ -1,5 +1,3 @@
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/Form/native/FormConstants.tsx
 import handleThemeChange from "handleThemeChange";
 import set from "set";
@@ -7,6 +5,8 @@ import { internal } from "Themes";
 import { internal as internal2 } from "Themes";
 import DCDDeviceManager from "DCDDeviceManager";
 import set from "Themes";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 
 const require = arg1;
 let num = 24;

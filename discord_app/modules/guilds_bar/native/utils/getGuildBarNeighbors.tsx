@@ -1,6 +1,6 @@
-import { GuildsNodeType } from "../../GuildsTree.tsx";
 // discord_app/modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx
 import insertUnsortedGuilds from "insertUnsortedGuilds";
+import { GuildsNodeType } from "../../GuildsTree.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");

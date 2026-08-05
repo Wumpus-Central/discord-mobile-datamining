@@ -1,12 +1,12 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/DraftStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import { PersistedStore } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 function handleChanged(type) {

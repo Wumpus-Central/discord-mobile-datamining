@@ -1,6 +1,3 @@
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { CircleErrorIcon } from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -9,6 +6,9 @@ import { UserSettingsSections } from "ME";
 import { MobileSetting } from "MobileSetting";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { CircleErrorIcon } from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c9;
 let error;

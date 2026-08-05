@@ -1,6 +1,6 @@
-import { V6OrEarlierAPIError } from "../errors/index.tsx";
 // discord_app/stores/PremiumPaymentModalStore.tsx
 import { Store } from "initialize";
+import { V6OrEarlierAPIError } from "../errors/index.tsx";
 
 const require = arg1;
 function handleSubscribeFailure(error) {

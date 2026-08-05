@@ -1,5 +1,5 @@
-import { validateSocketClient } from "../NativeRPCHelpers.tsx";
 // discord_app/modules/rpc/native/server/commands/voiceSettings.tsx
+import { validateSocketClient } from "../NativeRPCHelpers.tsx";
 let obj = {};
 obj = { scope: null, handler: null };
 obj = {};

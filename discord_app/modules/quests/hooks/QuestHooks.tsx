@@ -1,3 +1,17 @@
+// discord_app/modules/quests/hooks/QuestHooks.tsx
+import set from "set";
+import supportedConsoles from "supportedConsoles";
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource";
+import _getSystemLocale from "_getSystemLocale";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import closure_8 from "set";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_10 from "set";
+import { useConsoleQuestUIStore } from "useConsoleQuestUIStore";
+import initializeState from "initializeState";
+import QuestsExperimentLocations from "QuestsExperimentLocations";
+import ME from "ME";
+import { PremiumTypes } from "GuildFeatures";
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { MurmurHashV3 } from "../../../../_runtime/01217_MurmurHashV3.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
@@ -16,20 +30,6 @@ import { getQuestDeliveryDataForPlacement } from "../utils/QuestDataUtils.tsx";
 import { items } from "../utils/QuestOrbMultiplierUtils.tsx";
 import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
 import { getApplicationIdsByTaskTypes } from "../utils/QuestTaskUtils.tsx";
-// discord_app/modules/quests/hooks/QuestHooks.tsx
-import set from "set";
-import supportedConsoles from "supportedConsoles";
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource";
-import _getSystemLocale from "_getSystemLocale";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_8 from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_10 from "set";
-import { useConsoleQuestUIStore } from "useConsoleQuestUIStore";
-import initializeState from "initializeState";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import ME from "ME";
-import { PremiumTypes } from "GuildFeatures";
 
 let closure_14;
 let closure_15;

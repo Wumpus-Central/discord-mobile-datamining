@@ -1,5 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { ActivityStatus } from "../../../../activity_status/native/ActivityStatus.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserRow.tsx
 import importAllResult from "handleRelationshipAddError";
 import { View } from "presentAddedFriendToast";
@@ -14,6 +12,8 @@ import ME from "ME";
 import jsxProd from "initialize";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { ActivityStatus } from "../../../../activity_status/native/ActivityStatus.tsx";
 
 let closure_12;
 let closure_14;

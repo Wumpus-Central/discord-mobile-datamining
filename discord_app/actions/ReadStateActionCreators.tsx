@@ -1,4 +1,3 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ReadStateActionCreators.tsx
 import rebuild from "rebuild";
 import { isReadableType } from "createChannelRecord";
@@ -6,6 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import setIndex from "setIndex";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { CURRENT_APP_CONTEXT } from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
 
 function ack(channelId, location, arg2, arg3, messageId) {
   let flag = arg2;

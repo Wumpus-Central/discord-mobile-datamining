@@ -1,7 +1,7 @@
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 // discord_app/modules/client_themes/ClientThemesTypes.tsx
 import { PROTO_THEME_MAP_WEB_REFRESH as closure_3 } from "SystemThemeState";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 
 const result = require("create").fileFinishedImporting("modules/client_themes/ClientThemesTypes.tsx");
 

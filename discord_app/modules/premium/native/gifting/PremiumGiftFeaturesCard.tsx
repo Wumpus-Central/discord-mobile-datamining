@@ -1,11 +1,3 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { createTextStyle } from "../../../rebrand/native/TextStyles.tsx";
-import { usePremiumFeatures } from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
-import { apexExperiment } from "../../gifting/experiments/NitroGiftPriceCopyExperiment.tsx";
-import { useShouldShowGiftingPromotionDeco } from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
-import { useThemeAndReducedMotionAwareAssetUrl } from "../../promotions/MarketingComponentHooks.tsx";
-import { usePremiumProductPricingString } from "../hooks/usePremiumProductPricingString.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_9961";
@@ -15,6 +7,14 @@ import GuildFeatures from "GuildFeatures";
 import { Fonts } from "sum";
 import jsxProd from "PremiumFeaturesLogo";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { createTextStyle } from "../../../rebrand/native/TextStyles.tsx";
+import { usePremiumFeatures } from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
+import { apexExperiment } from "../../gifting/experiments/NitroGiftPriceCopyExperiment.tsx";
+import { useShouldShowGiftingPromotionDeco } from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
+import { useThemeAndReducedMotionAwareAssetUrl } from "../../promotions/MarketingComponentHooks.tsx";
+import { usePremiumProductPricingString } from "../hooks/usePremiumProductPricingString.tsx";
 
 let c10;
 let closure_12;

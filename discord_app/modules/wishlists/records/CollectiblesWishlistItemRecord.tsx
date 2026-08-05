@@ -1,4 +1,3 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/wishlists/records/CollectiblesWishlistItemRecord.tsx
 import fromServer from "fromServer";
 import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse";
@@ -8,6 +7,7 @@ import closure_6 from "fromServer";
 import createFromServer from "createFromServer";
 import "fromServer";
 import { SKUProductLines } from "ME";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const require = arg1;
 function createCollectiblesItemFromServerResponse(collectibles_item) {

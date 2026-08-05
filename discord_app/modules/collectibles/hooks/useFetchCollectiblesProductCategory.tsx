@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { set } from "useMaybeFetchCollectiblesCategories.tsx";
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx
 import _slicedToArray from "_slicedToArray";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { set } from "useMaybeFetchCollectiblesCategories.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");

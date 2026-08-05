@@ -1,5 +1,5 @@
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/design/components/Sheet/native/showSimpleActionSheet.native.tsx
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 const result = require("asyncRequireImpl").fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
 export const showSimpleActionSheet = function showSimpleActionSheet(key) {

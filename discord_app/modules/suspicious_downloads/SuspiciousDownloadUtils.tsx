@@ -1,6 +1,6 @@
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
 import set from "set";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 
 let set = new Set(require("module_8042"));
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };

@@ -1,10 +1,10 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
 // discord_app/modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
 
 let c4;
 let c5;

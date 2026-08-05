@@ -1,5 +1,3 @@
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
-import { transformParticipantToSortedVoiceState } from "../../useStageChannelSpeakerVoiceStates.tsx";
 // discord_app/modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx
 import importAllResult from "shouldShowMembershipVerificationGate";
 import { View } from "useStageParticipants";
@@ -13,6 +11,8 @@ import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate
 import ME from "ME";
 import { jsx } from "dismissGlobalKeyboard";
 import createCacheKey from "createCacheKey";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { transformParticipantToSortedVoiceState } from "../../useStageChannelSpeakerVoiceStates.tsx";
 
 let closure_14;
 let map1;

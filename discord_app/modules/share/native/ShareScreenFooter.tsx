@@ -1,10 +1,10 @@
+// discord_app/modules/share/native/ShareScreenFooter.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { ShareChatInput } from "ShareChatInput.tsx";
 import { ShareFooterLayout } from "ShareFooterLayout.tsx";
 import { useShareChatInputActions } from "useShareChatInputActions.tsx";
-// discord_app/modules/share/native/ShareScreenFooter.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 const result = require("useShareChatInputActions").fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");

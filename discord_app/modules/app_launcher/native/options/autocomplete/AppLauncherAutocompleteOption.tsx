@@ -1,11 +1,11 @@
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import { useAnimationDelayedAutoFocus } from "../../hooks/useAnimationDelayedAutoFocus.tsx";
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import { useAnimationDelayedAutoFocus } from "../../hooks/useAnimationDelayedAutoFocus.tsx";
 
 const require = arg1;
 createCacheKey = { container: null, hasError: null, inputText: null };

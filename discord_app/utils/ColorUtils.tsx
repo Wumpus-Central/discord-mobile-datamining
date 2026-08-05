@@ -1,9 +1,9 @@
+// discord_app/utils/ColorUtils.tsx
+import _slicedToArray from "_slicedToArray";
 import { n } from "../../_runtime/00689_n.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { timestamp } from "../modules/debug/Logger.tsx";
 import { hslToRgb } from "Color.tsx";
-// discord_app/utils/ColorUtils.tsx
-import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
 function hexToRgba(PRIMARY_760) {

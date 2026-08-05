@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_tag/utils/getGuildTagPalettePresetColorPairLabel.tsx
 import { GuildTagPalettePresetColor as closure_2 } from "items";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 function getGuildTagPalettePresetColorLabel(primary) {
   if (constants.HOT_PINK === primary) {

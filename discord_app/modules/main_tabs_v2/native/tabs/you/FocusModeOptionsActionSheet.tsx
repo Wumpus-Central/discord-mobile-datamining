@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c3;
 let obj1;

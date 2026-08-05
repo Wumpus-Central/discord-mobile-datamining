@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
 

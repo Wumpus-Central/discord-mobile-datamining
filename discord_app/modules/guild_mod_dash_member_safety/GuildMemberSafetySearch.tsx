@@ -1,10 +1,10 @@
+// discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
+import _slicedToArray from "_slicedToArray";
+import set from "isEqual";
 import { isEqual } from "../../../_runtime/04444_isEqual.js";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
 import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
-// discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "isEqual";
 
 const require = arg1;
 function hasStringMatch(str, str2) {

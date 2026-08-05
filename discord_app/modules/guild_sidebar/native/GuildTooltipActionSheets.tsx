@@ -1,9 +1,9 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 // discord_app/modules/guild_sidebar/native/GuildTooltipActionSheets.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { DismissibleContentGroupName as closure_5 } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 
 const require = arg1;
 function NUFChannelsActionSheetImporter() {

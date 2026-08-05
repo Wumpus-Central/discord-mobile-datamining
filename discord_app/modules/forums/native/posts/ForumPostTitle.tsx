@@ -1,9 +1,9 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/forums/native/posts/ForumPostTitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 const require = arg1;
 createCacheKey = null;

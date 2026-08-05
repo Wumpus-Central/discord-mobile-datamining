@@ -1,10 +1,10 @@
+// discord_app/modules/video_calls/native/useOnConnectToConsole.tsx
+import noop from "noop";
+import ME from "ME";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import { PlayStationLinkModalActionCreators } from "../../user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx";
 import { XboxLinkModalActionCreators } from "../../user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx";
-// discord_app/modules/video_calls/native/useOnConnectToConsole.tsx
-import noop from "noop";
-import ME from "ME";
 
 let c4;
 let c5;

@@ -1,5 +1,5 @@
-import { trackExposureToExperiment } from "../ExperimentManager.tsx";
 // discord_app/modules/experiments/devtools/ExperimentDevToolsUtils.tsx
+import { trackExposureToExperiment } from "../ExperimentManager.tsx";
 const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: require("create").Variation_Type.OVERRIDE };
 const result = require("set").fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
 

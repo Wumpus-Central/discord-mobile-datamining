@@ -1,8 +1,8 @@
+// discord_app/lib/RTCConnectionStats.tsx
+import { RTCConnectionStates } from "ME";
 import { apply } from "../../_runtime/00012_apply.js";
 import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import { zipWithNext } from "zipWithNext.tsx";
-// discord_app/lib/RTCConnectionStats.tsx
-import { RTCConnectionStates } from "ME";
 
 const result = require("apply").fileFinishedImporting("lib/RTCConnectionStats.tsx");
 class StateHistory {

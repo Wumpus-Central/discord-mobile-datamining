@@ -1,6 +1,6 @@
-import { sanitizeURLPart } from "../../modules/links/native/handleURL.tsx";
 // discord_app/lib/native/Linking.tsx
 import { Linking } from "get ActivityIndicator";
+import { sanitizeURLPart } from "../../modules/links/native/handleURL.tsx";
 
 const result = require("set").fileFinishedImporting("lib/native/Linking.tsx");
 

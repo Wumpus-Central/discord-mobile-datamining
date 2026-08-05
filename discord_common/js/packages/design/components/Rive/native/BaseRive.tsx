@@ -1,8 +1,8 @@
-import { DataBindByName } from "../../../../../../../_runtime/04015_DataBindByName.js";
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { DataBindByName } from "../../../../../../../_runtime/04015_DataBindByName.js";
 
 let Platform;
 let StyleSheet;

@@ -1,13 +1,3 @@
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { CreateInviteModalActionCreators } from "../../../actions/CreateInviteModalActionCreators.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { _copy } from "../../../utils/ClipboardUtils.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { _findPlayingActivity } from "../../go_live/utils/StreamerApplicationSelectors.tsx";
-import { getInviteURL } from "../getInviteURL.tsx";
-import { readSnowflake } from "../InviteCodeUtils.tsx";
-import { openInstantInviteActionSheet } from "components/openInstantInviteActionSheet.tsx";
-import { sendSMS } from "DCDSendUtils.tsx";
 // discord_app/modules/instant_invite/native/InstantInviteUtils.tsx
 import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
 import { ChannelRecordBase } from "createChannelRecord";
@@ -21,6 +11,16 @@ import getDisplayedInviteCode from "getDisplayedInviteCode";
 import { InviteTargetTypes } from "InviteSendStates";
 import { IOS_COPY_TO_PASTEBOARD } from "SHARE_APPS_KEY";
 import ME from "ME";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { CreateInviteModalActionCreators } from "../../../actions/CreateInviteModalActionCreators.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { _copy } from "../../../utils/ClipboardUtils.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { _findPlayingActivity } from "../../go_live/utils/StreamerApplicationSelectors.tsx";
+import { getInviteURL } from "../getInviteURL.tsx";
+import { readSnowflake } from "../InviteCodeUtils.tsx";
+import { openInstantInviteActionSheet } from "components/openInstantInviteActionSheet.tsx";
+import { sendSMS } from "DCDSendUtils.tsx";
 
 let closure_14;
 let closure_15;

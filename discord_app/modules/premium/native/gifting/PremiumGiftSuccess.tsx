@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftSuccess.tsx
 import set from "set";
 import { View } from "PremiumGiftDMSuccessBody";
@@ -6,6 +5,7 @@ import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c9;
 let error;

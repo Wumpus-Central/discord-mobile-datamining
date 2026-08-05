@@ -1,11 +1,11 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/video_backgrounds/VideoBackgroundUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import VideoFilterType from "VideoFilterType";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
 let c5;
 let closure_6;

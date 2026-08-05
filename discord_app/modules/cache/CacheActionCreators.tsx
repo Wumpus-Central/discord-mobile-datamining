@@ -1,8 +1,8 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/cache/CacheActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { ChannelLoader } from "ensureGuildLoaded";
 import handleClearCaches from "handleClearCaches";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 function _writeCaches() {
   const self = this;

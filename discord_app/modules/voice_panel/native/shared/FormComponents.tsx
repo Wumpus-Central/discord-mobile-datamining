@@ -1,12 +1,12 @@
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { set } from "../../../core/native/NativeView.tsx";
-import { VideoDisabledSvgIcon } from "VoiceStateIcons.tsx";
 // discord_app/modules/voice_panel/native/shared/FormComponents.tsx
 import getSystemLocale from "getSystemLocale";
 import sortActivity from "sortActivity";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
+import { VideoDisabledSvgIcon } from "VoiceStateIcons.tsx";
 
 let c5;
 let closure_6;

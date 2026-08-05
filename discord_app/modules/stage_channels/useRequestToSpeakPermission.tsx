@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/useRequestToSpeakPermission.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Permissions } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");

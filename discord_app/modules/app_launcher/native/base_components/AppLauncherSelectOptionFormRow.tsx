@@ -1,11 +1,11 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Form } from "../../../../design/void/Form/native/index.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { useAnimationDelayedAutoFocus } from "../hooks/useAnimationDelayedAutoFocus.tsx";
 // discord_app/modules/app_launcher/native/base_components/AppLauncherSelectOptionFormRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { useAnimationDelayedAutoFocus } from "../hooks/useAnimationDelayedAutoFocus.tsx";
 
 const require = arg1;
 createCacheKey = { formRow: null };

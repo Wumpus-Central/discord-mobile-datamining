@@ -1,10 +1,10 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { FramePanelController } from "FramePanelController.tsx";
-import { renderActivityOrPIP } from "FramePanelUI.tsx";
 // discord_app/modules/frames/panel/native/FramePanelContainer.tsx
 import map from "map";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { FramePanelController } from "FramePanelController.tsx";
+import { renderActivityOrPIP } from "FramePanelUI.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function FramePanelContainer() {

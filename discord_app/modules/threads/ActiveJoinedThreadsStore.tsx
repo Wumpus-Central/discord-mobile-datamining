@@ -1,7 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
-import { getThreadAutoArchiveTimeOnce } from "getThreadAutoArchiveTimeOnce.tsx";
 // discord_app/modules/threads/ActiveJoinedThreadsStore.tsx
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -12,6 +8,10 @@ import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import storeThread from "storeThread";
 import { ChannelFlags } from "set";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
+import { getThreadAutoArchiveTimeOnce } from "getThreadAutoArchiveTimeOnce.tsx";
 
 let c3;
 let c4;

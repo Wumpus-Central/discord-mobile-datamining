@@ -1,7 +1,7 @@
-import { _openMediaModal } from "../../media_viewer/native/components/openMediaModal.tsx";
 // discord_app/modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AVATAR_MAX_SIZE } from "ME";
+import { _openMediaModal } from "../../media_viewer/native/components/openMediaModal.tsx";
 
 const require = arg1;
 const result = require("_openMediaModal").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");

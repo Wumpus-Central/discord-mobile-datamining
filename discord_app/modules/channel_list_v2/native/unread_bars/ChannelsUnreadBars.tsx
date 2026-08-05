@@ -1,6 +1,3 @@
-import { renderDefaultEmpty } from "../../../../lib/native/FastList.tsx";
-import { computeSubtitle } from "../../../guild_sidebar/ChannelListState.tsx";
-import { getFontScale } from "../../../screen/native/useFontScale.tsx";
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_4146";
@@ -14,6 +11,9 @@ import { getScaledChannelRowHeight } from "hairlineWidth";
 import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "useIsWindowLarge";
 import createCacheKey from "createCacheKey";
+import { renderDefaultEmpty } from "../../../../lib/native/FastList.tsx";
+import { computeSubtitle } from "../../../guild_sidebar/ChannelListState.tsx";
+import { getFontScale } from "../../../screen/native/useFontScale.tsx";
 
 let StyleSheet;
 let c5;

@@ -1,8 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarGuildFolder.tsx
 import importAllResult from "module_4146";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
@@ -15,6 +10,11 @@ import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR";
 import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c10;
 let c9;

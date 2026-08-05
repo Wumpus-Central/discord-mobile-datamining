@@ -1,5 +1,5 @@
-import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
 // discord_app/modules/slayer_storefront/utils/carouselMediaItems.tsx
+import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/utils/carouselMediaItems.tsx");
 
 export const WEB_HERO_WIDTH_PX = 747;

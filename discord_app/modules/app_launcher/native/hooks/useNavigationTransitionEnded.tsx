@@ -1,8 +1,8 @@
-import { Link } from "../../../../../_runtime/01481_Link.js";
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
+import { Link } from "../../../../../_runtime/01481_Link.js";
 
 let require = arg1;
 const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");

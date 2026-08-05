@@ -1,7 +1,7 @@
-import { commonTriggerPointConfiguration } from "OpenUserSettingsTriggerPoint.tsx";
-import { commonTriggerPointConfiguration } from "VoiceCallTriggerPoint.tsx";
 // discord_app/modules/experiments/trigger_points/CommonTriggerPointManager.tsx
 import "initialize";
+import { commonTriggerPointConfiguration } from "OpenUserSettingsTriggerPoint.tsx";
+import { commonTriggerPointConfiguration } from "VoiceCallTriggerPoint.tsx";
 
 const require = arg1;
 class CommonTriggerPointManager extends tmp2 {

@@ -1,8 +1,8 @@
+// discord_app/modules/content_classification/ContentClassificationVisibility.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { contentClassificationToAgeRestrictionConclusion } from "../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx";
 import { AgeRestrictionStatus } from "../../../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx";
-// discord_app/modules/content_classification/ContentClassificationVisibility.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 let obj = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };

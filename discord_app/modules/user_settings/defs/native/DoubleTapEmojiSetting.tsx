@@ -1,9 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { getFallbackDoubleTapDisambiguatedEmoji } from "../../../double_tap_to_react/native/DoubleTapToReactUtils.tsx";
-import { EMOJI_PICKER_ACTION_SHEET_KEY } from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
-import { Emoji } from "../../../emojis/native/Emoji.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx
 import jsxProd from "jsxProd";
 import "noop";
@@ -12,6 +6,12 @@ import { EmojiIntention } from "set";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { getFallbackDoubleTapDisambiguatedEmoji } from "../../../double_tap_to_react/native/DoubleTapToReactUtils.tsx";
+import { EMOJI_PICKER_ACTION_SHEET_KEY } from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
+import { Emoji } from "../../../emojis/native/Emoji.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const require = arg1;
 function SettingsEmoji(emoji) {

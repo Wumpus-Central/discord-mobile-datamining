@@ -1,11 +1,11 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { set } from "../../utils/GameUtils.native.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/modules/spotify/SpotifyActionCreators.tsx
 import isProtocolRegistered from "isProtocolRegistered";
 import WEB_OPEN from "WEB_OPEN";
 import ME from "ME";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { set } from "../../utils/GameUtils.native.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 
 let c4;
 let c5;

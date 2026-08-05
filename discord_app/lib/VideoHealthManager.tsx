@@ -1,7 +1,7 @@
-import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { dispatchAutoDisableVideo } from "../modules/media_engine/dispatchAutoDisableVideo.tsx";
 // discord_app/lib/VideoHealthManager.tsx
 import { VideoToggleState } from "ME";
+import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { dispatchAutoDisableVideo } from "../modules/media_engine/dispatchAutoDisableVideo.tsx";
 
 class VideoHealthManager {
   constructor(arg0, arg1, arg2, arg3) {

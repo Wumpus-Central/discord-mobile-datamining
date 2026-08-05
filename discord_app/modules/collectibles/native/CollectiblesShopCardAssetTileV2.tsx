@@ -1,3 +1,10 @@
+// discord_app/modules/collectibles/native/CollectiblesShopCardAssetTileV2.tsx
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "ProfileEffectSample";
+import get_ActivityIndicator from "FRACTIONAL_NITRO_COIN_SIZE";
+import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
+import jsxProd from "NameplateCardPreview";
+import createCacheKey from "createCacheKey";
 import { metadata } from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
@@ -13,13 +20,6 @@ import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
 import { BundleStaticPreviewContent } from "BundleSampleV2.tsx";
 import { ProfileEffectSample } from "ProfileEffectSampleV2.tsx";
-// discord_app/modules/collectibles/native/CollectiblesShopCardAssetTileV2.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "ProfileEffectSample";
-import get_ActivityIndicator from "FRACTIONAL_NITRO_COIN_SIZE";
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
-import jsxProd from "NameplateCardPreview";
-import createCacheKey from "createCacheKey";
 
 let StyleSheet;
 let c5;

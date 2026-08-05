@@ -1,9 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TrashIcon } from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { styles } from "FormStyles.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
@@ -16,6 +10,12 @@ import jsxProd from "Form";
 import createCacheKey from "createCacheKey";
 import importAllResult from "FormChannelPicker";
 import importDefaultResult from "createTextStyle";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TrashIcon } from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { styles } from "FormStyles.tsx";
 
 let c10;
 let c5;

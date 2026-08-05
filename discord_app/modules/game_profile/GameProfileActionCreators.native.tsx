@@ -1,8 +1,8 @@
+// discord_app/modules/game_profile/GameProfileActionCreators.native.tsx
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { 00038__ } from "../../../_runtime/metro/00038__.js";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/game_profile/GameProfileActionCreators.native.tsx
 const result = require("GetButton").fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
 
 export default {

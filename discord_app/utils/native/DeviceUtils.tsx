@@ -1,7 +1,7 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 // discord_app/utils/native/DeviceUtils.tsx
 import set from "set";
 import set from "enforcing";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 
 if (set.isAndroid()) {
   const importDefaultResult = require("enforcing");

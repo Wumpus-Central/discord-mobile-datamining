@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/guild_sidebar/native/BaseChannelItem.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import { CHANNEL_TITLE_LINE_HEIGHT } from "hairlineWidth";
 import { UnreadSetting } from "ReadStateTypes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
 
 let error;
 let metroImportAll;

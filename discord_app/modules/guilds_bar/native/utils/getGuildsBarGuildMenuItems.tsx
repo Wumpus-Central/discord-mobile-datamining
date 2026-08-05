@@ -1,13 +1,13 @@
-import { BellIcon } from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
-import { EnvelopeIcon } from "../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
-import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getMuteTimeOptions } from "../../../notifications/NotificationUtils.tsx";
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx
 import EnvelopeIcon from "EnvelopeIcon";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { AnalyticsSections } from "ME";
+import { BellIcon } from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
+import { EnvelopeIcon } from "../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
+import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getMuteTimeOptions } from "../../../notifications/NotificationUtils.tsx";
 
 const require = arg1;
 let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx");

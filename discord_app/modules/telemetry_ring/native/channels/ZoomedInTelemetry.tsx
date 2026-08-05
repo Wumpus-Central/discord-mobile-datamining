@@ -1,8 +1,8 @@
-import { apexExperiment } from "../ZoomedInAnalyticsExperiment.tsx";
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx
 import expandEventProperties from "expandEventProperties";
 import "getIntervalMs";
 import importDefaultResult1 from "TelemetryChannel";
+import { apexExperiment } from "../ZoomedInAnalyticsExperiment.tsx";
 
 const require = arg1;
 let closure_4 = { type: "ROWS", limit: 250 };

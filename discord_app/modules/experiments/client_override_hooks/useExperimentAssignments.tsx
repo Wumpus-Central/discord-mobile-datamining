@@ -1,9 +1,9 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { trackExposureToExperiment } from "../ExperimentManager.tsx";
 // discord_app/modules/experiments/client_override_hooks/useExperimentAssignments.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import initialize from "initialize";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { trackExposureToExperiment } from "../ExperimentManager.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");

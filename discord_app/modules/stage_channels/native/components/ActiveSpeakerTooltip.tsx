@@ -1,4 +1,3 @@
-import { UserSummaryItem } from "../../../../components_native/common/UserSummaryItem.tsx";
 // discord_app/modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx
 import _slicedToArray from "_slicedToArray";
 import { View } from "get ActivityIndicator";
@@ -7,6 +6,7 @@ import importAllResult from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler";
+import { UserSummaryItem } from "../../../../components_native/common/UserSummaryItem.tsx";
 
 let c9;
 let closure_6;

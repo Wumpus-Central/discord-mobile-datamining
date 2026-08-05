@@ -1,8 +1,8 @@
-import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx");

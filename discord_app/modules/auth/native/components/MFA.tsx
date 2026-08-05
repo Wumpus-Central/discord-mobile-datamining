@@ -1,8 +1,8 @@
-import { apply } from "../../../../../_runtime/00012_apply.js";
 // discord_app/modules/auth/native/components/MFA.tsx
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import { jsx } from "jsxProd";
+import { apply } from "../../../../../_runtime/00012_apply.js";
 
 const require = arg1;
 function statesAreEqual(arg0, arg1) {

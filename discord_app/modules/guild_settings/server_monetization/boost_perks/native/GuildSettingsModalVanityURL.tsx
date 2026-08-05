@@ -1,10 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/16605_registerAsset.js";
-import { ChangeVanityURLActionCreators } from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getInviteURL } from "../../../../instant_invite/getInviteURL.tsx";
-import { getErrorMessageFromErrorCode } from "../GuildSettingsVanityURLUtils.tsx";
 // discord_app/modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx
 import get_ActivityIndicator from "registerAsset";
 import FormStates from "FormStates";
@@ -14,6 +7,13 @@ import { GuildFeatures } from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importAllResult from "initialize";
+import { registerAsset } from "../../../../../../_runtime/16605_registerAsset.js";
+import { ChangeVanityURLActionCreators } from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getInviteURL } from "../../../../instant_invite/getInviteURL.tsx";
+import { getErrorMessageFromErrorCode } from "../GuildSettingsVanityURLUtils.tsx";
 
 let c10;
 let c3;

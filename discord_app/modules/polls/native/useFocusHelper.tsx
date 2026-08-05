@@ -1,6 +1,6 @@
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
 // discord_app/modules/polls/native/useFocusHelper.tsx
 import noop from "noop";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
 
 let closure_3 = function FocusHelperState() {
   const obj = Object.create(new.target.prototype);

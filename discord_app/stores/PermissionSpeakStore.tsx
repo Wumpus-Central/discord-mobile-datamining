@@ -1,8 +1,8 @@
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/PermissionSpeakStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Store } from "initialize";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 
 const require = arg1;
 const hideSuppressWarning = "hideSuppressWarning";

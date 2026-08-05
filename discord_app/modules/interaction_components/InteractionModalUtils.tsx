@@ -1,5 +1,3 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { isInteractionComponent } from "ComponentStateContext.tsx";
 // discord_app/modules/interaction_components/InteractionModalUtils.tsx
 import handleChanged from "handleChanged";
 import _slicedToArray from "_slicedToArray";
@@ -14,6 +12,8 @@ import getModalState from "getModalState";
 import { InteractionModalState } from "getModalState";
 import getInteractionComponentStates from "getInteractionComponentStates";
 import { Endpoints } from "ME";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { isInteractionComponent } from "ComponentStateContext.tsx";
 
 const require = arg1;
 function getData(arg0, arr) {

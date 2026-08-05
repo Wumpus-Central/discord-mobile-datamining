@@ -1,8 +1,8 @@
-import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/rpc/server/commands/networking.tsx
 import { RPC_LOCAL_SCOPE } from "RPC_SCOPE_CONFIG";
 import ME from "ME";
+import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 
 let RPCCommands;
 let c3;

@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/blocking/useDiscoverableApplicationStream.tsx
 import reset from "reset";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getDiscoverableApplicationStream(arg0) {

@@ -1,9 +1,9 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/oauth2/AuthorizedAppsActionCreators.tsx
 import sendRequest from "sendRequest";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;
 function tokensToAppTokensMap(arg0, arr) {

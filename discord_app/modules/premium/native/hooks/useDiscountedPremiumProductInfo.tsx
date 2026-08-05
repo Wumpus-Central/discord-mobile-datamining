@@ -1,8 +1,8 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx
 import noop from "noop";
 import updateProduct from "updateProduct";
 import { CurrencyCodes } from "sum";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("sum").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx");

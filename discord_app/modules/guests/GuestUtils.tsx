@@ -1,6 +1,6 @@
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/guests/GuestUtils.tsx
 import { GuildMemberFlags } from "GuildMemberFlags";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guests/GuestUtils.tsx");
 

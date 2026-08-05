@@ -1,8 +1,8 @@
-import { isClickstreamEnabled } from "../../clickstream/Clickstream.tsx";
 // discord_app/modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 import { StaticChannelRoute } from "set";
+import { isClickstreamEnabled } from "../../clickstream/Clickstream.tsx";
 
 let c3;
 let c4;

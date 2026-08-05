@@ -1,5 +1,5 @@
-import { DEFAULT_PROFILE_EFFECT_WH_RATIO } from "getAssetWHRatio.tsx";
 // discord_app/modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx
+import { DEFAULT_PROFILE_EFFECT_WH_RATIO } from "getAssetWHRatio.tsx";
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
 export const shouldAnimate = function shouldAnimate(start, current) {

@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { resetCache } from "../../utils/DateUtils.tsx";
-import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 // discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import upsertRelationship from "upsertRelationship";
 import { ChannelFlags } from "set";
 import { MessageTypes } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { resetCache } from "../../utils/DateUtils.tsx";
+import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");

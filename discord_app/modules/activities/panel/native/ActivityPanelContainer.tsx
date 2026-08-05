@@ -1,12 +1,12 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { BaseActivityPanelController } from "ActivityPanelController.tsx";
-import { renderActivityOrPIP } from "ActivityPanelUI.tsx";
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import participantFromServer from "participantFromServer";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { BaseActivityPanelController } from "ActivityPanelController.tsx";
+import { renderActivityOrPIP } from "ActivityPanelUI.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function ActivityPanelContainer() {

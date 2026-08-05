@@ -1,3 +1,12 @@
+// discord_app/modules/messages/MessageRecordUtils.tsx
+import createFromServer from "createFromServer";
+import hasFlag from "hasFlag";
+import closure_6 from "hasFlag";
+import importDefaultResult from "createdAt";
+import fetchFingerprint from "fetchFingerprint";
+import upsertRelationship from "upsertRelationship";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
 import { t } from "../../../_runtime/03867_t.js";
 import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 import { _resolveGiftCode } from "../../utils/GiftCodeUtils.tsx";
@@ -8,15 +17,6 @@ import { transformMessagePoll } from "../polls/transformMessagPoll.tsx";
 import { getStickerExtensionFromFormatType } from "../stickers/StickersUtils.tsx";
 import { isMentioned } from "isMessageMentioned.tsx";
 import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
-// discord_app/modules/messages/MessageRecordUtils.tsx
-import createFromServer from "createFromServer";
-import hasFlag from "hasFlag";
-import closure_6 from "hasFlag";
-import importDefaultResult from "createdAt";
-import fetchFingerprint from "fetchFingerprint";
-import upsertRelationship from "upsertRelationship";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
 
 let c4;
 let c5;

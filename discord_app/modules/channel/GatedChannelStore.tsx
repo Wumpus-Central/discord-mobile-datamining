@@ -1,5 +1,3 @@
-import { isSubscriptionRole } from "../guild_role_subscriptions/PremiumRoleUtils.tsx";
-import { hasViewChannelPermission } from "../guild_role_subscriptions/RolePermissionUtils.tsx";
 // discord_app/modules/channel/GatedChannelStore.tsx
 import initialize from "initialize";
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
@@ -12,6 +10,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "GuildRoleRecordTypeTag";
+import { isSubscriptionRole } from "../guild_role_subscriptions/PremiumRoleUtils.tsx";
+import { hasViewChannelPermission } from "../guild_role_subscriptions/RolePermissionUtils.tsx";
 
 let c10;
 let unpackModuleId;

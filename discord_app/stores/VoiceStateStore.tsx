@@ -1,5 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { isMetaQuest } from "../modules/device/MetaQuestUtils.android.tsx";
 // discord_app/stores/VoiceStateStore.tsx
 import _slicedToArray from "_slicedToArray";
 import isVoiceMuted from "isVoiceMuted";
@@ -7,6 +5,8 @@ import { ME } from "ME";
 import { VoicePlatforms } from "ParticipantTypes";
 import { Store } from "initialize";
 import set from "ME";
+import { apply } from "../../_runtime/00012_apply.js";
+import { isMetaQuest } from "../modules/device/MetaQuestUtils.android.tsx";
 
 const require = arg1;
 function updateVoiceState(arg0, arg1, arg2) {

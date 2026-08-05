@@ -1,11 +1,11 @@
-import { ClockWarningIcon } from "../../../../design/components/Icon/native/redesign/generated/ClockWarningIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useCommunicationDisabledCountdownCleanup } from "../../../guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx";
-import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx
 import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { ClockWarningIcon } from "../../../../design/components/Icon/native/redesign/generated/ClockWarningIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useCommunicationDisabledCountdownCleanup } from "../../../guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function CommunicationDisabledNoticeForGuild(guildMember) {

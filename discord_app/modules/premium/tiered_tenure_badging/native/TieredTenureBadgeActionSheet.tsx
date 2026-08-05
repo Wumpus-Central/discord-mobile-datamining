@@ -1,5 +1,3 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { useMobileTenureBadgeImages } from "hooks/useMobileTenureBadgeImages.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx
 import useSafeAreaInsets from "useSafeAreaInsets";
 import { View } from "trackImpression";
@@ -8,6 +6,8 @@ import GuildFeatures from "GuildFeatures";
 import ME from "ME";
 import jsxProd from "ACTION_SHEET_HEIGHT_HALF";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { useMobileTenureBadgeImages } from "hooks/useMobileTenureBadgeImages.tsx";
 
 let c10;
 let c9;

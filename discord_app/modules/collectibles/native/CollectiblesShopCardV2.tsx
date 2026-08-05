@@ -1,4 +1,3 @@
-import { context } from "../CollectiblesAnalyticsContext.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopCardV2.tsx
 import importAllResult from "useCanPurchaseFrames";
 import get_ActivityIndicator from "useTrackShopCardClick";
@@ -7,6 +6,7 @@ import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import items from "items";
 import jsxProd from "AccessibilityAnnouncer";
 import createCacheKey from "createCacheKey";
+import { context } from "../CollectiblesAnalyticsContext.tsx";
 
 let PixelRatio;
 let c10;

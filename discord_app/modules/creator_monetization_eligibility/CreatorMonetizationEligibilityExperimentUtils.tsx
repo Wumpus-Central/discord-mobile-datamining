@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
 import { GuildFeatures } from "ME";
 import set from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let set = new Set(["US"]);

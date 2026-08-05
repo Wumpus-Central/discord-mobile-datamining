@@ -1,15 +1,15 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { u } from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
-import { updateSaturation } from "../../themes/native/updateSaturation.tsx";
-import { setSystemTheme } from "../../user_settings/ThemeActionCreators.tsx";
-import { A11Y_FEATURE_MAP } from "AccessibilityPreferencesSharedValue.tsx";
-import { AccessibilityFeatureFlags } from "AccessibilitySystemFeatures.tsx";
 // discord_app/modules/a11y/native/AccessibilityManager.tsx
 import AccessibilityFeatureFlags from "AccessibilityFeatureFlags";
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AnalyticEvents } from "ME";
 import { SystemTheme } from "SystemThemeState";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { u } from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import { updateSaturation } from "../../themes/native/updateSaturation.tsx";
+import { setSystemTheme } from "../../user_settings/ThemeActionCreators.tsx";
+import { A11Y_FEATURE_MAP } from "AccessibilityPreferencesSharedValue.tsx";
+import { AccessibilityFeatureFlags } from "AccessibilitySystemFeatures.tsx";
 
 let c4;
 let c5;

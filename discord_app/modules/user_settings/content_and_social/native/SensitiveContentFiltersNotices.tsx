@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { resolveGoreSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx
 import "noop";
 import { SafetySettingsNoticeType } from "SafetyToastType";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { resolveGoreSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
 
 const require = arg1;
 let result = require("jsxProd").fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");

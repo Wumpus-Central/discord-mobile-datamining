@@ -1,6 +1,3 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { HubEmailConnectionModalActionCreators } from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
 // discord_app/modules/nuf/native/NUFActionCreators.tsx
 import ME from "ME";
 import ContactSyncModes from "ContactSyncModes";
@@ -9,6 +6,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { NUF_DISCOVERABILITY_MODAL_KEY as closure_10 } from "NewUserTypes";
 import { PlatformTypes } from "ME";
 import { IN_APP_GUILD_TEMPLATES_MODAL_KEY as closure_12 } from "NUXGuildTemplatesAnalytics";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { HubEmailConnectionModalActionCreators } from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
 
 let c4;
 let c5;

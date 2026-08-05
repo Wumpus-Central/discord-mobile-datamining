@@ -1,11 +1,11 @@
+// discord_app/modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx
+import set from "set";
+import handleUpdate from "handleUpdate";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useVoiceStateForRemoteSession } from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import { getConsoleColor } from "../../../game_console/native/getConsoleColor.tsx";
 import { getConsoleIcon } from "../../../game_console/native/getConsoleIcon.tsx";
 import { useShouldDisplayCancelConsoleTransfer } from "../../../game_console/native/useShouldDisplayCancelConsoleTransfer.tsx";
-// discord_app/modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx
-import set from "set";
-import handleUpdate from "handleUpdate";
 
 let require = arg1;
 const result = require("useVoiceStateForRemoteSession").fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");

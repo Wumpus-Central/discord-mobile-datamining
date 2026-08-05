@@ -1,5 +1,5 @@
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/zustand/LocalStorageWrapper.tsx
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 const frozen = Object.freeze({
   getItem(arg0) {
     const Storage = Storage /* Storage */.Storage;

@@ -1,10 +1,10 @@
+// discord_app/modules/messages/MessageViewTrackingManager.tsx
+import { AnalyticEvents } from "ME";
+import "initialize";
 import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 import { QUICK_SWITCHER } from "../app_analytics/AnalyticsLocation.tsx";
-// discord_app/modules/messages/MessageViewTrackingManager.tsx
-import { AnalyticEvents } from "ME";
-import "initialize";
 
 function getAnalyticsConfig(type) {
   let treatmentRendered;

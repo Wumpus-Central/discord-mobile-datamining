@@ -1,13 +1,13 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useBaseActivityPanelHeaderContent } from "../../../activities/panel/native/ActivityPanelHeader.tsx";
-import { useGetOrFetchApplications } from "../../../applications/useGetOrFetchApplications.tsx";
-import { context } from "FramePanelStateContext.tsx";
 // discord_app/modules/frames/panel/native/FramePanelHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import map from "map";
 import jsxProd from "jsxProd";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useBaseActivityPanelHeaderContent } from "../../../activities/panel/native/ActivityPanelHeader.tsx";
+import { useGetOrFetchApplications } from "../../../applications/useGetOrFetchApplications.tsx";
+import { context } from "FramePanelStateContext.tsx";
 
 let closure_6;
 let error;

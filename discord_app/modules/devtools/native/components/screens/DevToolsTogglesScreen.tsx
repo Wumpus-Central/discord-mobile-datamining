@@ -1,6 +1,3 @@
-import { fuzzysearch } from "../../../../../../_runtime/05197_fuzzysearch.js";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsTogglesScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import SearchField from "SearchField";
@@ -10,6 +7,9 @@ import closure_7 from "getUserAgnosticState";
 import { CATEGORY_LABELS } from "getUserAgnosticState";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { fuzzysearch } from "../../../../../../_runtime/05197_fuzzysearch.js";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
 let c10;
 let c9;

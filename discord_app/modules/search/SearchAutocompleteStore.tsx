@@ -1,7 +1,3 @@
-import { isEqual } from "../../../_runtime/04444_isEqual.js";
-import { getTransformedUser } from "../autocompleter/UserSearchManager.tsx";
-import { SearchTokenTypes } from "SearchUtils.tsx";
-import { getShortcuts } from "tokens/SearchTokens.tsx";
 // discord_app/modules/search/SearchAutocompleteStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -12,6 +8,10 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "createGuildRecordFromRust";
+import { isEqual } from "../../../_runtime/04444_isEqual.js";
+import { getTransformedUser } from "../autocompleter/UserSearchManager.tsx";
+import { SearchTokenTypes } from "SearchUtils.tsx";
+import { getShortcuts } from "tokens/SearchTokens.tsx";
 
 let SearchTokenTypes;
 let c9;

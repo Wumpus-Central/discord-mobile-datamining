@@ -1,7 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/guild_onboarding/native/GuildOnboardingPrompt.tsx
 import DropdownOptionRow from "DropdownOptionRow";
 import TermsFieldListItem from "TermsFieldListItem";
@@ -14,6 +10,10 @@ import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL
 import { EMOJI_URL_BASE_SIZE } from "set";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 
 let c5;
 let closure_15;

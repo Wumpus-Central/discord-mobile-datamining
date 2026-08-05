@@ -1,13 +1,13 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { hasBit } from "../../utils/Uint8ArrayUtils.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { UserSettingsDelay } from "MAX_FAVORITES";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { hasBit } from "../../utils/Uint8ArrayUtils.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
 let result = require("ContentDismissActionType").fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");

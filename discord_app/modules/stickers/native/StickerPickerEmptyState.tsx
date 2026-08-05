@@ -1,9 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useStickerPackCategories } from "../StickersHooks.tsx";
-import { Sticker } from "Sticker.tsx";
 // discord_app/modules/stickers/native/StickerPickerEmptyState.tsx
 import _slicedToArray from "_slicedToArray";
 import IMPACT_LIGHT from "IMPACT_LIGHT";
@@ -14,6 +8,12 @@ import ME from "ME";
 import { PremiumUpsellTypes } from "GuildFeatures";
 import jsxProd from "preload";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useStickerPackCategories } from "../StickersHooks.tsx";
+import { Sticker } from "Sticker.tsx";
 
 let c9;
 let closure_12;

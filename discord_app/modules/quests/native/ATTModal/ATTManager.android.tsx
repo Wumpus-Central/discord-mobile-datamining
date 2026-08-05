@@ -1,7 +1,7 @@
-import { SentryUtils.native } from "../../../../utils/SentryUtils.native.tsx";
-import { _fetchAdUser } from "../../../ads/native/AdUserActionCreators.android.tsx";
 // discord_app/modules/quests/native/ATTModal/ATTManager.android.tsx
 import "initialize";
+import { SentryUtils.native } from "../../../../utils/SentryUtils.native.tsx";
+import { _fetchAdUser } from "../../../ads/native/AdUserActionCreators.android.tsx";
 
 const require = arg1;
 class ATTManager extends tmp2 {

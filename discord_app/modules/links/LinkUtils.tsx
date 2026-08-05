@@ -1,9 +1,9 @@
-import { set } from "../../utils/RegexUtils.tsx";
 // discord_app/modules/links/LinkUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { set } from "../../utils/RegexUtils.tsx";
 
 ME = ME.ME;
 const Permissions = ME.Permissions;

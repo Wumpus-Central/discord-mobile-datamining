@@ -1,7 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
-import { getBrowserInvertedWantsConfig } from "../modules/media_engine/BrowserInvertedWantsExperiment.tsx";
-import { isIncomingVideoEnabled } from "WindowVisibilityVideoManager.tsx";
 // discord_app/lib/RTCMediaSinkWantsManager.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -9,6 +5,10 @@ import { VideoToggleState } from "ME";
 import { SimulcastOverrideQuality } from "DesktopSources";
 import "on";
 import num2 from "num2";
+import { apply } from "../../_runtime/00012_apply.js";
+import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
+import { getBrowserInvertedWantsConfig } from "../modules/media_engine/BrowserInvertedWantsExperiment.tsx";
+import { isIncomingVideoEnabled } from "WindowVisibilityVideoManager.tsx";
 
 let require = arg1;
 function getDefaultWants(arg0) {

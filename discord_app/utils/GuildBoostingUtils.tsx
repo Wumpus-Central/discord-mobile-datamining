@@ -1,11 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { t } from "../../_runtime/03867_t.js";
-import { PremiumGuildOverrides } from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
-import { _fetchAppliedGuildBoostsForGuild } from "../actions/BoostingActionCreators.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { useGuildAppliedBoostCount } from "../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
-import { combined } from "HelpdeskUtils.tsx";
-import { SentryUtils.native } from "SentryUtils.native.tsx";
 // discord_app/utils/GuildBoostingUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -17,6 +9,14 @@ import GuildFeatures from "GuildFeatures";
 import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes";
 import importDefaultResult from "combined";
 import set from "handleGuildBoostsUpdate";
+import { apply } from "../../_runtime/00012_apply.js";
+import { t } from "../../_runtime/03867_t.js";
+import { PremiumGuildOverrides } from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
+import { _fetchAppliedGuildBoostsForGuild } from "../actions/BoostingActionCreators.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { useGuildAppliedBoostCount } from "../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
+import { combined } from "HelpdeskUtils.tsx";
+import { SentryUtils.native } from "SentryUtils.native.tsx";
 
 let AppliedGuildBoostsRequiredForBoostedGuildTier;
 let closure_12;

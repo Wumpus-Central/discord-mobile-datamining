@@ -1,6 +1,3 @@
-import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { createRPCCommand } from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
-import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/AuthCommandsFactory.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "RPC_SCOPE_CONFIG";
@@ -10,6 +7,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
 import importDefaultResult from "_processQueue";
+import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { createRPCCommand } from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
+import { prototype } from "../../RPCError.tsx";
 
 let c10;
 let c9;

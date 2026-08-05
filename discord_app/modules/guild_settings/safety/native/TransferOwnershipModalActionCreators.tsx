@@ -1,7 +1,7 @@
+// discord_app/modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { dispatcher } from "../../../../Dispatcher.tsx";
-// discord_app/modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx
 const TRANSFER_OWNERSHIP_MODAL_KEY = "TRANSFER_OWNERSHIP_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx");
 

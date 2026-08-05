@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 
 const sm = require("Themes").radii.sm;
 let closure_5 = createCacheKey.createStyles((width, borderRadius) => {

@@ -1,4 +1,3 @@
-import { CallWithVoiceChat } from "ChannelCallNavigator.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallModal.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "initialize";
@@ -8,6 +7,7 @@ import VoiceChatDrawerState from "VoiceChatDrawerState";
 import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH";
 import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET";
 import jsxProd from "useIsActivityFocused";
+import { CallWithVoiceChat } from "ChannelCallNavigator.tsx";
 
 let c10;
 let c9;

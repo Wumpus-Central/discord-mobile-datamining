@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/errors/hooks/useVideoStreamError.tsx
 import fetchFingerprint from "fetchFingerprint";
 import isAVErrorContextOfType from "isAVErrorContextOfType";
 import { MediaEngineContextTypes } from "DesktopSources";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("DesktopSources").fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");

@@ -1,8 +1,8 @@
-import { updateAssets } from "../../../utils/ApplicationAssetUtils.tsx";
-import { getDevicePixelRatio } from "../../../utils/getDevicePixelRatio.native.tsx";
 // discord_app/modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx
 import noop from "noop";
 import getCoverImageURL from "getCoverImageURL";
+import { updateAssets } from "../../../utils/ApplicationAssetUtils.tsx";
+import { getDevicePixelRatio } from "../../../utils/getDevicePixelRatio.native.tsx";
 
 const require = arg1;
 function _getPresenceActivityInviteCoverImageURL(messageId) {

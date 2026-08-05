@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { ROBLOX_PROTOCOL_URL } from "RobloxSubgameTypes.tsx";
 // discord_app/modules/roblox_subgame_detection/RobloxSubgameUtils.tsx
 import RobloxSubgamePlatformUtils.native from "RobloxSubgamePlatformUtils.native.tsx";
 import { isDetectionEnabled } from "initialize";
 import ME from "ME";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { ROBLOX_PROTOCOL_URL } from "RobloxSubgameTypes.tsx";
 
 let c5;
 let closure_6;

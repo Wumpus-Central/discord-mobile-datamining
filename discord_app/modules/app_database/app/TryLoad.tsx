@@ -1,6 +1,6 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/app_database/app/TryLoad.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 function _tryLoadAsync() {
   const self = this;

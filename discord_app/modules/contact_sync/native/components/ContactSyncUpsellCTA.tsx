@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../../_runtime/13112_registerAsset.js";
 // discord_app/modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx
 import { dismissUpsellCTA } from "setStoredContacts";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { registerAsset } from "../../../../../_runtime/13112_registerAsset.js";
 
 let c4;
 let c5;

@@ -1,10 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
-import { useIsSpeaking } from "../../hooks/useIsSpeaking.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { updateAssets } from "../../utils/ApplicationAssetUtils.tsx";
-import { apiRequest } from "SpotifyActionCreators.tsx";
 // discord_app/modules/spotify/SpotifyStore.tsx
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
@@ -18,6 +11,13 @@ import ME from "ME";
 import importDefaultResult from "getPlatformUserUrl";
 import { Store } from "initialize";
 import set from "set";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
+import { useIsSpeaking } from "../../hooks/useIsSpeaking.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { updateAssets } from "../../utils/ApplicationAssetUtils.tsx";
+import { apiRequest } from "SpotifyActionCreators.tsx";
 
 let closure_14;
 let closure_15;

@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 // discord_app/modules/messages/useMessageMaxLength.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
 let c4;
 let c5;

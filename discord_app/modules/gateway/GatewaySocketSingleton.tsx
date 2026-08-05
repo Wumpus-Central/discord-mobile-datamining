@@ -1,11 +1,11 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
 // discord_app/modules/gateway/GatewaySocketSingleton.tsx
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
 import importDefaultResult from "awaitOnline";
 import set from "noop";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
 
 let c4 = new require("getInitialState")("ConnectionStore");
 let obj = new require("noop")();

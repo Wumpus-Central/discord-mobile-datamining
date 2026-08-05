@@ -1,10 +1,10 @@
-import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getAutoArchiveOptions } from "../../ThreadAutoArchive.tsx";
 // discord_app/modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx
 import { ChannelFlags } from "set";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getAutoArchiveOptions } from "../../ThreadAutoArchive.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo((channel) => {

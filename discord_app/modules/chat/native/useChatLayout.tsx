@@ -1,6 +1,6 @@
-import { useWindowSizeClassifier } from "../../screen/native/useWindowSizeClassifier.tsx";
 // discord_app/modules/chat/native/useChatLayout.tsx
 import noop from "noop";
+import { useWindowSizeClassifier } from "../../screen/native/useWindowSizeClassifier.tsx";
 
 let require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat/native/useChatLayout.tsx");

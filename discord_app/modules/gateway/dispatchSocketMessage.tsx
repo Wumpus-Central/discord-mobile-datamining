@@ -1,12 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getPurchaseToken } from "../../utils/PurchaseTokenUtils.tsx";
-import { urlUserId } from "../badges/BadgeDirectoryActionCreators.tsx";
-import { _deletePaymentSource } from "../billing/actions/BillingActionCreators.tsx";
-import { splitAgeRestrictedActivities } from "../presence/splitAgeRestrictedActivities.tsx";
-import { convertServerThreadMember } from "../threads/convertServerThreadMember.tsx";
-import { serialize } from "../tti_analytics/TTITracker.tsx";
 // discord_app/modules/gateway/dispatchSocketMessage.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { createChannelRecordFromServer as closure_6 } from "createChannelRecord";
@@ -24,6 +15,15 @@ import importDefaultResult from "flush";
 import importDefaultResult1 from "flush";
 import importDefaultResult2 from "flush";
 import importDefaultResult3 from "flush";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getPurchaseToken } from "../../utils/PurchaseTokenUtils.tsx";
+import { urlUserId } from "../badges/BadgeDirectoryActionCreators.tsx";
+import { _deletePaymentSource } from "../billing/actions/BillingActionCreators.tsx";
+import { splitAgeRestrictedActivities } from "../presence/splitAgeRestrictedActivities.tsx";
+import { convertServerThreadMember } from "../threads/convertServerThreadMember.tsx";
+import { serialize } from "../tti_analytics/TTITracker.tsx";
 
 const require = arg1;
 function defineSimpleDispatch(arg0, arg1) {

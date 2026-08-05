@@ -1,7 +1,7 @@
-import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 // discord_app/modules/user_settings/defs/native/InternalBuildActiveSetting.tsx
 import checkForNewerBuild from "checkForNewerBuild";
 import createToggle from "createToggle";
+import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 
 const require = arg1;
 createToggle = {

@@ -1,5 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileContactButtons.tsx
 import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
@@ -7,6 +5,8 @@ import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
 import jsxProd from "module_4295";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 
 let closure_6;
 let error;

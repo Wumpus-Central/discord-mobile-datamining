@@ -1,3 +1,11 @@
+// discord_app/modules/user_profile/native/ChangeBannerActionSheet.tsx
+import closure_3 from "jsxProd";
+import UserProfileUpsellButton from "UserProfileUpsellButton";
+import { View } from "TableRowInner";
+import handleFormOpen from "handleFormOpen";
+import ME from "ME";
+import jsxProd from "getArchivedAvatarURL";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -11,14 +19,6 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
 import { useDominantRGBFromImage } from "../../calls/native/VideoBackground.tsx";
 import { getArchivedAvatarURL } from "../../recent_avatars/RecentAvatarUtils.tsx";
-// discord_app/modules/user_profile/native/ChangeBannerActionSheet.tsx
-import closure_3 from "jsxProd";
-import UserProfileUpsellButton from "UserProfileUpsellButton";
-import { View } from "TableRowInner";
-import handleFormOpen from "handleFormOpen";
-import ME from "ME";
-import jsxProd from "getArchivedAvatarURL";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;

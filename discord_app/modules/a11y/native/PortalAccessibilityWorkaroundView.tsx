@@ -1,9 +1,9 @@
-import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 // discord_app/modules/a11y/native/PortalAccessibilityWorkaroundView.tsx
 import "noop";
 import { View as _default } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import isFabric from "isFabric";
+import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 
 const require = arg1;
 if (isFabric.isIosFabric()) {

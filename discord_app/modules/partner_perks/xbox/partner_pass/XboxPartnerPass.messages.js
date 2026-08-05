@@ -1,3 +1,6 @@
+// discord_app/modules/partner_perks/xbox/partner_pass/XboxPartnerPass.messages.js
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../../_runtime/03128_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/03129_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/03130_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../../_runtime/03156_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/03157_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/03158_registerAsset.js";
 import { loadJsonAsset } from "../../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/partner_perks/xbox/partner_pass/XboxPartnerPass.messages.js
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

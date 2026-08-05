@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ActivityStatusIcon } from "ActivityStatusIcon.tsx";
-import { ActivityStatusText } from "ActivityStatusText.tsx";
 // discord_app/modules/activity_status/native/ApplicationStreamActivityStatus.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ActivityStatusIcon } from "ActivityStatusIcon.tsx";
+import { ActivityStatusText } from "ActivityStatusText.tsx";
 
 let c3;
 let c4;

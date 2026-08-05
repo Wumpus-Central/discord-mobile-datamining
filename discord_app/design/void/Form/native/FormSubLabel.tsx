@@ -1,7 +1,7 @@
-import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/Form/native/FormSubLabel.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { Text } from "../../../components/Text/native/Text.tsx";
 
 const require = arg1;
 const result = require("Text").fileFinishedImporting("design/void/Form/native/FormSubLabel.tsx");

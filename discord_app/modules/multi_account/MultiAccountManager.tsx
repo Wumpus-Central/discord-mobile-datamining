@@ -1,9 +1,9 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { noop } from "../gateway/GatewaySocket.tsx";
 // discord_app/modules/multi_account/MultiAccountManager.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
 import "initialize";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { noop } from "../gateway/GatewaySocket.tsx";
 
 let require = arg1;
 class MultiAccountManager extends tmp2 {

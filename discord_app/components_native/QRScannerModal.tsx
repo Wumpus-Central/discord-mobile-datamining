@@ -1,7 +1,3 @@
-import { registerAsset } from "../../_runtime/07870_registerAsset.js";
-import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
-import { render } from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { useSafeAreaInsets } from "../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/components_native/QRScannerModal.tsx
 import _slicedToArray from "_slicedToArray";
 import AlertActionCreators from "../actions/native/AlertActionCreators.tsx";
@@ -11,6 +7,10 @@ import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items";
 import jsxProd from "render";
 import set from "set";
 import set from "get ActivityIndicator";
+import { registerAsset } from "../../_runtime/07870_registerAsset.js";
+import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
+import { render } from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { useSafeAreaInsets } from "../modules/safe_area/useSafeAreaInsets.native.tsx";
 
 let c5;
 let c9;

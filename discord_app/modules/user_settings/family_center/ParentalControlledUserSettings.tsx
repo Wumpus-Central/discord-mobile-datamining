@@ -1,5 +1,3 @@
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { defineProperty } from "../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
 // discord_app/modules/user_settings/family_center/ParentalControlledUserSettings.tsx
 import { ExplicitContentFilterTypes as closure_2 } from "items";
 import { AllFriendSourceFlags } from "ME";
@@ -13,6 +11,8 @@ import defineParentalControlledSetting from "defineParentalControlledSetting";
 import defineParentalControlledSetting from "defineParentalControlledSetting";
 import defineParentalControlledSetting from "defineParentalControlledSetting";
 import defineParentalControlledSetting from "defineParentalControlledSetting";
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { defineProperty } from "../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
 
 let obj = { comparator: null };
 obj[0] = require("shallowEqual");

@@ -1,7 +1,7 @@
-import { useRefValue } from "../../../../hooks/useRefValue.tsx";
 // discord_app/modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
+import { useRefValue } from "../../../../hooks/useRefValue.tsx";
 
 const result = require("useRefValue").fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
 

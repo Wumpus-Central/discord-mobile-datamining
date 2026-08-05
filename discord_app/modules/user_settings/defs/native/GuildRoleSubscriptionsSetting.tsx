@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { GuildRoleSubscriptionsSectionHeader } from "../../../guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx";
-import { useUserRoleSubscriptionRelationship } from "../../../guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx";
 // discord_app/modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx
 import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { GuildRoleSubscriptionsSectionHeader } from "../../../guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx";
+import { useUserRoleSubscriptionRelationship } from "../../../guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx";
 
 obj = {
   useTitle() {

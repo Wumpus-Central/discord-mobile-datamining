@@ -1,10 +1,10 @@
-import { useCustomKeyboardHeight } from "../../keyboard/native/useCustomKeyboardHeight.tsx";
-import { useChannelSafeAreaBottomStyles } from "../../main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx";
 // discord_app/modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import { Easing } from "module_4146";
+import { useCustomKeyboardHeight } from "../../keyboard/native/useCustomKeyboardHeight.tsx";
+import { useChannelSafeAreaBottomStyles } from "../../main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx";
 
 let c5;
 let closure_6;

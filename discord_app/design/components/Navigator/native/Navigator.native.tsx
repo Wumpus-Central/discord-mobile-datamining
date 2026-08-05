@@ -1,11 +1,11 @@
-import { Link } from "../../../../../_runtime/01481_Link.js";
-import { useNavigationTheme } from "useNavigationTheme.native.tsx";
 // discord_app/design/components/Navigator/native/Navigator.native.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "useNavigationTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Link } from "../../../../../_runtime/01481_Link.js";
+import { useNavigationTheme } from "useNavigationTheme.native.tsx";
 
 let StyleSheet;
 let c5;

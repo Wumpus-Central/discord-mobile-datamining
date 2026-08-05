@@ -1,6 +1,3 @@
-import { GroupIcon } from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/create_guild/native/components/GuildInvite.tsx
 import Text from "Text";
 import useNavigation from "useNavigation";
@@ -14,6 +11,9 @@ import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics";
 import ME from "ME";
 import jsxProd from "initialize";
 import createCacheKey from "createCacheKey";
+import { GroupIcon } from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let StyleSheet;
 let c5;

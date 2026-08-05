@@ -1,5 +1,3 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/create_guild/native/components/GuildTemplates.tsx
 import _slicedToArray from "_slicedToArray";
 import SafeAreaPaddingView from "SafeAreaPaddingView";
@@ -9,6 +7,8 @@ import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 import ME from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let c5;

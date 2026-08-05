@@ -1,12 +1,12 @@
+// discord_app/modules/collectibles/nameplates/native/NameplateCardPreview.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { CollectiblesItemType } from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getNameplateData } from "../utils.tsx";
 import { NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG } from "NameplateDummyUserPreview.tsx";
-// discord_app/modules/collectibles/nameplates/native/NameplateCardPreview.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

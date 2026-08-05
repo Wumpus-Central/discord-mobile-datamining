@@ -1,8 +1,8 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/poggermode/trackPoggermodeSettingsUpdated.tsx
 import ConfettiLocation from "ConfettiLocation";
 import { AnalyticEvents } from "ME";
 import importDefaultResult from "apply";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 let c3;
 let obj1;

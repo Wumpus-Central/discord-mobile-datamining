@@ -1,7 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PhoneCallIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
-import { PhoneHangUpIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
-import { PrivateChannelButtons } from "header/PrivateChannelButtons.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/ChannelActions.tsx
 import "apply";
 import { View } from "initialize";
@@ -15,6 +11,10 @@ import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypoi
 import { jsx } from "useConversationsHeaderButton";
 import { createElement } from "apply";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PhoneCallIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
+import { PhoneHangUpIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
+import { PrivateChannelButtons } from "header/PrivateChannelButtons.tsx";
 
 let c10;
 let c9;

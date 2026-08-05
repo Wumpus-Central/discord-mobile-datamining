@@ -1,6 +1,3 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
-import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/actions/UserSettingsActionCreators.tsx
 import closure_3 from "SystemThemeState";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
@@ -8,6 +5,9 @@ import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
 import { ThemeTypes } from "ME";
 import SystemThemeState from "SystemThemeState";
+import { dispatcher } from "../Dispatcher.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 
 let SystemTheme;
 let metroImportAll;

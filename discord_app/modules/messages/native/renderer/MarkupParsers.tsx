@@ -1,8 +1,8 @@
-import { LHeading } from "../../../../components_native/ChangeLogStandardTemplate.tsx";
-import { getInitialParserState } from "../../renderMessageMarkup.tsx";
 // discord_app/modules/messages/native/renderer/MarkupParsers.tsx
 import { MessageTypes } from "ME";
 import importDefaultResult from "priv";
+import { LHeading } from "../../../../components_native/ChangeLogStandardTemplate.tsx";
+import { getInitialParserState } from "../../renderMessageMarkup.tsx";
 
 let obj = { max: Infinity, maxAge: 15 * require("set").Millis.MINUTE, updateAgeOnGet: true };
 let c4 = new require("priv")(obj);

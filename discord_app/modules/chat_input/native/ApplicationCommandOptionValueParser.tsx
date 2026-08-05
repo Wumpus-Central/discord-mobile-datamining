@@ -1,8 +1,3 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { PermissionOverwriteType } from "../../../flow/Server.tsx";
-import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { rebuild } from "../../messages/MessageParser.tsx";
 // discord_app/modules/chat_input/native/ApplicationCommandOptionValueParser.tsx
 import noop from "noop";
 import rebuild from "rebuild";
@@ -13,6 +8,11 @@ import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import regExp from "regExp";
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { rebuild } from "../../messages/MessageParser.tsx";
 
 let closure_12;
 let unpackModuleId;

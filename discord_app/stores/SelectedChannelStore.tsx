@@ -1,6 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/stores/SelectedChannelStore.tsx
 import createChannelRecord from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
@@ -14,6 +11,9 @@ import ME from "ME";
 import { isGuildHomeChannel } from "set";
 import { Store } from "initialize";
 import set from "ensureGuildLoaded";
+import { apply } from "../../_runtime/00012_apply.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 let Routes;
 let closure_12;

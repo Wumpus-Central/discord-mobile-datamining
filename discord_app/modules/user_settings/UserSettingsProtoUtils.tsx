@@ -1,5 +1,5 @@
-import { b64ToProto } from "UserSettingsUtils.tsx";
 // discord_app/modules/user_settings/UserSettingsProtoUtils.tsx
+import { b64ToProto } from "UserSettingsUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
 export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSettings, closure_0) {

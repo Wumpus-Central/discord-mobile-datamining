@@ -1,7 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/ICYMICardInCard.tsx
 import getIconForChannel from "getIconForChannel";
 import { View } from "Text";
@@ -11,6 +7,10 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { DEFAULT_ROLE_COLOR_HEX } from "ME";
 import jsxProd from "TextIcon";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 
 let c10;
 let c9;

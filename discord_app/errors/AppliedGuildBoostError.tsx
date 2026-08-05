@@ -1,8 +1,8 @@
+// discord_app/errors/AppliedGuildBoostError.tsx
+import "prototype";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { resetCache } from "../utils/DateUtils.tsx";
 import { set } from "../utils/Durations.tsx";
-// discord_app/errors/AppliedGuildBoostError.tsx
-import "prototype";
 
 const require = arg1;
 class AppliedGuildBoostError extends tmp2 {

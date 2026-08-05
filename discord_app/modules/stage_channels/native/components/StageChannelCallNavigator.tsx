@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { RootThemeContextProvider } from "../../../../design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { JoinStageView } from "JoinStageView.tsx";
-import { AgeVerificationSpeakerActionSheet } from "StageActionBarButtons.tsx";
 // discord_app/modules/stage_channels/native/components/StageChannelCallNavigator.tsx
 import set from "set";
 import ManaContext from "ManaContext";
@@ -10,6 +5,11 @@ import get_ActivityIndicator from "module_10713";
 import { ThemeTypes } from "sum";
 import jsxProd from "GestureContainer";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { RootThemeContextProvider } from "../../../../design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { JoinStageView } from "JoinStageView.tsx";
+import { AgeVerificationSpeakerActionSheet } from "StageActionBarButtons.tsx";
 
 let c10;
 let c5;

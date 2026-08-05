@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/EditNameplateActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import useFetchPurchases from "useFetchPurchases";
@@ -9,6 +8,7 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { AnalyticEvents } from "ME";
 import jsxProd from "useNameplateSections";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let closure_12;

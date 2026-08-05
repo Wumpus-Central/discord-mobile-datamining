@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx
 import set from "set";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 let obj = { FEATURED: "featured", GAMING: "gaming", MUSIC: "music", ENTERTAINMENT: "entertainment", TECH: "tech", EDUCATION: "education", HUBS: "hubs" };

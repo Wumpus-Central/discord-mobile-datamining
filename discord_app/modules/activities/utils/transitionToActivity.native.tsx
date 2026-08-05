@@ -1,10 +1,10 @@
-import { ChannelCallCameraPreview } from "../../video_calls/native/components/ChannelCallModal.tsx";
-import { getEmbeddedActivityLocationChannelId } from "embeddedActivityLocationUtils.tsx";
 // discord_app/modules/activities/utils/transitionToActivity.native.tsx
 import { setVoiceChatDrawerState } from "VoiceChatDrawerState";
 import participantFromServer from "participantFromServer";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH";
+import { ChannelCallCameraPreview } from "../../video_calls/native/components/ChannelCallModal.tsx";
+import { getEmbeddedActivityLocationChannelId } from "embeddedActivityLocationUtils.tsx";
 
 let result = require("ActivityPanelModes").fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
 

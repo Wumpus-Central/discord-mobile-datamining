@@ -1,3 +1,19 @@
+// discord_app/modules/notification_settings/native/NotificationSettingsModal.native.tsx
+import _objectWithoutProperties from "_objectWithoutProperties";
+import importAllResult from "MuteSettings";
+import { View } from "collectGuildAnalyticsMetadata";
+import { isGuildReadableType } from "createChannelRecord";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import setIndex from "setIndex";
+import handleInviteData from "handleInviteData";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import FormStates from "FormStates";
+import upsertRelationship from "upsertRelationship";
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import jsxProd from "module_5230";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
@@ -20,22 +36,6 @@ import { NotificationSettingsMessageNotification } from "../../notifications/set
 import { NotificationSettingsMessageUnread } from "../../notifications/settings/native/NotificationSettingsMessageUnread.tsx";
 import { NotificationSettingsMuteBanner } from "../../notifications/settings/native/NotificationSettingsMuteBanner.tsx";
 import { NotificationSettingsPresets } from "../../notifications/settings/native/NotificationSettingsPresets.tsx";
-// discord_app/modules/notification_settings/native/NotificationSettingsModal.native.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importAllResult from "MuteSettings";
-import { View } from "collectGuildAnalyticsMetadata";
-import { isGuildReadableType } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import setIndex from "setIndex";
-import handleInviteData from "handleInviteData";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import FormStates from "FormStates";
-import upsertRelationship from "upsertRelationship";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "module_5230";
-import createCacheKey from "createCacheKey";
 
 let closure_16;
 let closure_17;

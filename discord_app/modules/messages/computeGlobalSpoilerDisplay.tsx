@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/messages/computeGlobalSpoilerDisplay.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let c3;
 let c4;

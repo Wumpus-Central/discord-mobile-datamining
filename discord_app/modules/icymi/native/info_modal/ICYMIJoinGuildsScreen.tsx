@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
-import { ServerIcon } from "../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/info_modal/ICYMIJoinGuildsScreen.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import set from "set";
@@ -14,6 +9,11 @@ import initialize from "initialize";
 import { GuildFeatures } from "ME";
 import jsxProd from "Text";
 import createICYMIStyles from "createICYMIStyles";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
+import { ServerIcon } from "../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 
 let closure_12;
 let closure_14;

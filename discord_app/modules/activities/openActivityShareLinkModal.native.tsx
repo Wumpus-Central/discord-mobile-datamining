@@ -1,7 +1,7 @@
+// discord_app/modules/activities/openActivityShareLinkModal.native.tsx
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
-// discord_app/modules/activities/openActivityShareLinkModal.native.tsx
 const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 const result = require("ActivityShareLinkModal").fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
 

@@ -1,9 +1,9 @@
-import { NUFChannelIllustration } from "NUFChannelIllustration.tsx";
-import { NUFActionSheetTemplate } from "NUFTemplateV2.tsx";
 // discord_app/modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
+import { NUFChannelIllustration } from "NUFChannelIllustration.tsx";
+import { NUFActionSheetTemplate } from "NUFTemplateV2.tsx";
 
 const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");

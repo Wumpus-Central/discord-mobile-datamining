@@ -1,3 +1,6 @@
+// discord_app/modules/parent_tools/native/FamilyCenterDataConfirmation.tsx
+import "XSmallIcon";
+import jsxProd from "jsxProd";
 import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import { CreditCardIcon } from "../../../design/components/Icon/native/redesign/generated/CreditCardIcon.tsx";
 import { FlagIcon } from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
@@ -15,9 +18,6 @@ import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { messagesProxy } from "../FamilyCenter.messages.js";
 import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
-// discord_app/modules/parent_tools/native/FamilyCenterDataConfirmation.tsx
-import "XSmallIcon";
-import jsxProd from "jsxProd";
 
 let c3;
 let c4;

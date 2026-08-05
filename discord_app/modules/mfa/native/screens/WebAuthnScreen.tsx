@@ -1,11 +1,11 @@
-import { _promptForRegisterCredential } from "../../../webauthn/native/NativeCeremonies.tsx";
-import { MFAOptionScreen } from "MfaOptionScreen.tsx";
 // discord_app/modules/mfa/native/screens/WebAuthnScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { _promptForRegisterCredential } from "../../../webauthn/native/NativeCeremonies.tsx";
+import { MFAOptionScreen } from "MfaOptionScreen.tsx";
 
 const require = arg1;
 function AndroidAuthRadioGroup(setAuthenticator) {

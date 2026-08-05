@@ -1,4 +1,3 @@
-import { FetchStatus } from "RemoteFetchData.tsx";
 // discord_app/modules/message_previews/MessagePreviewManager.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -9,6 +8,7 @@ import closure_8 from "ensureGuildLoaded";
 import initialize from "initialize";
 import { Endpoints } from "ME";
 import "initialize";
+import { FetchStatus } from "RemoteFetchData.tsx";
 
 let require = arg1;
 const unpackModuleId = new require("createChannelRecord")("MessagePreviewManager");

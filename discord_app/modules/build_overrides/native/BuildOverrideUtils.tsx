@@ -1,9 +1,9 @@
-import { BundleUpdaterManager } from "../../../lib/native/BundleUpdater.tsx";
 // discord_app/modules/build_overrides/native/BuildOverrideUtils.tsx
 import AlertActionCreators from "../../../actions/native/AlertActionCreators.tsx";
 import getCurrentBuildOverride from "getCurrentBuildOverride";
 import set from "set";
 import set from "set";
+import { BundleUpdaterManager } from "../../../lib/native/BundleUpdater.tsx";
 
 const require = arg1;
 function setBuildOverrideForBranch(id) {

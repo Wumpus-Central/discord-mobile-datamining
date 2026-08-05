@@ -1,5 +1,3 @@
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/NewMessageScreen.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import JoinCallButton from "JoinCallButton";
@@ -15,6 +13,8 @@ import jsxProd from "useOnMessageSend";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "noop";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
 
 let closure_12;
 let closure_14;

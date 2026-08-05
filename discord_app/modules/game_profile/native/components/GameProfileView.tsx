@@ -1,3 +1,8 @@
+// discord_app/modules/game_profile/native/components/GameProfileView.tsx
+import GameProfileReportButton from "GameProfileReportButton";
+import { View } from "GameProfileWebsiteButton";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
 import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
 import { EmbedAnnouncementCard } from "GameProfileAnnouncements.tsx";
@@ -12,11 +17,6 @@ import { SteamReviewRow } from "GameProfileReviews.tsx";
 import { HorizontalSpacing } from "GameProfileShopCarousel.tsx";
 import { Spacer } from "GameProfileSimilarGames.tsx";
 import { GameProfileSummary } from "GameProfileSummary.tsx";
-// discord_app/modules/game_profile/native/components/GameProfileView.tsx
-import GameProfileReportButton from "GameProfileReportButton";
-import { View } from "GameProfileWebsiteButton";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

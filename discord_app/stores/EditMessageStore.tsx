@@ -1,9 +1,9 @@
-import { createEmptyState } from "../modules/channel_text_area/slate/SlateUtils.tsx";
-import { rebuild } from "../modules/messages/MessageParser.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/stores/EditMessageStore.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import { Store } from "initialize";
+import { createEmptyState } from "../modules/channel_text_area/slate/SlateUtils.tsx";
+import { rebuild } from "../modules/messages/MessageParser.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 
 const require = arg1;
 let closure_4 = {};

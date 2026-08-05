@@ -1,8 +1,8 @@
-import { _validatePaymentSourceBillingAddress } from "BillingSharedActionCreators.tsx";
 // discord_app/modules/billing/actions/HandleConfirmPaymentRegistry.tsx
 import sendRequest from "sendRequest";
 import ME from "ME";
 import { PaymentSourceTypes } from "sum";
+import { _validatePaymentSourceBillingAddress } from "BillingSharedActionCreators.tsx";
 
 let c4;
 let c5;

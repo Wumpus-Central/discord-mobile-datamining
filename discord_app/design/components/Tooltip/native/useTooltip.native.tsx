@@ -1,10 +1,10 @@
-import { useWindowDimensions } from "../../../../modules/screen/useWindowDimensions.native.tsx";
-import { add } from "../../Layers/native/LayerContext.native.tsx";
 // discord_app/design/components/Tooltip/native/useTooltip.native.tsx
 import _slicedToArray from "_slicedToArray";
 import v1 from "v1";
 import noop from "noop";
 import { jsx } from "jsxProd";
+import { useWindowDimensions } from "../../../../modules/screen/useWindowDimensions.native.tsx";
+import { add } from "../../Layers/native/LayerContext.native.tsx";
 
 const require = arg1;
 const error = new require("jsxProd")("useTooltip.native");

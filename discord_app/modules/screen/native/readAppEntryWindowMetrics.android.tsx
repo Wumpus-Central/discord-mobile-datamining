@@ -1,5 +1,5 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 // discord_app/modules/screen/native/readAppEntryWindowMetrics.android.tsx
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 const result = require("set").fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 
 export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appEntryKey) {

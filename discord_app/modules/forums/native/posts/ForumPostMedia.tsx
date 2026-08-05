@@ -1,7 +1,3 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { getForumPostShouldObscure } from "../../../messages/MessageAttachmentUtils.tsx";
-import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 // discord_app/modules/forums/native/posts/ForumPostMedia.tsx
 import _slicedToArray from "_slicedToArray";
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
@@ -10,6 +6,10 @@ import handleThemeChange from "handleThemeChange";
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
 import jsxProd from "useNativeForumPostHandlers";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import { getForumPostShouldObscure } from "../../../messages/MessageAttachmentUtils.tsx";
+import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 
 let PixelRatio;
 let c10;

@@ -1,7 +1,7 @@
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/collectibles/hooks/useProductDescription.tsx
 import { useMemo } from "noop";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 function getBundleDescription(bundledProducts) {
   let flag = arg1;

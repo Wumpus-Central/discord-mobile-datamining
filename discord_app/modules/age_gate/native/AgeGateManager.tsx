@@ -1,5 +1,3 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../AgeGateUtils.tsx";
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
 import closure_3 from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +6,8 @@ import closure_6 from "handleConnectionOpen";
 import result from "result";
 import ME from "ME";
 import "initialize";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../AgeGateUtils.tsx";
 
 let c10;
 let c9;

@@ -1,13 +1,13 @@
-import { useTypingUserIds } from "../../../../chat/useTypingUsersIds.tsx";
-import { num2 } from "../ForumPostMessageCount.tsx";
-import { ForumPostTypingUsers } from "../ForumPostTypingUsers.tsx";
-import { MaxForumPostReactions } from "../reactions/ForumPostReactions.tsx";
 // discord_app/modules/forums/native/posts/grid/ForumPostGridFooter.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticsObjects } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useTypingUserIds } from "../../../../chat/useTypingUsersIds.tsx";
+import { num2 } from "../ForumPostMessageCount.tsx";
+import { ForumPostTypingUsers } from "../ForumPostTypingUsers.tsx";
+import { MaxForumPostReactions } from "../reactions/ForumPostReactions.tsx";
 
 let c5;
 let closure_6;

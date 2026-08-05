@@ -1,10 +1,10 @@
-import { ICON_SIZE } from "../../../design/components/Icon/IconSize.tsx";
-import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
-import { smartOutput } from "../MarkupRulesUtils.tsx";
 // discord_app/modules/markup/native/MarkupMessagePreviewReactRules.tsx
 import "set";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
 import jsxProd from "jsxProd";
+import { ICON_SIZE } from "../../../design/components/Icon/IconSize.tsx";
+import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import { smartOutput } from "../MarkupRulesUtils.tsx";
 
 let c4;
 let c5;

@@ -1,5 +1,3 @@
-import { registerAsset } from "../../../../_runtime/12729_registerAsset.js";
-import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
 import _slicedToArray from "_slicedToArray";
 import getPremiumPlanItem from "getPremiumPlanItem";
@@ -10,6 +8,8 @@ import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore";
 import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "GuildFeatures";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../_runtime/12729_registerAsset.js";
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 
 let c5;
 let closure_12;

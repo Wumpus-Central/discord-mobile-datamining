@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/messages/EmbeddedApplicationInstanceUtils.tsx
 import noop from "noop";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 function getJoinOrStartButtonState(channel) {

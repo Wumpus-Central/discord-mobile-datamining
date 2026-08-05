@@ -1,8 +1,3 @@
-import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
-import { IconSizes } from "../../../design/void/Icon/native/Icon.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
-import { useStartAuthorize } from "useStartAuthorize.tsx";
 // discord_app/modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import { View } from "IncentivizedAccountLinkConfirmationBottomSheet";
@@ -11,6 +6,11 @@ import set from "set";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "Stack";
 import createCacheKey from "createCacheKey";
+import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
+import { IconSizes } from "../../../design/void/Icon/native/Icon.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
+import { useStartAuthorize } from "useStartAuthorize.tsx";
 
 let c9;
 let metroImportAll;

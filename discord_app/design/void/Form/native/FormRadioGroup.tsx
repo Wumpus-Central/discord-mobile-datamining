@@ -1,10 +1,10 @@
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
-import { context } from "../../../components/TableRow/native/TableRadioGroup.native.tsx";
-import { FormSection } from "FormSection.tsx";
 // discord_app/design/void/Form/native/FormRadioGroup.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import { context } from "../../../components/TableRow/native/TableRadioGroup.native.tsx";
+import { FormSection } from "FormSection.tsx";
 
 let c5;
 let closure_6;

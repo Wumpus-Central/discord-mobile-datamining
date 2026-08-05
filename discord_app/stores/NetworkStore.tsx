@@ -1,7 +1,7 @@
-import { awaitOnline } from "../utils/NetworkUtils.tsx";
 // discord_app/stores/NetworkStore.tsx
 import ME from "ME";
 import { Store } from "initialize";
+import { awaitOnline } from "../utils/NetworkUtils.tsx";
 
 function handleConnectionInfoChange(type) {
   if (null != type.type) {

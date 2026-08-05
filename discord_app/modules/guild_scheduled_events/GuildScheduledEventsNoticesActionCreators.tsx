@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
 
 export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {

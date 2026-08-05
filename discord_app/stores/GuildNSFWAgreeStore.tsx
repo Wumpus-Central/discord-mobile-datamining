@@ -1,7 +1,7 @@
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../modules/age_gate/AgeGateUtils.tsx";
 // discord_app/stores/GuildNSFWAgreeStore.tsx
 import { Store } from "initialize";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../modules/age_gate/AgeGateUtils.tsx";
 
 const require = arg1;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";

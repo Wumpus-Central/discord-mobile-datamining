@@ -1,8 +1,8 @@
+// discord_common/js/packages/kv-storage/js/api/Database.tsx
+import set from "set";
 import { open } from "../raw/Host.tsx";
 import { logger } from "../raw/Runtime.tsx";
 import { TableId } from "../types/index.tsx";
-// discord_common/js/packages/kv-storage/js/api/Database.tsx
-import set from "set";
 
 const require = arg1;
 let Database;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_boosting/GuildBoostingMarketingConstants.tsx
 import ME from "ME";
 import { BoostedGuildFeatures } from "GuildFeatures";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const BoostedGuildTiers = ME.BoostedGuildTiers;
 let closure_3 = ME.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;

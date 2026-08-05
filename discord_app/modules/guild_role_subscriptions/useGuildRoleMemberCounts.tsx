@@ -1,7 +1,7 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx
 import noop from "noop";
 import getRoleMemberCount from "getRoleMemberCount";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let closure_5 = {};

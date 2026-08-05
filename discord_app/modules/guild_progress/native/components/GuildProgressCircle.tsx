@@ -1,10 +1,10 @@
-import { renderCircle } from "../../../premium/native/components/ProgressCircle.tsx";
-import { useIOSCompletionStates } from "../GuildProgressUtils.tsx";
 // discord_app/modules/guild_progress/native/components/GuildProgressCircle.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { renderCircle } from "../../../premium/native/components/ProgressCircle.tsx";
+import { useIOSCompletionStates } from "../GuildProgressUtils.tsx";
 
 let c4;
 let c5;

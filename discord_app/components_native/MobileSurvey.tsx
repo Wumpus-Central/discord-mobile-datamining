@@ -1,4 +1,3 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 // discord_app/components_native/MobileSurvey.tsx
 import closure_3 from "createCacheKey";
 import noop from "noop";
@@ -6,6 +5,7 @@ import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ confirmIcon: { marginLeft: 4 } });

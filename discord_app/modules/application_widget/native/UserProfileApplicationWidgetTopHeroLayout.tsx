@@ -1,7 +1,3 @@
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { _isNativeReflectConstruct } from "../../../../_runtime/05260__isNativeReflectConstruct.js";
-import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
-import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,6 +6,10 @@ import { HorizontalGradient } from "ME";
 import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { _isNativeReflectConstruct } from "../../../../_runtime/05260__isNativeReflectConstruct.js";
+import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 
 let c5;
 let c9;

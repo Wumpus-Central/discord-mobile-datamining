@@ -1,4 +1,3 @@
-import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -6,6 +5,7 @@ import { UserNotificationSettings } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
 import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES";
 import { jsx } from "jsxProd";
+import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx");

@@ -1,12 +1,12 @@
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/application_commands/native/ContextMenuCommandNavigator.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
 let c5;
 let closure_6;

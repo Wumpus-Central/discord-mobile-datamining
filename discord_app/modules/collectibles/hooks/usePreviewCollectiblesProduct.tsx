@@ -1,4 +1,3 @@
-import { firstAvatarDecoration } from "useShopProductItems.tsx";
 // discord_app/modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -6,6 +5,7 @@ import { isAvatarDecorationRecord } from "fromServer";
 import { isNameplateRecord } from "fromServer";
 import { isProfileEffectRecord } from "fromServer";
 import { isProfileFrameRecord } from "fromServer";
+import { firstAvatarDecoration } from "useShopProductItems.tsx";
 
 const require = arg1;
 const result = require("fromServer").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");

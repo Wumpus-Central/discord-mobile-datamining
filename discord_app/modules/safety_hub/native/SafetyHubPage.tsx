@@ -1,4 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/safety_hub/native/SafetyHubPage.tsx
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useMountLayoutEffect";
@@ -7,6 +6,7 @@ import { AgeCheckStatus } from "SafetyHubView";
 import ME from "ME";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 let c10;
 let c5;

@@ -1,8 +1,8 @@
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/native_permissions/mobile/PermissionsAlertModal.tsx
 import "noop";
 import jsxProd from "jsxProd";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c3;
 let obj1;

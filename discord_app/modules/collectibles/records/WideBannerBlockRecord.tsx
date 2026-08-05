@@ -1,5 +1,5 @@
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/WideBannerBlockRecord.tsx
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 let prototype;
 prototype = function WideBannerBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);

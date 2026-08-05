@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../../../../_runtime/07837_registerAsset.js";
-import { HeaderActionButton } from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModal.tsx
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes";
 import { PlatformTypes } from "ME";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../../../_runtime/07837_registerAsset.js";
+import { HeaderActionButton } from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 
 const require = arg1;
 function CloseButton() {

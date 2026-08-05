@@ -1,6 +1,6 @@
-import { BadgeId } from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 // discord_app/modules/user_profile/Constants.tsx
 import { Endpoints } from "ME";
+import { BadgeId } from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/Constants.tsx");
 

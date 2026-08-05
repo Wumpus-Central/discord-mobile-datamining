@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/verification/ChangeEmailUtils.tsx
 import { ChangeEmailReasons } from "ChangeEmailReasons";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let closure_2 = {
   [ChangeEmailReasons.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => {

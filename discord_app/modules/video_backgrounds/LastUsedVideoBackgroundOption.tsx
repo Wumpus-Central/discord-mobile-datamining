@@ -1,9 +1,9 @@
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
 // discord_app/modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");

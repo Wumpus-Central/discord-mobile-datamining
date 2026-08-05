@@ -1,12 +1,12 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../tokens/native/useToken.tsx";
-import { InputHeights } from "InputTypes.native.tsx";
 // discord_app/design/components/Input/native/InputFieldContainer.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../tokens/native/useToken.tsx";
+import { InputHeights } from "InputTypes.native.tsx";
 
 let Platform;
 let c3;

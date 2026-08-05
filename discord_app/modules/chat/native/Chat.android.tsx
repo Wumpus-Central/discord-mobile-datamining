@@ -1,14 +1,14 @@
+// discord_app/modules/chat/native/Chat.android.tsx
+import importAllResult from "noop";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Directions } from "../../../../_runtime/05368_Directions.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { TTIFirstContentfulPaint } from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
-// discord_app/modules/chat/native/Chat.android.tsx
-import importAllResult from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ProfileCustomizationTryItOutSettingScreen } from "../../premium/native/ProfileCustomizationTryItOutSettingScreen.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumProfileCustomizationTryItOutSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ProfileCustomizationTryItOutSettingScreen } from "../../premium/native/ProfileCustomizationTryItOutSettingScreen.tsx";
 
 obj = {
   useTitle() {

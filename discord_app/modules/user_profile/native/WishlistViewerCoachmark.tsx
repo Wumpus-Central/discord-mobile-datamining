@@ -1,10 +1,10 @@
-import { metadata } from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { metadata } from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 
 let c4;
 let c5;

@@ -1,14 +1,14 @@
+// discord_app/modules/guilds_bar/native/GuildsBarGuildJoinRequestBadge.tsx
+import "noop";
+import { View } from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../_runtime/11573_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/15296_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/15297_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/15298_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { MAX_RESULTS_PER_PAGE } from "../../guild_member_verification/MemberVerificationTypes.tsx";
-// discord_app/modules/guilds_bar/native/GuildsBarGuildJoinRequestBadge.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 const require = arg1;
 createCacheKey = { badgeImageContainer: null, badgeImage: null };

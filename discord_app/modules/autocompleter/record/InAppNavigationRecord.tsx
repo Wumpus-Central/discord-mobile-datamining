@@ -1,9 +1,9 @@
-import { settingsPathToRoute } from "../../user_settings/UserSettingsURLUtils.tsx";
 // discord_app/modules/autocompleter/record/InAppNavigationRecord.tsx
 import "toJS";
 import { Routes } from "ME";
 import { RewardFilterTypes } from "QuestsExperimentLocations";
 import { UserSettingsPath } from "MAX_FAVORITES";
+import { settingsPathToRoute } from "../../user_settings/UserSettingsURLUtils.tsx";
 
 const require = arg1;
 let obj = { SHOP: "SHOP", SHOP_ORBS_TAB: "SHOP_ORBS_TAB", NITRO_HOME: "NITRO_HOME", QUEST_HOME: "QUEST_HOME", QUEST_ORBS: "QUEST_ORBS", APPS_HOME: "APPS_HOME", SETTINGS: "SETTINGS", PLAYGROUND: "PLAYGROUND" };

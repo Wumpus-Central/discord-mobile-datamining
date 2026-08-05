@@ -1,10 +1,10 @@
-import { getDevicePixelRatio } from "../../utils/getDevicePixelRatio.native.tsx";
-import { fit } from "../../utils/ImageUtils.tsx";
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/image_upload/ImageLoaderUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import fails from "fails";
 import ME from "ME";
+import { getDevicePixelRatio } from "../../utils/getDevicePixelRatio.native.tsx";
+import { fit } from "../../utils/ImageUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 
 let c5;
 let closure_6;

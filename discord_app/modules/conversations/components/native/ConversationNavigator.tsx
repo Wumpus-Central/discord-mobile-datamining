@@ -1,12 +1,12 @@
+// discord_app/modules/conversations/components/native/ConversationNavigator.tsx
+import "noop";
+import jsxProd from "jsxProd";
+import createNativeStackNavigator from "createNativeStackNavigator";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 import { GenericHeaderTitle } from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
-// discord_app/modules/conversations/components/native/ConversationNavigator.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createNativeStackNavigator from "createNativeStackNavigator";
 
 let c3;
 let c4;

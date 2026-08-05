@@ -1,11 +1,11 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { 03928__ } from "../../../_runtime/metro/03928__.js";
-import { 13238__ } from "../../../_runtime/metro/13238__.js";
-import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
 // discord_app/modules/emojis/UnicodeEmojis.tsx
 import defaultImageSrcGenerator from "defaultImageSrcGenerator";
 import module_917631 from "module_917631";
 import module_127988 from "module_127988";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { 03928__ } from "../../../_runtime/metro/03928__.js";
+import { 13238__ } from "../../../_runtime/metro/13238__.js";
+import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
 
 const require = arg1;
 function parseRawEmojiObject(arg0) {

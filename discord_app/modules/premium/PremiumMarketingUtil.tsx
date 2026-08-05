@@ -1,8 +1,8 @@
+// discord_app/modules/premium/PremiumMarketingUtil.tsx
+import ME from "ME";
 import { pushLayer } from "../../actions/LayerActionCreators.tsx";
 import { transitionTo } from "../routing/router_utils.tsx";
 import { openUserSettings } from "../user_settings/core/native/openUserSettings.tsx";
-// discord_app/modules/premium/PremiumMarketingUtil.tsx
-import ME from "ME";
 
 let c3;
 let obj1;

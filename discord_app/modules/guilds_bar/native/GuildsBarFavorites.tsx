@@ -1,3 +1,10 @@
+// discord_app/modules/guilds_bar/native/GuildsBarFavorites.tsx
+import importAllResult from "FavoritesGuildCoachmarkIntro";
+import { View } from "HomeDrawerFavoritesRowExpandedChildren";
+import initializeFromUserSettings from "initializeFromUserSettings";
+import { FAVORITES } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { StarIcon } from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
@@ -10,13 +17,6 @@ import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experime
 import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
 import { useGuildsBarBottomRightBadge } from "hooks/useGuildsBarBottomRightBadge.tsx";
 import { transitionGuildsBarToGuildOrOpenSelectedChannel } from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
-// discord_app/modules/guilds_bar/native/GuildsBarFavorites.tsx
-import importAllResult from "FavoritesGuildCoachmarkIntro";
-import { View } from "HomeDrawerFavoritesRowExpandedChildren";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import { FAVORITES } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let error;
 let metroImportAll;

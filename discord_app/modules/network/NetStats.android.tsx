@@ -1,5 +1,3 @@
-import { configure } from "../../../_runtime/01456_configure.js";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/network/NetStats.android.tsx
 import ME from "ME";
 import get_ActivityIndicator from "set";
@@ -12,6 +10,8 @@ import importDefaultResult1 from "notifyListeners";
 import importDefaultResult2 from "dispatcher";
 import importDefaultResult3 from "dispatcher";
 import importDefaultResult4 from "dispatcher";
+import { configure } from "../../../_runtime/01456_configure.js";
+import { set } from "../../utils/Durations.tsx";
 
 let AppState;
 let c4;

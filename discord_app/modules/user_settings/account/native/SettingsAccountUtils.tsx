@@ -1,7 +1,7 @@
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/user_settings/account/native/SettingsAccountUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");

@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx
 import noop from "noop";
 import { View } from "set";
@@ -6,6 +5,7 @@ import fetchFingerprint from "fetchFingerprint";
 import { LoginStates } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let error;
 let metroImportAll;

@@ -1,3 +1,6 @@
+// discord_app/modules/activity_privacy/ActivityPrivacy.messages.js
+import 01274__ from "../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../_runtime/02420_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02421_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02422_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../_runtime/02448_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02449_registerAsset.js";
 import { registerAsset } from "../../../_runtime/02450_registerAsset.js";
 import { loadJsonAsset } from "../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/activity_privacy/ActivityPrivacy.messages.js
-import 01274__ from "../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

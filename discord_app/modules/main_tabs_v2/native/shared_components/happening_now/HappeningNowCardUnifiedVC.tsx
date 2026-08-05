@@ -1,13 +1,13 @@
-import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { IconOrPreview } from "HappeningNowCardActivity.tsx";
-import { HappeningNowCardEmbeddedActivity } from "HappeningNowCardEmbeddedActivity.tsx";
-import { formatVoiceActivityTitle } from "HappeningNowCardVoice.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx
 import "noop";
 import participantFromServer from "participantFromServer";
 import reset from "reset";
 import upsertRelationship from "upsertRelationship";
 import { jsx } from "jsxProd";
+import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { IconOrPreview } from "HappeningNowCardActivity.tsx";
+import { HappeningNowCardEmbeddedActivity } from "HappeningNowCardEmbeddedActivity.tsx";
+import { formatVoiceActivityTitle } from "HappeningNowCardVoice.tsx";
 
 const require = arg1;
 const result = require("reset").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx");

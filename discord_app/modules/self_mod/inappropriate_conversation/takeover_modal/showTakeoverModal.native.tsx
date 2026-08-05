@@ -1,8 +1,8 @@
+// discord_app/modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx
+import { TAKEOVER_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE";
 import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { InappropriateConversationExperiment } from "../SelfModInappropriateConversationExperiment.tsx";
-// discord_app/modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx
-import { TAKEOVER_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE";
 
 const result = require("module_4490").fileFinishedImporting("modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx");
 

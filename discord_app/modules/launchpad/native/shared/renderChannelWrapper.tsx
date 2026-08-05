@@ -1,8 +1,8 @@
-import { getScaledChannelRowHeight } from "getScaledChannelRowHeight.tsx";
 // discord_app/modules/launchpad/native/shared/renderChannelWrapper.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { getScaledChannelRowHeight } from "getScaledChannelRowHeight.tsx";
 
 let closure_4 = require("getLayoutStyle")();
 const result = require("jsxProd").fileFinishedImporting("modules/launchpad/native/shared/renderChannelWrapper.tsx");

@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../../../_runtime/07837_registerAsset.js";
-import { getChannelSetupSource } from "../../../../../design/components/Illustration/native/redesign/generated/ChannelSetup.tsx";
-import { useTheme } from "../../../../../hooks/useTheme.tsx";
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ThemeTypes } from "sum";
+import { registerAsset } from "../../../../../../_runtime/07837_registerAsset.js";
+import { getChannelSetupSource } from "../../../../../design/components/Illustration/native/redesign/generated/ChannelSetup.tsx";
+import { useTheme } from "../../../../../hooks/useTheme.tsx";
 
 const require = arg1;
 class EnableCommunityModalIcons {

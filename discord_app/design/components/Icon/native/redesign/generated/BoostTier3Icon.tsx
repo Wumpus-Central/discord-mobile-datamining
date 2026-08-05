@@ -1,9 +1,9 @@
-import { registerAsset } from "../../../../../../../_runtime/12702_registerAsset.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BaseIconImage } from "../../BaseIconImage.tsx";
 // discord_app/design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../../../_runtime/12702_registerAsset.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BaseIconImage } from "../../BaseIconImage.tsx";
 
 const require = arg1;
 const result = require("Themes").fileFinishedImporting("design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx");

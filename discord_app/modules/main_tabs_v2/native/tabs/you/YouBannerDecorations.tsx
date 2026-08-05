@@ -1,9 +1,3 @@
-import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PlatformTypes } from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { useEligibleActiveOutboundPromotions } from "../../../../premium/promotions/PromotionsHooks.tsx";
-import { hasUserTrialOfferExpired } from "../../../../premium/useTrialOffer.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx
 import importAllResult from "n";
 import get_ActivityIndicator from "useUserProfileColors";
@@ -12,6 +6,12 @@ import { ContentDismissActionType } from "ContentDismissActionType";
 import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_9 } from "GuildFeatures";
 import jsxProd from "useHasNewAdContent";
 import createCacheKey from "createCacheKey";
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PlatformTypes } from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { useEligibleActiveOutboundPromotions } from "../../../../premium/promotions/PromotionsHooks.tsx";
+import { hasUserTrialOfferExpired } from "../../../../premium/useTrialOffer.tsx";
 
 let c10;
 let c4;

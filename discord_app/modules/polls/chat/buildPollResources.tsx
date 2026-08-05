@@ -1,6 +1,6 @@
-import { buildPlatformPollResources } from "buildPlatformPollResources.native.tsx";
 // discord_app/modules/polls/chat/buildPollResources.tsx
 import apply from "apply";
+import { buildPlatformPollResources } from "buildPlatformPollResources.native.tsx";
 
 const memoizeResult = apply.memoize(function buildPollResources(arg0) {
   let layoutType;

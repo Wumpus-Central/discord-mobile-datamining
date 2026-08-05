@@ -1,8 +1,8 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { PasskeyUpsellActionCreators } from "PasskeyUpsellActionCreators.tsx";
 // discord_app/modules/webauthn/native/WebAuthnScreens.tsx
 import { WebAuthnScreens } from "WebAuthnScreens";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { PasskeyUpsellActionCreators } from "PasskeyUpsellActionCreators.tsx";
 
 const result = require("PasskeyUpsellView").fileFinishedImporting("modules/webauthn/native/WebAuthnScreens.tsx");
 

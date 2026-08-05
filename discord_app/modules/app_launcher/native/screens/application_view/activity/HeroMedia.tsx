@@ -1,6 +1,3 @@
-import { getPreviewVideoAssetUrl } from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
-import { useEmbeddedActivityBackground } from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
-import { useDefaultAppLauncherWidth } from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -8,6 +5,9 @@ import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getPreviewVideoAssetUrl } from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
+import { useEmbeddedActivityBackground } from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import { useDefaultAppLauncherWidth } from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ mediaBackground: { backgroundColor: "black" } });

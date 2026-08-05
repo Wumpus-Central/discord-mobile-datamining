@@ -1,7 +1,7 @@
-import { urlMatchesFileExtension } from "MediaFormatTesters.tsx";
-import { set } from "PlaintextFilePreviewHelpers.tsx";
 // discord_app/modules/messages/MosaicMediaType.tsx
 import { MessageAttachmentFlags } from "ME";
+import { urlMatchesFileExtension } from "MediaFormatTesters.tsx";
+import { set } from "PlaintextFilePreviewHelpers.tsx";
 
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;
 const result = require("hasFlag").fileFinishedImporting("modules/messages/MosaicMediaType.tsx");

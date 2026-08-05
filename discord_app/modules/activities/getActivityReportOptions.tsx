@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/activities/getActivityReportOptions.tsx
 import { ActivityFeedbackReasons } from "items3";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/getActivityReportOptions.tsx");
 

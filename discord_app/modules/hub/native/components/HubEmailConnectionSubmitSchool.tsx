@@ -1,3 +1,11 @@
+// discord_app/modules/hub/native/components/HubEmailConnectionSubmitSchool.tsx
+import ME from "ME";
+import _slicedToArray from "_slicedToArray";
+import set from "set";
+import get_ActivityIndicator from "module_8276";
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
@@ -7,14 +15,6 @@ import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import { HubEmailConnectionModal } from "HubEmailConnectionModal.tsx";
-// discord_app/modules/hub/native/components/HubEmailConnectionSubmitSchool.tsx
-import ME from "ME";
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import get_ActivityIndicator from "module_8276";
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;

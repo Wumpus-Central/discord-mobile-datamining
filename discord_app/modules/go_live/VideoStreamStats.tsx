@@ -1,7 +1,7 @@
-import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 // discord_app/modules/go_live/VideoStreamStats.tsx
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import { StreamLayouts } from "ME";
+import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 
 const require = arg1;
 const result = require("start").fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");

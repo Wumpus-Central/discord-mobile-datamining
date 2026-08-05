@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx
 import "noop";
 import sortActivity from "sortActivity";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 
 const require = arg1;
 function UserRow(user) {

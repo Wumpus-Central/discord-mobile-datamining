@@ -1,8 +1,8 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/routing/useGuildIdForChannelRoute.tsx
 import initializeFromUserSettings from "initializeFromUserSettings";
 import handleConnectionOpen from "handleConnectionOpen";
 import { FAVORITES } from "ME";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");

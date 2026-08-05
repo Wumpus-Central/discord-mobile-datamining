@@ -1,6 +1,6 @@
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/app_analytics/ImpressionStore.tsx
 import identity from "identity";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
 const withEqualityFn = identity.createWithEqualityFn(() => closure_2);

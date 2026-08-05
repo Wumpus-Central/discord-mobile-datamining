@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { _signOrder } from "../../payments/OrderActionCreators.tsx";
 // discord_app/modules/virtual_currency/checkout/OrbCheckoutUtils.tsx
 import ME from "ME";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
 import { ConstraintReasonCode } from "ConstraintReasonCode";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { _signOrder } from "../../payments/OrderActionCreators.tsx";
 
 let c3;
 let c4;

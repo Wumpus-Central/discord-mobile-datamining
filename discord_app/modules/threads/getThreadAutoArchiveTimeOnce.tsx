@@ -1,7 +1,7 @@
-import { set } from "../../utils/Durations.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/threads/getThreadAutoArchiveTimeOnce.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
+import { set } from "../../utils/Durations.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
 

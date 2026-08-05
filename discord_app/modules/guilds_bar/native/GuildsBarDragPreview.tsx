@@ -1,10 +1,10 @@
-import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import importAllResult from "noop";
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import withEqualityFn from "withEqualityFn";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 
 const require = arg1;
 function PreviewItem(dragRegion) {

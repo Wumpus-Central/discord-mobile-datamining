@@ -1,4 +1,3 @@
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 // discord_app/components_native/TouchableStreamPreview.tsx
 import transitionToStream from "transitionToStream";
 import get_ActivityIndicator from "module_5096";
@@ -13,6 +12,7 @@ import { Permissions } from "ME";
 import { jsx } from "isStreamKey";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 let StyleSheet;
 let c4;

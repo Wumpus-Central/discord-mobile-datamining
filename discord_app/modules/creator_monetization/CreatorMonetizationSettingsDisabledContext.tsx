@@ -1,7 +1,7 @@
-import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 // discord_app/modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
+import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 
 const require = arg1;
 let context = importAllResult.createContext(undefined);

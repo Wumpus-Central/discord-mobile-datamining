@@ -1,9 +1,9 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileAnnouncements.tsx
 import importAllResult from "set";
 import get_ActivityIndicator from "Button";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c5;

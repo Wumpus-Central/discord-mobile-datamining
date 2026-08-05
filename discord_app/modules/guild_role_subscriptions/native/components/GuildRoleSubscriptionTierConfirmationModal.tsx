@@ -1,5 +1,3 @@
-import { styles } from "FormStyles.tsx";
-import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -8,6 +6,8 @@ import { View } from "get ActivityIndicator";
 import usePriceTiers from "usePriceTiers";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { styles } from "FormStyles.tsx";
+import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
 
 let c10;
 let c9;

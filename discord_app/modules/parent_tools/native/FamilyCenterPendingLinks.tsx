@@ -1,9 +1,3 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
-import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
-import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterPendingLinks.tsx
 import "registerAsset";
 import { View } from "registerAsset";
@@ -11,6 +5,12 @@ import { UserLinkStatus } from "items";
 import jsxProd from "FamilyCenterLinkRow";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
+import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
 
 let c5;
 let closure_6;

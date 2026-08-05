@@ -1,3 +1,8 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsMultiPerkBottomSheet.tsx
+import { View } from "Button";
+import jsxProd from "Button";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
 import { n } from "../../../../../_runtime/00689_n.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -14,11 +19,6 @@ import { useGuildPowerupColorConfig } from "hooks/useGuildPowerupColorConfig.tsx
 import { useGuildPowerupOnActivate } from "hooks/useGuildPowerupOnActivate.tsx";
 import { useGuildPowerupOnShowDeactivate } from "hooks/useGuildPowerupOnShowDeactivate.tsx";
 import { usePowerupGroupConfig } from "hooks/usePowerupGroupConfig.tsx";
-// discord_app/modules/premium/powerups/native/GuildPowerupsMultiPerkBottomSheet.tsx
-import { View } from "Button";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
 
 let c4;
 let c5;

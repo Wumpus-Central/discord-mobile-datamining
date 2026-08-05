@@ -1,8 +1,3 @@
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
-import { toServerGuildProfile } from "../guild_tag/GuildTagTypes.tsx";
 // discord_app/modules/guild_settings/GuildSettingsActionCreators.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import initialize from "initialize";
@@ -12,6 +7,11 @@ import trackCommunicationDisabled from "trackCommunicationDisabled";
 import closure_8 from "createGuildRecordFromRust";
 import handleFormInit from "handleFormInit";
 import ME from "ME";
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
+import { toServerGuildProfile } from "../guild_tag/GuildTagTypes.tsx";
 
 let Layers;
 let c10;

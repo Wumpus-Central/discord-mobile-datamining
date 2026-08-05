@@ -1,6 +1,6 @@
-import { getEmbeddedActivitiesManager } from "getEmbeddedActivitiesManager.native.tsx";
 // discord_app/modules/activities/utils/leaveCurrentEmbeddedActivity.tsx
 import participantFromServer from "participantFromServer";
+import { getEmbeddedActivitiesManager } from "getEmbeddedActivitiesManager.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");
 

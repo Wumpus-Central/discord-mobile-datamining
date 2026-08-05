@@ -1,5 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,6 +5,8 @@ import shouldShowOnboarding from "shouldShowOnboarding";
 import { GuildOnboardingStatus } from "shouldShowOnboarding";
 import { GuildOnboardingMode } from "serverPromptToClientPrompt";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { set } from "../../utils/Durations.tsx";
 
 const require = arg1;
 function handleUpdate(arg0) {

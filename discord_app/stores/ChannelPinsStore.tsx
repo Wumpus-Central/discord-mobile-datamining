@@ -1,4 +1,3 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/ChannelPinsStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +7,7 @@ import reinjectEphemerals from "reinjectEphemerals";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 const require = arg1;
 function handleChannelDelete(arg0) {

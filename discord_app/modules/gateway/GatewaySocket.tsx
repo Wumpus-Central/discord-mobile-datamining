@@ -1,3 +1,9 @@
+// discord_app/modules/gateway/GatewaySocket.tsx
+import set from "set";
+import pack from "pack";
+import refreshSourceMapCookie from "refreshSourceMapCookie";
+import ME from "ME";
+import "presenceUpdate";
 import { isTracing } from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -8,12 +14,6 @@ import { CLOSED } from "ConnectionState.tsx";
 import { items } from "GatewayCompressionHandler.tsx";
 import { prettyPrintTrace_ } from "GatewaySocketAnalytics.tsx";
 import { presenceUpdate } from "GatewaySocketOpCodes.tsx";
-// discord_app/modules/gateway/GatewaySocket.tsx
-import set from "set";
-import pack from "pack";
-import refreshSourceMapCookie from "refreshSourceMapCookie";
-import ME from "ME";
-import "presenceUpdate";
 
 let error;
 let metroImportAll;

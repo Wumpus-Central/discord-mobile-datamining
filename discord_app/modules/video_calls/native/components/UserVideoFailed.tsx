@@ -1,11 +1,11 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { mapped } from "../../../errors/av_errors/AVError.tsx";
 // discord_app/modules/video_calls/native/components/UserVideoFailed.tsx
 import { View } from "get ActivityIndicator";
 import { VideoToggleState } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { mapped } from "../../../errors/av_errors/AVError.tsx";
 
 let c5;
 let closure_6;

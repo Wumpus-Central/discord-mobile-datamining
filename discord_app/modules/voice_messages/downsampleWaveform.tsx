@@ -1,5 +1,5 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
 // discord_app/modules/voice_messages/downsampleWaveform.tsx
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
 const result = require("set").fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
 
 export default function downsampleWaveform(arg0, arg1) {

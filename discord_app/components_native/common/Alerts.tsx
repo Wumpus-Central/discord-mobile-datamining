@@ -1,9 +1,3 @@
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
-import { Dialog } from "../../design/components/Dialog/native/Dialog.native.tsx";
-import { KeyboardAwareView } from "../../modules/keyboard/native/KeyboardAwareView.tsx";
-import { MobileSurvey } from "../MobileSurvey.tsx";
-import { render } from "../warnings/Suppressed.tsx";
-import { render } from "../warnings/VADPermission.tsx";
 // discord_app/components_native/common/Alerts.tsx
 import importAllResult from "shallowEqual";
 import get_ActivityIndicator from "module_5733";
@@ -14,6 +8,12 @@ import importDefaultResult2 from "fetchSurveyIfNeeded";
 import getAlert from "getAlert";
 import jsxProd from "_toPropertyKey";
 import createCacheKey from "createCacheKey";
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import { Dialog } from "../../design/components/Dialog/native/Dialog.native.tsx";
+import { KeyboardAwareView } from "../../modules/keyboard/native/KeyboardAwareView.tsx";
+import { MobileSurvey } from "../MobileSurvey.tsx";
+import { render } from "../warnings/Suppressed.tsx";
+import { render } from "../warnings/VADPermission.tsx";
 
 let c5;
 let closure_14;

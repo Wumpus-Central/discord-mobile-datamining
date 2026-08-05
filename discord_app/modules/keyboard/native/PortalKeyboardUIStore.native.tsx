@@ -1,5 +1,5 @@
-import { PortalKeyboardState } from "PortalKeyboard.tsx";
 // discord_app/modules/keyboard/native/PortalKeyboardUIStore.native.tsx
+import { PortalKeyboardState } from "PortalKeyboard.tsx";
 const zustandStore = require("defaultStatesAreEqual").createZustandStore(() => ({ keyboard: null, state: PortalKeyboardState /* PortalKeyboardState */.PortalKeyboardState.EMPTY, renderers: [] }));
 const result = require("v1").fileFinishedImporting("modules/keyboard/native/PortalKeyboardUIStore.native.tsx");
 

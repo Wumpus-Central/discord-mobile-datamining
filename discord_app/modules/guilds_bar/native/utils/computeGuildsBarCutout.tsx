@@ -1,8 +1,8 @@
-import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx
 import { PixelRatio } from "get ActivityIndicator";
 import { GUILD_ITEM_SIZE } from "GUILD_ITEM_SIZE";
+import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 
 const result = require("Button").fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
 

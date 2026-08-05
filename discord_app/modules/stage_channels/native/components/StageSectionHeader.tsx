@@ -1,10 +1,10 @@
-import { registerAsset } from "../../../../../_runtime/05600_registerAsset.js";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/stage_channels/native/components/StageSectionHeader.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/05600_registerAsset.js";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let c3;
 let c4;

@@ -1,5 +1,5 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/toast/native/ToastActionCreators.tsx
+import { dispatcher } from "../../../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
 
 export default {

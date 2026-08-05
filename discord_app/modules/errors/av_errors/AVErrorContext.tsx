@@ -1,10 +1,10 @@
-import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
-import { isStreamKey } from "../../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/errors/av_errors/AVErrorContext.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";
 import initialize from "initialize";
+import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import { isStreamKey } from "../../go_live/utils/StreamKeyUtils.tsx";
 
 const require = arg1;
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");

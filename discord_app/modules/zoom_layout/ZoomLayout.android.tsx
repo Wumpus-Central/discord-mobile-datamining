@@ -1,8 +1,8 @@
-import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx";
 // discord_app/modules/zoom_layout/ZoomLayout.android.tsx
 import importAllResult from "noop";
 import { PixelRatio } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

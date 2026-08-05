@@ -1,3 +1,6 @@
+// discord_app/modules/user_settings/defs/native/LogoutSetting.tsx
+import jsxProd from "jsxProd";
+import createToggle from "createToggle";
 import { Storage } from "../../../../../discord_common/js/packages/storage/Storage.tsx";
 import { handleLogout } from "../../../../actions/AuthenticationActionCreators.tsx";
 import { SelectedChannelActionCreators } from "../../../../actions/SelectedChannelActionCreators.tsx";
@@ -7,9 +10,6 @@ import { getAlertModalItemKey } from "../../../../design/components/AlertModal/n
 import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { NativeModules } from "../../../../lib/pushnotification/PushNotification.tsx";
-// discord_app/modules/user_settings/defs/native/LogoutSetting.tsx
-import jsxProd from "jsxProd";
-import createToggle from "createToggle";
 
 let c3;
 let c4;

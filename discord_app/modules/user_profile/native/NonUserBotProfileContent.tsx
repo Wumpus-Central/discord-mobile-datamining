@@ -1,15 +1,15 @@
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
-import { useBadges } from "../hooks/useBadges.tsx";
-import { useProfileTheme } from "../hooks/useProfileTheme.tsx";
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
-import { useUserProfileOverscrollStyles } from "useUserProfileOverscrollStyles.tsx";
 // discord_app/modules/user_profile/native/NonUserBotProfileContent.tsx
 import { View } from "UserProfileOverscrollBanner";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import jsxProd from "getSystemLocale";
 import importAllResult from "OpenableUserProfileAvatar";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
+import { useBadges } from "../hooks/useBadges.tsx";
+import { useProfileTheme } from "../hooks/useProfileTheme.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
+import { useUserProfileOverscrollStyles } from "useUserProfileOverscrollStyles.tsx";
 
 let c4;
 let c5;

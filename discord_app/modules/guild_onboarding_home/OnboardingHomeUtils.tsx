@@ -1,6 +1,3 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
-import { useIsNewMember } from "useIsNewMember.tsx";
 // discord_app/modules/guild_onboarding_home/OnboardingHomeUtils.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,6 +5,9 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 import ME from "ME";
 import { ChannelFlags } from "set";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
+import { useIsNewMember } from "useIsNewMember.tsx";
 
 let error;
 let metroImportAll;

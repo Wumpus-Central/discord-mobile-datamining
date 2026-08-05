@@ -1,9 +1,9 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Row } from "../../notifications/native/UserSettingsHighlightNotifications.tsx";
 // discord_app/modules/user_settings/defs/native/HighlightNotificationsSetting.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createToggle from "createToggle";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Row } from "../../notifications/native/UserSettingsHighlightNotifications.tsx";
 
 const require = arg1;
 function useHighlightNotifications() {

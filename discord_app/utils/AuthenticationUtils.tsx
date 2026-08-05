@@ -1,5 +1,5 @@
-import { registerAsset } from "../../_runtime/01353_registerAsset.js";
 // discord_app/utils/AuthenticationUtils.tsx
+import { registerAsset } from "../../_runtime/01353_registerAsset.js";
 const result = require("set").fileFinishedImporting("utils/AuthenticationUtils.tsx");
 
 export const getToken = function getToken() {

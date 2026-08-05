@@ -1,7 +1,7 @@
+// discord_app/actions/native/DisplayedInviteActionCreators.tsx
 import { dispatcher } from "../../Dispatcher.tsx";
 import { getDisplayedInviteCode } from "../../stores/native/DisplayedInviteStore.tsx";
 import { generateAcceptInviteOptions } from "../InstantInviteActionCreators.tsx";
-// discord_app/actions/native/DisplayedInviteActionCreators.tsx
 const result = require("generateAcceptInviteOptions").fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 
 export const showInvite = function showInvite(code, username, arg2) {

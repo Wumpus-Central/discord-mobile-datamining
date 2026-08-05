@@ -1,10 +1,10 @@
-import { InviteTypes } from "../../../../../../instant_invite/InviteTypeUtils.tsx";
-import { createResolvingGuildInvite } from "invite/GuildInvite.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx
 import updateInvite from "updateInvite";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { InviteTypes } from "InviteSendStates";
+import { InviteTypes } from "../../../../../../instant_invite/InviteTypeUtils.tsx";
+import { createResolvingGuildInvite } from "invite/GuildInvite.tsx";
 
 let c4;
 let c5;

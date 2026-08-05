@@ -1,6 +1,3 @@
-import { t } from "../../../../_runtime/03867_t.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
 // discord_app/modules/local_push_notification/native/LocalPushNotificationStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import recomputeGuild from "recomputeGuild";
@@ -8,6 +5,9 @@ import LocalNotificationTypes from "LocalNotificationTypes";
 import { VerificationLevels } from "ME";
 import { Store } from "initialize";
 import set from "LocalNotificationTypes";
+import { t } from "../../../../_runtime/03867_t.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
 
 let c5;
 let closure_6;

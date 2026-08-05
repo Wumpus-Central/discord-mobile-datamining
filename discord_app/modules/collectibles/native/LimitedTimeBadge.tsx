@@ -1,5 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useCountdown } from "../../../hooks/useCountdown.tsx";
 // discord_app/modules/collectibles/native/LimitedTimeBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -7,6 +5,8 @@ import _getSystemLocale from "_getSystemLocale";
 import handleThemeChange from "handleThemeChange";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useCountdown } from "../../../hooks/useCountdown.tsx";
 
 const require = arg1;
 createCacheKey = { root: null, backgroundDarkMode: null, backgroundLightMode: null };

@@ -1,3 +1,8 @@
+// discord_app/modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx
+import _slicedToArray from "_slicedToArray";
+import TableRowGroupTitle from "TableRowGroupTitle";
+import { View } from "BottomSheetModal";
+import jsxProd from "jsxProd";
 import { BottomSheetModal } from "../../../../../../_runtime/05340_BottomSheetModal.js";
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
 import { ActionSheet } from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -6,11 +11,6 @@ import { TableRowGroupTitle } from "../../../../../design/components/TableRow/na
 import { useTheme } from "../../../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { request } from "../../../../applications/useGetOrFetchApplicationBatched.tsx";
-// discord_app/modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import TableRowGroupTitle from "TableRowGroupTitle";
-import { View } from "BottomSheetModal";
-import jsxProd from "jsxProd";
 
 let closure_6;
 let error;

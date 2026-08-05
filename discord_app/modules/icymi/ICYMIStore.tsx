@@ -1,5 +1,3 @@
-import { MessageEmbedTypes } from "ICYMITypes.tsx";
-import { generateHydrationId } from "ICYMIUtils.tsx";
 // discord_app/modules/icymi/ICYMIStore.tsx
 import _slicedToArray from "_slicedToArray";
 import map from "map";
@@ -21,6 +19,8 @@ import ME from "ME";
 import { ContentInventoryFeedKey } from "ContentInventoryFeedKey";
 import { PersistedStore } from "initialize";
 import set from "getHash";
+import { MessageEmbedTypes } from "ICYMITypes.tsx";
+import { generateHydrationId } from "ICYMIUtils.tsx";
 
 let closure_21;
 let closure_22;

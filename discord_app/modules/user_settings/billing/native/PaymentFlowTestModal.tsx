@@ -1,9 +1,9 @@
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { TestView } from "PaymentFlowTest.android.tsx";
 // discord_app/modules/user_settings/billing/native/PaymentFlowTestModal.tsx
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import importAllResult from "noop";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { TestView } from "PaymentFlowTest.android.tsx";
 
 const require = arg1;
 createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigator();

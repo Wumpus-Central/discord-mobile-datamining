@@ -1,7 +1,7 @@
+// discord_app/modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-// discord_app/modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx
 const obj = {
   getTitle() {
     const intl = getSystemLocale /* getSystemLocale */.intl;

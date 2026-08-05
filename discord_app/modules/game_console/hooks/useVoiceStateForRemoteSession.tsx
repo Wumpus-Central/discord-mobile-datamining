@@ -1,8 +1,8 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_console/hooks/useVoiceStateForRemoteSession.tsx
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
 import set from "set";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");

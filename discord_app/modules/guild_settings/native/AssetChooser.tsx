@@ -1,7 +1,3 @@
-import { registerAsset } from "../../../../_runtime/16487_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16488_registerAsset.js";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/native/AssetChooser.tsx
 import closure_3 from "createCacheKey";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -9,6 +5,10 @@ import { UPLOAD_MEDIUM_SIZE } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { registerAsset } from "../../../../_runtime/16487_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16488_registerAsset.js";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c10;
 let c4;

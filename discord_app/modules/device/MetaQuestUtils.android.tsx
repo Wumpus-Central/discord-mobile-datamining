@@ -1,6 +1,6 @@
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
 // discord_app/modules/device/MetaQuestUtils.android.tsx
 import importDefaultResult from "enforcing";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
 
 const isMetaQuestResult = require("enforcing").isMetaQuest();
 const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");

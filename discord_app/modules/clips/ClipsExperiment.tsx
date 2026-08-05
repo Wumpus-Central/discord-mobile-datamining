@@ -1,11 +1,11 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { isClientClipsCapable } from "isClientClipsCapable.tsx";
 // discord_app/modules/clips/ClipsExperiment.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 import ApexExperiment from "ApexExperiment";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { isClientClipsCapable } from "isClientClipsCapable.tsx";
 
 const require = arg1;
 ApexExperiment = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };

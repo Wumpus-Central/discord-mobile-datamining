@@ -1,8 +1,8 @@
-import { databaseName } from "../../app_database/system/DatabaseManager.tsx";
 // discord_app/modules/headless_tasks/android/BackgroundSync.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
 import getState from "getState";
+import { databaseName } from "../../app_database/system/DatabaseManager.tsx";
 
 const require = arg1;
 let closure_6 = new require("timestamp")("BackgroundSync");

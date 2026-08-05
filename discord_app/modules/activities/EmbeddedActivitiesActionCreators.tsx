@@ -1,6 +1,3 @@
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { addVersionedDismissedContent } from "../dismissible_content/DismissibleContentUtils.tsx";
 // discord_app/modules/activities/EmbeddedActivitiesActionCreators.tsx
 import createExecutable from "createExecutable";
 import { getOrFetchApplicationCommandIndexForTarget as closure_4 } from "getIndexKey";
@@ -21,6 +18,9 @@ import ME from "ME";
 import { INSTALL_LESS_APP_IDS } from "ApplicationTypes";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { InviteTargetTypes } from "InviteSendStates";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { addVersionedDismissedContent } from "../dismissible_content/DismissibleContentUtils.tsx";
 
 let closure_18;
 let closure_19;

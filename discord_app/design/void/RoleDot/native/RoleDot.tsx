@@ -1,10 +1,10 @@
-import { useHasEnhancedRoleColors } from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
-import { getFontScale } from "../../../../modules/screen/native/useFontScale.tsx";
 // discord_app/design/void/RoleDot/native/RoleDot.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { useHasEnhancedRoleColors } from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
+import { getFontScale } from "../../../../modules/screen/native/useFontScale.tsx";
 
 let c4;
 let c5;

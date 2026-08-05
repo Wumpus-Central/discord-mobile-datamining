@@ -1,3 +1,10 @@
+// discord_app/modules/user_profile/native/ChangeAvatarActionSheet.tsx
+import "noop";
+import { View } from "set";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { AnalyticsObjects } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -6,13 +13,6 @@ import { TableRowGroupTitle } from "../../../design/components/TableRow/native/T
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 import { UserProfileUpsellButton } from "UserProfileUpsellButton.tsx";
-// discord_app/modules/user_profile/native/ChangeAvatarActionSheet.tsx
-import "noop";
-import { View } from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticsObjects } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let closure_6;
 let error;

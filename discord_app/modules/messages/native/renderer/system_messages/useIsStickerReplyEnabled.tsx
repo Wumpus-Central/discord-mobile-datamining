@@ -1,9 +1,9 @@
-import { useCanUnarchiveThread } from "../../../../threads/ThreadHooks.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Permissions } from "ME";
+import { useCanUnarchiveThread } from "../../../../threads/ThreadHooks.tsx";
 
 const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");

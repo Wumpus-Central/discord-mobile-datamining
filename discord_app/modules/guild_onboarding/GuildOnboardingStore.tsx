@@ -1,7 +1,7 @@
-import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingStore.tsx
 import { ME } from "ME";
 import { Store } from "initialize";
+import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 
 let obj = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };
 let closure_4 = {};

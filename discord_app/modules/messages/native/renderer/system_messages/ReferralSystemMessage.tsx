@@ -1,11 +1,11 @@
-import { registerAsset } from "../../../../../../_runtime/07626_registerAsset.js";
-import { createReferralTrialEmbedRedeemable } from "../row_data/embeds/ReferralTrialEmbed.tsx";
-import { createReferralTrialEmbedRedesign } from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx
 import emitChanges from "emitChanges";
 import fetchFingerprint from "fetchFingerprint";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/07626_registerAsset.js";
+import { createReferralTrialEmbedRedeemable } from "../row_data/embeds/ReferralTrialEmbed.tsx";
+import { createReferralTrialEmbedRedesign } from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 
 const require = arg1;
 createCacheKey = { iconTintColor: require("Themes").colors.ICON_STRONG, iconDividerColor: require("Themes").colors.ICON_STRONG };

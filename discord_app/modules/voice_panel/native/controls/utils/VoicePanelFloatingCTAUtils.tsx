@@ -1,9 +1,3 @@
-import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { CircleErrorIcon } from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { XSmallIcon } from "../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { RowButtonWrapper } from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/voice_panel/native/controls/utils/VoicePanelFloatingCTAUtils.tsx
 import DismissibleContent from "DismissibleContent";
 import hideLiveChannelNotice from "hideLiveChannelNotice";
@@ -14,6 +8,12 @@ import { isGuildScheduledEventActive as closure_8 } from "scheduledEventSort";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { GuildScheduledEventEntityTypes as closure_10 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { jsx } from "RowButtonWrapper";
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { CircleErrorIcon } from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { XSmallIcon } from "../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { RowButtonWrapper } from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
 const require = arg1;
 function useFloatingCTAProps(stateFromStores) {

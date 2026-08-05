@@ -1,4 +1,3 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/guild_automod/AutomodQuarantineUtils.tsx
 import noop from "noop";
 import zustandStore from "zustandStore";
@@ -10,6 +9,7 @@ import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import { ProfileCustomizationSubsection as closure_12 } from "MAX_FAVORITES";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 let c10;
 let c9;

@@ -1,8 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { MobileHomeDrawerExperiment } from "HomeDrawerExperiment.tsx";
-import { HomeDrawerSharedItem } from "HomeDrawerShared.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -11,6 +6,11 @@ import upsertRelationship from "upsertRelationship";
 import { StatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { MobileHomeDrawerExperiment } from "HomeDrawerExperiment.tsx";
+import { HomeDrawerSharedItem } from "HomeDrawerShared.tsx";
 
 let error;
 let metroImportAll;

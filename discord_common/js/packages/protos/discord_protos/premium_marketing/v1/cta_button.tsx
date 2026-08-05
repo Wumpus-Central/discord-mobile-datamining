@@ -1,9 +1,9 @@
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
-import { create } from "../../common/v1/localized_string.tsx";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { defineProperty } from "../../../google/protobuf/wrappers.tsx";
+import { create } from "../../common/v1/localized_string.tsx";
 
 const require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", OPEN_MARKETING_PAGE: 1, [1]: "OPEN_MARKETING_PAGE", OPEN_TIER_2_PAYMENT_MODAL: 2, [2]: "OPEN_TIER_2_PAYMENT_MODAL", OPEN_TIER_1_PAYMENT_MODAL: 3, [3]: "OPEN_TIER_1_PAYMENT_MODAL", OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER: 4, [4]: "OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER", OPEN_PLAN_SELECTION_MODAL: 5, [5]: "OPEN_PLAN_SELECTION_MODAL", OPEN_PREMIUM_GROUP_PAYMENT_MODAL: 6, [6]: "OPEN_PREMIUM_GROUP_PAYMENT_MODAL", OPEN_SOCIAL_LAYER_STOREFRONT: 7, [7]: "OPEN_SOCIAL_LAYER_STOREFRONT" };

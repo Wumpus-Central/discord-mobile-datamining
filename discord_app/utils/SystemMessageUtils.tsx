@@ -1,3 +1,12 @@
+// discord_app/utils/SystemMessageUtils.tsx
+import _slicedToArray from "_slicedToArray";
+import hasFlag from "hasFlag";
+import fetchFingerprint from "fetchFingerprint";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import upsertRelationship from "upsertRelationship";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
 import { reactParserFor } from "../../discord_common/js/packages/markup/MarkupParser.tsx";
 import { AutomodNotificationEmbedTypeKeys } from "../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
@@ -10,15 +19,6 @@ import { getApplicationSubscriptionSystemMessageASTContent } from "../modules/pr
 import { getPrivateChannelIntegrationAddedSystemMessageContent } from "../modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx";
 import { getNickname } from "NicknameUtils.tsx";
 import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
-// discord_app/utils/SystemMessageUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import hasFlag from "hasFlag";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import upsertRelationship from "upsertRelationship";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
 
 let c10;
 let closure_12;

@@ -1,9 +1,3 @@
-import { _getRequireWildcardCache } from "../../../_runtime/07799__getRequireWildcardCache.js";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { VoiceNormalIcon } from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import { VoiceXIcon } from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
-import { map } from "../../design/tokens/native/useToken.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/common/VolumeSlider.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -12,6 +6,12 @@ import jsxProd from "jsxProd";
 import set from "set";
 import createCacheKey from "createCacheKey";
 import set from "DesktopSources";
+import { _getRequireWildcardCache } from "../../../_runtime/07799__getRequireWildcardCache.js";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { VoiceNormalIcon } from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import { VoiceXIcon } from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

@@ -1,5 +1,5 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/utils/DragAndDropUtils.tsx
+import { apply } from "../../_runtime/00012_apply.js";
 function calculatePositionDeltas(arg0) {
   let ascending;
   let existingPositionGetter;

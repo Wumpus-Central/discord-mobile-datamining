@@ -1,7 +1,7 @@
-import { _startLurking } from "../../utils/GuildDiscoveryUtils.tsx";
 // discord_app/modules/guild_profile/GuildPopoutStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
+import { _startLurking } from "../../utils/GuildDiscoveryUtils.tsx";
 
 const require = arg1;
 let closure_3 = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };

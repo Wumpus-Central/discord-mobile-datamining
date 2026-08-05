@@ -1,7 +1,3 @@
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { set } from "../../utils/CrossPlatformNativeUtils.native.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/a11y/AccessibilityStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import handleThemeChange from "handleThemeChange";
@@ -9,6 +5,10 @@ import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ME from "ME";
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
 import { DeviceSettingsStore } from "initialize";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { set } from "../../utils/CrossPlatformNativeUtils.native.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let c10;
 let c9;

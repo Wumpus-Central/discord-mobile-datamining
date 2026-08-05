@@ -1,13 +1,13 @@
+// discord_app/modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx
+import hasConsented from "hasConsented";
+import { Consents } from "ME";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "../../../../actions/AlertActionCreators.tsx";
 import { handleRequestSuccess } from "../../../../actions/ConsentActionCreators.tsx";
 import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-// discord_app/modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx
-import hasConsented from "hasConsented";
-import { Consents } from "ME";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

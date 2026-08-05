@@ -1,8 +1,8 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/parent_tools/hooks/useSelectedTab.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import items from "items";
 import { AnalyticEvents } from "ME";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 let FamilyCenterSubPages;
 let c4;

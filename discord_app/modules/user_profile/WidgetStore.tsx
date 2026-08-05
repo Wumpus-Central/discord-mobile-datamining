@@ -1,9 +1,9 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/user_profile/WidgetStore.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { Store } from "initialize";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 let c5 = null;
 let c6 = null;

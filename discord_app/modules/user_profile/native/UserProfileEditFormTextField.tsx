@@ -1,8 +1,8 @@
-import { TextArea } from "../../../design/components/TextInput/native/TextArea.native.tsx";
-import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileEditFormTextField.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { TextArea } from "../../../design/components/TextInput/native/TextArea.native.tsx";
+import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
 
 const require = arg1;
 const result = require("TextArea").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");

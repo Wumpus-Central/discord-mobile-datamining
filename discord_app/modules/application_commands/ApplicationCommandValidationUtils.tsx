@@ -1,9 +1,9 @@
+// discord_app/modules/application_commands/ApplicationCommandValidationUtils.tsx
+import { getValidationErrorText } from "TRUE_OPTION_NAME";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getString } from "ApplicationCommandOptionUtils.tsx";
 import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
 import { validateNumericOptionRange } from "ApplicationCommandValidators.tsx";
-// discord_app/modules/application_commands/ApplicationCommandValidationUtils.tsx
-import { getValidationErrorText } from "TRUE_OPTION_NAME";
 
 function validateOptionContent(allowEmptyValues) {
   let channelId;

@@ -1,7 +1,3 @@
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { set } from "../../../core/native/NativeView.tsx";
-import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
-import { animatedComponent } from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
 // discord_app/modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -9,6 +5,10 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import importAllResult from "noop";
 import set from "jsxProd";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
+import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { animatedComponent } from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
 
 let c4;
 let c5;

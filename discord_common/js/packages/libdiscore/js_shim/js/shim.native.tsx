@@ -1,5 +1,5 @@
-import { LIBDISCORE_JSI } from "../../mobile/js/index.tsx";
 // discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx
+import { LIBDISCORE_JSI } from "../../mobile/js/index.tsx";
 let result = require("_initLibdiscore").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {

@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/IcymiTabSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ICYMIActionCreators } from "../../../icymi/ICYMIActionCreators.tsx";
 import { apexExperiment } from "../../../icymi/ICYMIExperiment.tsx";
 import { toggleLabFeature } from "../../../labs/LabFeatureActions.tsx";
 import { useLabFeature } from "../../../labs/useLabFeature.tsx";
-// discord_app/modules/user_settings/defs/native/IcymiTabSetting.tsx
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

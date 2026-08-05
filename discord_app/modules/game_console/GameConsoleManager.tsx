@@ -1,4 +1,3 @@
-import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 // discord_app/modules/game_console/GameConsoleManager.tsx
 import updateVoiceState from "updateVoiceState";
 import fetchFingerprint from "fetchFingerprint";
@@ -10,6 +9,7 @@ import set from "set";
 import XBOX_URL_BASE from "XBOX_URL_BASE";
 import { MediaEngineContextTypes } from "DesktopSources";
 import "initialize";
+import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 
 let c10;
 let unpackModuleId;

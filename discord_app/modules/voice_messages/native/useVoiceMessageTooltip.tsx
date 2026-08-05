@@ -1,8 +1,8 @@
-import { useTooltip } from "../../../design/components/Tooltip/native/useTooltip.native.tsx";
 // discord_app/modules/voice_messages/native/useVoiceMessageTooltip.tsx
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus";
+import { useTooltip } from "../../../design/components/Tooltip/native/useTooltip.native.tsx";
 
 let c4;
 let c5;

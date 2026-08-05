@@ -1,10 +1,10 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useCanCurrentUserSpeakInChannel } from "../../stage_channels/useCanSpeakInChannel.tsx";
-import { useIsFiveButtonLayout } from "useIsFiveButtonLayout.tsx";
 // discord_app/modules/video_calls/native/useActionBarHeight.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { InputModes } from "ME";
 import { ACTION_SHEET_HANDLE_SPACING as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useCanCurrentUserSpeakInChannel } from "../../stage_channels/useCanSpeakInChannel.tsx";
+import { useIsFiveButtonLayout } from "useIsFiveButtonLayout.tsx";
 
 const require = arg1;
 let sum = 2 * require("ActionButton").SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;

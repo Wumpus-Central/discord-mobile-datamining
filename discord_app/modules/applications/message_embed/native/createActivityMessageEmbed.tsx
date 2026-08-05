@@ -1,5 +1,5 @@
-import { createAppMessageEmbed } from "createAppMessageEmbed.tsx";
 // discord_app/modules/applications/message_embed/native/createActivityMessageEmbed.tsx
+import { createAppMessageEmbed } from "createAppMessageEmbed.tsx";
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {

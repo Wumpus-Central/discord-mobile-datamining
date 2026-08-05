@@ -1,9 +1,9 @@
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { extractId } from "../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
 // discord_app/modules/devtools/AnalyticsLogStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import init from "init";
 import { Store } from "initialize";
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { extractId } from "../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
 
 const require = arg1;
 let c4 = 0;

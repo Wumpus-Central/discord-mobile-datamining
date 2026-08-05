@@ -1,14 +1,14 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CheckmarkSmallIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { useIsVariantColorLight } from "../hooks/useIsVariantColorLight.tsx";
-import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetVariants.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CheckmarkSmallIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { useIsVariantColorLight } from "../hooks/useIsVariantColorLight.tsx";
+import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
 
 let c4;
 let c5;

@@ -1,7 +1,7 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
 // discord_app/modules/premium/promotions/MarketingComponentHooks.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
 
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");

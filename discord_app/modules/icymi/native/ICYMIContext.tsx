@@ -1,7 +1,7 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/icymi/native/ICYMIContext.tsx
 import { jsx } from "jsxProd";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 
 const context = require("noop").createContext({ width: 0, margin: 0, inset: 0 });
 const result = require("useWindowDimensions").fileFinishedImporting("modules/icymi/native/ICYMIContext.tsx");

@@ -1,10 +1,10 @@
-import { useGiftCodeErrorMessage } from "useGiftCodeErrorMessage.tsx";
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx
 import "noop";
 import updateGiftCode from "updateGiftCode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import HeaderBackImage from "HeaderBackImage";
+import { useGiftCodeErrorMessage } from "useGiftCodeErrorMessage.tsx";
 
 const require = arg1;
 let obj = { START: "giftcode-start", SUCCESS: "giftcode-success", ERROR: "giftcode-error" };

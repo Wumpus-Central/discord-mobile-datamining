@@ -1,9 +1,9 @@
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/setOrientationLockState.tsx
 import { OrientationLockState } from "items3";
 import sum from "sum";
+import { dispatcher } from "../../../../Dispatcher.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
 
 const RPCErrors = sum.RPCErrors;
 const result = require("createRpcJoiSchemaObject").fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");

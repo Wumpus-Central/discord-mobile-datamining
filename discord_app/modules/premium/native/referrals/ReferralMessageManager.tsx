@@ -1,10 +1,10 @@
-import { set } from "../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
-import { _fetchUserOffer } from "../../UserOfferActionCreators.tsx";
 // discord_app/modules/premium/native/referrals/ReferralMessageManager.tsx
 import reset from "reset";
 import emitChanges from "emitChanges";
 import "initialize";
+import { set } from "../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import { _fetchUserOffer } from "../../UserOfferActionCreators.tsx";
 
 const require = arg1;
 function handleReferralMessages(type) {

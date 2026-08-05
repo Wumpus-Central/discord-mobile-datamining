@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "expandEventProperties";
@@ -10,6 +9,7 @@ import isMetaQuest from "isMetaQuest";
 import set from "set";
 import createCacheKey from "createCacheKey";
 import set from "get ActivityIndicator";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let c10;
 let c9;

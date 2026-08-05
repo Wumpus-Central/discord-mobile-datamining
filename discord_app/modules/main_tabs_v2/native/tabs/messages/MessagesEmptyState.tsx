@@ -1,14 +1,14 @@
-import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 let c5;
 let c9;

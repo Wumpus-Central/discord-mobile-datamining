@@ -1,6 +1,6 @@
-import { ArrowAngleRightUpIcon } from "../../../design/components/Icon/native/redesign/generated/ArrowAngleRightUpIcon.tsx";
 // discord_app/modules/forwarding/native/ForwardingIcon.tsx
 import { jsx } from "jsxProd";
+import { ArrowAngleRightUpIcon } from "../../../design/components/Icon/native/redesign/generated/ArrowAngleRightUpIcon.tsx";
 
 const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardingIcon.tsx");
 

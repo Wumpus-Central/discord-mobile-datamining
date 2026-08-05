@@ -1,10 +1,10 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/avatar/useAvatarColor.tsx
 import _slicedToArray from "_slicedToArray";
 import batchUpdates from "batchUpdates";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import keys from "keys";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function hasFetchedColors(game_name) {

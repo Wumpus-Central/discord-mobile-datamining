@@ -1,5 +1,3 @@
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { useMobileTenureBadgeImages } from "hooks/useMobileTenureBadgeImages.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,6 +6,8 @@ import { UserSettingsSections } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { useMobileTenureBadgeImages } from "hooks/useMobileTenureBadgeImages.tsx";
 
 const require = arg1;
 function CoachmarkImg(badge) {

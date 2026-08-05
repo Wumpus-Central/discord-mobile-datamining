@@ -1,9 +1,9 @@
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/LaunchpadSetting.tsx
 import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
 import createToggle from "createToggle";
+import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const radio = createToggle.createRadio({
   useTitle() {

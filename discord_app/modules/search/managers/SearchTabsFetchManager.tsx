@@ -1,9 +1,9 @@
-import { fetch } from "../SearchFetcher.tsx";
 // discord_app/modules/search/managers/SearchTabsFetchManager.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { SearchTypes } from "ME";
 import { AbstractSearchFetchManager } from "cleanUp";
+import { fetch } from "../SearchFetcher.tsx";
 
 let c4;
 let c5;

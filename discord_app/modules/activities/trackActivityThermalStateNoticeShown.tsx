@@ -1,10 +1,10 @@
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getEmbeddedActivityLocationChannelId } from "utils/embeddedActivityLocationUtils.tsx";
 // discord_app/modules/activities/trackActivityThermalStateNoticeShown.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import participantFromServer from "participantFromServer";
 import { AnalyticEvents } from "ME";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getEmbeddedActivityLocationChannelId } from "utils/embeddedActivityLocationUtils.tsx";
 
 const require = arg1;
 const result = require("participantFromServer").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");

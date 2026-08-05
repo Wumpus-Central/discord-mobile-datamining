@@ -1,7 +1,7 @@
-import { openChannelCallModal } from "../../utils/native/PrivateChannelCallUtils.tsx";
 // discord_app/modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx
 import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
 import set from "SHARE_PREPARING_MODAL_KEY";
+import { openChannelCallModal } from "../../utils/native/PrivateChannelCallUtils.tsx";
 
 let OAUTH2_AUTHORIZE_MODAL_KEY;
 let OAUTH2_ERROR_RESULT_MODAL_KEY;

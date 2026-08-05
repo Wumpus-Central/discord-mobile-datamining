@@ -1,4 +1,3 @@
-import { 01307__ } from "../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/google/protobuf/wrappers.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -10,6 +9,7 @@ import { MessageType as MessageType6 } from "module_1307";
 import { MessageType as MessageType7 } from "module_1307";
 import { MessageType as MessageType8 } from "module_1307";
 import { MessageType as MessageType9 } from "module_1307";
+import { 01307__ } from "../../../../../../_runtime/metro/01307__.js";
 
 const require = arg1;
 class DoubleValue$Type extends MessageType {

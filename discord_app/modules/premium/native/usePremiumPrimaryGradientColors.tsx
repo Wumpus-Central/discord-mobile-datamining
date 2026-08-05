@@ -1,6 +1,6 @@
+// discord_app/modules/premium/native/usePremiumPrimaryGradientColors.tsx
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
-// discord_app/modules/premium/native/usePremiumPrimaryGradientColors.tsx
 const result = require("set").fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
 
 export default function usePremiumPrimaryGradientColors() {

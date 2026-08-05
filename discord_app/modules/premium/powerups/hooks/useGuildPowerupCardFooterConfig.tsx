@@ -1,11 +1,11 @@
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import { useGuildPowerupRollbackEnabled } from "useGuildPowerupRollbackEnabled.tsx";
-import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import BoostedGuildTiers from "BoostedGuildTiers";
 import { GuildFeatures } from "ME";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import { useGuildPowerupRollbackEnabled } from "useGuildPowerupRollbackEnabled.tsx";
+import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 
 let GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP;
 let c4;

@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx
 import isInAppMessageSoundsEnabled from "isInAppMessageSoundsEnabled";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let setInAppMessageSoundsEnabled;
 let useInAppMessageSoundsEnabled;

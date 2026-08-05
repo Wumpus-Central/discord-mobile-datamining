@@ -1,8 +1,8 @@
+// discord_app/modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
 import { set } from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 import { isRestrictedFromShowingGuildPurchaseEntryPoints } from "../../creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx";
 import { computeGuildRoleSubscriptionSettingsVisibility } from "../../guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
-// discord_app/modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx");

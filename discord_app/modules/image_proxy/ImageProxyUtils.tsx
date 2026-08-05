@@ -1,7 +1,7 @@
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
-import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/image_proxy/ImageProxyUtils.tsx
 import set from "set";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 
 let parts;
 if (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS != null) {

@@ -1,7 +1,7 @@
+// discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { resolveGoreSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-// discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx
 let obj = {
   getTitle() {
     const intl = getSystemLocale /* getSystemLocale */.intl;

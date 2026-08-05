@@ -1,9 +1,9 @@
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 // discord_app/modules/jank_stats/native/JankStatsManager.android.tsx
 import ME from "ME";
 import "initialize";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
 let c3;
 let c4;

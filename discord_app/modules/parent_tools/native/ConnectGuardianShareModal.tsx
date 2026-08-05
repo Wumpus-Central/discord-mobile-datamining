@@ -1,15 +1,15 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { Modal } from "../../../design/components/Modal/native/Modal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useOnNewPendingRequest } from "../hooks/useOnNewPendingRequest.tsx";
 // discord_app/modules/parent_tools/native/ConnectGuardianShareModal.tsx
 import HeaderBackImage from "HeaderBackImage";
 import { View } from "ConnectGuardianCard";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { Modal } from "../../../design/components/Modal/native/Modal.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { useOnNewPendingRequest } from "../hooks/useOnNewPendingRequest.tsx";
 
 let closure_6;
 let error;

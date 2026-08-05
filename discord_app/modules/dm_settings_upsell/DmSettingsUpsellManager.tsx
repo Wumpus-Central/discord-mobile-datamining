@@ -1,8 +1,8 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { DmSettingsUpsellActionCreators.native } from "DmSettingsUpsellActionCreators.native.tsx";
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellManager.tsx
 import { Endpoints } from "ME";
 import "initialize";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { DmSettingsUpsellActionCreators.native } from "DmSettingsUpsellActionCreators.native.tsx";
 
 class DmSettingsUpsellManager extends tmp2 {
   constructor() {

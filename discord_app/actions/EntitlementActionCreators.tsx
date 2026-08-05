@@ -1,8 +1,8 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/EntitlementActionCreators.tsx
 import set from "set";
 import { Endpoints } from "ME";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 
 const require = arg1;
 function _fetchUserEntitlements() {

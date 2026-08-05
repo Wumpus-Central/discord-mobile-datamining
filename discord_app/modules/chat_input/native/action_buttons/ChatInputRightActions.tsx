@@ -1,9 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { renderChatInputActionButtonGiftAndThread } from "ChatInputActionButtonGiftOrThread.tsx";
-import { FadeTransitionItem } from "ChatInputActionButtonTransitionItem.tsx";
-import { useChatInputFloatingBounce } from "useChatInputFloatingBounce.tsx";
 // discord_app/modules/chat_input/native/action_buttons/ChatInputRightActions.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -11,6 +5,12 @@ import { View } from "get ActivityIndicator";
 import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { renderChatInputActionButtonGiftAndThread } from "ChatInputActionButtonGiftOrThread.tsx";
+import { FadeTransitionItem } from "ChatInputActionButtonTransitionItem.tsx";
+import { useChatInputFloatingBounce } from "useChatInputFloatingBounce.tsx";
 
 let error;
 let metroImportAll;

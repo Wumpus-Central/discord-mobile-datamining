@@ -1,5 +1,5 @@
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/DeveloperOptionsActionCreators.tsx
+import { dispatcher } from "../Dispatcher.tsx";
 const result = require("set").fileFinishedImporting("actions/DeveloperOptionsActionCreators.tsx");
 
 export const setDeveloperOptionSettings = function setDeveloperOptionSettings(settings) {

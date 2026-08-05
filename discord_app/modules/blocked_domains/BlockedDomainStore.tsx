@@ -1,7 +1,7 @@
-import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/blocked_domains/BlockedDomainStore.tsx
 import { AnalyticEvents } from "ME";
+import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const prototype = function BlockedDomainStore() {
   return Object.create(new.target.prototype);

@@ -1,4 +1,3 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/premium/promotions/PromotionsActionCreators.tsx
 import ME from "ME";
 import _getSystemLocale from "_getSystemLocale";
@@ -6,6 +5,7 @@ import createFromServer from "createFromServer";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_7 } from "GuildFeatures";
 import { Endpoints } from "ME";
+import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 function fetchActivePromotions() {

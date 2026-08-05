@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("useNavigatorConfirmChangesOnBack").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx");

@@ -1,14 +1,14 @@
+// discord_app/modules/quests/utils/VideoQuestUtils.tsx
+import handleConnectionInfoChange from "handleConnectionInfoChange";
+import initializeState from "initializeState";
+import _toPropertyKey from "_toPropertyKey";
+import { AnalyticEvents } from "ME";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { trackQuestEvent } from "../lib/analytics/AnalyticsActions.tsx";
 import { _manuallyStartConsoleQuest } from "../QuestActionCreators.tsx";
 import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
 import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
-// discord_app/modules/quests/utils/VideoQuestUtils.tsx
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import initializeState from "initializeState";
-import _toPropertyKey from "_toPropertyKey";
-import { AnalyticEvents } from "ME";
 
 const require = arg1;
 const portrait = "portrait";

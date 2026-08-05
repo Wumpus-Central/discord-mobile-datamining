@@ -1,3 +1,8 @@
+// discord_app/modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { PremiumPerksList } from "../../../../components_native/premium/PremiumPerksList.tsx";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
@@ -8,11 +13,6 @@ import { NitroWheelIcon } from "../../../../design/components/Icon/native/redesi
 import { UserIcon } from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 
 let c4;
 let c5;

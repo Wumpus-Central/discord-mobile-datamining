@@ -1,6 +1,6 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/labs/LabFeatureActions.tsx
 import getUserAgnosticState from "getUserAgnosticState";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 let closure_3 = {};
 const result = require("set").fileFinishedImporting("modules/labs/LabFeatureActions.tsx");

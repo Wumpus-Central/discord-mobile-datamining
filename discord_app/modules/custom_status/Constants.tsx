@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/custom_status/Constants.tsx
 import { StatusTypes } from "sum";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 
 const frozen = Object.freeze({ MINUTES_30: 1800000, HOURS_1: 3600000, HOURS_4: 14400000, TODAY: "TODAY", DONT_CLEAR: "DONT_CLEAR" });
 let obj = {

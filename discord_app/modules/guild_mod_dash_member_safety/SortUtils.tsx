@@ -1,6 +1,6 @@
+// discord_app/modules/guild_mod_dash_member_safety/SortUtils.tsx
 import { getJoinedAtDateFormatter } from "DateUtils.tsx";
 import { result } from "MemberSafetyElasticSearchQueryTypes.tsx";
-// discord_app/modules/guild_mod_dash_member_safety/SortUtils.tsx
 const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/SortUtils.tsx");
 
 export const getSortValueForMember = function getSortValueForMember(joinedAt, ORDER_BY_UNSPECIFIED) {

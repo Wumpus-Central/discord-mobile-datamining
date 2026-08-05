@@ -1,10 +1,10 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/common/Video.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c4;
 let c5;

@@ -1,9 +1,9 @@
-import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/FormHeader.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
+import { Button } from "../../../../../design/void/native.tsx";
 
 const require = arg1;
 createCacheKey = { fieldHeader: null };

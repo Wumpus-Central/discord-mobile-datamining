@@ -1,7 +1,7 @@
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { CountryListMode } from "../modules/premium/promotions/constants.tsx";
 // discord_app/records/PromotionRecord.tsx
 import "toJS";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { CountryListMode } from "../modules/premium/promotions/constants.tsx";
 
 const require = arg1;
 let PromotionRecord;

@@ -1,13 +1,13 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { PremiumTypes } from "../hooks/useBuyNitroPlanSelection.tsx";
-import { BuyNitroPurchaseButton } from "purchase_button/BuyNitroPurchaseButton.tsx";
 // discord_app/modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx
 import { Image } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { PremiumTypes } from "../hooks/useBuyNitroPlanSelection.tsx";
+import { BuyNitroPurchaseButton } from "purchase_button/BuyNitroPurchaseButton.tsx";
 
 let c4;
 let c5;

@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/native_permissions/NativePermissionBaseUtils.tsx
 import setPermission from "setPermission";
 import initialize from "initialize";
 import NativePermissionStatus from "NativePermissionStatus";
 import { AnalyticEvents } from "ME";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let c5;
 let closure_6;

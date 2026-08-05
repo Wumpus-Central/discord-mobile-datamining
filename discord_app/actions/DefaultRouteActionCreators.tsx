@@ -1,9 +1,9 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { matchPath } from "../modules/routing/matchPathCompat.tsx";
-import { RouteParam } from "../modules/routing/RouteUtils.tsx";
 // discord_app/actions/DefaultRouteActionCreators.tsx
 import initialize from "initialize";
 import { Routes } from "ME";
+import { dispatcher } from "../Dispatcher.tsx";
+import { matchPath } from "../modules/routing/matchPathCompat.tsx";
+import { RouteParam } from "../modules/routing/RouteUtils.tsx";
 
 const require = arg1;
 const result = require("matchPath").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");

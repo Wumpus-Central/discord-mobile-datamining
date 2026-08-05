@@ -1,7 +1,7 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/connections/authorizeConnection.native.tsx
 import { GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE as closure_3 } from "OperatorTypes";
 import { PlatformTypes } from "ME";
+import { dispatcher } from "../../Dispatcher.tsx";
 
 const result = require("dispatcher").fileFinishedImporting("modules/connections/authorizeConnection.native.tsx");
 

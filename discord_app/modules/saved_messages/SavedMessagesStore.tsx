@@ -1,9 +1,9 @@
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-import { SavedMessageSortTypes } from "SavedMessagesTypes.tsx";
 // discord_app/modules/saved_messages/SavedMessagesStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 import set from "SavedMessageSortTypes";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
+import { SavedMessageSortTypes } from "SavedMessagesTypes.tsx";
 
 const require = arg1;
 function getTimeSafe(dueAt) {

@@ -1,6 +1,6 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx
 import { Store } from "initialize";
+import { apply } from "../../../../_runtime/00012_apply.js";
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = [];

@@ -1,6 +1,6 @@
-import { apply } from "../../../../_runtime/00012_apply.js";
 // discord_app/modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx
 import { ActivityTypes } from "ME";
+import { apply } from "../../../../_runtime/00012_apply.js";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 

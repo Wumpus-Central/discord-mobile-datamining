@@ -1,6 +1,3 @@
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsChangeCategory.tsx
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
@@ -14,6 +11,9 @@ import { Permissions } from "ME";
 import jsxProd from "TableRowInner";
 import createCacheKey from "createCacheKey";
 import importAllResult from "getSystemLocale";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
 let closure_14;
 let map1;

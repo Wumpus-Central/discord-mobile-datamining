@@ -1,7 +1,7 @@
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/CollapsedVoiceChannelStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 function handleConnectionOpen() {
   const obj = DISCORD_EPOCH;

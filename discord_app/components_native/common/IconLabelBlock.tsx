@@ -1,13 +1,13 @@
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { Button } from "../../design/void/native.tsx";
-import { IconUploader } from "IconUploader.tsx";
 // discord_app/components_native/common/IconLabelBlock.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { IconUploader } from "IconUploader.tsx";
 
 let c5;
 let closure_6;

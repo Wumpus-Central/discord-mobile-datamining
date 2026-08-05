@@ -1,8 +1,8 @@
-import { useUploadDisabled } from "../useUploadDisabled.tsx";
 // discord_app/modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx
 import noop from "noop";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";
 import ME from "ME";
+import { useUploadDisabled } from "../useUploadDisabled.tsx";
 
 let c5;
 let closure_6;

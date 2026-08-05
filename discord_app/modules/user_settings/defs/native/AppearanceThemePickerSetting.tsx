@@ -1,9 +1,9 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePickerScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePickerScreen.tsx";
 
 const require = arg1;
 createToggle = {

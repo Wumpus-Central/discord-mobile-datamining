@@ -1,6 +1,6 @@
-import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/gateway/WorkSchedulerTelemetry.tsx
 import _slicedToArray from "_slicedToArray";
+import { apply } from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 let obj = { LONGER_DISPATCH: "longer_dispatch", EXCEEDED_MAX_CONSECUTIVE_FLUSHES: "exceeded_max_consecutive_flushes", FIRED_DUE_TO_MAX_TIMEOUT: "fired_due_to_max_timeout", SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED: "skip_idle_callback_due_to_backgrounded" };

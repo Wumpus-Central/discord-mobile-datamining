@@ -1,9 +1,3 @@
-import { byteLength } from "../../../../_runtime/00206_byteLength.js";
-import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { HapticFeedbackTypes } from "../../haptics/HapticUtils.native.tsx";
-import { downsampleWaveform } from "../downsampleWaveform.tsx";
 // discord_app/modules/voice_messages/native/VoiceMessageUtils.tsx
 import timestamp from "timestamp";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -11,6 +5,12 @@ import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus";
 import VoiceMessageAnimationState from "VoiceMessageAnimationState";
 import { AnalyticEvents } from "ME";
 import importDefaultResult from "set";
+import { byteLength } from "../../../../_runtime/00206_byteLength.js";
+import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { HapticFeedbackTypes } from "../../haptics/HapticUtils.native.tsx";
+import { downsampleWaveform } from "../downsampleWaveform.tsx";
 
 let c10;
 let c5;

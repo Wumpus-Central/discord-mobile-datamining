@@ -1,4 +1,3 @@
-import { SearchBarNav } from "../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -8,6 +7,7 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { PremiumGuildSubscribeModalScenes as closure_9 } from "PremiumGuildSubscribeModalScenes";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SearchBarNav } from "../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 
 let c10;
 let unpackModuleId;

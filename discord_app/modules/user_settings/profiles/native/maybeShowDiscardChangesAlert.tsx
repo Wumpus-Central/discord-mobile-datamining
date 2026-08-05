@@ -1,6 +1,6 @@
+// discord_app/modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx
 import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-// discord_app/modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx
 const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
 
 export default function maybeShowDiscardChangesAlert(onHasEdits) {

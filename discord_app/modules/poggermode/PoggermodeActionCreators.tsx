@@ -1,9 +1,9 @@
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getScreenshakeLocationName } from "trackPoggermodeSettingsUpdated.tsx";
 // discord_app/modules/poggermode/PoggermodeActionCreators.tsx
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import updateCombo from "updateCombo";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getScreenshakeLocationName } from "trackPoggermodeSettingsUpdated.tsx";
 
 const result = require("updateCombo").fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 

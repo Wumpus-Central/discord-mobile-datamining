@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/12009_registerAsset.js";
-import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SearchBarNav } from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionGuildSelectSearch.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +6,12 @@ import get_ActivityIndicator from "module_5900";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/12009_registerAsset.js";
+import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SearchBarNav } from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 
 let c10;
 let closure_12;

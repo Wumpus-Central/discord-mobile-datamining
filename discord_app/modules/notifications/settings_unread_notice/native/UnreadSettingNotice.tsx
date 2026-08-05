@@ -1,13 +1,13 @@
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UnreadSettingNoticeImpressionTracking } from "../UnreadSettingNoticeImpressionTracking.tsx";
 // discord_app/modules/notifications/settings_unread_notice/native/UnreadSettingNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UnreadSettingNoticeImpressionTracking } from "../UnreadSettingNoticeImpressionTracking.tsx";
 
 let c5;
 let closure_6;

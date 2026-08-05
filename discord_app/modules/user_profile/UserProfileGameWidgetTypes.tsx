@@ -1,6 +1,6 @@
+// discord_app/modules/user_profile/UserProfileGameWidgetTypes.tsx
 import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import { findGameWidget } from "WidgetUtils.tsx";
-// discord_app/modules/user_profile/UserProfileGameWidgetTypes.tsx
 const items = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES];
 let BaseGameWidget;
 class BaseGameWidget {

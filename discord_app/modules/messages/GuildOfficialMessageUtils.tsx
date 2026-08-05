@@ -1,3 +1,8 @@
+// discord_app/modules/messages/GuildOfficialMessageUtils.tsx
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING";
+import ME from "ME";
 import { n } from "../../../_runtime/00689_n.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { int2hslRaw } from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
@@ -5,11 +10,6 @@ import { hexToRgba } from "../../utils/ColorUtils.tsx";
 import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
 import { experiment } from "GuildOfficialMessagesExperiment.tsx";
 import { isSystemMessage } from "isSystemMessage.tsx";
-// discord_app/modules/messages/GuildOfficialMessageUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING";
-import ME from "ME";
 
 let c9;
 let closure_6;

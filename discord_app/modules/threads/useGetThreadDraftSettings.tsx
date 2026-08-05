@@ -1,6 +1,6 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/threads/useGetThreadDraftSettings.tsx
 import handleChanged from "handleChanged";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");

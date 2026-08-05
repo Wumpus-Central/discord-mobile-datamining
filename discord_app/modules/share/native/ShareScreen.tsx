@@ -1,4 +1,3 @@
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/share/native/ShareScreen.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import HeaderBackImage from "HeaderBackImage";
@@ -15,6 +14,7 @@ import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "set";
 import set from "noop";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let closure_12;
 let closure_16;

@@ -1,10 +1,10 @@
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 // discord_app/modules/rpc/server/commands/soundboard.tsx
 import set from "set";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import sum from "sum";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 
 let RPCCommands;
 let RPC_LOCAL_SCOPE;

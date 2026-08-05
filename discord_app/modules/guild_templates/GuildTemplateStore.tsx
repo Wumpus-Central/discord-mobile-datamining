@@ -1,7 +1,7 @@
-import { createResolvedGuildTemplate } from "createResolvedGuildTemplate.tsx";
 // discord_app/modules/guild_templates/GuildTemplateStore.tsx
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import { Store } from "initialize";
+import { createResolvedGuildTemplate } from "createResolvedGuildTemplate.tsx";
 
 function handleGuildTemplateResolveSuccess(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;

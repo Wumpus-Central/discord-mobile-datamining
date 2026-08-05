@@ -1,9 +1,9 @@
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
 import explicitContentFromProto from "explicitContentFromProto";
 import upsertRelationship from "upsertRelationship";
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const require = arg1;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {

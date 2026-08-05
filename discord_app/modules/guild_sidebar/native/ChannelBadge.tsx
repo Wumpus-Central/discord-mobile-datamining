@@ -1,12 +1,12 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { NewBadge } from "../../channel_list_v2/native/components/NewBadge.tsx";
-import { MentionsBadge } from "MentionsBadge.tsx";
 // discord_app/modules/guild_sidebar/native/ChannelBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { NewBadge } from "../../channel_list_v2/native/components/NewBadge.tsx";
+import { MentionsBadge } from "MentionsBadge.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));

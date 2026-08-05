@@ -1,6 +1,6 @@
-import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/video_backgrounds/VideoFilterImageError.tsx
 import { V8APIError } from "sendRequest";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
 let closure_3 = { ASSET: "asset" };

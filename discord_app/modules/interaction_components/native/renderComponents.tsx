@@ -1,3 +1,6 @@
+// discord_app/modules/interaction_components/native/renderComponents.tsx
+import "noop";
+import { jsx } from "jsxProd";
 import { PermissionOverwriteType } from "../../../flow/Server.tsx";
 import { CheckboxActionComponent } from "actions/CheckboxActionComponent.tsx";
 import { CheckboxGroupActionComponent } from "actions/CheckboxGroupActionComponent.tsx";
@@ -9,9 +12,6 @@ import { TextInputActionComponent } from "actions/TextInputActionComponent.tsx";
 import { TextDisplayComponent } from "display/TextDisplayComponent.tsx";
 import { ActionRowLayoutComponent } from "layouts/ActionRowLayoutComponent.tsx";
 import { LabelLayoutComponent } from "layouts/LabelLayoutComponent.tsx";
-// discord_app/modules/interaction_components/native/renderComponents.tsx
-import "noop";
-import { jsx } from "jsxProd";
 
 const require = arg1;
 function renderComponents(components) {

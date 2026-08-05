@@ -1,6 +1,6 @@
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 // discord_app/modules/parent_tools/RestrictedHoursActionCreators.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 
 const require = arg1;
 function closeRestrictedHoursModal() {

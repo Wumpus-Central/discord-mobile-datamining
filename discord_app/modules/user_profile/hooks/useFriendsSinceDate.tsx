@@ -1,9 +1,9 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { officialApplicationIds } from "../../connections/ConnectionsUtils.tsx";
 // discord_app/modules/user_profile/hooks/useFriendsSinceDate.tsx
 import _getSystemLocale from "_getSystemLocale";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { officialApplicationIds } from "../../connections/ConnectionsUtils.tsx";
 
 const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");

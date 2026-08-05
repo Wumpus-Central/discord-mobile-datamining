@@ -1,8 +1,8 @@
-import { registerAsset } from "../../../../../../../_runtime/08006_registerAsset.js";
-import { BaseIconImage } from "../../BaseIconImage.tsx";
 // discord_app/design/components/Icon/native/redesign/generated/XNeutralIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
+import { registerAsset } from "../../../../../../../_runtime/08006_registerAsset.js";
+import { BaseIconImage } from "../../BaseIconImage.tsx";
 
 const require = arg1;
 const result = require("BaseIconImage").fileFinishedImporting("design/components/Icon/native/redesign/generated/XNeutralIcon.tsx");

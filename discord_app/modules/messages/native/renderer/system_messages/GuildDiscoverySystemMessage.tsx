@@ -1,6 +1,6 @@
+// discord_app/modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { createCommonMessage } from "createCommonMessage.tsx";
-// discord_app/modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");
 
 export const createGuildDiscoveryDisqualifiedSystemMessage = function createGuildDiscoveryDisqualifiedSystemMessage(message) {

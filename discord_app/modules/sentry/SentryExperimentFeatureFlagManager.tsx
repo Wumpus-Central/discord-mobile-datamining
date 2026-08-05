@@ -1,10 +1,10 @@
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 // discord_app/modules/sentry/SentryExperimentFeatureFlagManager.tsx
 import getHash from "getHash";
 import initialize from "initialize";
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";
 import set from "handleConnectionOpen";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 
 function isLikelyControl(defaultConfig, variantId2) {
   if (null == defaultConfig) {

@@ -1,8 +1,8 @@
-import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 // discord_app/design/components/Sticky/native/StickyWrapper.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
+import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 let StyleSheet;
 let c3;

@@ -1,6 +1,3 @@
-import { Pagination } from "../../../../../_runtime/09964_Pagination.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx
 import _slicedToArray from "_slicedToArray";
 import isMetaQuest from "isMetaQuest";
@@ -12,6 +9,9 @@ import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Pagination } from "../../../../../_runtime/09964_Pagination.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 let c10;
 let c5;

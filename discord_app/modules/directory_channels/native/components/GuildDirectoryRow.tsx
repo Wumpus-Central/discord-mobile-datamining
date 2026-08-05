@@ -1,6 +1,3 @@
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
-import { GuildDirectoryMoreMenu } from "GuildDirectoryMoreMenu.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryRow.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
@@ -11,6 +8,9 @@ import closure_8 from "createGuildRecordFromRust";
 import { JoinGuildSources } from "ME";
 import jsxProd from "GuildDirectoryMoreMenu";
 import createCacheKey from "createCacheKey";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import { GuildDirectoryMoreMenu } from "GuildDirectoryMoreMenu.tsx";
 
 let c10;
 let closure_12;

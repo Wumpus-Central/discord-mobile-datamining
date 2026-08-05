@@ -1,3 +1,13 @@
+// discord_app/modules/soundboard/SoundboardUtils.tsx
+import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
+import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_5 } from "createChannelRecord";
+import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_8 from "handleSoundCreateOrUpdate";
+import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME";
+import ME from "ME";
+import { ExpressionPickerViewType } from "ExpressionPickerViewType";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
@@ -9,16 +19,6 @@ import { getMuteStates } from "../video_calls/useMuteStates.tsx";
 import { VoiceChannelEffectSentLocation } from "../voice_channel_effects/VoiceChannelEffectsActionCreators.tsx";
 import { _fetchDefaultSoundsFromApi2 } from "SoundboardActionCreators.tsx";
 import { SoundButtonOverlay } from "SoundboardTypes.tsx";
-// discord_app/modules/soundboard/SoundboardUtils.tsx
-import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_5 } from "createChannelRecord";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_8 from "handleSoundCreateOrUpdate";
-import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME";
-import ME from "ME";
-import { ExpressionPickerViewType } from "ExpressionPickerViewType";
 
 let c10;
 let c9;

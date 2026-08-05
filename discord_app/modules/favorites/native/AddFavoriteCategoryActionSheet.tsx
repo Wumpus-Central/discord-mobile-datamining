@@ -1,10 +1,10 @@
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/favorites/native/AddFavoriteCategoryActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_5 } from "date";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let closure_6;
 let error;

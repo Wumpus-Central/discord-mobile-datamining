@@ -1,11 +1,11 @@
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
-import { FamilyCenterParentalConsentNotice } from "FamilyCenterParentalConsentNotice.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivityPage.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
+import { FamilyCenterParentalConsentNotice } from "FamilyCenterParentalConsentNotice.tsx";
 
 let c3;
 let c4;

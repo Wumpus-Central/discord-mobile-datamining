@@ -1,7 +1,7 @@
-import { calculateFps } from "../../lib/VideoHealthManager.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/media_engine/trackVideoToggle.tsx
 import { AnalyticEvents } from "ME";
+import { calculateFps } from "../../lib/VideoHealthManager.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/media_engine/trackVideoToggle.tsx");
 

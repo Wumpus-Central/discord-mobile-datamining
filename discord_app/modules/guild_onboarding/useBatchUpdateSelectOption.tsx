@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_onboarding/useBatchUpdateSelectOption.tsx
 import noop from "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import handleUpdate from "handleUpdate";
 import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let closure_7 = {};

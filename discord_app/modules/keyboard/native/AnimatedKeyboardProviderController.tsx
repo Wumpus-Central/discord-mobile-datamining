@@ -1,11 +1,11 @@
-import { KeyboardChatScrollView } from "../../../../_runtime/01595_KeyboardChatScrollView.js";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
 import jsxProd from "jsxProd";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import mutable from "noop";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import importAllResult from "noop";
+import { KeyboardChatScrollView } from "../../../../_runtime/01595_KeyboardChatScrollView.js";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let c3;
 let obj1;

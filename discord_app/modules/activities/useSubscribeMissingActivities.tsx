@@ -1,9 +1,9 @@
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/activities/useSubscribeMissingActivities.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleConnectionOpenOrResumed from "handleConnectionOpenOrResumed";
 import sortActivity from "sortActivity";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let closure_6 = [];

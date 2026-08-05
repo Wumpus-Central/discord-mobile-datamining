@@ -1,5 +1,5 @@
-import { useStageBlockedUsersCount } from "useStageBlockedUsersCount.tsx";
 // discord_app/modules/stage_channels/StageChannelHeightHooks.tsx
+import { useStageBlockedUsersCount } from "useStageBlockedUsersCount.tsx";
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
 
 export const CALL_ACTION_BAR_HEIGHT = 112;

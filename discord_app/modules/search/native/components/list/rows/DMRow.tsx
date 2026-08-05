@@ -1,6 +1,3 @@
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
-import { ActivityStatus } from "../../../../../activity_status/native/ActivityStatus.tsx";
 // discord_app/modules/search/native/components/list/rows/DMRow.tsx
 import sortActivity from "sortActivity";
 import _slicedToArray from "_slicedToArray";
@@ -12,6 +9,9 @@ import upsertRelationship from "upsertRelationship";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
+import { ActivityStatus } from "../../../../../activity_status/native/ActivityStatus.tsx";
 
 let closure_12;
 let closure_14;

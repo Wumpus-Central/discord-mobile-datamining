@@ -1,3 +1,6 @@
+// discord_app/modules/checkout/messages/GiftCard.messages.js
+import 01274__ from "../../../../_runtime/metro/01274__.js";
+import 01274__ from "../../../../_runtime/metro/01274__.js";
 import { registerAsset } from "../../../../_runtime/01994_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/01995_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/01996_registerAsset.js";
@@ -30,9 +33,6 @@ import { registerAsset } from "../../../../_runtime/02022_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02023_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/02028_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
-// discord_app/modules/checkout/messages/GiftCard.messages.js
-import 01274__ from "../../../../_runtime/metro/01274__.js";
-import 01274__ from "../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   bg() {

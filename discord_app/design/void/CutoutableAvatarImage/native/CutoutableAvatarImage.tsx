@@ -1,3 +1,8 @@
+// discord_app/design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx
+import importAllResult from "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import { CHANNEL_SPRING_CONFIG } from "n";
+import jsxProd from "jsxProd";
 import { v1 } from "../../../../../_runtime/00514_v1.js";
 import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
@@ -5,11 +10,6 @@ import { getChannelIconURL } from "../../../../modules/channel/getChannelIcon.ts
 import { getReactNativeSVGImageSource } from "../../../../modules/svg/native/getReactNativeSVGImageSource.tsx";
 import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 import { SolidCutout } from "../../../components/Icon/native/ClipView.tsx";
-// discord_app/design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { CHANNEL_SPRING_CONFIG } from "n";
-import jsxProd from "jsxProd";
 
 let c4;
 let c5;

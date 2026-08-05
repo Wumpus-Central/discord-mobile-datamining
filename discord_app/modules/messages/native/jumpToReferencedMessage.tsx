@@ -1,5 +1,5 @@
-import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
 // discord_app/modules/messages/native/jumpToReferencedMessage.tsx
+import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
 const result = require("set").fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
 
 export default function jumpToReferencedMessage(messageReference) {

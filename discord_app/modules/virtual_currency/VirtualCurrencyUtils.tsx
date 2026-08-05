@@ -1,10 +1,10 @@
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/virtual_currency/VirtualCurrencyUtils.tsx
 import { COLLECTIBLES_APPLICATION_ID as closure_2 } from "ME";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
 import ContentDismissActionType from "ContentDismissActionType";
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_6 } from "GuildFeatures";
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
 let c4;
 let c5;

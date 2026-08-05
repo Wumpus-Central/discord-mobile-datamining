@@ -1,5 +1,3 @@
-import { set } from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
-import { isSystemMessage } from "../../modules/messages/isSystemMessage.tsx";
 // discord_app/components_native/chat/ChatItem.tsx
 import _slicedToArray from "_slicedToArray";
 import LinearGradient from "LinearGradient";
@@ -12,6 +10,8 @@ import isFabric from "isFabric";
 import isFabric from "isFabric";
 import isFabric from "isFabric";
 import createCacheKey from "createCacheKey";
+import { set } from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import { isSystemMessage } from "../../modules/messages/isSystemMessage.tsx";
 
 let c10;
 let c5;

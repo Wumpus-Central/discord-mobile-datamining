@@ -1,14 +1,14 @@
+// discord_app/modules/search/native/components/list/SearchListCard.tsx
+import noop from "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
 import { PressableCard } from "../../../../../design/components/Card/native/Card.native.tsx";
 import { ForumIcon } from "../../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { FacepileGroupDMAvatar } from "../../../../group_dm/native/GroupDMAvatar.tsx";
-// discord_app/modules/search/native/components/list/SearchListCard.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
 
 let c5;
 let closure_6;

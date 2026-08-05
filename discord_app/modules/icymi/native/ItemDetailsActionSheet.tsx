@@ -1,7 +1,3 @@
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
-import { useDesignToggle } from "../../devtools/design_toggles/useDesignToggle.tsx";
 // discord_app/modules/icymi/native/ItemDetailsActionSheet.tsx
 import "set";
 import { View } from "TableRowGroupTitle";
@@ -10,6 +6,10 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import filterStaffGuild from "filterStaffGuild";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { useDesignToggle } from "../../devtools/design_toggles/useDesignToggle.tsx";
 
 let c9;
 let error;

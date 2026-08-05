@@ -1,10 +1,10 @@
-import { DEFAULT_VIDEO_VOLUME } from "../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
-import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 // discord_app/modules/quests/VideoQuestUIStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import identity from "identity";
 import createJSONStorage from "createJSONStorage";
 import createJSONStorage from "createJSONStorage";
+import { DEFAULT_VIDEO_VOLUME } from "../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
+import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 
 const require = arg1;
 function _toPropertyKey(obj) {

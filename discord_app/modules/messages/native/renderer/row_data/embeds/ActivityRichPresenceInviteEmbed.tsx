@@ -1,6 +1,3 @@
-import { result } from "../../../../../activities/utils/isInviteActive.tsx";
-import { ContentClassificationVisibility } from "../../../../../content_classification/ContentClassificationVisibility.tsx";
-import { getRequestToStreamCTAAndIsDisabled } from "../../../../../request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/ActivityRichPresenceInviteEmbed.tsx
 import addApplication from "addApplication";
 import upsertAccount from "upsertAccount";
@@ -16,6 +13,9 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import handleActivityStateChanged from "handleActivityStateChanged";
 import ME from "ME";
 import WEB_OPEN from "WEB_OPEN";
+import { result } from "../../../../../activities/utils/isInviteActive.tsx";
+import { ContentClassificationVisibility } from "../../../../../content_classification/ContentClassificationVisibility.tsx";
+import { getRequestToStreamCTAAndIsDisabled } from "../../../../../request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx";
 
 let closure_15;
 let closure_16;

@@ -1,8 +1,8 @@
-import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 // discord_app/modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 
 let c3;
 let obj1;

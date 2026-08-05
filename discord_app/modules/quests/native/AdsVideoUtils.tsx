@@ -1,5 +1,5 @@
-import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/quests/native/AdsVideoUtils.tsx
+import { set } from "../../../utils/PlatformUtils.tsx";
 let closure_2 = [-1000, -1003, -1004, -1008];
 const result = require("set").fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
 

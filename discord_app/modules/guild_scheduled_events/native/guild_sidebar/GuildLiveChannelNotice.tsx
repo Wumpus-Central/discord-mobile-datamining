@@ -1,11 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
-import { useIsUsingClientTheme } from "../../../client_themes/native/useIsUsingClientTheme.tsx";
-import { smartOutput } from "../../../markup/MarkupRulesUtils.tsx";
-import { map } from "../../../screen/native/useScaledTextLineHeight.android.tsx";
-import { getChannelFromEvent } from "../../utils/EntityUtils.tsx";
 // discord_app/modules/guild_scheduled_events/native/guild_sidebar/GuildLiveChannelNotice.tsx
 import importAllResult from "Text";
 import { View } from "MINIMUM_HIT_AREA";
@@ -23,6 +15,14 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "getActiveStageChannelIds";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { useIsUsingClientTheme } from "../../../client_themes/native/useIsUsingClientTheme.tsx";
+import { smartOutput } from "../../../markup/MarkupRulesUtils.tsx";
+import { map } from "../../../screen/native/useScaledTextLineHeight.android.tsx";
+import { getChannelFromEvent } from "../../utils/EntityUtils.tsx";
 
 let closure_14;
 let closure_15;

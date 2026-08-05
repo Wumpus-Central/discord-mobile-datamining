@@ -1,4 +1,3 @@
-import { allSettled } from "../../../_runtime/04523_allSettled.js";
 // discord_app/modules/forwarding/ForwardActionCreators.tsx
 import _slicedToArray from "_slicedToArray";
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
@@ -6,6 +5,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { MessageFlags } from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import { allSettled } from "../../../_runtime/04523_allSettled.js";
 
 const require = arg1;
 let obj = {

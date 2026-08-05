@@ -1,6 +1,3 @@
-import { QuestsIcon } from "../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/useQuestHomeHeader.tsx
 import FilterFooter from "FilterFooter";
 import { View } from "openCollectiblesShop";
@@ -9,6 +6,9 @@ import { AnalyticEvents } from "ME";
 import { CollectiblesMobileShopScreen as closure_7 } from "items";
 import jsxProd from "FiltersHorizontalIcon";
 import createCacheKey from "createCacheKey";
+import { QuestsIcon } from "../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 let c9;
 let metroImportAll;

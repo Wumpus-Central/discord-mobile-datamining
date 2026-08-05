@@ -1,6 +1,6 @@
-import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
 // discord_app/modules/relationships/GuildFriendshipStore.tsx
 import { Store } from "initialize";
+import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
 
 function resetStates() {
   let closure_3 = {};

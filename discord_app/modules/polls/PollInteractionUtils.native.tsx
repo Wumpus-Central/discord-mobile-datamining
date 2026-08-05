@@ -1,6 +1,6 @@
+// discord_app/modules/polls/PollInteractionUtils.native.tsx
 import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
-// discord_app/modules/polls/PollInteractionUtils.native.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/PollInteractionUtils.native.tsx");
 
 export const showVotesForAnswer = function showVotesForAnswer(initialAnswerId) {

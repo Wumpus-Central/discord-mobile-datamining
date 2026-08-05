@@ -1,14 +1,14 @@
-import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { fetchCurrentAppIcon } from "../../../app_icons/native/AppIconUtils.tsx";
-import { DismissibleNewTag } from "../../../dismissible_content/native/DismissibleNewBadge.tsx";
-import { UserSettingsAppIcons } from "../../app_icon/native/UserSettingsAppIcons.tsx";
 // discord_app/modules/user_settings/defs/native/AppIconsSetting.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";
+import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { fetchCurrentAppIcon } from "../../../app_icons/native/AppIconUtils.tsx";
+import { DismissibleNewTag } from "../../../dismissible_content/native/DismissibleNewBadge.tsx";
+import { UserSettingsAppIcons } from "../../app_icon/native/UserSettingsAppIcons.tsx";
 
 const require = arg1;
 createToggle = {

@@ -1,9 +1,9 @@
-import { t } from "../../_runtime/03867_t.js";
 // discord_app/records/LibraryApplicationRecord.tsx
 import "toJS";
 import addApplication from "addApplication";
 import createFromServer from "createFromServer";
 import ME from "ME";
+import { t } from "../../_runtime/03867_t.js";
 
 let c5;
 let closure_6;

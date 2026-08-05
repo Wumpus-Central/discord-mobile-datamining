@@ -1,7 +1,3 @@
-import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { Divider } from "UserProfileCard.tsx";
 // discord_app/modules/user_profile/native/UserProfileModeratorActions.tsx
 import "initialize";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
@@ -16,6 +12,10 @@ import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import { jsx } from "getGuildMemberAgeInRange";
 import createCacheKey from "createCacheKey";
+import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { Divider } from "UserProfileCard.tsx";
 
 let closure_12;
 let map1;

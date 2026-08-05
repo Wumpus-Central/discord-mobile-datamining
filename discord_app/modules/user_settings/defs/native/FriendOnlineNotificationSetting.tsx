@@ -1,7 +1,7 @@
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../notifications/friend_online/FriendOnlineNotificationExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/FriendOnlineNotificationSetting.tsx
 import createToggle from "createToggle";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../notifications/friend_online/FriendOnlineNotificationExperiment.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

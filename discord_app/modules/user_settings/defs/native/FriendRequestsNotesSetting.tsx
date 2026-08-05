@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/FriendRequestsNotesSetting.tsx
+import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { apexExperiment } from "../../../people/FriendRequestMessageExperiment.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
-// discord_app/modules/user_settings/defs/native/FriendRequestsNotesSetting.tsx
-import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {

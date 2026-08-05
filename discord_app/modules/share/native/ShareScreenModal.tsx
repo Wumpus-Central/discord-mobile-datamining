@@ -1,4 +1,3 @@
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/share/native/ShareScreenModal.tsx
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -6,6 +5,7 @@ import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY";
 import { jsx } from "jsxProd";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 
 let require = arg1;
 function onClose() {

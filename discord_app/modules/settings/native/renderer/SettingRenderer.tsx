@@ -1,10 +1,3 @@
-import { VolumeSlider } from "../../../../components_native/common/VolumeSlider.tsx";
-import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { useHighlightSettingItem } from "hooks/useHighlightSettingItem.tsx";
-import { SettingListItemHighlight } from "SettingListItemHighlight.tsx";
 // discord_app/modules/settings/native/renderer/SettingRenderer.tsx
 import Text from "Text";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -16,6 +9,13 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import jsxProd from "TableSwitchRow";
 import createCacheKey from "createCacheKey";
+import { VolumeSlider } from "../../../../components_native/common/VolumeSlider.tsx";
+import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { useHighlightSettingItem } from "hooks/useHighlightSettingItem.tsx";
+import { SettingListItemHighlight } from "SettingListItemHighlight.tsx";
 
 let closure_12;
 let closure_14;

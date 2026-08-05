@@ -1,9 +1,3 @@
-import { dispatcher } from "../Dispatcher.tsx";
-import { snapVolumeToDefault } from "../modules/user_settings/voice/AudioSettingsUtils.tsx";
-import { trackVoiceAndVideoDebuggingSettingsUpdated } from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
-import { _getFilterBlob } from "../modules/video_backgrounds/applyBackgroundOption.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { isPremiumResolution } from "../utils/StreamQualityUtils.tsx";
 // discord_app/actions/AudioActionCreators.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import initialize from "initialize";
@@ -15,6 +9,12 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { SoundOutputChannel } from "SoundOutputChannel";
 import { MediaEngineContextTypes } from "DesktopSources";
+import { dispatcher } from "../Dispatcher.tsx";
+import { snapVolumeToDefault } from "../modules/user_settings/voice/AudioSettingsUtils.tsx";
+import { trackVoiceAndVideoDebuggingSettingsUpdated } from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
+import { _getFilterBlob } from "../modules/video_backgrounds/applyBackgroundOption.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { isPremiumResolution } from "../utils/StreamQualityUtils.tsx";
 
 let c10;
 let unpackModuleId;

@@ -1,7 +1,3 @@
-import { NotificationSettingsModalActionCreators } from "../../../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { UserNotificationSettings } from "../../../../../../utils/NotificationSettingsUtils.tsx";
-import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx
 import storeThread from "storeThread";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -11,6 +7,10 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { MuteUntilSeconds } from "MAX_FAVORITES";
+import { NotificationSettingsModalActionCreators } from "../../../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { UserNotificationSettings } from "../../../../../../utils/NotificationSettingsUtils.tsx";
+import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
 
 let c10;
 let unpackModuleId;

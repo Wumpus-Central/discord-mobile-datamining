@@ -1,9 +1,9 @@
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/UserSettingsAccountActionCreators.tsx
 import handleLogout from "handleLogout";
 import ME from "ME";
 import str2 from "str2";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 
 let c4;
 let c5;

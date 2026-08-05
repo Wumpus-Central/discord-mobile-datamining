@@ -1,7 +1,3 @@
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { mapped } from "AVError.tsx";
-import { getCurrentScreenshareCaptureMethod } from "AVErrorAnalytics.tsx";
-import { ErrorDefinitions } from "definitions/index.tsx";
 // discord_app/modules/errors/av_errors/AVErrorManager.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import reset from "reset";
@@ -9,6 +5,10 @@ import handleConnectionOpen from "handleConnectionOpen";
 import updateVoiceState from "updateVoiceState";
 import isAVErrorContextOfType from "isAVErrorContextOfType";
 import "initialize";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { mapped } from "AVError.tsx";
+import { getCurrentScreenshareCaptureMethod } from "AVErrorAnalytics.tsx";
+import { ErrorDefinitions } from "definitions/index.tsx";
 
 const require = arg1;
 function setDifference(set, set2) {

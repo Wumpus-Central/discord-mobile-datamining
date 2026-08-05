@@ -1,8 +1,8 @@
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { getIsEligibleForQuests } from "../lib/QuestsEligibility.tsx";
 // discord_app/modules/quests/managers/QuestFetchManager.tsx
 import initializeState from "initializeState";
 import "initialize";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { getIsEligibleForQuests } from "../lib/QuestsEligibility.tsx";
 
 let require = arg1;
 const DAY = require("set").Millis.DAY;

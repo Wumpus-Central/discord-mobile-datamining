@@ -1,7 +1,7 @@
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/collectibles/hooks/useCurrentUser.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("module_38").fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");

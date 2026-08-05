@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../../_runtime/12036_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/15120_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/15121_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/15122_registerAsset.js";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { HAPPENING_NOW_CARD_MARGIN_RIGHT } from "HappeningNowCard.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "registerAsset";
@@ -14,6 +8,12 @@ import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAIN
 import ME from "ME";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../../_runtime/12036_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/15120_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/15121_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/15122_registerAsset.js";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { HAPPENING_NOW_CARD_MARGIN_RIGHT } from "HappeningNowCard.tsx";
 
 let HAPPENING_NOW_CARD_HEIGHT;
 let c10;

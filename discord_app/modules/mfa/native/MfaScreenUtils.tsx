@@ -1,7 +1,7 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 // discord_app/modules/mfa/native/MfaScreenUtils.tsx
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 
 let obj = { useScreenStyles: null };
 obj[0] = createCacheKey.createStyles((arg0) => {

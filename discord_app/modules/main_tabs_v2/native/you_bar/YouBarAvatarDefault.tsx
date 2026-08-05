@@ -1,8 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
-import { ReactionIcon } from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarAvatarDefault.tsx
 import { View } from "get ActivityIndicator";
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
@@ -10,6 +5,11 @@ import { StatusTypes } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
+import { ReactionIcon } from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 
 let c10;
 let c4;

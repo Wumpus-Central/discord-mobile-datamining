@@ -1,10 +1,3 @@
-import { getDeprecatedModalData } from "../../../../utils/getDeprecatedModalData.tsx";
-import { isEligibleForSafetyFlowsExperiment } from "../../../safety_flows/SafetyFlowsExperiment.tsx";
-import { handleTouch } from "../../../user_required_action/native/NewTermsModal.tsx";
-import { PhoneThenEmailInterstitial } from "../../../verification/native/components/VerificationModal.tsx";
-import { UserRequiredActions } from "../../../verification/VerificationUtils.tsx";
-import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
-import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx
 import handleFormInit from "handleFormInit";
 import fetchFingerprint from "fetchFingerprint";
@@ -13,6 +6,13 @@ import FormStates from "FormStates";
 import importDefaultResult from "handleRequiredAction";
 import ME from "ME";
 import "initialize";
+import { getDeprecatedModalData } from "../../../../utils/getDeprecatedModalData.tsx";
+import { isEligibleForSafetyFlowsExperiment } from "../../../safety_flows/SafetyFlowsExperiment.tsx";
+import { handleTouch } from "../../../user_required_action/native/NewTermsModal.tsx";
+import { PhoneThenEmailInterstitial } from "../../../verification/native/components/VerificationModal.tsx";
+import { UserRequiredActions } from "../../../verification/VerificationUtils.tsx";
+import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
+import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 
 const require = arg1;
 function handlePushedModal(key) {

@@ -1,9 +1,9 @@
-import { commonTriggerPointConfiguration } from "../trigger_points/native/MobileConnectionOpenTriggerPoint.tsx";
 // discord_app/modules/experiments/native/MobileExperimentTriggerPointStore.tsx
 import getHash from "getHash";
 import initialize from "initialize";
 import { Store } from "initialize";
 import importDefaultResult from "dispatcher";
+import { commonTriggerPointConfiguration } from "../trigger_points/native/MobileConnectionOpenTriggerPoint.tsx";
 
 const require = arg1;
 function handleConnectionOpen() {

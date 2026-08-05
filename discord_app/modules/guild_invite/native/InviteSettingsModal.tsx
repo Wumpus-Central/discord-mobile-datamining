@@ -1,4 +1,3 @@
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/guild_invite/native/InviteSettingsModal.tsx
 import _slicedToArray from "_slicedToArray";
 import dispatcher from "dispatcher";
@@ -9,6 +8,7 @@ import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 import { jsx } from "Form";
 import createCacheKey from "createCacheKey";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 
 let c10;
 let c9;

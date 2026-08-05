@@ -1,4 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftWishlistBanner.tsx
 import closure_3 from "ME";
 import useSelectPremiumGift from "useSelectPremiumGift";
@@ -10,6 +9,7 @@ import { CollectiblesMobileShopScreen as closure_12 } from "items";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
 import jsxProd from "getRootNavigationRef";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
 let c5;

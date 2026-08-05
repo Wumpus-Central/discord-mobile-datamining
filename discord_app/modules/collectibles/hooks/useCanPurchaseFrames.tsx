@@ -1,11 +1,11 @@
+// discord_app/modules/collectibles/hooks/useCanPurchaseFrames.tsx
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { PremiumTypes } from "GuildFeatures";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { create } from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import { isPremiumAtLeast } from "../../../utils/PremiumTypeUtils.tsx";
 import { apexExperiment } from "../experiments/CollectiblesProfileFramesExperiment.tsx";
 import { apexExperiment } from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
-// discord_app/modules/collectibles/hooks/useCanPurchaseFrames.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PremiumTypes } from "GuildFeatures";
 
 const require = arg1;
 const result = require("apexExperiment").fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");

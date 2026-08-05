@@ -1,7 +1,3 @@
-import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
-import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
-import { openUserSettings } from "../../user_settings/core/native/openUserSettings.tsx";
-import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 // discord_app/modules/app_icons/native/AppIconUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "ME";
@@ -11,6 +7,10 @@ import ME from "ME";
 import { PremiumTypes } from "GuildFeatures";
 import set from "set";
 import set from "noop";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
+import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
+import { openUserSettings } from "../../user_settings/core/native/openUserSettings.tsx";
+import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 
 let c10;
 let c9;

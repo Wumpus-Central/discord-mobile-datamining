@@ -1,11 +1,11 @@
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useCanSeeOnboardingHome } from "OnboardingHomeUtils.tsx";
 // discord_app/modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx
 import handlePermissionsChange from "handlePermissionsChange";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import { ChannelFlags } from "set";
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useCanSeeOnboardingHome } from "OnboardingHomeUtils.tsx";
 
 const require = arg1;
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");

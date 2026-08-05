@@ -1,5 +1,5 @@
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/premium/powerups/utils/getBoostLifecyclePhase.tsx
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 let c2 = 259200000;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
 

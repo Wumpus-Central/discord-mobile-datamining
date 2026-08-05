@@ -1,8 +1,8 @@
-import { set } from "../lib/uploader/CloudUpload.tsx";
 // discord_app/stores/UploadAttachmentStore.tsx
 import { DraftType } from "handleChanged";
 import { MAX_UPLOAD_COUNT } from "ME";
 import { Store } from "initialize";
+import { set } from "../lib/uploader/CloudUpload.tsx";
 
 let map = new Map();
 let closure_6 = [];

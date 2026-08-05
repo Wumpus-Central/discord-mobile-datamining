@@ -1,6 +1,6 @@
-import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/MFAStore.tsx
 import { Store } from "initialize";
+import { apply } from "../../_runtime/00012_apply.js";
 
 let c3 = false;
 let closure_4 = [];

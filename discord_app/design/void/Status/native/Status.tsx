@@ -1,6 +1,3 @@
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { STATUS_PADDING } from "getStatusContainerStyle.tsx";
-import { getAnimatedTypingTranslateX } from "StatusUtils.tsx";
 // discord_app/design/void/Status/native/Status.tsx
 import _slicedToArray from "_slicedToArray";
 import "module_4146";
@@ -11,6 +8,9 @@ import n from "n";
 import jsxProd from "AnimatedEllipsisDot";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { STATUS_PADDING } from "getStatusContainerStyle.tsx";
+import { getAnimatedTypingTranslateX } from "StatusUtils.tsx";
 
 let c10;
 let c4;

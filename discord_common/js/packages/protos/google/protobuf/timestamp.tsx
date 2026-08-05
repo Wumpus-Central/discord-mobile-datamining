@@ -1,7 +1,7 @@
-import { 01307__ } from "../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/google/protobuf/timestamp.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
+import { 01307__ } from "../../../../../../_runtime/metro/01307__.js";
 
 const require = arg1;
 class Timestamp$Type extends MessageType {

@@ -1,8 +1,8 @@
-import { fromGuildPropertiesWithAdditionalFields } from "../../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/guild/native/GuildBadge.tsx
 import "noop";
 import { GuildFeatures } from "ME";
 import { jsx } from "jsxProd";
+import { fromGuildPropertiesWithAdditionalFields } from "../../../utils/GuildRecordUtils.tsx";
 
 let PARTNERED;
 let PARTNERED_BLACK;

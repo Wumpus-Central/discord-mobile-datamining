@@ -1,13 +1,13 @@
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { Button } from "../../design/void/native.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { SvgComponent } from "native/ActivityAnnouncement.tsx";
 // discord_app/modules/activities/confirmActivityAgeGateAlert.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { SvgComponent } from "native/ActivityAnnouncement.tsx";
 
 let c4;
 let c5;

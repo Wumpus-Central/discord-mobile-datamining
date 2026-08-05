@@ -1,8 +1,8 @@
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/hooks/useFavoritesGuildHideAction.tsx
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 import { Routes } from "ME";
+import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");

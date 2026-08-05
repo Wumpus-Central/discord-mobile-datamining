@@ -1,10 +1,10 @@
+// discord_app/modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx
+import handleThemeChange from "handleThemeChange";
+import createToggle from "createToggle";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { handleSaveTheme } from "../../appearance/native/UserSettingsAppearanceThemeUtils.tsx";
-// discord_app/modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx
-import handleThemeChange from "handleThemeChange";
-import createToggle from "createToggle";
 
 const require = arg1;
 createToggle = {

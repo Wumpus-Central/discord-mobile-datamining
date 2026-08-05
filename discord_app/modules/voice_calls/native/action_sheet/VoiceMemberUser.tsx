@@ -1,4 +1,3 @@
-import { nameFromUser } from "../../../../utils/UserUtils.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberUser.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "registerAsset";
@@ -13,6 +12,7 @@ import { Fonts } from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
+import { nameFromUser } from "../../../../utils/UserUtils.tsx";
 
 let Platform;
 let c3;

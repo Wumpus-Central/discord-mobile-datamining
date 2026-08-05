@@ -1,12 +1,12 @@
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx
 import importAllResult from "getNoResultsSource";
 import get_ActivityIndicator from "getSystemLocale";
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 
 let c4;
 let c5;

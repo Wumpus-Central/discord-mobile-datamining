@@ -1,10 +1,10 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Divider } from "../../user_profile/native/UserProfileCard.tsx";
 // discord_app/modules/provisional_accounts/native/ProvisionalAccountExplainer.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Divider } from "../../user_profile/native/UserProfileCard.tsx";
 
 let c5;
 let closure_6;

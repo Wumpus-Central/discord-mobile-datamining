@@ -1,8 +1,8 @@
+// discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
+import { FAMILY_CENTER_REQUEST_QR_CODE_URL as closure_3 } from "items";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { showShareActionSheet } from "../../action_sheet/native/showShareActionSheet.tsx";
 import { messagesProxy } from "../FamilyCenter.messages.js";
-// discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
-import { FAMILY_CENTER_REQUEST_QR_CODE_URL as closure_3 } from "items";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");
 

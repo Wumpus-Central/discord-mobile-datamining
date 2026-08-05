@@ -1,5 +1,5 @@
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/channel/native/openChannelLongPressActionSheet.tsx
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/channel/native/openChannelLongPressActionSheet.tsx");
 
 export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {

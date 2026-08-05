@@ -1,9 +1,3 @@
-import { registerAsset } from "../../../../../_runtime/15252_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -11,6 +5,12 @@ import { GuildSettingsSections } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { registerAsset } from "../../../../../_runtime/15252_registerAsset.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 let closure_6;
 let error;

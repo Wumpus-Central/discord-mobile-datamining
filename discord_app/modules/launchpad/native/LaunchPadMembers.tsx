@@ -1,7 +1,3 @@
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { GuildChannelUserList } from "../../main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx";
-import { PrivateChannelUserList } from "../../main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx";
-import { ThreadChannelUserList } from "../../main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx";
 // discord_app/modules/launchpad/native/LaunchPadMembers.tsx
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -9,6 +5,10 @@ import handleConnectionOpen from "handleConnectionOpen";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { GuildChannelUserList } from "../../main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx";
+import { PrivateChannelUserList } from "../../main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx";
+import { ThreadChannelUserList } from "../../main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx";
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });

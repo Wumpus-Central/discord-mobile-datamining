@@ -1,8 +1,8 @@
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx
 import fetchApplication from "fetchApplication";
 import { Endpoints } from "ME";
 import { ApplicationTypes } from "ApplicationTypes";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _createCreatorMonetizationEnableRequest() {

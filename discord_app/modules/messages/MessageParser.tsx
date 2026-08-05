@@ -1,8 +1,3 @@
-import { apply } from "../../../_runtime/00012_apply.js";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { parseLink } from "../markup/MarkupRules.tsx";
-import { textRegexp } from "../markup/MarkupTextRule.tsx";
 // discord_app/modules/messages/MessageParser.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
 import rebuild from "rebuild";
@@ -33,6 +28,11 @@ import importDefaultResult9 from "t";
 import merged2 from "textRegexp";
 import importDefaultResult10 from "t";
 import importDefaultResult11 from "t";
+import { apply } from "../../../_runtime/00012_apply.js";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { parseLink } from "../markup/MarkupRules.tsx";
+import { textRegexp } from "../markup/MarkupTextRule.tsx";
 
 let MARKDOWN_SPOILER_REGEXP;
 let MARKDOWN_STATIC_ROUTE_NAME_REGEXP;

@@ -1,4 +1,3 @@
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarItemEmptyNUX.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -7,6 +6,7 @@ import ME from "ME";
 import { MODE_CHANGE_PHYSICS } from "MODE_CHANGE_PHYSICS";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c4;
 let c5;

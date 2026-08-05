@@ -1,10 +1,10 @@
+// discord_app/modules/feedback/FeedbackUtils.tsx
+import FeedbackRating from "FeedbackRating";
+import { AnalyticEvents } from "ME";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { messagesProxy } from "intl/Feedback.messages.js";
-// discord_app/modules/feedback/FeedbackUtils.tsx
-import FeedbackRating from "FeedbackRating";
-import { AnalyticEvents } from "ME";
 
 let c10;
 let c3;

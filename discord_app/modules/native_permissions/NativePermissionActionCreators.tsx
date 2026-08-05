@@ -1,5 +1,5 @@
-import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/native_permissions/NativePermissionActionCreators.tsx
+import { dispatcher } from "../../Dispatcher.tsx";
 const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);
 }.prototype;

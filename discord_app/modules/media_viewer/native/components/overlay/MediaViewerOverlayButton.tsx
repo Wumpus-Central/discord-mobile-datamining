@@ -1,7 +1,7 @@
-import { IconButton } from "../../../../../design/components/Button/native/IconButton.native.tsx";
 // discord_app/modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
+import { IconButton } from "../../../../../design/components/Button/native/IconButton.native.tsx";
 
 const require = arg1;
 const forwardRefResult = require("noop").forwardRef((arg0, ref) => {

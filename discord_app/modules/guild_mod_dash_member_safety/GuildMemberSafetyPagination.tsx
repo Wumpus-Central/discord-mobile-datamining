@@ -1,7 +1,7 @@
-import { result } from "MemberSafetyElasticSearchQueryTypes.tsx";
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyPagination.tsx
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
+import { result } from "MemberSafetyElasticSearchQueryTypes.tsx";
 
 const require = arg1;
 let items = [12, 25, 50, 100];

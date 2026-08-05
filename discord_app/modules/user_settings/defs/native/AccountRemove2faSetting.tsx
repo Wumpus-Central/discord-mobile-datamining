@@ -1,8 +1,8 @@
+// discord_app/modules/user_settings/defs/native/AccountRemove2faSetting.tsx
+import createToggle from "createToggle";
 import { set } from "../../../../actions/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getSMSBackupDisabledMessage } from "../../account/MFAUtils.tsx";
-// discord_app/modules/user_settings/defs/native/AccountRemove2faSetting.tsx
-import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {

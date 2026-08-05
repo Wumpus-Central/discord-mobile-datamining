@@ -1,6 +1,6 @@
-import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx
 import { PersistedStore } from "initialize";
+import { set } from "../../../utils/Durations.tsx";
 
 function addToApplicationIdToGuildIds(applicationId) {
   applicationId = applicationId.applicationId;

@@ -1,5 +1,3 @@
-import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/voice_panel/native/VoicePanelUI.tsx
 import isStable from "isStable";
 import importAllResult from "Directions";
@@ -15,6 +13,8 @@ import jsxProd from "u";
 import createCacheKey from "createCacheKey";
 import isMetaQuest from "isMetaQuest";
 import importDefaultResult from "module_4146";
+import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let DEFAULT_BORDER_RADIUS;
 let DRAWER_SPRING_PHYSICS;
