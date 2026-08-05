@@ -14,9 +14,9 @@ const items = [
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
-            let tmp8Result = tmp8(9827);
+            let tmp8Result = tmp8(9798);
             if (tmp8Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              tmp8Result = tmp8(9827);
+              tmp8Result = tmp8(9798);
               const everyoneMemberCountResult = tmp8Result.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
@@ -47,7 +47,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "accessibilityRole"
+    animation: "__closure"
   },
   {
     check(arg0) {

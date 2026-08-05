@@ -187,7 +187,7 @@ function _fetchInventory() {
       if (force === undefined) {
         force = false;
       }
-      yield "ct";
+      yield "PX_8";
       if (1 === tmp7) {
         if (arg0 === 1) {
           let c7 = 3;

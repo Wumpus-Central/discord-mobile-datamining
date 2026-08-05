@@ -52,10 +52,10 @@ export default function useMessagePreview(guild_id) {
     disabled = useIsNsfwGated(guild_id);
   }
   if (!disabled) {
-    disabled = stateFromStores === tmp(3963).MessagePreviewTypes.NONE;
+    disabled = stateFromStores === tmp(3933).MessagePreviewTypes.NONE;
   }
   if (!disabled) {
-    let tmp6 = stateFromStores === tmp(3963).MessagePreviewTypes.UNREADS;
+    let tmp6 = stateFromStores === tmp(3933).MessagePreviewTypes.UNREADS;
     if (tmp6) {
       if (unread == null) {
         unread = stateFromStores1;

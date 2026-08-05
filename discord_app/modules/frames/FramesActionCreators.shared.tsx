@@ -25,7 +25,7 @@ function _launchFrame() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -50,7 +50,7 @@ function _launchFrame() {
               let message;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -70,14 +70,14 @@ function _launchFrame() {
               c5 = 4;
               c6 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback(10513).createProxyTicket(callback, callback2);
+              obj3[0] = callback(10485).createProxyTicket(callback, callback2);
               return obj3;
             }
           } else if (2 === tmp7) {
             message = 0;
             c5 = leaveCurrentFrame;
-            leaveCurrentFrame = callback2(10537)();
-            let obj4 = callback(10528);
+            leaveCurrentFrame = callback2(10509)();
+            let obj4 = callback(10500);
             c5 = 3;
             c6 = 1;
             obj4 = { value: null, done: false };
@@ -113,10 +113,10 @@ function _launchFrame() {
             return obj;
           } else {
             dependencyMap = arg1;
-            const result = callback(10893).leaveCurrentEmbeddedActivity();
-            const obj11 = callback(10893);
-            callback(10514).leaveCurrentFrame();
-            const obj12 = callback(10514);
+            const result = callback(10865).leaveCurrentEmbeddedActivity();
+            const obj11 = callback(10865);
+            callback(10486).leaveCurrentFrame();
+            const obj12 = callback(10486);
             const obj7 = { type: "FRAME_LAUNCH", applicationId: null, proxyTicket: null, channelId: null };
             obj7[1] = callback;
             obj7[2] = dependencyMap;
@@ -124,7 +124,7 @@ function _launchFrame() {
             callback2(709).dispatch(obj7);
             message = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp30) {
           leaveCurrentFrame = tmp30;
@@ -168,7 +168,7 @@ function _refreshProxyTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -194,7 +194,7 @@ function _refreshProxyTicket() {
               message = undefined;
               message = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

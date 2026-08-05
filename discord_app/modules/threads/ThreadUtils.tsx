@@ -5,7 +5,7 @@ import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import storeThread from "storeThread";
 import { ThreadMemberFlags } from "AbortCodes";
 import ME from "ME";
-import { t } from "../../../_runtime/03867_t.js";
+import { t } from "../../../_runtime/03837_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
@@ -52,7 +52,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
   if (null != result) {
     const guildId = outer1_0.getGuildId();
     const parent_id = outer1_0.parent_id;
-    let tmpResult = tmp(5225);
+    let tmpResult = tmp(5210);
     const currentChannelSettings = tmpResult.getCurrentChannelSettings(guildId, parent_id);
     let num = storeThread.flags(outer1_0.id);
     if (num == null) {
@@ -80,7 +80,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     }
     let notificationAnalyticsString = getNotificationAnalyticsString(num);
     const isMutedResult = storeThread.isMuted(outer1_0.id);
-    tmpResult = tmp(5225);
+    tmpResult = tmp(5210);
     let result1 = tmpResult.muteConfigToTimestamp(obj7.getMuteConfig(outer1_0.id));
     ({ can_send_message, parent_channel_type } = result);
     obj = {};
@@ -105,8 +105,8 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     obj.new_thread_is_muted = muted;
     obj.old_thread_muted_until = result1;
     if (null != c1.mute_config) {
-      result1 = tmp(5225).muteConfigToTimestamp(c1.mute_config);
-      const tmpResult1 = tmp(5225);
+      result1 = tmp(5210).muteConfigToTimestamp(c1.mute_config);
+      const tmpResult1 = tmp(5210);
     }
     obj.new_thread_muted_until = result1;
     expandEventProperties.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);

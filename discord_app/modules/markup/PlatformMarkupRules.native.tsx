@@ -2,11 +2,13 @@
 import { Image } from "get ActivityIndicator";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { getGameMentionData } from "../game_mentions/hooks/useGameMentionData.tsx";
+import { getGameMediaRefURL } from "../games/getGameMediaRefURL.tsx";
 import { MarkupAttachmentLinkRule } from "MarkupAttachmentLinkRule.tsx";
 import { getChannel } from "MarkupChannelMentionRule.tsx";
 
 const re4 = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;
-obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
+obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
 obj = {
   requiredFirstCharacters: ["\\"],
   match(arg0, allowEscape) {
@@ -167,6 +169,47 @@ obj[5] = {
   }
 };
 obj[6] = {
+  parse(closure_0, arg1, returnMentionIds) {
+    if (returnMentionIds.returnMentionIds) {
+      let obj = { type: "gameMention", gameId: null };
+      obj[1] = tmp;
+      return obj;
+    } else {
+      obj = getGameMentionData;
+      const gameMentionData = obj.getGameMentionData(tmp);
+      let gameIcon;
+      if (gameMentionData != null) {
+        gameIcon = gameMentionData.gameIcon;
+      }
+      obj = { type: "gameMention", gameId: null, channelId: null, gameName: null, gameIcon: null, icon: null, displayName: null };
+      obj[1] = tmp;
+      obj[2] = returnMentionIds.channelId;
+      let gameName;
+      const tmp6 = getGameMediaRefURL;
+      if (gameMentionData != null) {
+        gameName = gameMentionData.gameName;
+      }
+      obj[3] = gameName;
+      let gameIcon1;
+      if (gameMentionData != null) {
+        gameIcon1 = gameMentionData.gameIcon;
+      }
+      obj[4] = gameIcon1;
+      obj[5] = getGameMediaRefURL(tmp, gameIcon, { size: 32 });
+      let gameName1;
+      if (gameMentionData != null) {
+        gameName1 = gameMentionData.gameName;
+      }
+      if (gameName1 == null) {
+        const intl = tmp2(1236).intl;
+        gameName1 = intl.string(tmp2(1236).t["11pdXZ"]);
+      }
+      obj[6] = gameName1;
+      return obj;
+    }
+  }
+};
+obj[7] = {
   parse(arg0, arg1, arg2) {
     const channelOrMessageUrl = getChannel.channelOrMessageUrl;
     const parsed = channelOrMessageUrl.parse(arg0, arg1, arg2);
@@ -235,7 +278,7 @@ obj[6] = {
     return obj;
   }
 };
-obj[7] = {
+obj[8] = {
   parse(arg0, arg1, arg2) {
     const mediaPostLink = getChannel.mediaPostLink;
     const parsed = mediaPostLink.parse(arg0, arg1, arg2);
@@ -304,7 +347,7 @@ obj[7] = {
     return obj;
   }
 };
-obj[8] = {
+obj[9] = {
   parse(arg0, arg1, arg2) {
     const attachmentLink = MarkupAttachmentLinkRule.attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
@@ -338,7 +381,7 @@ let obj1 = {
     return obj;
   }
 };
-obj[9] = {
+obj[10] = {
   order: require("textRegexp").order,
   requiredFirstCharacters: ["@"],
   match(arg0) {

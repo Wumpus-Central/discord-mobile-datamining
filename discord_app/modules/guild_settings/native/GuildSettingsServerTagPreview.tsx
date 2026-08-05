@@ -51,7 +51,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   let obj = guildId(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = onAdopted(4474);
+  let obj2 = onAdopted(4444);
   const name = obj2.useName(guildId, null, stateFromStores);
   let obj3 = onAdopted(1416);
   let avatarURL;
@@ -91,7 +91,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
             let ok = tmp2;
             ok = undefined;
             dependencyMap(true);
-            let obj1 = outer1_0(13168);
+            let obj1 = outer1_0(13140);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -134,7 +134,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
             }
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp19) {
         c3 = tmp;
@@ -152,20 +152,20 @@ export default function GuildSettingsServerTagPreview(guildId) {
     stringResult = string(t.OVvzY0);
   }
   obj[3] = stringResult;
-  const items2 = [closure_10(guildId(4281).Text, obj), ];
+  const items2 = [closure_10(guildId(4251).Text, obj), ];
   obj = { spacing: null, children: null };
   obj[0] = onAdopted(712).space.PX_12;
   let obj1 = { style: items3, children: null };
   items3 = [, ];
   ({ message: arr4[0], unfocused: arr4[1] } = tmp);
-  obj2 = { source: tmp4(9751), style: tmp.avatar, importantForAccessibility: "no" };
+  obj2 = { source: tmp4(9722), style: tmp.avatar, importantForAccessibility: "no" };
   const items4 = [closure_10(closure_6, obj2), ];
   obj3 = { style: tmp.messageBody, children: null };
-  const items5 = [closure_10(guildId(4281).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }), ];
+  const items5 = [closure_10(guildId(4251).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }), ];
   const obj4 = { variant: "text-md/normal", color: "text-default", children: null };
   const intl2 = tmp2(1236).intl;
   obj4[2] = intl2.string(guildId(1236).t.KZQ4mF);
-  items5[1] = closure_10(guildId(4281).Text, obj4);
+  items5[1] = closure_10(guildId(4251).Text, obj4);
   obj3[1] = items5;
   items4[1] = closure_11(closure_7, obj3);
   obj1[1] = items4;
@@ -174,7 +174,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const items7 = [closure_10(closure_6, { source, style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj7 = { style: tmp.messageBody, children: null };
   const obj8 = { style: tmp.usernameRow, children: null };
-  const items8 = [closure_10(guildId(4281).Text, { variant: "text-md/semibold", color: "text-default", children: name }), ];
+  const items8 = [closure_10(guildId(4251).Text, { variant: "text-md/semibold", color: "text-default", children: name }), ];
   let tmp15Result = null != tag;
   if (tmp15Result) {
     tmp15Result = "" !== tag;
@@ -189,10 +189,10 @@ export default function GuildSettingsServerTagPreview(guildId) {
       obj10[1] = primaryColor;
       obj10[2] = secondaryColor;
       ({ SIZE_12: obj16[3], SIZE_12: obj16[4] } = GuildTagBadgeSize);
-      tmp15Result = tmp15(tmp2(13169).GuildBadge, obj10);
+      tmp15Result = tmp15(tmp2(13141).GuildBadge, obj10);
     }
     obj9[1] = tmp15Result;
-    tmp15Result = tmp15(tmp2(9169).BaseGuildTagChiplet, obj9);
+    tmp15Result = tmp15(tmp2(9141).BaseGuildTagChiplet, obj9);
   }
   items8[1] = tmp15Result;
   obj8[1] = items8;
@@ -200,7 +200,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj11 = { variant: "text-md/normal", color: "text-default", children: null };
   const intl3 = tmp2(1236).intl;
   obj11[2] = intl3.string(guildId(1236).t.LKsPRe);
-  items9[1] = closure_10(guildId(4281).Text, obj11);
+  items9[1] = closure_10(guildId(4251).Text, obj11);
   obj7[1] = items9;
   items7[1] = closure_11(closure_7, obj7);
   obj5[1] = items7;
@@ -212,13 +212,13 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const tmp10 = callback2(React.useState(false), 2);
   const tmp14 = closure_12;
   const tmp18 = closure_6;
-  const items11 = [closure_10(tmp18, { source: onAdopted(13213), style: tmp.avatar, importantForAccessibility: "no" }), ];
+  const items11 = [closure_10(tmp18, { source: onAdopted(13185), style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj14 = { style: tmp.messageBody, children: null };
-  const items12 = [closure_10(guildId(4281).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
+  const items12 = [closure_10(guildId(4251).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
   const obj15 = { variant: "text-md/normal", color: "text-default", children: null };
   const intl4 = tmp2(1236).intl;
   obj15[2] = intl4.string(guildId(1236).t.vtCg11);
-  items12[1] = closure_10(guildId(4281).Text, obj15);
+  items12[1] = closure_10(guildId(4251).Text, obj15);
   obj14[1] = items12;
   items11[1] = closure_11(closure_7, obj14);
   obj12[1] = items11;
@@ -242,9 +242,9 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj17 = { children: null };
   obj16[3] = isDirty;
   obj16[4] = callback;
-  items6[3] = closure_10(guildId(4695).Button, obj16);
+  items6[3] = closure_10(guildId(4665).Button, obj16);
   obj[1] = items6;
-  items2[1] = closure_11(guildId(4693).Stack, obj);
+  items2[1] = closure_11(guildId(4663).Stack, obj);
   obj17[0] = items2;
   const tmp13Result = closure_11(tmp14, obj17);
   let tmp15Result1 = tmp13Result;
@@ -252,7 +252,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
     const obj18 = { variant: "secondary", radius: 16, style: null, children: null };
     obj18[2] = tmp.card;
     obj18[3] = tmp13Result;
-    tmp15Result1 = tmp15(tmp2(5317).Card, obj18);
+    tmp15Result1 = tmp15(tmp2(5302).Card, obj18);
   }
   return tmp15Result1;
 };

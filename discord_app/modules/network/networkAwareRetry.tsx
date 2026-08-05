@@ -23,7 +23,7 @@ function _networkAwareRetry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function _networkAwareRetry() {
               asyncGeneratorStep = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else {
             if (1 === tmp7) {
@@ -74,7 +74,7 @@ function _networkAwareRetry() {
               if (asyncGeneratorStep + 1 >= num14) {
                 throw store;
               } else {
-                let obj6 = callback(4170);
+                let obj6 = callback(4140);
                 c6 = 4;
                 c7 = 1;
                 const obj2 = { value: null, done: false };

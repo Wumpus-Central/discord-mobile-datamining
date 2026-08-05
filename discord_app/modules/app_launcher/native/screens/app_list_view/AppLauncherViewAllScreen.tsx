@@ -111,7 +111,7 @@ export default function AppLauncherViewAllScreen(route) {
     obj = { color: null };
     obj[0] = analyticsLocation(sectionOverallPosition[5]).colors.INTERACTIVE_TEXT_DEFAULT;
     obj[4] = promotedApplicationIds(context(sectionOverallPosition[13]).ArrowLargeLeftIcon, obj);
-    const items = [promotedApplicationIds(context(sectionOverallPosition[11]).PressableOpacity, obj), promotedApplicationIds(context(sectionOverallPosition[14]).Text, { lineClamp: 1, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title }), ];
+    const items = [promotedApplicationIds(context(sectionOverallPosition[11]).PressableOpacity, obj), promotedApplicationIds(context(sectionOverallPosition[14]).Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title }), ];
     const obj2 = { size: null };
     obj2[0] = context(sectionOverallPosition[6]).BACK_BUTTON_SIZE;
     items[2] = promotedApplicationIds(context(sectionOverallPosition[15]).Spacer, obj2);

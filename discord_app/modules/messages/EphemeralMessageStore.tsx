@@ -56,7 +56,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
         const result = map.set(channelId, map);
         value = map;
       }
-      const result1 = value.set(message.id, tmp(4504).createMessageRecord(message));
+      const result1 = value.set(message.id, tmp(4474).createMessageRecord(message));
       if (value.size > 50) {
         const iter2 = value.keys().next();
         while (true !== iter2.done) {

@@ -14,10 +14,10 @@ import jsxProd from "map";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../../_runtime/07811_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10621_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10622_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10623_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07783_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10593_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10594_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10595_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let closure_14;

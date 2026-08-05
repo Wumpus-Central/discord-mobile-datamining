@@ -4,7 +4,7 @@ import { openPremiumUpsellActionSheet } from "../../premium/roadblocks/native/ut
 import { PremiumUpsellSubfeatureNames } from "../../premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx";
 const result = require("PremiumUpsellSubfeatureNames").fileFinishedImporting("modules/saved_messages/native/openForLaterLimitUpsell.tsx");
 
-export default function openForLaterLimitUpsell(arg0) {
+export default function openForLaterLimitUpsell(arg0, arg1) {
   const PremiumUpsellSubfeatureNames = PremiumUpsellSubfeatureNames.PremiumUpsellSubfeatureNames;
-  openPremiumUpsellActionSheet(EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES, arg0 ? PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT : PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT);
+  openPremiumUpsellActionSheet(EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES, arg0 ? PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT : PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT, arg1);
 };

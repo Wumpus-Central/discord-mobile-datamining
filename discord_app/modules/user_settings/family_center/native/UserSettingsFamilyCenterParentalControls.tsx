@@ -104,7 +104,7 @@ export default function FamilyCenterParentalControlsSettings() {
         }
       }
     }
-    stackNavigation.setOptions({ title: "body", headerRight: "useStateFromStores" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "PX_8" });
   }, items1);
   if (isFamilyCenterV3Enabled) {
     isFamilyCenterV3Enabled = selectedSubPage === items2.SCREEN_TIME_CONTROLS;

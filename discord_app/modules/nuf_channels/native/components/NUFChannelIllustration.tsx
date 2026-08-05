@@ -53,7 +53,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t["9m/HsX"]);
-      obj[1] = callback2(12943);
+      obj[1] = callback2(12915);
       obj[2] = intl.string(callback(1236).t["5alrl0"]);
       items[tmp] = obj;
       return items;
@@ -64,7 +64,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t["AW1kM+"]);
-      obj[1] = callback2(12944);
+      obj[1] = callback2(12916);
       obj[2] = intl.string(callback(1236).t["5Oo+vS"]);
       items[tmp] = obj;
       return items;
@@ -77,20 +77,20 @@ export default function NUFChannelIllustration() {
   let items = [sharedValue1, first];
   const effect1 = sharedValue1.useEffect(() => {
     if (first.length >= 2) {
-      const result = sharedValue1.set(sharedValue1(4286).withTiming(1, { duration: 250 }));
-      const obj = sharedValue1(4286);
+      const result = sharedValue1.set(sharedValue1(4256).withTiming(1, { duration: 250 }));
+      const obj = sharedValue1(4256);
     }
   }, items);
   let items1 = [sharedValue, first];
   const effect2 = sharedValue1.useEffect(() => {
     const result = sharedValue.set(0);
-    const result1 = sharedValue.set(tmp(4286).withTiming(1, { duration: 200 }));
+    const result1 = sharedValue.set(tmp(4256).withTiming(1, { duration: 200 }));
   }, items1);
   let obj2 = ReanimatedRexport;
   const fn = function b() {
     let obj = { transform: null };
     obj = { translateY: null };
-    obj[0] = tmp(4146).interpolate(sharedValue.get(), [0, 1], [50, 0]);
+    obj[0] = tmp(4116).interpolate(sharedValue.get(), [0, 1], [50, 0]);
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -102,22 +102,22 @@ export default function NUFChannelIllustration() {
   obj = { style: tmp.container, children: null };
   obj1 = { source: null, style: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj1[0] = first(12945);
+  obj1[0] = first(12917);
   const items2 = [, ];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj1[1] = items2;
   const items3 = [callback(closure_6, obj1), , , , , ];
-  obj2 = { source: first(12946), style: items4 };
+  obj2 = { source: first(12918), style: items4 };
   items4 = [, ];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   items3[1] = callback(closure_6, obj2);
   const items5 = [, ];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
-  items3[2] = callback(closure_6, { source: first(12947), style: items5 });
-  const obj3 = { source: first(12947), style: items5 };
+  items3[2] = callback(closure_6, { source: first(12919), style: items5 });
+  const obj3 = { source: first(12919), style: items5 };
   const items6 = [, ];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
-  items3[3] = callback(closure_6, { source: first(12948), style: items6 });
+  items3[3] = callback(closure_6, { source: first(12920), style: items6 });
   items3[4] = callback(closure_5, { style: tmp.cardBackground });
   const obj6 = { style: tmp.card, shadow: "low", border: "subtle", children: null };
   const obj7 = { style: tmp.header, children: null };
@@ -136,13 +136,13 @@ export default function NUFChannelIllustration() {
     obj = { source: children.avatar, style: tmp.messageAvatar };
     const items = [outer1_7(outer1_6, obj), ];
     obj = { style: tmp.messageContent, children: null };
-    const items1 = [outer1_7(tmp(4281).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }), outer1_7(tmp(4281).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message })];
+    const items1 = [outer1_7(tmp(4251).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }), outer1_7(tmp(4251).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message })];
     obj[1] = items1;
     items[1] = outer1_8(outer1_5, obj);
     obj[1] = items;
     return outer1_8(outer1_5, obj, children.message);
   });
-  obj9[1] = callback(first(4146).View, obj10);
+  obj9[1] = callback(first(4116).View, obj10);
   items9[1] = callback(closure_5, obj9);
   obj6[3] = items9;
   items3[5] = callback2(PressableCard.Card, obj6);

@@ -5,7 +5,6 @@ import { PremiumTypes } from "GuildFeatures";
 import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/07626_registerAsset.js";
 
 let c10;
 let c4;
@@ -27,35 +26,58 @@ const result = require("GuildFeatures").fileFinishedImporting("modules/saved_mes
 
 export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
+  const isAtLimit = isReminder.isAtLimit;
+  let analyticsLocations;
   const tmp = createCacheKey();
-  const items = [isReminder];
+  analyticsLocations = analyticsLocations(5595)().analyticsLocations;
+  const items = [isReminder, analyticsLocations];
   let obj = { style: tmp.container, children: null };
-  obj = { source: null, style: null };
-  const callback = React.useCallback(() => outer1_1(outer1_2[7])(isReminder), items);
-  obj[0] = registerAsset;
-  obj[1] = tmp.icon;
-  const items1 = [callback(closure_4, obj), , ];
-  obj = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
-  const obj1 = { variant: "text-xs/bold", color: "text-brand", children: null };
+  const callback = React.useCallback(() => analyticsLocations(outer1_2[8])(isReminder, analyticsLocations), items);
+  if (isAtLimit) {
+    obj = { color: "text-feedback-warning", style: null };
+    obj[1] = tmp.icon;
+    let tmp7Result = tmp7(isReminder(7744).WarningIcon, obj);
+    let tmp10 = tmp7;
+  } else {
+    obj = { source: null, style: null };
+    obj[0] = tmp2(8624);
+    obj[1] = tmp.icon;
+    tmp7Result = tmp7(closure_4, obj);
+    tmp10 = tmp7;
+  }
+  const items1 = [tmp7Result, , ];
+  const obj1 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
+  const obj2 = { variant: "text-xs/bold", color: "text-brand", children: null };
   const intl = isReminder(1236).intl;
-  obj1[2] = intl.string(isReminder(1236).t.oW0eUd).toUpperCase();
-  const items2 = [callback(isReminder(4281).Text, obj1), " \u00B7 ", ];
+  obj2[2] = intl.string(isReminder(1236).t.oW0eUd).toUpperCase();
+  const items2 = [tmp10(isReminder(4251).Text, obj2), " \u00B7 ", ];
+  let obj5 = isReminder(3901);
+  const premiumTypeDisplayName = obj5.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl2 = isReminder(1236).intl;
+  const formatToPlainString = intl2.formatToPlainString;
   const t = isReminder(1236).t;
-  const obj2 = { premiumMax: isReminder ? closure_8 : closure_7, nitroTierName: null };
-  const str = intl.string(isReminder(1236).t.oW0eUd);
-  const tmp4 = closure_5;
-  const tmp5 = callback;
-  const tmp8 = isReminder ? t["E+mhMh"] : t["5VsCaT"];
-  obj2[1] = isReminder(3931).getPremiumTypeDisplayName(PremiumTypes.TIER_2);
-  items2[2] = intl2.formatToPlainString(tmp8, obj2);
-  obj[3] = items2;
-  items1[1] = closure_10(isReminder(4281).Text, obj);
-  const obj3 = { size: "sm", text: null, onPress: null };
-  const intl3 = tmp7(1236).intl;
-  obj3[1] = intl3.string(isReminder(1236).t["8x0jKT"]);
-  obj3[2] = callback;
-  items1[2] = tmp5(isReminder(4695).Button, obj3);
-  obj[1] = items1;
-  return closure_10(tmp4, obj);
+  if (isAtLimit) {
+    const obj3 = { nitroTierName: null, premiumMax: null };
+    obj3[0] = premiumTypeDisplayName;
+    obj3[1] = isReminder ? closure_8 : closure_7;
+    formatToPlainString(isReminder ? t["E+mhMh"] : t["5VsCaT"], obj3);
+  } else {
+    const obj4 = { nitroTierName: null };
+    obj4[0] = premiumTypeDisplayName;
+    items2[2] = formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj4);
+    obj1[3] = items2;
+    items1[1] = tmp5(isReminder(4251).Text, obj1);
+    if (isAtLimit) {
+      let Button = tmp2(9401);
+    } else {
+      Button = tmp12(4665).Button;
+    }
+    obj5 = { size: "sm", text: null, onPress: null };
+    const intl3 = tmp12(1236).intl;
+    obj5[1] = intl3.string(tmp12(1236).t["8x0jKT"]);
+    obj5[2] = callback;
+    items1[2] = tmp10(Button, obj5);
+    obj[1] = items1;
+    return tmp5(closure_5, obj);
+  }
 };

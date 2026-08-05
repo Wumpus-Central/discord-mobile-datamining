@@ -26,7 +26,7 @@ function _isAccessibleChannelOrThreadPath() {
       let guild2 = tmp2;
       let throwTypeErrorResult = callback;
       ({ guildId: c0, channelId: obj5 } = callback);
-      yield "ct";
+      yield "PX_8";
       if (1 === tmp5) {
         if (arg0 === 1) {
           let c5 = 3;

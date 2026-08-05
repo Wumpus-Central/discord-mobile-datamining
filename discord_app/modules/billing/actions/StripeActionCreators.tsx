@@ -14,7 +14,7 @@ function _createStripeSetupIntent() {
       if (obj1 === undefined) {
         obj1 = {};
       }
-      yield "ct";
+      yield "PX_8";
       const HTTP = obj1(table[2]).HTTP;
       const obj3 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj3[0] = constants.BILLING_STRIPE_SETUP_INTENT_SECRET;
@@ -45,7 +45,7 @@ function _createSetupIntentForPaymentElements() {
       if (obj1 === undefined) {
         obj1 = {};
       }
-      yield "ct";
+      yield "PX_8";
       const HTTP = obj1(table[2]).HTTP;
       const obj3 = { url: null, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
       obj3[0] = constants.BILLING_STRIPE_SETUP_INTENT_SECRET_FOR_PAYMENT_ELEMENTS;

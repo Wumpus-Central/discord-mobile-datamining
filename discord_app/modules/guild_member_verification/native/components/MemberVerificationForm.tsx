@@ -48,7 +48,7 @@ export default function MemberVerificationForm(guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -78,7 +78,7 @@ export default function MemberVerificationForm(guild) {
                     obj.open(obj);
                   })();
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "T", done: null };
                 } else {
                   outer1_9(null);
                   outer1_8(true);

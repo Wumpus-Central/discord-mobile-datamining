@@ -31,7 +31,7 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    ModalActionCreators.pushLazy(asyncRequireImpl(11234, dependencyMap.paths), obj, c7);
+    ModalActionCreators.pushLazy(asyncRequireImpl(11206, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
@@ -42,7 +42,7 @@ export const resumeFamilyCenterConnection = function resumeFamilyCenterConnectio
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    ModalActionCreators.pushLazy(asyncRequireImpl(11234, dependencyMap.paths), obj, c7);
+    ModalActionCreators.pushLazy(asyncRequireImpl(11206, dependencyMap.paths), obj, c7);
     flag = true;
     const obj2 = ModalActionCreators;
   }

@@ -26,7 +26,7 @@ function _safeTransitionTo() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ function _safeTransitionTo() {
           }
           obj7 = callback2(closure_2[11]);
           if (closure_2 == null) {
-            closure_2 = { guildId: "r" };
+            closure_2 = { guildId: "Array" };
           }
           c5 = 2;
           c6 = 1;

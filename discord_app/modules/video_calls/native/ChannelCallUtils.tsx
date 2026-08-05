@@ -3,10 +3,10 @@ import "report";
 import initialize from "initialize";
 import ME from "ME";
 import { jsx } from "showShareActionSheet";
-import { registerAsset } from "../../../../_runtime/07828_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10762_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16152_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16153_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07800_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10734_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16133_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16134_registerAsset.js";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
@@ -24,10 +24,10 @@ export const voiceSettings = function voiceSettings() {
   obj[0] = intl.string(getSystemLocale.t.NiTd0e);
   obj[1] = registerAsset;
   obj[2] = function onPress() {
-    let obj = callback(5925);
+    let obj = callback(5910);
     obj = { screen: constants.VOICE };
     obj.openUserSettings(obj);
-    callback2(4253).hideActionSheet();
+    callback2(4223).hideActionSheet();
   };
   return obj;
 };
@@ -101,19 +101,19 @@ export const invite = function invite(isPrivate) {
   const dependencyMap = arg2;
   if (null != arg1) {
     function onPress() {
-      let obj = isPrivate(8987);
+      let obj = isPrivate(8959);
       obj = { source: outer1_6.STREAM, stream: closure_1 };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     }
   } else {
     onPress = function onPress() {
-      let obj = isPrivate(8987);
+      let obj = isPrivate(8959);
       obj = { source: outer1_6.VOICE_CHANNEL };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     };
     if (null != arg2) {
       onPress = function onPress() {
-        let obj = isPrivate(8987);
+        let obj = isPrivate(8959);
         obj = { source: outer1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
         return obj.showInstantInviteActionSheet(isPrivate, obj);
       };
@@ -121,7 +121,7 @@ export const invite = function invite(isPrivate) {
   }
   if (isPrivate.isPrivate()) {
     onPress = function onPress() {
-      return isPrivate(4136).navigateToNewGroupDM(isPrivate.id, outer1_5.CHANNEL_CALL);
+      return isPrivate(4106).navigateToNewGroupDM(isPrivate.id, outer1_5.CHANNEL_CALL);
     };
   }
   let obj = { label: null, icon: null, onPress: null };

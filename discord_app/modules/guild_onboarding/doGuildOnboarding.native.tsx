@@ -5,14 +5,14 @@ import handleConnectionOpen from "handleConnectionOpen";
 import shouldShowOnboarding from "shouldShowOnboarding";
 import { GUILD_ONBOARDING_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY";
 import ME from "ME";
-import { 05208__ } from "../../../_runtime/metro/05208__.js";
+import { 05193__ } from "../../../_runtime/metro/05193__.js";
 import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 let c9;
 let metroImportAll;
 const require = arg1;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(05208__));
+  return JSON.parse(JSON.stringify(05193__));
 }
 function _doGuildOnboarding() {
   let self = this;
@@ -32,7 +32,7 @@ function _doGuildOnboarding() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -54,7 +54,7 @@ function _doGuildOnboarding() {
               let lib;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -66,14 +66,14 @@ function _doGuildOnboarding() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj8 = lib(4253);
+              let obj8 = lib(4223);
               obj8.hideActionSheet();
-              lib(4490).popAll();
-              const obj10 = lib(4490);
+              lib(4460).popAll();
+              const obj10 = lib(4460);
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = guildId(5200).waitForGuild(closure_0);
+              obj2[0] = guildId(5185).waitForGuild(closure_0);
               return obj2;
             }
           } else {
@@ -95,7 +95,7 @@ function _doGuildOnboarding() {
                   hasItem = features.has(constants.COMMUNITY);
                 }
                 if (hasItem) {
-                  let obj5 = guildId(5209);
+                  let obj5 = guildId(5194);
                   c5 = 3;
                   c6 = 1;
                   const obj4 = { value: null, done: false };
@@ -157,7 +157,7 @@ function _doGuildOnboarding() {
               return obj;
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp42) {
           c6 = tmp;
@@ -196,7 +196,7 @@ function _fetchLandingAsset() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -265,7 +265,7 @@ function _fetchLandingAsset() {
           } else {
             dependencyMap = arg1;
             const _HermesInternal = HermesInternal;
-            const tmp12 = callback(5213);
+            const tmp12 = callback(5198);
             c3 = 0;
             c5 = 3;
             obj = { value: null, done: true };

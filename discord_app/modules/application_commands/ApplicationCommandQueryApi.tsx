@@ -65,7 +65,7 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 export const getCachedCommand = function getCachedCommand(type, commandKey) {
   let closure_0 = arg2;
   if (null == commandKey) {
-    return { application: "body", command: "useStateFromStores" };
+    return { application: "Array", command: "PX_8" };
   } else {
     const userState = authStore.getUserState();
     const result2 = userState.result;
@@ -120,7 +120,7 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
         }
       }
     }
-    return { application: "body", command: "useStateFromStores" };
+    return { application: "Array", command: "PX_8" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -458,7 +458,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "body", application: "useStateFromStores" };
+    return { command: "Array", application: "PX_8" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

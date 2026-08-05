@@ -17,7 +17,7 @@ function _fetchReactiveCheckResult() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -103,7 +103,7 @@ function _resetAgeVerification() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -140,7 +140,7 @@ function _resetAgeVerification() {
           obj = v0(709);
           obj.dispatch({ type: "AGE_VERIFICATION_RESET" });
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp13) {
         dependencyMap = tmp;

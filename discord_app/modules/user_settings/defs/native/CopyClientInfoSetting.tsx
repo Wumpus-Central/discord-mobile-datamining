@@ -18,7 +18,7 @@ function getClientInfo() {
   const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
   let tmp;
   if (overrides != null) {
-    tmp = overrides[require(undefined, 11100) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+    tmp = overrides[require(undefined, 11072) /* setBuildOverrideForBranch */.DEVICE_FIELD];
   }
   let str2 = "N/A";
   if (str.trim().length > 0) {
@@ -74,9 +74,9 @@ function ClientClientInfoActionSheet() {
   obj[0] = intl2.string(getSystemLocale.t.H66MEk);
   obj[1] = getClientInfo().appVersion;
   obj[2] = function onPress() {
-    callback(5638).copy(callback2().appVersion);
-    const obj = callback(5638);
-    const result = callback(3985).presentCopiedToClipboard();
+    callback(5623).copy(callback2().appVersion);
+    const obj = callback(5623);
+    const result = callback(3955).presentCopiedToClipboard();
   };
   const items = [callback(ActionSheetRowIcon.ActionSheetRow, obj), , , , , , ];
   const obj1 = { label: null, subLabel: null, onPress: null };
@@ -84,9 +84,9 @@ function ClientClientInfoActionSheet() {
   obj1[0] = intl3.string(getSystemLocale.t.zuaWIt);
   obj1[1] = getClientInfo().buildNumber;
   obj1[2] = function onPress() {
-    callback(5638).copy(callback2().buildNumber);
-    const obj = callback(5638);
-    const result = callback(3985).presentCopiedToClipboard();
+    callback(5623).copy(callback2().buildNumber);
+    const obj = callback(5623);
+    const result = callback(3955).presentCopiedToClipboard();
   };
   items[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj1);
   let obj2 = { label: null, subLabel: null, onPress: null };
@@ -94,9 +94,9 @@ function ClientClientInfoActionSheet() {
   obj2[0] = intl4.string(getSystemLocale.t["YD/2+H"]);
   obj2[1] = getClientInfo().releaseChannel;
   obj2[2] = function onPress() {
-    callback(5638).copy(callback2().releaseChannel);
-    const obj = callback(5638);
-    const result = callback(3985).presentCopiedToClipboard();
+    callback(5623).copy(callback2().releaseChannel);
+    const obj = callback(5623);
+    const result = callback(3955).presentCopiedToClipboard();
   };
   items[2] = callback(ActionSheetRowIcon.ActionSheetRow, obj2);
   let obj3 = { label: null, subLabel: null, onPress: null };
@@ -104,9 +104,9 @@ function ClientClientInfoActionSheet() {
   obj3[0] = intl5.string(getSystemLocale.t["4bhpIV"]);
   obj3[1] = getClientInfo().manifest;
   obj3[2] = function onPress() {
-    callback(5638).copy(callback2().manifest);
-    const obj = callback(5638);
-    const result = callback(3985).presentCopiedToClipboard();
+    callback(5623).copy(callback2().manifest);
+    const obj = callback(5623);
+    const result = callback(3955).presentCopiedToClipboard();
   };
   items[3] = callback(ActionSheetRowIcon.ActionSheetRow, obj3);
   const obj4 = { label: null, subLabel: null, onPress: null };
@@ -114,9 +114,9 @@ function ClientClientInfoActionSheet() {
   obj4[0] = intl6.string(getSystemLocale.t.Wj3LW4);
   obj4[1] = getClientInfo().buildOverride;
   obj4[2] = function onPress() {
-    callback(5638).copy(callback2().buildOverride);
-    const obj = callback(5638);
-    const result = callback(3985).presentCopiedToClipboard();
+    callback(5623).copy(callback2().buildOverride);
+    const obj = callback(5623);
+    const result = callback(3955).presentCopiedToClipboard();
   };
   items[4] = callback(ActionSheetRowIcon.ActionSheetRow, obj4);
   let obj7 = isFabric;
@@ -124,33 +124,33 @@ function ClientClientInfoActionSheet() {
   if (obj7.isFabric()) {
     const obj5 = { label: "React Native New Architecture", subLabel: "Enabled", onPress: null };
     obj5[2] = function onPress() {
-      callback(5638).copy("React Native New Architecture is enabled.");
-      const obj = callback(5638);
-      const result = callback(3985).presentCopiedToClipboard();
+      callback(5623).copy("React Native New Architecture is enabled.");
+      const obj = callback(5623);
+      const result = callback(3955).presentCopiedToClipboard();
     };
-    tmp4Result = tmp4(tmp2(5648).ActionSheetRow, obj5);
+    tmp4Result = tmp4(tmp2(5633).ActionSheetRow, obj5);
   }
   items[5] = tmp4Result;
   tmp4Result = null;
   if (tmp2Result.isFabric()) {
     let str = "Disabled";
-    if (tmp2(4149).isBridgeless) {
+    if (tmp2(4119).isBridgeless) {
       str = "Enabled";
     }
     const obj6 = { label: "Bridgeless mode", subLabel: null, onPress: null };
     obj6[1] = str;
     obj6[2] = function onPress() {
       let str = "disabled";
-      if (callback(4149).isBridgeless) {
+      if (callback(4119).isBridgeless) {
         str = "enabled";
       }
       const combined = "Bridgeless is " + str + ".";
-      let tmpResult = tmp(5638);
+      let tmpResult = tmp(5623);
       tmpResult.copy(combined);
-      tmpResult = tmp(3985);
+      tmpResult = tmp(3955);
       const result = tmpResult.presentCopiedToClipboard();
     };
-    tmp4Result = tmp4(tmp2(5648).ActionSheetRow, obj6);
+    tmp4Result = tmp4(tmp2(5633).ActionSheetRow, obj6);
   }
   items[6] = tmp4Result;
   const items1 = [closure_5(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: false, children: items }), ];
@@ -168,13 +168,13 @@ function ClientClientInfoActionSheet() {
     const tmp = callback2();
     ({ appVersion, buildNumber } = tmp);
     ({ releaseChannel, buildOverride, manifest } = tmp);
-    const deviceInfo = callback(4265).getDeviceInfo();
-    const obj = callback(4265);
-    const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + callback(4265).getSystemVersion() + ";";
-    const obj2 = callback(4265);
-    callback(5638).copy(combined);
-    const obj3 = callback(5638);
-    const result = callback(3985).presentCopiedToClipboard();
+    const deviceInfo = callback(4235).getDeviceInfo();
+    const obj = callback(4235);
+    const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + callback(4235).getSystemVersion() + ";";
+    const obj2 = callback(4235);
+    callback(5623).copy(combined);
+    const obj3 = callback(5623);
+    const result = callback(3955).presentCopiedToClipboard();
   };
   obj7[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj8);
   items1[1] = callback(ActionSheetRowIcon.ActionSheetRow.Group, obj7);

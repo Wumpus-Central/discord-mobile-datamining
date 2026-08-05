@@ -12,8 +12,8 @@ function handleRelationshipAdd(relationship) {
     const obj = { username: null };
     obj[0] = relationship.user.username;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale.t.zH0kC7, obj));
-    const result = importAll(16428).showPendingNotification(relationship.user);
-    const obj2 = importAll(16428);
+    const result = importAll(16409).showPendingNotification(relationship.user);
+    const obj2 = importAll(16409);
   }
 }
 function handleFriendRequestAccepted(user) {
@@ -21,7 +21,7 @@ function handleFriendRequestAccepted(user) {
   const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
   const intl = getSystemLocale.intl;
   AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale.t["/+7xky"], { username: user.username }));
-  const result = importAll(16428).showAcceptedNotification(user);
+  const result = importAll(16409).showAcceptedNotification(user);
 }
 let prototype = function RelationshipManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

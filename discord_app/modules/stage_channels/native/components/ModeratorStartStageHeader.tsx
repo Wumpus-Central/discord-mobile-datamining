@@ -26,7 +26,7 @@ const memoResult = require("noop").memo((channel) => {
   if (speaker) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    speaker = tmp7(tmp8(10804).MusicMuteButton, obj);
+    speaker = tmp7(tmp8(10776).MusicMuteButton, obj);
   }
   items[2] = speaker;
   obj = { channelId: channel.id };

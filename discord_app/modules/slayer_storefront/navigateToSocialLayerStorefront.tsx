@@ -34,7 +34,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
       let id;
       const lib = tmp2;
       ({ guildId: id, invite: c1, pageIndex: c2, skuId: c3, slug: c4 } = id);
-      yield "ct";
+      yield "PX_8";
       if (1 === tmp5) {
         if (arg0 === 1) {
           let guild = 3;
@@ -69,7 +69,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
               if (null != set) {
                 if (!set.has(guild3.PREVIEW_ENABLED)) {
                   if (null != lib) {
-                    let obj4 = lib(7679);
+                    let obj4 = lib(7651);
                     let obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                     obj2[0] = lib.code;
                     obj2[1] = { location: "game_shop" };
@@ -84,12 +84,12 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
               c3 = 2;
               guild = 1;
               obj4 = { value: null, done: false };
-              obj4[0] = id(5865).startLurking(id, {}, { shouldNavigate: false });
+              obj4[0] = id(5850).startLurking(id, {}, { shouldNavigate: false });
               return obj4;
             }
           } else {
             guild = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         }
       } else if (2 === tmp5) {

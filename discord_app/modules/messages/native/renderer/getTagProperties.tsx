@@ -33,7 +33,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1236).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7955)).uri;
+            uri = Image.resolveAssetSource(tmp4(7927)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1236).t["9RNkeF"]);
@@ -61,7 +61,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1236).intl;
         stringResult2 = intl6.string(tmp2(1236).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "paddingHorizontal", tagType: 995292225848286400000000000000000000000000000000000000000000000000000000000000000000000, tagIconUrl: 0.00000000000000000000000000000000000000000000000000000000000000000007424560562493925, opTagText: 37.693, opTagTextColor: -38.284, opTagBackgroundColor: null };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "alignItems", tagType: "<string:2214592847>", tagIconUrl: "<string:3556770644>", opTagText: "<string:16777498>", opTagTextColor: "<string:788529797>", opTagBackgroundColor: "<string:1358955304>" };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;
@@ -88,7 +88,7 @@ export default function getTagProperties(arg0) {
       }
       const intl5 = tmp2(1236).intl;
       stringResult3 = intl5.string(tmp2(1236).t["7s687k"]);
-      tmp2Result = tmp2(7951);
+      tmp2Result = tmp2(7923);
     }
   }
   const intl3 = tmp2(1236).intl;

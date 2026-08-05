@@ -10,7 +10,7 @@ import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../../_runtime/08038_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08010_registerAsset.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { preload } from "../../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -33,7 +33,7 @@ function HorizontalAutocompleteOption(arg0) {
   let onPress;
   let sharedValue;
   ({ children, onPress } = arg0);
-  let obj = sharedValue(4146);
+  let obj = sharedValue(4116);
   sharedValue = obj.useSharedValue(0);
   useMountLayoutEffect(() => {
     const result = sharedValue.set(sharedValue(outer1_2[14]).withTiming(1));
@@ -46,7 +46,7 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = closure_14;
   obj = { onPress, children: null };
-  const animatedStyle = sharedValue(4146).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4116).useAnimatedStyle(fn);
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
   obj[1] = callback(ReanimatedRexport.View, { style: items, children });
   return callback(closure_3, obj);
@@ -115,8 +115,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5635).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5635);
+      roleIconData = tmp2(5620).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5620);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -158,16 +158,16 @@ let obj3 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAsset;
     } else {
-      let tmp2Result = tmp2(4745);
+      let tmp2Result = tmp2(4715);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = createCacheKey();
-    tmp2Result = tmp2(4475);
+    tmp2Result = tmp2(4445);
     let obj = { onPress: channel.onPress, children: null };
     const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
     const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
-    items[1] = callback(channel(4281).Text, obj);
+    items[1] = callback(channel(4251).Text, obj);
     obj[1] = items;
     return callback2(HorizontalAutocompleteOption, obj);
   },

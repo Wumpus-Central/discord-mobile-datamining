@@ -51,11 +51,11 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(10376);
+        let tmp6Result = tmp6(10348);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-        obj[0] = tmp6(5131).QuestContent.RUNNING_ACTIVITY;
-        obj[1] = tmp6(7107).QuestContentCTA.START_QUEST;
-        obj[2] = tmp6(5131).QuestContent.RUNNING_ACTIVITY;
+        obj[0] = tmp6(5116).QuestContent.RUNNING_ACTIVITY;
+        obj[1] = tmp6(7081).QuestContentCTA.START_QUEST;
+        obj[2] = tmp6(5116).QuestContent.RUNNING_ACTIVITY;
         let tmp12 = obj2;
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj);
         obj2.return();
@@ -85,7 +85,7 @@ getQuestLogger = getQuestLogger.getQuestLogger(getQuestLogger);
 class QuestProgressManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f113703 = applyArgumentsResult;
+    f113644 = applyArgumentsResult;
     obj = {};
     map = new Map();
     obj[require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP] = map;
@@ -100,7 +100,7 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7103).getQuestTaskDetails(value, lib(5135).FirstPartyQuestTaskTypesSets.DESKTOP);
+            const questTaskDetails = lib(7077).getQuestTaskDetails(value, lib(5120).FirstPartyQuestTaskTypesSets.DESKTOP);
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
             const bound = Math.max(0, diff * applyArgumentsResult(687).Millis.SECOND);
@@ -317,9 +317,9 @@ class QuestProgressManager extends tmp4 {
       EMBEDDED_ACTIVITY_UPDATE_V2: null,
       QUEST_APPLICATION_START_TIMER: null
     };
-    f113703 = undefined;
+    f113644 = undefined;
     closure_1 = applyArgumentsResult;
-    f113703 = isQuestRobloxRelated((arg0) => {
+    f113644 = isQuestRobloxRelated((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -335,7 +335,7 @@ class QuestProgressManager extends tmp4 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -356,7 +356,7 @@ class QuestProgressManager extends tmp4 {
                 applicationId = applicationId.applicationId;
                 c3 = 1;
                 c4 = 1;
-                return { value: "ct", done: "Array" };
+                return { value: "PX_8", done: "Array" };
               }
             } else if (1 === tmp5) {
               if (arg0 === 1) {
@@ -393,7 +393,7 @@ class QuestProgressManager extends tmp4 {
                 return !hasItem;
               });
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } catch (tmp17) {
             c4 = tmp;
@@ -460,9 +460,9 @@ prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuest
   const self = this;
   if (set.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
-  } else if (tmp(5135).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
+  } else if (tmp(5120).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
-  } else if (tmp(5135).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
+  } else if (tmp(5120).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
     return self.getActivelyProgressingActivityQuests();
   } else {
     tmp(1351).assertNever(closure_1);

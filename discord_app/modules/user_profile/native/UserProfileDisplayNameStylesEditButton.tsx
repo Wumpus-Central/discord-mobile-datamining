@@ -14,14 +14,12 @@ let metroImportAll;
 const require = arg1;
 ({ useCallback: c4, useMemo: c5 } = noop);
 ({ AnalyticEvents: error, UserSettingsSections: metroImportAll } = ME);
-createCacheKey = { ggContainer: null, noneIcon: null, newBadge: null };
+createCacheKey = { ggContainer: null, noneIcon: null };
 createCacheKey = { height: 48, width: 48, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-let obj1 = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-createCacheKey[2] = { paddingTop: 0, marginLeft: require("Themes").space.PX_4 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingTop: 0, marginLeft: require("Themes").space.PX_4 };
+let obj1 = { tintColor: require("Themes").colors.TEXT_SUBTLE };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx");
 
 export default function UserProfileDisplayNameStylesEditButton(user) {
@@ -41,19 +39,20 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   nativeStackNavigation = obj.useNativeStackNavigation();
   let obj1 = user(isTryItOut[9]);
   const isDisplayNameStylesFlywheelSettersEnabled = obj1.useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
-  let obj2 = user(isTryItOut[10]);
   if (isDisplayNameStylesFlywheelSettersEnabled) {
     const items = [tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE];
     let items1 = items;
   } else {
     items1 = [];
   }
-  let tmp6 = callback(obj2.useSelectedDismissibleContent(items1, undefined, true), 2);
+  let tmp6 = callback(user(isTryItOut[10]).useSelectedDismissibleContent(items1, undefined, true), 2);
   callback2 = tmp7;
   let tmp2Result = tmp2(tmp3[12]);
   const guildMemberOrUserPendingDisplayNameStyles = tmp2Result.useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles } = guildMemberOrUserPendingDisplayNameStyles);
   obj = { userId: user.id, guildId, pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true };
+  const obj3 = user(isTryItOut[10]);
+  const tmp9 = guildId;
   if (isTryItOut) {
     pendingDisplayNameStyles = tryItOutDisplayNameStyles;
   }
@@ -72,7 +71,6 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   const items2 = [guildId, isTryItOut, nativeStackNavigation, tmp6[1]];
   const items3 = [displayNameStylesEffectConfig, tmp10Result];
   let tmp10 = guildId(isTryItOut[13]);
-  const tmp9 = guildId;
   const tmp15 = callback2(() => {
     if (null == c6) {
       const intl2 = user(isTryItOut[17]).intl;
@@ -114,17 +112,9 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   obj = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null };
   let intl = tmp2(tmp3[17]).intl;
   obj[0] = intl.string(tmp9(isTryItOut[24])["86GtGH"]);
-  let tmp18Result;
-  if (tmp6[0] === user(isTryItOut[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE) {
-    obj1 = { "aria-hidden": true, children: null };
-    obj2 = { text: null, style: null };
-    let intl2 = tmp2(tmp3[17]).intl;
-    obj2[0] = intl2.string(tmp2(tmp3[17]).t.y2b7CA);
-    obj2[1] = tmp.newBadge;
-    obj1[1] = tmp18(tmp2(tmp3[19]).TextBadge, obj2);
-    tmp18Result = tmp18(c6, obj1);
-  }
-  obj[1] = tmp18Result;
+  obj1 = { showPremiumIcon: true, showNewBadge: null };
+  obj1[1] = tmp6[0] === user(isTryItOut[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE;
+  obj[1] = jsx(user(isTryItOut[23]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: null });
   obj[2] = tmp15;
   obj[3] = { text: tmp15 };
   obj[4] = tmp14;

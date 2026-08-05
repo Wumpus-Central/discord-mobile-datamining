@@ -13,7 +13,7 @@ import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
 import { Store } from "initialize";
 import set from "createChannelRecord";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03867_t.js";
+import { t } from "../../../_runtime/03837_t.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";

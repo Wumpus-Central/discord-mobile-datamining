@@ -258,7 +258,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, arg3);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "disabled", positionPercentage: false };
+    sectionItemFromPosition = { item: "sa", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -278,7 +278,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
         if (null != GUILDS) {
           const type = item.type;
           if (renderDefaultEmpty.FastListItemTypes.SECTION !== type) {
-            if (tmp10(7818).FastListItemTypes.ITEM === type) {
+            if (tmp10(7790).FastListItemTypes.ITEM === type) {
               if (GUILDS.type !== GuildsNodeType.ROOT) {
                 let tmp13 = GUILDS;
                 if (GUILDS.type !== tmp12.FOLDER) {
@@ -306,7 +306,7 @@ let c12 = 160;
 let c13 = 16.666666666666668;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
 obj[0] = require("module_4294967295");
-obj[1] = module_4146.makeMutable([]);
+obj[1] = module_4116.makeMutable([]);
 obj[2] = require("module_4294967295");
 let closure_16 = require("debounce")(require("HapticFeedbackTypes").triggerHapticFeedback, 16);
 let closure_17 = require("debounce")((intl) => {
@@ -647,7 +647,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "body", overSpecs: "useStateFromStores" });
+    state.setStateShallow({ dragSpecs: "Array", overSpecs: "PX_8" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};
@@ -781,7 +781,7 @@ export default function useGuildsBarGesture() {
             }
           }
         }
-        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: 8 };
+        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: true };
         obj5[0] = obj;
         obj5[2] = sum;
         setStateShallow(obj5);

@@ -25,7 +25,7 @@ class CollectiblesPreview {
       obj[1] = size;
       size2 = obj;
     }
-    tmp3 = f46203(size2.width, size2.height);
+    tmp3 = f46159(size2.width, size2.height);
     if ("bundle" === collectiblesItemData.type) {
       tmp18 = closure_0;
       tmp19 = closure_2;
@@ -45,8 +45,8 @@ class CollectiblesPreview {
       obj3 = { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: true, targetSize: null };
       ({ firstAvatarDecoration: obj15[0], firstProfileEffect: obj15[1], firstNameplate: obj15[2] } = itemsSortingHat);
       obj3[4] = collectiblesItemData.previewAssets;
-      tmp27 = f46203;
-      obj3[6] = f46203;
+      tmp27 = f46159;
+      obj3[6] = f46159;
       obj2[1] = jsx(require("BundleStaticPreviewContent"), obj3);
       obj1[1] = jsx(View, obj2);
       return jsx(View, obj1);
@@ -122,7 +122,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9273).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9244).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = React.useMemo(() => outer1_5(sku), items);
@@ -150,7 +150,7 @@ class SocialLayerStorefrontSKUPreview {
       obj[1] = DEFAULT_ITEM_SIZE;
       size = obj;
     }
-    tmp3 = f46203(size.width, size.height);
+    tmp3 = f46159(size.width, size.height);
     tmp4 = closure_2;
     obj = require("apexExperiment");
     tmp5 = null;
@@ -180,7 +180,7 @@ class PremiumSKUPreview {
       obj[1] = DEFAULT_ITEM_SIZE;
       size = obj;
     }
-    tmp3 = f46203(size.width, size.height);
+    tmp3 = f46159(size.width, size.height);
     obj = require("map");
     obj1 = { style: tmp3.premiumRiveContainer, children: null };
     token = obj.useToken(require("Themes").colors.TEXT_DEFAULT);

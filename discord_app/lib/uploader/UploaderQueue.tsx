@@ -38,7 +38,7 @@ prototype["drainQueue"] = function drainQueue() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -65,7 +65,7 @@ prototype["drainQueue"] = function drainQueue() {
               outer1_1.log("drainQueue() - No uploads left, setting drainingQueue to false");
               outer1_0.drainingQueue = false;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             } else {
               let c3 = 1;
               outer1_1.log("drainQueue() - start uploader");

@@ -4,7 +4,7 @@ import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import importDefaultResult from "set";
 import importDefaultResult1 from "apply";
-import { parse } from "../../../_runtime/05290_parse.js";
+import { parse } from "../../../_runtime/05275_parse.js";
 import { set } from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
 import { set } from "fallbackLocales.tsx";
 
@@ -83,7 +83,7 @@ class Spellchecker {
       } else {
         let tmp3 = dependencyMap[arg0];
         if (tmp3 == null) {
-          tmp3 = first(5289)[first];
+          tmp3 = first(5274)[first];
         }
         if (null != tmp3) {
           obj.setLocale(tmp3);

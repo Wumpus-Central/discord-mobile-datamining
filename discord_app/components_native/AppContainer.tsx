@@ -31,7 +31,7 @@ function GestureWrapper(children) {
   let isScreenLandscape;
   const tmp = createCacheKey();
   c0 = tmp;
-  isScreenLandscape = isScreenLandscape(4815).useIsScreenLandscape();
+  isScreenLandscape = isScreenLandscape(4800).useIsScreenLandscape();
   let items = [isScreenLandscape, tmp];
   const style = React.useMemo(() => {
     const items = [_undefined.flex, ];
@@ -92,7 +92,7 @@ function AppNavigationContainer(children) {
     outer1_7();
   }, []);
   const memo = React.useMemo(() => {
-    const tmp = callback(4138)();
+    const tmp = callback(4108)();
     let name;
     if (tmp != null) {
       const first = tmp.routes[0];
@@ -100,7 +100,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(13728).log("Initial Screen: " + name);
+    callback(13700).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -163,7 +163,7 @@ createCacheKey = { flex: { flex: 1 }, rootBackgroundColor: null };
 createCacheKey = { backgroundColor: require("Themes").colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 createCacheKey[1] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = module_4146.configureReanimatedLogger({ level: require("module_4146").ReanimatedLogLevel.error, strict: false });
+let result = module_4116.configureReanimatedLogger({ level: require("module_4116").ReanimatedLogLevel.error, strict: false });
 try {
   require("enableScreens").enableFreeze();
   let obj6 = require("enableScreens");
@@ -179,11 +179,11 @@ try {
     const appEntryKey = children.appEntryKey;
     let riveAppStatePlaybackExperiment = appEntryKey;
     let memo1;
-    const requestGatewaySocket = riveAppStatePlaybackExperiment(13729).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = riveAppStatePlaybackExperiment(13701).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
-        let obj = riveAppStatePlaybackExperiment(4146);
+        let obj = riveAppStatePlaybackExperiment(4116);
         const fn = function e() {
           RNScreensTurboModule.RNScreensTurboModule = RNScreensTurboModule;
         };
@@ -209,10 +209,10 @@ try {
     riveRendererExperiment = undefined;
     riveAppStatePlaybackExperiment = undefined;
     memo1 = undefined;
-    let obj = riveAppStatePlaybackExperiment(13729);
-    riveRendererExperiment = riveAppStatePlaybackExperiment(14970).useRiveRendererExperiment("AppContainer");
-    let obj2 = riveAppStatePlaybackExperiment(14970);
-    riveAppStatePlaybackExperiment = riveAppStatePlaybackExperiment(14971).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = riveAppStatePlaybackExperiment(13701);
+    riveRendererExperiment = riveAppStatePlaybackExperiment(14950).useRiveRendererExperiment("AppContainer");
+    let obj2 = riveAppStatePlaybackExperiment(14950);
+    riveAppStatePlaybackExperiment = riveAppStatePlaybackExperiment(14951).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveRendererExperiment, riveAppStatePlaybackExperiment];
     const memo = React.useMemo(() => {
       const items = [];

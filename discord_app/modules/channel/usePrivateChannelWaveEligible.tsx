@@ -61,8 +61,8 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
   const obj6 = _resetCache;
-  const tmp9 = recipientId(3867)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3867)(), recipientId(3867)(extractTimestampResult), 1814400000);
+  const tmp9 = recipientId(3837)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3837)(), recipientId(3837)(extractTimestampResult), 1814400000);
   const strangerDangerWarning = _useStrangerDangerWarning.useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;

@@ -1,6 +1,6 @@
 // discord_app/modules/discord_md5/DiscordMd5.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
-import { 04846__ } from "../../../_runtime/metro/04846__.js";
+import { 04831__ } from "../../../_runtime/metro/04831__.js";
 
 let prototype;
 prototype = function DiscordMd5() {
@@ -14,7 +14,7 @@ prototype["fromBlob"] = function fromBlob(arg0) {
   })();
 };
 prototype["fromArrayBuffer"] = function fromArrayBuffer(arg0) {
-  const _ArrayBuffer = 04846__.ArrayBuffer;
+  const _ArrayBuffer = 04831__.ArrayBuffer;
   return _ArrayBuffer.hash(arg0);
 };
 prototype["fromDataURI"] = function fromDataURI(arg0) {

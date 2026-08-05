@@ -46,7 +46,7 @@ export default function CaptchaModal(arg0) {
   ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
   let c8;
   let callback;
-  const tmp2 = callback2(onReject(8283)());
+  const tmp2 = callback2(onReject(8255)());
   const tmp3 = onReject(1532)();
   c8 = tmp3;
   const items = [tmp3];
@@ -65,7 +65,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16225)({ onReject, analyticsType: memo });
+  callback = onReject(16206)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

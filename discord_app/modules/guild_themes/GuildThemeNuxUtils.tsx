@@ -23,7 +23,7 @@ function _saveGuildThemeNuxPreference() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -40,7 +40,7 @@ function _saveGuildThemeNuxPreference() {
             } else {
               let handleConnectionClosedOrResumed = tmp5;
               let asyncGeneratorStep = tmp2;
-              let GuildThemeSourcePreference = callback(4217).GuildThemeSourcePreference;
+              let GuildThemeSourcePreference = callback(4187).GuildThemeSourcePreference;
               if (dependencyMap) {
                 let GUILD = GuildThemeSourcePreference.PERSONAL;
               } else {
@@ -78,7 +78,7 @@ function _saveGuildThemeNuxPreference() {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp14) {
           c5 = tmp;
@@ -101,9 +101,9 @@ let result = require("GuildThemeSourcePreference").fileFinishedImporting("module
 export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNuxSelection() {
   defaultGuildThemePreference = defaultGuildThemePreference.getDefaultGuildThemePreference();
   if (defaultGuildThemePreference === GuildThemeSourcePreference.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = tmp2(4217).GuildThemeSourcePreference.PERSONAL;
+    let GUILD = tmp2(4187).GuildThemeSourcePreference.PERSONAL;
   } else {
-    GUILD = tmp2(4217).GuildThemeSourcePreference.GUILD;
+    GUILD = tmp2(4187).GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };

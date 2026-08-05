@@ -49,7 +49,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -128,7 +128,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             }
           }
           v0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp39) {
         v0 = tmp;

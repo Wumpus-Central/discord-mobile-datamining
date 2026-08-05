@@ -12,10 +12,10 @@ export const getWumpTrashSource = function getWumpTrashSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(15010);
+      return callback(14990);
     },
     darker() {
-      return callback(15011);
+      return callback(14991);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -24,10 +24,10 @@ export const useWumpTrashSource = function useWumpTrashSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(15010);
+      return callback(14990);
     },
     darker() {
-      return callback(15011);
+      return callback(14991);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -36,10 +36,10 @@ export const WumpTrash = function WumpTrash(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(15010);
+      return callback(14990);
     },
     darker() {
-      return callback(15011);
+      return callback(14991);
     }
   };
   obj = {};

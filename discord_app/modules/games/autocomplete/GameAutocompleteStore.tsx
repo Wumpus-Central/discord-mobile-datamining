@@ -61,8 +61,8 @@ prototype["isFetching"] = function isFetching(c0) {
   }
   return hasItem;
 };
-prototype["getGameById"] = function getGameById(arg0) {
-  return tmp4.peek(arg0);
+prototype["getGameById"] = function getGameById(closure_0) {
+  return tmp4.peek(closure_0);
 };
 GameAutocompleteStore.displayName = "GameAutocompleteStore";
 const gameAutocompleteStore = new GameAutocompleteStore(require("dispatcher"), {

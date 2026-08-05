@@ -23,11 +23,11 @@ export default function AvatarDecorationProductPreview(product) {
     obj = { a11y_text: null };
     obj[0] = firstAvatarDecoration.label;
     obj[2] = intl.formatToPlainString(tmp2(1236).t.Do2lxE, obj);
-    obj1 = { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi", animate: null };
+    obj1 = { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==", animate: null };
     obj1[0] = currentUser;
     obj1[2] = tmp2(1297).AvatarSizes.GIFT_START;
     obj1[3] = firstAvatarDecoration;
-    obj[5] = jsx(tmp2(1297).Avatar, { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi", animate: null });
+    obj[5] = jsx(tmp2(1297).Avatar, { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==", animate: null });
     tmp5 = <View a11y_text={null} />;
   }
   return tmp5;

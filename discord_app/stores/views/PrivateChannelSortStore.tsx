@@ -8,7 +8,7 @@ import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
-import { t } from "../../../_runtime/03867_t.js";
+import { t } from "../../../_runtime/03837_t.js";
 import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
@@ -77,7 +77,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
 let closure_15 = [];
 let closure_16 = [];
 let closure_17 = [];
-const f36065 = () => {
+const f36040 = () => {
 
 };
 class PrivateChannelSortStore extends Store {
@@ -89,7 +89,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f36065 !== "function") {
+  if (typeof f36040 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let values = secondaryIndexMap.values(constants.FAVORITE);

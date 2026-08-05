@@ -28,15 +28,15 @@ function _getOrFetchApplicationForLaunch() {
       let c2;
       let ensureGuildLoaded = tmp3;
       ({ applicationId: c0, channelId: c1, guildId: c2 } = callback);
-      yield "ct";
+      yield "PX_8";
       let c6 = 1;
-      yield callback2(10871)(callback, callback2);
+      yield callback2(10843)(callback, callback2);
       c6 = 0;
       ensureGuildLoaded = participantFromServer;
       if (null != dependencyMap) {
-        let PRIVATE_CHANNEL = callback(10874).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+        let PRIVATE_CHANNEL = callback(10846).EmbeddedActivityLocationKind.GUILD_CHANNEL;
       } else {
-        PRIVATE_CHANNEL = callback(10874).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+        PRIVATE_CHANNEL = callback(10846).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
       }
       const obj2 = callback2(709);
       const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
@@ -49,11 +49,11 @@ function _getOrFetchApplicationForLaunch() {
         dependencyMap = null;
       }
       obj3[4] = dependencyMap;
-      const aPIError = new callback(4184).APIError(ensureGuildLoaded);
+      const aPIError = new callback(4154).APIError(ensureGuildLoaded);
       obj3[5] = aPIError;
       obj3[6] = PRIVATE_CHANNEL;
       obj2.dispatch(obj3);
-      yield "HermesInternal";
+      yield "T";
       c6 = 0;
       return arg1;
     })();
@@ -81,7 +81,7 @@ function _confirmActivityChange() {
       let c2;
       c1 = tmp2;
       ({ currentEmbeddedApplication: c0, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1, onConfirmActivityLaunchChecksAlertOpen: c2 } = c0);
-      yield "ct";
+      yield "PX_8";
       if (1 === tmp5) {
         if (arg0 === 1) {
           let c3 = 3;
@@ -101,13 +101,13 @@ function _confirmActivityChange() {
             if (value != null) {
               _location = value.location;
             }
-            const channel = outer1_4.getChannel(_undefined(3903).getEmbeddedActivityLocationChannelId(_location));
+            const channel = outer1_4.getChannel(_undefined(3873).getEmbeddedActivityLocationChannelId(_location));
             if (null != value) {
               if (null != channel) {
                 if (dependencyMap != null) {
                   dependencyMap();
                 }
-                _undefined2(10875)(tmp, channel, () => {
+                _undefined2(10847)(tmp, channel, () => {
                   let obj = value(table[10])();
                   obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
                   obj.leaveActivity(obj);
@@ -172,7 +172,7 @@ function _confirmActivityAgeGate() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -198,7 +198,7 @@ function _confirmActivityAgeGate() {
               obj = undefined;
               obj = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else {
             if (1 === tmp5) {
@@ -337,7 +337,7 @@ function _confirmExternalAppLaunch() {
       let closure_1;
       c3 = tmp2;
       ({ application: c0, applicationId: closure_1, channel: c2, onConfirmActivityLaunchChecksAlertOpen: c3 } = callback);
-      yield "ct";
+      yield "PX_8";
       if (1 === tmp5) {
         if (arg0 === 1) {
           let constants = 3;

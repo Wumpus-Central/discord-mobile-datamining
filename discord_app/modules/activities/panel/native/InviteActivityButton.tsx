@@ -20,12 +20,12 @@ const memoResult = require("noop").memo(function InviteActivityButton(applicatio
       obj = { activity: stateFromStores };
       obj.openLazy(applicationId(outer1_2[6])(outer1_2[5], outer1_2.paths), "ActivityInviteSheet-" + stateFromStores.session_id, obj);
     };
-    obj[1] = stateFromStores(9638);
+    obj[1] = stateFromStores(9609);
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["OzOM/q"]);
     const intl2 = tmp(1236).intl;
     obj[3] = intl2.string(tmp(1236).t["OzOM/q"]);
-    tmp4 = jsx(tmp(4695).Button, { onPress: null, icon: null, text: null, accessibilityLabel: null, variant: "secondary-overlay", size: "sm", shrink: true, maxFontSizeMultiplier: 1 });
+    tmp4 = jsx(tmp(4665).Button, { onPress: null, icon: null, text: null, accessibilityLabel: null, variant: "secondary-overlay", size: "sm", shrink: true, maxFontSizeMultiplier: 1 });
   }
   return tmp4;
 });

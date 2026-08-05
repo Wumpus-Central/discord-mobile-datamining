@@ -59,7 +59,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -78,13 +78,13 @@ function ChannelPermissionSettingsBasicView(channel) {
               let closure_0 = tmp2;
               closure_0 = undefined;
               const accessPermissions = outer1_0.accessPermissions;
-              const result = v0(8919).isPrivateGuildChannel(outer1_0);
-              const obj9 = v0(8919);
+              const result = v0(8891).isPrivateGuildChannel(outer1_0);
+              const obj9 = v0(8891);
               const tmp22 = v0;
-              closure_0 = v0(8919).flipEveryonePermission(outer1_0, accessPermissions, result);
+              closure_0 = v0(8891).flipEveryonePermission(outer1_0, accessPermissions, result);
               const currentUser = outer1_16.getCurrentUser();
               let tmp7 = outer1_9;
-              const obj10 = v0(8919);
+              const obj10 = v0(8891);
               if (!outer1_9) {
                 tmp7 = null == currentUser;
               }
@@ -95,7 +95,7 @@ function ChannelPermissionSettingsBasicView(channel) {
                 v0 = 1;
                 dependencyMap = 1;
                 const obj1 = { value: null, done: false };
-                obj1[0] = tmp22(8919).grantUserChannelAccess(outer1_0, accessPermissions);
+                obj1[0] = tmp22(8891).grantUserChannelAccess(outer1_0, accessPermissions);
                 return obj1;
               }
               canResult = outer1_14.can(outer1_19.ADMINISTRATOR, outer1_4);
@@ -120,13 +120,13 @@ function ChannelPermissionSettingsBasicView(channel) {
             return obj;
           } else {
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
           const items = [closure_0];
           v0 = 2;
           dependencyMap = 1;
           const obj3 = { value: null, done: false };
-          obj3[0] = outer1_0(8920).savePermissionUpdates(outer1_0.id, items);
+          obj3[0] = outer1_0(8892).savePermissionUpdates(outer1_0.id, items);
           return obj3;
         } catch (tmp16) {
           dependencyMap = tmp;
@@ -157,7 +157,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -179,7 +179,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               v0 = undefined;
               if (null != outer1_0.guild_id) {
                 if (!outer1_1) {
-                  let obj1 = outer1_0(8921);
+                  let obj1 = outer1_0(8893);
                   v0 = 1;
                   dependencyMap = 1;
                   obj1 = { value: null, done: false };
@@ -198,7 +198,7 @@ function ChannelPermissionSettingsBasicView(channel) {
             return obj;
           } else if (!arg1) {
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
           const intl = outer1_0(1236).intl;
           const string = intl.string;
@@ -209,7 +209,7 @@ function ChannelPermissionSettingsBasicView(channel) {
             stringResult = string(t["47gQYL"]);
           }
           outer1_0 = stringResult;
-          let obj3 = outer1_0(4475);
+          let obj3 = outer1_0(4445);
           outer1_1 = obj3.computeChannelName(outer1_0, outer1_16, outer1_15);
           let intl2 = outer1_0(1236).intl;
           let onCancel = intl2.format;
@@ -225,7 +225,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           }
           v0 = onCancelResult;
           v0(!c1);
-          show = outer1_1(4623).show;
+          show = outer1_1(4593).show;
           const obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null };
           obj4[0] = c0;
           obj4[1] = v0;
@@ -241,7 +241,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           obj4[6] = onCancel;
           show(obj4);
           dependencyMap = 3;
-          const tmp42 = outer1_1(4623);
+          const tmp42 = outer1_1(4593);
         } catch (tmp54) {
           dependencyMap = tmp;
           throw tmp54;
@@ -276,7 +276,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "r" });
+    navigation.setOptions({ headerRight: "Array" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {

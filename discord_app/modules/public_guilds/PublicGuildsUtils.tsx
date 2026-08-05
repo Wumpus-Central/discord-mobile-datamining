@@ -1,7 +1,7 @@
 // discord_app/modules/public_guilds/PublicGuildsUtils.tsx
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
 import { AnalyticEvents } from "ME";
-import { registerAsset } from "../../../_runtime/07954_registerAsset.js";
+import { registerAsset } from "../../../_runtime/07926_registerAsset.js";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 import { isCrosspost } from "../messages/isCrosspost.tsx";

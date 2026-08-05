@@ -43,11 +43,11 @@ function handleMessagesTapURLLink(data, channelId) {
             invite = invite.getInvite(payload.inviteCode);
             let num = null == invite;
             if (!num) {
-              num = !tmp2(7115).isGuildScheduledEventInviteEmbed(invite);
-              const tmp2Result = tmp2(7115);
+              num = !tmp2(7089).isGuildScheduledEventInviteEmbed(invite);
+              const tmp2Result = tmp2(7089);
             }
             if (!num) {
-              tmp4(10991)(invite);
+              tmp4(10963)(invite);
               num = 0;
             }
             flag2 = !num;
@@ -92,8 +92,8 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[0] = data.url;
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = tmp19(10990).isLinkTrusted(data.node);
-        const tmp19Result = tmp19(10990);
+        isLinkTrustedResult = tmp19(10962).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(10962);
       }
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;

@@ -6,5 +6,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/soundb
 export default function openSoundboardSoundPreviewActionSheet(channelId, sound) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId, sound };
-  obj.openLazy(asyncRequireImpl(16020, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(16001, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
 };

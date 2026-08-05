@@ -3,18 +3,18 @@ import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import set from "set";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4116";
 import set from "jsxProd";
 import { SPRING_CONFIG } from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
 
 const require = arg1;
-let closure_6 = require("module_4146").createAnimatedComponent(require("PressableBase").PressableHighlight);
+let closure_6 = require("module_4116").createAnimatedComponent(require("PressableBase").PressableHighlight);
 const result = set.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
 
 export const AnimatedPressableHighlight = set.isAndroid() ? (function AnimatedPressableHighlightAndroid(children) {
   const merged = Object.assign(children, Object.create(null));
   let token;
-  let obj = merged(3989);
+  let obj = merged(3959);
   token = obj.useToken(token(712).colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
   const items = [token, ];
   let androidRippleConfig = merged.androidRippleConfig;

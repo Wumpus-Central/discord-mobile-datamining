@@ -54,7 +54,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     const obj4 = { style: null, variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
     obj4[0] = tmp.warningText;
     obj4[3] = error;
-    tmp7Result = tmp7(tmp5(4281).Text, obj4);
+    tmp7Result = tmp7(tmp5(4251).Text, obj4);
   }
   const obj5 = { children: null };
   const items = [tmp7Result, , ];
@@ -67,7 +67,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     text: null
   };
   const intl3 = tmp5(1236).intl;
-  obj6[2] = intl3.string(tmp2(2317).PYPdl4);
+  obj6[2] = intl3.string(tmp2(2287).PYPdl4);
   items[1] = callback(_getAlertModalItemKey.AlertActionButton, obj6, "deactivate");
   const obj7 = {
     onPress() {

@@ -27,8 +27,8 @@ const toggle = createToggle.createToggle({
     const isIOSResult = set.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14561).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14561);
+      tmp5 = !tmp2(14542).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14542);
     }
     if (tmp5) {
       tmp5 = null != tmp;
@@ -56,8 +56,8 @@ const obj = {
     const isIOSResult = set.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14561).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14561);
+      tmp5 = !tmp2(14542).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14542);
     }
     if (tmp5) {
       tmp5 = null != tmp;

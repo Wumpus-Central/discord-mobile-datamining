@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/ModeratorOverlayState.tsx
 import identity from "identity";
-import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { isIterable } from "../../../../../_runtime/03868_isIterable.js";
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
   let closure_0 = arg0;

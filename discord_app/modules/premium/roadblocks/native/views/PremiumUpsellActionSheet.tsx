@@ -56,8 +56,8 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj1[0] = tmp.compressionHint;
       const intl2 = tmp2(1236).intl;
       obj1[2] = intl2.string(tmp2(1236).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4281).Text, obj1);
-      obj[1] = callback2(tmp2(5650).TableSwitchRow, obj);
+      obj[5] = callback2(tmp2(4251).Text, obj1);
+      obj[1] = callback2(tmp2(5635).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }
@@ -109,31 +109,38 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj6 = { marginTop: require("Themes").space.PX_32, marginBottom: require("Themes").space.PX_32 };
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx");
 
-export default function PremiumUpsellActionSheet(subfeatureName) {
+export default function PremiumUpsellActionSheet(arg0) {
+  let analyticsLocations;
   let featureName;
   let legacyProps;
-  ({ featureName, legacyProps } = subfeatureName);
-  subfeatureName = subfeatureName.subfeatureName;
+  let subfeatureName;
+  ({ featureName, legacyProps } = arg0);
+  ({ subfeatureName, analyticsLocations } = arg0);
+  if (analyticsLocations === undefined) {
+    analyticsLocations = [];
+  }
+  let analyticsLocations2;
   let useTier0UpsellContent;
   let onViewAllPerks;
-  let c3;
-  let analyticsLocations;
+  let React;
   const tmp = createCacheKey();
   const tmp2 = legacyProps;
-  let stringResult3 = onViewAllPerks;
-  let obj = legacyProps(onViewAllPerks[34]);
+  let stringResult3 = useTier0UpsellContent;
+  let obj = legacyProps(useTier0UpsellContent[34]);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = legacyProps(onViewAllPerks[41]);
+  let string = analyticsLocations2;
+  analyticsLocations2 = analyticsLocations2(useTier0UpsellContent[41])(analyticsLocations).analyticsLocations;
+  let obj1 = legacyProps(useTier0UpsellContent[42]);
   let initialUpsellKey;
   if (legacyProps != null) {
     initialUpsellKey = legacyProps.initialUpsellKey;
   }
   if (initialUpsellKey == null) {
-    let tmp2Result = tmp2(stringResult3[42]);
+    let tmp2Result = tmp2(stringResult3[43]);
     initialUpsellKey = tmp2Result.getUpsellType(featureName);
   }
-  const premiumUpsellConfig = obj1.usePremiumUpsellConfig(initialUpsellKey);
+  const premiumUpsellConfig = obj1.usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2);
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   onViewAllPerks = premiumUpsellConfig.onViewAllPerks;
   tmp2Result = tmp2(stringResult3[34]);
@@ -141,18 +148,18 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => theme.theme);
   const items2 = [handleConnectionOpen];
   const stateFromStores2 = tmp2(stringResult3[34]).useStateFromStores(items2, () => guildId.getGuildId());
-  const tmp10 = useTier0UpsellContent ? closure_12.TIER_0 : closure_12.TIER_2;
+  const tmp11 = useTier0UpsellContent ? closure_12.TIER_0 : closure_12.TIER_2;
   const tmp2Result1 = tmp2(stringResult3[34]);
-  let string = useTier0UpsellContent;
-  const token = tmp2(stringResult3[15]).useToken(useTier0UpsellContent(stringResult3[14]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START);
+  const tmp5 = analyticsLocations;
+  const token = tmp2(stringResult3[15]).useToken(string(stringResult3[14]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START);
   const tmp2Result2 = tmp2(stringResult3[15]);
   let str = "dark";
-  const token1 = tmp2(stringResult3[15]).useToken(useTier0UpsellContent(stringResult3[14]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END);
+  const token1 = tmp2(stringResult3[15]).useToken(string(stringResult3[14]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END);
   if (stateFromStores1 === constants3.LIGHT) {
     str = "light";
   }
   const tmp2Result3 = tmp2(stringResult3[15]);
-  const premiumTypeDisplayName = tmp2(stringResult3[16]).getPremiumTypeDisplayName(tmp10);
+  const premiumTypeDisplayName = tmp2(stringResult3[16]).getPremiumTypeDisplayName(tmp11);
   let kestrelConfig;
   if (featureName === tmp2(stringResult3[17]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
     kestrelConfig = tmp2(stringResult3[18]).getKestrelConfig({ location: "native.PremiumUpsellActionSheet" });
@@ -164,13 +171,13 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
     effectiveKestrelLimit = tmp2Result6.getEffectiveKestrelLimit(kestrelConfig, tmp2(stringResult3[19]).maxFileSize(stateFromStores2));
     const tmp2Result7 = tmp2(stringResult3[19]);
   }
-  const tmp16 = subfeatureName === tmp2(stringResult3[20]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
-  legacyProps = tmp16;
+  const tmp17 = subfeatureName === tmp2(stringResult3[20]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
+  legacyProps = tmp17;
   if (subfeatureName === tmp2(stringResult3[20]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
-    const forLaterLimit = tmp2(stringResult3[21]).getForLaterLimit("native.PremiumUpsellActionSheet", tmp16);
+    const forLaterLimit = tmp2(stringResult3[21]).getForLaterLimit("native.PremiumUpsellActionSheet", tmp17);
     const tmp2Result8 = tmp2(stringResult3[21]);
   }
-  const tmp18 = tmp16 ? closure_20 : closure_19;
+  const tmp19 = tmp17 ? closure_20 : closure_19;
   obj = {};
   obj = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl = tmp2(stringResult3[22]).intl;
@@ -214,8 +221,8 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
   const tmp2Result9 = tmp2(stringResult3[19]);
   obj5[2] = true === isGA;
   obj5[3] = function onClick() {
-    const obj = useTier0UpsellContent(onViewAllPerks[23]);
-    obj.openURL(useTier0UpsellContent(onViewAllPerks[24]).getArticleURL(constants.NITRO_FAQ));
+    const obj = analyticsLocations2(useTier0UpsellContent[23]);
+    obj.openURL(analyticsLocations2(useTier0UpsellContent[24]).getArticleURL(constants.NITRO_FAQ));
   };
   obj4[3] = closure_22(closure_21, { children: tmp2(stringResult3[19]).fileUploadLimitRoadblockDescription(obj5) });
   obj4[4] = constants2.PREMIUM_UPSELL_FILE_UPLOAD;
@@ -258,8 +265,8 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
     const intl12 = tmp2(stringResult3[22]).intl;
     let t = tmp2(stringResult3[22]).t;
     const obj12 = { premiumMax: null };
-    obj12[0] = tmp18;
-    stringResult = intl12.formatToPlainString(tmp16 ? t["cpj9o/"] : t.Oxm3Sq, obj12);
+    obj12[0] = tmp19;
+    stringResult = intl12.formatToPlainString(tmp17 ? t["cpj9o/"] : t.Oxm3Sq, obj12);
   }
   const obj13 = { title: stringResult, showBetaBadge: true, description: null, analyticsPage: null, upsellType: null, image: null };
   if (null == forLaterLimit) {
@@ -271,15 +278,15 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
     const obj14 = { children: null };
     const obj15 = { max: null, premiumMax: null, onClick: null };
     obj15[0] = forLaterLimit;
-    obj15[1] = tmp18;
+    obj15[1] = tmp19;
     obj15[2] = function onClick() {
-      useTier0UpsellContent(onViewAllPerks[27]).hideActionSheet(legacyProps(onViewAllPerks[28]).PREMIUM_UPSELL_ACTION_SHEET_KEY);
-      const obj = useTier0UpsellContent(onViewAllPerks[27]);
-      const SavedMessageSortTypes = legacyProps(onViewAllPerks[30]).SavedMessageSortTypes;
-      legacyProps(onViewAllPerks[29]).showForLaterModal(legacyProps ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+      analyticsLocations2(useTier0UpsellContent[27]).hideActionSheet(legacyProps(useTier0UpsellContent[28]).PREMIUM_UPSELL_ACTION_SHEET_KEY);
+      const obj = analyticsLocations2(useTier0UpsellContent[27]);
+      const SavedMessageSortTypes = legacyProps(useTier0UpsellContent[30]).SavedMessageSortTypes;
+      legacyProps(useTier0UpsellContent[29]).showForLaterModal(legacyProps ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
     };
-    obj14[0] = intl14.format(tmp16 ? t2.NRF0Wh : t2.o5OLyw, obj15);
-    stringResult1 = tmp23(tmp24, obj14);
+    obj14[0] = intl14.format(tmp17 ? t2.NRF0Wh : t2.o5OLyw, obj15);
+    stringResult1 = tmp24(tmp25, obj14);
   }
   obj13[2] = stringResult1;
   obj13[3] = constants2.PREMIUM_UPSELL_FOR_LATER;
@@ -299,14 +306,13 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
   const items3 = [token, token1];
   obj16[5] = { colors: items3, start: tmp2(stringResult3[33]).HorizontalGradient.START, end: tmp2(stringResult3[33]).HorizontalGradient.END };
   obj[tmp2(stringResult3[17]).EntitlementFeatureNames.STREAM_HIGH_QUALITY] = obj16;
-  c3 = tmp28;
-  analyticsLocations = string(stringResult3[43])().analyticsLocations;
+  React = tmp29;
   const obj18 = { colors: items3, start: tmp2(stringResult3[33]).HorizontalGradient.START, end: tmp2(stringResult3[33]).HorizontalGradient.END };
   const items4 = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores3 = tmp2(stringResult3[34]).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
-  const items5 = [obj[featureName], analyticsLocations, useTier0UpsellContent, legacyProps];
-  const effect = analyticsLocations.useEffect(() => {
-    let obj = useTier0UpsellContent(onViewAllPerks[44]);
+  const items5 = [obj[featureName], analyticsLocations2, useTier0UpsellContent, legacyProps];
+  const effect = React.useEffect(() => {
+    let obj = analyticsLocations2(useTier0UpsellContent[44]);
     let analyticsProperties;
     if (legacyProps != null) {
       analyticsProperties = legacyProps.analyticsProperties;
@@ -319,47 +325,47 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
     }
     obj.type = upsellType;
     obj.location = location;
-    obj.location_stack = analyticsLocations;
-    obj.sku_id = legacyProps(onViewAllPerks[16]).castPremiumSubscriptionAsSkuId(useTier0UpsellContent ? outer1_11.TIER_0 : outer1_11.TIER_2);
+    obj.location_stack = analyticsLocations2;
+    obj.sku_id = legacyProps(useTier0UpsellContent[16]).castPremiumSubscriptionAsSkuId(useTier0UpsellContent ? outer1_11.TIER_0 : outer1_11.TIER_2);
     obj.track(outer1_14.PREMIUM_UPSELL_VIEWED, obj);
   }, items5);
-  const tmp31 = string(stringResult3[45])(useTier0UpsellContent, onViewAllPerks, obj[featureName].analyticsPage);
-  const loading = tmp31.loading;
+  const tmp32 = string(stringResult3[45])(useTier0UpsellContent, onViewAllPerks, obj[featureName].analyticsPage, undefined, tmp5);
+  const loading = tmp32.loading;
   [][0] = onViewAllPerks;
   if (null == obj[featureName]) {
     return null;
-  } else if (null == tmp28.image) {
-    const items6 = [tmp36, , , ];
+  } else if (null == tmp29.image) {
+    const items6 = [tmp37, , , ];
     const obj19 = { style: null, children: null };
     obj19[0] = tmp.textContainer;
-    let tmp23Result = null;
-    if (true === tmp28.showBetaBadge) {
+    let tmp24Result = null;
+    if (true === tmp29.showBetaBadge) {
       const obj20 = { size: null, gradient: true, style: null };
       obj20[0] = tmp2(stringResult3[49]).BetaSizes.SMALL;
       obj20[2] = tmp.betaTag;
-      tmp23Result = tmp23(string(stringResult3[49]), obj20);
+      tmp24Result = tmp24(string(stringResult3[49]), obj20);
       const stringResult2 = string(stringResult3[49]);
     }
-    const items7 = [tmp23Result, , ];
+    const items7 = [tmp24Result, , ];
     const obj21 = { style: null, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
     obj21[0] = tmp.text;
-    obj21[3] = tmp28.title;
-    items7[1] = tmp23(tmp2(stringResult3[37]).Text, obj21);
+    obj21[3] = tmp29.title;
+    items7[1] = tmp24(tmp2(stringResult3[37]).Text, obj21);
     const obj22 = { style: null, variant: "text-sm/normal", children: null };
     const items8 = [, ];
     ({ text: arr10[0], description: arr10[1] } = tmp);
     obj22[0] = items8;
-    obj22[2] = tmp28.description;
-    items7[2] = tmp23(tmp2(stringResult3[37]).Text, obj22);
+    obj22[2] = tmp29.description;
+    items7[2] = tmp24(tmp2(stringResult3[37]).Text, obj22);
     obj19[1] = items7;
-    items6[1] = tmp34(tmp35, obj19);
-    tmp23Result = null;
+    items6[1] = tmp35(tmp36, obj19);
+    tmp24Result = null;
     if (featureName === tmp2(stringResult3[17]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
       const obj23 = { isKestrelTreatment: null };
-      obj23[0] = true === tmp28.isKestrelRaisedCap;
-      tmp23Result = tmp23(AlwaysCompressImagesSwitch, obj23);
+      obj23[0] = true === tmp29.isKestrelRaisedCap;
+      tmp24Result = tmp24(AlwaysCompressImagesSwitch, obj23);
     }
-    items6[2] = tmp23Result;
+    items6[2] = tmp24Result;
     let obj24 = { style: null, children: null };
     obj24[0] = tmp.buttonContainer;
     let Button = tmp2(stringResult3[50]).Button;
@@ -367,7 +373,7 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
     obj25[0] = loading;
     let onPress = null;
     if (!loading) {
-      onPress = tmp31.onPress;
+      onPress = tmp32.onPress;
     }
     obj25[1] = onPress;
     let intl18 = tmp2(stringResult3[22]).intl;
@@ -383,46 +389,46 @@ export default function PremiumUpsellActionSheet(subfeatureName) {
     obj25[2] = string2Result;
     obj25[3] = string(stringResult3[51]);
     obj25 = [, ];
-    obj25[0] = tmp23(Button, obj25);
+    obj25[0] = tmp24(Button, obj25);
     const obj27 = { variant: "secondary", text: null, onPress: null };
     intl18 = tmp2(stringResult3[22]).intl;
     string = intl18.string;
     stringResult3 = string(tmp2(stringResult3[22]).t.PcTCB7);
     obj27[1] = stringResult3;
-    obj27[2] = tmp32;
-    Button = tmp23(tmp2(stringResult3[50]).Button, obj27);
+    obj27[2] = tmp33;
+    Button = tmp24(tmp2(stringResult3[50]).Button, obj27);
     obj25[1] = Button;
     obj24[1] = obj25;
-    obj24 = tmp34(tmp35, obj24);
+    obj24 = tmp35(tmp36, obj24);
     items6[3] = obj24;
     obj26[0] = items6;
-    string2 = tmp34(tmp35, obj26);
+    string2 = tmp35(tmp36, obj26);
     t[1] = string2;
-    tmp23(tmp33, t);
-    const tmp23Result1 = tmp23(Button, obj25);
-  } else if (null != tmp28.imageGradientBackground) {
+    tmp24(tmp34, t);
+    const tmp24Result1 = tmp24(Button, obj25);
+  } else if (null != tmp29.imageGradientBackground) {
     const obj28 = { style: null, children: null };
     obj28[0] = tmp.imageGradientBackgroundContainer;
     const obj29 = { colors: null, start: null, end: null, style: null, children: null };
-    obj29[0] = tmp28.imageGradientBackground.colors;
-    obj29[1] = tmp28.imageGradientBackground.start;
-    obj29[2] = tmp28.imageGradientBackground.end;
+    obj29[0] = tmp29.imageGradientBackground.colors;
+    obj29[1] = tmp29.imageGradientBackground.start;
+    obj29[2] = tmp29.imageGradientBackground.end;
     obj29[3] = tmp.imageGradientBackground;
     const obj30 = { image: null, style: null, useReducedMotion: null };
-    obj30[0] = tmp28.image;
+    obj30[0] = tmp29.image;
     const items9 = [, ];
     ({ image: arr7[0], imageInGradientBackground: arr7[1] } = tmp);
     obj30[1] = items9;
     obj30[2] = stateFromStores3;
-    obj29[4] = tmp23(PremiumUpsellImage, obj30);
-    obj28[1] = tmp23(string(stringResult3[48]), obj29);
-    let tmp23Result3 = tmp23(tmp35, obj28);
+    obj29[4] = tmp24(PremiumUpsellImage, obj30);
+    obj28[1] = tmp24(string(stringResult3[48]), obj29);
+    let tmp24Result3 = tmp24(tmp36, obj28);
     const stringResult4 = string(stringResult3[48]);
   } else {
     const obj31 = { image: null, style: null, useReducedMotion: null };
-    obj31[0] = tmp28.image;
+    obj31[0] = tmp29.image;
     obj31[1] = tmp.image;
     obj31[2] = stateFromStores3;
-    tmp23Result3 = tmp23(PremiumUpsellImage, obj31);
+    tmp24Result3 = tmp24(PremiumUpsellImage, obj31);
   }
 };

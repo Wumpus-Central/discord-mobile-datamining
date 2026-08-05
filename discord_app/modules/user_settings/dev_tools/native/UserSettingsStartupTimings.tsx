@@ -47,7 +47,7 @@ export default function UserSettingsStartupTimings() {
   const useResult = React.use(num);
   React = useResult;
   let items = [useResult, first, first1];
-  const memo = React.useMemo(() => first(9790)(TableRowGroupTitle, !first, first1).split("\n"), items);
+  const memo = React.useMemo(() => first(9761)(TableRowGroupTitle, !first, first1).split("\n"), items);
   let obj1 = initialize;
   let items1 = [refreshSourceMapCookie];
   let closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
@@ -77,7 +77,7 @@ export default function UserSettingsStartupTimings() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -96,7 +96,7 @@ export default function UserSettingsStartupTimings() {
             let closure_0 = tmp2;
             closure_0 = undefined;
             closure_1 = undefined;
-            let obj3 = outer1_1(4143);
+            let obj3 = outer1_1(4113);
             dependencyMap = 1;
             c3 = 1;
             const obj1 = { value: null, done: false };
@@ -113,13 +113,13 @@ export default function UserSettingsStartupTimings() {
           return obj2;
         } else {
           closure_0 = arg1;
-          closure_1 = outer1_1(9790)(closure_0);
-          obj = outer1_0(8845);
+          closure_1 = outer1_1(9761)(closure_0);
+          obj = outer1_0(8817);
           obj3 = { message: null };
           obj3[0] = closure_1;
           obj.showShareActionSheet(obj3, "Startup Timing");
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;
@@ -144,8 +144,8 @@ export default function UserSettingsStartupTimings() {
       },
       checked: closure_6
     };
-    obj[2] = callback(callback2(8259).TableCheckboxRow, obj);
-    const items = [callback(callback2(5649).TableRowGroup, obj), , , , ];
+    obj[2] = callback(callback2(8231).TableCheckboxRow, obj);
+    const items = [callback(callback2(5634).TableRowGroup, obj), , , , ];
     const obj1 = { children: null };
     const obj2 = { color: "text-brand", children: null };
     const result = refreshSourceMapCookie / 1000;
@@ -223,26 +223,26 @@ export default function UserSettingsStartupTimings() {
     items2[7] = callback2(lastTrackedAppUiViewed2Properties, obj17);
     obj16[0] = items2;
     obj15[0] = callback2(closure_10, obj16);
-    obj14[2] = callback(callback2(5315).TableRow, obj15);
-    items[1] = callback(callback2(5649).TableRowGroup, obj14);
+    obj14[2] = callback(callback2(5300).TableRow, obj15);
+    items[1] = callback(callback2(5634).TableRowGroup, obj14);
     const obj18 = { title: "Legend", hasIcons: false, children: null };
     const obj19 = { label: null };
     const obj20 = { children: null };
     const items10 = [callback2(lastTrackedAppUiViewed2Properties, { children: ["\u2615", " - Java / Kotlin"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F3A8}", " - React render"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F4BE}", " - CacheStore"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F9A5}", " - Slow Store Update / Handler"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F3C3}", " - Startup Event"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F310}", " - Socket Event"] })];
     obj20[0] = items10;
     obj19[0] = callback2(closure_10, obj20);
-    obj18[2] = callback(callback2(5315).TableRow, obj19);
-    items[2] = callback(callback2(5649).TableRowGroup, obj18);
+    obj18[2] = callback(callback2(5300).TableRow, obj19);
+    items[2] = callback(callback2(5634).TableRowGroup, obj18);
     const obj21 = { title: "Detailed Times", hasIcons: false, children: null };
     const items11 = [
-      callback(callback2(8259).TableCheckboxRow, {
+      callback(callback2(8231).TableCheckboxRow, {
         label: "Hide the Noise",
         onPress() {
           return callback((arg0) => !arg0);
         },
         checked: first
       }),
-      callback(callback2(8259).TableCheckboxRow, {
+      callback(callback2(8231).TableCheckboxRow, {
         label: "Hide paints",
         onPress() {
           return callback2((arg0) => !arg0);
@@ -251,15 +251,15 @@ export default function UserSettingsStartupTimings() {
       })
     ];
     obj21[2] = items11;
-    items[3] = callback2(callback2(5649).TableRowGroup, obj21);
+    items[3] = callback2(callback2(5634).TableRowGroup, obj21);
     const obj24 = { title: "Share Timings", hasIcons: true, children: null };
     const obj25 = { icon: null, label: "Copy timings to clipboard.", arrow: true, onPress: null };
-    obj25[0] = callback(callback2(12142).ShareIcon, {});
+    obj25[0] = callback(callback2(12114).ShareIcon, {});
     obj25[3] = closure_14;
-    obj24[2] = callback(callback2(5315).TableRow, obj25);
-    items[4] = callback(callback2(5649).TableRowGroup, obj24);
+    obj24[2] = callback(callback2(5300).TableRow, obj25);
+    items[4] = callback(callback2(5634).TableRowGroup, obj24);
     obj[2] = items;
-    const items12 = [callback2(callback2(4693).Stack, obj), callback(closure_6, { style: callback2.border })];
+    const items12 = [callback2(callback2(4663).Stack, obj), callback(closure_6, { style: callback2.border })];
     obj13[0] = items12;
     return callback2(closure_10, obj13);
   };

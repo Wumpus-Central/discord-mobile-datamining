@@ -57,7 +57,7 @@ function _openImagePickerUnhandled() {
           obj[0] = originalMd5;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -403,7 +403,7 @@ function _openImagePicker() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -538,14 +538,14 @@ function _mediaManager() {
         tmp24 = null;
       }
       c2 = tmp24;
-      yield "ct";
+      yield "PX_8";
       let MediaManager = 1;
       MediaManager = MediaManager.MediaManager;
       yield MediaManager[closure_0](closure_1, c2);
       MediaManager = 0;
       closure_3 = mergeGuildAvatar;
       logger.warn(closure_3);
-      yield "HermesInternal";
+      yield "T";
       MediaManager = 0;
       return arg1;
     })();
@@ -700,7 +700,7 @@ function _getPhotoKitDataUTI() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -729,7 +729,7 @@ function _getPhotoKitDataUTI() {
                 }
               }
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else if (1 === tmp7) {
             c5 = 0;
@@ -801,7 +801,7 @@ function _shouldConvertToPNG() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -934,7 +934,7 @@ function convertVideo(videoMetadata) {
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
-      let frameRate = Math.min(videoMetadata.frameRate, tmp(4849).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
+      let frameRate = Math.min(videoMetadata.frameRate, tmp(4834).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
     }
     obj.frameRate = frameRate;
     obj.skipVideoTranscode = result1;
@@ -959,7 +959,7 @@ function convertVideo(videoMetadata) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             } else {
               try {
@@ -1137,7 +1137,7 @@ function convertVideo(videoMetadata) {
                                 }
                                 if (c1) {
                                   c4 = 3;
-                                  return { value: "HermesInternal", done: null };
+                                  return { value: "T", done: null };
                                 } else {
                                   const obj = { currentFailures: null, config: null, capabilities: null, attempt: null };
                                   obj[0] = min.failures;
@@ -1467,7 +1467,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != str3.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj4 = { uri: null, overrideType: "a" };
+                      const obj4 = { uri: null, overrideType: "Array" };
                       obj4[0] = str3;
                       isVideo2 = tmp12(tmp13[11]).getFile(obj4).isVideo;
                       const tmp12Result3 = tmp12(tmp13[11]);
@@ -1486,7 +1486,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != str3.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj5 = { uri: null, overrideType: "a" };
+                  const obj5 = { uri: null, overrideType: "Array" };
                   obj5[0] = str3;
                   isVideo = tmp12(tmp13[11]).getFile(obj5).isVideo;
                   const tmp12Result5 = tmp12(tmp13[11]);
@@ -1538,7 +1538,7 @@ function _buildResolvedUpload() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -1639,7 +1639,7 @@ function _processVideoUpload() {
       let c6;
       c1 = tmp2;
       ({ originalUri: c0, filename: c1, mimeType: c2, fileSize: c3, spoiler: c4, description: c5, i: c6 } = callback);
-      yield "ct";
+      yield "PX_8";
       let closure_7 = callback2();
       let dataSavingMode = closure_10.dataSavingMode;
       if (dataSavingMode) {
@@ -1731,7 +1731,7 @@ function _processImageOrFileUpload() {
       c3 = tmp2;
       let throwTypeErrorResult = lib;
       ({ originalUri: c0, filename: width, mimeType: height, spoiler: c3, description: c4, i: c5, width: c6, height: c7, allowOptimization: c8 } = lib);
-      yield "ct";
+      yield "PX_8";
       throwTypeErrorResult = c4;
       throwTypeErrorResult = outer1_10;
       let dataSavingMode = outer1_10.dataSavingMode;
@@ -2029,7 +2029,7 @@ function _tryConvertImage() {
             obj[0] = path;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -2070,7 +2070,7 @@ function _tryConvertImage() {
                 let closure_19;
                 c7 = 1;
                 c8 = 1;
-                return { value: "ct", done: "Array" };
+                return { value: "PX_8", done: "Array" };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -2177,7 +2177,7 @@ function _tryConvertImage() {
                   if (handleConnectionInfoChange) {
                     const obj9 = { path: null, encoderUsed: null };
                     obj9[0] = handleConnectionInfoChange;
-                    obj9[1] = lib(4511).ImageEncoder.NATIVE;
+                    obj9[1] = lib(4481).ImageEncoder.NATIVE;
                     tmp51 = obj9;
                   }
                   c8 = 3;
@@ -2243,7 +2243,7 @@ function _tryConvertImage() {
                   return obj16;
                 } else {
                   dependencyMap.path = path;
-                  dependencyMap.encoderUsed = lib(4511).ImageEncoder.PASSTHROUGH;
+                  dependencyMap.encoderUsed = lib(4481).ImageEncoder.PASSTHROUGH;
                   c5 = 0;
                   c8 = 3;
                   let obj17 = { value: null, done: true };
@@ -2318,10 +2318,10 @@ function _tryConvertImage() {
                 obj22[0] = tmp10;
                 return obj22;
               }
-              obj16 = lib(4847);
+              obj16 = lib(4832);
               const outer1_13 = obj16.shouldForceConvertToJPG(closure_0, outer1_1, outer1_10);
               if (!outer1_13) {
-                obj17 = lib(4847);
+                obj17 = lib(4832);
                 if (!obj17.shouldConvertToJPG(closure_0, outer1_1, outer1_2, outer1_4, c7)) {
                   if ((function shouldConvertToGifFilepath(closure_0, outer1_1) {
                     const isIOSResult = _undefined(500).isIOS();
@@ -2337,7 +2337,7 @@ function _tryConvertImage() {
                       } else {
                         tmp7 = null != closure_0.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = _undefined(4847);
+                      tmpResult = _undefined(4832);
                     }
                   })(closure_0, outer1_1)) {
                     c7 = 9;
@@ -2409,7 +2409,7 @@ function _fetchVideoMetadata() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -2539,7 +2539,7 @@ function _getImageDimensionsIfMissing() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -2697,7 +2697,7 @@ function _isHEVCEncodingSupported() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -2793,7 +2793,7 @@ function _checkVideoEncodingSupport() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -2896,7 +2896,7 @@ function _calculateImageQualityMetrics() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {

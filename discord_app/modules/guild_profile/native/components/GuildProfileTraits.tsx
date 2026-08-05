@@ -28,7 +28,7 @@ function TraitEmoji(emoji) {
     obj[0] = emojiURL;
     obj[1] = getEmojiUnavailableReason.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
     obj[2] = tmp.emojiImage;
-    return callback(tmp5(5301), obj);
+    return callback(tmp5(5286), obj);
   }
 }
 function GuildProfileTraitView(trait) {

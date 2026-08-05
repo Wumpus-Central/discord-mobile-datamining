@@ -18,7 +18,7 @@ function HeaderIcon(channel) {
   if (null != stateFromStores) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(5661).GuildIconSizes.XSMALL;
+    obj[1] = tmp2(5646).GuildIconSizes.XSMALL;
     let tmp6Result = callback(GuildIconSizes, obj);
     const tmp13 = GuildIconSizes;
   } else {
@@ -35,7 +35,7 @@ function HeaderIcon(channel) {
     } else {
       const obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
-      obj1[1] = tmp6(tmp2(4781).ChatIcon, { size: "xxs" });
+      obj1[1] = tmp6(tmp2(4751).ChatIcon, { size: "xxs" });
       tmp6Result = tmp6(View, obj1);
     }
   }
@@ -48,7 +48,7 @@ function ChannelName(channel) {
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
   const tmp5 = computeChannelName(channel, false);
-  let obj1 = channel(4745);
+  let obj1 = channel(4715);
   const channelIconComponentWithGuild = obj1.getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
@@ -68,7 +68,7 @@ function ChannelName(channel) {
     obj1[0] = tmp.channelTypeIcon;
     tmp12 = callback(channelIconComponentWithGuild, obj1);
   }
-  const items1 = [tmp12, callback(channel(4281).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [tmp12, callback(channel(4251).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
   obj[1] = items1;
   return closure_6(View, obj);
 }

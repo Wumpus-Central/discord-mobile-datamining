@@ -105,7 +105,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     });
   }, []);
   const items2 = [first];
-  const memo = applicationCommandOptionValueParser.useMemo(() => first.filter((arg0) => null == gameById.getGameById(arg0)), items2);
+  const memo = applicationCommandOptionValueParser.useMemo(() => first.filter((closure_0) => null == gameById.getGameById(closure_0)), items2);
   const obj6 = importAll(commandsDisabled[18]);
   const games = id(commandsDisabled[13]).useGames(memo);
   const obj7 = id(commandsDisabled[13]);

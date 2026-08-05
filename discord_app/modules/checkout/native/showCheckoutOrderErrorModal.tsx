@@ -35,7 +35,7 @@ function SyncedLoadingAlertModal(onConfirm) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ function SyncedLoadingAlertModal(onConfirm) {
           c3 = 0;
           v0(false);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp22) {
         getSystemLocale = tmp22;
@@ -91,16 +91,16 @@ function SyncedLoadingAlertModal(onConfirm) {
     }
   });
   obj[3] = tmp2;
-  const items = [callback3(onConfirm(4628).AlertActionButton, obj), ];
+  const items = [callback3(onConfirm(4598).AlertActionButton, obj), ];
   let obj1 = { variant: "secondary", text: null, onPress: null, loading: null };
   const intl = onConfirm(1236).intl;
   obj1[1] = intl.string(onConfirm(1236).t["ETE/oC"]);
   obj1[2] = onCancel;
   obj1[3] = tmp2;
-  items[1] = callback3(onConfirm(4628).AlertActionButton, obj1);
+  items[1] = callback3(onConfirm(4598).AlertActionButton, obj1);
   obj[0] = items;
   obj[2] = callback4(closure_6, obj);
-  return callback3(onConfirm(4628).AlertModal, obj);
+  return callback3(onConfirm(4598).AlertModal, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const result = require("noop").fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
@@ -142,7 +142,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -178,7 +178,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
             callback = arg1;
             callback(callback);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -207,6 +207,6 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj = {};
     const merged1 = Object.assign(merged);
     obj = { dismissable: obj.dismissable };
-    callback(4625).openAlert(key, outer1_5(outer1_8, obj), onCloseCallback, obj);
+    callback(4595).openAlert(key, outer1_5(outer1_8, obj), onCloseCallback, obj);
   });
 };

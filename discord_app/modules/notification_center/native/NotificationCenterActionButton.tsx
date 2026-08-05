@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/native/NotificationCenterActionButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../_runtime/08415_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08387_registerAsset.js";
 import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

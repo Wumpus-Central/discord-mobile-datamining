@@ -48,7 +48,7 @@ export const Backdrop = function Backdrop(animatedProps) {
   }
   backgroundColor2 = undefined;
   let backgroundColor = createCacheKey();
-  let obj = backgroundColor2(3997);
+  let obj = backgroundColor2(3967);
   backgroundColor2 = backgroundColor.backdrop.backgroundColor;
   const items = [backgroundColor2];
   obj = { onPress: onDismiss, "aria-hidden": true };

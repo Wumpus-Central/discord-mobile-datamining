@@ -32,7 +32,7 @@ function _saveGuildIdentityChanges() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -66,7 +66,7 @@ function _saveGuildIdentityChanges() {
               body = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -160,9 +160,9 @@ function _saveGuildIdentityChanges() {
                 const obj6 = { url: null, body: null, headers: null, oldFormErrors: true, rejectWithError: false };
                 obj6[0] = c4.SET_GUILD_MEMBER(callback);
                 obj6[1] = obj3;
-                let obj9 = callback2(8083);
+                let obj9 = callback2(8055);
                 const obj7 = {};
-                obj7[callback(8080).SafetyScannedUploadSurface.USER_GUILD_PROFILE_AVATAR] = c8;
+                obj7[callback(8052).SafetyScannedUploadSurface.USER_GUILD_PROFILE_AVATAR] = c8;
                 obj6[2] = obj9.buildHeadersForMd5(obj7);
                 c7 = 3;
                 c8 = 1;

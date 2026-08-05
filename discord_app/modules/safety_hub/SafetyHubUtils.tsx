@@ -2,7 +2,7 @@
 import fetchFingerprint from "fetchFingerprint";
 import SafetyHubView from "SafetyHubView";
 import ME from "ME";
-import { t } from "../../../_runtime/03867_t.js";
+import { t } from "../../../_runtime/03837_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";

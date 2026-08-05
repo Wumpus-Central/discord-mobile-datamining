@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx
 import scheduledEventSort from "scheduledEventSort";
 import { GuildScheduledEventEntityTypes as closure_5 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { registerAsset } from "../../../../_runtime/08965_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08937_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { getRRule } from "../utils/ScheduleUtils.tsx";
 
@@ -40,7 +40,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     const intl4 = tmp(1236).intl;
     let stringResult = intl4.string(tmp(1236).t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = tmp8(7823);
+      tmp8Result = tmp8(7795);
     }
     let entity_type;
     if (event != null) {
@@ -53,11 +53,11 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     let ICON_FEEDBACK_CRITICAL = tmp8(712).colors.ICON_FEEDBACK_POSITIVE;
     let stringResult1 = stringResult;
   } else if (tmp7) {
-    tmp8Result = tmp8(9062);
+    tmp8Result = tmp8(9034);
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result = tmp8(9062);
+    tmp8Result = tmp8(9034);
     const intl3 = tmp(1236).intl;
     stringResult1 = intl3.string(tmp(1236).t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
@@ -75,9 +75,9 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
         formatToPlainStringResult = intl.string(tmp(1236).t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result = tmp8(9062);
+      tmp8Result = tmp8(9034);
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result1 = tmp8(9062);
+      const tmp8Result1 = tmp8(9034);
     }
   }
   if (isCanceled) {

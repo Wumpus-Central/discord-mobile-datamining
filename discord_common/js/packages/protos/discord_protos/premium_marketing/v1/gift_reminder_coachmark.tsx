@@ -17,7 +17,7 @@ class GiftReminderCoachmark$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(7282).ThemeAwareAsset;
+            return callback(7254).ThemeAwareAsset;
           }
     };
     obj = { no: 5, name: "header_localized", kind: "message", T: null };
@@ -33,7 +33,7 @@ class GiftReminderCoachmark$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7272).LocalizedString;
+            return callback(7244).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftReminderCoachmark", items, T);
@@ -183,7 +183,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(7282).ThemeAwareAsset;
+      return callback(7254).ThemeAwareAsset;
     }
   },
 ,
@@ -202,7 +202,7 @@ items[5] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(7272).LocalizedString;
+    return callback(7244).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.GiftReminderCoachmark", items, tmp, T, GiftReminderCoachmark$Type, prototype, items);

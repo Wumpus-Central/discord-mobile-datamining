@@ -6,7 +6,7 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import importDefaultResult1 from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/12954_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12926_registerAsset.js";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";

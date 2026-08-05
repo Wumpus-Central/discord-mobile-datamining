@@ -1,5 +1,5 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
-import { t } from "../../../../../_runtime/04484_t.js";
+import { t } from "../../../../../_runtime/04454_t.js";
 import { PollLayoutTypes } from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import { NativeShadowType } from "../PollMessageChatDataTypes.tsx";
 function normal(border) {

@@ -35,7 +35,7 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
   const guildId = store2.getGuildId();
   const channelId = store.getChannelId(guildId);
   const obj2 = sortByMatchScore;
-  const tmp6 = results[obj2.findNextSelectedResult(obj2, require(undefined, 7230) /* sortByMatchScore */.FindResultDirections.DOWN, -1, results)];
+  const tmp6 = results[obj2.findNextSelectedResult(obj2, require(undefined, 7202) /* sortByMatchScore */.FindResultDirections.DOWN, -1, results)];
   const isEmailResult = set.isEmail(query);
   const obj3 = set;
   const tmp7 = importDefault;
@@ -85,11 +85,11 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
     }
     obj[11] = score;
     obj[12] = obj.getResultTotals();
-    obj[13] = obj.getResultTotals(tmp4(7230).AutocompleterResultTypes.USER);
-    obj[14] = obj.getResultTotals(tmp4(7230).AutocompleterResultTypes.TEXT_CHANNEL);
-    obj[15] = obj.getResultTotals(tmp4(7230).AutocompleterResultTypes.VOICE_CHANNEL);
-    obj[16] = obj.getResultTotals(tmp4(7230).AutocompleterResultTypes.GUILD);
-    obj[17] = obj.getResultTotals(tmp4(7230).AutocompleterResultTypes.GROUP_DM);
+    obj[13] = obj.getResultTotals(tmp4(7202).AutocompleterResultTypes.USER);
+    obj[14] = obj.getResultTotals(tmp4(7202).AutocompleterResultTypes.TEXT_CHANNEL);
+    obj[15] = obj.getResultTotals(tmp4(7202).AutocompleterResultTypes.VOICE_CHANNEL);
+    obj[16] = obj.getResultTotals(tmp4(7202).AutocompleterResultTypes.GUILD);
+    obj[17] = obj.getResultTotals(tmp4(7202).AutocompleterResultTypes.GROUP_DM);
     if (null != channelId) {
       const channel = authStore.getChannel(channelId);
       type = null;
@@ -104,14 +104,14 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
         obj.selected_type = null;
         obj.selected_score = tmp27;
         obj.selected_index = results.indexOf(type);
-        if (tmp4(7230).AutocompleterResultTypes.GUILD === type3) {
+        if (tmp4(7202).AutocompleterResultTypes.GUILD === type3) {
           obj.selected_guild_id = record.id;
         } else {
-          if (tmp4(7230).AutocompleterResultTypes.TEXT_CHANNEL !== type3) {
-            if (tmp4(7230).AutocompleterResultTypes.VOICE_CHANNEL !== type3) {
-              if (tmp4(7230).AutocompleterResultTypes.GROUP_DM === type3) {
+          if (tmp4(7202).AutocompleterResultTypes.TEXT_CHANNEL !== type3) {
+            if (tmp4(7202).AutocompleterResultTypes.VOICE_CHANNEL !== type3) {
+              if (tmp4(7202).AutocompleterResultTypes.GROUP_DM === type3) {
                 obj.selected_channel_id = record.id;
-              } else if (tmp4(7230).AutocompleterResultTypes.USER === type3) {
+              } else if (tmp4(7202).AutocompleterResultTypes.USER === type3) {
                 obj.selected_user_id = record.id;
               }
             }
@@ -125,14 +125,14 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
           }
           obj.selected_channel_id = record.id;
         }
-      } else if (type.type === tmp4(7230).AutocompleterResultTypes.IN_APP_NAVIGATION) {
+      } else if (type.type === tmp4(7202).AutocompleterResultTypes.IN_APP_NAVIGATION) {
         let type2 = `${type.type}_${type.record.type}`;
       } else {
         type2 = type.type;
       }
     }
     tmp7(698).track(QUICKSWITCHER_CLOSED, obj);
-  } else if (tmp6.type === tmp4(7230).AutocompleterResultTypes.IN_APP_NAVIGATION) {
+  } else if (tmp6.type === tmp4(7202).AutocompleterResultTypes.IN_APP_NAVIGATION) {
     type = `${tmp6.type}_${tmp6.record.type}`;
   } else {
     type = tmp6.type;
@@ -195,7 +195,7 @@ function _openInviteFromQuickSwitcher() {
           obj[0] = invite;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -239,7 +239,7 @@ function _openInviteFromQuickSwitcher() {
               obj.dispatch(obj3);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;
@@ -352,63 +352,63 @@ export const switchToResult = function switchToResult(record) {
   ({ type, record } = record);
   obj = { page: constants2.QUICK_SWITCHER };
   if (sortByMatchScore.AutocompleterResultTypes.GUILD === type) {
-    let tmp5Result = tmp5(5866);
+    let tmp5Result = tmp5(5851);
     tmp5Result.transitionToGuild(record.id, { navigationReplace: true });
-  } else if (tmp5(7230).AutocompleterResultTypes.TEXT_CHANNEL === type) {
+  } else if (tmp5(7202).AutocompleterResultTypes.TEXT_CHANNEL === type) {
     const channel = authStore.getChannel(record.id);
     if (null != channel) {
-      tmp5Result = tmp5(4293);
+      tmp5Result = tmp5(4263);
       obj = { state: null, navigationReplace: true };
       const obj1 = { analyticsSource: null };
       obj1[0] = obj;
       obj[0] = obj1;
       tmp5Result.transitionToChannel(channel.id, obj);
     }
-  } else if (tmp5(7230).AutocompleterResultTypes.VOICE_CHANNEL === type) {
+  } else if (tmp5(7202).AutocompleterResultTypes.VOICE_CHANNEL === type) {
     const channel1 = authStore.getChannel(record.id);
     if (null != channel1) {
       if (flag) {
-        let tmpResult = tmp(4478);
+        let tmpResult = tmp(4448);
         tmpResult.updateChatOpen(record.id, true);
       } else {
-        tmpResult = tmp(5096);
+        tmpResult = tmp(5081);
         const voiceChannel = tmpResult.selectVoiceChannel(record.id);
       }
       const obj2 = { state: null, navigationReplace: true };
       const obj3 = { analyticsSource: null };
       obj3[0] = obj;
       obj2[0] = obj3;
-      tmp5(4293).transitionToChannel(channel1.id, obj2);
-      const tmp5Result1 = tmp5(4293);
+      tmp5(4263).transitionToChannel(channel1.id, obj2);
+      const tmp5Result1 = tmp5(4263);
     }
-  } else if (tmp5(7230).AutocompleterResultTypes.USER === type) {
+  } else if (tmp5(7202).AutocompleterResultTypes.USER === type) {
     const obj4 = { recipientIds: null, location: "Quickswitcher" };
     const items = [record.id];
     obj4[0] = items;
-    tmp(4295).openPrivateChannel(obj4);
-    const tmpResult1 = tmp(4295);
-    tmp(10164).channelListScrollTo(closure_12, authStore.getDMFromUserId(record.id));
-    const tmpResult2 = tmp(10164);
-  } else if (tmp5(7230).AutocompleterResultTypes.GROUP_DM === type) {
-    tmp5(4293).transitionToChannel(record.id, { navigationReplace: true });
-    const tmp5Result2 = tmp5(4293);
-    tmp(10164).channelListScrollTo(closure_12, record.id);
-    const tmpResult3 = tmp(10164);
-  } else if (tmp5(7230).AutocompleterResultTypes.APPLICATION === type) {
+    tmp(4265).openPrivateChannel(obj4);
+    const tmpResult1 = tmp(4265);
+    tmp(10135).channelListScrollTo(closure_12, authStore.getDMFromUserId(record.id));
+    const tmpResult2 = tmp(10135);
+  } else if (tmp5(7202).AutocompleterResultTypes.GROUP_DM === type) {
+    tmp5(4263).transitionToChannel(record.id, { navigationReplace: true });
+    const tmp5Result2 = tmp5(4263);
+    tmp(10135).channelListScrollTo(closure_12, record.id);
+    const tmpResult3 = tmp(10135);
+  } else if (tmp5(7202).AutocompleterResultTypes.APPLICATION === type) {
     activeLibraryApplication = activeLibraryApplication.getActiveLibraryApplication(record.id);
     const id = record.id;
     ({ QUICK_SWITCHER, QUICK_SWITCHER: QUICK_SWITCHER2 } = closure_15);
     const resolved = Promise.resolve();
-  } else if (tmp5(7230).AutocompleterResultTypes.GAME_PROFILE === type) {
+  } else if (tmp5(7202).AutocompleterResultTypes.GAME_PROFILE === type) {
     const obj5 = { gameId: null, gameProfileModalChecks: null, source: null };
     obj5[0] = record.id;
     const obj6 = { shouldOpenGameProfile: true, gameId: null };
     obj6[1] = record.id;
     obj5[1] = obj6;
-    obj5[2] = tmp5(9200).GameProfileSources.QuickSwitcher;
-    tmp(9194).openGameProfileModal(obj5);
-    const tmpResult4 = tmp(9194);
-  } else if (tmp5(7230).AutocompleterResultTypes.LINK === type) {
+    obj5[2] = tmp5(9172).GameProfileSources.QuickSwitcher;
+    tmp(9166).openGameProfileModal(obj5);
+    const tmpResult4 = tmp(9166);
+  } else if (tmp5(7202).AutocompleterResultTypes.LINK === type) {
     if (null != record.inviteCode) {
       (function openInviteFromQuickSwitcher(inviteCode) {
         const self = this;
@@ -421,22 +421,22 @@ export const switchToResult = function switchToResult(record) {
         return applyArgumentsResult;
       })(record.inviteCode);
     } else {
-      tmp(5774)(record.path, { navigationReplace: true });
+      tmp(5759)(record.path, { navigationReplace: true });
     }
-  } else if (tmp5(7230).AutocompleterResultTypes.IN_APP_NAVIGATION === type) {
+  } else if (tmp5(7202).AutocompleterResultTypes.IN_APP_NAVIGATION === type) {
     if (record.record.type !== InAppNavigationType.SETTINGS) {
       if (record.record.type === tmp37.PLAYGROUND) {
-        const tmp5Result3 = tmp5(10165);
+        const tmp5Result3 = tmp5(10136);
       } else if (record.record.type === tmp37.SHOP_ORBS_TAB) {
         const obj7 = { tab: null, analyticsLocations: null, analyticsSource: null };
         obj7[0] = CollectibleShopTab.ORBS;
-        const items1 = [tmp(5630).QUICK_SWITCHER];
+        const items1 = [tmp(5615).QUICK_SWITCHER];
         obj7[1] = items1;
-        obj7[2] = tmp(5630).QUICK_SWITCHER;
-        tmp5(6909).openCollectiblesShop(obj7);
-        const tmp5Result4 = tmp5(6909);
+        obj7[2] = tmp(5615).QUICK_SWITCHER;
+        tmp5(6894).openCollectiblesShop(obj7);
+        const tmp5Result4 = tmp5(6894);
       } else {
-        tmp(5774)(record.path, { navigationReplace: true });
+        tmp(5759)(record.path, { navigationReplace: true });
       }
     }
   }

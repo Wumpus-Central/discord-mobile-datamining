@@ -24,7 +24,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        obj = { id: null, name: "a", animated: "t", src: "a", displayName: "isArray" };
+        obj = { id: null, name: "a", animated: true, src: true, displayName: true };
         obj[0] = emojiId;
         obj[2] = customGuildEmoji.animated;
         obj = { id: null, animated: null, size: 48 };
@@ -33,7 +33,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         obj[3] = getAvatarURL.getEmojiURL(obj);
         let accessibleEmojiDisplayName = str2;
         if (!result) {
-          let tmpResult = tmp(3924);
+          let tmpResult = tmp(3894);
           const obj1 = { id: null, name: null, animated: null };
           obj1[0] = emojiId;
           obj1[1] = str2;
@@ -56,7 +56,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
       obj2[3] = obj2.getURL(emojiName);
       let accessibleEmojiDisplayName1 = str;
       if (!result) {
-        tmpResult = tmp(3924);
+        tmpResult = tmp(3894);
         const obj3 = { id: "Array", name: false, animated: null };
         obj3[1] = str;
         accessibleEmojiDisplayName1 = tmpResult.getAccessibleEmojiDisplayName(false, 0, obj3);
@@ -82,18 +82,18 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = frozen.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(tmp4(4238));
+    let assetUriForEmbed = getAssetUriForEmbed(tmp4(4208));
     let tmp6 = tmp4;
     let tmp8 = tmp;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(tmp4(7868));
+    assetUriForEmbed = getAssetUriForEmbed(tmp4(7840));
     tmp6 = tmp4;
     tmp8 = tmp;
   }
   if (null != assetUriForEmbed) {
-    let tmp8Result = tmp8(7865);
+    let tmp8Result = tmp8(7837);
     let stringResult;
-    const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(4230));
+    const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(4200));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
@@ -118,11 +118,11 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       obj[1] = intl3.formatToParts(tmp8(1236).t.YtCu5p, obj);
       const intl4 = tmp8(1236).intl;
       obj[2] = intl4.string(tmp8(1236).t.C5UQC9);
-      tmp8Result = tmp8(7865);
-      obj[3] = tmp8Result.getAssetUriForEmbed(tmp6(7869));
-      obj[4] = tmp8(7865).getAssetUriForEmbed(tmp6(7870));
+      tmp8Result = tmp8(7837);
+      obj[3] = tmp8Result.getAssetUriForEmbed(tmp6(7841));
+      obj[4] = tmp8(7837).getAssetUriForEmbed(tmp6(7842));
       tmp14 = obj;
-      const tmp8Result1 = tmp8(7865);
+      const tmp8Result1 = tmp8(7837);
     }
     const obj2 = { numDisplayedReactions: 3, isFollowing: null, followIcon: null, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
     obj2[1] = isFollowing;
@@ -146,6 +146,6 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   } else {
     tmp6Result = tmp6(1208);
     const _HermesInternal = HermesInternal;
-    tmp6Result.captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4238 : 7868));
+    tmp6Result.captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4208 : 7840));
   }
 };

@@ -17,7 +17,7 @@ function _validate(id) {
 function toNotificationCenterItem(item_enum) {
   let tmp3 = item_enum.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
-    tmp3 = item_enum.type === tmp(7021).NotificationCenterItems.LIFECYCLE_ITEM;
+    tmp3 = item_enum.type === tmp(6995).NotificationCenterItems.LIFECYCLE_ITEM;
   }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
@@ -27,8 +27,8 @@ function toNotificationCenterItem(item_enum) {
   obj.kind = "notification-center-item";
   let messageRecord;
   if (null != item_enum.message) {
-    messageRecord = tmp(4504).createMessageRecord(item_enum.message);
-    const tmpResult = tmp(4504);
+    messageRecord = tmp(4474).createMessageRecord(item_enum.message);
+    const tmpResult = tmp(4474);
   }
   obj.message = messageRecord;
   let id;
@@ -43,7 +43,7 @@ function handleAddItem(type) {
     const item2 = type.item;
     let tmp3 = item2.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
-      tmp3 = item2.type === tmp(7021).NotificationCenterItems.LIFECYCLE_ITEM;
+      tmp3 = item2.type === tmp(6995).NotificationCenterItems.LIFECYCLE_ITEM;
     }
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
@@ -53,8 +53,8 @@ function handleAddItem(type) {
     obj.kind = "notification-center-item";
     let messageRecord;
     if (null != item2.message) {
-      messageRecord = tmp(4504).createMessageRecord(item2.message);
-      const tmpResult = tmp(4504);
+      messageRecord = tmp(4474).createMessageRecord(item2.message);
+      const tmpResult = tmp(4474);
     }
     obj.message = messageRecord;
     let id;
@@ -196,7 +196,7 @@ function handleRelationshipAddOrUpdate(relationship) {
     });
   }
 }
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Path", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
 let set = new Set();
 obj[6] = set;
 obj[7] = [];
@@ -378,7 +378,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
+    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Path", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     obj[6] = new Set();
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -509,7 +509,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
+    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Path", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     obj[6] = new Set();
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -570,7 +570,7 @@ obj = {
       const user = authStore.getUser(id);
       if (tmp6) {
         const items = [];
-        let obj = id(7022);
+        let obj = id(6996);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -666,7 +666,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
+    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Path", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     obj[6] = new Set();
     if (flag) {
       let prop = obj.notifCenterLocalItems;

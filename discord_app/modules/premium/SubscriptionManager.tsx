@@ -33,7 +33,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ let prototype = function SubscriptionManager() {
               }
             }
             currentUser = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -152,7 +152,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -191,7 +191,7 @@ let prototype = function SubscriptionManager() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       } catch (tmp8) {
         v0 = tmp;
         throw tmp8;
@@ -210,7 +210,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -229,7 +229,7 @@ let prototype = function SubscriptionManager() {
             dependencyMap = 1;
             c2 = 1;
             let obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(4604).fetchIpCountryCode();
+            obj1[0] = outer1_0(4574).fetchIpCountryCode();
             return obj1;
           }
         } else {
@@ -243,7 +243,7 @@ let prototype = function SubscriptionManager() {
               obj2[0] = arg1;
               return obj2;
             } else if (null != outer1_4.ipCountryCode) {
-              obj1 = outer1_0(4604);
+              obj1 = outer1_0(4574);
               dependencyMap = 2;
               c2 = 1;
               const obj3 = { value: null, done: false };
@@ -260,7 +260,7 @@ let prototype = function SubscriptionManager() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp13) {
         c2 = tmp;

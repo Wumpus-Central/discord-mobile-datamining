@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { SafetyHubLinks } from "SafetyHubView";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/07837_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07809_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -35,14 +35,14 @@ export default function SuspendedUserSafetyHubPage() {
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[2] = function onPress() {
-    callback(5736).closeSuspendedUser();
+    callback(5721).closeSuspendedUser();
   };
   obj1[3] = registerAsset;
   const items = [callback(IconButton.IconButton, obj1), ];
   const obj2 = {
     style: tmp.text,
     onPress() {
-      callback(3982).openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
+      callback(3952).openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
     },
     variant: "text-xs/medium",
     color: "control-critical-primary-text-default",

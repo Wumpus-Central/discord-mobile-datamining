@@ -131,7 +131,7 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
     const _Date = Date;
     const date = new Date();
     const intl2 = tmp3(1236).intl;
-    if (assetOrigin === tmp3(8086).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+    if (assetOrigin === tmp3(8058).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
       let DYil93 = tmp3(1236).t.eC2sZi;
     } else {
       DYil93 = tmp3(1236).t.DYil93;
@@ -211,7 +211,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[2] = description;
     obj[3] = originalMd5;
     return obj;
-  } else if (tmp3(8086).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(8058).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
     obj = { assetOrigin: null, imageUri: null, description: null, originalAsset: null, originalMd5: null };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
@@ -219,7 +219,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[3] = originalAsset;
     obj[4] = originalMd5;
     return obj;
-  } else if (tmp3(8086).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(8058).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
     const obj1 = { assetOrigin: null, imageUri: null, originalAsset: null };
     obj1[0] = NEW_ASSET;
     obj1[1] = imageUri;

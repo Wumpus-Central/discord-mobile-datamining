@@ -27,7 +27,7 @@ function _fetchUserEntitlements() {
         flag3 = true;
       }
       const entitlementType = tmp41.entitlementType;
-      yield "ct";
+      yield "PX_8";
       flag2(flag3[2]).dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
       let c4 = 1;
       const HTTP = flag(flag3[3]).HTTP;

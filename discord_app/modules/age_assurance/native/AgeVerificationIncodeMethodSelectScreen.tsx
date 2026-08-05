@@ -62,7 +62,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -171,34 +171,34 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj[1] = tmp5.content;
     obj = { variant: "heading-lg/bold", color: "text-strong", children: null };
     const intl = _getSystemLocale.intl;
-    obj[2] = intl.string(trustedOrigin(2803).eZvwAe);
+    obj[2] = intl.string(trustedOrigin(2773).eZvwAe);
     const items1 = [tmp6(_Text.Heading, obj), , , ];
     let obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
     const intl2 = _getSystemLocale.intl;
-    obj1[2] = intl2.string(trustedOrigin(2803)["5yWXmT"]);
+    obj1[2] = intl2.string(trustedOrigin(2773)["5yWXmT"]);
     items1[1] = tmp6(_Text.Text, obj1);
     if (tmp6Result) {
       let obj2 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
       const intl3 = tmp9(1236).intl;
       obj2[2] = intl3.string(tmp9(1236).t.c6kn6F);
-      tmp6Result = tmp6(tmp9(4281).Text, obj2);
+      tmp6Result = tmp6(tmp9(4251).Text, obj2);
     }
     items1[2] = tmp6Result;
     let obj3 = { hasIcons: false, children: null };
     const obj4 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl4 = tmp9(1236).intl;
-    obj4[1] = intl4.string(trustedOrigin(2803).rgXXcW);
+    obj4[1] = intl4.string(trustedOrigin(2773).rgXXcW);
     const intl5 = tmp9(1236).intl;
-    obj4[2] = intl5.string(trustedOrigin(2803).fm7qBC);
+    obj4[2] = intl5.string(trustedOrigin(2773).fm7qBC);
     obj4[3] = function onPress() {
       callback(outer1_8.FACIAL_AGE_ESTIMATION);
     };
     const items2 = [tmp6(_TableRowInner.TableRow, obj4), ];
     const obj5 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp9(1236).intl;
-    obj5[1] = intl6.string(trustedOrigin(2803)["NeVlw/"]);
+    obj5[1] = intl6.string(trustedOrigin(2773)["NeVlw/"]);
     const intl7 = tmp9(1236).intl;
-    obj5[2] = intl7.string(trustedOrigin(2803).ARmJ0M);
+    obj5[2] = intl7.string(trustedOrigin(2773).ARmJ0M);
     obj5[3] = function onPress() {
       callback(outer1_8.ID_VERIFICATION);
     };

@@ -70,7 +70,7 @@ function YouBarButtonIcon(hasBadge) {
   }
   let items1 = [size2, badgeSize, num4, num3];
   const items2 = [memo, hasBadge];
-  const memo1 = obj1.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "k", padding: "key", minWidth: "Date" }), items1);
+  const memo1 = obj1.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "children", bottom: "useStateFromStores", padding: "key", minWidth: "push" }), items1);
   obj = { style: { position: "relative", height: tmp, width: tmp }, children: null };
   const memo2 = obj1.useMemo(() => {
     if (size2) {

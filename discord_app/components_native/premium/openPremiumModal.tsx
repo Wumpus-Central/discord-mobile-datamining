@@ -4,5 +4,5 @@ import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 const result = require("asyncRequireImpl").fileFinishedImporting("components_native/premium/openPremiumModal.tsx");
 
 export default function openPremiumModal(closure_0) {
-  return ModalActionCreators.pushLazy(asyncRequireImpl(6783, dependencyMap.paths), closure_0, "PREMIUM_KEY", { presentation: "modal" });
+  return ModalActionCreators.pushLazy(asyncRequireImpl(6768, dependencyMap.paths), closure_0, "PREMIUM_KEY", { presentation: "modal" });
 };

@@ -8,5 +8,6 @@ export const AVATAR_SIZE = 76;
 export const AVATAR_BORDER_WIDTH = 6;
 export const SCROLL_EVENT_TIMER_MS = 16;
 export const useBannerHeight = function useBannerHeight() {
-  return useWindowDimensions().width * c2;
+  const size = useWindowDimensions({ ignoreKeyboard: true });
+  return Math.min(size.width, size.height) * c2;
 };

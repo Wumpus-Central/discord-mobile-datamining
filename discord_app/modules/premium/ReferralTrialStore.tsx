@@ -139,8 +139,8 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(6825).fetchReferralsRemaining();
-      const obj = userTrialOfferId(6825);
+      const referralsRemaining = userTrialOfferId(6810).fetchReferralsRemaining();
+      const obj = userTrialOfferId(6810);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);

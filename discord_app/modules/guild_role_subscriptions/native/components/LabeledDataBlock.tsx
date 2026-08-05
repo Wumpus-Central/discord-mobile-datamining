@@ -43,7 +43,7 @@ export default function LabeledDataBlock(arg0) {
     obj2[0] = tmp5(1297).Icon.Sizes.SMALL;
     obj2[1] = icon;
     obj1[2] = tmp4(tmp5(1297).Icon, obj2);
-    tmp4Result = tmp4(tmp5(4812).PressableOpacity, obj1);
+    tmp4Result = tmp4(tmp5(4797).PressableOpacity, obj1);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;

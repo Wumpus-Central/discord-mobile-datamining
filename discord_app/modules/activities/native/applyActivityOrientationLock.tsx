@@ -6,14 +6,14 @@ const result = require("handleOrientationChange").fileFinishedImporting("modules
 export default function applyActivityOrientationLock(arg0) {
   if (!obj.getIsTabletActivitySurface()) {
     if (OrientationLockState.UNLOCKED === arg0) {
-      let tmpResult = tmp(8817);
+      let tmpResult = tmp(8789);
       tmpResult.unlockOrientation({ unlockAfterRotatingToPreviousLock: true });
     } else if (tmp4.PORTRAIT === arg0) {
-      tmpResult = tmp(8817);
+      tmpResult = tmp(8789);
       tmpResult.lockOrientation("PORTRAIT", true);
     } else if (tmp4.LANDSCAPE === arg0) {
-      tmp(8817).lockOrientation("LANDSCAPE", true);
-      const tmpResult1 = tmp(8817);
+      tmp(8789).lockOrientation("LANDSCAPE", true);
+      const tmpResult1 = tmp(8789);
     }
   }
 };

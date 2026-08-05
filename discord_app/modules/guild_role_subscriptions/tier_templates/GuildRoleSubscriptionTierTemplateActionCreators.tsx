@@ -22,7 +22,7 @@ function _getTemplates() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -68,7 +68,7 @@ function _getTemplates() {
               obj.dispatch(obj4);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp16) {
           c4 = tmp;

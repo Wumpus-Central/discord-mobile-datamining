@@ -24,7 +24,7 @@ export default function GuildBadgeV2(arg0) {
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = tmp5(9181).getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = tmp5(9153).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
       const obj = { size: null, source: null, style: null, disableColor: true };
@@ -46,8 +46,8 @@ export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
   const tmp5 = badgeVariants.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;
   if (tmp6) {
-    tmp6 = null != tmp(9181).resolveImageSource(tmp5, guildTraits, arg1);
-    const tmpResult = tmp(9181);
+    tmp6 = null != tmp(9153).resolveImageSource(tmp5, guildTraits, arg1);
+    const tmpResult = tmp(9153);
   }
   return tmp6;
 };

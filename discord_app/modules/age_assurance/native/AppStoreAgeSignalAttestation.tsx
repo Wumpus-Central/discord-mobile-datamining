@@ -41,7 +41,7 @@ function _getAgeSignalIntegrityToken() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -107,7 +107,7 @@ function _getAgeSignalIntegrityToken() {
             return obj;
           }
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         } catch (tmp8) {
           c4 = tmp;
           throw tmp8;

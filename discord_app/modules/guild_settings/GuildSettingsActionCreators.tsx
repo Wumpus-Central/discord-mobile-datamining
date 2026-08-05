@@ -45,7 +45,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -87,7 +87,7 @@ let obj = {
             obj1[3] = outer1_3;
             obj1.dispatch(obj1);
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp26) {
           c0 = tmp;
@@ -278,7 +278,7 @@ let obj = {
     obj(709).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = store.getPendingOriginalMd5s();
     const obj5 = obj(709);
-    const obj6 = obj(8083);
+    const obj6 = obj(8055);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
     const HTTP = _sendRequest.HTTP;
     const obj2 = { url: closure_10.GUILD(id), query: obj3, body: obj, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
@@ -382,7 +382,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -418,7 +418,7 @@ let obj = {
               c3 = 1;
               obj3 = { value: null, done: false };
               obj3[0] = HTTP.del(obj1).then(() => {
-                const AccessibilityAnnouncer = _undefined(4100).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = _undefined(4070).AccessibilityAnnouncer;
                 const intl = _undefined(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(_undefined(1236).t["7iPyVW"]));
               });
@@ -443,7 +443,7 @@ let obj = {
               obj.transitionTo(outer1_14.GUILD_DISCOVERY);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp21) {
           c3 = tmp;
@@ -470,7 +470,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -489,9 +489,9 @@ let obj = {
               let c0 = 0;
               if (outer1_4.isFullServerPreview(outer1_0)) {
                 if (outer1_1 === outer1_6.getId()) {
-                  const result = outer1_0(5216).updateImpersonatedRoles(tmp29, dependencyMap);
+                  const result = outer1_0(5201).updateImpersonatedRoles(tmp29, dependencyMap);
                   c3 = 3;
-                  const obj6 = outer1_0(5216);
+                  const obj6 = outer1_0(5201);
                 }
               }
               const HTTP = outer1_0(530).HTTP;
@@ -588,7 +588,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -626,7 +626,7 @@ let obj = {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp9) {
           v0 = tmp;
@@ -648,7 +648,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -686,7 +686,7 @@ let obj = {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp9) {
           v0 = tmp;
@@ -712,7 +712,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -757,7 +757,7 @@ let obj = {
               return obj;
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
           if (c2) {
             c1 = 2;

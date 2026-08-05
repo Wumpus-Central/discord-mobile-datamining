@@ -27,7 +27,7 @@ function _maybeFetchCollectionsWithProducts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ function _maybeFetchCollectionsWithProducts() {
               body = undefined;
               body = 1;
               fromServer = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else {
             if (1 === tmp7) {
@@ -196,7 +196,7 @@ function _maybeFetchCollectionsForApplication() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ function _maybeFetchCollectionsForApplication() {
               let body;
               store = 1;
               fromServer = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else {
             if (1 === tmp7) {
@@ -279,7 +279,7 @@ function _maybeFetchCollectionsForApplication() {
                           }
                         }
                         fromServer = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "T", done: null };
                       }
                     }
                     locale = 1;

@@ -21,7 +21,7 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = getRRule;
   }
   obj[3] = recurrenceId;
-  obj.openLazy(asyncRequireImpl(8873, dependencyMap.paths), closure_5, obj, "stack");
+  obj.openLazy(asyncRequireImpl(8845, dependencyMap.paths), closure_5, obj, "stack");
 }
 function _transitionToEventDetailsFromInvite() {
   const self = this;
@@ -42,7 +42,7 @@ function _transitionToEventDetailsFromInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ function _transitionToEventDetailsFromInvite() {
             obj[2] = recurrenceId;
             closure_6(obj);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp17) {
           c5 = tmp;
@@ -118,5 +118,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
 export const openEndEventModal = function openEndEventModal(channel) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel };
-  obj.openLazy(asyncRequireImpl(9069, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(9041, dependencyMap.paths), closure_4, obj);
 };

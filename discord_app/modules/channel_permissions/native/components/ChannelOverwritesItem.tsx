@@ -5,8 +5,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { RowType } from "RowType";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08929_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08930_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08901_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08902_registerAsset.js";
 import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import { FormCheckbox } from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import { ShieldUserIcon } from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
@@ -62,8 +62,8 @@ function RemoveIcon(item) {
     }
     obj = { style: null };
     obj[0] = prop;
-    obj[4] = closure_7(item(5905).CircleXIcon, obj);
-    tmp3Result = tmp3(item(4812).PressableOpacity, obj);
+    obj[4] = closure_7(item(5890).CircleXIcon, obj);
+    tmp3Result = tmp3(item(4797).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -88,8 +88,8 @@ function RoleItem(arg0) {
   obj[0] = callback(ShieldUserIcon.ShieldUserIcon, obj);
   obj[1] = item.name;
   if (showType) {
-    subLabel = importAll(8919).getRowTypeLabel(item.rowType);
-    const obj3 = importAll(8919);
+    subLabel = importAll(8891).getRowTypeLabel(item.rowType);
+    const obj3 = importAll(8891);
   }
   obj[2] = subLabel;
   obj[3] = start;

@@ -51,7 +51,7 @@ export default function TermsFieldList(rules) {
   const intl = rules(1236).intl;
   obj[4] = intl.string(rules(1236).t.prJqwT);
   let items = [
-    callback(rules(4281).Text, obj),
+    callback(rules(4251).Text, obj),
     rules.map((rule) => {
       const items = [_undefined.termsContainer, , ];
       let firstItem = null;

@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import items from "items";
-import { t } from "../../../_runtime/03867_t.js";
+import { t } from "../../../_runtime/03837_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { messagesProxy } from "FamilyCenter.messages.js";
 import { maybeFetchCollectiblesForInvoices } from "FamilyCenterActionCreators.tsx";
@@ -35,14 +35,14 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   if (arg0) {
     obj[0] = string(tmp4["2AtcIs"]);
     const intl3 = tmp(1236).intl;
-    obj[1] = intl3.string(tmp3(2285).stOECr);
-    obj[2] = tmp3(2285).n8n5Ba;
+    obj[1] = intl3.string(tmp3(2255).stOECr);
+    obj[2] = tmp3(2255).n8n5Ba;
     let tmp5 = obj;
   } else {
     obj[0] = string(tmp4.g1ZX6m);
     const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(tmp3(2285).s3qSVt);
-    obj[2] = tmp3(2285).f1UJiC;
+    obj[1] = intl2.string(tmp3(2255).s3qSVt);
+    obj[2] = tmp3(2255).f1UJiC;
     tmp5 = obj;
   }
   return tmp5;

@@ -26,6 +26,6 @@ const obj = {
   },
   withArrow: true
 };
-const result = require("module_3982").fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
+const result = require("module_3952").fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
 
 export default pressable;

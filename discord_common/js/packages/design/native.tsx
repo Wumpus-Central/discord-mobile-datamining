@@ -57,9 +57,9 @@ for (const key10059 in require("ThemeContextFlags")) {
   arg5[key10059] = require("ThemeContextFlags")[key10059];
   continue;
 }
-for (const key10063 in require("module_4012")) {
+for (const key10063 in require("module_3982")) {
   let tmp15 = key10063;
-  arg5[key10063] = require("module_4012")[key10063];
+  arg5[key10063] = require("module_3982")[key10063];
   continue;
 }
 for (const key10067 in require("WCAGContrastRatios")) {

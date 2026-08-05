@@ -7,23 +7,23 @@ const items = [require("WidgetType").WidgetType.PERSONAL, require("WidgetType").
 const items1 = [require("WidgetType").WidgetType.FAVORITE_GAMES];
 const items2 = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.CLIPS_GALLERY];
 const obj = {
-  [arg1(6990).WidgetType.FAVORITE_GAMES]: () => {
+  [arg1(6975).WidgetType.FAVORITE_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.sUQar8);
   },
-  [arg1(6990).WidgetType.CURRENT_GAMES]: () => {
+  [arg1(6975).WidgetType.CURRENT_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.SqNnus);
   },
-  [arg1(6990).WidgetType.WANT_TO_PLAY_GAMES]: () => {
+  [arg1(6975).WidgetType.WANT_TO_PLAY_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.bWSQwW);
   },
-  [arg1(6990).WidgetType.PLAYED_GAMES]: () => {
+  [arg1(6975).WidgetType.PLAYED_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.scOKET);
   },
-  [arg1(6990).WidgetType.APPLICATION]: (applicationId) => {
+  [arg1(6975).WidgetType.APPLICATION]: (applicationId) => {
     application = application.getApplication(applicationId.applicationId);
     let str;
     if (application != null) {
@@ -34,11 +34,11 @@ const obj = {
     }
     return str;
   },
-  [arg1(6990).WidgetType.PERSONAL]: () => {
+  [arg1(6975).WidgetType.PERSONAL]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.AVkYMx);
   },
-  [arg1(6990).WidgetType.CLIPS_GALLERY]: () => {
+  [arg1(6975).WidgetType.CLIPS_GALLERY]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.zY8Ghg);
   }

@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult1 from "createRules";
-import { t } from "../../../_runtime/03984_t.js";
+import { t } from "../../../_runtime/03954_t.js";
 import { Text } from "../../design/components/Text/native/Text.tsx";
 
 let c3;

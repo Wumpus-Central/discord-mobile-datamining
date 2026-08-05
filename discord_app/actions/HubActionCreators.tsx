@@ -6,7 +6,7 @@ import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUti
 import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 
 const require = arg1;
-const result = require("module_5094").fileFinishedImporting("actions/HubActionCreators.tsx");
+const result = require("module_5079").fileFinishedImporting("actions/HubActionCreators.tsx");
 
 export default {
   signup(email, school) {
@@ -97,7 +97,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -232,7 +232,7 @@ export default {
                 return obj4;
               } else {
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             }
           } else if (1 === tmp7) {

@@ -5,7 +5,7 @@ import noop from "noop";
 import { AutomodTriggerType } from "AutomodEventType";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import identity from "identity";
-import { isIterable } from "../../../_runtime/03898_isIterable.js";
+import { isIterable } from "../../../_runtime/03868_isIterable.js";
 
 const require = arg1;
 let closure_7 = {};
@@ -107,7 +107,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -251,7 +251,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -335,7 +335,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -408,7 +408,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -439,7 +439,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp6) {
           v0 = tmp;

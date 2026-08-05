@@ -47,7 +47,7 @@ class GuildSelectDefaultIcon {
 }
 function ForceSwitchIcons(children) {
   let context;
-  context = importAllResult.useContext(context(4004).AccessibilityPreferencesContext);
+  context = importAllResult.useContext(context(3974).AccessibilityPreferencesContext);
   const items = [context];
   const value = importAllResult.useMemo(() => {
     const obj = {};
@@ -55,7 +55,7 @@ function ForceSwitchIcons(children) {
     obj.switchIconsEnabled = true;
     return obj;
   }, items);
-  return callback3(context(4004).AccessibilityPreferencesContext.Provider, { value, children: children.children });
+  return callback3(context(3974).AccessibilityPreferencesContext.Provider, { value, children: children.children });
 }
 function SettingSearchResultBreadcrumbs(breadcrumbs) {
   breadcrumbs = breadcrumbs.breadcrumbs;
@@ -381,7 +381,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp10Result = tmp10(tmp(5315).TableRow.Icon, obj);
+    tmp10Result = tmp10(tmp(5300).TableRow.Icon, obj);
   }
   obj[4] = tmp10Result;
   obj[5] = onPress;
@@ -392,7 +392,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     if (typeof trailing === "string") {
       const obj1 = { text: null };
       obj1[0] = trailing;
-      tmp10Result = tmp10(tmp(5315).TableRow.TrailingText, obj1);
+      tmp10Result = tmp10(tmp(5300).TableRow.TrailingText, obj1);
     }
     tmp12 = tmp10Result;
   }
@@ -441,7 +441,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp8Result = tmp8(tmp(5315).TableRow.Icon, obj);
+    tmp8Result = tmp8(tmp(5300).TableRow.Icon, obj);
   }
   obj[2] = tmp8Result;
   obj[3] = value;
@@ -450,7 +450,7 @@ let closure_22 = importAllResult.memo((arg0) => {
   obj[6] = onValueChange;
   obj[7] = start;
   obj[8] = end;
-  tmp8Result = tmp8(tmp(5650).TableSwitchRow, obj);
+  tmp8Result = tmp8(tmp(5635).TableSwitchRow, obj);
   let tmp8Result1 = tmp8Result;
   if (true === hasIcon) {
     const obj1 = { children: null };
@@ -516,7 +516,7 @@ let closure_25 = importAllResult.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14823);
+  let obj = trailing(14803);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
@@ -553,19 +553,19 @@ let closure_25 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp11Result = tmp11(tmp(5315).TableRow.Icon, obj);
+    tmp11Result = tmp11(tmp(5300).TableRow.Icon, obj);
   }
   obj[5] = tmp11Result;
   tmp11Result = null;
   if (null != trailing) {
     const obj1 = { text: null };
     obj1[0] = trailing;
-    tmp11Result = tmp11(tmp(5315).TableRow.TrailingText, obj1);
+    tmp11Result = tmp11(tmp(5300).TableRow.TrailingText, obj1);
   }
   obj[6] = tmp11Result;
   obj[7] = start;
   obj[8] = end;
-  const children = [closure_14(trailing(5315).TableRow, obj), ];
+  const children = [closure_14(trailing(5300).TableRow, obj), ];
   if (highlightSettingItem) {
     let obj2 = { start: null, end: null };
     obj2[0] = start;

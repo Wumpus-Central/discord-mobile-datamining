@@ -41,12 +41,12 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   ({ expandBottomSheet, overrideParams } = arg0);
   ({ bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, contentStyle, keyboardCloseReasonRef, onActivityItemSelected, width } = arg0);
   const tmp3 = context;
-  let obj = entrypoint(4151);
+  let obj = entrypoint(4121);
   if (overrideParams == null) {
     overrideParams = obj.useKeyboardContextForType(entrypoint(1579).KeyboardTypes.APP_LAUNCHER);
   }
   const tmp4 = callback2();
-  const accessibilityNativeStackOptions = entrypoint(5665).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = entrypoint(5650).useAccessibilityNativeStackOptions();
   const initialRouteName = overrideParams.initialRouteName;
   let obj12 = callback(overrideParams, closure_3);
   const items = [entrypoint];
@@ -103,7 +103,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   items2[3] = closure_8(createNativeStackNavigator.Screen, obj10);
   obj[2] = items2;
   obj[1] = closure_9(createNativeStackNavigator.Navigator, obj);
-  obj13[1] = closure_8(entrypoint(5610).AnalyticsLocationProvider, obj);
+  obj13[1] = closure_8(entrypoint(5595).AnalyticsLocationProvider, obj);
   let tmp19 = "customId" in overrideParams;
   const children = tmp8(tmp5(1481).NavigationContainer, obj13);
   if (!tmp19) {
@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
     entrypointParams = { customId: null, referrerId: null };
     const obj14 = { customId: null, referrerId: null };
   }
-  return closure_8(entrypoint(9466).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
+  return closure_8(entrypoint(9437).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
 });
 const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/AppLauncherNavigator.tsx");
 

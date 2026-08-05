@@ -278,9 +278,9 @@ export const gifUrlKey = function gifUrlKey(uri) {
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentUrl(toURLSafeResult)) {
-      str = tmp5(9661).removeSignedUrlParameters(toURLSafeResult);
+      str = tmp5(9632).removeSignedUrlParameters(toURLSafeResult);
       str = str.toString();
-      const tmp5Result = tmp5(9661);
+      const tmp5Result = tmp5(9632);
     }
     tmp4 = str;
     obj2 = shouldRefreshAttachmentUrl;

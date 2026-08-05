@@ -6,7 +6,7 @@ import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLi
 import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4116";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
 import { timingNone } from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
@@ -89,7 +89,7 @@ function BountiesModalAdvertiserCtaContent(bounty) {
 let closure_3 = ["style"];
 ({ StyleSheet: closure_6, View: error, Pressable } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = require("module_4146").createAnimatedComponent(Pressable);
+let closure_12 = require("module_4116").createAnimatedComponent(Pressable);
 let closure_13 = createCacheKey.createStyles(() => {
   let obj = { outerContainer: null, ctaPressable: null, cta: null, ctaLogoContainer: null, ctaLogo: null, ctaInfo: null };
   obj = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: Themes.space.PX_16, paddingBottom: Themes.space.PX_16, alignItems: "center" };

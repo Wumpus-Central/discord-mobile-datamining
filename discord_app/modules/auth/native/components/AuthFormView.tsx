@@ -76,7 +76,7 @@ export default function AuthFormView(arg0) {
     if (null != headerText) {
       obj = { children: null };
       obj[0] = headerText;
-      tmp15 = callback(tmp(8312), obj);
+      tmp15 = callback(tmp(8284), obj);
     }
     const items1 = [tmp15, , ];
     let tmp17 = null;
@@ -99,7 +99,7 @@ export default function AuthFormView(arg0) {
     const obj2 = { backgroundImageSource: null, backgroundImageCover: null };
     obj2[0] = backgroundImageSource;
     obj2[1] = backgroundImageCover;
-    const items3 = [callback(tmp(8313), obj2), callback(tmp(8316), {}), ];
+    const items3 = [callback(tmp(8285), obj2), callback(tmp(8288), {}), ];
     const obj3 = { contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: null, contentContainerStyle: null, children: null };
     obj3[0] = { top: 0 };
     obj3[4] = tmp4.flex;
@@ -111,7 +111,7 @@ export default function AuthFormView(arg0) {
     if (null != headerText) {
       const obj4 = { children: null };
       obj4[0] = headerText;
-      tmp7Result = tmp7(tmp(8312), obj4);
+      tmp7Result = tmp7(tmp(8284), obj4);
     }
     const items5 = [tmp7Result, , ];
     tmp7Result = null;

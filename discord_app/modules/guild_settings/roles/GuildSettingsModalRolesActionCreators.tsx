@@ -30,7 +30,7 @@ function _updateGuildRole() {
       let c6;
       const dependencyMap = tmp2;
       ({ guildId: c0, roleId: c1, name: c2, permissions: c3, color: c4, hoist: c5, mentionable: c6 } = callback);
-      yield "ct";
+      yield "PX_8";
       const HTTP = callback(530).HTTP;
       const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj2[0] = c4.GUILD_ROLE(callback, callback2);
@@ -47,7 +47,7 @@ function _updateGuildRole() {
       obj3 = callback(530);
       obj2[3] = obj3.rejectWithMigratedError();
       let closure_7 = yield HTTP.patch(obj2);
-      const obj = callback2(5847);
+      const obj = callback2(5832);
       const result = obj.checkGuildTemplateDirty(callback);
       return closure_7;
     })();

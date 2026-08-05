@@ -14,7 +14,7 @@ export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderAct
   let label;
   ({ isPreview, exitPreview, label } = useFavoritesGuildHeaderAction());
   const obj = { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
-  obj[2] = importDefault(isPreview ? 5271 : 11496);
+  obj[2] = importDefault(isPreview ? 5256 : 11468);
   if (!isPreview) {
     exitPreview = handleAddToFavorites.openFavoritesGuildAddActionSheet;
   }

@@ -44,7 +44,7 @@ export default function useCreateChannelSubmit(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -76,7 +76,7 @@ export default function useCreateChannelSubmit(arg0) {
               let guild_id;
               c7 = 1;
               body = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

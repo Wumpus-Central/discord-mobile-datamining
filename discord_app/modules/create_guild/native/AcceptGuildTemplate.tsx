@@ -1,6 +1,6 @@
 // discord_app/modules/create_guild/native/AcceptGuildTemplate.tsx
 import "Divider";
-import get_ActivityIndicator from "module_8276";
+import get_ActivityIndicator from "module_8248";
 import { isGuildVocalChannelType } from "createChannelRecord";
 import { isEveryoneRole } from "GuildRoleRecordTypeTag";
 import ME from "ME";
@@ -49,9 +49,9 @@ function GuildTemplateResolved(guildTemplate) {
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guildTemplate(1236).intl;
   obj[3] = intl.string(guildTemplate(1236).t.QzUORX);
-  const items1 = [callback(guildTemplate(4281).Text, obj), , , , , , , , , , ];
+  const items1 = [callback(guildTemplate(4251).Text, obj), , , , , , , , , , ];
   obj = { style: tmp.description, variant: "text-lg/medium", color: "text-default", children: guildTemplate.name };
-  items1[1] = callback(guildTemplate(4281).Text, obj);
+  items1[1] = callback(guildTemplate(4251).Text, obj);
   items1[2] = callback(renderIcon, { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon });
   const obj2 = { label: null, error: null, hint: null, value: null, onChangeText: null, autoFocus: true, autoCorrect: false, returnKeyType: "done" };
   const intl2 = guildTemplate(1236).intl;
@@ -73,17 +73,17 @@ function GuildTemplateResolved(guildTemplate) {
   obj5[2] = createServer;
   obj5[3] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj5[4] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj4[1] = callback(guildTemplate(4695).Button, obj5);
+  obj4[1] = callback(guildTemplate(4665).Button, obj5);
   items1[4] = callback(closure_4, obj4);
   items1[5] = callback(Divider, { style: tmp.divider, outer: true });
   const obj7 = { style: tmp.sectionHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp10(1236).intl;
   obj7[3] = intl5.string(guildTemplate(1236).t.OGiMXJ);
-  items1[6] = callback(guildTemplate(4281).Text, obj7);
+  items1[6] = callback(guildTemplate(4251).Text, obj7);
   const obj8 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl6 = tmp10(1236).intl;
   obj8[2] = intl6.string(guildTemplate(1236).t.Ztwyoz);
-  items1[7] = callback(guildTemplate(4281).Text, obj8);
+  items1[7] = callback(guildTemplate(4251).Text, obj8);
   items1[8] = callback(Channels, { channels: guildTemplate.serializedSourceGuild.channels });
   const obj10 = { style: tmp.sectionTip, variant: "text-xs/medium", color: "interactive-text-default", children: null };
   const obj11 = { style: tmp.protip, children: null };
@@ -94,7 +94,7 @@ function GuildTemplateResolved(guildTemplate) {
   const intl8 = tmp10(1236).intl;
   items3[1] = intl8.string(guildTemplate(1236).t.de7DpI);
   obj10[3] = items3;
-  items1[9] = closure_12(guildTemplate(4281).Text, obj10);
+  items1[9] = closure_12(guildTemplate(4251).Text, obj10);
   let tmp7Result = null;
   if (found.length > 0) {
     const obj12 = { children: null };
@@ -102,11 +102,11 @@ function GuildTemplateResolved(guildTemplate) {
     obj13[0] = tmp.sectionHeader;
     const intl9 = tmp10(1236).intl;
     obj13[3] = intl9.string(tmp10(1236).t.mQ0H1p);
-    const items4 = [tmp9(tmp10(4281).Text, obj13), , ];
+    const items4 = [tmp9(tmp10(4251).Text, obj13), , ];
     const obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl10 = tmp10(1236).intl;
     obj14[2] = intl10.string(tmp10(1236).t.jOPEYC);
-    items4[1] = tmp9(tmp10(4281).Text, obj14);
+    items4[1] = tmp9(tmp10(4251).Text, obj14);
     const obj15 = { roles: null };
     obj15[0] = found;
     items4[2] = tmp9(Roles, obj15);

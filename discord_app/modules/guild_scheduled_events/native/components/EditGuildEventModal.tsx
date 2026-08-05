@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo((guild) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ const memoResult = importAllResult.memo((guild) => {
             return obj;
           } else if (null == arg1) {
             id = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           } else {
             if (!_slicedToArray) {
               const AccessibilityAnnouncer = outer1_0(outer1_3[11]).AccessibilityAnnouncer;

@@ -9,7 +9,7 @@ export default {
     let bountyId;
     let sourceQuestContent;
     ({ bountyId, sourceQuestContent } = arg0);
-    ModalActionCreators.pushLazy(asyncRequireImpl(14153, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
+    ModalActionCreators.pushLazy(asyncRequireImpl(14127, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
   },
   hideModal() {
     ModalActionCreators.popWithKey(BOUNTIES_MODAL);

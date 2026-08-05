@@ -17,7 +17,7 @@ let obj = {
     let obj = dispatcher;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11211, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11183, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
     let closure_0 = arg0;

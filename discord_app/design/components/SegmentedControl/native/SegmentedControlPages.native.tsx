@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4116";
 
 const require = arg1;
 function SegmentedControlPage(children) {
@@ -153,7 +153,7 @@ function SegmentedControlPage(children) {
   obj1.children = activePageRangeEnd(tmp2(scrollTargetPageIndex[9]).Freeze, obj2);
   return activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, obj1, index);
 }
-let closure_6 = require("module_4146").createAnimatedComponent(require("get ActivityIndicator").ScrollView);
+let closure_6 = require("module_4116").createAnimatedComponent(require("get ActivityIndicator").ScrollView);
 let closure_7 = { code: "function SegmentedControlPagesNativeTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}" };
 let closure_8 = { code: "function SegmentedControlPagesNativeTsx2(value){const{runOnJS,updateCurrentActiveIndex}=this.__closure;runOnJS(updateCurrentActiveIndex)(value);}" };
 let closure_9 = { code: "function SegmentedControlPagesNativeTsx3(){const{pageIndex}=this.__closure;return pageIndex.get();}" };

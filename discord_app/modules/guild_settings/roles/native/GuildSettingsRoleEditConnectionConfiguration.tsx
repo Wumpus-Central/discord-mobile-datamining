@@ -45,7 +45,7 @@ function Header(arg0) {
     application1 = integration.application;
   }
   if (null != application1) {
-    obj = { size: null, user: null, guildId: "disabled" };
+    obj = { size: null, user: null, guildId: "Array" };
     obj[0] = tmp3(1297).AvatarSizes.XSMALL;
     let bot;
     if (integration != null) {
@@ -68,7 +68,7 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        obj = { size: null, user: null, guildId: "disabled" };
+        obj = { size: null, user: null, guildId: "Array" };
         obj[0] = tmp3(1297).AvatarSizes.XSMALL;
         obj[1] = getOrFetchApplicationBatched.bot;
         tmp11 = callback2(tmp3(1297).Avatar, obj);
@@ -81,7 +81,7 @@ function Header(arg0) {
     }
   } else if (null != platform) {
     let tmp3Result = tmp3(1416);
-    tmp3Result = tmp3(4131);
+    tmp3Result = tmp3(4101);
     const icon = platform.icon;
     const obj1 = { source: null, disableColor: true };
     obj1[0] = tmp3Result.makeSource(tmp3Result.isThemeDark(tmp2) ? icon.darkPNG : icon.lightPNG);
@@ -155,7 +155,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(5650).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(5635).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   let _slicedToArray;
@@ -214,7 +214,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(16597);
+  let obj = metadataField(16578);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   let value;
@@ -223,7 +223,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(16597);
+  let tmpResult = tmp(16578);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = React;
@@ -307,7 +307,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       const obj4 = { variant: "text-md/semibold", style: null, children: null };
       obj4[1] = map.appNumericalInputText;
       obj4[2] = fieldText;
-      items1[1] = onInputValueChange(tmp(4281).Text, obj4);
+      items1[1] = onInputValueChange(tmp(4251).Text, obj4);
       obj1[1] = items1;
       tmp21Result = closure_13(tmp22, obj1);
       const tmp21 = closure_13;
@@ -349,7 +349,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       }
       _slicedToArray(tmp3, num);
     };
-    return onInputValueChange(tmp(5650).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(tmp(5635).TableSwitchRow, obj5, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -645,7 +645,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: "t", onRemove: "a", locked: "isArray" };
+      obj = { platform: null, integration: "a", applicationId: true, onRemove: true, locked: true };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

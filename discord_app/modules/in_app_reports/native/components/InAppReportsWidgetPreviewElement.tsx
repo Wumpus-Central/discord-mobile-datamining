@@ -29,13 +29,13 @@ export default function WidgetPreview(widget) {
       obj[0] = tmp.title;
       const intl = tmp4(1236).intl;
       obj[3] = intl.string(tmp4(1236).t.SpsnDY).toUpperCase();
-      const items = [callback(tmp4(4281).Text, obj), ];
+      const items = [callback(tmp4(4251).Text, obj), ];
       const obj1 = { userId: null, widget: null, disableInteraction: true, cardStyle: null };
       obj1[0] = widget.userId;
       obj1[1] = widget;
       const items1 = [tmp3.card, tmp.card];
       obj1[3] = items1;
-      items[1] = callback(tmp4(12252).WidgetSection, obj1);
+      items[1] = callback(tmp4(12224).WidgetSection, obj1);
       obj[1] = items;
       tmp5 = callback2(View, obj);
       const str = intl.string(tmp4(1236).t.SpsnDY);

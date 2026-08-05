@@ -54,7 +54,7 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
     obj1 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
     obj1[2] = innerContent.centerText;
     obj1[3] = stringResult;
-    tmp18Result = tmp18(tmp19(4281).Text, obj1);
+    tmp18Result = tmp18(tmp19(4251).Text, obj1);
   }
   const obj2 = { children: null };
   items1[1] = tmp18Result;

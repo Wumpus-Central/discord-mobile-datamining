@@ -22,8 +22,8 @@ let closure_10 = importAllResult.memo((applicationId) => {
   let imageStyle;
   let heroMediaDimensions;
   let importDefault;
-  let obj = heroMediaDimensions(9466);
-  let obj1 = heroMediaDimensions(11382);
+  let obj = heroMediaDimensions(9437);
+  let obj1 = heroMediaDimensions(11354);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   obj = { applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
   const tmp4 = useEmbeddedActivityBackground(obj);
@@ -69,7 +69,7 @@ let closure_11 = importAllResult.memo((applicationBot) => {
   const tmp3 = useDisplayProfile;
   const obj = { displayProfile: useDisplayProfile(id), user: null };
   const tmp3Result = useDisplayProfile(id);
-  const tmpResult = tmp(8761);
+  const tmpResult = tmp(8733);
   obj[1] = new createdAt(applicationBot);
   return <tmpResult displayProfile={useDisplayProfile(id)} user={null} />;
 });

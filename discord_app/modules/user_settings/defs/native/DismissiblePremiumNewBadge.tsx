@@ -1,18 +1,18 @@
-// discord_app/modules/dismissible_content/native/DismissibleNewBadge.tsx
+// discord_app/modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx
 import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { SelectedDismissibleContent } from "SelectedDismissibleContent.tsx";
+import { SelectedDismissibleContent } from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 
 const require = arg1;
 createCacheKey = { newTag: { backgroundColor: "transparent" }, newTagContainer: null };
 createCacheKey = { borderRadius: require("Themes").radii.sm, marginLeft: require("Themes").space.PX_4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/dismissible_content/native/DismissibleNewBadge.tsx");
+const result = require("jsxProd").fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx");
 
-export default function DismissibleNewTag(dismissibleContent) {
+export default function DismissiblePremiumNewBadge(dismissibleContent) {
   let Gradients;
   let createCacheKey;
   let dependencyMap;

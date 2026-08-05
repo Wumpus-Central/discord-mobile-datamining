@@ -58,7 +58,7 @@ function _loadJsonAsset() {
       if (flag === undefined) {
         flag = true;
       }
-      yield "ct";
+      yield "PX_8";
       if (null != dependencyMap[callback]) {
         if (flag) {
           let DCDFileManager = 3;

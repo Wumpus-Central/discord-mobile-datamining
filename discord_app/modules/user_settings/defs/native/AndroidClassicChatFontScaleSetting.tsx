@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx
 import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE";
 import createToggle from "createToggle";
-import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { isIterable } from "../../../../../_runtime/03868_isIterable.js";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 

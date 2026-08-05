@@ -124,7 +124,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             } else {
               try {
@@ -160,7 +160,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
                 obj1 = outer2_1(outer2_2[13]);
                 obj1.deleteRole(outer1_4, outer1_0.id);
                 c2 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               } catch (tmp16) {
                 c2 = tmp;
                 throw tmp16;

@@ -47,18 +47,18 @@ function getChannel(id, arr) {
   if (null != channel) {
     obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
-    let tmpResult = tmp(4475);
+    let tmpResult = tmp(4445);
     obj[3] = tmpResult.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(4727);
+    tmpResult = tmp(4697);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
-    obj[7] = tmp(4476).canViewChannel(channel);
+    obj[7] = tmp(4446).canViewChannel(channel);
     obj[8] = isSubscriptionGated;
     obj[9] = str;
     obj[10] = channel.parent_id;
     tmp4 = obj;
-    const tmpResult1 = tmp(4476);
+    const tmpResult1 = tmp(4446);
   }
   return tmp4;
 }
@@ -126,7 +126,7 @@ function parseChannel(canViewChannel) {
           obj.content = items3;
           let obj6 = obj;
         } else if (null != arg3) {
-          const obj4 = { type: "link", content: null, target: null, title: "call" };
+          const obj4 = { type: "link", content: null, target: null, title: "channel" };
           const obj5 = { type: "text", content: null };
           obj5[1] = arg3;
           const items4 = [obj5];
@@ -170,9 +170,9 @@ function parseChannel(canViewChannel) {
             if (canViewChannel.isForumPost) {
               const channel = store.getChannel(canViewChannel.parentId);
               if (null != channel) {
-                let tmp35Result = tmp35(4475);
+                let tmp35Result = tmp35(4445);
                 const channelName = tmp35Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
-                tmp35Result = tmp35(4467);
+                tmp35Result = tmp35(4437);
                 let str3 = tmp35Result.getMentionIconType(channel);
                 if (str3 == null) {
                   str3 = "forum";
@@ -335,7 +335,7 @@ obj = {
     let tmp4;
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      let obj = { type: "link", content: null, target: null, title: "call" };
+      let obj = { type: "link", content: null, target: null, title: "channel" };
       obj = { type: "text", content: null };
       obj[1] = tmp;
       const items = [obj];
@@ -415,7 +415,7 @@ obj[2] = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "call" };
+    return { type: "link", content, target, title: "channel" };
   }
 };
 let obj1 = {
@@ -467,7 +467,7 @@ let obj1 = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "call" };
+    return { type: "link", content, target, title: "channel" };
   }
 };
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/markup/MarkupChannelMentionRule.tsx");

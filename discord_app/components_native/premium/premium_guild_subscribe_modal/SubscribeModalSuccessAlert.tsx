@@ -6,7 +6,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Gradients } from "items";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04676_LinearGradient.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { keys } from "../../../ConstantsIOS.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -25,7 +25,7 @@ class PremiumPaymentGuildAnimation {
     tmp = jsxs();
     obj = { nextScene, onSceneComplete, loop, sceneSegments: idle, style: tmp.animation, source: null };
     tmp2 = require("componentDidMount");
-    obj[5] = require("module_12801");
+    obj[5] = require("module_12773");
     return jsx(tmp2, obj);
   }
 }
@@ -74,9 +74,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = tmp2(1236).intl;
   obj[1] = intl.string(getSystemLocale.t.YKxJCI);
   obj[2] = function onConfirm() {
-    callback2(4624).close();
-    const obj = callback2(4624);
-    callback(5118).closeApplyBoostModal();
+    callback2(4594).close();
+    const obj = callback2(4594);
+    callback(5103).closeApplyBoostModal();
   };
   obj = {
     nextScene: tmp6[0],
@@ -100,9 +100,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradient;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(12802);
+    let tmp8Result = tmp8(12774);
   } else {
-    tmp8Result = tmp8(12803);
+    tmp8Result = tmp8(12775);
   }
   obj3[1] = tmp8Result;
   obj2[1] = callback2(tmp15, obj3);

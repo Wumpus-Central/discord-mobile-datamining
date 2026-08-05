@@ -36,14 +36,14 @@ export default function useStartEvent() {
         if (permissionOverwrites === undefined) {
           permissionOverwrites = c6.permissionOverwrites;
         }
-        yield "ct";
+        yield "PX_8";
         callback(true);
         c6 = 1;
-        yield callback2(8976).preStartEventActions(callback, permissionOverwrites);
+        yield callback2(8948).preStartEventActions(callback, permissionOverwrites);
         if (2 === tmp7) {
           c6 = 0;
           const outer1_5 = noop;
-          const aPIError = new callback(4184).APIError(outer1_5);
+          const aPIError = new callback(4154).APIError(outer1_5);
           const outer1_4 = aPIError;
           callback2(outer1_4);
           callback(false);
@@ -60,7 +60,7 @@ export default function useStartEvent() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            let obj7 = callback2(8976);
+            let obj7 = callback2(8948);
             let c7 = 4;
             c8 = 1;
             let obj4 = { value: null, done: false };
@@ -78,7 +78,7 @@ export default function useStartEvent() {
             obj5[0] = arg1;
             return obj5;
           } else {
-            obj4 = callback(8977);
+            obj4 = callback(8949);
             c7 = 5;
             c8 = 1;
             const obj6 = { value: null, done: false };
@@ -96,7 +96,7 @@ export default function useStartEvent() {
             obj7[0] = arg1;
             return obj7;
           } else {
-            const obj1 = callback(8977);
+            const obj1 = callback(8949);
             c7 = 6;
             c8 = 1;
             const obj8 = { value: null, done: false };

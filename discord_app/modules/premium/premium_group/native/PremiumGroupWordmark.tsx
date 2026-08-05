@@ -1,7 +1,7 @@
 // discord_app/modules/premium/premium_group/native/PremiumGroupWordmark.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/08409_inlineStyles.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 

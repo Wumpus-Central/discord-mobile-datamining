@@ -51,7 +51,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                   const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
                   let tmp18 = !isSameDayResult;
                   if (isSameDayResult) {
-                    const isWithinIntervalResult = tmp16(3955).isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                    const isWithinIntervalResult = tmp16(3925).isWithinInterval(content.timestamp, type.timestamp, closure_6);
                     let tmp21 = !isWithinIntervalResult;
                     if (isWithinIntervalResult) {
                       const hasFlagResult2 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
@@ -99,7 +99,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                       tmp21 = tmp24;
                     }
                     tmp18 = tmp21;
-                    const tmp16Result = tmp16(3955);
+                    const tmp16Result = tmp16(3925);
                   }
                   tmp15 = tmp18;
                   const obj2 = resetCache;

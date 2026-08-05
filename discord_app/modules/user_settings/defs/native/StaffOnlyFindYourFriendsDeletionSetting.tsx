@@ -4,7 +4,7 @@ import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import identity from "identity";
 import createToggle from "createToggle";
-import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { isIterable } from "../../../../../_runtime/03868_isIterable.js";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _onFindYourFriendsDeletionPress() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -65,7 +65,7 @@ function _onFindYourFriendsDeletionPress() {
             const aPIError = new callback(585).APIError(callback2);
             callback = aPIError.getAnyErrorMessage();
             if (null != callback) {
-              let obj2 = callback2(3986);
+              let obj2 = callback2(3956);
               obj2 = { key: "FIND_YOUR_FRIENDS_DELETION", content: null };
               obj2[1] = callback;
               obj2.open(obj2);

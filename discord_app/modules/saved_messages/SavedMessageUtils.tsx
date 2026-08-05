@@ -4,7 +4,7 @@ import noop from "noop";
 import { UnknownChannelRecord } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
-import { t } from "../../../_runtime/03867_t.js";
+import { t } from "../../../_runtime/03837_t.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
@@ -31,7 +31,7 @@ function _savedMessageJumpToMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -81,11 +81,11 @@ function _savedMessageJumpToMessage() {
               if (null == closure_2.recipients) {
                 c5 = 0;
                 constants = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               } else if (closure_2.recipients.length > 1) {
                 c5 = 0;
                 constants = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               } else {
                 obj1 = lib(closure_2[8]);
                 const recipients = closure_2.recipients;
@@ -114,7 +114,7 @@ function _savedMessageJumpToMessage() {
           }
           lib(closure_2[9])(closure_8.CHANNEL(guildId, closure_0.saveData.channelId, closure_0.saveData.messageId), { openChannel: true });
           constants = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         } catch (tmp30) {
           let noop = tmp30;
           if (tmp4 === c5) {

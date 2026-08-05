@@ -41,10 +41,10 @@ export default function useGuildProfileGames(games) {
     const items3 = [handleLoadMessages];
     stateFromStoresArray = games(stateFromStoresArray[4]).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
-      const mapped = gameApplicationIds.map((gameId) => {
-        let game = outer1_4.getGame(gameId);
+      const mapped = gameApplicationIds.map((closure_0) => {
+        let game = outer1_4.getGame(closure_0);
         if (game == null) {
-          game = closure_1.get(gameId);
+          game = closure_1.get(closure_0);
         }
         return game;
       });
@@ -97,7 +97,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
   games = profile.games;
   const items = [fetchFingerprint];
   const stateFromStores = games(589).useStateFromStores(items, () => authenticated.isAuthenticated());
-  games(7002);
+  games(6986);
   if (null != games) {
     if (!stateFromStores) {
       let items1 = [];
@@ -125,10 +125,10 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
     const items3 = [handleLoadMessages];
     return games(589).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
-      const mapped = gameApplicationIds.map((gameId) => {
-        let game = outer1_4.getGame(gameId);
+      const mapped = gameApplicationIds.map((closure_0) => {
+        let game = outer1_4.getGame(closure_0);
         if (game == null) {
-          game = closure_1.get(gameId);
+          game = closure_1.get(closure_0);
         }
         return game;
       });

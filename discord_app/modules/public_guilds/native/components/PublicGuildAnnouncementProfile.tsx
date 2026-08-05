@@ -3,7 +3,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/11027_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10999_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

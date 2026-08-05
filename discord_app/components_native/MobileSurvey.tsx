@@ -33,7 +33,7 @@ export default function MobileSurvey() {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -65,7 +65,7 @@ export default function MobileSurvey() {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             } catch (tmp9) {
               c0 = tmp;
               throw tmp9;
@@ -118,8 +118,8 @@ export default function MobileSurvey() {
       obj[3] = stateFromStores(outer1_2[14]);
       return outer1_7(lib(outer1_2[12]).Icon, obj);
     };
-    tmp5 = jsx(stateFromStores(4713), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(4713);
+    tmp5 = jsx(stateFromStores(4683), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(4683);
   }
   return tmp5;
 };

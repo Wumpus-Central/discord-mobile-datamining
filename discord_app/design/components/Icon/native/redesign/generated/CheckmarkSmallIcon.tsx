@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/05305_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/05290_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

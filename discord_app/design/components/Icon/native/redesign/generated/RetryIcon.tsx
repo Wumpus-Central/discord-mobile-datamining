@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/RetryIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/09778_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/09749_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

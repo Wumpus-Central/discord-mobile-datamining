@@ -48,7 +48,7 @@ export default function FriendRequestsScreen() {
   let outgoingSection;
   let tmp = callback();
   let WumpusCouchSpotIllustration = dependencyMap;
-  const analyticsLocations = first(5610)(first(5630).FRIEND_REQUESTS).analyticsLocations;
+  const analyticsLocations = first(5595)(first(5615).FRIEND_REQUESTS).analyticsLocations;
   let stateFromStoresArray;
   first = undefined;
   let obj = stateFromStoresArray(647);
@@ -63,7 +63,7 @@ export default function FriendRequestsScreen() {
       return tmp3;
     });
   });
-  const NotificationCenterAckedBeforeId = stateFromStoresArray(3958).NotificationCenterAckedBeforeId;
+  const NotificationCenterAckedBeforeId = stateFromStoresArray(3928).NotificationCenterAckedBeforeId;
   const setting = NotificationCenterAckedBeforeId.useSetting();
   first = setting;
   let items1 = [stateFromStoresArray, setting];
@@ -91,9 +91,9 @@ export default function FriendRequestsScreen() {
   }), 2);
   first = tmp9[0];
   dependencyMap = tmp11;
-  let obj2 = stateFromStoresArray(12250);
+  let obj2 = stateFromStoresArray(12222);
   gameRelationshipsByType = obj2.useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = stateFromStoresArray(12250);
+  let obj3 = stateFromStoresArray(12222);
   gameRelationshipsByType1 = obj3.useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
@@ -106,7 +106,7 @@ export default function FriendRequestsScreen() {
     });
     return Array.from(set);
   }, items3);
-  first(5616)(memo);
+  first(5601)(memo);
   const items4 = [first, tmp9[1]];
   const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(tmp11[26]).getPendingRelationshipIds(first, tmp11), items4);
   const pendingIncomingIds = memo1.pendingIncomingIds;
@@ -261,7 +261,7 @@ export default function FriendRequestsScreen() {
   if (tmp28) {
     tmp28 = incoming.length >= incomingData;
   }
-  let tmp3 = first(5610);
+  let tmp3 = first(5595);
   obj = {
     pageWidth: 0,
     defaultIndex: first1,
@@ -284,11 +284,11 @@ export default function FriendRequestsScreen() {
   obj1[1] = intl2.string(stateFromStoresArray(1236).t.tWqcIF);
   items10[1] = obj1;
   obj[3] = items10;
-  const segmentedControlState = stateFromStoresArray(8878).useSegmentedControlState(obj);
+  const segmentedControlState = stateFromStoresArray(8850).useSegmentedControlState(obj);
   obj2 = { value: analyticsLocations, children: null };
-  const items11 = [outgoingData(first(4814), { absolute: true }), ];
+  const items11 = [outgoingData(first(4799), { absolute: true }), ];
   obj3 = { style: tmp.container, children: null };
-  obj4 = { style: tmp.tabs, children: outgoingData(tmp4(9063).SegmentedControl, { state: segmentedControlState }) };
+  obj4 = { style: tmp.tabs, children: outgoingData(tmp4(9035).SegmentedControl, { state: segmentedControlState }) };
   const items12 = [outgoingData(pendingIncomingIds, obj4), , ];
   let tmp32Result = null;
   if (tmp28) {
@@ -303,8 +303,8 @@ export default function FriendRequestsScreen() {
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1236).intl;
     obj7[2] = intl3.string(tmp4(1236).t.O8k7O4);
-    obj6[2] = tmp32(tmp4(4281).Text, obj7);
-    obj5[1] = tmp32(tmp4(4812).PressableOpacity, obj6);
+    obj6[2] = tmp32(tmp4(4251).Text, obj7);
+    obj5[1] = tmp32(tmp4(4797).PressableOpacity, obj6);
     tmp32Result = tmp32(tmp33, obj5);
   }
   items12[1] = tmp32Result;
@@ -320,11 +320,11 @@ export default function FriendRequestsScreen() {
     }
     const obj9 = { title: null, illustration: null, disableBackgroundOverlay: true };
     obj9[0] = stringResult;
-    WumpusCouchSpotIllustration = tmp4(5936).WumpusCouchSpotIllustration;
+    WumpusCouchSpotIllustration = tmp4(5921).WumpusCouchSpotIllustration;
     obj9[1] = WumpusCouchSpotIllustration;
-    obj8[1] = tmp32(tmp2(10168), obj9);
+    obj8[1] = tmp32(tmp2(10139), obj9);
     tmp32Result = tmp32(tmp33, obj8);
-    const tmp2Result = tmp2(10168);
+    const tmp2Result = tmp2(10139);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;
@@ -333,10 +333,10 @@ export default function FriendRequestsScreen() {
     obj10[0] = outgoingSection;
     obj10[1] = callback2;
     obj10[2] = callback1;
-    items12[2] = tmp32(tmp4(9545).UsersFastList, obj10);
+    items12[2] = tmp32(tmp4(9516).UsersFastList, obj10);
     obj3[1] = items12;
     items11[1] = tmp31(tmp33, obj3);
     obj2[1] = items11;
-    return tmp31(tmp4(5610).AnalyticsLocationProvider, obj2);
+    return tmp31(tmp4(5595).AnalyticsLocationProvider, obj2);
   }
 };

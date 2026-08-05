@@ -45,7 +45,7 @@ function handleReferralTrialStoreUpdate() {
   return false;
 }
 ({ ANNUAL_DISCOUNT_IDS: error, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: metroImportAll, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c9, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: c10, SubscriptionPlanInfo: unpackModuleId, SubscriptionTrials: closure_12, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: map1 } = GuildFeatures);
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "PX_16", userDiscountOffers: "TRANSPARENT", userDiscounts: 0, isFetching: "19.2.3", lastFetchSuccessful: "react-native-renderer" };
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "Path", userDiscountOffers: "TRANSPARENT", userDiscounts: 0, isFetching: "19.2.3", lastFetchSuccessful: "react-native-renderer" };
 obj[1] = {};
 obj[2] = {};
 class UserOfferStore extends PersistedStore {

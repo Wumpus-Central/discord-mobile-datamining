@@ -2,7 +2,6 @@
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { preload } from "../../../components_native/common/FastImage.tsx";
 
 let c3;
 let c4;
@@ -18,80 +17,83 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj2 = { color: require("Themes").unsafe_rawColors.BRAND_500 };
 const result = require("createCacheKey").fileFinishedImporting("modules/markup/native/MarkupReactGameMentionRule.tsx");
 
-export default function MarkupGameMention(arg0) {
-  let c1;
-  let gameName;
-  let icon;
-  let node;
-  let state;
-  ({ node, state } = arg0);
-  let importDefault;
+export default function MarkupGameMention(state) {
+  state = state.state;
+  let gameId;
   const tmp = createCacheKey();
-  ({ gameId: c1, gameName, icon } = node);
+  gameId = state.node.gameId;
+  let obj = state(4782);
+  const gameMentionData = obj.useGameMentionData(gameId);
   const intl = state(1236).intl;
   const stringResult = intl.string(state(1236).t["11pdXZ"]);
-  let tmp5 = null != gameName;
-  if (tmp5) {
-    tmp5 = "" !== gameName;
+  let gameName;
+  if (gameMentionData != null) {
+    gameName = gameMentionData.gameName;
   }
-  let tmp6 = stringResult;
-  if (tmp5) {
-    tmp6 = gameName;
+  if (gameName == null) {
+    gameName = stringResult;
   }
-  if (tmp5) {
-    let obj = { size: "sm", style: null };
-    obj[1] = tmp.icon;
-    let tmp11 = null != icon;
-    if (tmp11) {
-      tmp11 = "" !== icon;
-    }
-    let tmp9Result = callback(tmp2(7750).UnknownGameIcon, obj);
-    if (tmp11) {
-      obj = { style: null, source: null };
-      obj[0] = tmp.icon;
-      const obj1 = { uri: null };
-      obj1[0] = icon;
-      obj[1] = obj1;
-      tmp9Result = tmp9(preload, obj);
-    }
-    let str3 = "button";
-    if (state.noStyleAndInteraction) {
-      str3 = "text";
-    }
-    const obj2 = { accessibilityRole: null, style: null, color: null, onPress: null, children: null };
-    obj2[0] = str3;
-    obj2[1] = tmp.chip;
+  let gameIcon;
+  if (gameMentionData != null) {
+    gameIcon = gameMentionData.gameIcon;
+  }
+  const tmp8Result = gameId(4285)(gameId, gameIcon, { size: 32 });
+  if (null == gameMentionData) {
     let textColor;
     if (state != null) {
       textColor = state.textColor;
     }
-    obj2[2] = textColor;
-    let fn;
-    if (!state.noStyleAndInteraction) {
-      fn = () => {
-        let obj = _undefined(outer1_2[8]);
-        obj = { gameId: _undefined, gameProfileModalChecks: obj, source: state(outer1_2[9]).GameProfileSources.GameMention, sourceUserId: state.authorId };
-        obj = { shouldOpenGameProfile: true, gameId: _undefined };
-        obj.openGameProfileModal(obj);
-      };
-    }
-    obj2[3] = fn;
-    const items = [tmp9Result, ];
-    const obj3 = { variant: "text-sm/medium", style: null, children: null };
-    obj3[1] = tmp.chipText;
-    obj3[2] = tmp6;
-    items[1] = callback(tmp2(4281).Text, obj3);
-    obj2[4] = items;
-    return closure_3(tmp2(4276).MarkupText, obj2, state.key);
+    obj = { color: null, children: null };
+    obj[0] = textColor;
+    const items = ["@", stringResult];
+    obj[1] = items;
+    return closure_3(tmp2(4246).MarkupText, obj, state.key);
   } else {
+    obj = { size: "sm", style: null };
+    obj[1] = tmp.icon;
+    let tmp11 = null != tmp8Result;
+    if (tmp11) {
+      tmp11 = "" !== tmp8Result;
+    }
+    let tmp17Result = callback(tmp2(7722).UnknownGameIcon, obj);
+    if (tmp11) {
+      const obj1 = { style: null, source: null };
+      obj1[0] = tmp.icon;
+      const obj2 = { uri: null };
+      obj2[0] = tmp8Result;
+      obj1[1] = obj2;
+      tmp17Result = tmp17(tmp7(5221), obj1);
+    }
+    let str2 = "button";
+    if (state.noStyleAndInteraction) {
+      str2 = "text";
+    }
+    const obj3 = { accessibilityRole: null, style: null, color: null, onPress: null, children: null };
+    obj3[0] = str2;
+    obj3[1] = tmp.chip;
     let textColor1;
     if (state != null) {
       textColor1 = state.textColor;
     }
-    obj = { color: null, children: null };
-    obj[0] = textColor1;
-    const items1 = ["@", stringResult];
-    obj[1] = items1;
-    return closure_3(tmp2(4276).MarkupText, obj, state.key);
+    obj3[2] = textColor1;
+    let fn;
+    if (!state.noStyleAndInteraction) {
+      fn = () => {
+        let obj = gameId(outer1_2[10]);
+        obj = { gameId, gameProfileModalChecks: obj, source: state(outer1_2[11]).GameProfileSources.GameMention, sourceUserId: state.authorId };
+        obj = { shouldOpenGameProfile: true, gameId };
+        obj.openGameProfileModal(obj);
+      };
+    }
+    obj3[3] = fn;
+    const items1 = [tmp17Result, ];
+    const obj4 = { variant: "text-sm/medium", style: null, children: null };
+    obj4[1] = tmp.chipText;
+    obj4[2] = gameName;
+    items1[1] = callback(tmp2(4251).Text, obj4);
+    obj3[4] = items1;
+    return closure_3(tmp2(4246).MarkupText, obj3, state.key);
   }
+  tmp7 = gameId;
+  const tmp8 = gameId(4285);
 };

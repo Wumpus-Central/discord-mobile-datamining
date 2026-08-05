@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/KeyboardIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/10104_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/10075_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

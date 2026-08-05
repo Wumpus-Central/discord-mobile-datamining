@@ -112,8 +112,8 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
   }
   return 0 === arr.length;
 };
-export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
-  game = game.getGame(gameId);
+export const gameIdIsAcceptable = function gameIdIsAcceptable(closure_0) {
+  game = game.getGame(closure_0);
   if (null == game) {
     const items = [closure_7.NoMatch];
     let arr = items;

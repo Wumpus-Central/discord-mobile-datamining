@@ -223,7 +223,7 @@ function WrappedChannelNavButtons(channelId) {
   let obj = channelId(589);
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(channelId));
-  channelId(4498);
+  channelId(4468);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -276,12 +276,12 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  let obj1 = channelId(8214);
+  let obj1 = channelId(8186);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(12445).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(12417).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

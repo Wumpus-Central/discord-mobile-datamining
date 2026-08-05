@@ -17,7 +17,7 @@ function _promptForRegisterCredential() {
       if (register === undefined) {
         register = outer1_3.DCDSecurityKeyManager.register;
       }
-      yield "ct";
+      yield "PX_8";
       const obj5 = register(obj4[3]);
       obj4 = yield obj5.startRegisterWebAuthnCredential();
       ticket = obj4.ticket;
@@ -97,7 +97,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -116,7 +116,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               let code = tmp5;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

@@ -30,13 +30,13 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const sourceQuestContent = isScrollingInBoundsSharedValue.sourceQuestContent;
   ({ visible, onReplay, opacityStyle } = isScrollingInBoundsSharedValue);
   const tmp = callback2();
-  let obj = isActive(10896);
+  let obj = isActive(10868);
   const isBountiesVerticalScrollExperimentEnabled = obj.useIsBountiesVerticalScrollExperimentEnabled("BountiesScrollEndCard");
-  let obj1 = isActive(14187);
+  let obj1 = isActive(14161);
   const bountyCtaInfo = obj1.getBountyCtaInfo(bounty);
   const intl = isActive(1236).intl;
   const stringResult = intl.string(isActive(1236).t["9UtZAY"]);
-  let obj2 = isActive(4146);
+  let obj2 = isActive(4116);
   const fn = function y() {
     let obj = isScrollingInBoundsSharedValue;
     if (isScrollingInBoundsSharedValue != null) {
@@ -52,7 +52,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj = { opacity: isActive(outer1_2[7]).withTiming(num, isActive(outer1_2[8]).timingStandard) };
     return obj;
   };
-  obj = { isScrollingInBoundsSharedValue, withTiming: isActive(4286).withTiming, isActive, timingStandard: isActive(4289).timingStandard };
+  obj = { isScrollingInBoundsSharedValue, withTiming: isActive(4256).withTiming, isActive, timingStandard: isActive(4259).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 4903386092677;
   fn.__initData = closure_14;
@@ -62,7 +62,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   obj1 = { style: tmp.backdropTint, pointerEvents: "none" };
   const items1 = [callback(closure_6, obj1), , ];
   obj2 = { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" };
-  items1[1] = callback(isScrollingInBoundsSharedValue(4706), obj2);
+  items1[1] = callback(isScrollingInBoundsSharedValue(4676), obj2);
   if (isBountiesVerticalScrollExperimentEnabled) {
     const obj3 = { style: null, pointerEvents: "box-none", children: null };
     const items2 = [tmp.overlayContent, animatedStyle];
@@ -71,7 +71,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj4[0] = bounty;
     obj4[1] = sourceQuestContent;
     obj4[2] = !isActive;
-    const items3 = [tmp10(tmp9(14190), obj4), ];
+    const items3 = [tmp10(tmp9(14164), obj4), ];
     const obj5 = { style: null, pointerEvents: "box-none", children: null };
     obj5[0] = tmp.endedCtaButtonsContainer;
     const obj6 = { bounty: null, visible: null, sourceQuestContent: null, onClose: null, showCloseButton: false, disabled: null };
@@ -82,10 +82,10 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
 
     };
     obj6[5] = !isActive;
-    obj5[2] = tmp10(tmp9(14192), obj6);
+    obj5[2] = tmp10(tmp9(14166), obj6);
     items3[1] = tmp10(tmp11, obj5);
     obj3[2] = items3;
-    let tmp10Result = tmp8(tmp9(4146).View, obj3);
+    let tmp10Result = tmp8(tmp9(4116).View, obj3);
   } else {
     let tmp13;
     if (isActive) {
@@ -103,24 +103,24 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj9[0] = tmp.textBlock;
     const obj10 = { variant: "heading-md/semibold", color: "text-strong", children: null };
     obj10[2] = bountyCtaInfo.label;
-    const items5 = [tmp10(tmp2(4281).Text, obj10), ];
+    const items5 = [tmp10(tmp2(4251).Text, obj10), ];
     const obj11 = { variant: "heading-sm/medium", color: "text-default", children: null };
     obj11[2] = stringResult;
-    items5[1] = tmp10(tmp2(4281).Text, obj11);
+    items5[1] = tmp10(tmp2(4251).Text, obj11);
     obj9[1] = items5;
     const items6 = [tmp8(tmp11, obj9), ];
     const obj12 = { accessible: false, color: null, style: null };
     obj12[1] = tmp9(712).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
     obj12[2] = tmp.replayIcon;
-    items6[1] = tmp10(tmp2(9777).RetryIcon, obj12);
+    items6[1] = tmp10(tmp2(9748).RetryIcon, obj12);
     obj8[1] = items6;
-    obj7[5] = tmp8(tmp9(4146).View, obj8);
+    obj7[5] = tmp8(tmp9(4116).View, obj8);
     tmp10Result = tmp10(closure_4, obj7);
     const tmp12 = closure_4;
   }
   items1[2] = tmp10Result;
   obj[2] = items1;
-  return closure_10(isScrollingInBoundsSharedValue(4146).View, obj);
+  return closure_10(isScrollingInBoundsSharedValue(4116).View, obj);
 }
 ({ Pressable: c4, StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);

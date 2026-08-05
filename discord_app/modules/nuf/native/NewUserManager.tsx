@@ -128,7 +128,7 @@ let prototype = function NewUserManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -172,7 +172,7 @@ let prototype = function NewUserManager() {
               let callback2;
               key2 = 1;
               v0 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

@@ -56,7 +56,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   }
   let channelIconSource = null;
   if (null != channel) {
-    let tmp8Result = tmp8(12217);
+    let tmp8Result = tmp8(12189);
     channelIconSource = tmp8Result.getChannelIconSource(channel);
   }
   let uri = null;
@@ -68,8 +68,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(4475).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
-      const tmp8Result1 = tmp8(4475);
+      channelName = tmp8(4445).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+      const tmp8Result1 = tmp8(4445);
     }
   }
   if (!channelName) {
@@ -128,8 +128,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(4475).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
-      const tmp8Result2 = tmp8(4475);
+      channelName1 = tmp8(4445).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+      const tmp8Result2 = tmp8(4445);
     }
   }
   obj.channelName = channelName1;

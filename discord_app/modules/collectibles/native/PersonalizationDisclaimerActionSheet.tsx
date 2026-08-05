@@ -26,7 +26,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/collectibles/na
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = createCacheKey();
   const callback = React.useCallback(() => {
-    const obj = callback(3982);
+    const obj = callback(3952);
     obj.openURL(callback(1945).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
@@ -47,7 +47,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj3[2] = intl3.string(getSystemLocale.t.WAI6xu);
   obj3[3] = function onPress() {
-    return callback(4253).hideActionSheet();
+    return callback(4223).hideActionSheet();
   };
   items1[1] = callback(Button.Button, obj3);
   obj[0] = items1;

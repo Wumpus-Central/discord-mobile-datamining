@@ -11,7 +11,7 @@ export default {
   backspace(arg0) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11293).Commands;
+        const Commands = tmp(11265).Commands;
         Commands.backspace(arg0);
       } else {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
@@ -24,7 +24,7 @@ export default {
   blur(arg0) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11293).Commands;
+        const Commands = tmp(11265).Commands;
         Commands.blur(arg0);
       } else {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
@@ -37,7 +37,7 @@ export default {
   closeCustomKeyboard(arg0) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11293).Commands;
+        const Commands = tmp(11265).Commands;
         Commands.closeCustomKeyboard(arg0);
       } else {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
@@ -50,7 +50,7 @@ export default {
   flushText(arg0, arg1) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11293).Commands;
+        const Commands = tmp(11265).Commands;
         Commands.flushText(arg0, arg1);
       } else {
         const _Error = Error;
@@ -96,7 +96,7 @@ export default {
   focus(arg0) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11293).Commands;
+        const Commands = tmp(11265).Commands;
         Commands.focus(arg0);
       } else {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
@@ -109,7 +109,7 @@ export default {
   openCustomKeyboard(arg0) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11293).Commands;
+        const Commands = tmp(11265).Commands;
         Commands.openCustomKeyboard(arg0);
       } else {
         const _Error = Error;
@@ -123,7 +123,7 @@ export default {
   openSystemKeyboard(arg0) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp(11293).Commands;
+        const Commands = tmp(11265).Commands;
         Commands.openSystemKeyboard(arg0);
       } else {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
@@ -136,7 +136,7 @@ export default {
   setText(arg0, arg1) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp2(11293).Commands;
+        const Commands = tmp2(11265).Commands;
         Commands.setText(arg0, arg1);
       } else {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
@@ -149,7 +149,7 @@ export default {
   setSelectedRange(arg0, arg1, arg2) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp3(11293).Commands;
+        const Commands = tmp3(11265).Commands;
         Commands.setSelectedRange(arg0, arg1, arg2);
       } else {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
@@ -162,7 +162,7 @@ export default {
   updateTextBlocks(arg0, arg1, arg2) {
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp9(11293).Commands;
+        const Commands = tmp9(11265).Commands;
         const _JSON = JSON;
         const json = JSON.stringify(arg1);
         Commands.updateTextBlocks(arg0, json, tmp6);
@@ -190,7 +190,7 @@ export default {
     const editId = keepCursorPosition.editId;
     if (null != arg0) {
       if (obj.shouldUseFabricChatInput()) {
-        const Commands = tmp20(11293).Commands;
+        const Commands = tmp20(11265).Commands;
         const _JSON = JSON;
         Commands.replaceRange(arg0, _location, length, text, JSON.stringify(nodes), flag, editId);
       } else {

@@ -3,7 +3,7 @@ import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/11547_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11519_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 
 let obj = { badgeImageContainer: null, badgeImage: null };

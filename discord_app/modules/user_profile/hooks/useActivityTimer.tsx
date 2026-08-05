@@ -14,7 +14,7 @@ export default function useActivityTimer(start) {
   start = start.start;
   let first;
   let importDefault;
-  const interval = new first(4170).Interval();
+  const interval = new first(4140).Interval();
   first = callback(callback3(interval), 1)[0];
   const tmp3 = callback(callback3(() => Date.now()), 2);
   importDefault = tmp3[1];

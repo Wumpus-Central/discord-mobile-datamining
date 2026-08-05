@@ -41,11 +41,11 @@ function ChangeBannerColorRow(user) {
   let obj1 = _getArchivedAvatarURL;
   obj = { userId: user.id, image: pendingAvatar };
   let pendingAvatarSrc = obj1.getPendingAvatarSrc(obj);
-  const tmp7 = pendingAccentColor(8117)(user.id);
+  const tmp7 = pendingAccentColor(8089)(user.id);
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(undefined, 80);
   }
-  let tmp2Result = tmp2(8114);
+  let tmp2Result = tmp2(8086);
   tmp2Result = tmp2(688);
   const memoizedImageSourceResult = tmp2Result.memoizedImageSource(pendingAvatarSrc);
   const rgb2intResult = tmp2Result.rgb2int(_useDominantRGBFromImage.useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult));
@@ -69,7 +69,7 @@ function ChangeBannerColorRow(user) {
     if (arg0 === _undefined) {
       tmp = null;
     }
-    _undefined(8075).setPendingChanges({ accentColor: tmp });
+    _undefined(8047).setPendingChanges({ accentColor: tmp });
   }, items1);
   obj = { label: null, trailing: null, onPress: null };
   obj1 = { style: tmp.label, text: null };
@@ -77,7 +77,7 @@ function ChangeBannerColorRow(user) {
   obj1[1] = intl.string(_getSystemLocale.t.xzNfPz);
   obj[0] = callback(_Form.FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
-  const items2 = [callback(pendingAccentColor(13812), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
+  const items2 = [callback(pendingAccentColor(13784), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj4 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const obj3 = { style: tmp.bannerColor, color: pendingAccentColor };
   const tmp2Result1 = _useDominantRGBFromImage;
@@ -85,12 +85,12 @@ function ChangeBannerColorRow(user) {
   items2[1] = callback(_Text.Text, obj4);
   const obj5 = { style: tmp.rowArrow, size: null, source: null };
   obj5[1] = _Button.Icon.Sizes.CUSTOM;
-  obj5[2] = pendingAccentColor(13817);
+  obj5[2] = pendingAccentColor(13789);
   items2[2] = callback(_Button.Icon, obj5);
   obj2[1] = items2;
   obj[1] = callback2(View, obj2);
   obj[2] = function handleChangeColor() {
-    pendingAccentColor(13810)({ color: pendingAccentColor, onSelect: dependencyMap });
+    pendingAccentColor(13782)({ color: pendingAccentColor, onSelect: dependencyMap });
   };
   return callback(_TableRowInner.TableRow, obj);
 }
@@ -144,7 +144,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -164,12 +164,12 @@ export default function ChangeBannerActionSheet(isTryItOut) {
               lib = undefined;
               base64 = undefined;
               originalMd5 = undefined;
-              let obj1 = outer1_1(4253);
+              let obj1 = outer1_1(4223);
               obj1.hideActionSheet();
               originalMd5 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(4826).openImagePicker(outer1_8);
+              obj1[0] = outer1_1(4811).openImagePicker(outer1_8);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -188,7 +188,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
               lib(base64, originalMd5);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp21) {
           c3 = tmp;
@@ -207,16 +207,16 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   }
   let tmp = createCacheKey();
   if (!flag) {
-    flag = tmp2(3931).canUsePremiumProfileCustomization(user);
-    const tmp2Result = tmp2(3931);
+    flag = tmp2(3901).canUsePremiumProfileCustomization(user);
+    const tmp2Result = tmp2(3901);
   }
-  let obj = { value: _handleBannerUploadSelect(5610)(isTryItOut.analyticsLocations).analyticsLocations, children: null };
+  let obj = { value: _handleBannerUploadSelect(5595)(isTryItOut.analyticsLocations).analyticsLocations, children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.Vgdusv);
   let tmp4Result = flag;
   if (flag) {
-    tmp4Result = tmp4(tmp5(7625).NitroWheelIcon, {});
+    tmp4Result = tmp4(tmp5(7597).NitroWheelIcon, {});
   }
   obj[1] = tmp4Result;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
@@ -242,7 +242,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj3 = { style: null, size: "sm" };
     obj3[0] = tmp.nitroWheel;
-    tmp4Result1 = tmp4(tmp5(7625).NitroWheelIcon, obj3);
+    tmp4Result1 = tmp4(tmp5(7597).NitroWheelIcon, obj3);
   }
   const obj4 = { label: closure_10(View, obj2), subLabel: null, onPress: null };
   items2[1] = tmp4Result1;
@@ -264,7 +264,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     obj6[0] = tmp.upsellButton;
     const obj7 = { analyticsObject: null };
     obj7[0] = constants.EDIT_PROFILE_BANNER;
-    obj6[1] = tmp4(tmp2(13809), obj7);
+    obj6[1] = tmp4(tmp2(13781), obj7);
     tmp4Result2 = tmp4(tmp10, obj6);
   }
   items3[1] = tmp4Result2;
@@ -295,12 +295,12 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     }
     const obj9 = { label: null, onPress: null };
     obj8[1] = removeText;
-    obj9[0] = tmp4(tmp5(7777).FormLabel, obj8);
+    obj9[0] = tmp4(tmp5(7749).FormLabel, obj8);
     obj9[1] = function handleBannerDelete() {
       callback(null);
       _handleBannerUploadSelect(outer1_2[10]).hideActionSheet();
     };
-    showRemoveBanner = tmp4(tmp5(5315).TableRow, obj9);
+    showRemoveBanner = tmp4(tmp5(5300).TableRow, obj9);
   }
   const obj10 = { children: null };
   items1[2] = showRemoveBanner;

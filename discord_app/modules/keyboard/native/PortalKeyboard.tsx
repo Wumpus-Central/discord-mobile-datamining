@@ -1,7 +1,7 @@
 // discord_app/modules/keyboard/native/PortalKeyboard.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { Portal } from "../../../../_runtime/04156_Portal.js";
+import { Portal } from "../../../../_runtime/04126_Portal.js";
 import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 
 const require = arg1;
@@ -21,7 +21,7 @@ export const PortalKeyboard = function PortalKeyboard(children) {
     obj = { hostName: null, children: null };
     obj[0] = tmp3;
     obj[1] = children.children;
-    return jsx(tmp(4156).Portal, { hostName: null, children: null });
+    return jsx(tmp(4126).Portal, { hostName: null, children: null });
   }
   tmp3 = c3;
 };

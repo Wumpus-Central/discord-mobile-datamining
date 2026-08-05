@@ -40,7 +40,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -67,8 +67,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     const obj1 = { applicationId: null, layoutMode: null };
                     obj1[0] = tmp10.applicationId;
                     obj1[1] = outer1_7.FOCUSED;
-                    const result = outer1_1(10510).updateFrameLayoutMode(obj1);
-                    const obj9 = outer1_1(10510);
+                    const result = outer1_1(10482).updateFrameLayoutMode(obj1);
+                    const obj9 = outer1_1(10482);
                   }
                 }
                 if (tmp9) {
@@ -77,15 +77,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  outer1_1(10555)(guild_id, _location);
-                  const tmp24 = outer1_1(10555);
+                  outer1_1(10527)(guild_id, _location);
+                  const tmp24 = outer1_1(10527);
                 } else {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
                   c4 = 1;
                   if (outer1_7) {
-                    let obj5 = outer1_1(10510);
+                    let obj5 = outer1_1(10482);
                     let obj2 = { applicationId: null };
                     obj2[0] = tmp40;
                     dependencyMap = 2;
@@ -106,7 +106,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                   }
                 }
-                obj2 = outer1_0(10894);
+                obj2 = outer1_0(10866);
                 const obj4 = { appId: null, botId: null, analyticsLocations: null };
                 obj4[0] = tmp40;
                 let id1;

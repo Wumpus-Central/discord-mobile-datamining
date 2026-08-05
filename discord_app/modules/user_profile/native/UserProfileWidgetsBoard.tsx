@@ -217,11 +217,11 @@ let closure_17 = importAllResult.memo((game) => {
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
     obj4[1] = tmp2(712).colors.TEXT_MUTED;
-    const items3 = [tmp10(tmp6(12258).QuoteIcon, obj4), ];
+    const items3 = [tmp10(tmp6(12230).QuoteIcon, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;
-    items3[1] = tmp10(tmp6(4281).Text, obj5);
+    items3[1] = tmp10(tmp6(4251).Text, obj5);
     obj3[1] = items3;
     tmp8Result = tmp8(tmp9, obj3);
   }

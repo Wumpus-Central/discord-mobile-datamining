@@ -68,21 +68,21 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   if (flag === undefined) {
     flag = false;
   }
-  let f92377;
+  let f92315;
   let primaryColor;
   secondaryColor = undefined;
   let callback;
   const tmp = createCacheKey();
-  let tmp4 = f92377(primaryColor[11])(user.id, guildId);
-  f92377 = tmp4;
-  const tmp5 = f92377(primaryColor[12])({ user, displayProfile: tmp4, pendingThemeColors: pendingThemeColors.pendingThemeColors, isPreview: flag });
+  let tmp4 = f92315(primaryColor[11])(user.id, guildId);
+  f92315 = tmp4;
+  const tmp5 = f92315(primaryColor[12])({ user, displayProfile: tmp4, pendingThemeColors: pendingThemeColors.pendingThemeColors, isPreview: flag });
   primaryColor = tmp5.primaryColor;
   secondaryColor = tmp5.secondaryColor;
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(guildId, 80);
   }
   let obj = secondaryColor(tmp3[13]);
-  callback = obj.useAvatarColors(pendingAvatarSrc, f92377(tmp3[4]).unsafe_rawColors.PRIMARY_530, false);
+  callback = obj.useAvatarColors(pendingAvatarSrc, f92315(tmp3[4]).unsafe_rawColors.PRIMARY_530, false);
   if (null != primaryColor) {
     if (null != secondaryColor) {
       obj = { style: null, children: null };
@@ -98,7 +98,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl = tmp6(tmp3[8]).intl;
         obj2[1] = intl.string(tmp6(tmp3[8]).t["+1H47t"]);
         obj2[2] = function onPress() {
-          let obj = f92377(primaryColor[18]);
+          let obj = f92315(primaryColor[18]);
           obj = {
             onResetTheme(arg0) {
               let themeColors;
@@ -127,26 +127,26 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       obj4[0] = tmp.themeColorContainer;
       const obj5 = { onPress: null, color: null, label: null, accessibilityLabel: null };
       secondaryColor = primaryColor;
-      f92377 = (arg0) => {
+      f92315 = (arg0) => {
         if (arg0 !== primaryColor) {
           const items = [arg0, secondaryColor];
           let themeColors;
-          if (f92377 != null) {
-            themeColors = f92377.themeColors;
+          if (f92315 != null) {
+            themeColors = f92315.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
             tmp8 = items;
           }
           secondaryColor(tmp8);
-          tmp4 = f92377(primaryColor[14]);
+          tmp4 = f92315(primaryColor[14]);
           const tmp7 = secondaryColor;
         }
       };
       obj5[0] = () => {
         let obj = UNSAFE_isDismissibleContentDismissed;
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
-        obj = { color: secondaryColor, onSelect: f92377, suggestedColors: closure_4 };
+        obj = { color: secondaryColor, onSelect: f92315, suggestedColors: closure_4 };
         showCustomColorPickerActionSheet(obj);
       };
       obj5[1] = primaryColor;
@@ -160,26 +160,26 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       const items2 = [callback(ColorSwatch, obj5), ];
       const obj7 = { color: null, onPress: null, label: null, accessibilityLabel: null };
       obj7[0] = secondaryColor;
-      f92377 = (arg0) => {
+      f92315 = (arg0) => {
         if (arg0 !== secondaryColor) {
           const items = [primaryColor, arg0];
           let themeColors;
-          if (f92377 != null) {
-            themeColors = f92377.themeColors;
+          if (f92315 != null) {
+            themeColors = f92315.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
             tmp8 = items;
           }
           secondaryColor(tmp8);
-          tmp4 = f92377(primaryColor[14]);
+          tmp4 = f92315(primaryColor[14]);
           const tmp7 = secondaryColor;
         }
       };
       obj7[1] = () => {
         let obj = UNSAFE_isDismissibleContentDismissed;
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
-        obj = { color: secondaryColor, onSelect: f92377, suggestedColors: closure_4 };
+        obj = { color: secondaryColor, onSelect: f92315, suggestedColors: closure_4 };
         showCustomColorPickerActionSheet(obj);
       };
       const intl4 = tmp6(tmp3[8]).intl;

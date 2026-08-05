@@ -320,9 +320,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.appVersionSettings = tmp61.internalBinaryRead(pos, pos.uint32(), arg2, obj.appVersionSettings);
   }
   return obj;
 };
@@ -2304,7 +2304,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(arr) {
-  let obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
+  let obj = { videoBackgroundFilterDesktop: { oneofKind: "Array" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
@@ -2320,10 +2320,9 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    const FloatValue = defineProperty.FloatValue;
-    obj.soundmojiVolume = FloatValue.internalBinaryRead(pos, pos.uint32(), arg2, obj.soundmojiVolume);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };

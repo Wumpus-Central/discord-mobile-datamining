@@ -22,8 +22,8 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
   }
   let name = obj.getName(guild_id, id, user);
   if (name == null) {
-    name = tmp3(4124).getGlobalName(user);
-    const tmp3Result = tmp3(4124);
+    name = tmp3(4094).getGlobalName(user);
+    const tmp3Result = tmp3(4094);
   }
   if (SafetyToastType.IGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl14 = getSystemLocale.intl;
@@ -71,7 +71,7 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl5.string(getSystemLocale.t.zBpoc7);
   } else if (tmp8.REPORT_TO_MOD_SUCCESS === BLOCK_SUCCESS) {
     const intl4 = getSystemLocale.intl;
-    return intl4.string(tmp3(2385).iBypeZ);
+    return intl4.string(tmp3(2355).iBypeZ);
   } else if (tmp8.SAFETY_FEEDBACK_SUCCESS === BLOCK_SUCCESS) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.TcFR5k);

@@ -193,10 +193,10 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (tmp(7268).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (tmp(7268).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (tmp(7268).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (tmp(7268).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (tmp(7240).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (tmp(7240).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (tmp(7240).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (tmp(7240).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }

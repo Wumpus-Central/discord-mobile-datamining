@@ -12,5 +12,5 @@ export default function useMediaModalFooterBackground() {
   const tmp = n;
   const tmp2 = callback(n(mediaModalFooterBackgroundColorRgba.useToken(Themes.colors.THEME_LOCKED_BLUR_FALLBACK)).rgba(), 4);
   mediaModalFooterBackgroundColorRgba = { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] };
-  return { mediaModalFooterBackgroundColorRgba, MediaModalFooterUnderlay: "a" };
+  return { mediaModalFooterBackgroundColorRgba, MediaModalFooterUnderlay: "Array" };
 };

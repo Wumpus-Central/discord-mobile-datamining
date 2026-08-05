@@ -48,9 +48,9 @@ function UserRowSubLabel(arg0) {
   }
   if (!isGameRelationship) {
     obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[3] = tmp(4124).getUserTag(user);
-    callback(tmp(4281).Text, obj);
-    const tmpResult = tmp(4124);
+    obj[3] = tmp(4094).getUserTag(user);
+    callback(tmp(4251).Text, obj);
+    const tmpResult = tmp(4094);
   }
   if (null == stateFromStores) {
     const obj1 = { style: null };
@@ -72,7 +72,7 @@ function UserRowSubLabel(arg0) {
     const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
-    items1[1] = callback(tmp(4281).Text, obj5);
+    items1[1] = callback(tmp(4251).Text, obj5);
     obj2[1] = items1;
     closure_15(View, obj2);
     const tmp11 = closure_15;
@@ -204,7 +204,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "a" };
+      let obj = { accessibilityActions: null, actions: "Array" };
       obj[0] = items;
       return obj;
     } else {
@@ -347,7 +347,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
         obj17[2] = obj5.truncateText(intl3.string(type(NONE[28]).t.OYkgVk), 8);
         obj17[3] = function onPress() {
           let obj = outer1_1(outer1_2[19]);
-          obj = { userId: closure_26.current.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
+          obj = { userId: closure_26.current.id, context: obj, type: "T", fromFriendSuggestion: null };
           obj = { location: outer1_20 };
           obj.addRelationship(obj);
           const result = outer1_0(outer1_2[17]).presentAddedFriendToast();
@@ -483,7 +483,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
         if (tmp.CANCEL !== actionName) {
           if (tmp.ACCEPT_SUGGESTION === actionName) {
             let obj1 = user(NONE[19]);
-            obj = { userId: null, context: null, type: "HermesInternal", fromFriendSuggestion: null };
+            obj = { userId: null, context: null, type: "T", fromFriendSuggestion: null };
             obj[0] = user.id;
             obj1 = { location: null };
             obj1[0] = roleStyle;

@@ -15,7 +15,7 @@ function _importWithRetry() {
       let c2;
       const callback = tmp3;
       ({ createPromise: c0, webpackId: c1, name: c2 } = lib);
-      yield "ct";
+      yield "PX_8";
       if (1 === tmp7) {
         if (arg0 === 1) {
           let c6 = 3;

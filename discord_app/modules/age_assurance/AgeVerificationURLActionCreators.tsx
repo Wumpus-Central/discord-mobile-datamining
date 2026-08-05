@@ -37,7 +37,7 @@ function _requestAgeVerification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ function _requestAgeVerification() {
               ({ method: c0, classificationId: c1, vendor: c2 } = callback);
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -270,7 +270,7 @@ function _initiateSuspendedUserAgeVerification() {
       let c1;
       c1 = tmp2;
       ({ classificationId: c0, method: c1 } = callback);
-      yield "ct";
+      yield "PX_8";
       const table = suspendedUserToken.getSuspendedUserToken();
       const HTTP = callback(table[5]).HTTP;
       const obj2 = { url: null, body: null, rejectWithError: true };
@@ -313,7 +313,7 @@ function _registerIncodeInterview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -350,7 +350,7 @@ function _registerIncodeInterview() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp9) {
           c1 = tmp;
@@ -379,7 +379,7 @@ function _requestIncodeSessionBootstrap() {
       if (obj1 === undefined) {
         obj1 = {};
       }
-      yield "ct";
+      yield "PX_8";
       const HTTP = obj1(table[5]).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: true };
       obj3[0] = constants.CREATE_INCODE_SESSION;

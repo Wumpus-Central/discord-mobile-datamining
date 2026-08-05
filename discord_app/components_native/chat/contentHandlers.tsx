@@ -38,7 +38,7 @@ let closure_4 = importDefaultResult((arg0) => {
   const iter = (function*(arg0) {
     let callback = tmp2;
     attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
-    yield "ct";
+    yield "PX_8";
     if (1 === tmp5) {
       if (arg0 === 1) {
         let c4 = 3;
@@ -51,7 +51,7 @@ let closure_4 = importDefaultResult((arg0) => {
       } else {
         if (null != attachmentUrl) {
           if ("" !== attachmentUrl) {
-            const obj3 = attachmentUrl(9661);
+            const obj3 = attachmentUrl(9632);
             let c3 = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };
@@ -66,9 +66,9 @@ let closure_4 = importDefaultResult((arg0) => {
       throw arg1;
     } else if (arg0 !== 2) {
       callback = arg1;
-      const obj = callback(8859);
+      const obj = callback(8831);
       obj.trackLinkClicked(callback);
-      obj1 = callback(3982);
+      obj1 = callback(3952);
       obj1.openURL(callback);
     }
     return arg1;
@@ -93,7 +93,7 @@ let closure_3 = importDefaultResult((arg0) => {
   const iter = (function*(arg0) {
     let callback = tmp2;
     attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
-    yield "ct";
+    yield "PX_8";
     if (1 === tmp5) {
       if (arg0 === 1) {
         let c4 = 3;
@@ -106,7 +106,7 @@ let closure_3 = importDefaultResult((arg0) => {
       } else {
         if (null != attachmentUrl) {
           if ("" !== attachmentUrl) {
-            let obj2 = attachmentUrl(9661);
+            let obj2 = attachmentUrl(9632);
             let c3 = 2;
             c4 = 1;
             obj2 = { value: null, done: false };
@@ -123,7 +123,7 @@ let closure_3 = importDefaultResult((arg0) => {
       callback = arg1;
       const obj = { urlString: null };
       obj[0] = callback;
-      callback(10971)(obj);
+      callback(10943)(obj);
     }
     return arg1;
   })();
@@ -147,7 +147,7 @@ obj[3] = function onTapMention(closure_0) {
   let roleId;
   let roleName;
   let userId;
-  let obj = parsedUserId(10934);
+  let obj = parsedUserId(10906);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -166,7 +166,7 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(1959)(10974, tmp2.paths), "RoleMembersActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(1959)(10946, tmp2.paths), "RoleMembersActionSheet", obj);
         const obj9 = ACTION_SHEET_HEIGHT_HALF;
       }
     }
@@ -175,7 +175,7 @@ obj[3] = function onTapMention(closure_0) {
         const obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
         const obj6 = ACTION_SHEET_HEIGHT_HALF;
-        const tmp10 = tmp(1959)(10974, tmp2.paths);
+        const tmp10 = tmp(1959)(10946, tmp2.paths);
         obj1[1] = DISCORD_EPOCH.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
@@ -183,7 +183,7 @@ obj[3] = function onTapMention(closure_0) {
       }
     }
     if (null == roleName) {
-      const DeveloperMode = tmp(3958).DeveloperMode;
+      const DeveloperMode = tmp(3928).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj2 = { secondaryConfirmText: null, onConfirmSecondary: null };
@@ -224,7 +224,7 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8656, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8628, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 let result = require("shouldRefreshAttachmentUrl").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

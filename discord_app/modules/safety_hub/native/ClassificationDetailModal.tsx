@@ -24,7 +24,7 @@ export default function ClassificationDetailModal(classificationId) {
   let safetyHubInitialized;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = classificationId(11227);
+  let obj = classificationId(11199);
   safetyHubInitialized = obj.useSafetyHubInitialized();
   const items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
@@ -68,9 +68,9 @@ export default function ClassificationDetailModal(classificationId) {
           }
         },
         onError() {
-          let arr = callback2(4490);
+          let arr = callback2(4460);
           arr = arr.pop();
-          let obj = callback(5925);
+          let obj = callback(5910);
           obj = { screen: constants.ACCOUNT, params: obj };
           obj = { initialTab: constants2.STANDING };
           obj.openUserSettings(obj);
@@ -83,5 +83,5 @@ export default function ClassificationDetailModal(classificationId) {
   obj = { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null };
   const intl = classificationId(1236).intl;
   obj[2] = intl.string(classificationId(1236).t["13/7kX"]);
-  return jsx(classificationId(5665).Navigator, { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null });
+  return jsx(classificationId(5650).Navigator, { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null });
 };

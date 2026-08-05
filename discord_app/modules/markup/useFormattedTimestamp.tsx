@@ -1,7 +1,7 @@
 // discord_app/modules/markup/useFormattedTimestamp.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
-import { useForceUpdate } from "../../../_runtime/06813_useForceUpdate.js";
+import { useForceUpdate } from "../../../_runtime/06798_useForceUpdate.js";
 import { TIMESTAMP_FORMATS } from "TimestampUtils.tsx";
 
 const require = arg1;

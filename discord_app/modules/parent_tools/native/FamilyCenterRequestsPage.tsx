@@ -32,7 +32,7 @@ function FamilyCenterMaxConnectionsBlurb() {
   const tmp5 = importDefault;
   useAgeSpecificText;
   const intl = tmp2(1236).intl;
-  intl.formatToPlainString(tmp5(2285)["1/PzIj"], { maxConnections: useIsInAdultAgeGroup() ? closure_5 : closure_6 });
+  intl.formatToPlainString(tmp5(2255)["1/PzIj"], { maxConnections: useIsInAdultAgeGroup() ? closure_5 : closure_6 });
   const intl2 = tmp2(1236).intl;
   let tmp10 = null;
   if (hasMaxConnections) {
@@ -40,7 +40,7 @@ function FamilyCenterMaxConnectionsBlurb() {
     obj[0] = tmp.container;
     obj = { variant: "text-xxs/medium", color: "text-muted", children: null };
     obj[2] = tmp9;
-    obj[1] = callback(tmp2(4281).Text, obj);
+    obj[1] = callback(tmp2(4251).Text, obj);
     tmp10 = callback(closure_3, obj);
   }
   return tmp10;
@@ -70,10 +70,10 @@ function FamilyCenterHelpLineInfo() {
     obj1[0] = tmp.supportHeader;
     const intl3 = tmp2(1236).intl;
     obj1[2] = intl3.string(messagesProxy["7/tVhv"]);
-    const items = [callback(tmp2(4281).Text, obj1), ];
+    const items = [callback(tmp2(4251).Text, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj2[2] = formatResult;
-    items[1] = callback(tmp2(4281).Text, obj2);
+    items[1] = callback(tmp2(4251).Text, obj2);
     obj[1] = items;
     tmp11 = callback2(closure_3, obj);
   }

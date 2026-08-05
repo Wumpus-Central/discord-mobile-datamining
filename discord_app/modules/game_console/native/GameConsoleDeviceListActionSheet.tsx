@@ -7,8 +7,8 @@ import set from "set";
 import { ComponentActions } from "ME";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/10782_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10783_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10754_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10755_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -108,7 +108,7 @@ export default function GameConsoleListActionSheet(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -129,7 +129,7 @@ export default function GameConsoleListActionSheet(arg0) {
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(10780).transferToPlaystationWithAlert(outer1_0, dependencyMap[outer1_4], v0);
+              obj1[0] = outer1_0(10752).transferToPlaystationWithAlert(outer1_0, dependencyMap[outer1_4], v0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -141,12 +141,12 @@ export default function GameConsoleListActionSheet(arg0) {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(4253);
+            obj = v0(4223);
             obj.hideActionSheet();
             const ComponentDispatch = outer1_0(1231).ComponentDispatch;
             ComponentDispatch.dispatch(outer1_11.TOGGLE_CALL_CONTROL_DRAWER);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp13) {
           dependencyMap = tmp;

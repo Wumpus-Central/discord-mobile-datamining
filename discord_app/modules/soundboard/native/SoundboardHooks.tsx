@@ -38,7 +38,7 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -72,7 +72,7 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
               return obj;
             }
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;

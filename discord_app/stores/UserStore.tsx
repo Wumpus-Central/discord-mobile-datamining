@@ -513,7 +513,17 @@ function handleCurrentUserUpdate(user) {
 }
 function updatePremiumType(user) {
   user = user.user;
-  mergeUser({ id: user.id, premiumType: user.premiumType }, true);
+  const obj = { id: user.id, premiumType: null };
+  let premiumType = user.premiumType;
+  if (obj2.isStaffEnv(user)) {
+    let premiumTypeOverride = store.getPremiumTypeOverride();
+    if (premiumTypeOverride === closure_10) {
+      premiumTypeOverride = store.getPremiumTypeActual();
+    }
+    premiumType = premiumTypeOverride;
+  }
+  obj[1] = premiumType;
+  return mergeUser(obj, true);
 }
 function handleLoadMessages(messages) {
   messages = messages.messages;

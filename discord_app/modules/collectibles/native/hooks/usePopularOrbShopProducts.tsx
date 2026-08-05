@@ -42,14 +42,14 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   const stateFromStores = enabled(589).useStateFromStores(items, () => POPULARITY.getCurrentUser());
   let obj2 = enabled(589);
   let tmp8 = first;
-  const canUseShopDiscountsResult = first(3931).canUseShopDiscounts(stateFromStores);
+  const canUseShopDiscountsResult = first(3901).canUseShopDiscounts(stateFromStores);
   c6 = canUseShopDiscountsResult;
-  if (enabled(14216).BountiesShopCarouselExperimentVariation.POPULARITY === variation) {
+  if (enabled(14190).BountiesShopCarouselExperimentVariation.POPULARITY === variation) {
     POPULARITY = tmp5(681).CollectibleSearchSortType.POPULARITY;
-  } else if (tmp5(14216).BountiesShopCarouselExperimentVariation.RECENCY === variation) {
+  } else if (tmp5(14190).BountiesShopCarouselExperimentVariation.RECENCY === variation) {
     POPULARITY = tmp5(681).CollectibleSearchSortType.RECENCY;
   } else {
-    const BASE = tmp5(14216).BountiesShopCarouselExperimentVariation.BASE;
+    const BASE = tmp5(14190).BountiesShopCarouselExperimentVariation.BASE;
     POPULARITY = tmp5(681).CollectibleSearchSortType.POPULARITY;
   }
   const items1 = [enabled, POPULARITY];
@@ -68,7 +68,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -143,7 +143,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 v0(true);
               }
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } catch (tmp34) {
             updateCategoriesAndProducts = tmp34;
@@ -199,26 +199,26 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     }
     callback2(false);
   }, items2);
-  let tmp5Result = tmp5(12087);
+  let tmp5Result = tmp5(12059);
   let fetchCollectiblesProducts = tmp5Result.useFetchCollectiblesProducts(first);
   const items3 = [first];
   const effect2 = obj.useEffect(() => {
     if (0 !== first.length) {
-      let obj = enabled(8737);
+      let obj = enabled(8709);
       obj = { skuIds: null };
       obj[0] = tmp;
       const result = obj.maybeFetchProductsBySkuIds(obj);
     }
   }, items3);
-  tmp5Result = tmp5(9282);
+  tmp5Result = tmp5(9253);
   const getOrFetchStorefrontPricesForSkuIds = tmp5Result.useGetOrFetchStorefrontPricesForSkuIds({ skuIds: first });
-  let obj3 = first(3931);
+  let obj3 = first(3901);
   const items4 = [c6];
   stateFromStoresArray = enabled(589).useStateFromStoresArray(items4, () => first.map((closure_0) => productsForSku.getProductsForSku(closure_0)));
   const tmp5Result1 = enabled(589);
   const items5 = [c6];
   stateFromStoresArray1 = enabled(589).useStateFromStoresArray(items5, () => first.map((closure_0) => fetchStateForSku.getFetchStateForSku(closure_0)));
-  const tmp17 = tmp8(14219)();
+  const tmp17 = tmp8(14193)();
   constants = tmp17;
   const items6 = [tmp17, first, stateFromStoresArray, canUseShopDiscountsResult];
   memo = obj.useMemo(() => _undefined(first).map((product) => {
@@ -302,7 +302,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   }), items8);
   const tmp5Result2 = enabled(589);
   obj = { products: memo2, screen: constants.ORBS };
-  filteredAndSortedProducts = enabled(14221).useFilteredAndSortedProducts(obj);
+  filteredAndSortedProducts = enabled(14195).useFilteredAndSortedProducts(obj);
   const items9 = [filteredAndSortedProducts];
   const memo3 = obj.useMemo(() => filteredAndSortedProducts.slice(0, 10), items9);
   if (!fetchCollectiblesProducts) {

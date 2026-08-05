@@ -4,7 +4,7 @@ import importAllResult from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "styles";
 import { PersistedStore } from "getClass";
 import fetchFingerprint from "fetchFingerprint";
-import { jsx } from "module_8337";
+import { jsx } from "module_8309";
 import createCacheKey from "createCacheKey";
 import { Link } from "../../../../../../_runtime/01481_Link.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
@@ -18,9 +18,9 @@ function DevToolsPersistedStoresActionSheet(store) {
   let obj = { header: null, children: null };
   obj = { title: null };
   obj[0] = store.getName();
-  obj[0] = jsx(store(5337).BottomSheetTitleHeader, { title: null });
+  obj[0] = jsx(store(5322).BottomSheetTitleHeader, { title: null });
   obj = { hasIcons: false, children: null };
-  obj[1] = jsx(store(5648).ActionSheetRow, {
+  obj[1] = jsx(store(5633).ActionSheetRow, {
     variant: "danger",
     label: "Clear persisted store",
     subLabel: "App restart required to re-init the cleared store",
@@ -30,8 +30,8 @@ function DevToolsPersistedStoresActionSheet(store) {
       close();
     }
   });
-  obj[1] = jsx(store(5648).ActionSheetRow.Group, { hasIcons: false, children: null });
-  return jsx(store(5646).ActionSheet, { hasIcons: false, children: null });
+  obj[1] = jsx(store(5633).ActionSheetRow.Group, { hasIcons: false, children: null });
+  return jsx(store(5631).ActionSheet, { hasIcons: false, children: null });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -74,7 +74,7 @@ let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   onPress() {
     const result = callback(1923).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
     const obj = callback(1923);
-    callback(3986).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    callback(3956).open({ key: "disable_database_and_remove", content: "Database has been removed." });
   }
 }));
 let closure_13 = importAllResult.memo(() => {

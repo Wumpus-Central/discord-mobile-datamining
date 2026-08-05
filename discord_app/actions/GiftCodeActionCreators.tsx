@@ -42,7 +42,7 @@ function _resolveGiftCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function _resolveGiftCode() {
               application = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -299,7 +299,7 @@ export default {
       obj5[1] = closure_0;
       obj5[2] = closure_1;
       obj4.dispatch(obj5);
-      closure_0 = yield "HermesInternal";
+      closure_0 = yield "T";
       const obj = outer1_1(outer1_2[6]);
       const obj7 = { type: "GIFT_CODE_CREATE_SUCCESS", giftCode: null };
       obj7[1] = closure_0.body;

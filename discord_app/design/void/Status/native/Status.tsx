@@ -1,6 +1,6 @@
 // discord_app/design/void/Status/native/Status.tsx
 import _slicedToArray from "_slicedToArray";
-import "module_4146";
+import "module_4116";
 import get_ActivityIndicator from "STATUS_PADDING";
 import { STATUS_PADDING } from "STATUS_PADDING";
 import { StatusTypes } from "ME";
@@ -82,23 +82,23 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(13264);
+    let tmp4Result = tmp4(13236);
   } else if (flag2) {
-    tmp4Result = tmp4(13265);
+    tmp4Result = tmp4(13237);
   } else if (flag) {
-    tmp4Result = tmp4(13266);
+    tmp4Result = tmp4(13238);
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(13267);
+    tmp4Result = tmp4(13239);
   } else if (tmp7.DND === status) {
-    tmp4Result = tmp4(13268);
+    tmp4Result = tmp4(13240);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(13270);
+        tmp4Result = tmp4(13242);
       }
     }
-    tmp4Result = tmp4(13269);
+    tmp4Result = tmp4(13241);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

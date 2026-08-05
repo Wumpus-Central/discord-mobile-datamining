@@ -25,9 +25,20 @@ let map1;
 let closure_16 = new require("ensureGuildLoaded")("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   let closure_0 = arg0;
-  const obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "PX_16", canAccessMedia: "disabled", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "ct", showPip: "Instance", closePip: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}", displayedMediaItemIdsPerChannel: "function pack_Pnpm_installWorkletsSupportTs2(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.box(value);}", currentlyDisplayedChannelId: "function unpack_Pnpm_installWorkletsSupportTs3(value){return value.unbox();}" };
-  obj[8] = function closePip() {
-    callback(outer1_2[13]).batchUpdates(() => callback({ showPip: false }));
+  const obj = {
+    activeMediaPlayerSource: "T",
+    mediaSourceMessage: "Path",
+    canAccessMedia: "sa",
+    isPlaying: false,
+    wasPipClosedByUser: null,
+    progress: null,
+    rate: "PX_8",
+    showPip: "flex",
+    closePip() {
+      callback(outer1_2[13]).batchUpdates(() => callback({ showPip: false }));
+    },
+    displayedMediaItemIdsPerChannel: "column",
+    currentlyDisplayedChannelId: null
   };
   obj[9] = {};
   return obj;
@@ -290,7 +301,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     outer1_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      obj = { activeMediaPlayerSource: null, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
+      obj = { activeMediaPlayerSource: null, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
       obj[0] = tmp3;
       let orFetchMediaSourceMessage;
       if (null != tmp3) {
@@ -337,13 +348,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         const obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(6826).fetchMessage(obj);
+        const message1 = self(6811).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(6826);
+        const obj2 = self(6811);
       }
       obj4 = message;
     }

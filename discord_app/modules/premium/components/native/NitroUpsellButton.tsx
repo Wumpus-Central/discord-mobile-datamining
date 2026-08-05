@@ -17,10 +17,14 @@ const memoResult = require("noop").memo(function NitroUpsellButton(shiny) {
   if (flag === undefined) {
     flag = true;
   }
+  let str = shiny.size;
+  if (str === undefined) {
+    str = "lg";
+  }
   let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { text, size: "lg", loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
+  obj = { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
   obj = { color: null, size: "sm" };
   obj[0] = Themes.colors.WHITE;
   obj[4] = jsx(NitroWheelIcon.NitroWheelIcon, { color: null, size: "sm" });

@@ -22,7 +22,7 @@ function _writeCaches() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -46,7 +46,7 @@ function _writeCaches() {
               table = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else {
             if (1 === tmp5) {
@@ -96,7 +96,7 @@ function _writeCaches() {
               return obj;
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;

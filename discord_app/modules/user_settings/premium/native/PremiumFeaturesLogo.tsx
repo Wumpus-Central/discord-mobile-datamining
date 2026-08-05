@@ -2,8 +2,8 @@
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/06810_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08550_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/06795_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08522_registerAsset.js";
 import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 
 const require = arg1;
@@ -19,7 +19,7 @@ export default function PremiumFeaturesLogo(premiumType) {
     tmp3 = registerAsset;
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
-  const tmpResult = tmp(5236);
+  const tmpResult = tmp(5221);
   obj[1] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   obj[3] = premiumType.style;
   obj[5] = tmp3;

@@ -67,9 +67,9 @@ function FocusedControlsExpanded(children) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = createCacheKey();
-  let obj = positionY(10672);
+  let obj = positionY(10644);
   const canShowTooltip = obj.useCanShowTooltip(positionY(691).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4146);
+  positionY(4116);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / outer1_15, 1) };
   };
@@ -101,7 +101,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const aboveActionBar = positionY.aboveActionBar;
   ({ onPressHeader, isExpanded } = positionY);
   const tmp = createCacheKey();
-  let obj = positionY(4146);
+  let obj = positionY(4116);
   const fn = function _() {
     return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - outer1_15), 0) };
   };
@@ -112,14 +112,14 @@ function FocusedControlsAboveActionBarView(positionY) {
   obj = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   const obj1 = { style: tmp.aboveActionBarContainer, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(5594).ActionSheetHeaderBar, {}), ];
+  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(5579).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     const obj2 = { style: null, children: null };
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj2[0] = items1;
     obj2[1] = aboveActionBar;
-    tmp4Result = tmp4(offsetY(4146).View, obj2);
+    tmp4Result = tmp4(offsetY(4116).View, obj2);
   }
   items[2] = tmp4Result;
   obj1[1] = items;
@@ -227,7 +227,7 @@ class FocusedControlsBottomDrawer {
     height = undefined;
     c11 = undefined;
     c12 = undefined;
-    f107858 = undefined;
+    f107798 = undefined;
     handleOpen = function handleOpen() {
       if (!first) {
         if (onDrawerOpen != null) {
@@ -249,10 +249,10 @@ class FocusedControlsBottomDrawer {
     first = tmp22[0];
     bottom = first;
     isIOS = tmp22[1];
-    tmp19Result = require("module_4146");
+    tmp19Result = require("module_4116");
     sharedValue = require("_slicedToArray");
     Math = sharedValue;
-    tmp19Result1 = require("module_4146");
+    tmp19Result1 = require("module_4116");
     class O {
       constructor() {
         tmp = reveal;
@@ -271,19 +271,19 @@ class FocusedControlsBottomDrawer {
     O.__initData = EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y;
     derivedValue = tmp19Result1.useDerivedValue(O);
     c9 = derivedValue;
-    tmp19Result2 = require("module_4146");
+    tmp19Result2 = require("module_4116");
     sharedValue1 = require("_slicedToArray");
     height = sharedValue1;
-    tmp19Result3 = require("module_4146");
+    tmp19Result3 = require("module_4116");
     sharedValue2 = tmp19Result3.useSharedValue(false);
     c11 = sharedValue2;
-    tmp19Result4 = require("module_4146");
+    tmp19Result4 = require("module_4116");
     sharedValue3 = require("_slicedToArray");
     c12 = sharedValue3;
     callback = onClose.useCallback(() => {
       const result = reveal(sum3[18]).UNSAFE_markDismissibleContentAsDismissed(reveal(sum3[19]).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
     }, []);
-    f107858 = callback;
+    f107798 = callback;
     items = [, , ];
     items[0] = sharedValue;
     items[1] = derivedValue;
@@ -307,7 +307,7 @@ class FocusedControlsBottomDrawer {
     PanResult = Gesture.Pan();
     class M {
       constructor() {
-        obj = require("module_4146");
+        obj = require("module_4116");
         tmp = obj.runOnJS(clearFocusTimer)();
         obj2 = c11;
         result = c11.set(0 !== Math.get());
@@ -320,7 +320,7 @@ class FocusedControlsBottomDrawer {
         return;
       }
     }
-    obj = { runOnJS: require("module_4146").runOnJS, clearFocusTimer: Math, drawerOpen: sharedValue2, positionY: sharedValue, CLOSE_DRAWER_POSITION: 0, velocity: sharedValue3, startY: sharedValue1 };
+    obj = { runOnJS: require("module_4116").runOnJS, clearFocusTimer: Math, drawerOpen: sharedValue2, positionY: sharedValue, CLOSE_DRAWER_POSITION: 0, velocity: sharedValue3, startY: sharedValue1 };
     M.__closure = obj;
     M.__workletHash = 9674965708496;
     M.__initData = EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y;
@@ -395,12 +395,12 @@ class FocusedControlsBottomDrawer {
               result5 = obj.set(false);
               tmp31 = closure_0;
               tmp32 = closure_2;
-              obj8 = require("module_4146");
+              obj8 = require("module_4116");
               tmp33 = resetFocusTimer;
               tmp34 = obj8.runOnJS(resetFocusTimer)();
               tmp35 = closure_0;
               tmp36 = closure_2;
-              obj9 = require("module_4146");
+              obj9 = require("module_4116");
               tmp37 = handleClose;
               tmp38 = obj9.runOnJS(handleClose)();
             }
@@ -416,12 +416,12 @@ class FocusedControlsBottomDrawer {
           result8 = obj.set(false);
           tmp16 = closure_0;
           tmp17 = closure_2;
-          obj5 = require("module_4146");
+          obj5 = require("module_4116");
           tmp18 = resetFocusTimer;
           tmp19 = obj5.runOnJS(resetFocusTimer)();
           tmp20 = closure_0;
           tmp21 = closure_2;
-          obj6 = require("module_4146");
+          obj6 = require("module_4116");
           tmp22 = handleClose;
           tmp23 = obj6.runOnJS(handleClose)();
         }
@@ -429,7 +429,7 @@ class FocusedControlsBottomDrawer {
         return;
       }
     }
-    obj1 = { drawerOpen: sharedValue2, positionY: sharedValue, maxHeight: derivedValue, velocity: sharedValue3, MIN_GESTURE_TRIGGER_VELOCITY: 500, CLOSE_DRAWER_POSITION: 0, runOnJS: require("module_4146").runOnJS, handleOpen, startY: sharedValue1, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, TIMING_CONFIG: EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y, TooltipActionCreators: require("dispatcher"), TooltipNames: require("keys").TooltipNames, TIMING_CONFIG_EXIT: EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y, resetFocusTimer: c9, handleClose };
+    obj1 = { drawerOpen: sharedValue2, positionY: sharedValue, maxHeight: derivedValue, velocity: sharedValue3, MIN_GESTURE_TRIGGER_VELOCITY: 500, CLOSE_DRAWER_POSITION: 0, runOnJS: require("module_4116").runOnJS, handleOpen, startY: sharedValue1, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, TIMING_CONFIG: EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y, TooltipActionCreators: require("dispatcher"), TooltipNames: require("keys").TooltipNames, TIMING_CONFIG_EXIT: EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y, resetFocusTimer: c9, handleClose };
     H.__closure = obj1;
     H.__workletHash = 6790759206787;
     H.__initData = EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y;
@@ -443,7 +443,7 @@ class FocusedControlsBottomDrawer {
     Math = first1;
     tmp33 = tmp31[2];
     c9 = tmp33;
-    tmp19Result5 = require("module_4146");
+    tmp19Result5 = require("module_4116");
     fn = function f() {
       let num = 0;
       if (!reveal) {
@@ -504,7 +504,7 @@ class FocusedControlsBottomDrawer {
         ComponentDispatch.unsubscribe(sharedValue3.SELECT_ACTIVITY, handleSelectActivity);
       };
     }, items4);
-    tmp19Result6 = require("module_4146");
+    tmp19Result6 = require("module_4116");
     class Z {
       constructor() {
         obj = { height: onDrawerOpen, transform: null };
@@ -531,7 +531,7 @@ class FocusedControlsBottomDrawer {
     }, items5);
     tmp19Result7 = require("ManaContext");
     theme = tmp19Result7.useThemeContext().theme;
-    tmp40 = f107858;
+    tmp40 = f107798;
     obj3 = { style: animatedStyle, pointerEvents: "box-none", children: null };
     obj4 = { gesture: tmp31[1], children: null };
     tmp41 = handleOpen;
@@ -556,9 +556,9 @@ class FocusedControlsBottomDrawer {
     items8[2] = children;
     items8[3] = tmp40(FocusedControlsExpanded, { expandedControls, availableHeight: diff2, positionY: first1 });
     obj5[1] = items8;
-    obj4[1] = tmp41(require("module_4146").View, obj5);
+    obj4[1] = tmp41(require("module_4116").View, obj5);
     obj3[2] = tmp40(require("Directions").GestureDetector, obj4);
-    return tmp40(require("module_4146").View, obj3);
+    return tmp40(require("module_4116").View, obj3);
   }
 }
 ({ View: c5, TouchableWithoutFeedback: closure_6, ScrollView: error, StyleSheet } = get_ActivityIndicator);

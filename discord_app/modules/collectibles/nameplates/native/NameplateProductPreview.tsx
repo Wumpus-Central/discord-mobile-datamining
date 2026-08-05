@@ -4,7 +4,7 @@ import { View } from "AVERAGE_FONT_WIDTH_RATIO";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "TableRowInner";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04676_LinearGradient.js";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { firstAvatarDecoration } from "../../hooks/useShopProductItems.tsx";
@@ -48,7 +48,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = React.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "SOURCE", autoStatusCutout: null, "aria-hidden": null };
+    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "getAuthorizationStatus", autoStatusCutout: null, "aria-hidden": "\u{1F646}\u200D\u2640\uFE0F" };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = c1;
     obj[4] = !stateFromStores;
@@ -117,7 +117,7 @@ export default function NameplateProductPreview(product) {
     const intl2 = tmp2(1236).intl;
     const items1 = [intl2.string(tmp2(1236).t["yzW/fZ"]), " \u2014 3"];
     obj3[5] = items1;
-    items[1] = callback2(tmp2(4281).Text, obj3);
+    items[1] = callback2(tmp2(4251).Text, obj3);
     const obj4 = { user: null, start: true };
     obj4[0] = nameplateSampleUsers.phibi;
     items[2] = callback(PlaceholderUser, obj4);
@@ -133,7 +133,7 @@ export default function NameplateProductPreview(product) {
     const intl3 = tmp2(1236).intl;
     const items2 = [intl3.string(tmp2(1236).t["NG43/6"]), " \u2014 12"];
     obj7[5] = items2;
-    items[5] = callback2(tmp2(4281).Text, obj7);
+    items[5] = callback2(tmp2(4251).Text, obj7);
     const obj8 = { user: null, start: true };
     obj8[0] = nameplateSampleUsers.boom;
     items[6] = callback(PlaceholderUser, obj8);

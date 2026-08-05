@@ -43,12 +43,12 @@ function insertUnsortedGuilds(arg0, arg1) {
 function convertNodeToGuildFolder(type) {
   let children;
   type = type.type;
-  if (areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER === type) {
+  if (areArraysShallowlyEqual(5109).GuildsNodeType.FOLDER === type) {
     let obj = { folderId: null, folderName: null, folderColor: null, expanded: null, guildIds: null };
     ({ id: obj2[0], name: obj2[1], color: obj2[2], expanded: obj2[3], children } = type);
     obj[4] = children.map((id) => id.id);
     return obj;
-  } else if (tmp(5124).GuildsNodeType.GUILD === type) {
+  } else if (tmp(5109).GuildsNodeType.GUILD === type) {
     obj = { folderId: "Array", guildIds: 0 };
     const items = [type.id];
     obj[1] = items;
@@ -60,7 +60,7 @@ function convertNodeToGuildFolder(type) {
   tmp = areArraysShallowlyEqual;
 }
 function rebuildTree(arg0, arg1) {
-  let guildsTree = new areArraysShallowlyEqual(5124).GuildsTree();
+  let guildsTree = new areArraysShallowlyEqual(5109).GuildsTree();
   if (0 === arg0.length) {
     if (arg1.length > 0) {
       const tmp18 = arg1[Symbol.iterator]();
@@ -68,7 +68,7 @@ function rebuildTree(arg0, arg1) {
         let tmp22 = guildsTree;
         let tmp23 = areArraysShallowlyEqual;
         let tmp24 = dependencyMap;
-        let obj3 = areArraysShallowlyEqual(5124);
+        let obj3 = areArraysShallowlyEqual(5109);
         let addNodeResult = guildsTree.addNode(obj3.createGuildNode(tmp20));
         continue;
       }
@@ -80,7 +80,7 @@ function rebuildTree(arg0, arg1) {
       let tmp33 = nextResult;
       let tmp34 = areArraysShallowlyEqual;
       let tmp35 = dependencyMap;
-      let tmp36 = nextResult.type === areArraysShallowlyEqual(5124).GuildsNodeType.GUILD;
+      let tmp36 = nextResult.type === areArraysShallowlyEqual(5109).GuildsNodeType.GUILD;
       if (tmp36) {
         let tmp37 = initialize;
         let tmp38 = nextResult;
@@ -116,7 +116,7 @@ function rebuildTree(arg0, arg1) {
       let tmp55 = item10123;
       let tmp56 = areArraysShallowlyEqual;
       let tmp57 = dependencyMap;
-      let tmp58 = item10123.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER;
+      let tmp58 = item10123.type === areArraysShallowlyEqual(5109).GuildsNodeType.FOLDER;
       if (tmp58) {
         let tmp59 = item10123;
         tmp58 = 0 === tmp55.children.length;
@@ -148,13 +148,13 @@ function rebuildTree(arg0, arg1) {
         let tmp12 = guildsTree;
         let tmp13 = areArraysShallowlyEqual;
         let tmp14 = dependencyMap;
-        let obj2 = areArraysShallowlyEqual(5124);
+        let obj2 = areArraysShallowlyEqual(5109);
         let tmp15 = nextResult1;
         let addNodeResult1 = guildsTree.addNode(obj2.createGuildNode(tmp5.guildIds[0]));
       } else {
         let tmp72 = areArraysShallowlyEqual;
         let tmp73 = dependencyMap;
-        let obj4 = areArraysShallowlyEqual(5124);
+        let obj4 = areArraysShallowlyEqual(5109);
         let tmp74 = nextResult1;
         let tmp75 = set;
         let folderNode = obj4.createFolderNode(tmp5, undefined, set.isFolderExpanded(tmp5.folderId));
@@ -168,7 +168,7 @@ function rebuildTree(arg0, arg1) {
           let tmp7 = guildsTree;
           let tmp8 = areArraysShallowlyEqual;
           let tmp9 = dependencyMap;
-          let obj = areArraysShallowlyEqual(5124);
+          let obj = areArraysShallowlyEqual(5109);
           let tmp10 = folderNode;
           let addNodeResult3 = guildsTree.addNode(obj.createGuildNode(item10030), tmp77);
           continue;
@@ -226,7 +226,7 @@ function handleMoveById(sourceId) {
     if (null != node1) {
       let tmp4 = combine;
       if (combine) {
-        tmp4 = node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER;
+        tmp4 = node.type === areArraysShallowlyEqual(5109).GuildsNodeType.FOLDER;
       }
       const _HermesInternal = HermesInternal;
       00038__(!tmp4, "[SORTED GUILDS] Can't combine a folder " + node.id + " with another guilds list item");
@@ -243,10 +243,10 @@ function handleMoveById(sourceId) {
       const tmp24 = 00038__;
       const tmp5 = !tmp4;
       const _HermesInternal3 = HermesInternal;
-      tmp22Result(!(node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER && null != node1.parentId), "[SORTED GUILDS] Can't move a folder " + node.id + " to inside of another folder " + node1.parentId);
+      tmp22Result(!(node.type === areArraysShallowlyEqual(5109).GuildsNodeType.FOLDER && null != node1.parentId), "[SORTED GUILDS] Can't move a folder " + node.id + " to inside of another folder " + node1.parentId);
       if (combine) {
         let convertToFolderResult = node1;
-        if (node1.type !== tmp13(5124).GuildsNodeType.FOLDER) {
+        if (node1.type !== tmp13(5109).GuildsNodeType.FOLDER) {
           convertToFolderResult = guildsTree.convertToFolder(node1);
         }
         guildsTree.moveInto(node, convertToFolderResult, moveToBelow);
@@ -343,7 +343,7 @@ function handleGuildFolderDeleteLocal(targetId) {
   element = guildsTree.getNode(targetId.targetId);
   let tmp = null != element;
   if (tmp) {
-    const tmp4 = element.type === element(5124).GuildsNodeType.FOLDER;
+    const tmp4 = element.type === element(5109).GuildsNodeType.FOLDER;
     if (tmp4) {
       const children = element.children;
       const mapped = children.map((id) => id.id);
@@ -406,7 +406,7 @@ function handleGuildFolderExpand(folderId) {
   const node = guildsTree.getNode(folderId);
   const isFolderExpandedResult = set.isFolderExpanded(folderId);
   if (null != node) {
-    if (node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER) {
+    if (node.type === areArraysShallowlyEqual(5109).GuildsNodeType.FOLDER) {
       if (node.expanded !== isFolderExpandedResult) {
         const cloneNodeResult = guildsTree.cloneNode(node);
         00038__(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
@@ -421,7 +421,7 @@ function handleFolderExpanded(expanded) {
   expanded = expanded.expanded;
   const node = guildsTree.getNode(expanded.folderId);
   if (null != node) {
-    if (node.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER) {
+    if (node.type === areArraysShallowlyEqual(5109).GuildsNodeType.FOLDER) {
       if (node.expanded !== expanded) {
         const cloneNodeResult = guildsTree.cloneNode(node);
         00038__(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
@@ -439,7 +439,7 @@ function handleCollapseAll() {
     let tmp3 = nextResult;
     let tmp4 = areArraysShallowlyEqual;
     let tmp5 = dependencyMap;
-    let expanded = nextResult.type === areArraysShallowlyEqual(5124).GuildsNodeType.FOLDER;
+    let expanded = nextResult.type === areArraysShallowlyEqual(5109).GuildsNodeType.FOLDER;
     if (expanded) {
       let tmp6 = nextResult;
       expanded = tmp3.expanded;

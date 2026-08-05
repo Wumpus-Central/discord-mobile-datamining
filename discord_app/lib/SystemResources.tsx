@@ -67,12 +67,12 @@ prototype["takeSample"] = function takeSample() {
       self.lastCPU = cumulativeCPUUsage;
     }
   } else {
-    const currentCPUUsagePercent = tmp(7055).getCurrentCPUUsagePercent();
+    const currentCPUUsagePercent = tmp(7029).getCurrentCPUUsagePercent();
     if (null != currentCPUUsagePercent) {
       const cpuHistogram2 = self.cpuHistogram;
       cpuHistogram2.addSample(currentCPUUsagePercent);
     }
-    const tmpResult = tmp(7055);
+    const tmpResult = tmp(7029);
   }
   if (null != currentMemoryUsageKB) {
     const memoryHistogram = self.memoryHistogram;
@@ -92,7 +92,7 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -161,7 +161,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -194,7 +194,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         } else {
           closure_0.lastBattery = arg1;
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp7) {
         c2 = tmp;
@@ -217,7 +217,7 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {

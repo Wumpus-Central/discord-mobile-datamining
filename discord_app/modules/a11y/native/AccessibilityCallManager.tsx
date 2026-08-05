@@ -23,19 +23,19 @@ class AccessibilityCallManager extends tmp4 {
           if (!obj2.isIOS()) {
             const channel = store2.getChannel(channelId);
             if (null != channel) {
-              const channelName = tmp4(4475).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+              const channelName = tmp4(4445).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
               if (null != channelName) {
                 obj.add(channelId);
-                const AccessibilityAnnouncer = tmp4(4131).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = tmp4(4101).AccessibilityAnnouncer;
                 const intl = tmp4(1236).intl;
                 obj = { callLocation: null };
                 obj[0] = channelName;
                 AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
               }
-              const tmp4Result = tmp4(4475);
+              const tmp4Result = tmp4(4445);
             }
           } else {
-            const NativePhoneIntegrationEnabled = tmp4(3958).NativePhoneIntegrationEnabled;
+            const NativePhoneIntegrationEnabled = tmp4(3928).NativePhoneIntegrationEnabled;
           }
           obj2 = callback(500);
         }
@@ -56,19 +56,19 @@ class AccessibilityCallManager extends tmp4 {
             if (!obj3.isIOS()) {
               const channel = store2.getChannel(channelId);
               if (null != channel) {
-                const channelName = tmp4(4475).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+                const channelName = tmp4(4445).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
                 if (null != channelName) {
                   obj2.add(channelId);
-                  const AccessibilityAnnouncer = tmp4(4131).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = tmp4(4101).AccessibilityAnnouncer;
                   const intl = tmp4(1236).intl;
                   obj = { callLocation: null };
                   obj[0] = channelName;
                   AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
                 }
-                const tmp4Result = tmp4(4475);
+                const tmp4Result = tmp4(4445);
               }
             } else {
-              const NativePhoneIntegrationEnabled = tmp4(3958).NativePhoneIntegrationEnabled;
+              const NativePhoneIntegrationEnabled = tmp4(3928).NativePhoneIntegrationEnabled;
             }
             obj3 = callback(500);
           }

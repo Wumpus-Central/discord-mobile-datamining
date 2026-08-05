@@ -45,7 +45,7 @@ function _handleVoiceOrStageChannelConnectPress() {
           obj[0] = openGuildVoiceModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -419,7 +419,7 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
           }
         }
       }
-      yield "HermesInternal";
+      yield "T";
       if (arg0 !== 2) {
         const result = openMemberVerificationModal.openMemberVerificationModal(guildId, () => outer1_17(closure_0));
         c3 = 3;

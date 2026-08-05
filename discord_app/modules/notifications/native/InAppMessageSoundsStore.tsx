@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import identity from "identity";
-import { isIterable } from "../../../../_runtime/03898_isIterable.js";
+import { isIterable } from "../../../../_runtime/03868_isIterable.js";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";

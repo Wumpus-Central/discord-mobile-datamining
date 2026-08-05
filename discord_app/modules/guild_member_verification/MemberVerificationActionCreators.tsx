@@ -49,7 +49,7 @@ function _fetchVerificationForm() {
       const obj4 = { type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: null };
       obj4[1] = callback;
       obj3.dispatch(obj4);
-      lib = yield "HermesInternal";
+      lib = yield "T";
       if (null == lib.body) {
         throw lib;
       }
@@ -103,7 +103,7 @@ function _updateVerificationForm() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -156,7 +156,7 @@ function _updateVerificationForm() {
             obj4[2] = obj5;
             obj4.dispatch(obj4);
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp6) {
           c7 = tmp;
@@ -193,7 +193,7 @@ function _updateVerificationFormDescription() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -244,7 +244,7 @@ function _updateVerificationFormDescription() {
             obj4[2] = obj5;
             obj4.dispatch(obj4);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp6) {
           c5 = tmp;
@@ -281,7 +281,7 @@ function _enableVerificationForm() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -319,7 +319,7 @@ function _enableVerificationForm() {
             return obj;
           } else {
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp5) {
           dependencyMap = tmp;
@@ -358,7 +358,7 @@ function _submitVerificationForm() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -382,7 +382,7 @@ function _submitVerificationForm() {
               body = undefined;
               anyErrorMessage = 1;
               c9 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -406,7 +406,7 @@ function _submitVerificationForm() {
                 obj2[0] = { isPending: false };
                 const result = obj11.updateImpersonatedData(callback, obj2);
                 c9 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               } else {
                 let c7 = 1;
                 const HTTP = callback(num9[6]).HTTP;

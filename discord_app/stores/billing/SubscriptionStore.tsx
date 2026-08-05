@@ -1,91 +1,97 @@
 // discord_app/stores/billing/SubscriptionStore.tsx
+import setPremiumTypeActual from "setPremiumTypeActual";
 import { isNoneSubscription } from "createFromServer";
 import { SubscriptionRecord } from "createSubscriptionItemFromServer";
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
 import { Store } from "initialize";
 
-let c3;
 let c4;
+let c5;
 function reset() {
-  let c5 = null;
   let c6 = null;
   let c7 = null;
   let c8 = null;
   let c9 = null;
-  let c10 = false;
-  let c11 = null;
-  let c12 = false;
+  let c10 = null;
+  let c11 = false;
+  let c12 = null;
   let c13 = false;
-  let c15 = false;
-  let c16 = null;
+  let c14 = false;
+  let c16 = false;
+  let c17 = null;
 }
-({ SubscriptionStatusTypes: c3, SubscriptionTypes: c4 } = ME);
-let c5 = null;
+({ SubscriptionStatusTypes: c4, SubscriptionTypes: c5 } = ME);
 let c6 = null;
 let c7 = null;
 let c8 = null;
 let c9 = null;
-let c10 = false;
-let c11 = null;
-let c12 = false;
+let c10 = null;
+let c11 = false;
+let c12 = null;
 let c13 = false;
-let c14 = null;
-let c15 = false;
-let c16 = null;
+let c14 = false;
+let c15 = null;
+let c16 = false;
+let c17 = null;
 class SubscriptionStore extends Store {
 }
 const prototype = SubscriptionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint);
+  this.waitFor(fetchFingerprint, setPremiumTypeActual);
 };
 prototype["hasFetchedSubscriptions"] = function hasFetchedSubscriptions() {
-  return null != c5;
+  return null != c6;
 };
 prototype["hasFetchedMostRecentPremiumTypeSubscription"] = function hasFetchedMostRecentPremiumTypeSubscription() {
-  return c10;
+  return c11;
 };
 prototype["hasFetchedPreviousPremiumTypeSubscription"] = function hasFetchedPreviousPremiumTypeSubscription() {
-  return c12;
+  return c13;
 };
 prototype["getPremiumSubscription"] = function getPremiumSubscription(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
   }
+  const PREMIUM = constants2.PREMIUM;
   if (flag === undefined) {
     flag = true;
   }
-  const tmp3 = flag ? c6 : c5;
-  let tmp4 = null;
-  if (null != tmp3) {
-    tmp4 = null;
-    const keys = Object.keys();
-    if (keys !== undefined) {
+  if (PREMIUM !== constants2.PREMIUM) {
+    const tmp5 = flag ? c7 : c6;
+    let tmp4 = null;
+    if (null != tmp5) {
       tmp4 = null;
-      while (keys[tmp] !== undefined) {
-        let tmp11 = tmp7;
-        let tmp12 = tmp3[tmp7];
-        let tmp13 = store;
+      const keys = Object.keys();
+      if (keys !== undefined) {
         tmp4 = null;
-        if (tmp12.userId !== store.getId()) {
-          break;
-        } else {
-          if (tmp12.type !== tmp2) {
-            continue;
+        while (keys[tmp] !== undefined) {
+          let tmp13 = tmp9;
+          let tmp14 = tmp5[tmp9];
+          let tmp15 = store2;
+          tmp4 = null;
+          if (tmp14.userId !== store2.getId()) {
+            break;
           } else {
-            let tmp8 = isNoneSubscription;
-            let tmp9 = isNoneSubscription(tmp12.planId);
-            let tmp10 = !tmp9;
-            tmp4 = tmp12;
-            if (!tmp9) {
-              break;
+            if (tmp14.type !== PREMIUM) {
+              continue;
+            } else {
+              let tmp10 = isNoneSubscription;
+              let tmp11 = isNoneSubscription(tmp14.planId);
+              let tmp12 = !tmp11;
+              tmp4 = tmp14;
+              if (!tmp11) {
+                break;
+              }
             }
+            continue;
           }
-          continue;
         }
       }
     }
+  } else {
+    tmp4 = null;
   }
   return tmp4;
 };
@@ -94,31 +100,36 @@ prototype["getPremiumTypeSubscription"] = function getPremiumTypeSubscription(ar
   if (arg0 === undefined) {
     flag = true;
   }
+  const PREMIUM = constants2.PREMIUM;
   if (flag === undefined) {
     flag = true;
   }
-  const tmp3 = flag ? c6 : c5;
-  let tmp4 = null;
-  if (null != tmp3) {
-    tmp4 = null;
-    const keys = Object.keys();
-    if (keys !== undefined) {
+  if (PREMIUM !== constants2.PREMIUM) {
+    const tmp5 = flag ? c7 : c6;
+    let tmp4 = null;
+    if (null != tmp5) {
       tmp4 = null;
-      while (keys[tmp] !== undefined) {
-        let tmp8 = tmp7;
-        let tmp9 = tmp3[tmp7];
-        let tmp10 = store;
+      const keys = Object.keys();
+      if (keys !== undefined) {
         tmp4 = null;
-        if (tmp9.userId !== store.getId()) {
-          break;
-        } else {
-          tmp4 = tmp9;
-          if (tmp9.type === tmp2) {
+        while (keys[tmp] !== undefined) {
+          let tmp10 = tmp9;
+          let tmp11 = tmp5[tmp9];
+          let tmp12 = store2;
+          tmp4 = null;
+          if (tmp11.userId !== store2.getId()) {
             break;
+          } else {
+            tmp4 = tmp11;
+            if (tmp11.type === PREMIUM) {
+              break;
+            }
           }
         }
       }
     }
+  } else {
+    tmp4 = null;
   }
   return tmp4;
 };
@@ -127,20 +138,20 @@ prototype["getSubscriptions"] = function getSubscriptions(arg0) {
   if (arg0 === undefined) {
     flag = true;
   }
-  return flag ? c6 : c5;
+  return flag ? c7 : c6;
 };
 prototype["getSubscriptionById"] = function getSubscriptionById(subscription_id) {
   let tmp2;
-  if (c5 != null) {
+  if (c6 != null) {
     tmp2 = tmp[subscription_id];
   }
   return tmp2;
 };
 prototype["getActiveGuildSubscriptions"] = function getActiveGuildSubscriptions() {
-  return c8;
+  return c9;
 };
 prototype["getActiveApplicationSubscriptions"] = function getActiveApplicationSubscriptions() {
-  return c9;
+  return c10;
 };
 prototype["getSubscriptionForPlanIds"] = function getSubscriptionForPlanIds(items) {
   let flag = arg1;
@@ -149,7 +160,7 @@ prototype["getSubscriptionForPlanIds"] = function getSubscriptionForPlanIds(item
   }
   let set;
   set = new Set(items);
-  const tmp2 = flag ? c6 : c5;
+  const tmp2 = flag ? c7 : c6;
   let tmp3 = null;
   if (null != tmp2) {
     const _Object = Object;
@@ -166,53 +177,58 @@ prototype["getSubscriptionForPlanIds"] = function getSubscriptionForPlanIds(item
   return tmp3;
 };
 prototype["getMostRecentPremiumTypeSubscription"] = function getMostRecentPremiumTypeSubscription() {
-  return c7;
+  return c8;
 };
 prototype["getPreviousPremiumTypeSubscription"] = function getPreviousPremiumTypeSubscription() {
-  return c11;
+  return c12;
 };
 prototype["getIsSubscriptionEligibleForReward"] = function getIsSubscriptionEligibleForReward() {
-  return c14;
-};
-prototype["getIsFetchingSubscriptionRewardEligibility"] = function getIsFetchingSubscriptionRewardEligibility() {
-  return c13;
-};
-prototype["getIsFetchingMostRecentSubscription"] = function getIsFetchingMostRecentSubscription() {
   return c15;
 };
-prototype["getLastLazyPerkSync"] = function getLastLazyPerkSync() {
+prototype["getIsFetchingSubscriptionRewardEligibility"] = function getIsFetchingSubscriptionRewardEligibility() {
+  return c14;
+};
+prototype["getIsFetchingMostRecentSubscription"] = function getIsFetchingMostRecentSubscription() {
   return c16;
 };
+prototype["getLastLazyPerkSync"] = function getLastLazyPerkSync() {
+  return c17;
+};
 prototype["getPremiumGroupSubscription"] = function getPremiumGroupSubscription() {
-  let tmp4 = null;
-  if (null != c6) {
-    tmp4 = null;
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      tmp4 = null;
-      while (keys[tmp] !== undefined) {
-        let tmp9 = tmp7;
-        let tmp10 = tmp3[tmp7];
-        let tmp11 = store;
-        tmp4 = null;
-        if (tmp10.userId !== store.getId()) {
-          break;
-        } else {
-          if (tmp10.type !== tmp2) {
-            continue;
+  const PREMIUM = constants2.PREMIUM;
+  if (PREMIUM !== constants2.PREMIUM) {
+    let tmp3 = null;
+    if (null != c7) {
+      tmp3 = null;
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        tmp3 = null;
+        while (keys[tmp] !== undefined) {
+          let tmp10 = tmp8;
+          let tmp11 = tmp4[tmp8];
+          let tmp12 = store2;
+          tmp3 = null;
+          if (tmp11.userId !== store2.getId()) {
+            break;
           } else {
-            let tmp8 = tmp10.hasAnyPremiumGroup && tmp10.statusAllowsPerks;
-            tmp4 = tmp10;
-            if (tmp8) {
-              break;
+            if (tmp11.type !== PREMIUM) {
+              continue;
+            } else {
+              let tmp9 = tmp11.hasAnyPremiumGroup && tmp11.statusAllowsPerks;
+              tmp3 = tmp11;
+              if (tmp9) {
+                break;
+              }
             }
+            continue;
           }
-          continue;
         }
       }
     }
+  } else {
+    tmp3 = null;
   }
-  return tmp4;
+  return tmp3;
 };
 SubscriptionStore.displayName = "SubscriptionStore";
 const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
@@ -223,14 +239,14 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
     obj = {};
     const items = [];
     const items1 = [];
-    id = items.getId();
+    id = items1.getId();
     const item = subscriptions.forEach((user_id) => {
       if (user_id.user_id === constants) {
-        const fromServer = obj.createFromServer(user_id);
+        const fromServer = items.createFromServer(user_id);
         obj[fromServer.id] = fromServer;
-        if (fromServer.status !== items1.UNPAID) {
+        if (fromServer.status !== constants.UNPAID) {
           obj[fromServer.id] = fromServer;
-          let tmp3 = fromServer.type === constants.GUILD;
+          let tmp3 = fromServer.type === outer1_5.GUILD;
           if (tmp3) {
             tmp3 = fromServer.status !== tmp12.ENDED;
           }
@@ -240,8 +256,8 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
           if (tmp6) {
             items1.push(fromServer);
           }
-          const tmp2 = constants;
-          tmp6 = fromServer.type === constants.APPLICATION && fromServer.status !== tmp12.ENDED;
+          const tmp2 = outer1_5;
+          tmp6 = fromServer.type === outer1_5.APPLICATION && fromServer.status !== tmp12.ENDED;
         }
       }
     });
@@ -249,7 +265,7 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function handleSubscriptionUpdate(subscription) {
     subscription = subscription.subscription;
-    if (subscription.user_id === store.getId()) {
+    if (subscription.user_id === store2.getId()) {
       const fromServer = SubscriptionRecord.createFromServer(subscription);
       let obj = {};
       const merged = Object.assign(obj);
@@ -307,53 +323,56 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
     }
   },
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: function handleMostRecentSubscriptionFetchStart() {
-    let c15 = true;
+    let c16 = true;
   },
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function handleMostRecentSubscriptionFetch(subscription) {
     subscription = subscription.subscription;
-    let c10 = true;
-    let c15 = false;
+    let c11 = true;
+    let c16 = false;
     if (null != subscription) {
-      if (subscription.user_id !== store.getId()) {
-        c10 = false;
+      if (subscription.user_id !== store2.getId()) {
+        c11 = false;
       } else {
-        let closure_7 = SubscriptionRecord.createFromServer(subscription);
+        let closure_8 = SubscriptionRecord.createFromServer(subscription);
       }
     }
   },
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: function handleMostRecentSubscriptionFetchFail() {
-    let c15 = false;
+    let c16 = false;
   },
   BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function handlePreviousSubscriptionFetch(subscription) {
     subscription = subscription.subscription;
-    let c12 = true;
+    let c13 = true;
     if (null != subscription) {
-      if (subscription.user_id !== store.getId()) {
-        c12 = false;
+      if (subscription.user_id !== store2.getId()) {
+        c13 = false;
       } else {
-        let closure_11 = SubscriptionRecord.createFromServer(subscription);
+        let closure_12 = SubscriptionRecord.createFromServer(subscription);
       }
     }
   },
   BILLING_SUBSCRIPTION_RESET: reset,
   BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: function handleSubscriptionRewardEligibilityFetchStart() {
-    let c13 = true;
+    let c14 = true;
   },
   BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: function handleSubscriptionRewardEligibilityFetch(eligible) {
     eligible = eligible.eligible;
-    let c13 = false;
+    let c14 = false;
   },
   BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: function handleSubscriptionRewardEligibilityFetchFailed(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
+      let c15 = false;
       let c14 = false;
-      let c13 = false;
     }
+  },
+  SET_PREMIUM_TYPE_OVERRIDE: function handlePremiumTypeOverride() {
+    return true;
   },
   LOGOUT: reset
 });
-const result = require("fetchFingerprint").fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
+const result = require("createSubscriptionItemFromServer").fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
 
 export default subscriptionStore;
 export const getSubscriptionOfType = function getSubscriptionOfType(arg0, arg1) {
@@ -361,21 +380,26 @@ export const getSubscriptionOfType = function getSubscriptionOfType(arg0, arg1) 
   if (arg2 === undefined) {
     flag = true;
   }
-  const tmp = flag ? c6 : c5;
-  if (null == tmp) {
+  if (arg0 === constants2.PREMIUM) {
+    if (null === store.getPremiumTypeOverride()) {
+      return null;
+    }
+  }
+  const tmp3 = flag ? c7 : c6;
+  if (null == tmp3) {
     return null;
   } else {
-    for (const key10008 in tmp) {
-      let tmp3 = key10008;
-      let tmp4 = tmp[key10008];
-      let tmp5 = store;
-      if (tmp4.userId !== store.getId()) {
+    for (const key10014 in tmp3) {
+      let tmp5 = key10014;
+      let tmp6 = tmp3[key10014];
+      let tmp7 = store2;
+      if (tmp6.userId !== store2.getId()) {
         return null;
       } else {
-        if (tmp4.type !== arg0) {
+        if (tmp6.type !== arg0) {
           continue;
         } else {
-          return tmp4;
+          return tmp6;
         }
         continue;
       }

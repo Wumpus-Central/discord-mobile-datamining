@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import { registerAsset } from "../../../../../../_runtime/07985_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07957_registerAsset.js";
 import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
@@ -30,7 +30,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
-              let tmp15Result = tmp15(4285);
+              let tmp15Result = tmp15(4255);
               const obj1 = { baseTextColor: null };
               obj1[0] = tmp17(712).colors.TEXT_SUBTLE;
               const intl2 = tmp15(1236).intl;
@@ -67,10 +67,10 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           }
           const obj4 = { content: null, iconUrl: null, textColor: null };
           obj4[0] = formatToPartsResult;
-          tmp15Result = tmp15(7865);
+          tmp15Result = tmp15(7837);
           obj4[1] = tmp15Result.getAssetUriForEmbed(registerAsset);
           obj4[2] = undefined;
-          const merged1 = Object.assign(tmp17(7882)(message));
+          const merged1 = Object.assign(tmp17(7854)(message));
           return obj4;
         }
       }

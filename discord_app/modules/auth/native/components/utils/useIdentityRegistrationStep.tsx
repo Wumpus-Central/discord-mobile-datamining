@@ -58,7 +58,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -99,7 +99,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             ref = c4;
             if (ref instanceof callback(navigation[10]).CaptchaCancelError) {
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             } else {
               obj1 = callback(navigation[11]);
               const context = obj1.getAuthenticationErrorsFromAPIError(noop);
@@ -164,7 +164,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             obj7[2] = closure_1;
             obj7[3] = callback;
             obj7[4] = function onPhoneTokenReceived(arg0) {
-              let obj = { email: "r", phone: "PX_16", phoneToken: "TRANSPARENT" };
+              let obj = { email: "r", phone: "Path", phoneToken: "TRANSPARENT" };
               obj[1] = closure_1;
               obj[2] = arg0;
               v3(obj);
@@ -181,7 +181,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             };
             outer1_2.push(callback(navigation[13]).AuthStates.VERIFY_PHONE, obj7);
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp55) {
           c4 = tmp55;

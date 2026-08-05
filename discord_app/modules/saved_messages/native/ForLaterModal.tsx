@@ -3,7 +3,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Background } from "../../../../_runtime/05245_Background.js";
+import { Background } from "../../../../_runtime/05230_Background.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { SavedMessageSortTypes } from "../SavedMessagesTypes.tsx";
@@ -48,7 +48,7 @@ export default function ForLaterModal(type) {
     num = 0;
   }
   obj[3] = num;
-  tmp2Result = tmp2(5238);
+  tmp2Result = tmp2(5223);
   obj[4] = tmp2Result.getHeaderCloseButton(ModalActionCreators.pop);
   obj[1] = closure_4(_Background.Header, obj);
   const items = [closure_4(View, obj), ];

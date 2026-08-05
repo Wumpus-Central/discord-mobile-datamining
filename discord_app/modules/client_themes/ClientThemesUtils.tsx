@@ -1,5 +1,5 @@
 // discord_app/modules/client_themes/ClientThemesUtils.tsx
-import items1 from "items1";
+import ThemeTypes from "ThemeTypes";
 import SystemThemeState from "SystemThemeState";
 import { ThemeTypes } from "sum";
 
@@ -7,7 +7,7 @@ let PROTO_THEME_MAP_WEB_REFRESH;
 let c3;
 let c4;
 let obj1;
-({ LEGACY_STANDARD_BACKGROUND_THEMES: obj1, REFRESH_STANDARD_BACKGROUND_THEMES: c3 } = items1);
+({ LEGACY_STANDARD_BACKGROUND_THEMES: obj1, REFRESH_STANDARD_BACKGROUND_THEMES: c3 } = ThemeTypes);
 ({ PROTO_THEME_MAP_MOBILE: c4, PROTO_THEME_MAP_WEB_REFRESH } = SystemThemeState);
 const result = require("sum").fileFinishedImporting("modules/client_themes/ClientThemesUtils.tsx");
 

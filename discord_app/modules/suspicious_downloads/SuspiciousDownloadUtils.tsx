@@ -2,7 +2,7 @@
 import set from "set";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 
-let set = new Set(require("module_8042"));
+let set = new Set(require("module_8014"));
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;

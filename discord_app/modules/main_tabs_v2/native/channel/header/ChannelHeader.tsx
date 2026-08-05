@@ -32,7 +32,7 @@ export default function ChannelHeader(channelId) {
   let obj = channelId(647);
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getChannel(channelId));
-  const isChannelContentGated = channelId(4498).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(4468).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;
@@ -61,7 +61,7 @@ export default function ChannelHeader(channelId) {
         obj = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, searchPlaceholder: null };
         obj[0] = channelId;
         let guild_id;
-        let tmp9Result = tmp9(12458);
+        let tmp9Result = tmp9(12430);
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
@@ -81,7 +81,7 @@ export default function ChannelHeader(channelId) {
         const obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null };
         obj1[0] = channelId;
         let guild_id1;
-        tmp9Result = tmp9(12460);
+        tmp9Result = tmp9(12432);
         if (stateFromStores != null) {
           guild_id1 = stateFromStores.guild_id;
         }
@@ -100,13 +100,13 @@ export default function ChannelHeader(channelId) {
 export const navigateToChannelDetails = function navigateToChannelDetails(channelId, screenIndex, arg2) {
   let obj = set;
   if (obj.isIOS()) {
-    let tmpResult = tmp(4144);
+    let tmpResult = tmp(4114);
     const chatInputRef = tmpResult.getChatInputRef(channelId, screenIndex);
     if (chatInputRef != null) {
       chatInputRef.blur();
     }
   }
-  tmpResult = tmp(10359);
+  tmpResult = tmp(10331);
   if (tmpResult.isSwipeToMemberListEnabled()) {
     const ComponentDispatch = tmp(1231).ComponentDispatch;
     obj = { source: null, channelId: null, screenIndex: null };
@@ -115,7 +115,7 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
     obj[2] = screenIndex;
     ComponentDispatch.dispatch(ComponentActions.SHOW_CHANNEL_DETAILS, obj);
   } else {
-    const rootNavigationRef = tmp(4137).getRootNavigationRef();
+    const rootNavigationRef = tmp(4107).getRootNavigationRef();
     let isReadyResult;
     if (rootNavigationRef != null) {
       isReadyResult = rootNavigationRef.isReady();
@@ -126,6 +126,6 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
       obj[1] = arg2;
       rootNavigationRef.navigate("sidebar", obj);
     }
-    const tmpResult1 = tmp(4137);
+    const tmpResult1 = tmp(4107);
   }
 };

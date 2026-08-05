@@ -1,15 +1,13 @@
 // discord_app/modules/saved_messages/native/ForLaterScreen.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "ForLaterNitroUpsellBar";
-import { View } from "IntroDemo";
+import importAllResult from "IntroDemo";
+import { View } from "set";
 import getTimeSafe from "getTimeSafe";
-import jsxProd from "jsxProd";
+import jsxProd from "ForLaterNitroUpsellBar";
 import createCacheKey from "createCacheKey";
-import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { getSavedMessagesForType } from "../useSavedMessagesForPage.tsx";
 
-let c9;
 let error;
 let metroImportAll;
 const require = arg1;
@@ -22,70 +20,92 @@ function ForLaterPage(type) {
   let importDefault;
   const tmp = callback4();
   const arr = getSavedMessagesForType(type);
-  const tmp5 = type === first(8192).SavedMessageSortTypes.REMINDER;
-  let obj = first(8186);
+  const tmp5 = type === first(8164).SavedMessageSortTypes.REMINDER;
+  let obj = first(8158);
   const forLaterLimit = obj.useForLaterLimit(ForLaterScreen, tmp5);
-  let obj1 = first(8186);
-  let isForLaterLimitUpgradable = obj1.useIsForLaterLimitUpgradable(ForLaterScreen);
+  let obj1 = first(8158);
+  const isForLaterLimitUpgradable = obj1.useIsForLaterLimitUpgradable(ForLaterScreen);
+  let tmp8 = isForLaterLimitUpgradable;
   if (isForLaterLimitUpgradable) {
-    isForLaterLimitUpgradable = forLaterLimit > 0;
+    tmp8 = forLaterLimit > 0;
   }
+  if (tmp8) {
+    tmp8 = arr.length >= forLaterLimit;
+  }
+  let tmp9 = isForLaterLimitUpgradable;
   if (isForLaterLimitUpgradable) {
-    isForLaterLimitUpgradable = arr.length >= forLaterLimit;
+    tmp9 = arr.length > 0;
   }
   const items = [getTimeSafe];
   const stateFromStores = first(589).useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
+  let tmp2Result = tmp2(5595);
+  const analyticsLocations = tmp2Result(tmp2(5615).FOR_LATER_POPOUT).analyticsLocations;
   obj = { type: null, name: null, properties: null };
-  const tmp4Result = first(589);
+  tmp2Result = tmp2(9238);
   obj[0] = first(503).ImpressionTypes.MODAL;
   obj[1] = first(503).ImpressionNames.FOR_LATER_LIST_VIEWED;
-  obj[2] = { total_count: arr.length, overdue_count: stateFromStores };
-  const items1 = [arr.length, stateFromStores];
-  trackImpression(obj, {}, items1);
-  const tmp2Result = trackImpression;
-  const tmp12 = callback(importAllResult.useState(new Date()), 2);
-  first = tmp12[0];
-  importDefault = tmp12[1];
+  obj = { tab_type: type, total_count: arr.length, overdue_count: stateFromStores, nitro_upsell_bar_shown: null, nitro_roadblock_upsell_bar_shown: null };
+  let tmp13 = tmp9;
+  if (tmp9) {
+    tmp13 = !tmp8;
+  }
+  obj[3] = tmp13;
+  let tmp14 = tmp9;
+  if (tmp9) {
+    tmp14 = tmp8;
+  }
+  obj[4] = tmp14;
+  obj[2] = obj;
+  const items1 = [arr.length, stateFromStores, tmp9, tmp8];
+  tmp2Result(obj, {}, items1);
+  const tmp4Result = first(589);
+  const tmp17 = callback(importAllResult.useState(new Date()), 2);
+  first = tmp17[0];
+  importDefault = tmp17[1];
   const effect = importAllResult.useEffect(() => {
-    const interval = setInterval(() => callback(new Date()), callback(outer1_2[15]).Millis.MINUTE);
+    const interval = setInterval(() => callback(new Date()), callback(outer1_2[17]).Millis.MINUTE);
     return () => {
       clearInterval(closure_0);
     };
   }, []);
   [][0] = first;
   if (0 === arr.length) {
-    obj = { type: null };
-    obj[0] = type;
-    let tmp19Result = callback2(tmp2(12475), obj);
+    obj1 = { value: null, children: null };
+    obj1[0] = analyticsLocations;
+    const obj2 = { type: null };
+    obj2[0] = type;
+    obj1[1] = callback2(tmp2(12447), obj2);
+    let tmp24Result = callback2(tmp4(5595).AnalyticsLocationProvider, obj1);
   } else {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.listContainer;
-    const obj2 = { data: null, renderItem: null, contentContainerStyle: null, keyExtractor: null, onScroll: null };
-    obj2[0] = arr;
-    obj2[1] = tmp15;
-    obj2[2] = tmp.cardContainer;
-    obj2[3] = keyExtractor;
-    obj2[4] = type.handleScroll;
-    obj1[1] = callback2(tmp4(7666).FlashList, obj2);
-    const items2 = [callback2(View, obj1), ];
-    let tmp21Result = null;
-    if (isForLaterLimitUpgradable) {
-      const obj3 = { isReminder: null };
-      obj3[0] = tmp5;
-      tmp21Result = tmp21(tmp2(12478), obj3);
+    const obj3 = { value: null, children: null };
+    obj3[0] = analyticsLocations;
+    const obj4 = { style: null, children: null };
+    obj4[0] = tmp.listContainer;
+    const obj5 = { data: null, renderItem: null, contentContainerStyle: null, keyExtractor: null, onScroll: null };
+    obj5[0] = arr;
+    obj5[1] = tmp20;
+    obj5[2] = tmp.cardContainer;
+    obj5[3] = keyExtractor;
+    obj5[4] = type.handleScroll;
+    obj4[1] = callback2(tmp4(7638).FlashList, obj5);
+    const items2 = [callback2(View, obj4), ];
+    let tmp25Result = null;
+    if (tmp9) {
+      const obj6 = { isReminder: null, isAtLimit: null };
+      obj6[0] = tmp5;
+      obj6[1] = tmp8;
+      tmp25Result = tmp25(tmp2(12450), obj6);
     }
-    const obj4 = { children: null };
-    items2[1] = tmp21Result;
-    obj4[0] = items2;
-    tmp19Result = closure_8(closure_9, obj4);
-    const tmp19 = closure_8;
-    const tmp20 = closure_9;
-    tmp21 = callback2;
+    items2[1] = tmp25Result;
+    obj3[1] = items2;
+    tmp24Result = closure_8(tmp4(5595).AnalyticsLocationProvider, obj3);
+    const tmp24 = closure_8;
+    tmp25 = callback2;
   }
-  return tmp19Result;
+  return tmp24Result;
 }
 let c4 = importAllResult;
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: metroImportAll } = jsxProd);
 const ForLaterScreen = "ForLaterScreen";
 let obj = { container: null, headerBorder: null, cardContainer: null, listContainer: null };
 obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
@@ -94,12 +114,12 @@ createCacheKey = { height: 1, width: "100%", backgroundColor: require("Themes").
 obj[1] = createCacheKey;
 obj[2] = { paddingHorizontal: 16, paddingVertical: 8 };
 obj[3] = { flex: 1 };
-let closure_11 = createCacheKey.createStyles(obj);
-let closure_12 = { code: "function ForLaterScreenTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}" };
+let closure_10 = createCacheKey.createStyles(obj);
+let closure_11 = { code: "function ForLaterScreenTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}" };
 const memoResult = importAllResult.memo((type) => {
   let sharedValue;
   const tmp = callback4();
-  let obj = sharedValue(4146);
+  let obj = sharedValue(4116);
   sharedValue = obj.useSharedValue(0);
   const items = [sharedValue];
   const callback = importAllResult.useCallback((nativeEvent) => {
@@ -114,9 +134,9 @@ const memoResult = importAllResult.memo((type) => {
   };
   fn.__closure = { borderOpacity: sharedValue };
   fn.__workletHash = 16693192032676;
-  fn.__initData = closure_12;
+  fn.__initData = closure_11;
   obj = { style: tmp.container, children: null };
-  const animatedStyle = sharedValue(4146).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4116).useAnimatedStyle(fn);
   const items1 = [tmp.headerBorder, animatedStyle];
   const items2 = [callback2(ReanimatedRexport.View, { style: items1 }), callback2(ForLaterPage, { type: type.type, handleScroll: callback })];
   obj[1] = items2;

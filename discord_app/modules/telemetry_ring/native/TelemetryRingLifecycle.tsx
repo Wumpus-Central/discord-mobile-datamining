@@ -18,9 +18,9 @@ class TelemetryRingLifecycleImpl extends tmp2 {
       const result = applyArgumentsResult._updateZoomedInExport();
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
-      applyArgumentsResult(13366).clear();
-      const obj = applyArgumentsResult(13366);
-      applyArgumentsResult(13362).reset();
+      applyArgumentsResult(13338).clear();
+      const obj = applyArgumentsResult(13338);
+      applyArgumentsResult(13334).reset();
     };
     return applyArgumentsResult;
   }
@@ -35,10 +35,10 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   }
   const result = getHermesInstrumentedStatsSummary.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
-    let tmp6Result = tmp6(13362);
+    let tmp6Result = tmp6(13334);
     tmp6Result.start();
   } else {
-    tmp6Result = tmp6(13362);
+    tmp6Result = tmp6(13334);
     tmp6Result.stop();
   }
 };
@@ -55,9 +55,9 @@ prototype["_initialize"] = function _initialize() {
       outer1_2.removeChangeListener(self._handleEligibilityChange);
     };
     const obj = self(709);
-    self(13362).initialize();
+    self(13334).initialize();
     const result = self._updateZoomedInExport();
-    const obj2 = self(13362);
+    const obj2 = self(13334);
   }
 };
 prototype["_terminate"] = function _terminate() {
@@ -69,9 +69,9 @@ prototype["_terminate"] = function _terminate() {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
-  let tmpResult = tmp(13362);
+  let tmpResult = tmp(13334);
   tmpResult.stop();
-  tmpResult = tmp(7055);
+  tmpResult = tmp(7029);
   const result1 = tmpResult.setShouldCollectHermesInstrumentedStats(false);
   self._initialized = false;
 };

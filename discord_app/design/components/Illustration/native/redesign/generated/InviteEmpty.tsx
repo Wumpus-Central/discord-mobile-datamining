@@ -12,13 +12,13 @@ export const getInviteEmptySource = function getInviteEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(9622);
+      return callback(9593);
     },
     darker() {
-      return callback(16608);
+      return callback(16589);
     },
     light() {
-      return callback(9621);
+      return callback(9592);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useInviteEmptySource = function useInviteEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9622);
+      return callback(9593);
     },
     darker() {
-      return callback(16608);
+      return callback(16589);
     },
     light() {
-      return callback(9621);
+      return callback(9592);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const InviteEmpty = function InviteEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9622);
+      return callback(9593);
     },
     darker() {
-      return callback(16608);
+      return callback(16589);
     },
     light() {
-      return callback(9621);
+      return callback(9592);
     }
   };
   obj = {};

@@ -126,7 +126,7 @@ const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-let closure_19 = { [arg1(8990).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(8990).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(8990).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(8990).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(8990).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(8990).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(8990).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(8990).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(8990).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(8990).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let closure_19 = { [arg1(8962).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(8962).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(8962).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(8962).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(8962).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(8962).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(8962).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(8962).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(8962).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(8962).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
 let items = [require("get label").INVITE_OPTIONS_14_DAYS, require("get label").INVITE_OPTIONS_30_DAYS, require("get label").INVITE_OPTIONS_60_DAYS];
 obj = {
   getMaxAgeOptionByValue(label) {
@@ -377,7 +377,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       ({ rows: c0, counts: c1 } = obj5);
       if (obj5.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
         obj1 = NOOP;
-        const obj6 = { query: null, limit: 3, guildId: "View" };
+        const obj6 = { query: null, limit: 3, guildId: "__closure" };
         obj6[0] = tmp44;
         let item = obj1.queryChannels(obj6).forEach((item) => {
           _undefined.push({ type: outer1_12.CHANNEL, item: item.record, isSuggested: false, score: item.score });

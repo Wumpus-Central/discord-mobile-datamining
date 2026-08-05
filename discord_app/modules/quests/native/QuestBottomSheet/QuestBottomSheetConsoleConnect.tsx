@@ -31,7 +31,7 @@ function ConsoleRow(onPress) {
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
     let obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(12094).PlaystationNeutralIcon, {});
+    obj[1] = callback(onPress(12066).PlaystationNeutralIcon, {});
     const intl3 = onPress(1236).intl;
     obj[2] = intl3.string(onPress(1236).t.JafL6p);
     let stringResult;
@@ -43,10 +43,10 @@ function ConsoleRow(onPress) {
     obj[4] = function onPress() {
       return onPress(merged);
     };
-    return callback(onPress(5315).TableRow, obj);
+    return callback(onPress(5300).TableRow, obj);
   } else if (tmp2.XBOX === type) {
     obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(9223).XboxNeutralIcon, {});
+    obj[1] = callback(onPress(9194).XboxNeutralIcon, {});
     const intl = onPress(1236).intl;
     obj[2] = intl.string(onPress(1236).t.Nfvo72);
     let stringResult1;
@@ -58,7 +58,7 @@ function ConsoleRow(onPress) {
     obj[4] = function onPress() {
       return onPress(merged);
     };
-    return callback(onPress(5315).TableRow, obj);
+    return callback(onPress(5300).TableRow, obj);
   } else {
     return null;
   }
@@ -87,11 +87,11 @@ export default function QuestBottomSheetConsoleConnect(quest) {
     obj = { questId: quest.id, initialStep: closure_1, sourceQuestContent: closure_2 };
     obj.openLazy(quest(outer1_2[13])(outer1_2[12], outer1_2.paths), "QuestBottomSheet", obj);
   }
-  let obj = quest(10374);
+  let obj = quest(10346);
   xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11086).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11086);
-  closure_5 = quest(10403).useQuestImpressionId();
+  closure_4 = quest(11058).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11058);
+  closure_5 = quest(10375).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
     consoles: xboxAndPlaystationAccounts.useMemo(() => {

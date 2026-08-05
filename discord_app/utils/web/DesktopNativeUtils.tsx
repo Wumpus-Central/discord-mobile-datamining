@@ -489,7 +489,7 @@ obj.setBadge = function setBadge(arg0) {
     let tmpResult = tmp(500);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(5294).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(5279).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       tmpResult = tmp(500);
       if ("linux" === tmpResult.getPlatformName()) {
@@ -539,7 +539,7 @@ obj.bounceDock = function bounceDock(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -576,7 +576,7 @@ obj.bounceDock = function bounceDock(arg0) {
               dock = dock.dock;
               dock.cancelBounce(dock);
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -650,7 +650,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -688,7 +688,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
           return obj;
         } else {
           closure_0 = arg1;
-          closure_1 = outer1_0(5295).decideFileExtension(closure_0, closure_1);
+          closure_1 = outer1_0(5280).decideFileExtension(closure_0, closure_1);
           if (null == closure_1) {
             combined = closure_0;
             const clipboard = outer1_6.clipboard;
@@ -698,7 +698,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
           }
           const _HermesInternal = HermesInternal;
           combined = "image." + closure_1;
-          const obj5 = outer1_0(5295);
+          const obj5 = outer1_0(5280);
         }
       } catch (tmp22) {
         c3 = tmp;
@@ -722,7 +722,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -760,7 +760,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
           const _Buffer = Buffer;
           clipboard.copyImage(Buffer.from(closure_0), closure_1);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -772,7 +772,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(closure_0, contentType) {
   if (null != closure_0) {
     if (set.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5295).decideFileExtension(closure_0, contentType);
+      const decideFileExtensionResult = tmp(5280).decideFileExtension(closure_0, contentType);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set1.has(decideFileExtensionResult);
@@ -799,7 +799,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -995,7 +995,7 @@ obj.saveFile = function saveFile(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -1211,13 +1211,13 @@ obj.canCopyImage = function canCopyImage(closure_0) {
       return false;
     } else {
       if (null != tmp) {
-        const decideFileExtensionResult = tmp2(5295).decideFileExtension(tmp, undefined);
+        const decideFileExtensionResult = tmp2(5280).decideFileExtension(tmp, undefined);
         if (null != decideFileExtensionResult) {
           if (!set.has(decideFileExtensionResult)) {
             return false;
           }
         }
-        const tmp2Result = tmp2(5295);
+        const tmp2Result = tmp2(5280);
       }
       return true;
     }
@@ -1331,7 +1331,7 @@ obj.waitForIPCReady = function waitForIPCReady() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -1476,7 +1476,7 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(outer1_0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -1550,7 +1550,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(5294).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(5279).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }
@@ -1902,7 +1902,7 @@ obj.stopCPUProfiling = function stopCPUProfiling() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -2577,7 +2577,7 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {

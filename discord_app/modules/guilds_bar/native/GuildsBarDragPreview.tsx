@@ -4,7 +4,7 @@ import { GuildsNodeType } from "insertUnsortedGuilds";
 import withEqualityFn from "withEqualityFn";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { isIterable } from "../../../../_runtime/03898_isIterable.js";
+import { isIterable } from "../../../../_runtime/03868_isIterable.js";
 
 const require = arg1;
 function PreviewItem(dragRegion) {
@@ -126,7 +126,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "add", expanded: 409506539142844900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, children: 823258541627570700000000000000000000000000000000000000000000000 };
+        const obj = { type: null, id: -1, parentId: "PX_8", name: "Array", color: "accessible", expanded: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002966267703503254, children: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000031163596056912193 };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -336,7 +336,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "contentEncoding", scrollPosition: "contentMediaType", dragRegion: "contentSchema", windowSize: "heading-sm/medium", dropComplete: 2, listInsets: null };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "User Profile Activity Card", scrollPosition: null, dragRegion: null, windowSize: true, dropComplete: null, listInsets: "center" };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

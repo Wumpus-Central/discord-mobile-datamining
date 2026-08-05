@@ -8,11 +8,11 @@ import ParticipantTypes from "ParticipantTypes";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../../_runtime/10462_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10838_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10839_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10840_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10841_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10434_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10810_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10811_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10812_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10813_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 
@@ -38,7 +38,7 @@ class StreamPreviewTile {
     obj = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "disabled", borderRadius: false },
+      style: { aspectRatio: "sa", borderRadius: false },
       disableTransition: true,
       onPress() {
             return callback();
@@ -87,7 +87,7 @@ class TileOverlay {
     ({ bottom, left, top, right } = tmp4);
     tmp5 = reveal;
     reveal = defineProperty.useContext(require("useRevealProviderValue").RevealContext).reveal;
-    obj = require("module_4146");
+    obj = require("module_4116");
     class T {
       constructor() {
         tmp = reveal;
@@ -153,7 +153,7 @@ class TileOverlay {
     obj4[1] = tmp7(View, obj5);
     items1[1] = jsx(View, obj4);
     obj2[2] = items1;
-    return tmp7(require("module_4146").View, obj2);
+    return tmp7(require("module_4116").View, obj2);
   }
 }
 let c3 = importAllResult;

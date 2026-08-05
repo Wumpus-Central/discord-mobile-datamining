@@ -54,8 +54,8 @@ export default function ResourcesRow(guildId) {
     const obj1 = { count: null };
     obj1[0] = arr.length - 2;
     obj[2] = intl.format(guildId(1236).t.F6iMs4, obj1);
-    obj[2] = callback(guildId(4281).Text, obj);
-    tmp6 = callback(guildId(4812).PressableOpacity, obj);
+    obj[2] = callback(guildId(4251).Text, obj);
+    tmp6 = callback(guildId(4797).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[2] = items;

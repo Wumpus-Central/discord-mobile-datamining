@@ -24,7 +24,7 @@ export default function useFavoritesGuildCategoryAddAction(id) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ export default function useFavoritesGuildCategoryAddAction(id) {
           obj[0] = id.id;
           const result = arg1.openAddFavoriteChannelModal(obj);
           paths = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp10) {
         paths = tmp;

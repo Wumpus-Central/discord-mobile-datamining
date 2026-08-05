@@ -11,7 +11,7 @@ import anyoneHasFlagInContext from "anyoneHasFlagInContext";
 import initialize from "initialize";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
 import { ParticipantTypes } from "ParticipantTypes";
-import jsxProd from "module_4478";
+import jsxProd from "module_4448";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
 import { set } from "../../../../utils/PlatformUtils.tsx";

@@ -3,7 +3,7 @@ import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
 import GuildFeatures from "GuildFeatures";
-import { t } from "../../../../../_runtime/03867_t.js";
+import { t } from "../../../../../_runtime/03837_t.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useTieredTenureBadgeForUser } from "useTieredTenureBadgeForUser.tsx";
 
@@ -135,7 +135,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(7015);
+        tmpResult = tmp(6989);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -150,7 +150,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(9429);
+  let tmpResult = tmp(9400);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -177,8 +177,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7015).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(7015);
+        earnedOnDate = tmp(6989).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(6989);
       }
     }
   }

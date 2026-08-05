@@ -6,7 +6,7 @@ import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { isGuildTextChannelType } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "items1";
+import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ThemeTypes";
 import { SystemThemeState } from "SystemThemeState";
 import { PersistedStore } from "initialize";
 import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
@@ -14,7 +14,6 @@ import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
-import { setSystemTheme } from "../user_settings/ThemeActionCreators.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 import { getThemeForColor } from "ClientThemesUtils.tsx";
 
@@ -26,6 +25,7 @@ function reset() {
   if (c14) {
     let c3;
   }
+  let c16 = false;
   let c15 = false;
 }
 function handleUserStoreChange() {
@@ -34,6 +34,7 @@ function handleUserStoreChange() {
     return false;
   } else {
     c14 = tmp;
+    let c16 = false;
   }
   const obj = getPremiumPlanItem;
 }
@@ -71,11 +72,12 @@ function handleUserSettingsProtoStoreUpdate() {
       result = null == backgroundGradientPresetId;
     }
     if (!result) {
-      result = handleThemeChange.isSameAsDeviceThemeEnabled();
+      let tmpResult = tmp(1347);
+      result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
     }
     if (!result) {
-      setSystemTheme.setUseSystemTheme(SystemThemeState.OFF);
-      const tmpResult = setSystemTheme;
+      tmpResult = tmp(4097);
+      tmpResult.setUseSystemTheme(SystemThemeState.OFF);
     }
     if (null != backgroundGradientPresetId) {
       let tmp13 = null == tmp12;
@@ -102,6 +104,7 @@ function handleUserSettingsProtoStoreUpdate() {
 }
 let c14 = true;
 let c15 = false;
+let c16 = false;
 class ClientThemesBackgroundStore extends PersistedStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -122,16 +125,14 @@ class ClientThemesBackgroundStore extends PersistedStore {
 }
 const prototype = ClientThemesBackgroundStore.prototype;
 prototype["initialize"] = function initialize(gradientPresetId) {
+  let c16 = false;
   if (null != gradientPresetId) {
-    gradientPresetId = undefined;
-    if (gradientPresetId != null) {
-      gradientPresetId = gradientPresetId.gradientPresetId;
+    let tmp;
+    if (null != gradientPresetId.gradientPresetId) {
+      tmp = dependencyMap[gradientPresetId.gradientPresetId];
     }
-    let tmp2;
-    if (null != gradientPresetId) {
-      tmp2 = dependencyMap[gradientPresetId.gradientPresetId];
-    }
-    let closure_3 = tmp2;
+    let closure_3 = tmp;
+    let closure_14 = true !== gradientPresetId.canUseClientThemes;
   }
   this.waitFor(ensureGuildLoaded, initialize, handleThemeChange, CHANNEL_SIDEBAR_WIDTH, handleConnectionClosedOrResumed, mergeGuildAvatar);
   const items = [mergeGuildAvatar];
@@ -147,7 +148,7 @@ prototype["getState"] = function getState() {
     if (user != null) {
       id = user.id;
     }
-    obj = { gradientPresetId: null };
+    obj = { gradientPresetId: null, canUseClientThemes: true };
     obj[0] = id;
   }
   return obj;
@@ -155,16 +156,24 @@ prototype["getState"] = function getState() {
 Object.defineProperty(prototype, "gradientPreset", {
   get: function gradientPreset() {
     if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
-      const syncedClientTheme = handleThemeChange.getSyncedClientTheme(handleThemeChange.systemTheme);
-      let prop;
-      if (syncedClientTheme != null) {
-        prop = syncedClientTheme.backgroundGradientPresetId;
+      if (c14) {
+        let tmp10;
+        if (c16) {
+          tmp10 = closure_3;
+        }
+        return tmp10;
+      } else {
+        syncedClientTheme = syncedClientTheme.getSyncedClientTheme(syncedClientTheme.systemTheme);
+        let prop;
+        if (syncedClientTheme != null) {
+          prop = syncedClientTheme.backgroundGradientPresetId;
+        }
+        let tmp7;
+        if (null != prop) {
+          tmp7 = dependencyMap[prop];
+        }
+        return tmp7;
       }
-      let tmp6;
-      if (null != prop) {
-        tmp6 = dependencyMap[prop];
-      }
-      return tmp6;
     } else {
       return closure_3;
     }
@@ -203,6 +212,7 @@ ClientThemesBackgroundStore.persistKey = "ClientThemesBackgroundStore";
 const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dispatcher"), {
   UPDATE_BACKGROUND_GRADIENT_PRESET: function handleUpdateBackgroundGradientPreset(presetId) {
     presetId = presetId.presetId;
+    let closure_16 = c14;
     let tmp;
     if (null != presetId) {
       tmp = dependencyMap[presetId];
@@ -219,6 +229,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
   },
   RESET_PREVIEW_CLIENT_THEME: function handleResetPreviewClientTheme() {
     let c3;
+    let c16 = false;
   },
   CLIENT_THEMES_EDITOR_CLOSE: reset,
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
@@ -236,7 +247,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
               let c15 = true;
             }
           }
-          tmp6Result = tmp6(4124);
+          tmp6Result = tmp6(4094);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

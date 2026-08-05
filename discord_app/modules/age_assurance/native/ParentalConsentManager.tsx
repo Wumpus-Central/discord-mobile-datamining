@@ -34,7 +34,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -109,7 +109,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       } catch (tmp9) {
         v0 = tmp;
         throw tmp9;
@@ -133,7 +133,7 @@ prototype["performAgeCheck"] = function performAgeCheck() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -167,7 +167,7 @@ prototype["performAgeCheck"] = function performAgeCheck() {
               } else {
                 should_block = 0;
                 constants = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             } else {
               tmp58Result = tmp58(tmp59[11]);

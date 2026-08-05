@@ -201,7 +201,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  const obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
+  const obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "\u{1F9DB}\u{1F3FE}" };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -322,7 +322,7 @@ obj = {
     section = section.section;
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY: function handleOpenReplay() {
-    importAll(10814).chooseReplayPath();
+    importAll(10786).chooseReplayPath();
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: function handleOpenReplayAtPath(path) {
     path = path.path;
@@ -336,7 +336,7 @@ obj = {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4381).BaseConnectionEvent.Video, (userId) => {
+          replayConnection.on(replayConnection(4351).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
             let obj = outer1_1(outer1_3[7]);
             obj = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };

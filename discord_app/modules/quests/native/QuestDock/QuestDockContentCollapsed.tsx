@@ -64,7 +64,7 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
   C.__initData = closure_9;
   const animatedProps = ReanimatedRexport.useAnimatedProps(C);
   const style = [tmp2.questDockContentCollapsed, animatedStyle];
-  return jsx(activeQuestDockMode(7819), { style, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7791), { style, animatedProps, children: children.children });
 });
 const result = require("QuestsExperimentLocations").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentCollapsed.tsx");
 

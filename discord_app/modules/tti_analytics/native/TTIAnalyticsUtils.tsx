@@ -101,7 +101,7 @@ function getRedesignScreenName() {
       const _HermesInternal = HermesInternal;
       return "redesign-" + name;
     }
-    tmpResult = tmp(4136);
+    tmpResult = tmp(4106);
   }
   const obj = getRootNavigationRef;
   tmp = require;
@@ -135,7 +135,7 @@ function _trackAppUIViewedAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -160,7 +160,7 @@ function _trackAppUIViewedAsync() {
               getHash = 1;
               c6 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback2(4143).getAppFirstVisibleTimestamp();
+              obj1[0] = callback2(4113).getAppFirstVisibleTimestamp();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -174,15 +174,15 @@ function _trackAppUIViewedAsync() {
           } else {
             handleClearCaches = arg1;
             getHash = ensureGuildLoaded - handleClearCaches;
-            callback2(4143).reportFullyDrawn();
-            const obj5 = callback2(4143);
+            callback2(4113).reportFullyDrawn();
+            const obj5 = callback2(4113);
             callback2(10).mark("\u2757", "Track app_ui_viewed");
             const obj6 = callback2(10);
             callback2(10).addDetail("TTI", getHash);
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", handleClearCaches);
             const obj8 = callback2(10);
-            callback(7054).ttiRecorded(getHash);
+            callback(7028).ttiRecorded(getHash);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -204,7 +204,7 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F119244 */ function() { ... });
+                  callback(9).setTTICallback(/* F119185 */ function() { ... });
                   callback3();
                   let c25 = null;
                 }, 15 * callback(687).Millis.SECOND);
@@ -247,7 +247,7 @@ function _trackAppUIViewedAsync() {
               }
             })();
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp6) {
           c6 = tmp;
@@ -287,7 +287,7 @@ function _logLegacyAppUiViewed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -314,7 +314,7 @@ function _logLegacyAppUiViewed() {
               c7 = 1;
               c8 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback(4143).getJSBundleTimestamps();
+              obj1[0] = callback(4113).getJSBundleTimestamps();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -347,7 +347,7 @@ function _logLegacyAppUiViewed() {
             const merged2 = Object.assign(closure_0);
             callback(698).track(constants.APP_UI_VIEWED, obj2, { logEventProperties: true });
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp7) {
           c8 = tmp;
@@ -389,7 +389,7 @@ function _trackAppUIViewed() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -439,7 +439,7 @@ function _trackAppUIViewed() {
             outer1_2 = outer1_1.appCreatedTime;
             const outer1_3 = outer1_1.appFirstVisibleTime;
             const outer1_4 = outer1_1.extraProperties;
-            const allNativeTimestamps = callback(4143).getAllNativeTimestamps();
+            const allNativeTimestamps = callback(4113).getAllNativeTimestamps();
             getHash = 2;
             theme = 1;
             let obj3 = { value: null, done: false };
@@ -458,7 +458,7 @@ function _trackAppUIViewed() {
           obj4[0] = arg1;
           return obj4;
         } else {
-          const cumulativeCPUUsage = callback(7055).getCumulativeCPUUsage();
+          const cumulativeCPUUsage = callback(7029).getCumulativeCPUUsage();
           let usage;
           if (cumulativeCPUUsage != null) {
             usage = cumulativeCPUUsage.usage;
@@ -489,7 +489,7 @@ function _trackAppUIViewed() {
           obj3.track(APP_UI_VIEWED2.APP_UI_VIEWED2, theme, { logEventProperties: true });
           let closure_26 = theme;
           if (alertStartupMetrics.alertStartupMetrics) {
-            obj4 = callback(4624);
+            obj4 = callback(4594);
             const obj5 = { importer: null };
             obj5[0] = function importer() {
               return callback(paths[28])(paths[27], paths.paths).then((arg0) => {
@@ -509,7 +509,7 @@ function _trackAppUIViewed() {
             };
             obj4.openLazy(obj5);
           }
-          const obj14 = callback(7055);
+          const obj14 = callback(7029);
           if (obj7.runningTTIAutomation()) {
             (function logToDevice(json) {
               let obj = {};
@@ -544,7 +544,7 @@ function _trackAppUIViewed() {
             })(theme);
           }
           theme = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp53) {
         theme = tmp;
@@ -603,7 +603,7 @@ function _trackAppLaunchCompletedAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -644,7 +644,7 @@ function _trackAppLaunchCompletedAsync() {
             obj = callback(table[19]);
             obj.track(constants.APP_LAUNCH_COMPLETED, closure_0, { logEventProperties: true });
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp21) {
           c8 = tmp;

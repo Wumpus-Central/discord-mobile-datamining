@@ -80,7 +80,7 @@ prototype["flushNow"] = function flushNow() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ prototype["flushNow"] = function flushNow() {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       } catch (tmp5) {
         c0 = tmp;
         throw tmp5;
@@ -238,7 +238,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -318,7 +318,7 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {

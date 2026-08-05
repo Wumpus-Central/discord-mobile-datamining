@@ -33,17 +33,17 @@ function audienceAckRequestToSpeak(channel, suppress) {
   let obj1 = useAudienceRequestToSpeakState;
   const audienceRequestToSpeakState = obj1.getAudienceRequestToSpeakState(voiceStateForChannel);
   if (!suppress) {
-    let objResult = obj(5107);
+    let objResult = obj(5092);
     if (objResult.shouldAgeVerifyToSpeakForCurrentUser()) {
       return Promise.resolve();
     }
   }
   if (!tmp7) {
-    objResult = obj(4479);
+    objResult = obj(4449);
     obj = {};
-    const merged = Object.assign(obj(7703).getStageChannelMetadata(channel));
+    const merged = Object.assign(obj(7675).getStageChannelMetadata(channel));
     objResult.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj);
-    const objResult1 = obj(7703);
+    const objResult1 = obj(7675);
   }
   const HTTP = obj(530).HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
@@ -83,7 +83,7 @@ function _startStage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -103,10 +103,10 @@ function _startStage() {
               let closure_1;
               if ("" !== closure_1) {
                 if (outer1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(7696);
+                  let obj2 = callback(7668);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(7709);
+                const obj4 = callback(7681);
                 c6 = 1;
                 c7 = 1;
                 const obj1 = { value: null, done: false };
@@ -114,7 +114,7 @@ function _startStage() {
                 return obj1;
               } else {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             }
           } else if (arg0 === 1) {
@@ -169,7 +169,7 @@ function _editStage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ function _editStage() {
               return obj1;
             } else {
               table = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else if (arg0 === 1) {
             table = 3;
@@ -242,7 +242,7 @@ function _endStage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -274,7 +274,7 @@ function _endStage() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp8) {
           c1 = tmp;
@@ -413,7 +413,7 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
   00038__(null != guildId, "Channel cannot be guildless");
-  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: importAll(3918).NONE, deny: importAll(3918).NONE };
+  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: importAll(3888).NONE, deny: importAll(3888).NONE };
   const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
   const obj2 = importAll(506);
   if (arg2) {

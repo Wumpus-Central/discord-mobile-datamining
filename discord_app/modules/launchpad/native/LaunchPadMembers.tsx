@@ -41,7 +41,7 @@ const memoResult = require("noop").memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: null };
+    return { channelId: "channel", type: false };
   });
   if ("private" === stateFromStoresObject.type) {
     obj = { style: null, children: null };
@@ -74,7 +74,7 @@ const memoResult = require("noop").memo(function LaunchPadMembers() {
     obj6[0] = tmp.emptyText;
     const intl = tmp2(1236).intl;
     obj6[2] = intl.string(tmp2(1236).t["+7wtJq"]);
-    obj5[1] = jsx(tmp2(4281).Text, { style: null, variant: "text-md/semibold", children: null });
+    obj5[1] = jsx(tmp2(4251).Text, { style: null, variant: "text-md/semibold", children: null });
     tmp8 = <View style={null}>{null}</View>;
   }
   return tmp8;

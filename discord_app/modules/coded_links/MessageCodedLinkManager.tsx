@@ -31,7 +31,7 @@ function resolveMessageCodedLinks(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -66,7 +66,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;
@@ -87,7 +87,7 @@ function resolveMessageCodedLinks(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -122,7 +122,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;

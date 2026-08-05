@@ -27,13 +27,13 @@ function useActivityAction(applicationId) {
   }
   const tmp4 = useCurrentEmbeddedActivity();
   const tmp5 = useCurrentEmbeddedApplication({ fetchesApplication });
-  obj = getOrFetchApplication(5616);
+  obj = getOrFetchApplication(5601);
   getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId, fetchesApplication);
   useEmbeddedApps(channel);
   if (null == getOrFetchApplication) {
     return START;
   } else {
-    const getEmbeddedActivityLocationChannelId = getOrFetchApplication(3903).getEmbeddedActivityLocationChannelId;
+    const getEmbeddedActivityLocationChannelId = getOrFetchApplication(3873).getEmbeddedActivityLocationChannelId;
     if (tmp4 != null) {
       const _location = tmp4.location;
     }
@@ -53,7 +53,7 @@ function useActivityAction(applicationId) {
     if (null != tmp9) {
       JOIN = tmp.JOIN;
     }
-    const tmp6Result = getOrFetchApplication(3903);
+    const tmp6Result = getOrFetchApplication(3873);
   }
 }
 function useOnActivityItemSelected(arg0) {
@@ -89,8 +89,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(5610)().analyticsLocations;
-  closure_14 = context(10628)();
+  analyticsLocations = context(5595)().analyticsLocations;
+  closure_14 = context(10600)();
   obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
@@ -112,7 +112,7 @@ function useOnActivityItemSelected(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ function useOnActivityItemSelected(arg0) {
           } else if (1 === tmp8) {
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           } else {
             if (2 === tmp8) {
               if (arg0 === 1) {
@@ -214,7 +214,7 @@ function useOnActivityItemSelected(arg0) {
             } else if (3 === tmp8) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             } else if (4 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -233,7 +233,7 @@ function useOnActivityItemSelected(arg0) {
               c3 = 0;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
           c3 = 0;
           c5 = 3;
@@ -266,7 +266,7 @@ function useOnActivityItemSelected(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -324,7 +324,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         } catch (tmp17) {
           c0 = tmp;
           throw tmp17;
@@ -394,10 +394,10 @@ export default function useActivityShelfItem(backgroundResolution) {
   let tmp9 = null;
   const tmp3 = getPlatform;
   if (null != activity.activity_preview_video_asset_id) {
-    tmp9 = tmp(11357)(application.id, activity.activity_preview_video_asset_id);
+    tmp9 = tmp(11329)(application.id, activity.activity_preview_video_asset_id);
   }
   let channel;
-  let tmpResult = tmp(11358);
+  let tmpResult = tmp(11330);
   if ("channel" === context.type) {
     channel = context.channel;
   }
@@ -407,9 +407,9 @@ export default function useActivityShelfItem(backgroundResolution) {
   const obj1 = { application: activityItem.application, context, locationObject, embeddedActivitiesManager, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
   const tmpResultResult = tmpResult(channel);
   const tmp13 = useActivityAction(obj);
-  let tmp4Result = tmp4(7510);
+  let tmp4Result = tmp4(7482);
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    tmpResult = tmp(10522);
+    tmpResult = tmp(10494);
     tmp4Result = tmp4(500);
     const str = activityItem.activity.client_platform_config[tmpResult(undefined, tmp4Result.getOS(tmp4Result))].release_phase;
     let replaced;
@@ -419,7 +419,7 @@ export default function useActivityShelfItem(backgroundResolution) {
     }
     const tmp16 = replaced;
   } else {
-    const tmp4Result1 = tmp4(7510);
+    const tmp4Result1 = tmp4(7482);
   }
   const obj2 = { imageBackground: tmp8, videoUrl: tmp9, joinableEmbeddedApp: found, activityAction: tmp13, onActivityItemSelected: useOnActivityItemSelected(obj1), labelType: null, staffReleasePhase: null };
   if (tmp7) {
@@ -434,7 +434,7 @@ export default function useActivityShelfItem(backgroundResolution) {
 export const ActivityAction = obj;
 export const getStaffReleasePhase = function getStaffReleasePhase(application) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    let tmpResult = tmp(7510);
+    let tmpResult = tmp(7482);
   }
   obj = getApplicationFlags;
   const tmp3 = ApplicationFlags;

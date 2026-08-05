@@ -1,8 +1,10 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx
 import ComponentDispatcher from "ComponentDispatcher";
-import { ComponentActions } from "ME";
+import ME from "ME";
 import { dispatcher } from "../../../Dispatcher.tsx";
 
+let c4;
+let c5;
 const require = arg1;
 function AsyncFromSyncIterator(arg0) {
   class AsyncFromSyncIterator {
@@ -112,7 +114,7 @@ function _saveRoleSettings() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -133,7 +135,7 @@ function _saveRoleSettings() {
                 c18 = 0;
                 let num3 = 3;
                 c21 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               } else {
                 let tmp19 = closure_8;
                 throw closure_8;
@@ -190,6 +192,7 @@ function _saveRoleSettings() {
   }
   return applyArgumentsResult;
 }
+({ ComponentActions: c4, DEFAULT_ROLE_COLOR: c5 } = ME);
 const result = require("dispatcher").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");
 
 export const updateRoleSort = function updateRoleSort(roles) {
@@ -240,10 +243,26 @@ export const updateRoleDescription = function updateRoleDescription(id, descript
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION", id, description };
   obj.dispatch(obj);
 };
-export const updateRoleColor = function updateRoleColor(closure_2, color) {
-  let obj = dispatcher;
-  obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR", id: closure_2, color };
-  obj.dispatch(obj);
+export const updateRoleColor = function updateRoleColor(closure_1, arg1) {
+  let tmp = closure_1.color === arg1;
+  if (!tmp) {
+    let tmp3 = arg1 === closure_5;
+    if (tmp3) {
+      tmp3 = 0 === closure_1.color;
+    }
+    tmp = tmp3;
+  }
+  if (!tmp) {
+    let obj = dispatcher;
+    obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR", id: null, color: null };
+    obj[1] = closure_1.id;
+    let num2 = 0;
+    if (arg1 !== closure_5) {
+      num2 = arg1;
+    }
+    obj[2] = num2;
+    obj.dispatch(obj);
+  }
 };
 export const updateRoleColors = function updateRoleColors(closure_2, colors, GRADIENT) {
   let obj = dispatcher;

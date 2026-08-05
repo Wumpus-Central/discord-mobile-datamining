@@ -23,7 +23,7 @@ function _claimIncentivizedAccountLinkingReward() {
       c2 = tmp3;
       const dependencyMap = tmp5;
       ({ applicationId: c0, onSuccess: c1, onError: c2 } = callback);
-      yield "ct";
+      yield "PX_8";
       let c4 = 1;
       const HTTP = callback(530).HTTP;
       const obj2 = { url: null, body: null, rejectWithError: true };

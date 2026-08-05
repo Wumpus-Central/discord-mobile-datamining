@@ -22,7 +22,7 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
     return [];
   } else {
     const tmp2 = type === _PermissionOverwriteType.ComponentType.USER_SELECT || type === _PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(5126);
+    let obj = channel(5111);
     obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     obj[0] = arg1;
     obj[1] = channel;
@@ -60,8 +60,8 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     obj[2] = arg2;
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
-      const obj = { type: callback(4512).SelectOptionType.CHANNEL, value: id.id, label: null };
-      obj[2] = callback(4475).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+      const obj = { type: callback(4482).SelectOptionType.CHANNEL, value: id.id, label: null };
+      obj[2] = callback(4445).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
       return obj;
     });
   }

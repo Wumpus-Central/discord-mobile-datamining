@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/native/components/StageActionHeader.tsx
-import { View } from "module_4490";
+import { View } from "module_4460";
 import getParticipants from "getParticipants";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
@@ -12,7 +12,7 @@ import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 import importAllResult from "initialize";
-import { registerAsset } from "../../../../../_runtime/10805_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10777_registerAsset.js";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { openChannelCallModal } from "../../../../utils/native/PrivateChannelCallUtils.tsx";
@@ -165,11 +165,11 @@ class StageSettingsButton {
 class StageInviteButton {
   constructor(arg0) {
     channelId = global.channelId;
-    f85684 = undefined;
-    f85685 = undefined;
+    f85622 = undefined;
+    f85623 = undefined;
     useActiveEvent = undefined;
     tmp2 = channelId;
-    tmp3 = f85685;
+    tmp3 = f85623;
     tmp = jsxs();
     obj = require("initialize");
     items = [];
@@ -177,7 +177,7 @@ class StageInviteButton {
     items1 = [];
     items1[0] = channelId;
     stateFromStores = obj.useStateFromStores(items, () => outer1_5.getChannel(channelId), items1);
-    f85684 = stateFromStores;
+    f85622 = stateFromStores;
     obj2 = require("initialize");
     items2 = [];
     items2[0] = View;
@@ -193,7 +193,7 @@ class StageInviteButton {
       }
       return outer1_7.getGuild(guild_id);
     }, items3);
-    f85685 = stateFromStores1;
+    f85623 = stateFromStores1;
     obj3 = require("useGuildEvents");
     useActiveEvent = obj3.useActiveEvent(channelId);
     tmp6 = null;
@@ -201,7 +201,7 @@ class StageInviteButton {
       tmp6 = null;
       if (null != stateFromStores1) {
         tmp7 = jsx;
-        tmp8 = f85684;
+        tmp8 = f85622;
         obj = { accessibilityLabel: null, containerStyle: null, source: null, IconComponent: null, onPress: null, disableBackground: true };
         tmp9 = require("ChannelCallNavigatorIcon");
         intl = require("getSystemLocale").intl;

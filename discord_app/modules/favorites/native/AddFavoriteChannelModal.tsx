@@ -46,7 +46,7 @@ function AddFavoriteChannelModal(parentId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -91,7 +91,7 @@ function AddFavoriteChannelModal(parentId) {
           }
           outer1_14();
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp24) {
         c4 = tmp;

@@ -29,7 +29,7 @@ function RaisedHandIcon(rtsState) {
   let obj = { style: items, children: null };
   items[1] = activeBackground;
   obj = { style: tmp.raisedHand, source: null, color: null };
-  obj[1] = tmp5(7813);
+  obj[1] = tmp5(7785);
   obj[2] = PRIMARY_800;
   obj[1] = closure_5(Button.Icon, obj);
   return closure_5(View, obj);

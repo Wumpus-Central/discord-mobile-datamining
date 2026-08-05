@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import { PureComponent } from "noop";
 import importAllResult from "noop";
-import { _isNativeReflectConstruct } from "../../../_runtime/05602__isNativeReflectConstruct.js";
+import { _isNativeReflectConstruct } from "../../../_runtime/05587__isNativeReflectConstruct.js";
 
 let closure_2 = ["source", "style"];
 class SequencedLottieAnimationView extends PureComponent {

@@ -5,11 +5,11 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { FractionalPremiumStates } from "GuildFeatures";
 import jsxProd from "UploadIcon";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/12704_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12705_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12706_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12707_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12708_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12676_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12677_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12678_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12679_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12680_registerAsset.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
 import { HeadphonesIcon } from "../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
@@ -54,7 +54,7 @@ class FEATURES_PREMIUM_GUILD_USER {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.color = callback2(712).unsafe_rawColors.GUILD_BOOSTING_PINK;
-      return callback3(callback(12701).BoostTier3Icon, obj);
+      return callback3(callback(12673).BoostTier3Icon, obj);
     };
     items[1] = obj;
     obj1 = { icon: require("registerAsset"), label: null, color: null, IconComponent: null };
@@ -91,15 +91,15 @@ export default function GuildBoostingUpsell(arg0) {
   }
   obj = { style: tmp.root, children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.imgPremiumGuild, source: tmp7(7530) };
+  obj1 = { style: tmp.imgPremiumGuild, source: tmp7(7502) };
   const items1 = [callback(closure_4, obj1), , , ];
   obj2 = { style: tmp.logoPremiumGuild, source: null };
   const tmp8 = useTheme();
   const tmp9 = FractionalPremiumStates;
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result = tmp7(7539);
+    let tmp7Result = tmp7(7511);
   } else {
-    tmp7Result = tmp7(7540);
+    tmp7Result = tmp7(7512);
   }
   obj2[1] = tmp7Result;
   items1[1] = callback(closure_4, obj2);
@@ -118,7 +118,7 @@ export default function GuildBoostingUpsell(arg0) {
   obj5[4] = intl3.string(getSystemLocale.t.RvfRTB);
   items2[1] = callback(Text.Text, obj5);
   const obj6 = { style: tmp.features, features: null };
-  tmp7Result = tmp7(8556);
+  tmp7Result = tmp7(8528);
   obj6[1] = FEATURES_PREMIUM_GUILD_USER();
   items2[2] = callback(tmp7Result, obj6);
   const obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
@@ -164,7 +164,7 @@ export default function GuildBoostingUpsell(arg0) {
   if (subscriptionPlansLoaded) {
     tmp13Result = null;
     if (fractionalState === tmp9.NONE) {
-      tmp13Result = tmp13(tmp7(12713), {});
+      tmp13Result = tmp13(tmp7(12685), {});
     }
   }
   const items4 = [tmp13Result, , ];
@@ -175,7 +175,7 @@ export default function GuildBoostingUpsell(arg0) {
       const obj15 = { onLearnMorePremium: null, style: null };
       obj15[0] = onLearnMorePremium;
       obj15[1] = tmp.subscriptionUpsell;
-      tmp13Result = tmp13(tmp7(12715), obj15);
+      tmp13Result = tmp13(tmp7(12687), obj15);
     }
     items4[2] = tmp13Result;
     obj14[1] = items4;
@@ -189,16 +189,16 @@ export default function GuildBoostingUpsell(arg0) {
       obj17[0] = tmp.cardText;
       const intl12 = tmp2(1236).intl;
       obj17[2] = intl12.string(tmp2(1236).t.WRzob8);
-      const items5 = [tmp13(tmp2(4281).Text, obj17), , ];
+      const items5 = [tmp13(tmp2(4251).Text, obj17), , ];
       const obj18 = { style: null, variant: "text-md/bold", children: null };
       const items6 = [tmp.cardText];
       obj18[0] = items6;
       const intl13 = tmp2(1236).intl;
       obj18[2] = intl13.string(tmp2(1236).t.j4bXcm);
-      items5[1] = tmp13(tmp2(4281).Text, obj18);
+      items5[1] = tmp13(tmp2(4251).Text, obj18);
       const obj19 = { style: null };
       obj19[0] = tmp.guildList;
-      items5[2] = tmp13(tmp7(12714), obj19);
+      items5[2] = tmp13(tmp7(12686), obj19);
       obj16[0] = items5;
       let tmp19 = obj16;
     } else {
@@ -211,12 +211,12 @@ export default function GuildBoostingUpsell(arg0) {
       obj21[0] = items8;
       const intl10 = tmp2(1236).intl;
       obj21[2] = intl10.string(tmp2(1236).t.FHm4bZ);
-      items7[1] = tmp13(tmp2(4281).Text, obj21);
+      items7[1] = tmp13(tmp2(4251).Text, obj21);
       const obj22 = { style: null, variant: "text-md/medium", children: null };
       obj22[0] = tmp.cardText;
       const intl11 = tmp2(1236).intl;
       obj22[2] = intl11.string(tmp2(1236).t.PSLiiu);
-      items7[2] = tmp13(tmp2(4281).Text, obj22);
+      items7[2] = tmp13(tmp2(4251).Text, obj22);
       obj16[0] = items7;
       tmp19 = obj16;
     }

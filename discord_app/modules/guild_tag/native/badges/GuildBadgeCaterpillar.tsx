@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeCaterpillar.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/08409_inlineStyles.js";
 import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
 
 let c3;

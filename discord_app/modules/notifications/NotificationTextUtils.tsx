@@ -82,7 +82,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
             }
             let tmp17 = !tmp14;
             if (!tmp14) {
-              const FocusMode = tmp2(3958).FocusMode;
+              const FocusMode = tmp2(3928).FocusMode;
               const setting = FocusMode.getSetting();
               let tmp19 = !setting;
               if (!setting) {
@@ -116,8 +116,8 @@ function renderTitle(channelName, channel, channel) {
   const tmp5 = upsertRelationship;
   let str = "";
   if (null != channel) {
-    let tmpResult = tmp(7064);
-    tmpResult = tmp(4475);
+    let tmpResult = tmp(7038);
+    tmpResult = tmp(4445);
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
@@ -411,8 +411,8 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
       const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
-        tmp5 = !tmp3(9677).isChannelFocused();
-        const tmp3Result = tmp3(9677);
+        tmp5 = !tmp3(9648).isChannelFocused();
+        const tmp3Result = tmp3(9648);
       }
       flag = tmp5;
       const obj3 = getRootNavigationRef;
@@ -450,8 +450,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               }
             }
             content = content.content;
-            if (tmp(5799)(content)) {
-              let tmpResult = tmp(7903);
+            if (tmp(5784)(content)) {
+              let tmpResult = tmp(7875);
               content = tmpResult.stringify(content, getGuildId);
               if (null == content) {
                 const obj15 = new tmp(3)("NotificationTextUtils");
@@ -472,7 +472,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               let obj4 = isForwardMessage;
               let result = obj4.isForwardServerMessage(content);
             } else {
-              result = tmp(5827)(content);
+              result = tmp(5812)(content);
             }
             const items = [];
             if (result) {
@@ -524,7 +524,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               if (content.type === constants4.PREMIUM_REFERRAL) {
                 const intl4 = getSystemLocale.intl;
                 obj4 = { username: null };
-                tmpResult = tmp(4124);
+                tmpResult = tmp(4094);
                 obj4[0] = tmpResult.getName(bot);
                 stringResult = intl4.formatToPlainString(getSystemLocale.t.lieTqU, obj4);
                 tmp26 = items;
@@ -563,8 +563,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const tmpResult1 = tmp(7062);
-                ({ content, emoji } = tmp(7062).unparseWithMeta(content, getGuildId.id, true));
+                const tmpResult1 = tmp(7036);
+                ({ content, emoji } = tmp(7036).unparseWithMeta(content, getGuildId.id, true));
                 tmp26 = emoji;
                 stringResult = content;
                 if (0 !== content.length) {
@@ -591,7 +591,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const unparseWithMetaResult = tmp(7062).unparseWithMeta(content, getGuildId.id, true);
+                const unparseWithMetaResult = tmp(7036).unparseWithMeta(content, getGuildId.id, true);
               }
             }
             if (0 === stringResult.length) {

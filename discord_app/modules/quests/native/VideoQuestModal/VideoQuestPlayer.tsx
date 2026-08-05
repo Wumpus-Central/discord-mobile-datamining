@@ -189,10 +189,10 @@ const memoResult = importAllResult.memo((onLoad) => {
   let tmp = first2();
   obj = externallyPaused;
   ref = externallyPaused.useRef(null);
-  let obj1 = handleBufferAnalytics(14268);
+  let obj1 = handleBufferAnalytics(14242);
   const videoQuestModalContext = obj1.useVideoQuestModalContext();
   quest = videoQuestModalContext.quest;
-  let obj2 = handleBufferAnalytics(10374);
+  let obj2 = handleBufferAnalytics(10346);
   questTaskDetails = obj2.useQuestTaskDetails(quest);
   const userStatus = quest.userStatus;
   let completedAt;
@@ -210,9 +210,9 @@ const memoResult = importAllResult.memo((onLoad) => {
     url = memo1.url;
   }
   if (null != url) {
-    let VIDEO_PLAYER_VIDEO = tmp3(10386).QuestAssetType.VIDEO_PLAYER_VIDEO_HLS;
+    let VIDEO_PLAYER_VIDEO = tmp3(10358).QuestAssetType.VIDEO_PLAYER_VIDEO_HLS;
   } else {
-    VIDEO_PLAYER_VIDEO = tmp3(10386).QuestAssetType.VIDEO_PLAYER_VIDEO;
+    VIDEO_PLAYER_VIDEO = tmp3(10358).QuestAssetType.VIDEO_PLAYER_VIDEO;
   }
   const tmp13 = orientation(obj.useState(questTaskDetails.targetSeconds), 2);
   first = tmp13[0];
@@ -230,7 +230,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       tmp = obj;
     }
     return tmp;
-  }, handleBufferAnalytics(3898).shallow);
+  }, handleBufferAnalytics(3868).shallow);
   obj = tmp16;
   const tmp18 = orientation(obj.useState(obj12.LOADING), 2);
   first1 = tmp18[0];
@@ -255,7 +255,7 @@ const memoResult = importAllResult.memo((onLoad) => {
     tmp22 = timestampSec >= duration - 1;
   }
   c25 = tmp22;
-  let tmp3Result = tmp3(4146);
+  let tmp3Result = tmp3(4116);
   sharedValue = tmp3Result.useSharedValue(false);
   shouldShowControls = function shouldShowControls() {
     let tmp = first2;
@@ -283,7 +283,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   shouldShowControls.__closure = { hasLoaded: first2, showControls: sharedValue, playerState: first1, PlayerState: obj12, isVideoEnded: tmp22, externallyPaused };
   shouldShowControls.__workletHash = 11602236169344;
   shouldShowControls.__initData = closure_21;
-  tmp3Result = tmp3(4146);
+  tmp3Result = tmp3(4116);
   class G {
     constructor() {
       if (typeof shouldShowControls !== "function") {
@@ -333,7 +333,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       return obj;
     }
   }
-  obj = { shouldShowControls, withSpring: tmp3(4694).withSpring, SUBTLE_SPRING: tmp3(4698).SUBTLE_SPRING };
+  obj = { shouldShowControls, withSpring: tmp3(4664).withSpring, SUBTLE_SPRING: tmp3(4668).SUBTLE_SPRING };
   G.__closure = obj;
   G.__workletHash = 6174625876255;
   G.__initData = closure_22;
@@ -342,8 +342,8 @@ const memoResult = importAllResult.memo((onLoad) => {
     first2 = sharedValue.get() || first1 === tmp17.PAUSED || first1 === tmp17.ENDED || first1 === tmp17.ERRORED || tmp22 || externallyPaused;
     const tmp25 = sharedValue.get() || first1 === tmp17.PAUSED || first1 === tmp17.ENDED || first1 === tmp17.ERRORED || tmp22 || externallyPaused;
   }
-  sharedValue1 = handleBufferAnalytics(4146).useSharedValue(0);
-  const tmp3Result1 = handleBufferAnalytics(4146);
+  sharedValue1 = handleBufferAnalytics(4116).useSharedValue(0);
+  const tmp3Result1 = handleBufferAnalytics(4116);
   class U {
     constructor() {
       obj = { width: null };
@@ -353,11 +353,11 @@ const memoResult = importAllResult.memo((onLoad) => {
       return obj;
     }
   }
-  obj = { withTiming: tmp3(4286).withTiming, progress: sharedValue1, timingFast: tmp3(4289).timingFast };
+  obj = { withTiming: tmp3(4256).withTiming, progress: sharedValue1, timingFast: tmp3(4259).timingFast };
   U.__closure = obj;
   U.__workletHash = 4647711667921;
   U.__initData = closure_23;
-  const animatedStyle1 = handleBufferAnalytics(4146).useAnimatedStyle(U);
+  const animatedStyle1 = handleBufferAnalytics(4116).useAnimatedStyle(U);
   closure_29 = obj.useRef(-1);
   const items2 = [sharedValue];
   const callback = obj.useCallback((arg0) => {
@@ -378,7 +378,7 @@ const memoResult = importAllResult.memo((onLoad) => {
     };
   }, items2);
   obj1 = { duration: first, isQuestCompleted: tmp8, playerState: first1, questId: quest.id, videoSessionId: videoQuestModalContext.videoSessionId, videoAssetId: VIDEO_PLAYER_VIDEO, sourceQuestContent };
-  const tmp30 = ref1(14276)(obj1);
+  const tmp30 = ref1(14250)(obj1);
   ({ handleBufferAnalytics, handleEndAnalytics } = tmp30);
   handleErrorAnalytics = tmp30.handleErrorAnalytics;
   handleLoadAnalytics = tmp30.handleLoadAnalytics;
@@ -402,8 +402,8 @@ const memoResult = importAllResult.memo((onLoad) => {
     }
     url1 = url2;
   }
-  const tmp3Result2 = handleBufferAnalytics(4146);
-  const defaultWatchVideoTask = handleBufferAnalytics(7103).getDefaultWatchVideoTask(quest.config);
+  const tmp3Result2 = handleBufferAnalytics(4116);
+  const defaultWatchVideoTask = handleBufferAnalytics(7077).getDefaultWatchVideoTask(quest.config);
   videoTitle = undefined;
   if (defaultWatchVideoTask != null) {
     videoTitle = defaultWatchVideoTask.messages.videoTitle;
@@ -693,7 +693,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       callback2(current + 10);
     }
   }, items15);
-  const tmp3Result3 = handleBufferAnalytics(7103);
+  const tmp3Result3 = handleBufferAnalytics(7077);
   const callbackResult = callback(obj.useCallback(() => {
     let current = ref4.current;
     if (current == null) {
@@ -992,7 +992,7 @@ const memoResult = importAllResult.memo((onLoad) => {
     }
     obj7[3] = num6;
     obj6[3] = obj7;
-    items29[1] = targetSeconds(tmp3(14287).VideoQuestCaptions, obj6);
+    items29[1] = targetSeconds(tmp3(14261).VideoQuestCaptions, obj6);
     if (!tmp72) {
       items29[2] = tmp72;
       tmp80Result = !tmp39;
@@ -1024,8 +1024,8 @@ const memoResult = importAllResult.memo((onLoad) => {
             obj11[3] = tmp.controlButton;
             obj12 = { color: null };
             obj12[0] = tmp.iconDisabled.color;
-            obj11[4] = tmp80(tmp3(14176).TranscriptOutlineIcon, obj12);
-            flag2 = tmp80(tmp3(4812).PressableOpacity, obj11);
+            obj11[4] = tmp80(tmp3(14150).TranscriptOutlineIcon, obj12);
+            flag2 = tmp80(tmp3(4797).PressableOpacity, obj11);
           }
           items32[1] = flag2;
           obj10[1] = items32;
@@ -1043,8 +1043,8 @@ const memoResult = importAllResult.memo((onLoad) => {
           }
           const obj14 = { color: null };
           obj14[0] = color;
-          obj13[4] = tmp80(tmp3(14174).ClosedCaptionsOutlineIcon, obj14);
-          tmp80(tmp3(4812).PressableOpacity, obj13);
+          obj13[4] = tmp80(tmp3(14148).ClosedCaptionsOutlineIcon, obj14);
+          tmp80(tmp3(4797).PressableOpacity, obj13);
         }
       }
       const items33 = [tmp82Result, , ];
@@ -1057,8 +1057,8 @@ const memoResult = importAllResult.memo((onLoad) => {
       obj16[3] = callbackResult;
       const obj17 = { color: null, width: 16, height: 16 };
       obj17[0] = tmp.icon.color;
-      obj16[4] = tmp80(tmp3(14179).SkipBackwardIcon, obj17);
-      const items34 = [tmp80(tmp3(14178).VideoQuestPlayerControlButton, obj16), , ];
+      obj16[4] = tmp80(tmp3(14153).SkipBackwardIcon, obj17);
+      const items34 = [tmp80(tmp3(14152).VideoQuestPlayerControlButton, obj16), , ];
       if (!tmp22) {
         if (first1 !== tmp17.ERRORED) {
           const t2 = tmp3(1236).t;
@@ -1070,14 +1070,14 @@ const memoResult = importAllResult.memo((onLoad) => {
         if (!tmp22) {
           if (first1 !== tmp17.ERRORED) {
             if (tmp70) {
-              let PauseIcon = tmp3(8777).PlayIcon;
+              let PauseIcon = tmp3(8749).PlayIcon;
             } else {
-              PauseIcon = tmp3(8779).PauseIcon;
+              PauseIcon = tmp3(8751).PauseIcon;
             }
             let tmp80Result2 = tmp80(PauseIcon, { size: "lg" });
           }
           obj18[3] = tmp80Result2;
-          items34[1] = tmp80(tmp3(14178).VideoQuestPlayerControlButton, obj18);
+          items34[1] = tmp80(tmp3(14152).VideoQuestPlayerControlButton, obj18);
           const obj19 = { disabled: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
           obj19[0] = tmp51;
           const intl5 = tmp3(1236).intl;
@@ -1085,8 +1085,8 @@ const memoResult = importAllResult.memo((onLoad) => {
           obj19[3] = callbackResult1;
           const obj20 = { color: null, width: 16, height: 16 };
           obj20[0] = tmp.icon.color;
-          obj19[4] = tmp80(tmp3(14180).SkipForwardIcon, obj20);
-          items34[2] = tmp80(tmp3(14178).VideoQuestPlayerControlButton, obj19);
+          obj19[4] = tmp80(tmp3(14154).SkipForwardIcon, obj20);
+          items34[2] = tmp80(tmp3(14152).VideoQuestPlayerControlButton, obj19);
           obj15[1] = items34;
           items33[1] = tmp82(tmp81, obj15);
           let tmp80Result3 = tmp80Result4;
@@ -1101,20 +1101,20 @@ const memoResult = importAllResult.memo((onLoad) => {
             obj22[1] = intl6.string(tmp3(1236).t.vKZT5t);
             obj22[2] = callback8;
             obj22[3] = tmp.controlButton;
-            obj22[4] = tmp80(tmp3(14181).FullscreenEnterIcon, {});
-            obj21[1] = tmp80(tmp3(4812).PressableOpacity, obj22);
+            obj22[4] = tmp80(tmp3(14155).FullscreenEnterIcon, {});
+            obj21[1] = tmp80(tmp3(4797).PressableOpacity, obj22);
             tmp80Result3 = tmp80(tmp81, obj21);
           }
           items33[2] = tmp80Result3;
           obj9[2] = items33;
-          items29[4] = tmp82(tmp29(4146).View, obj9);
+          items29[4] = tmp82(tmp29(4116).View, obj9);
           if (tmp80Result4) {
             const obj23 = { style: null, children: null };
             obj23[0] = tmp.progressContainer;
             const obj24 = { style: null };
             const items36 = [tmp.progress, animatedStyle1];
             obj24[0] = items36;
-            obj23[1] = tmp80(tmp29(4146).View, obj24);
+            obj23[1] = tmp80(tmp29(4116).View, obj24);
             tmp80Result4 = tmp80(tmp81, obj23);
           }
           items29[5] = tmp80Result4;
@@ -1122,7 +1122,7 @@ const memoResult = importAllResult.memo((onLoad) => {
           obj3[2] = tmp82(tmp83, obj4);
           return tmp80(tmp81, obj3);
         }
-        tmp80Result2 = tmp80(tmp3(9777).RetryIcon, { size: "lg" });
+        tmp80Result2 = tmp80(tmp3(9748).RetryIcon, { size: "lg" });
       }
       K0e7M9 = tmp3(1236).t.K0e7M9;
     } else {

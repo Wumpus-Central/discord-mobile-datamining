@@ -2,7 +2,7 @@
 import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { trackHeartbeat } from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
 import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
-let result = require("module_10384").fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+let result = require("module_10356").fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
   let obj = trackHeartbeat;

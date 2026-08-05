@@ -61,13 +61,13 @@ class BaseActivityWebView {
     channelId = global.channelId;
     guildId = global.guildId;
     activitySessionId = global.activitySessionId;
-    f85344 = undefined;
+    f85282 = undefined;
     c17 = undefined;
     c18 = undefined;
     useState = undefined;
     c20 = undefined;
     useState = undefined;
-    f85348 = undefined;
+    f85286 = undefined;
     queryParams = undefined;
     concat = undefined;
     useRef = undefined;
@@ -87,7 +87,7 @@ class BaseActivityWebView {
     context = applicationId.useContext(require("context").WebViewContext);
     tmp5 = hadInvalidUrlError;
     first = hadInvalidUrlError(applicationId.useState(() => callback()), 1)[0];
-    f85344 = first;
+    f85282 = first;
     first1 = hadInvalidUrlError(applicationId.useState(() => {
       if (null != webViewKey) {
         let v4Result = callback2();
@@ -143,7 +143,7 @@ class BaseActivityWebView {
       }
     }, items2);
     rect = require("useStableSafeAreaInsets")();
-    f85348 = rect;
+    f85286 = rect;
     obj3 = require("getConstants");
     obj = {};
     constants = obj3.getConstants();
@@ -178,7 +178,7 @@ class BaseActivityWebView {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -389,8 +389,8 @@ class BaseActivityWebView {
     }, items9);
     HermesInternal = null;
     if (null == url) {
-      tmp30 = f85344;
-      closure_28 = f85344;
+      tmp30 = f85282;
+      closure_28 = f85282;
       flag = false;
       tmp5Result = tmp5(obj2.useState(false), 2);
       [tmp32, useState] = tmp5Result;
@@ -400,7 +400,7 @@ class BaseActivityWebView {
       c31 = tmp5Result1[1];
       items10 = [, ];
       items10[0] = applicationId;
-      items10[1] = f85344;
+      items10[1] = f85282;
       effect5 = obj2.useEffect(() => {
         if (closure_28) {
           function parseCsp(arg0, str) {
@@ -428,7 +428,7 @@ class BaseActivityWebView {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "T", done: null };
                 }
               } else {
                 try {
@@ -478,7 +478,7 @@ class BaseActivityWebView {
                     outer1_31(items.map((arg0) => "^" + content_security_policy(table[24])(arg0).replace(/\\\*/g, ".*")));
                     outer1_29(true);
                     c4 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "T", done: null };
                   }
                 } catch (tmp7) {
                   c4 = tmp;
@@ -618,7 +618,7 @@ class BaseActivityWebView {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "T", done: null };
                   }
                 } else {
                   try {
@@ -955,8 +955,8 @@ class BaseActivityWebView {
       }
       return null;
     } else {
-      tmp26 = f85344;
-      if (f85344) {
+      tmp26 = f85282;
+      if (f85282) {
         _HermesInternal2 = HermesInternal;
         str5 = "file://";
         combined1 = "file://" + str;

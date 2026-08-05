@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
-import { Easing } from "module_4146";
+import { Easing } from "module_4116";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
@@ -10,8 +10,8 @@ const require = arg1;
 function useKeyboardOpenPaddingStyle() {
   let importDefault;
   let tmp5;
-  token = token(3989).useToken(Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
-  let obj = token(3989);
+  token = token(3959).useToken(Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  let obj = token(3959);
   const obj2 = React;
   [tmp5, importDefault] = sharedValue(React.useState(() => {
     const KeyboardController = token(tmp5[6]).KeyboardController;
@@ -47,7 +47,7 @@ function useKeyboardOpenPaddingStyle() {
     }
     return num > 0;
   }), 2);
-  const obj3 = token(4151);
+  const obj3 = token(4121);
   if (!tmp5) {
     tmp5 = true === obj3.useKeyboardContextForType(token(1579).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
@@ -55,7 +55,7 @@ function useKeyboardOpenPaddingStyle() {
     tmp5 = tmp7 !== token(1579).KeyboardTypes.SYSTEM;
   }
   const dependencyMap = tmp5;
-  let tmpResult = tmp(4146);
+  let tmpResult = tmp(4116);
   let num = 0;
   if (tmp5) {
     num = token;
@@ -71,7 +71,7 @@ function useKeyboardOpenPaddingStyle() {
     obj = { duration: token(tmp5[10]).timingStandardDuration, easing: outer1_6 };
     const result = sharedValue.set(obj.withTiming(num, obj));
   }, items);
-  tmpResult = tmp(4146);
+  tmpResult = tmp(4116);
   const fn = function b() {
     return { paddingBottom: sharedValue.get() };
   };

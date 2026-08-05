@@ -32,8 +32,8 @@ export const useGameMentionsAsPlainText = function useGameMentionsAsPlainText(st
         if (currentUser != null) {
           nsfwAllowed = currentUser.nsfwAllowed;
         }
-        return str.replace(outer1_6, (arg0, gameId) => {
-          const game = outer1_3.getGame(gameId);
+        return str.replace(outer1_6, (arg0, closure_0) => {
+          const game = outer1_3.getGame(closure_0);
           if (obj.isGameProfileObscured(game, nsfwAllowed)) {
             const intl2 = tmp2(tmp3[8]).intl;
             let stringResult = intl2.string(tmp2(tmp3[8]).t["11pdXZ"]);

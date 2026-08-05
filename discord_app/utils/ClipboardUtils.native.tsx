@@ -1,6 +1,6 @@
 // discord_app/utils/ClipboardUtils.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
-import { useClipboard } from "../../_runtime/05639_useClipboard.js";
+import { useClipboard } from "../../_runtime/05624_useClipboard.js";
 
 function _copy() {
   const self = this;
@@ -21,7 +21,7 @@ function _copy() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -57,7 +57,7 @@ function _copy() {
             return obj;
           } else {
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp13) {
           c2 = tmp;

@@ -109,9 +109,9 @@ prototype2["getReactions"] = function getReactions(channelId, messageId, emoji, 
     obj[2] = emoji;
     obj[3] = closure_9;
     obj[4] = VOTE;
-    const reactors = importAll(7143).getReactors(obj);
+    const reactors = importAll(7117).getReactors(obj);
     ensureResult.fetched = true;
-    const obj2 = importAll(7143);
+    const obj2 = importAll(7117);
   }
   return ensureResult.users;
 };

@@ -4,8 +4,8 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { 11361__ } from "../../../../../_runtime/metro/11361__.js";
-import { 11526__ } from "../../../../../_runtime/metro/11526__.js";
+import { 11333__ } from "../../../../../_runtime/metro/11333__.js";
+import { 11498__ } from "../../../../../_runtime/metro/11498__.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { play } from "../../../../components_native/common/LottieAnimationView.tsx";
@@ -77,7 +77,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: items1, collapsable: false, children: null };
   items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj1 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj1[2] = 11526__;
+  obj1[2] = 11498__;
   obj1[3] = !stateFromStores;
   const items2 = [callback(play, obj1), , ];
   const items3 = [tmp.glowMask, gradientBottom];
@@ -88,7 +88,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   const obj3 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj2 = { collapsable: false, style: tmp.fakeButton };
   const tmp5 = play;
-  obj3[2] = 11361__;
+  obj3[2] = 11333__;
   obj3[3] = !stateFromStores;
   items4[1] = callback(play, obj3);
   obj[0] = items4;

@@ -56,7 +56,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   const obj2 = _initialize;
   gameRelationshipsByType = _useGameRelationshipsByType.useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = _undefined(9003).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = _undefined(8975).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -95,7 +95,7 @@ export default function UserProfileYourFriendsCard(arg0) {
         let obj = { style: { transform: items }, children: null };
         obj = { translateX: 4 * (closure_1.length - 1 - arg1) };
         items = [obj];
-        obj = { user: id, guildId: "r", size: "ct", cutout: null };
+        obj = { user: id, guildId: "r", size: "PX_8", cutout: null };
         obj[2] = outer1_0(outer1_2[8]).AvatarSizes.XSMALL;
         let tmp3;
         if (arg1 < closure_1.length - 1) {

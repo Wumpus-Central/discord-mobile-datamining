@@ -29,10 +29,10 @@ export default function Sticker(opaque) {
     num = 1;
   }
   if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {
-    let tmpResult = tmp(4619);
+    let tmpResult = tmp(4589);
     let str = tmpResult.getStickerAssetUrl(sticker);
-  } else if (sticker.format_type === tmp(4951).StickerFormat.APNG) {
-    tmpResult = tmp(4619);
+  } else if (sticker.format_type === tmp(4936).StickerFormat.APNG) {
+    tmpResult = tmp(4589);
     let obj = { isPreview: null, size: null };
     obj[0] = !animated;
     obj[1] = size;
@@ -41,8 +41,8 @@ export default function Sticker(opaque) {
     obj = { isPreview: null, size: null };
     obj[0] = !animated;
     obj[1] = PixelRatio.getPixelSizeForLayoutSize(size);
-    str = tmp(4619).getStickerAssetUrl(sticker, obj);
-    const tmpResult1 = tmp(4619);
+    str = tmp(4589).getStickerAssetUrl(sticker, obj);
+    const tmpResult1 = tmp(4589);
   }
   if (str == null) {
     str = "";
@@ -60,14 +60,14 @@ export default function Sticker(opaque) {
     obj2[2] = size;
     obj2[3] = size;
     obj2[4] = num;
-    const NativeLottieRenderMode = tmp(7916).NativeLottieRenderMode;
+    const NativeLottieRenderMode = tmp(7888).NativeLottieRenderMode;
     obj2[5] = animated ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
     obj2[6] = formatToPlainStringResult;
     return jsx(NativeLottieView, { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null });
   } else {
-    if (sticker.format_type === tmp(4951).StickerFormat.APNG) {
+    if (sticker.format_type === tmp(4936).StickerFormat.APNG) {
       if ("type" in sticker) {
-        const tmpResult2 = tmp(4619);
+        const tmpResult2 = tmp(4589);
       }
       const obj3 = { style: null, url: null, name: null, accessibilityLabel: null };
       const obj4 = { height: null, width: null, opacity: null };
@@ -77,10 +77,10 @@ export default function Sticker(opaque) {
       obj3[0] = obj4;
       obj3[1] = str;
       const _HermesInternal = HermesInternal;
-      obj3[2] = "" + sticker.id + "." + tmp(4619).getStickerExtensionFromFormatType(sticker.format_type);
+      obj3[2] = "" + sticker.id + "." + tmp(4589).getStickerExtensionFromFormatType(sticker.format_type);
       obj3[3] = formatToPlainStringResult;
       const obj5 = {};
-      const tmpResult3 = tmp(4619);
+      const tmpResult3 = tmp(4589);
       const merged = Object.assign(obj3);
       return jsx(NativeAPNGView, {});
     }
@@ -93,9 +93,9 @@ export default function Sticker(opaque) {
     const tmp12 = jsx;
     const tmp14 = preload;
     if (tmpResult4.isThemeDark(theme.theme)) {
-      let tmp13Result = tmp13(5302);
+      let tmp13Result = tmp13(5287);
     } else {
-      tmp13Result = tmp13(5303);
+      tmp13Result = tmp13(5288);
     }
     obj6[2] = tmp13Result;
     const obj8 = { uri: null };
@@ -108,10 +108,10 @@ export default function Sticker(opaque) {
 };
 export const getStickerAssetUrl = function getStickerAssetUrl(sticker, closure_7, first) {
   if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {
-    let tmpResult = tmp(4619);
+    let tmpResult = tmp(4589);
     let str = tmpResult.getStickerAssetUrl(sticker);
-  } else if (sticker.format_type === tmp(4951).StickerFormat.APNG) {
-    tmpResult = tmp(4619);
+  } else if (sticker.format_type === tmp(4936).StickerFormat.APNG) {
+    tmpResult = tmp(4589);
     let obj = { isPreview: null, size: null };
     obj[0] = !first;
     obj[1] = closure_7;
@@ -120,8 +120,8 @@ export const getStickerAssetUrl = function getStickerAssetUrl(sticker, closure_7
     obj = { isPreview: null, size: null };
     obj[0] = !first;
     obj[1] = PixelRatio.getPixelSizeForLayoutSize(closure_7);
-    str = tmp(4619).getStickerAssetUrl(sticker, obj);
-    const tmpResult1 = tmp(4619);
+    str = tmp(4589).getStickerAssetUrl(sticker, obj);
+    const tmpResult1 = tmp(4589);
   }
   if (str == null) {
     str = "";

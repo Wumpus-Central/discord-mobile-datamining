@@ -10,17 +10,17 @@ import jsxProd from "ChevronSmallDownIcon";
 import createCacheKey from "createCacheKey";
 import importDefaultResult3 from "addSubscriptionPlan";
 import importDefaultResult5 from "initialize";
-import { registerAsset } from "../../../_runtime/12488_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12489_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12490_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12491_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12492_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12493_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12494_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12495_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12496_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12499_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12500_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12460_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12461_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12462_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12463_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12464_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12465_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12466_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12467_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12468_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12471_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12472_registerAsset.js";
 import { metadata } from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import { Button } from "../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../design/components/Text/native/Text.tsx";
@@ -222,9 +222,9 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   items1[1] = closure_15(closure_4, obj3);
   if (isRefreshEnabled) {
     if (isOpen) {
-      let ChevronSmallRightIcon = tmp2(9396).ChevronSmallDownIcon;
+      let ChevronSmallRightIcon = tmp2(9367).ChevronSmallDownIcon;
     } else {
-      ChevronSmallRightIcon = tmp2(5660).ChevronSmallRightIcon;
+      ChevronSmallRightIcon = tmp2(5645).ChevronSmallRightIcon;
     }
     obj = {};
     tmp6(ChevronSmallRightIcon, obj);
@@ -232,7 +232,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     const obj10 = { style: null, size: null, source: null, color: null };
     obj10[0] = tmp.rowArrow;
     obj10[1] = tmp2(1297).Icon.Sizes.LARGE;
-    obj10[2] = importDefault(isOpen ? 12739 : 12740);
+    obj10[2] = importDefault(isOpen ? 12711 : 12712);
     obj10[3] = tmp.arrow.color;
     items1[2] = tmp6(tmp2(1297).Icon, obj10);
     obj[1] = items1;

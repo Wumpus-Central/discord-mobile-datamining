@@ -1,6 +1,6 @@
 // discord_app/modules/threads/native/components/redesign/ThreadList.tsx
 import noop from "noop";
-import get_ActivityIndicator from "module_15661";
+import get_ActivityIndicator from "module_15642";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "jsxProd";

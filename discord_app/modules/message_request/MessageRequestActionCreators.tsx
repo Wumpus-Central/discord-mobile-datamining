@@ -24,7 +24,7 @@ function _acceptMessageRequest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -68,7 +68,7 @@ function _acceptMessageRequest() {
             obj5[1] = callback;
             obj.dispatch(obj5);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp12) {
           c4 = tmp;

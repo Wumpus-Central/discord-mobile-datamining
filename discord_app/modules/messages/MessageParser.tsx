@@ -53,7 +53,7 @@ function rebuild(arr) {
           c2(type.emoji, false);
         }
         if ("emoticon" === type.type) {
-          const result = callback(3926).translateSurrogatesToInlineEmoji(type.content);
+          const result = callback(3896).translateSurrogatesToInlineEmoji(type.content);
           let match = regex.exec(result);
           if (null !== match) {
             while (true) {
@@ -78,11 +78,11 @@ function rebuild(arr) {
               }
               let tmp8 = callback;
               let tmp9 = dependencyMap;
-              let obj2 = callback(3926);
+              let obj2 = callback(3896);
               byId = obj2.getByName(match[2]);
             }
           }
-          const obj = callback(3926);
+          const obj = callback(3896);
         }
       }
     })(obj, content, _undefined);
@@ -149,7 +149,7 @@ function parseAndRebuild(content, arg1, arg2) {
           c2(type.emoji, false);
         }
         if ("emoticon" === type.type) {
-          const result = callback(3926).translateSurrogatesToInlineEmoji(type.content);
+          const result = callback(3896).translateSurrogatesToInlineEmoji(type.content);
           let match = regex.exec(result);
           if (null !== match) {
             while (true) {
@@ -174,11 +174,11 @@ function parseAndRebuild(content, arg1, arg2) {
               }
               let tmp8 = callback;
               let tmp9 = dependencyMap;
-              let obj2 = callback(3926);
+              let obj2 = callback(3896);
               byId = obj2.getByName(match[2]);
             }
           }
-          const obj = callback(3926);
+          const obj = callback(3896);
         }
       }
     })(obj, content, _undefined);
@@ -294,8 +294,8 @@ function createParserState(getGuildId, arr) {
   const mapped3 = tmp9Result(textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId)).map((id) => ({ id: id.id, text: id.name }));
   if (null != guildId) {
     tmp9Result = tmp9(12);
-    const found1 = tmp9Result(guildId(5126).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((arg0) => arg0 !== closure_7);
-    const tmp9Result1Result = tmp9Result(guildId(5126).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const found1 = tmp9Result(guildId(5111).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((arg0) => arg0 !== closure_7);
+    const tmp9Result1Result = tmp9Result(guildId(5111).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
     const flatMapResult = found1.flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
@@ -388,21 +388,21 @@ function unparseWithMeta(content, id, isNotification) {
   if (isNotification) {
     translateSurrogatesToInlineEmoji = NOOP;
   } else {
-    translateSurrogatesToInlineEmoji = translateSurrogatesToInlineEmoji(3926).translateSurrogatesToInlineEmoji;
+    translateSurrogatesToInlineEmoji = translateSurrogatesToInlineEmoji(3896).translateSurrogatesToInlineEmoji;
   }
   let obj = { inline: true, guild, channelId: id, isNotification };
-  const obj4 = translateSurrogatesToInlineEmoji(3984);
+  const obj4 = translateSurrogatesToInlineEmoji(3954);
   let dependencyMap;
   let c3 = "";
   const items = [];
-  const item = translateSurrogatesToInlineEmoji(3984).parserFor(omitResult)(content, obj).forEach((content) => {
+  const item = translateSurrogatesToInlineEmoji(3954).parserFor(omitResult)(content, obj).forEach((content) => {
     (function handleEmoji(emojiContext, type, c2) {
       if (null != c2) {
         if ("customEmoticon" === type.type) {
           c2(type.emoji, false);
         }
         if ("emoticon" === type.type) {
-          const result = callback(3926).translateSurrogatesToInlineEmoji(type.content);
+          const result = callback(3896).translateSurrogatesToInlineEmoji(type.content);
           let match = regex.exec(result);
           if (null !== match) {
             while (true) {
@@ -427,11 +427,11 @@ function unparseWithMeta(content, id, isNotification) {
               }
               let tmp8 = callback;
               let tmp9 = dependencyMap;
-              let obj2 = callback(3926);
+              let obj2 = callback(3896);
               byId = obj2.getByName(match[2]);
             }
           }
-          const obj = callback(3926);
+          const obj = callback(3896);
         }
       }
     })(obj, content, _undefined);
@@ -845,7 +845,7 @@ obj[10] = {
 };
 obj[11] = {
   match(arg0, arg1, arg2) {
-    const ConvertEmoticons = str7(3958).ConvertEmoticons;
+    const ConvertEmoticons = str7(3928).ConvertEmoticons;
     if (ConvertEmoticons.getSetting()) {
       if (0 !== arg2.length) {
         if (!obj.test(arg2)) {
@@ -948,9 +948,9 @@ let obj4 = {};
 obj4.match = function match(arg0, textExclusions) {
   if (typeof textExclusions.textExclusions === "string") {
     if ("" !== textExclusions.textExclusions) {
-      const result = str7(4724).textMarkupPatternWithExclusions(textExclusions.textExclusions);
+      const result = str7(4694).textMarkupPatternWithExclusions(textExclusions.textExclusions);
       let match = result.exec(arg0);
-      const obj = str7(4724);
+      const obj = str7(4694);
     }
     return match;
   }
@@ -1038,14 +1038,14 @@ obj6[1] = function parse(arg0, arg1, channelId) {
     obj[0] = str;
     const str2 = nameFromUser.getUserTag(user, obj);
     if (isNotification) {
-      let tmp13Result = tmp13(4474);
+      let tmp13Result = tmp13(4444);
       let id;
       if (guild != null) {
         id = guild.id;
       }
       let nickname = tmp13Result.getNickname(id, channelId.channelId, user);
       if (nickname == null) {
-        tmp13Result = tmp13(4124);
+        tmp13Result = tmp13(4094);
         nickname = tmp13Result.getGlobalName(user);
       }
       if (null != nickname) {
@@ -1114,7 +1114,7 @@ obj8[1] = function parse(arg0) {
   if (null == channel) {
     let content = arg0[0];
   } else {
-    const obj = str7(4475);
+    const obj = str7(4445);
     content = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true, true);
   }
   return { content };

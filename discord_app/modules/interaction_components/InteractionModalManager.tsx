@@ -24,7 +24,7 @@ function _handleInteractionModalCreate() {
           obj[0] = openInteractionModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -112,7 +112,7 @@ function _handleInteractionModalCreate() {
               obj.addBreadcrumb(obj4);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp19) {
           c4 = tmp;

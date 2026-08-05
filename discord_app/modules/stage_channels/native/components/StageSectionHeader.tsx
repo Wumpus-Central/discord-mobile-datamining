@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/05600_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/05585_registerAsset.js";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 let c3;
@@ -30,7 +30,7 @@ export default function StageSectionHeader(collapsed) {
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = createCacheKey();
-  let obj = collapsed(4146);
+  let obj = collapsed(4116);
   const fn = function y() {
     let obj = collapsed(outer1_2[6]);
     let str = "0deg";
@@ -43,7 +43,7 @@ export default function StageSectionHeader(collapsed) {
     obj[0] = items;
     return obj;
   };
-  obj = { withTiming: collapsed(4286).withTiming, collapsed };
+  obj = { withTiming: collapsed(4256).withTiming, collapsed };
   fn.__closure = obj;
   fn.__workletHash = 13855092771739;
   fn.__initData = closure_8;
@@ -51,7 +51,7 @@ export default function StageSectionHeader(collapsed) {
   const obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   let items = [label, " \u2014 ", count];
-  const items1 = [callback(collapsed(4281).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
+  const items1 = [callback(collapsed(4251).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj2 = { style: null, children: null };

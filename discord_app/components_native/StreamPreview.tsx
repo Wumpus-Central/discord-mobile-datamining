@@ -37,9 +37,9 @@ DefaultFallback.prototype["render"] = function render() {
   let obj = { style: tmp.wrapper, children: null };
   obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = tmp6(10835);
+    let tmp6Result = tmp6(10807);
   } else {
-    tmp6Result = tmp6(10836);
+    tmp6Result = tmp6(10808);
   }
   obj[2] = tmp6Result;
   obj[1] = closure_6(closure_3, obj);
@@ -47,7 +47,7 @@ DefaultFallback.prototype["render"] = function render() {
 };
 DefaultFallback.contextType = require("ManaContext").ThemeContext;
 const obj2 = { touchable: null, imageContainer: null, image: null };
-const obj3 = { flex: 1, width: "100%", height: "View", aspectRatio: true, backgroundColor: true };
+const obj3 = { flex: 1, width: "100%", height: "__closure", aspectRatio: true, backgroundColor: true };
 obj3[4] = require("Themes").colors.BACKGROUND_BASE_LOWEST;
 obj2[0] = obj3;
 createCacheKey = { flex: 1, backgroundColor: require("Themes").unsafe_rawColors.BLACK };

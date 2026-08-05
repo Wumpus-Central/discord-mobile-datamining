@@ -80,7 +80,7 @@ const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
         let tmp10 = tmp3Result;
         let hasDetectedActivityResult = obj.hasDetectedActivity(tmp6);
         if (!hasDetectedActivityResult) {
-          let tmp8Result = tmp8(7932);
+          let tmp8Result = tmp8(7904);
           let tmp12 = tmp3Result;
           hasDetectedActivityResult = tmp8Result.isUnderLockdown(tmp6);
         }
@@ -116,8 +116,8 @@ const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
     if (tmp4) {
       let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(tmp2);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp5(7932).isUnderLockdown(tmp2);
-        const tmp5Result = tmp5(7932);
+        hasDetectedActivityResult = tmp5(7904).isUnderLockdown(tmp2);
+        const tmp5Result = tmp5(7904);
       }
       tmp4 = hasDetectedActivityResult;
       const obj2 = DATE_CONFIG;
@@ -145,7 +145,7 @@ const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
       delete tmp2[tmp];
     } else {
       if (!obj2.hasDetectedActivity(tmp3)) {
-        const tmp5Result = tmp5(7932);
+        const tmp5Result = tmp5(7904);
       }
       closure_6[guild.id] = tmp3;
       obj2 = DATE_CONFIG;

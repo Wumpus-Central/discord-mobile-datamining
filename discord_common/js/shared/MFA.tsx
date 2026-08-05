@@ -35,7 +35,7 @@ function _finishMFACheck() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ function _finishMFACheck() {
               }
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

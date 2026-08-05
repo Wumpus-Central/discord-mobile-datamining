@@ -1,13 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx
-import importAllResult from "registerAsset";
-import get_ActivityIndicator from "RowButtonWrapper";
+import importAllResult from "noop";
+import get_ActivityIndicator from "CollapsingText";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
-import jsxProd from "set";
+import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/15259_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15260_registerAsset.js";
-import { messagesProxy } from "../../../../../favorites/intl/FavoritesGuild.messages.js";
+import { registerAsset } from "../../../../../../../_runtime/15239_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15240_registerAsset.js";
 
 let c4;
 let c5;
@@ -34,7 +33,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   let canCreateChannel;
   let canCustomizeGuild;
   guild = guild.guild;
-  const tmp = callback();
+  const tmp = callback2();
   let obj = guild(647);
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
@@ -42,71 +41,54 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   ({ canCustomizeGuild, canCreateChannel } = stateFromStoresObject);
   const items2 = [guild.id];
   const items3 = [guild.id];
-  callback = importAllResult.useCallback(() => {
+  const callback = importAllResult.useCallback(() => {
     outer1_1(outer1_2[9]).open(guild.id);
   }, items2);
   const callback1 = importAllResult.useCallback(() => {
     outer1_1(outer1_2[10]).open(null, guild.id, null, null);
   }, items3);
-  let obj1 = guild(14245);
-  const youBarTotalHeight = obj1.useYouBarTotalHeight(16);
-  let obj2 = guild(1865);
-  const isFavoritesGuildIdResult = obj2.isFavoritesGuildId(guild.id);
-  if (isFavoritesGuildIdResult) {
-    let tmp9Result = tmp9(tmp2(5936).FavoritesSpotIllustration, { width: 192, height: 108 });
-    let tmp13 = tmp9;
-  } else {
-    obj = { source: null };
-    obj[0] = registerAsset;
-    tmp9Result = tmp9(closure_5, obj);
-    tmp13 = tmp9;
-  }
-  const intl = tmp2(1236).intl;
-  const string = intl.string;
-  if (isFavoritesGuildIdResult) {
-    let stringResult = string(messagesProxy["wh+Rz1"]);
-  } else {
-    stringResult = string(tmp2(1236).t.o4s29v);
-  }
-  const intl2 = tmp2(1236).intl;
-  const string2 = intl2.string;
-  if (isFavoritesGuildIdResult) {
-    let string2Result = string2(messagesProxy["+SuGKb"]);
-  } else {
-    string2Result = string2(tmp2(1236).t.iypvFu);
-  }
-  obj = { style: items4, children: null };
-  items4 = [tmp.wrapper, { paddingBottom: youBarTotalHeight }];
+  let obj1 = guild(14219);
+  obj = { style: null, children: null };
+  const items4 = [tmp.wrapper, ];
+  obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };
+  items4[1] = obj;
+  obj[0] = items4;
   if (canCustomizeGuild) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.personalizeButtonWrapper;
-    obj2 = { icon: null, label: null, onPress: null };
+    const obj2 = { icon: null, label: null, onPress: null };
     const obj3 = { source: null, disableColor: true };
     obj3[0] = registerAsset;
-    obj2[0] = tmp13(tmp2(1297).Icon, obj3);
-    const intl3 = tmp2(1236).intl;
-    obj2[1] = intl3.string(tmp2(1236).t["Yhi9/N"]);
+    obj2[0] = callback(tmp2(1297).Icon, obj3);
+    const intl = tmp2(1236).intl;
+    obj2[1] = intl.string(tmp2(1236).t["Yhi9/N"]);
     obj2[2] = callback;
-    obj1[1] = tmp13(tmp2(7780).RowButton, obj2);
-    canCustomizeGuild = tmp13(tmp19, obj1);
+    obj1[1] = callback(tmp2(7752).RowButton, obj2);
+    canCustomizeGuild = callback(tmp8, obj1);
   }
   const items5 = [canCustomizeGuild, ];
   const obj4 = { style: tmp.content, children: null };
-  const items6 = [tmp9Result, , , ];
-  const items7 = [, ];
+  const items6 = [callback(closure_5, { source: registerAsset }), , , ];
+  const obj6 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: items7, children: null };
+  items7 = [, ];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);
-  items6[1] = tmp13(guild(4281).Text, { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: items7, children: stringResult });
-  items6[2] = tmp13(guild(4281).Text, { color: "text-default", variant: "text-md/medium", style: tmp.text, children: string2Result });
+  const intl2 = tmp2(1236).intl;
+  obj6[3] = intl2.string(guild(1236).t.o4s29v);
+  items6[1] = callback(guild(4251).Text, obj6);
+  const obj7 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+  const intl3 = tmp2(1236).intl;
+  obj7[3] = intl3.string(guild(1236).t.iypvFu);
+  items6[2] = callback(guild(4251).Text, obj7);
   if (canCreateChannel) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.buttonWrapper;
-    const obj7 = { shrink: true, size: "md", pillStyle: null, text: null, onPress: null };
-    obj7[2] = tmp.buttonPill;
+    const obj8 = { style: null, children: null };
+    obj8[0] = tmp.buttonWrapper;
+    const obj9 = { shrink: true, size: "md", pillStyle: null, text: null, onPress: null };
+    obj9[2] = tmp.buttonPill;
     const intl4 = tmp2(1236).intl;
-    obj7[3] = intl4.string(tmp2(1236).t["63PyJQ"]);
-    obj7[4] = callback1;
-    obj6[1] = tmp13(tmp2(4696).BaseTextButton, obj7);
-    canCreateChannel = tmp13(tmp19, obj6);
+    obj9[3] = intl4.string(tmp2(1236).t["63PyJQ"]);
+    obj9[4] = callback1;
+    obj8[1] = tmp11(tmp2(4666).BaseTextButton, obj9);
+    canCreateChannel = tmp11(tmp8, obj8);
   }
   items6[3] = canCreateChannel;
   obj4[1] = items6;

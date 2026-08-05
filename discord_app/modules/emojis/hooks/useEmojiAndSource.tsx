@@ -100,7 +100,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -155,7 +155,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
               current();
             }
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           } catch (tmp27) {
             v0 = tmp;
             throw tmp27;

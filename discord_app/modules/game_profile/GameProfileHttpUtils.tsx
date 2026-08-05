@@ -80,7 +80,7 @@ function _fetchSimilarGames() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ function _fetchSimilarGames() {
             obj4[2] = lib;
             obj.dispatch(obj4);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp18) {
           c5 = tmp;
@@ -194,7 +194,7 @@ function _getGameAnnouncements() {
         const obj6 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: null, messages: null, channelId: null, guildId: null };
         obj6[1] = callback;
         const obj9 = body(709);
-        obj6[2] = callback(9253).toAnnouncementMessages(body.messages);
+        obj6[2] = callback(9224).toAnnouncementMessages(body.messages);
         const channel_id = body.channel_id;
         let dependencyMap = channel_id;
         if (channel_id == null) {
@@ -209,7 +209,7 @@ function _getGameAnnouncements() {
         obj6[4] = c3;
         obj9.dispatch(obj6);
         c7 = 0;
-        const obj11 = callback(9253);
+        const obj11 = callback(9224);
       }
       c7 = 0;
       return body;

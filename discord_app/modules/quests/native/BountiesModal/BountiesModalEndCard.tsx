@@ -2,7 +2,7 @@
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04676_LinearGradient.js";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { BountiesEndCardPressableCta } from "BountiesEndCardPressableCta.tsx";
 
@@ -32,7 +32,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = callback3();
-  visible(4146);
+  visible(4116);
   const fn = function y() {
     let obj = visible(outer1_2[4]);
     let num = 0;
@@ -42,7 +42,7 @@ export default function BountiesModalEndCard(visible) {
     obj = { opacity: obj.withTiming(num, visible(outer1_2[5]).timingStandard) };
     return obj;
   };
-  let obj = { withTiming: visible(4286).withTiming, visible, timingStandard: visible(4289).timingStandard };
+  let obj = { withTiming: visible(4256).withTiming, visible, timingStandard: visible(4259).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 15062259404736;
   fn.__initData = closure_8;

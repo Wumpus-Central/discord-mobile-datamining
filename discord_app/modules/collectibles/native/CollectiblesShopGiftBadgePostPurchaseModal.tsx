@@ -32,15 +32,15 @@ let result = require("jsxProd").fileFinishedImporting("modules/collectibles/nati
 export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgress) {
   const tmp = callback3(useSafeAreaInsets().top);
   const callback = React.useCallback(() => {
-    let arr = callback2(4490);
+    let arr = callback2(4460);
     arr = arr.pop();
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(6909);
+    let obj = callback(6894);
     obj = { analyticsLocations: null, analyticsSource: null };
-    const items = [callback2(5630).GIFTING_BADGE_POST_PURCHASE];
+    const items = [callback2(5615).GIFTING_BADGE_POST_PURCHASE];
     obj[0] = items;
-    obj[1] = callback2(5630).GIFTING_BADGE_POST_PURCHASE;
+    obj[1] = callback2(5615).GIFTING_BADGE_POST_PURCHASE;
     const result = obj.openCollectiblesShopMobile(obj);
   }, []);
   let obj = { children: null };

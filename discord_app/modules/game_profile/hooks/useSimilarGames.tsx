@@ -27,12 +27,12 @@ export default function useSimilarGames(arg0, arg1) {
     tmp7 = data;
   }
   require = tmp7;
-  let tmp3Result = tmp3(7002);
+  let tmp3Result = tmp3(6986);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
   const items = [handleLoadMessages];
   const items1 = [tmp7];
-  const stateFromStores = tmp3Result.useStateFromStores(items, () => tmp7.some((gameId) => null == game.getGame(gameId) && !game.hasNoData(gameId) && !game.didFetchingFail(gameId)), items1);
+  const stateFromStores = tmp3Result.useStateFromStores(items, () => tmp7.some((closure_0) => null == game.getGame(closure_0) && !game.hasNoData(closure_0) && !game.didFetchingFail(closure_0)), items1);
   initialize;
   const items2 = [handleLoadMessages, mergeGuildAvatar];
   [][0] = tmp7;

@@ -23,9 +23,9 @@ export default function TwoFASetupScan(totpSecret) {
   const items = [totpSecret];
   callback = React.useCallback(() => {
     dependencyMap(true);
-    totpSecret(5638).copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
+    totpSecret(5623).copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  let obj = totpSecret(13936);
+  let obj = totpSecret(13910);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: items1, children: null };
@@ -40,7 +40,7 @@ export default function TwoFASetupScan(totpSecret) {
   const intl2 = totpSecret(1236).intl;
   obj1[1] = intl2.string(totpSecret(1236).t["UQR+Qy"]);
   items2[1] = callback2(totpSecret(1297).LegacyText, obj1);
-  items2[2] = callback2(totpSecret(4281).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
+  items2[2] = callback2(totpSecret(4251).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
   const obj2 = { accessibilityRole: "button", onPress: callback, children: null };
   const obj3 = { style: tmp.copy, children: null };
   const intl3 = totpSecret(1236).intl;
@@ -54,8 +54,8 @@ export default function TwoFASetupScan(totpSecret) {
   const obj4 = { children: null };
   obj3[1] = stringResult;
   obj2[2] = callback2(totpSecret(1297).LegacyText, obj3);
-  items2[3] = callback2(totpSecret(4812).PressableOpacity, obj2);
+  items2[3] = callback2(totpSecret(4797).PressableOpacity, obj2);
   obj[2] = items2;
-  obj4[0] = closure_5(totpSecret(5272).SafeAreaPaddingView, obj);
-  return callback2(totpSecret(13932).TwoFASetupModalScreen, obj4);
+  obj4[0] = closure_5(totpSecret(5257).SafeAreaPaddingView, obj);
+  return callback2(totpSecret(13906).TwoFASetupModalScreen, obj4);
 };

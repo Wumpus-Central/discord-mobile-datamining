@@ -130,8 +130,8 @@ function MarkupLink(arg0) {
   obj = {};
   const merged = Object.assign(state);
   obj.inLink = true;
-  obj[5] = node(9471).smartOutput(node, output, obj);
-  return tmp2(node(4281).Text, obj, state.key);
+  obj[5] = node(9442).smartOutput(node, output, obj);
+  return tmp2(node(4251).Text, obj, state.key);
 }
 function MarkupMention(styles) {
   let node;
@@ -343,7 +343,7 @@ function MarkupInlineCode(arg0) {
   const tmp5 = styles.inlineCode || callback2().inlineCode;
   const tmp7 = closure_16;
   const tmp8 = MarkupText;
-  obj[4] = node(9471).smartOutput(node, output, state);
+  obj[4] = node(9442).smartOutput(node, output, state);
   return tmp7(tmp8, obj, state.key);
 }
 function MarkupCodeBlock(state) {
@@ -440,9 +440,9 @@ function MarkupChannelMention(state) {
   const items = [outputResult, , ];
   if (null == node.inContent) {
     items[1] = null;
-    items[2] = tmp3(9471).smartOutput(node, output, state);
+    items[2] = tmp3(9442).smartOutput(node, output, state);
     obj[2] = items;
-    const tmp2Result = closure_17(state(4281).Text, obj, state.key);
+    const tmp2Result = closure_17(state(4251).Text, obj, state.key);
     let tmp13Result = tmp2Result;
     if (!state.disablePressableChannelMention) {
       obj = { accessibilityRole: null, style: null, pointerEvents: null, onPress: null, children: null };
@@ -522,7 +522,7 @@ function MarkupChannelMention(state) {
       obj3 = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj2[1] = obj3;
-    obj2[2] = node(10952);
+    obj2[2] = node(10924);
     obj2[3] = tmp3(1297).Icon.Sizes.CUSTOM;
     closure_16(tmp3(1297).ThemedIcon, obj2);
     const tmp6 = closure_16;
@@ -548,7 +548,7 @@ function MarkupAttachmentLink(state) {
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
   obj = { themedColor: null, source: null, size: null };
   obj[0] = node(712).colors.MENTION_FOREGROUND;
-  obj[1] = node(13096);
+  obj[1] = node(13068);
   const fontScale = store.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1297).Icon.Sizes.EXTRA_SMALL_10;
@@ -558,9 +558,9 @@ function MarkupAttachmentLink(state) {
     SMALL = tmp3(1297).Icon.Sizes.SMALL;
   }
   obj[2] = SMALL;
-  const items = [closure_16(state(1297).ThemedIcon, obj), state(9471).smartOutput(node, output, state)];
+  const items = [closure_16(state(1297).ThemedIcon, obj), state(9442).smartOutput(node, output, state)];
   obj[2] = items;
-  const tmp2Result = closure_17(state(4281).Text, obj, state.key);
+  const tmp2Result = closure_17(state(4251).Text, obj, state.key);
   let tmp5Result = tmp2Result;
   if (!state.disablePressableChannelMention) {
     obj = { accessibilityRole: null, style: null, pointerEvents: null, onPress: null, children: null };
@@ -698,9 +698,9 @@ export default function createRules() {
           }
           const obj = { color: null, children: null };
           obj[0] = textColor;
-          obj[1] = obj(9471).smartOutput(content, output, textColor);
+          obj[1] = obj(9442).smartOutput(content, output, textColor);
           content = closure_16(closure_20, obj, textColor.key);
-          const obj2 = obj(9471);
+          const obj2 = obj(9442);
           const tmp6 = closure_16;
           const tmp7 = closure_20;
         }
@@ -716,7 +716,7 @@ export default function createRules() {
         }
         obj[1] = textColor;
         obj[2] = textColor.textVariant;
-        obj[3] = obj(9471).smartOutput(node, output, textColor);
+        obj[3] = obj(9442).smartOutput(node, output, textColor);
         return closure_16(closure_20, obj, textColor.key);
       }
     },
@@ -729,7 +729,7 @@ export default function createRules() {
         }
         obj[1] = textColor;
         obj[2] = textColor.textVariant;
-        obj[3] = obj(9471).smartOutput(node, output, textColor);
+        obj[3] = obj(9442).smartOutput(node, output, textColor);
         return closure_16(closure_20, obj, textColor.key);
       }
     },
@@ -790,7 +790,7 @@ export default function createRules() {
           textColor = textColor.textColor;
         }
         const obj = { color: textColor, children: null };
-        obj[1] = obj(9471).smartOutput(node, output, textColor);
+        obj[1] = obj(9442).smartOutput(node, output, textColor);
         return closure_16(closure_20, obj, textColor.key);
       }
     },
@@ -808,7 +808,7 @@ export default function createRules() {
           textColor = textColor.textColor;
         }
         const obj = { color: textColor, children: null };
-        obj[1] = obj(9471).smartOutput(node, output, textColor);
+        obj[1] = obj(9442).smartOutput(node, output, textColor);
         return closure_16(closure_20, obj, textColor.key);
       }
     },
@@ -898,7 +898,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[44]).AST_KEY.CODE_BLOCK]: {
       parse(arg0, arg1, arg2) {
-        obj = str(4717).RULES[obj(undefined, 4715).AST_KEY.CODE_BLOCK];
+        obj = str(4687).RULES[obj(undefined, 4685).AST_KEY.CODE_BLOCK];
         const parsed = obj.parse(arg0, arg1, arg2);
         if ("ansi" === parsed.lang.toLowerCase()) {
           const content = parsed.content;
@@ -932,9 +932,9 @@ export default function createRules() {
     [closure_0(closure_2[44]).AST_KEY.SOUNDBOARD]: {
       react(node, output, key) {
         const obj = { variant: "text-md/bold", children: null };
-        const items = ["<sound:", obj(9471).smartOutput(node, output, key), ">"];
+        const items = ["<sound:", obj(9442).smartOutput(node, output, key), ">"];
         obj[1] = items;
-        return callback2(obj(4281).Text, obj, key.key);
+        return callback2(obj(4251).Text, obj, key.key);
       }
     },
     [closure_0(closure_2[44]).AST_KEY.GUILD]: {
@@ -965,7 +965,7 @@ export default function createRules() {
           }
           const obj1 = { color: null, children: null };
           obj1[0] = textColor1;
-          obj1[1] = tmp(9471).smartOutput(icon, output, textColor);
+          obj1[1] = tmp(9442).smartOutput(icon, output, textColor);
           items[1] = callback(closure_20, obj1);
           obj[1] = items;
           return closure_17(closure_20, obj, textColor.key);
@@ -977,16 +977,16 @@ export default function createRules() {
           obj2[1] = icon.icon;
           const fontScale = store.getFontScale();
           if (fontScale < 1) {
-            let XXSMALL = tmp(5661).GuildIconSizes.XXXSMALL;
+            let XXSMALL = tmp(5646).GuildIconSizes.XXXSMALL;
           } else if (fontScale < 1.25) {
-            XXSMALL = tmp(5661).GuildIconSizes.XXSMALL_12;
+            XXSMALL = tmp(5646).GuildIconSizes.XXSMALL_12;
           } else {
-            XXSMALL = tmp(5661).GuildIconSizes.XXSMALL;
+            XXSMALL = tmp(5646).GuildIconSizes.XXSMALL;
           }
           obj2[2] = XXSMALL;
-          callback(str(5661), obj2);
+          callback(str(5646), obj2);
           const tmp4 = callback;
-          const tmp6 = str(5661);
+          const tmp6 = str(5646);
         }
       }
     },
@@ -1002,7 +1002,7 @@ export default function createRules() {
         }
         let obj = { themedColor: null, source: null, size: null, style: null };
         obj[0] = str(712).colors.MENTION_FOREGROUND;
-        obj[1] = obj(4745).getChannelMentionIcon(str);
+        obj[1] = obj(4715).getChannelMentionIcon(str);
         const fontScale = store.getFontScale();
         if (fontScale < 1) {
           let SMALL = tmp2(1297).Icon.Sizes.EXTRA_SMALL_10;
@@ -1014,7 +1014,7 @@ export default function createRules() {
         obj[2] = SMALL;
         obj[3] = { top: 1 };
         textColor = undefined;
-        const obj2 = obj(4745);
+        const obj2 = obj(4715);
         if (textColor != null) {
           textColor = textColor.textColor;
         }
@@ -1023,7 +1023,7 @@ export default function createRules() {
         const tmp6 = closure_17;
         const tmp7 = closure_20;
         const tmpResult = closure_16(obj(1297).ThemedIcon, obj);
-        items[1] = obj(9471).smartOutput(iconType, output, textColor);
+        items[1] = obj(9442).smartOutput(iconType, output, textColor);
         obj[1] = items;
         return tmp6(tmp7, obj, textColor.key);
       }
@@ -1036,7 +1036,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[44]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, key) {
-        return callback(str(13101), { node, state: key }, key.key);
+        return callback(str(13073), { node, state: key }, key.key);
       }
     },
     [closure_0(closure_2[44]).AST_KEY.TIMESTAMP]: {
@@ -1172,7 +1172,7 @@ export default function createRules() {
           obj[0] = closure_19.list;
           obj[2] = mapped;
           let _HermesInternal = HermesInternal;
-          return callback(obj(4281).Text, obj, "list-" + level.key);
+          return callback(obj(4251).Text, obj, "list-" + level.key);
         }
       }
     },
@@ -1188,7 +1188,7 @@ export default function createRules() {
           obj = {};
           const merged = Object.assign(formatInline);
           obj.textVariant = "text-sm/semibold";
-          const items = [obj(9471).smartOutput(level, output, obj), " "];
+          const items = [obj(9442).smartOutput(level, output, obj), " "];
           obj[2] = items;
           return closure_17(closure_20, obj, formatInline.key);
         } else {
@@ -1210,18 +1210,18 @@ export default function createRules() {
           const obj1 = {};
           const merged1 = Object.assign(formatInline);
           obj1.textVariant = str;
-          const items1 = [obj(9471).smartOutput(level, output, obj1), "\n"];
+          const items1 = [obj(9442).smartOutput(level, output, obj1), "\n"];
           obj[2] = items1;
-          return closure_17(obj(4281).Text, obj, formatInline.key);
+          return closure_17(obj(4251).Text, obj, formatInline.key);
         }
       }
     },
     [closure_0(closure_2[44]).AST_KEY.SUBTEXT]: {
       react(node, output, key) {
         const obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const items = [obj(9471).smartOutput(node, output, key), "\n"];
+        const items = [obj(9442).smartOutput(node, output, key), "\n"];
         obj[2] = items;
-        return callback2(obj(4281).Text, obj, key.key);
+        return callback2(obj(4251).Text, obj, key.key);
       }
     },
     [closure_0(closure_2[44]).AST_KEY.SILENT_PREFIX]: {
@@ -1235,9 +1235,9 @@ export default function createRules() {
           }
           const obj = { color: null, children: null };
           obj[0] = textColor;
-          obj[1] = obj(9471).smartOutput(content, output, textColor);
+          obj[1] = obj(9442).smartOutput(content, output, textColor);
           content = closure_16(closure_20, obj, textColor.key);
-          const obj2 = obj(9471);
+          const obj2 = obj(9442);
           const tmp6 = closure_16;
           const tmp7 = closure_20;
         }

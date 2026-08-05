@@ -24,7 +24,7 @@ function _setEnabled() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -61,7 +61,7 @@ function _setEnabled() {
               closure_1.enabled = closure_0;
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -97,7 +97,7 @@ function _setLearnedWords() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ function _setLearnedWords() {
               learnedWords.setLearnedWords(closure_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;
@@ -164,7 +164,7 @@ function _isMisspelled() {
       if (flag === undefined) {
         flag = false;
       }
-      yield "ct";
+      yield "PX_8";
       misspelled = yield c4;
       let isMisspelledResult = null != misspelled;
       if (isMisspelledResult) {
@@ -204,7 +204,7 @@ function _getCorrections() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -232,7 +232,7 @@ function _getCorrections() {
               correctionsForMisspelling = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -297,7 +297,7 @@ function _getCachedMisspelling() {
       if (num11 === undefined) {
         num11 = 5;
       }
-      yield "ct";
+      yield "PX_8";
       cachedMisspelling = yield c4;
       if (null == cachedMisspelling) {
         const obj4 = { misspelledWord: "", corrections: null };
@@ -341,7 +341,7 @@ function _replaceWithCorrection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -378,7 +378,7 @@ function _replaceWithCorrection() {
               closure_1.replaceMisspelling(closure_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;
@@ -414,7 +414,7 @@ function _setAppLocale() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -451,7 +451,7 @@ function _setAppLocale() {
               appLocale.setAppLocale(closure_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;

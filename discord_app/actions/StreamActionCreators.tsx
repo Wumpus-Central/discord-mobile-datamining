@@ -60,8 +60,8 @@ function watchStream(stream, forceMultiple) {
         tmp21 = forceMultiple;
       }
       if (!tmp21) {
-        const participant = tmp18(4478).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4478);
+        const participant = tmp18(4448).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4448);
       }
       const obj3 = dispatcher;
     } else {
@@ -98,7 +98,7 @@ function _fetchStreamPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -121,7 +121,7 @@ function _fetchStreamPreview() {
               dependencyMap = undefined;
               if (c6.shouldFetchPreview(c0, lib, dependencyMap)) {
                 let obj5 = callback;
-                let result = callback(4348);
+                let result = callback(4318);
                 let HTTP = result.encodeStreamKey;
                 if (null != tmp55) {
                   let CALL = outer1_16.GUILD;
@@ -221,7 +221,7 @@ function _notifyStreamStart() {
       const obj2 = { event: null };
       obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
-      yield v0(5094).post(obj1);
+      yield v0(5079).post(obj1);
       if (1 === tmp6) {
         c4 = 0;
         v0 = 3;

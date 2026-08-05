@@ -187,7 +187,7 @@ function YouBarAvatarLarge(transitionState) {
     obj4[0] = obj5;
     obj2[2] = closure_21(sharedValue1, obj4);
     const items5 = [closure_21(tmp22Result, obj2), , , ];
-    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "done" };
+    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: false };
     obj6[0] = stateFromStores;
     obj6[2] = closure_10;
     if (OFFLINE === StatusTypes.UNKNOWN) {
@@ -396,7 +396,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -432,7 +432,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
           arg1.openUserSettings();
           callback(false);
           paths = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp12) {
         paths = tmp;

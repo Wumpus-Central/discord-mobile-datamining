@@ -15,7 +15,7 @@ import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import { ThemeTypes } from "sum";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09638_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09609_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Form } from "../../../../design/void/Form/native/index.tsx";
 import { GuildEventVoiceBanner } from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
@@ -97,7 +97,7 @@ function VoiceSectionRow(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -213,8 +213,8 @@ let closure_26 = importAllResult.memo((channel) => {
       const intl = tmp4(1236).intl;
       obj[0] = intl.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = registerAsset;
-      obj[3] = tmp4(12642).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(12642).CircularIconButton, obj);
+      obj[3] = tmp4(12614).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(12614).CircularIconButton, obj);
       const intl2 = tmp4(1236).intl;
       obj[1] = intl2.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = function onPress() {
@@ -228,7 +228,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(7777).FormRow, obj);
+      items[1] = callback2(tmp4(7749).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

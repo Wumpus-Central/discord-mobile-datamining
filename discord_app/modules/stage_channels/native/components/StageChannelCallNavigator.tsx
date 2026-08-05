@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallNavigator.tsx
 import set from "set";
 import ManaContext from "ManaContext";
-import get_ActivityIndicator from "module_10713";
+import get_ActivityIndicator from "module_10685";
 import { ThemeTypes } from "sum";
 import jsxProd from "GestureContainer";
 import createCacheKey from "createCacheKey";
@@ -80,7 +80,7 @@ function JoinStageOverlay(channel) {
   const tmp = callback(React.useState(false), 2);
   first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(4146);
+  let obj = first(4116);
   const fn = function s() {
     let obj = first(outer1_2[7]);
     let num = 0;
@@ -90,7 +90,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, outer1_11) };
     return obj;
   };
-  obj = { withSpring: first(4694).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  obj = { withSpring: first(4664).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;

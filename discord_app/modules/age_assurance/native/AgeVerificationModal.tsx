@@ -73,7 +73,7 @@ export default function AgeVerificationModal(webviewUrl) {
   const memo = React.useMemo(() => {
     function handleClose() {
       dependencyMap();
-      let arr = callback2(4490);
+      let arr = callback2(4460);
       arr = arr.pop();
     }
     return {
@@ -84,7 +84,7 @@ export default function AgeVerificationModal(webviewUrl) {
           const obj = { onPress: handleClose, text: null };
           const intl = callback(1236).intl;
           obj[1] = intl.string(callback(1236).t.cpT0Cq);
-          return outer1_5(callback(5917).HeaderActionButton, obj);
+          return outer1_5(callback(5902).HeaderActionButton, obj);
         },
         render() {
           return outer1_5(outer1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });

@@ -21,7 +21,7 @@ function _launchFrameOnNative() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -59,7 +59,7 @@ function _launchFrameOnNative() {
               }
             })();
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;

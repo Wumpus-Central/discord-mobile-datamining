@@ -19,16 +19,16 @@ export default function openGuildActionSheet(id) {
     obj = { type: "Guild Profile", guild_id: null };
     obj[1] = id.id;
     obj1.track(constants.OPEN_POPOUT, obj);
-    let tmpResult = tmp(8601);
+    let tmpResult = tmp(8573);
     if (tmpResult.shouldNSFWGateGuild(id.id)) {
-      let tmp3Result = tmp3(4253);
+      let tmp3Result = tmp3(4223);
       obj = { guild: null };
       obj[0] = id;
-      tmp3Result.openLazy(tmp(1959)(13162, tmp2.paths), "NsfwGateGuildSettingsActionSheet", obj);
+      tmp3Result.openLazy(tmp(1959)(13134, tmp2.paths), "NsfwGateGuildSettingsActionSheet", obj);
     } else {
       const features = id.features;
       const hasItem = features.has(constants2.HUB);
-      tmp3Result = tmp3(4253);
+      tmp3Result = tmp3(4223);
       const openLazy = tmp3Result.openLazy;
       tmpResult = tmp(1959);
       if (hasItem) {
@@ -36,15 +36,15 @@ export default function openGuildActionSheet(id) {
         obj1 = { guild: null, expanded: null };
         obj1[0] = id;
         obj1[1] = flag;
-        openLazy(tmpResult(13220, tmp2.paths), "GuildActionSheet:" + id.id, obj1);
-        const tmpResult1Result = tmpResult(13220, tmp2.paths);
+        openLazy(tmpResult(13192, tmp2.paths), "GuildActionSheet:" + id.id, obj1);
+        const tmpResult1Result = tmpResult(13192, tmp2.paths);
       } else {
         const _HermesInternal = HermesInternal;
         const obj2 = { guild: null, expanded: null };
         obj2[0] = id;
         obj2[1] = flag;
-        openLazy(tmpResult(13226, tmp2.paths), "GuildActionSheet:" + id.id, obj2);
-        const tmpResult1Result1 = tmpResult(13226, tmp2.paths);
+        openLazy(tmpResult(13198, tmp2.paths), "GuildActionSheet:" + id.id, obj2);
+        const tmpResult1Result1 = tmpResult(13198, tmp2.paths);
       }
     }
   }

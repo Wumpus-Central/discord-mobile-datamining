@@ -24,10 +24,10 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       }
       obj.speedBumpType = str2;
       obj.openedAt = timestamp;
-      obj.openLazy(tmp2(1959)(8706, tmp3.paths), combined, obj);
+      obj.openLazy(tmp2(1959)(8678, tmp3.paths), combined, obj);
     }
   }
-  const tmp15 = asyncRequireImpl(8718, dependencyMap.paths);
+  const tmp15 = asyncRequireImpl(8690, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -61,7 +61,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -96,7 +96,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
             outer1_6(userId);
           }
           paths = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp14) {
         paths = tmp;

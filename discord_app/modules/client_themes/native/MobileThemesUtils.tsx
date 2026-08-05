@@ -2,7 +2,7 @@
 import handleThemeChange from "handleThemeChange";
 import validateSavedTheme from "validateSavedTheme";
 import reset from "reset";
-import items1 from "items1";
+import ThemeTypes from "ThemeTypes";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
@@ -18,7 +18,7 @@ function getCustomThemesName() {
   const intl = getSystemLocale.intl;
   return intl.string(messagesProxy.yl1iMm);
 }
-({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, LEGACY_STANDARD_BACKGROUND_THEMES: error, REFRESH_STANDARD_BACKGROUND_THEMES: metroImportAll } = items1);
+({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, LEGACY_STANDARD_BACKGROUND_THEMES: error, REFRESH_STANDARD_BACKGROUND_THEMES: metroImportAll } = ThemeTypes);
 const result = require("reset").fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
 export const getCustomBackgroundGradient = function getCustomBackgroundGradient() {
@@ -105,12 +105,12 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
   if (null != stateFromStores) {
     tmp4 = stateFromStores;
   }
-  let tmpResult = tmp(4220);
+  let tmpResult = tmp(4190);
   const customThemeDisplaySettings = tmpResult.useCustomThemeDisplaySettings(tmp4);
   let stateFromStores1 = null;
   if (undefined !== customThemeDisplaySettings) {
     obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-    obj[0] = tmp(4099).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+    obj[0] = tmp(4069).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
     obj[1] = getCustomThemesName;
     ({ baseTheme: obj3[2], customTheme: obj3[3] } = customThemeDisplaySettings);
     stateFromStores1 = obj;

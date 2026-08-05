@@ -19,7 +19,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(7274).CTAButton;
+            return callback(7246).CTAButton;
           }
     };
     items[5] = {
@@ -36,7 +36,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7273).HelpArticle;
+            return callback(7245).HelpArticle;
           }
     };
     obj = { no: 8, name: "header_localized", kind: "message", T: null };
@@ -52,7 +52,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7272).LocalizedString;
+            return callback(7244).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.MobileBottomSheet", items, T);
@@ -229,7 +229,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(7274).CTAButton;
+      return callback(7246).CTAButton;
     }
   },
   {
@@ -246,7 +246,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7273).HelpArticle;
+      return callback(7245).HelpArticle;
     }
   },
 ,
@@ -265,7 +265,7 @@ items[8] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(7272).LocalizedString;
+    return callback(7244).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.MobileBottomSheet", items, tmp, T, MobileBottomSheet$Type, prototype, items);

@@ -296,12 +296,12 @@ function AnimatedFooter(arg0) {
   class B {
     constructor() {
       obj = { width: null, alignSelf: "flex-end" };
-      obj2 = c0(f110254[39]);
+      obj2 = c0(f110194[39]);
       items = [, ];
       items[0] = width - 2 * outer1_12;
       value = c3.get();
       diff = width - 2.5 * outer1_12;
-      items[1] = diff - c0(f110254[41]).LARGE_BUTTON_HEIGHT;
+      items[1] = diff - c0(f110194[41]).LARGE_BUTTON_HEIGHT;
       obj[0] = obj2.interpolate(value, [0, 1], items);
       return obj;
     }
@@ -355,12 +355,12 @@ export default function QuestBottomSheetFooter(quest) {
   let xboxAndPlaystationAccounts;
   ({ onConnectConsoleNext, onDefib, style, withSafeArea } = quest);
   const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
-  let obj = quest(10374);
+  let obj = quest(10346);
   const questTaskDetails = obj.useQuestTaskDetails(quest);
-  let obj1 = quest(10374);
+  let obj1 = quest(10346);
   const isQuestProgressing = obj1.useIsQuestProgressing(quest);
-  let obj2 = quest(10374);
-  let obj3 = quest(10374);
+  let obj2 = quest(10346);
+  let obj3 = quest(10346);
   xboxAndPlaystationAccounts = obj3.useConnectedAccounts().xboxAndPlaystationAccounts;
   const items = [quest, xboxAndPlaystationAccounts];
   const memo = React.useMemo(() => {
@@ -370,14 +370,14 @@ export default function QuestBottomSheetFooter(quest) {
       return null != closure_1.find((type) => type.type === closure_0);
     });
   }, items);
-  let obj4 = quest(14236);
+  let obj4 = quest(14210);
   const hasWatchVideoOnMobileTasks = obj4.useHasWatchVideoOnMobileTasks(quest.config);
-  let obj5 = quest(14236);
+  let obj5 = quest(14210);
   const mobileActivityQuest = obj5.useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  let obj6 = quest(11087);
+  let obj6 = quest(11059);
   const primaryCtaCopy = obj6.usePrimaryCtaCopy({ quest, application: questApplication });
-  let obj7 = quest(14265);
+  let obj7 = quest(14239);
   obj = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   const userStatus = quest.userStatus;
   let completedAt;
@@ -390,17 +390,17 @@ export default function QuestBottomSheetFooter(quest) {
     claimedAt = userStatus2.claimedAt;
   }
   let tmp23Result2 = null;
-  if (step !== quest(14262).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(14236).QuestBottomSheetStep.TASK_SELECT) {
     obj = { onLayout: null, ctaButton: null, backButton: null, style: null, withSafeArea: null };
     obj[0] = quest.onLayout;
-    if (tmp2(14262).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(14236).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       obj1 = { onPress: null, disabled: null };
       obj1[0] = onConnectConsoleNext;
       obj1[1] = 0 === memo.length;
       let tmp23Result = tmp23(NextButton, obj1);
     } else {
       tmp23Result = null;
-      if (tmp2(14262).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(14236).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           obj2 = { questId: null, onPress: null, disabled: null, loading: null, sourceQuestContent: null };
           obj2[0] = quest.id;
@@ -424,11 +424,11 @@ export default function QuestBottomSheetFooter(quest) {
           obj4 = { grow: true, size: "lg", onPress: null, text: null, icon: null };
           obj4[2] = mobileActivityPressHandler;
           obj4[3] = primaryCtaCopy;
-          obj4[4] = tmp2(11080).getPrimaryCtaIcon(quest);
-          tmp23Result = tmp23(tmp2(4695).Button, obj4);
-          const tmp2Result = tmp2(11080);
+          obj4[4] = tmp2(11052).getPrimaryCtaIcon(quest);
+          tmp23Result = tmp23(tmp2(4665).Button, obj4);
+          const tmp2Result = tmp2(11052);
         } else {
-          if (callback(obj2.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(5131).TaskPlatformScreen.CONSOLE) {
+          if (callback(obj2.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(5116).TaskPlatformScreen.CONSOLE) {
             if (!isQuestProgressing) {
               obj5 = { questId: null, loading: null, disabled: null, onPress: null, sourceQuestContent: null };
               obj5[0] = quest.id;
@@ -453,9 +453,9 @@ export default function QuestBottomSheetFooter(quest) {
       obj7 = { accessibilityLabel: null, variant: "secondary", icon: null, onPress: null, size: "lg" };
       const intl = tmp2(1236).intl;
       obj7[0] = intl.string(tmp2(1236).t["13/7kX"]);
-      obj7[2] = tmp23(tmp2(5242).ArrowLargeLeftIcon, {});
+      obj7[2] = tmp23(tmp2(5227).ArrowLargeLeftIcon, {});
       obj7[3] = onBack;
-      tmp23Result1 = tmp23(tmp2(7672).IconButton, obj7);
+      tmp23Result1 = tmp23(tmp2(7644).IconButton, obj7);
     }
     obj[2] = tmp23Result1;
     obj[3] = style;

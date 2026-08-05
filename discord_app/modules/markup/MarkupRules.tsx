@@ -23,7 +23,7 @@ import importDefaultResult10 from "useHasEnhancedRoleColors";
 import importDefaultResult11 from "useHasEnhancedRoleColors";
 import importDefaultResult12 from "combineMarkupRules";
 import importDefaultResult13 from "useHasEnhancedRoleColors";
-import { t } from "../../../_runtime/03984_t.js";
+import { t } from "../../../_runtime/03954_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getNickname } from "../../utils/NicknameUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
@@ -46,7 +46,7 @@ function parseLink(arg0) {
     obj = { type: "text", content: null };
     obj[1] = arg0[1];
   } else {
-    obj = { type: "link", content: null, target: null, title: "call" };
+    obj = { type: "link", content: null, target: null, title: "channel" };
     const obj1 = { type: "text", content: null };
     obj1[1] = punycodeLinkResult.displayTarget;
     const items = [obj1];
@@ -146,8 +146,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNickname.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4124).getName(str);
-        const tmp4Result = tmp4(4124);
+        nickname = tmp4(4094).getName(str);
+        const tmp4Result = tmp4(4094);
       }
       str = nickname;
       const obj2 = getNickname;
@@ -576,7 +576,7 @@ obj[19] = {
 obj[20] = require("getChannel").channelMention;
 obj[21] = require("getChannel").channelOrMessageUrl;
 obj[22] = require("getChannel").mediaPostLink;
-obj[23] = require("module_4728").attachmentLink;
+obj[23] = require("module_4698").attachmentLink;
 const obj10 = {
   order: require("textRegexp").order,
   requiredFirstCharacters: ["@"],
@@ -942,7 +942,7 @@ obj[33] = {
 };
 obj[34] = require("match");
 obj[35] = require("regExp");
-obj[36] = require("module_4743");
+obj[36] = require("module_4713");
 let items = [obj, ];
 const obj20 = {
   order: require("textRegexp").order,

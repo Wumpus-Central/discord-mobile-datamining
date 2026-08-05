@@ -29,7 +29,7 @@ function AddFavoriteCategoryActionSheet() {
   obj = { title: null };
   const intl = first(1236).intl;
   obj[0] = intl.string(first(1236).t["ISN+NM"]);
-  obj[3] = callback2(first(5337).BottomSheetTitleHeader, obj);
+  obj[3] = callback2(first(5322).BottomSheetTitleHeader, obj);
   const obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = first(1236).intl;
   obj1[0] = intl2.string(first(1236).t.OCAkGP);
@@ -39,15 +39,15 @@ function AddFavoriteCategoryActionSheet() {
   obj1[3] = tmp2[1];
   obj1[4] = closure_5;
   obj1[8] = callback;
-  const items1 = [callback2(first(7713).TextInput, obj1), ];
+  const items1 = [callback2(first(7685).TextInput, obj1), ];
   let obj2 = { text: null, onPress: null, disabled: null };
   const intl4 = first(1236).intl;
   obj2[0] = intl4.string(first(1236).t.CumH4u);
   obj2[1] = callback;
   obj2[2] = !result;
-  items1[1] = callback2(first(4695).Button, obj2);
+  items1[1] = callback2(first(4665).Button, obj2);
   obj[4] = items1;
-  return callback3(first(5338).BottomSheet, obj);
+  return callback3(first(5323).BottomSheet, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 AddFavoriteCategoryActionSheet = "AddFavoriteCategoryActionSheet";

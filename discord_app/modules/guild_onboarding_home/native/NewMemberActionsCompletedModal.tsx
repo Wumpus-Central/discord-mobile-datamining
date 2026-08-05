@@ -24,32 +24,32 @@ export default function NewMemberActionsCompleted(arg0) {
   let sharedValue;
   ({ initialPercent, numActions } = arg0);
   const tmp = createCacheKey();
-  let obj = sharedValue(4146);
+  let obj = sharedValue(4116);
   sharedValue = obj.useSharedValue(initialPercent);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj1 = sharedValue(4146);
+  let obj1 = sharedValue(4116);
   const fn = function b() {
     const obj = { width: null };
     const obj2 = sharedValue(outer1_2[5]);
     obj[0] = obj2.withDelay(500, sharedValue(outer1_2[6]).withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
     return obj;
   };
-  obj = { withDelay: sharedValue(4146).withDelay, withTiming: sharedValue(4286).withTiming, barWidth: sharedValue };
+  obj = { withDelay: sharedValue(4116).withDelay, withTiming: sharedValue(4256).withTiming, barWidth: sharedValue };
   fn.__closure = obj;
   fn.__workletHash = 7643178959760;
   fn.__initData = closure_8;
   const animatedStyle = obj1.useAnimatedStyle(fn);
   const effect1 = React.useEffect(() => {
-    const timerId = setTimeout(() => callback2(4490).popWithKey(callback(11570).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => callback2(4460).popWithKey(callback(11542).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   obj = { style: tmp.screen, children: null };
   obj1 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
   const intl = sharedValue(1236).intl;
   obj1[3] = intl.format(sharedValue(1236).t.pGj5u2, { count: numActions });
-  const items1 = [callback(sharedValue(4281).Text, obj1), ];
+  const items1 = [callback(sharedValue(4251).Text, obj1), ];
   const items2 = [tmp.progressForeground, animatedStyle];
   items1[1] = callback(View, { style: tmp.progressBackground, children: callback(ReanimatedRexport.View, { style: items2 }) });
   obj[1] = items1;

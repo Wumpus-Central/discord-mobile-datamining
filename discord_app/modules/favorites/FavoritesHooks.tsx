@@ -52,7 +52,7 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
   } else {
     num = 0;
     if (tmp4) {
-      num = tmp(9631).FREE_FAVORITE_LIMIT;
+      num = tmp(9602).FREE_FAVORITE_LIMIT;
     }
   }
 }

@@ -116,7 +116,7 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
   obj1 = { style: tmp.header, children: null };
   const animatedStyle1 = obj4.useAnimatedStyle(fn);
   obj2 = { style: animatedStyle, children: null };
-  let items = [callback(tmp5(tmp3[9]).Image, { style: { width: "100%", height: tmp8 }, source: guildBannerSource }), callback(tmp5(tmp3[10]), { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: tmp.linearGradient, colors: ["rgba(0,0,0,0.7)", "transparent"] })];
+  let items = [callback(tmp5(tmp3[9]).Image, { style: { width: "100%", height: tmp8 }, resizeMode: "cover", source: guildBannerSource }), callback(tmp5(tmp3[10]), { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: tmp.linearGradient, colors: ["rgba(0,0,0,0.7)", "transparent"] })];
   obj2[1] = items;
   let items1 = [callback2(tmp5(tmp3[9]).View, obj2), ];
   obj4 = { style: tmp.headerContent, children: null };

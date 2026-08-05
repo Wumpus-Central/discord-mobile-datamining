@@ -23,7 +23,7 @@ import importDefaultResult3 from "DEFAULT_FRECENCY";
 import { PersistedStore } from "initialize";
 import set from "getHash";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03867_t.js";
+import { t } from "../../../_runtime/03837_t.js";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { EmojiTerms } from "../emoji_terms/EmojiTerms.tsx";
 import { parseRawEmojiObject } from "UnicodeEmojis.tsx";
@@ -76,7 +76,7 @@ function _loadSavedEmojis() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -167,7 +167,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = callback(5183);
+      let obj = callback(5168);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -313,7 +313,7 @@ function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
   role = role.getRole(guildId, guildId.role.id);
   if (null != role) {
-    const obj = callback(3904);
+    const obj = callback(3874);
     if (obj.isSubscriptionRole(role)) {
       updateGuildEmoji(guildId);
       let c33 = null;
@@ -376,7 +376,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(5148).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(5133).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -385,7 +385,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        const obj = callback(5148);
+        const obj = callback(5133);
       }
       tmp6 = someResult;
     }

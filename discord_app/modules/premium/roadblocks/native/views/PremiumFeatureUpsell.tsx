@@ -29,49 +29,49 @@ function PremiumFeatureUpsellPill(featureName) {
   let useTier0UpsellContent;
   let dependencyMap;
   let loading;
-  let obj = featureName(8173);
-  let obj1 = featureName(8605);
+  let obj = featureName(8145);
+  let obj1 = featureName(8577);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = callback(useTier0UpsellContent);
   dependencyMap = tmp4;
   const tmp6 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
   const fn = () => useTier0UpsellContent(_undefined[13])(featureName);
-  let tmpResult = tmp(3931);
+  let tmpResult = tmp(3901);
   const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(tmp6);
-  if (featureName(8184).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+  if (featureName(8156).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
     const intl4 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     let formatResult = intl4.format(tmp(1236).t["tw/SSq"], obj);
-  } else if (tmp(8184).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+  } else if (tmp(8156).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     const intl3 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     formatResult = intl3.format(tmp(1236).t.gMVjeS, obj);
-  } else if (tmp(8184).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+  } else if (tmp(8156).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
     const intl2 = tmp(1236).intl;
     obj1 = { maxFileSize: null, nitroTierName: null, onClick: null };
-    tmpResult = tmp(3931);
+    tmpResult = tmp(3901);
     obj1[0] = tmpResult.getMaxFileSizeForPremiumType(tmp6);
     obj1[1] = premiumTypeDisplayName;
     obj1[2] = fn;
     formatResult = intl2.format(tmp(1236).t.zzyLEK, obj1);
-  } else if (tmp(8184).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+  } else if (tmp(8156).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     const intl = tmp(1236).intl;
     const obj2 = { nitroTierName: null, onClick: null };
     obj2[0] = premiumTypeDisplayName;
     obj2[1] = fn;
     formatResult = intl.format(tmp(1236).t.lyxfbj, obj2);
-  } else if (tmp(8184).EntitlementFeatureNames.APP_ICONS === featureName) {
+  } else if (tmp(8156).EntitlementFeatureNames.APP_ICONS === featureName) {
     const intl6 = tmp(1236).intl;
     const obj3 = { onClick: null };
     obj3[0] = fn;
     formatResult = intl6.format(tmp(1236).t.x2dQxN, obj3);
   }
-  const tmp10 = useTier0UpsellContent(8650)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
+  const tmp10 = useTier0UpsellContent(8622)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
   loading = tmp10.loading;
   const items = [tmp4.container, , ];
   if (flag) {
@@ -82,9 +82,9 @@ function PremiumFeatureUpsellPill(featureName) {
   items[2] = featureName.style;
   const obj5 = { style: tmp4.labelContainer, children: null };
   const obj6 = { source: null, style: null, disableColor: true };
-  obj6[0] = useTier0UpsellContent(useTier0UpsellContent ? 8651 : 8652);
+  obj6[0] = useTier0UpsellContent(useTier0UpsellContent ? 8623 : 8624);
   obj6[1] = tmp4.nitroWheel;
-  const items1 = [closure_12(featureName(1297).Icon, obj6), closure_12(featureName(4281).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
+  const items1 = [closure_12(featureName(1297).Icon, obj6), closure_12(featureName(4251).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
   obj5[1] = items1;
   const items2 = [closure_13(closure_5, obj5), ];
   const obj8 = { disabled: loading, shrink: true, style: tmp4.button, size: null, onPress: null, text: null, color: null, renderIcon: null, renderLinearGradient: null };

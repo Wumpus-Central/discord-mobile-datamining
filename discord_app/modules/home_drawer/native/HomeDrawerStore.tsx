@@ -35,7 +35,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 }, require("isIterable").shallow);
-let result = require("module_4146").fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
+let result = require("module_4116").fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;
 export const computeMaxX = function computeMaxX(width, left) {

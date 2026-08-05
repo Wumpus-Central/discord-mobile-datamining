@@ -197,7 +197,7 @@ function useCreateSubscription(planId) {
         return obj;
       } else {
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
       c3 = 0;
       return arg1;
@@ -284,8 +284,8 @@ function useCancelSubscription(arg0, arg1) {
       outer1_1(38)(outer1_5, "Cannot update subscription");
       outer1_1(38)(dependencyMap, "Cannot connect to IAP API");
       outer1_1(38)(null != outer1_6, "Subscription not found");
-      closure_0 = yield outer1_0(6792).cancelGenericSubscription(outer1_6.requestIdentifier, outer1_6.subscriptionId, outer1_1);
-      const obj2 = outer1_0(4604);
+      closure_0 = yield outer1_0(6777).cancelGenericSubscription(outer1_6.requestIdentifier, outer1_6.subscriptionId, outer1_1);
+      const obj2 = outer1_0(4574);
       yield obj2.fetchSubscriptions();
       return closure_0;
     }), items5),
@@ -320,7 +320,7 @@ function useResubscribeSubscription(arg0) {
       const obj = first(tmp6[10]);
     }
   }, items1);
-  first(7336)(() => {
+  first(7308)(() => {
     let tmp = memo;
     if (!memo) {
       tmp = outer1_15;
@@ -362,7 +362,7 @@ function useResubscribeSubscription(arg0) {
     }
     return tmp3;
   }, items4);
-  const tmp12 = first(7340)(arg0);
+  const tmp12 = first(7312)(arg0);
   React = tmp12;
   obj = {
     resubscribeSubscription: React.useCallback(stateFromStores(function*() {
@@ -371,8 +371,8 @@ function useResubscribeSubscription(arg0) {
       outer1_1(38)(outer1_1, "Cannot connect to IAP API");
       outer1_1(38)(null != outer1_5, "Subscription not found");
       outer1_1(38)(null != isACOM, "Subscription not found");
-      closure_0 = yield outer1_0(6792).resubscribeGenericSubscription(outer1_5, isACOM.isACOM);
-      const obj2 = outer1_0(4604);
+      closure_0 = yield outer1_0(6777).resubscribeGenericSubscription(outer1_5, isACOM.isACOM);
+      const obj2 = outer1_0(4574);
       yield obj2.fetchSubscriptions();
       return closure_0;
     }), items5),

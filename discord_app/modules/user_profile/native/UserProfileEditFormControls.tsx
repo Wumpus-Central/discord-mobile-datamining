@@ -5,9 +5,11 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { FormSwitch } from "../../../design/components/Forms/native/FormSwitch.native.tsx";
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import { Input } from "../../../design/components/Input/native/Input.native.tsx";
 import { TableRowArrow } from "../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
@@ -34,14 +36,53 @@ function FormControlSubtext(text) {
 }
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { button: null, buttonTextContainer: null, formControlText: null };
+createCacheKey = { button: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
 createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: require("Themes").colors.BORDER_STRONG, borderWidth: 1, borderRadius: require("Themes").radii.md };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
 createCacheKey[2] = { marginRight: "auto", flexShrink: 1 };
+createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginLeft: require("Themes").space.PX_4, gap: require("Themes").space.PX_4 };
+createCacheKey[4] = { paddingTop: 0 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexDirection: "row", alignItems: "center", marginLeft: require("Themes").space.PX_4, gap: require("Themes").space.PX_4 };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormControls.tsx");
 
+export const UserProfileEditFormLabelBadges = function UserProfileEditFormLabelBadges(showPremiumIcon) {
+  let flag = showPremiumIcon.showPremiumIcon;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let flag2 = showPremiumIcon.showNewBadge;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  const tmp = createCacheKey();
+  if (flag) {
+    let obj = { style: null, "aria-hidden": true, children: null };
+    obj[0] = tmp.labelTrailing;
+    let tmp5 = null;
+    if (flag) {
+      tmp5 = callback2(NitroWheelIcon.NitroWheelIcon, { size: "xs" });
+    }
+    const items = [tmp5, ];
+    let tmp9 = null;
+    if (flag2) {
+      obj = { text: null, style: null };
+      const intl = getSystemLocale.intl;
+      obj[0] = intl.string(getSystemLocale.t.y2b7CA);
+      obj[1] = tmp.newBadge;
+      tmp9 = callback2(Button.TextBadge, obj);
+    }
+    items[1] = tmp9;
+    obj[2] = items;
+    let tmp3Result = closure_7(closure_5, obj);
+    const tmp3 = closure_7;
+    const tmp4 = closure_5;
+  } else {
+    tmp3Result = null;
+  }
+  return tmp3Result;
+};
 export const UserProfileEditFormButton = function UserProfileEditFormButton(loading) {
   let accessibilityValue;
   let buttonSubtext;
@@ -127,7 +168,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     callback(closure_0);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(4812).PressableHighlight;
+    let PressableHighlight = tmp2(4797).PressableHighlight;
   } else {
     PressableHighlight = closure_4;
   }

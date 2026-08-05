@@ -113,7 +113,7 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
       const obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj2[0] = tmp.externalManagement;
       obj2[3] = externalManagementMessage;
-      tmp6Result = tmp6(tmp7(4281).Text, obj2);
+      tmp6Result = tmp6(tmp7(4251).Text, obj2);
     }
     const obj3 = { children: null };
     items1[2] = tmp6Result;
@@ -197,11 +197,11 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(6769)({ forceFetch: true }));
-  let tmpResult = tmp(7976);
+  ({ fractionalState: c2, endsAt } = flag(6754)({ forceFetch: true }));
+  let tmpResult = tmp(7948);
   closure_3 = tmpResult.useIsInReverseTrial();
-  const tmp3 = flag(6769)({ forceFetch: true });
-  closure_4 = flag(12637)(endsAt, tmp(12637).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp3 = flag(6754)({ forceFetch: true });
+  closure_4 = flag(12609)(endsAt, tmp(12609).CountDownMessageTypes.LONG_TIME_LEFT);
   tmpResult = tmp(589);
   const items = [handleGuildBoostsUpdate, handlePaymentSourceCreateEnd, addSubscriptionPlan, mergeGuildAvatar];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
@@ -223,7 +223,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj[10] = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(12637);
+  const tmp4 = flag(12609);
   const items1 = [reset];
   const stateFromStores = _initialize.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const tmpResult1 = _initialize;

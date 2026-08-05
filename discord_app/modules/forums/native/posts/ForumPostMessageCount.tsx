@@ -67,7 +67,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     const obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
     obj1[2] = messageCountText;
-    let tmp7Result = tmp7(tmp2(4281).Text, obj1);
+    let tmp7Result = tmp7(tmp2(4251).Text, obj1);
   } else {
     const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
     obj2[0] = messageCount;
@@ -84,7 +84,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     obj4[0] = unreadCount;
     const items2 = ["(", intl2.format(tmp2(1236).t.z3PEth, obj4), ")"];
     obj3[3] = items2;
-    tmp5Result = tmp5(tmp2(4281).Text, obj3);
+    tmp5Result = tmp5(tmp2(4251).Text, obj3);
   }
   items1[2] = tmp5Result;
   obj[2] = items1;

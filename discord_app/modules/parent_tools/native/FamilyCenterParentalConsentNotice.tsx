@@ -43,13 +43,13 @@ export default function FamilyCenterParentalConsentNotice() {
           const intl2 = tmp2(1236).intl;
           obj = { learnMoreHook: null };
           obj[0] = learnMoreHook;
-          let formatResult = intl2.format(tmp9(2285).S5kmfO, obj);
+          let formatResult = intl2.format(tmp9(2255).S5kmfO, obj);
         } else {
           const intl = tmp2(1236).intl;
           obj1 = { count: null, learnMoreHook: null };
           obj1[0] = daysRemaining;
           obj1[1] = learnMoreHook;
-          formatResult = intl.format(tmp9(2285)["5jm+T3"], obj1);
+          formatResult = intl.format(tmp9(2255)["5jm+T3"], obj1);
         }
         obj[1] = formatResult;
         return jsx(FamilyCenterInlineWarningNotice, { style: null, text: null });

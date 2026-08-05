@@ -145,7 +145,7 @@ export default function Login(isMultiAccount) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -221,7 +221,7 @@ export default function Login(isMultiAccount) {
           c3 = 0;
           v0(false);
           v02 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp47) {
         closure_2 = tmp47;
@@ -249,7 +249,7 @@ export default function Login(isMultiAccount) {
       if (flag === undefined) {
         flag = false;
       }
-      yield "ct";
+      yield "PX_8";
       outer1_4(true);
       outer1_5({});
       let c6 = 1;
@@ -303,7 +303,7 @@ export default function Login(isMultiAccount) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {

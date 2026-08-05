@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { PRIVATE_APPS_HELP_ARTICLE } from "items3";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/10879_registerAsset.js";
+import { registerAsset } from "../../../_runtime/10851_registerAsset.js";
 import { set } from "../../actions/AlertActionCreators.tsx";
 import { Button } from "../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../design/components/Text/native/Text.tsx";

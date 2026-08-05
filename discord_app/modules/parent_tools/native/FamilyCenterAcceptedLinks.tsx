@@ -5,7 +5,7 @@ import items from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/14073_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14047_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { messagesProxy } from "../FamilyCenter.messages.js";
 import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
@@ -43,7 +43,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     obj1[0] = str(1297).Icon.Sizes.SMALL;
     obj1[2] = registerAsset;
     obj[4] = closure_6(str(1297).Icon, obj1);
-    obj[1] = closure_6(str(4812).PressableOpacity, obj);
+    obj[1] = closure_6(str(4797).PressableOpacity, obj);
     tmp4Result = tmp4(FamilyCenterLinkRow, obj);
     const tmp5 = importDefault;
     const tmp7 = FamilyCenterLinkRow;
@@ -74,7 +74,7 @@ export default function FamilyCenterAcceptedLinks() {
   const tmp5Result = useAgeSpecificText;
   const intl2 = tmp5(1236).intl;
   obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxy["+tnO34"], obj), intl2.formatToPlainString(tmp2(2285)["pu6/U0"], obj));
+  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxy["+tnO34"], obj), intl2.formatToPlainString(tmp2(2255)["pu6/U0"], obj));
   const items = [callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
   const obj2 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
@@ -82,10 +82,10 @@ export default function FamilyCenterAcceptedLinks() {
     obj3[0] = tmp.empty;
     const obj4 = { text: null };
     const intl3 = tmp5(1236).intl;
-    obj4[0] = intl3.string(tmp2(2285).C4ScLD);
-    obj3[1] = tmp10(tmp2(14066), obj4);
+    obj4[0] = intl3.string(tmp2(2255).C4ScLD);
+    obj3[1] = tmp10(tmp2(14040), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14066);
+    const tmp2Result = tmp2(14040);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

@@ -89,14 +89,14 @@ const prototype = GameStore.prototype;
 prototype["isFetching"] = function isFetching(arg0) {
   return set.has(arg0);
 };
-prototype["didFetchingFail"] = function didFetchingFail(gameId) {
-  return set1.has(gameId);
+prototype["didFetchingFail"] = function didFetchingFail(closure_0) {
+  return set1.has(closure_0);
 };
-prototype["getGame"] = function getGame(gameId) {
-  return map.get(gameId);
+prototype["getGame"] = function getGame(closure_0) {
+  return map.get(closure_0);
 };
-prototype["hasNoData"] = function hasNoData(gameId) {
-  return set2.has(gameId);
+prototype["hasNoData"] = function hasNoData(closure_0) {
+  return set2.has(closure_0);
 };
 prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
   const value = map.get(arg0);

@@ -5,7 +5,7 @@ import { Image } from "get ActivityIndicator";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/15205_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15185_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
@@ -41,7 +41,7 @@ function _handlePress() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ function _handlePress() {
           obj = callback(paths[10]);
           obj.openURL(articleURL.getArticleURL(constants.SETTING_UP_TWO_FACTOR));
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

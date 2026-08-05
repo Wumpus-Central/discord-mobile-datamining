@@ -14,8 +14,8 @@ import { InviteTypes } from "InviteSendStates";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12514_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12486_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13088_registerAsset.js";
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -54,7 +54,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       00038__(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "a" };
+      obj = { user: null, guildId: "Array" };
       const tmp12 = new createdAt(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -67,7 +67,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "a" };
+      obj = { user: null, guildId: "Array" };
       const tmp33 = new createdAt(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;
@@ -87,10 +87,10 @@ function InviteCard(invite) {
     obj2[0] = tmp.text;
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
     obj3[2] = stringResult;
-    const items2 = [tmp18(tmp17(4281).Text, obj3), ];
+    const items2 = [tmp18(tmp17(4251).Text, obj3), ];
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = name;
-    items2[1] = tmp18(tmp17(4281).Text, obj4);
+    items2[1] = tmp18(tmp17(4251).Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(closure_4, obj2);
     obj1[1] = items1;

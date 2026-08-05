@@ -92,15 +92,15 @@ export default function GuildSettingsRoleEditDisplay(guild) {
       obj[1] = tmp4(tmp5[14]).IconSizes.MEDIUM;
       roleIcon = callback(tmp4(tmp5[14]).Icon, obj);
     }
-    const items1 = [id, concat, primary_color, SOLID];
+    const items1 = [role, id, concat, primary_color, SOLID];
     const items2 = [guild.id, role, id, SOLID];
     callback = SOLID.useCallback(() => {
       if (SOLID === outer1_7.SOLID) {
         let obj = role(id[16]);
         obj = { color: null, onSelect: null };
         obj[0] = primary_color;
-        obj[1] = function onSelect(color) {
-          outer1_0(outer1_2[19]).updateRoleColor(closure_2, color);
+        obj[1] = function onSelect(arg0) {
+          outer1_0(outer1_2[19]).updateRoleColor(closure_1, arg0);
         };
         obj.openLazy(guild(id[18])(id[17], id.paths), "RoleColorPicker", obj);
       } else if (tmp === tmp2.GRADIENT) {
