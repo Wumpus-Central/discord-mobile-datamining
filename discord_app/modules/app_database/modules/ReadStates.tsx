@@ -36,70 +36,16 @@ const prototype = ReadStates.prototype;
 prototype["getAll"] = function getAll(arg0) {
   let closure_0 = arg0;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === apply) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let length = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            length = undefined;
-            apply = undefined;
-            const _performance2 = performance;
-            closure_0 = performance.now();
-            const states = outer1_0(outer1_1[4]).readStates(outer1_0);
-            apply = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = states.getMany();
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          length = arg1;
-          const _performance = performance;
-          apply = performance.now();
-          const _HermesInternal = HermesInternal;
-          outer1_5.log("asynchronously loaded in " + apply - closure_0 + "ms (readStates: " + length.length + ")");
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = length;
-          return obj;
-        }
-      } catch (tmp6) {
-        c3 = tmp;
-        throw tmp6;
-      }
-    }
+    let length = tmp5;
+    let closure_0 = tmp2;
+    const _performance2 = performance;
+    closure_0 = performance.now();
+    const states = outer1_0(outer1_1[4]).readStates(outer1_0);
+    length = yield states.getMany();
+    const _performance = performance;
+    const _HermesInternal = HermesInternal;
+    outer1_5.log("asynchronously loaded in " + apply - closure_0 + "ms (readStates: " + length.length + ")");
+    return length;
   })();
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {

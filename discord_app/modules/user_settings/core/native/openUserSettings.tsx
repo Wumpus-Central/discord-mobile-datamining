@@ -5,7 +5,7 @@ import { UserSettingsSections } from "ME";
 const result = require("getRootNavigationRef").fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
 export const openUserSettings = (screen) => {
-  let obj = require(4045) /* getRootNavigationRef */;
+  let obj = require(4137) /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp2) {
     screen = undefined;

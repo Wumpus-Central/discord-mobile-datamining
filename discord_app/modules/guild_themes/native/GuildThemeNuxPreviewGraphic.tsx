@@ -19,6 +19,6 @@ export default function GuildThemeNuxPreviewGraphic(arg0) {
   if (!isPersonal) {
     tmp4 = themeSettings;
   }
-  obj[3] = jsx(importDefault(15157), { themeSettings: tmp4 });
+  obj[3] = jsx(importDefault(15170), { themeSettings: tmp4 });
   return <View accessibilityElementsHidden importantForAccessibility="no-hide-descendants" style={createCacheKey().container}>{null}</View>;
 };

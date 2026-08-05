@@ -8,13 +8,13 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue() {
-    const DoubleTapReactionEmoji = require(3866) /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = require(3958) /* explicitContentFromProto */.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
   },
   onValueChange(disableDoubleTap) {
-    const DoubleTapReactionEmoji = require(3866) /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = require(3958) /* explicitContentFromProto */.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
-    const DoubleTapReactionEmoji2 = require(3866) /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji2 = require(3958) /* explicitContentFromProto */.DoubleTapReactionEmoji;
     const obj = { disableDoubleTap: !disableDoubleTap, emojiId: null, emojiName: null, animated: null };
     let emojiId;
     if (setting != null) {
@@ -41,13 +41,13 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue() {
-    const DoubleTapReactionEmoji = require(3866) /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = require(3958) /* explicitContentFromProto */.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
   },
   onValueChange(disableDoubleTap) {
-    const DoubleTapReactionEmoji = require(3866) /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = require(3958) /* explicitContentFromProto */.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
-    const DoubleTapReactionEmoji2 = require(3866) /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji2 = require(3958) /* explicitContentFromProto */.DoubleTapReactionEmoji;
     const obj = { disableDoubleTap: !disableDoubleTap, emojiId: null, emojiName: null, animated: null };
     let emojiId;
     if (setting != null) {

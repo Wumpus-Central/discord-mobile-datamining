@@ -22,7 +22,7 @@ export default function FormHint(inset) {
   }
   ({ style, children } = inset);
   const tmp = createCacheKey();
-  if (React.useContext(require(5223) /* context */.RedesignCompatContext)) {
+  if (React.useContext(require(5314) /* context */.RedesignCompatContext)) {
     let redesignHorizontalPadding = !flag;
     if (!flag) {
       redesignHorizontalPadding = tmp.redesignHorizontalPadding;
@@ -31,7 +31,7 @@ export default function FormHint(inset) {
     const items = [redesignHorizontalPadding, style];
     obj[2] = items;
     obj[3] = children;
-    let tmp4Result = tmp4(tmp2(4189).Text, obj);
+    let tmp4Result = tmp4(tmp2(4281).Text, obj);
   } else {
     const items1 = [tmp.formHintText, , ];
     let horizonatalPadding = !flag;

@@ -1,6 +1,6 @@
 // discord_app/modules/games/GameActionCreators.tsx
 import importDefaultResult from "start";
-import map from "map";
+import handleLoadMessages from "handleLoadMessages";
 import { Endpoints } from "ME";
 
 let closure_0 = arg1;
@@ -22,83 +22,36 @@ function _requestGames() {
     let c5 = 0;
     let c3 = 0;
     return (function*(arg0, body) {
-      if (constants === 2) {
+      const dependencyMap = tmp3;
+      let c3 = 1;
+      const HTTP = callback(outer1_2[3]).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: true };
+      obj1[0] = constants.GAMES;
+      const obj2 = { game_ids: null };
+      obj2[0] = callback;
+      obj1[1] = obj2;
+      yield HTTP.get(obj1);
+      if (1 === tmp7) {
+        c3 = 0;
+        const obj3 = body(709);
+        const obj4 = { type: "GAME_FETCH_FAILURE", gameIds: null };
+        obj4[1] = callback;
+        obj3.dispatch(obj4);
         constants = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          constants = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              body = tmp7;
-              body = undefined;
-              let c3 = 1;
-              const HTTP = callback(outer1_2[3]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = constants.GAMES;
-              const obj2 = { game_ids: null };
-              obj2[0] = callback;
-              obj1[1] = obj2;
-              c4 = 2;
-              constants = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              obj3 = body(709);
-              const obj4 = { type: "GAME_FETCH_FAILURE", gameIds: null };
-              obj4[1] = callback;
-              obj3.dispatch(obj4);
-              constants = 3;
-            } else if (arg0 === 1) {
-              constants = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              body = body.body;
-              obj = body(709);
-              const obj5 = { type: "GAME_FETCH_SUCCESS", gameIds: null, games: null };
-              obj5[1] = callback;
-              obj5[2] = body;
-              obj.dispatch(obj5);
-              c3 = 0;
-            }
-            c3 = 0;
-            constants = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          }
-        } catch (tmp21) {
-          if (tmp4 === c3) {
-            constants = tmp2;
-            throw tmp21;
-          } else {
-            c4 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        constants = 3;
+        throw body;
+      } else if (arg0 !== 2) {
+        body = body.body;
+        const obj = body(709);
+        const obj5 = { type: "GAME_FETCH_SUCCESS", gameIds: null, games: null };
+        obj5[1] = callback;
+        obj5[2] = body;
+        obj.dispatch(obj5);
+        c3 = 0;
       }
+      c3 = 0;
+      return body;
     })();
   });
   const _requestGames = tmp;
@@ -246,7 +199,7 @@ const batchInvocationManager = new require("start").BatchInvocationManager(funct
   return applyArgumentsResult;
 }, {
   predicate(gameId) {
-    return !map.hasNoData(gameId);
+    return !handleLoadMessages.hasNoData(gameId);
   },
   onQueued(gameIds) {
     let obj = importDefault(709);

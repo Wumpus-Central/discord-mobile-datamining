@@ -24,7 +24,7 @@ export default {
     return "https://creator-support.discord.com" + "/hc/" + _getSystemLocale.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL;
   },
   getTwitterURL() {
-    return importDefault(3805)(LocalizedLinks.TWITTER);
+    return importDefault(3897)(LocalizedLinks.TWITTER);
   },
   getCommunityURL() {
     return combined + "/hc/" + _getSystemLocale.locale.toLowerCase();

@@ -100,27 +100,27 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  obj[2] = importDefault(11798);
+  obj[2] = importDefault(11960);
   const items1 = [callback2(closure_6, obj), , , , ];
   let obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1236).intl;
   obj1[2] = intl.string(onNext(1236).t["/G+nci"]);
-  items1[1] = callback2(onNext(4189).Text, obj1);
+  items1[1] = callback2(onNext(4281).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
   const intl2 = onNext(1236).intl;
   obj2[2] = intl2.string(onNext(1236).t.G8zcHt);
-  items1[2] = callback2(onNext(4189).Text, obj2);
+  items1[2] = callback2(onNext(4281).Text, obj2);
   const obj3 = { style: tmp.buttonContainer, children: null };
   const obj4 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
   const intl3 = onNext(1236).intl;
   obj4[2] = intl3.string(onNext(1236).t.LhlgY9);
   obj4[3] = callback;
   obj4[4] = loading;
-  obj3[1] = callback2(onNext(4604).Button, obj4);
+  obj3[1] = callback2(onNext(4695).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
-  items1[4] = callback2(importDefault(11799), { error });
+  items1[4] = callback2(importDefault(11961), { error });
   obj[1] = items1;
-  const items2 = [callback3(closure_5, obj), callback2(closure_5, { style: tmp.trailing, children: callback2(importDefault(11791), { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
+  const items2 = [callback3(closure_5, obj), callback2(closure_5, { style: tmp.trailing, children: callback2(importDefault(11953), { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
   obj[0] = items2;
   return callback3(closure_10, obj);
 };

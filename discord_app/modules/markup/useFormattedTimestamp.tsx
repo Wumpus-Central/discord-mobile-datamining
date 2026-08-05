@@ -16,7 +16,7 @@ let result = require("set").fileFinishedImporting("modules/markup/useFormattedTi
 
 export default function useFormattedTimestamp(format) {
   const _require = format;
-  const forceUpdate = _require(6238).useForceUpdate();
+  const forceUpdate = _require(6813).useForceUpdate();
   const items = [forceUpdate, , ];
   ({ format: arr[1], parsed: arr[2] } = format);
   const effect = React.useEffect(() => {
@@ -46,7 +46,7 @@ export default function useFormattedTimestamp(format) {
     }
   }, items);
   if ("R" === format.format) {
-    const TIMESTAMP_FORMATS = _require(4648).TIMESTAMP_FORMATS;
+    const TIMESTAMP_FORMATS = _require(4739).TIMESTAMP_FORMATS;
     let formatted = TIMESTAMP_FORMATS.R(format.parsed);
   } else {
     formatted = format.formatted;

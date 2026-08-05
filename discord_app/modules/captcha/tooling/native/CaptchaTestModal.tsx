@@ -225,5 +225,5 @@ export default function CaptchaTestModal() {
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
-  return callback(require(5574) /* NavigationStack */.Navigator, obj);
+  return callback(require(5665) /* NavigationStack */.Navigator, obj);
 };

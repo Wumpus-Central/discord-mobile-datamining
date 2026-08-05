@@ -43,7 +43,7 @@ export default function _default(arg0, arg1, arg2, arg3) {
     } else {
       items = isFetchingRows.getMemberIds(lib.guild_id);
     }
-    let obj = lib(10099);
+    let obj = lib(9002);
     obj = { omitUserIds: null, guild: null, channel: null, inviteTargetType: null };
     obj[0] = new Set(items);
     obj[1] = guild.getGuild(lib.guild_id);

@@ -8,7 +8,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/f
 
 export default function UserSettingsSensitiveContentFilters() {
   const node = React.useMemo(() => {
-    let obj = callback(10133);
+    let obj = callback(10361);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;
@@ -31,5 +31,5 @@ export default function UserSettingsSensitiveContentFilters() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(importDefault(13697), { node });
+  return jsx(importDefault(13793), { node });
 };

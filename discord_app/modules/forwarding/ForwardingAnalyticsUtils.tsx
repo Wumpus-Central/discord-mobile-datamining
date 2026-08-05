@@ -43,11 +43,11 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    const merged = Object.assign(require(4388) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guild_id));
-    const obj5 = require(4388) /* collectGuildAnalyticsMetadata */;
-    const merged1 = Object.assign(tmp13(4388).collectChannelAnalyticsMetadata(channel));
+    const merged = Object.assign(require(4479) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guild_id));
+    const obj5 = require(4479) /* collectGuildAnalyticsMetadata */;
+    const merged1 = Object.assign(tmp13(4479).collectChannelAnalyticsMetadata(channel));
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-    const tmp13Result = tmp13(4388);
+    const tmp13Result = tmp13(4479);
   }
 };
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {

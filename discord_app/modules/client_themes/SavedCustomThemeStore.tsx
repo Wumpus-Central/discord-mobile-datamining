@@ -8,10 +8,10 @@ function validateSavedTheme(colors) {
   try {
     let tmp5 = colors.colors.length > 0;
     if (tmp5) {
-      tmp5 = typeof colors.gradient_angle === "Object";
+      tmp5 = typeof colors.gradient_angle === "number";
     }
     if (tmp5) {
-      tmp5 = typeof colors.base_mix === "Object";
+      tmp5 = typeof colors.base_mix === "number";
     }
     if (tmp5) {
       tmp5 = null != tmp4;

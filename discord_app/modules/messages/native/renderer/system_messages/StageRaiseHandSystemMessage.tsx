@@ -14,7 +14,7 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("m
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = require(7748) /* getMessageAuthorWithProcessedColor */;
+  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   let canResult = getUncachedChannelPermissions.can(constants4.MUTE_MEMBERS, channel.getChannel(message.channel_id));
   participant = participant.getParticipant(message.channel_id, message.author.id);
@@ -37,7 +37,7 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === tmp(4378).RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === tmp(4469).RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
@@ -45,7 +45,7 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = tmp(1236).intl;
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
-  obj[1] = importDefault(7750)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  obj[1] = importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   obj[0] = intl.formatToParts(require(1236) /* getSystemLocale */.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;
@@ -68,6 +68,6 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(7751)(roleStyle));
+  const merged = Object.assign(tmp6(7882)(roleStyle));
   return obj;
 };

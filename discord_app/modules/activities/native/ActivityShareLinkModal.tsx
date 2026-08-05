@@ -130,7 +130,7 @@ export default function ActivityShareLinkModal(applicationId) {
               dependencyMap = 1;
               c3 = 1;
               let obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(outer1_9.map(outer1_0(6162).getOrResolveChannelIdFromDestinationId));
+              obj1[0] = Promise.all(outer1_9.map(outer1_0(7226).getOrResolveChannelIdFromDestinationId));
               return obj1;
             } else {
               c3 = 3;
@@ -141,7 +141,7 @@ export default function ActivityShareLinkModal(applicationId) {
           throw arg1;
         } else if (arg0 !== 2) {
           closure_0 = arg1.filter(outer1_0(1351).isNotNullish);
-          closure_1 = outer1_0(13563).resolveActivityShareMessageContent(c3, name, closure_12);
+          closure_1 = outer1_0(13659).resolveActivityShareMessageContent(c3, name, closure_12);
           callback2(true);
           const item = closure_0.forEach((() => {
             let closure_0 = v3((arg0) => {
@@ -217,17 +217,17 @@ export default function ActivityShareLinkModal(applicationId) {
               return applyArgumentsResult;
             };
           })());
-          const obj5 = outer1_0(13563);
+          const obj5 = outer1_0(13659);
           let obj2 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
           const intl = outer1_0(1236).intl;
           const obj3 = { applicationName: null };
           obj3[0] = name.name;
           obj2[1] = intl.formatToPlainString(outer1_0(1236).t.jQULqL, obj3);
-          outer1_1(3894).open(obj2);
+          outer1_1(3986).open(obj2);
           callback(true, ensureGuildLoaded);
-          const obj6 = outer1_1(3894);
-          const result = outer1_0(13561).closeActivityShareLinkModal();
-          const obj9 = outer1_0(13561);
+          const obj6 = outer1_1(3986);
+          const result = outer1_0(13657).closeActivityShareLinkModal();
+          const obj9 = outer1_0(13657);
         }
         c3 = 3;
         obj = { value: null, done: true };

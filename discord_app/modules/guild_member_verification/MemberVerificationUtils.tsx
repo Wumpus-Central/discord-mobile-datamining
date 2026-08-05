@@ -15,19 +15,19 @@ export const isValidFormResponse = function isValidFormResponse(required) {
     if (null == response) {
       return false;
     } else {
-      if (require(4013) /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4013).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4013).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4013).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4013).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
-                return typeof response === "Object";
+      if (require(4105) /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
+        if (tmp4(4105).VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (tmp4(4105).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (tmp4(4105).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (tmp4(4105).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+                return typeof response === "number";
               } else {
                 return tmp4(1351).assertNever(field_type);
               }
             }
           }
-          let tmp2 = typeof response === "y";
-          if (typeof response !== "__FORMATJS_LISTFORMAT_DATA__") {
+          let tmp2 = typeof response === "string";
+          if (typeof response === "string") {
             tmp2 = "" !== response.trim();
           }
           return tmp2;

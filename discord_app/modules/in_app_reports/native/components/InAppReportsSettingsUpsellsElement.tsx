@@ -23,8 +23,8 @@ function SettingsUpsellsTableRow(arg0) {
   ({ title, disabledTitle, description } = arg0);
   const tmp = callback(React.useState(false), 2);
   dependencyMap = tmp[1];
-  importDefault(4620)(() => {
-    callback2(outer1_0(7701).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
+  importDefault(4711)(() => {
+    callback2(outer1_0(7834).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
   });
   const obj = {
     title,
@@ -34,12 +34,12 @@ function SettingsUpsellsTableRow(arg0) {
     onPress() {
       callback();
       dependencyMap(true);
-      callback2(outer1_0(7701).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
+      callback2(outer1_0(7834).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
     },
     icon: null
   };
-  obj[5] = callback2(require(9020) /* SettingsIcon */.SettingsIcon, {});
-  return callback2(importDefault(12424), obj);
+  obj[5] = callback2(require(5920) /* SettingsIcon */.SettingsIcon, {});
+  return callback2(importDefault(12555), obj);
 }
 ({ AnalyticEvents: error, UserSettingsSections: metroImportAll } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);

@@ -14,7 +14,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => "auto" === obj.rawPrefersReducedMotion);
   },
   onValueChange: function onReducedMotionSyncSettingValueChange(arg0) {
-    const obj = require(13521) /* setFontSize */;
+    const obj = require(13617) /* setFontSize */;
     let str = "auto";
     if (!arg0) {
       str = obj.systemPrefersReducedMotion;

@@ -23,7 +23,7 @@ createCacheKey[7] = { fontSize: 14, textAlign: "center", marginTop: 4, marginHor
 let obj2 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: require("Themes").colors.TEXT_STRONG };
 createCacheKey[8] = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+const obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
 const result = require("noop").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
 
 export default function TwoFASetupSuccess() {
@@ -46,88 +46,27 @@ export default function TwoFASetupSuccess() {
         const iter = (function*(arg0) {
           let c0;
           let c1;
-          if (c6 === 2) {
+          let closure_2 = tmp3;
+          c1 = tmp5;
+          ({ ticket: c0, credential: c1 } = c0);
+          yield "ct";
+          let c4 = 1;
+          const intl = callback(outer2_2[8]).intl;
+          yield callback(outer2_2[7]).finishRegisterWebAuthnCredential(intl.string(callback(outer2_2[8]).t["8H5RmH"]), callback, outer2_1);
+          if (2 === tmp8) {
+            c4 = 0;
+            outer1_1(body.body.message);
+            let c6 = 3;
+          } else if (arg0 === 1) {
             c6 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp7 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c6 = 2;
-              if (0 === c5) {
-                if (arg0 === 1) {
-                  c6 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  let closure_2 = tmp3;
-                  c1 = tmp5;
-                  c0 = undefined;
-                  c1 = undefined;
-                  ({ ticket: c0, credential: c1 } = c0);
-                  c5 = 1;
-                  c6 = 1;
-                  return { value: "ct", done: "Array" };
-                }
-              } else if (1 === tmp8) {
-                if (arg0 === 1) {
-                  c6 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  const obj1 = { value: null, done: true };
-                  obj1[0] = arg1;
-                  return obj1;
-                } else {
-                  let c4 = 1;
-                  const intl = callback(outer2_2[8]).intl;
-                  c5 = 3;
-                  c6 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = callback(outer2_2[7]).finishRegisterWebAuthnCredential(intl.string(callback(outer2_2[8]).t["8H5RmH"]), callback, outer2_1);
-                  return obj2;
-                }
-              } else {
-                if (2 === tmp8) {
-                  c4 = 0;
-                  outer1_1(body.body.message);
-                  c6 = 3;
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw arg1;
-                } else if (arg0 !== 2) {
-                  obj = outer2_1(outer2_2[9]);
-                  obj.close();
-                  c4 = 0;
-                }
-                c4 = 0;
-                c6 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
-              }
-            } catch (tmp19) {
-              body = tmp19;
-              if (tmp4 === c4) {
-                c6 = tmp2;
-                throw tmp19;
-              } else {
-                c5 = tmp;
-              }
-            }
+            throw arg1;
+          } else if (arg0 !== 2) {
+            const obj = outer2_1(outer2_2[9]);
+            obj.close();
+            c4 = 0;
           }
+          c4 = 0;
+          return arg1;
         })();
         iter.next();
         return iter;
@@ -162,13 +101,13 @@ export default function TwoFASetupSuccess() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
   const items = [callback2(closure_6, obj), , , , , , , ];
-  obj = { source: require(13842) /* registerAsset */, style: tmp.image };
+  obj = { source: require(13942) /* registerAsset */, style: tmp.image };
   items[1] = callback2(closure_7, obj);
-  let obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = require(1236) /* getSystemLocale */.intl;
   obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.Awk3Gw);
-  items[2] = callback2(require(4189) /* Text */.Text, obj1);
-  let obj2 = { style: tmp.successBody, children: null };
+  items[2] = callback2(require(4281) /* Text */.Text, obj1);
+  const obj2 = { style: tmp.successBody, children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj2[1] = intl2.string(require(1236) /* getSystemLocale */.t["0d1bXM"]);
   items[3] = callback2(require(1297) /* Button */.LegacyText, obj2);
@@ -186,7 +125,7 @@ export default function TwoFASetupSuccess() {
   } else {
     stringResult = string(t.NIFmCJ);
   }
-  const items1 = [callback2(require(4604) /* Button */.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }), ];
+  const items1 = [callback2(require(4695) /* Button */.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }), ];
   let tmp7Result = "" !== tmp5;
   if (tmp7Result) {
     const obj6 = { style: null, children: null };
@@ -201,5 +140,5 @@ export default function TwoFASetupSuccess() {
   items[7] = callback2(closure_6, { style: tmp.flex });
   obj[1] = items;
   obj7[0] = closure_9(closure_6, obj);
-  return callback2(require(13832) /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj7);
+  return callback2(require(13932) /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj7);
 };

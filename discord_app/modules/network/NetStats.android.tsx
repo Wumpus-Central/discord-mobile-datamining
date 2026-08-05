@@ -297,171 +297,96 @@ prototype["track"] = function track() {
 };
 prototype["getQueuedEvent"] = function getQueuedEvent() {
   return callback(function*() {
-    if (guildCount === 2) {
-      guildCount = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        guildCount = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            guildCount = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            guildCount = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const socket = tmp5;
-            let closure_4 = tmp2;
-            let callback;
-            let lib;
-            outer1_19();
-            let obj7 = outer1_1(outer1_2[13]);
-            c6 = 1;
-            guildCount = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = obj7.getAppFirstVisibleTimestamp();
-            return obj1;
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            guildCount = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            guildCount = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            callback = arg1;
-            let obj4 = callback(5726);
-            c6 = 2;
-            guildCount = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = obj4.getSession();
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          guildCount = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          guildCount = 3;
-          obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          lib = arg1;
-          const obj5 = { type: null, properties: null };
-          obj5[0] = constants.APP_NETWORK_USAGE;
-          const obj6 = {};
-          const merged = Object.assign(callback(5736).getDeviceMetadata());
-          const _Date = Date;
-          obj6.client_track_timestamp = Date.now();
-          let uuid;
-          if (lib != null) {
-            uuid = lib.uuid;
-          }
-          obj6.client_heartbeat_session_id = uuid;
-          obj = callback(5736);
-          obj6.load_id = obj.currentLoadId();
-          obj6.num_guilds = guildCount.getGuildCount();
-          obj6.was_authenticated = lib(9).wasAuthenticated;
-          obj6.did_background_app = lib(9).didBackgroundApp;
-          obj6.headless_task_ran = lib(9).extraProperties.headless_task_ran;
-          const ready = lib(9).ready;
-          obj6.ready_payload_duration_ms = ready.serializeEnd(callback);
-          let signalStrengthLevel;
-          if (signalStrengthLevel != null) {
-            signalStrengthLevel = signalStrengthLevel.signalStrengthLevel;
-          }
-          callback = signalStrengthLevel;
-          if (signalStrengthLevel == null) {
-            callback = undefined;
-          }
-          obj6.initial_signal_strength_level = callback;
-          signalStrengthLevel = closure_10.signalStrengthLevel;
-          lib = signalStrengthLevel;
-          if (signalStrengthLevel == null) {
-            lib = undefined;
-          }
-          obj6.final_signal_strength_level = lib;
-          let type;
-          if (closure_13 != null) {
-            type = closure_13.type;
-          }
-          let dependencyMap = type;
-          if (type == null) {
-            dependencyMap = undefined;
-          }
-          obj6.initial_network_type = dependencyMap;
-          obj6.final_network_type = closure_12.type;
-          let effectiveSpeed;
-          if (closure_13 != null) {
-            effectiveSpeed = closure_13.effectiveSpeed;
-          }
-          let c3 = effectiveSpeed;
-          if (effectiveSpeed == null) {
-            c3 = undefined;
-          }
-          obj6.initial_cellular_generation = c3;
-          obj6.final_cellular_generation = closure_12.effectiveSpeed;
-          obj6.is_network_roaming = closure_10.isNetworkRoaming;
-          obj6.cellular_receive_bytes = closure_10.cellularReceiveBytes;
-          obj6.cellular_send_bytes = closure_10.cellularSendBytes;
-          obj6.total_receive_bytes = closure_10.totalReceiveBytes;
-          obj6.total_send_bytes = closure_10.totalSendBytes;
-          obj6.uid_receive_bytes = closure_10.uidReceiveBytes;
-          obj6.uid_send_bytes = closure_10.uidSendBytes;
-          obj6.socket_bytes_received = closure_10.socketBytesReceived;
-          obj6.ota_bytes_received = closure_10.otaBytesReceived;
-          obj6.ota_num_requests = closure_10.otaNumRequests;
-          obj6.xhr_bytes_received = closure_10.xhrBytesReceived;
-          obj6.xhr_num_requests = closure_10.xhrNumRequests;
-          obj6.fresco_bytes_received = closure_10.frescoBytesReceived;
-          obj6.fresco_num_requests = closure_10.frescoNumRequests;
-          obj6.download_bytes_received = closure_10.downloadBytesReceived;
-          obj6.download_num_requests = closure_10.downloadNumRequests;
-          obj6.media_player_bytes_received = closure_10.mediaPlayerBytesReceived;
-          obj1 = callback(5735);
-          obj6.rtc_bytes = obj1.getRTCTotalBytes();
-          obj6.num_message_sends = closure_15;
-          let tmp56;
-          if (0 !== closure_15) {
-            tmp56 = closure_16;
-          }
-          obj6.max_message_send_duration = tmp56;
-          let tmp60;
-          if (0 !== closure_15) {
-            tmp60 = closure_17;
-          }
-          obj6.max_message_queue_length = tmp60;
-          obj6.num_message_send_fails = closure_18;
-          obj6.num_identifies = socket.getSocket().identifyCount;
-          const renderLatestMessages = lib(9).renderLatestMessages;
-          obj6.render_latest_messages_duration_ms = renderLatestMessages.serialize(callback);
-          obj5[1] = obj6;
-          guildCount = 3;
-          obj7 = { value: null, done: true };
-          obj7[0] = obj5;
-          return obj7;
-        }
-      } catch (tmp77) {
-        guildCount = tmp;
-        throw tmp77;
-      }
+    let closure_4 = tmp2;
+    outer1_19();
+    const obj7 = outer1_1(outer1_2[13]);
+    let callback = yield obj7.getAppFirstVisibleTimestamp();
+    const obj4 = callback(6832);
+    let lib = yield obj4.getSession();
+    const obj5 = { type: null, properties: null };
+    obj5[0] = constants.APP_NETWORK_USAGE;
+    const obj6 = {};
+    const merged = Object.assign(callback(6843).getDeviceMetadata());
+    const _Date = Date;
+    obj6.client_track_timestamp = Date.now();
+    if (lib != null) {
+      const uuid = lib.uuid;
     }
+    obj6.client_heartbeat_session_id = uuid;
+    const obj = callback(6843);
+    obj6.load_id = obj.currentLoadId();
+    obj6.num_guilds = guildCount.getGuildCount();
+    obj6.was_authenticated = lib(9).wasAuthenticated;
+    obj6.did_background_app = lib(9).didBackgroundApp;
+    obj6.headless_task_ran = lib(9).extraProperties.headless_task_ran;
+    const ready = lib(9).ready;
+    obj6.ready_payload_duration_ms = ready.serializeEnd(callback);
+    if (signalStrengthLevel != null) {
+      signalStrengthLevel = signalStrengthLevel.signalStrengthLevel;
+    }
+    callback = signalStrengthLevel;
+    if (signalStrengthLevel == null) {
+      callback = undefined;
+    }
+    obj6.initial_signal_strength_level = callback;
+    signalStrengthLevel = closure_10.signalStrengthLevel;
+    lib = signalStrengthLevel;
+    if (signalStrengthLevel == null) {
+      lib = undefined;
+    }
+    obj6.final_signal_strength_level = lib;
+    if (closure_13 != null) {
+      const type = closure_13.type;
+    }
+    let dependencyMap = type;
+    if (type == null) {
+      dependencyMap = undefined;
+    }
+    obj6.initial_network_type = dependencyMap;
+    obj6.final_network_type = closure_12.type;
+    if (closure_13 != null) {
+      const effectiveSpeed = closure_13.effectiveSpeed;
+    }
+    let c3 = effectiveSpeed;
+    if (effectiveSpeed == null) {
+      c3 = undefined;
+    }
+    obj6.initial_cellular_generation = c3;
+    obj6.final_cellular_generation = closure_12.effectiveSpeed;
+    obj6.is_network_roaming = closure_10.isNetworkRoaming;
+    obj6.cellular_receive_bytes = closure_10.cellularReceiveBytes;
+    obj6.cellular_send_bytes = closure_10.cellularSendBytes;
+    obj6.total_receive_bytes = closure_10.totalReceiveBytes;
+    obj6.total_send_bytes = closure_10.totalSendBytes;
+    obj6.uid_receive_bytes = closure_10.uidReceiveBytes;
+    obj6.uid_send_bytes = closure_10.uidSendBytes;
+    obj6.socket_bytes_received = closure_10.socketBytesReceived;
+    obj6.ota_bytes_received = closure_10.otaBytesReceived;
+    obj6.ota_num_requests = closure_10.otaNumRequests;
+    obj6.xhr_bytes_received = closure_10.xhrBytesReceived;
+    obj6.xhr_num_requests = closure_10.xhrNumRequests;
+    obj6.fresco_bytes_received = closure_10.frescoBytesReceived;
+    obj6.fresco_num_requests = closure_10.frescoNumRequests;
+    obj6.download_bytes_received = closure_10.downloadBytesReceived;
+    obj6.download_num_requests = closure_10.downloadNumRequests;
+    obj6.media_player_bytes_received = closure_10.mediaPlayerBytesReceived;
+    const obj1 = callback(6842);
+    obj6.rtc_bytes = obj1.getRTCTotalBytes();
+    obj6.num_message_sends = closure_15;
+    if (0 !== closure_15) {
+      const tmp56 = closure_16;
+    }
+    obj6.max_message_send_duration = tmp56;
+    if (0 !== closure_15) {
+      const tmp60 = closure_17;
+    }
+    obj6.max_message_queue_length = tmp60;
+    obj6.num_message_send_fails = closure_18;
+    obj6.num_identifies = socket.getSocket().identifyCount;
+    const renderLatestMessages = lib(9).renderLatestMessages;
+    obj6.render_latest_messages_duration_ms = renderLatestMessages.serialize(callback);
+    obj5[1] = obj6;
+    return obj5;
   })();
 };
 let closure_20 = new EventTracker();

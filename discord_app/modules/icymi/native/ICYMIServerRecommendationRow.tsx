@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getSystemLocale from "getSystemLocale";
-import { View } from "module_8189";
+import { View } from "module_8835";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import closure_8 from "createGuildRecordFromRust";
 import filterStaffGuild from "filterStaffGuild";
@@ -42,14 +42,14 @@ function CutoutGuildBanner(guild) {
   const memo = React.useMemo(() => guild(outer1_2[13]).fromClientDiscoverableGuild(guild), items1);
   obj = { cutouts: null, children: null };
   obj1 = { shape: null, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
-  obj1[0] = guild(7974).CutoutShape.RoundedRect;
+  obj1[0] = guild(8103).CutoutShape.RoundedRect;
   const items2 = [obj1];
   obj[0] = items2;
   if (null != guild.banner) {
     const obj2 = { style: null, source: null, resizeMode: "cover" };
     obj2[0] = tmp.bannerImage;
     obj2[1] = animatableSourceWithFallback;
-    let tmp12Result = tmp12(tmp13(5145), obj2);
+    let tmp12Result = tmp12(tmp13(5236), obj2);
   } else {
     const obj3 = { style: null };
     const items3 = [, ];
@@ -58,13 +58,13 @@ function CutoutGuildBanner(guild) {
     tmp12Result = tmp12(tmp11, obj3);
   }
   obj[1] = tmp12Result;
-  const items4 = [closure_14(importDefault(7974), obj), ];
+  const items4 = [closure_14(importDefault(8103), obj), ];
   const obj4 = { style: tmp.guildIcon, guild: memo, size: null, animate: null };
   const tmp10 = closure_15;
-  const tmp14 = importDefault(7974);
-  obj4[2] = guild(5570).GuildIconSizes.LARGE;
+  const tmp14 = importDefault(8103);
+  obj4[2] = guild(5661).GuildIconSizes.LARGE;
   obj4[3] = !stateFromStores;
-  items4[1] = closure_14(importDefault(5570), obj4);
+  items4[1] = closure_14(importDefault(5661), obj4);
   obj[1] = items4;
   return tmp10(View, obj);
 }
@@ -107,18 +107,18 @@ function FeaturedServer(guild) {
             let obj4 = tmp2;
             obj4 = undefined;
             outer1_1(true);
-            outer1_1(8189).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
-            const obj17 = outer1_1(8189);
+            outer1_1(8835).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
+            const obj17 = outer1_1(8835);
             let obj1 = { itemId: null, itemType: "recommended_guilds", actionParameters: null };
             obj1[0] = outer1_0.id;
             obj1[2] = { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "join", actionDestinationType: "guild" };
-            outer1_1(8189).feedItemActioned(obj1);
-            const obj18 = outer1_1(8189);
+            outer1_1(8835).feedItemActioned(obj1);
+            const obj18 = outer1_1(8835);
             const items = [outer1_0.id];
             dependencyMap = 1;
             c3 = 1;
             let obj2 = { value: null, done: false };
-            obj2[0] = outer1_1(8189).gravityJoinGuild(items, "recommended_guilds");
+            obj2[0] = outer1_1(8835).gravityJoinGuild(items, "recommended_guilds");
             return obj2;
           }
         } else if (1 === tmp5) {
@@ -139,9 +139,9 @@ function FeaturedServer(guild) {
             obj6[2] = outer1_10.LIST_ITEM;
             obj5[0] = obj6;
             obj4[0] = obj5;
-            let obj7 = outer1_1(8189);
+            let obj7 = outer1_1(8835);
             const result = obj7.addedRecommendedGuild();
-            let obj8 = outer1_1(8189);
+            let obj8 = outer1_1(8835);
             const dehydrated = obj8.fetchDehydrated({ isReloading: true, forceRefresh: true });
             dehydrated.then(outer1_4(function*() {
               if (dependencyMap === 2) {
@@ -174,7 +174,7 @@ function FeaturedServer(guild) {
                       v0 = 1;
                       dependencyMap = 1;
                       const obj1 = { value: null, done: false };
-                      obj1[0] = v0(8189).reloadICYMITab();
+                      obj1[0] = v0(8835).reloadICYMITab();
                       return obj1;
                     }
                   } else if (1 === tmp4) {
@@ -187,7 +187,7 @@ function FeaturedServer(guild) {
                       obj2[0] = arg1;
                       return obj2;
                     } else {
-                      obj2 = v0(8189);
+                      obj2 = v0(8835);
                       v0 = 2;
                       dependencyMap = 1;
                       const obj3 = { value: null, done: false };
@@ -203,7 +203,7 @@ function FeaturedServer(guild) {
                     obj4[0] = arg1;
                     return obj4;
                   } else {
-                    obj = v0(8189);
+                    obj = v0(8835);
                     const recommendedGuilds = obj.getRecommendedGuilds();
                     dependencyMap = 3;
                     return { value: "HermesInternal", done: null };
@@ -214,7 +214,7 @@ function FeaturedServer(guild) {
                 }
               }
             }));
-            let obj9 = outer1_1(5109);
+            let obj9 = outer1_1(5200);
             obj7 = {};
             const merged = Object.assign(obj4);
             dependencyMap = 2;
@@ -224,7 +224,7 @@ function FeaturedServer(guild) {
             return obj8;
           } else {
             callback(false);
-            obj1 = outer1_1(3894);
+            obj1 = outer1_1(3986);
             obj9 = { key: "RecommeendedServersRow", content: null };
             const intl = outer1_0(1236).intl;
             obj9[1] = intl.string(outer1_0(1236).t.CG4Hks);
@@ -258,7 +258,7 @@ function FeaturedServer(guild) {
   obj = { style: tmp.featuredServerContainer, children: null };
   const items2 = [callback3(CutoutGuildBanner, { guild }), , ];
   obj = { style: tmp.featuredServerInnerContainer, children: null };
-  const items3 = [callback3(guild(4189).Text, { maxFontSizeMultiplier: 1, lineClamp: 1, style: tmp.featuredServerTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), callback3(guild(4189).Text, { maxFontSizeMultiplier: 1, lineClamp: 3, variant: "text-xs/normal", color: "text-default", children: guild.description })];
+  const items3 = [callback3(guild(4281).Text, { maxFontSizeMultiplier: 1, lineClamp: 1, style: tmp.featuredServerTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), callback3(guild(4281).Text, { maxFontSizeMultiplier: 1, lineClamp: 3, variant: "text-xs/normal", color: "text-default", children: guild.description })];
   obj[1] = items3;
   items2[1] = callback4(View, obj);
   let obj3 = { style: tmp.buttonContainer, children: null };
@@ -273,7 +273,7 @@ function FeaturedServer(guild) {
   }
   obj4[2] = stringResult;
   obj4[4] = callback;
-  obj3[1] = callback3(guild(4604).Button, obj4);
+  obj3[1] = callback3(guild(4695).Button, obj4);
   items2[2] = callback3(View, obj3);
   obj[1] = items2;
   return callback4(View, obj);
@@ -289,8 +289,8 @@ function RecommendedGuildsRow(discoverableGuilds) {
     obj[1] = importDefault(712).space.PX_16;
     obj[2] = tmp;
     obj[4] = 200 + importDefault(712).space.PX_16;
-    tmp2 = callback3(importDefault(9250), obj);
-    const tmp6 = importDefault(9250);
+    tmp2 = callback3(importDefault(8337), obj);
+    const tmp6 = importDefault(8337);
   }
   return tmp2;
 }
@@ -333,17 +333,17 @@ export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRo
     obj1[0] = tmp3.title;
     const intl = tmp(1236).intl;
     obj1[3] = intl.string(tmp(1236).t.lv1tce);
-    const items1 = [callback3(tmp(4189).Text, obj1), , ];
+    const items1 = [callback3(tmp(4281).Text, obj1), , ];
     const obj2 = { style: null, variant: "heading-sm/normal", color: "text-muted", children: null };
     obj2[0] = tmp3.subtitle;
     const intl2 = tmp(1236).intl;
     obj2[3] = intl2.string(tmp(1236).t.x4OezN);
-    items1[1] = callback3(tmp(4189).Text, obj2);
+    items1[1] = callback3(tmp(4281).Text, obj2);
     const obj3 = { discoverableGuilds: null };
     obj3[0] = stateFromStoresArray;
     items1[2] = callback3(RecommendedGuildsRow, obj3);
     obj[1] = items1;
-    const items2 = [callback4(View, obj), callback3(tmp(15383).Separator, {})];
+    const items2 = [callback4(View, obj), callback3(tmp(15480).Separator, {})];
     obj[0] = items2;
     tmp4 = callback4(closure_16, obj);
   }

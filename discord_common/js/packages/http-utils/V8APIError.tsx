@@ -36,7 +36,7 @@ class APIError extends Error {
     if (importDefault === undefined) {
       str = "An unexpected error occurred.";
     }
-    if (typeof global === "y") {
+    if (typeof global === "string") {
       tmp4 = arg1;
       obj = { message: null, code: null };
       obj[0] = global;
@@ -117,7 +117,7 @@ prototype["hasFieldErrors"] = function hasFieldErrors() {
 };
 prototype["getFieldErrors"] = function getFieldErrors(ASSET) {
   let arr = ASSET;
-  if (typeof ASSET !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof ASSET === "string") {
     const items = [ASSET];
     arr = items;
   }

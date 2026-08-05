@@ -1,6 +1,6 @@
 // discord_app/modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx
 import importAllResult from "SPRING_CONFIG";
-import { View } from "module_10065";
+import { View } from "module_11584";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -17,7 +17,7 @@ let unpackModuleId;
 const require = arg1;
 function handleInviteDisabledPress() {
   const lazyResult = importAllResult.lazy(() => callback(paths[12])(paths[11], paths.paths));
-  require(4534) /* useAlertStore */.openAlert("invites-disabled", callback(lazyResult, {}));
+  require(4625) /* useAlertStore */.openAlert("invites-disabled", callback(lazyResult, {}));
 }
 function GuildSearchAndInvite(guildId) {
   let onPressIn;
@@ -154,14 +154,14 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
     const channels = outer1_6.getChannels(guild.id);
     return guild(outer1_2[29]).shouldRenderInvite(channels, guild);
   }, items1);
-  const tmp2 = importDefault(8259)(() => {
+  const tmp2 = importDefault(8302)(() => {
     const channelId = outer1_8.getChannelId(guild.id);
     const channels = outer1_6.getChannels(guild.id);
     const result = guild(outer1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, outer1_11.GUILD_HEADER);
   });
-  const shouldShowInvitesDisabledNotif = guild(11484).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(11484);
-  const tmp5 = importDefault(11487)(guild);
+  const shouldShowInvitesDisabledNotif = guild(11657).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(11657);
+  const tmp5 = importDefault(11660)(guild);
   obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {
     flag2 = tmp4;

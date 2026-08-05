@@ -19,7 +19,7 @@ export default function UserSettingsVoiceOverlay() {
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl3.string(require(1236) /* getSystemLocale */.t.Wfoivk);
   obj[2] = stateFromStores;
-  obj[3] = importDefault(10799).setEnabled;
-  obj[2] = jsx(require(5559) /* TableSwitchRow */.TableSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null });
-  return jsx(require(10779) /* UserSettingsVoice */.UserSettingsTableRowGroup, { label: null, subLabel: null, value: null, onValueChange: null });
+  obj[3] = importDefault(10752).setEnabled;
+  obj[2] = jsx(require(5650) /* TableSwitchRow */.TableSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null });
+  return jsx(require(10740) /* UserSettingsVoice */.UserSettingsTableRowGroup, { label: null, subLabel: null, value: null, onValueChange: null });
 };

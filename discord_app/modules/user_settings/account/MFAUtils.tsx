@@ -69,7 +69,7 @@ export const useMFAAvailability = function useMFAAvailability() {
     }
     return verified;
   });
-  if (require(9208) /* _crypto */.hasCrypto) {
+  if (require(8289) /* _crypto */.hasCrypto) {
     if (false === stateFromStores) {
       let AVAILABLE = obj.UNAVAILABLE_UNVERIFIED;
     } else {

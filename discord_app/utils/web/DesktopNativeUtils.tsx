@@ -33,84 +33,14 @@ function _getFileData() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const dependencyMap = tmp4;
-              let callback = tmp4;
-              let closure_0;
-              callback = undefined;
-              const _fetch = fetch;
-              const _Request = Request;
-              const request = new Request(closure_0, { method: "GET", mode: "cors" });
-              c3 = 1;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = fetch(request);
-              return obj1;
-            }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              callback(38)(200 === closure_0.status, "Data fetch unsuccessful");
-              c3 = 2;
-              c4 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = closure_0.arrayBuffer();
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            callback = arg1;
-            callback(38)(null != callback, "Data is null");
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = callback;
-            return obj;
-          }
-        } catch (tmp25) {
-          c4 = tmp;
-          throw tmp25;
-        }
-      }
+      const _fetch = fetch;
+      const _Request = Request;
+      const request = new Request(closure_0, { method: "GET", mode: "cors" });
+      closure_0 = yield fetch(request);
+      callback(38)(200 === closure_0.status, "Data fetch unsuccessful");
+      callback = yield closure_0.arrayBuffer();
+      callback(38)(null != callback, "Data is null");
+      return callback;
     })();
   });
   const _getFileData = tmp;
@@ -171,7 +101,7 @@ function normalizeRunningGame(id) {
   obj[17] = windowHandle;
   let UNKNOWN = id.fullscreenType;
   if (UNKNOWN == null) {
-    UNKNOWN = require(4125) /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
+    UNKNOWN = require(4217) /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
   }
   obj[18] = UNKNOWN;
   let flag = id.isLauncher;
@@ -256,58 +186,9 @@ obj.getSetting = function getSetting(arg0, arg1) {
   let closure_0 = arg0;
   let closure_1 = arg1;
   return callback2(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const settings = outer1_6.settings;
-            c1 = 1;
-            c0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = settings.get(c0, c1);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp8) {
-        c0 = tmp;
-        throw tmp8;
-      }
-    }
+    const settings = outer1_6.settings;
+    yield settings.get(c0, c1);
+    return arg1;
   })();
 };
 obj.beforeUnload = function beforeUnload() {
@@ -339,7 +220,7 @@ obj.beforeUnload = function beforeUnload() {
     let supportsFeatureResult = window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
     if (supportsFeatureResult) {
       const Storage = require(595) /* Storage */.Storage;
-      supportsFeatureResult = true !== Storage.get(require(5202) /* DomainMigrationEventType */.DOMAIN_MIGRATION_SUCCESS_KEY);
+      supportsFeatureResult = true !== Storage.get(require(5293) /* DomainMigrationEventType */.DOMAIN_MIGRATION_SUCCESS_KEY);
     }
     if (supportsFeatureResult) {
       supportsFeatureResult = self.supportsFeature(NativeFeatures.USER_DATA_CACHE);
@@ -360,7 +241,7 @@ obj.inputEventRegister = function inputEventRegister(parsed, arr, arg2, arg3) {
     let tmp2;
     let tmp3;
     [tmp, tmp2, tmp3] = arg0;
-    if (typeof tmp3 === "y") {
+    if (typeof tmp3 === "string") {
       const items = [tmp, tmp2, tmp3];
       let items1 = items;
     } else {
@@ -513,7 +394,7 @@ obj.setObserverDebugCallback = function setObserverDebugCallback(arg0, NONE, arg
 };
 obj.clearObserverDebugCallback = function clearObserverDebugCallback() {
   const discordUtils = this.getDiscordUtils();
-  const result = discordUtils.setObserverDebugCallback(null, require(4227) /* GameTheme */.GameDetectionDebugLevel.NONE, 0);
+  const result = discordUtils.setObserverDebugCallback(null, require(4319) /* GameTheme */.GameDetectionDebugLevel.NONE, 0);
 };
 obj.shouldDisplayNotifications = function shouldDisplayNotifications() {
   const discordUtils = this.getDiscordUtils();
@@ -600,7 +481,7 @@ obj.setBadge = function setBadge(arg0) {
     let tmpResult = tmp(500);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(5203).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(5294).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       tmpResult = tmp(500);
       if ("linux" === tmpResult.getPlatformName()) {
@@ -617,7 +498,7 @@ obj.setBadge = function setBadge(arg0) {
 obj.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
   if (require(500) /* set */.isPlatformEmbedded) {
     const self = this;
-    this.sendIPC(require(5203) /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
+    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
   }
 };
 obj.setThumbarButtons = function setThumbarButtons(arg0, arg1) {
@@ -701,7 +582,7 @@ obj.bounceDock = function bounceDock(arg0) {
 obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
   if (require(500) /* set */.isPlatformEmbedded) {
     const self = this;
-    this.sendIPC(require(5203) /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
+    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
   }
 };
 Object.defineProperty(obj, "architecture", {
@@ -782,7 +663,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
             closure_1 = undefined;
             combined = undefined;
             outer1_1(38)(outer1_0(500).isPlatformEmbedded, "Copy image method called outside native app");
-            outer1_1(38)(typeof outer1_6.clipboard.copyImage === "fileFinishedImporting", "Copy image not supported");
+            outer1_1(38)(typeof outer1_6.clipboard.copyImage === "function", "Copy image not supported");
             combined = 1;
             c3 = 1;
             const obj1 = { value: null, done: false };
@@ -799,7 +680,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
           return obj;
         } else {
           closure_0 = arg1;
-          closure_1 = outer1_0(5204).decideFileExtension(closure_0, closure_1);
+          closure_1 = outer1_0(5295).decideFileExtension(closure_0, closure_1);
           if (null == closure_1) {
             combined = closure_0;
             const clipboard = outer1_6.clipboard;
@@ -809,7 +690,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
           }
           const _HermesInternal = HermesInternal;
           combined = "image." + closure_1;
-          const obj5 = outer1_0(5204);
+          const obj5 = outer1_0(5295);
         }
       } catch (tmp22) {
         c3 = tmp;
@@ -883,7 +764,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(closure_0, contentType) {
   if (null != closure_0) {
     if (require(500) /* set */.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5204).decideFileExtension(closure_0, contentType);
+      const decideFileExtensionResult = tmp(5295).decideFileExtension(closure_0, contentType);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set1.has(decideFileExtensionResult);
@@ -996,10 +877,10 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
             const outer1_4 = Buffer.from(outer1_3);
             const Storage2 = outer1_0(outer1_2[6]).Storage;
             let outer1_5 = Storage2.get(outer1_17);
-            if (typeof outer1_5 !== "y") {
+            if (typeof outer1_5 !== "string") {
               outer1_5 = undefined;
             }
-            if (typeof outer1_6.fileManager.saveWithDialog2 === "fileFinishedImporting") {
+            if (typeof outer1_6.fileManager.saveWithDialog2 === "function") {
               const fileManager = outer1_6.fileManager;
               c3 = outer1_5;
               if (outer1_5 == null) {
@@ -1207,62 +1088,13 @@ obj.downloadMLModelFile = function downloadMLModelFile(arg0, arg1, arg2) {
   let closure_1 = arg1;
   let closure_2 = arg2;
   return callback2(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === v02) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            v02(outer1_2[3])(v0(outer1_2[5]).isPlatformEmbedded, "Download ML model file method called outside native app");
-            const tmp13 = v02(outer1_2[3]);
-            const obj6 = v02(outer1_2[12]);
-            v02(outer1_2[3])(null != v02(outer1_2[12]).toURLSafe(v0), "Could not download ML model, fileSrc was not a valid path");
-            const fileManager = outer1_6.fileManager;
-            v02 = 1;
-            v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.maybeDownloadMLModelFile(v0, v02, outer1_2);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp5) {
-        v0 = tmp;
-        throw tmp5;
-      }
-    }
+    v02(outer1_2[3])(v0(outer1_2[5]).isPlatformEmbedded, "Download ML model file method called outside native app");
+    const tmp13 = v02(outer1_2[3]);
+    const obj6 = v02(outer1_2[12]);
+    v02(outer1_2[3])(null != v02(outer1_2[12]).toURLSafe(v0), "Could not download ML model, fileSrc was not a valid path");
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.maybeDownloadMLModelFile(v0, v02, outer1_2);
+    return arg1;
   })();
 };
 obj.stopMLModelDownloads = function stopMLModelDownloads() {
@@ -1270,120 +1102,22 @@ obj.stopMLModelDownloads = function stopMLModelDownloads() {
   fileManager.stopMLModelDownloads();
 };
 obj.canCheckMLModelFilesExist = function canCheckMLModelFilesExist() {
-  return typeof DiscordNative.fileManager.checkMLModelFilesExist === "fileFinishedImporting";
+  return typeof DiscordNative.fileManager.checkMLModelFilesExist === "function";
 };
 obj.checkMLModelFilesExist = function checkMLModelFilesExist(c0) {
   let closure_0 = c0;
   return callback2(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const fileManager = outer1_6.fileManager;
-            c1 = 1;
-            c0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.checkMLModelFilesExist(c0);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp7) {
-        c0 = tmp;
-        throw tmp7;
-      }
-    }
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.checkMLModelFilesExist(c0);
+    return arg1;
   })();
 };
 obj.cleanupUnusedMLModelFiles = function cleanupUnusedMLModelFiles(c0) {
   let closure_0 = c0;
   return callback2(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const fileManager = outer1_6.fileManager;
-            c1 = 1;
-            c0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.cleanupUnusedMLModelFiles(c0);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp7) {
-        c0 = tmp;
-        throw tmp7;
-      }
-    }
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.cleanupUnusedMLModelFiles(c0);
+    return arg1;
   })();
 };
 obj.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
@@ -1391,179 +1125,32 @@ obj.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
   let closure_1 = arg1;
   let closure_2 = arg2;
   return callback2(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === v02) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            v02(outer1_2[3])(v0(outer1_2[5]).isPlatformEmbedded, "Download clips file method called outside native app");
-            const tmp13 = v02(outer1_2[3]);
-            const obj6 = v02(outer1_2[12]);
-            v02(outer1_2[3])(null != v02(outer1_2[12]).toURLSafe(v0), "Could not download clips file, fileSrc was not a valid path");
-            const fileManager = outer1_6.fileManager;
-            v02 = 1;
-            v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.maybeDownloadClipsFile(v0, v02, outer1_2);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp5) {
-        v0 = tmp;
-        throw tmp5;
-      }
-    }
+    v02(outer1_2[3])(v0(outer1_2[5]).isPlatformEmbedded, "Download clips file method called outside native app");
+    const tmp13 = v02(outer1_2[3]);
+    const obj6 = v02(outer1_2[12]);
+    v02(outer1_2[3])(null != v02(outer1_2[12]).toURLSafe(v0), "Could not download clips file, fileSrc was not a valid path");
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.maybeDownloadClipsFile(v0, v02, outer1_2);
+    return arg1;
   })();
 };
 obj.canCheckClipsFilesExist = function canCheckClipsFilesExist() {
-  return typeof DiscordNative.fileManager.checkClipsFilesExist === "fileFinishedImporting";
+  return typeof DiscordNative.fileManager.checkClipsFilesExist === "function";
 };
 obj.checkClipsFilesExist = function checkClipsFilesExist(c0) {
   let closure_0 = c0;
   return callback2(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const fileManager = outer1_6.fileManager;
-            c1 = 1;
-            c0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.checkClipsFilesExist(c0);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp7) {
-        c0 = tmp;
-        throw tmp7;
-      }
-    }
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.checkClipsFilesExist(c0);
+    return arg1;
   })();
 };
 obj.cleanupUnusedClipsFiles = function cleanupUnusedClipsFiles(c0) {
   let closure_0 = c0;
   return callback2(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const fileManager = outer1_6.fileManager;
-            c1 = 1;
-            c0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.cleanupUnusedClipsFiles(c0);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp7) {
-        c0 = tmp;
-        throw tmp7;
-      }
-    }
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.cleanupUnusedClipsFiles(c0);
+    return arg1;
   })();
 };
 obj.getClipsDataDirSync = function getClipsDataDirSync() {
@@ -1582,119 +1169,21 @@ obj.downloadOpenH264 = function downloadOpenH264(arg0, arg1, arg2, arg3) {
   let closure_2 = arg2;
   let _slicedToArray = arg3;
   return callback2(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === v02) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            v02(outer1_2[3])(v0(outer1_2[5]).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
-            const tmp13 = v02(outer1_2[3]);
-            const obj6 = v02(outer1_2[12]);
-            v02(outer1_2[3])(null != v02(outer1_2[12]).toURLSafe(v0), "Could not download OpenH264, fileSrc was not a valid path");
-            const fileManager = outer1_6.fileManager;
-            v02 = 1;
-            v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.maybeDownloadOpenH264(v0, v02, outer1_2, outer1_3);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp5) {
-        v0 = tmp;
-        throw tmp5;
-      }
-    }
+    v02(outer1_2[3])(v0(outer1_2[5]).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
+    const tmp13 = v02(outer1_2[3]);
+    const obj6 = v02(outer1_2[12]);
+    v02(outer1_2[3])(null != v02(outer1_2[12]).toURLSafe(v0), "Could not download OpenH264, fileSrc was not a valid path");
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.maybeDownloadOpenH264(v0, v02, outer1_2, outer1_3);
+    return arg1;
   })();
 };
 obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(c0) {
   let closure_0 = c0;
   return callback2(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const fileManager = outer1_6.fileManager;
-            c1 = 1;
-            c0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileManager.cleanupUnusedOpenH264Files(c0);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp7) {
-        c0 = tmp;
-        throw tmp7;
-      }
-    }
+    const fileManager = outer1_6.fileManager;
+    yield fileManager.cleanupUnusedOpenH264Files(c0);
+    return arg1;
   })();
 };
 obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
@@ -1710,17 +1199,17 @@ obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
 };
 obj.canCopyImage = function canCopyImage(closure_0) {
   if (require(500) /* set */.isPlatformEmbedded) {
-    if (typeof DiscordNative.clipboard.copyImage === "disabledUntil") {
+    if (typeof DiscordNative.clipboard.copyImage !== "function") {
       return false;
     } else {
       if (null != tmp) {
-        const decideFileExtensionResult = tmp2(5204).decideFileExtension(tmp, undefined);
+        const decideFileExtensionResult = tmp2(5295).decideFileExtension(tmp, undefined);
         if (null != decideFileExtensionResult) {
           if (!set.has(decideFileExtensionResult)) {
             return false;
           }
         }
-        const tmp2Result = tmp2(5204);
+        const tmp2Result = tmp2(5295);
       }
       return true;
     }
@@ -1802,7 +1291,7 @@ obj.isIPCReady = function isIPCReady() {
       }
       let tmp4 = null != ipc;
       if (tmp4) {
-        tmp4 = typeof tmp.ipc.send === "fileFinishedImporting";
+        tmp4 = typeof tmp.ipc.send === "function";
       }
       return tmp4;
     } catch (err) {
@@ -1894,150 +1383,20 @@ obj.flashFrame = function flashFrame(arg0) {
 };
 obj.webAuthnRegister = function webAuthnRegister(closure_0) {
   return callback2(function*() {
-    if (c2 === 2) {
-      c2 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = tmp4;
-            const nativeModules = outer1_6.nativeModules;
-            c1 = 1;
-            c2 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = nativeModules.ensureModule("discord_webauthn");
-            return obj1;
-          }
-        } else if (1 === tmp4) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            const webAuthn = outer1_6.webAuthn;
-            c1 = 2;
-            c2 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = webAuthn.webAuthnRegister(closure_0);
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          c2 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp9) {
-        c2 = tmp;
-        throw tmp9;
-      }
-    }
+    const nativeModules = outer1_6.nativeModules;
+    yield nativeModules.ensureModule("discord_webauthn");
+    const webAuthn = outer1_6.webAuthn;
+    yield webAuthn.webAuthnRegister(closure_0);
+    return arg1;
   })();
 };
 obj.webAuthnAuthenticate = function webAuthnAuthenticate(closure_0) {
   return callback2(function*() {
-    if (c2 === 2) {
-      c2 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = tmp4;
-            const nativeModules = outer1_6.nativeModules;
-            c1 = 1;
-            c2 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = nativeModules.ensureModule("discord_webauthn");
-            return obj1;
-          }
-        } else if (1 === tmp4) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            const webAuthn = outer1_6.webAuthn;
-            c1 = 2;
-            c2 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = webAuthn.webAuthnAuthenticate(closure_0);
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          c2 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp9) {
-        c2 = tmp;
-        throw tmp9;
-      }
-    }
+    const nativeModules = outer1_6.nativeModules;
+    yield nativeModules.ensureModule("discord_webauthn");
+    const webAuthn = outer1_6.webAuthn;
+    yield webAuthn.webAuthnAuthenticate(closure_0);
+    return arg1;
   })();
 };
 obj.minimize = function minimize(arg0) {
@@ -2087,10 +1446,10 @@ obj.close = function close(arg0) {
   _window.close(arg0);
 };
 obj.clearNavigationHistory = function clearNavigationHistory() {
-  backwardCompatSend(require(5203) /* IPCEvents */.IPCEvents.NAVIGATION_HISTORY_CLEAR);
+  backwardCompatSend(require(5294) /* IPCEvents */.IPCEvents.NAVIGATION_HISTORY_CLEAR);
 };
 obj.setAlwaysOnTop = function setAlwaysOnTop(arg0, arg1) {
-  if (typeof DiscordNative.window.setAlwaysOnTop !== "disabledUntil") {
+  if (typeof DiscordNative.window.setAlwaysOnTop === "function") {
     const _window = tmp.window;
     _window.setAlwaysOnTop(arg0, arg1);
   }
@@ -2126,7 +1485,7 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(outer1_0) {
           } else {
             let closure_0 = tmp2;
             closure_0 = false;
-            if (typeof outer1_6.window.isAlwaysOnTop === "fileFinishedImporting") {
+            if (typeof outer1_6.window.isAlwaysOnTop === "function") {
               const _window = outer1_6.window;
               c1 = 1;
               c2 = 1;
@@ -2162,7 +1521,7 @@ obj.showInactive = function showInactive(arg0) {
       showInactive = _window.showInactive;
     }
   }
-  if (typeof showInactive !== "disabledUntil") {
+  if (typeof showInactive === "function") {
     const _window2 = tmp.window;
     _window2.showInactive(arg0);
   }
@@ -2183,7 +1542,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(5203).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(5294).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }
@@ -2243,87 +1602,44 @@ obj.setChromiumSwitches = function setChromiumSwitches(arg0) {
 };
 obj.getOpenOnStart = function getOpenOnStart() {
   return callback2(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
+    const app = outer1_6.app;
+    const getOpenOnStart = app.getOpenOnStart;
+    if (getOpenOnStart != null) {
+      const openOnStart = getOpenOnStart();
+    }
+    yield openOnStart;
+    if (1 === tmp4) {
       if (arg0 === 1) {
+        let c3 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        c3 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        let closure_0 = arg1;
       }
+    } else if (arg0 === 1) {
+      c3 = 3;
+      throw arg1;
+    } else if (arg0 === 2) {
+      c3 = 3;
+      const obj3 = { value: null, done: true };
+      obj3[0] = arg1;
+      return obj3;
     } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp4;
-            const app = outer1_6.app;
-            const getOpenOnStart = app.getOpenOnStart;
-            let openOnStart;
-            if (getOpenOnStart != null) {
-              openOnStart = getOpenOnStart();
-            }
-            c2 = 2;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = openOnStart;
-            return obj1;
-          }
-        } else {
-          if (1 === tmp4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let closure_0 = arg1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_0 = arg1;
-            if (arg1 == null) {
-              settings = settings.settings;
-              c2 = 1;
-              c3 = 1;
-              obj = { value: null, done: false };
-              obj[0] = settings.get("OPEN_ON_STARTUP", true);
-              return obj;
-            }
-          }
-          c3 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = closure_0;
-          return obj4;
-        }
-      } catch (tmp11) {
-        c3 = tmp;
-        throw tmp11;
+      closure_0 = arg1;
+      if (arg1 == null) {
+        settings = settings.settings;
+        let c2 = 1;
+        c3 = 1;
+        const obj = { value: null, done: false };
+        obj[0] = settings.get("OPEN_ON_STARTUP", true);
+        return obj;
       }
     }
+    return closure_0;
   })();
 };
 obj.getGPUDriverVersions = function getGPUDriverVersions() {
@@ -2356,7 +1672,7 @@ obj.setBackgroundThrottling = function setBackgroundThrottling(arg0) {
   }
 };
 obj.setFocusable = function setFocusable(arg0, arg1) {
-  if (typeof DiscordNative.window.setFocusable !== "disabledUntil") {
+  if (typeof DiscordNative.window.setFocusable === "function") {
     const _window = tmp.window;
     _window.setFocusable(arg0, arg1);
   }
@@ -2848,7 +2164,7 @@ obj.crash = function crash(arg0) {
   return flag;
 };
 obj.setApplicationBackgroundColor = function setApplicationBackgroundColor(arg0) {
-  this.sendIPC(require(5203) /* IPCEvents */.IPCEvents.SETTINGS_UPDATE_BACKGROUND_COLOR, arg0);
+  this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.SETTINGS_UPDATE_BACKGROUND_COLOR, arg0);
 };
 obj.initializeExitHook = function initializeExitHook() {
   const initializeExitHook = this.getDiscordUtils().initializeExitHook;
@@ -2912,7 +2228,7 @@ obj.GetWindowFullscreenTypeByPid = function GetWindowFullscreenTypeByPid(arg0, a
     windowFullscreenTypeByPid = arg2;
   }
   if (windowFullscreenTypeByPid == null) {
-    windowFullscreenTypeByPid = require(4125) /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
+    windowFullscreenTypeByPid = require(4217) /* GuildThemeSourcePreference */.RunningProcessFullscreenType.UNKNOWN;
   }
   return windowFullscreenTypeByPid;
 };
@@ -2924,7 +2240,7 @@ obj.GetWindowFullscreenTypeExtraByPid = function GetWindowFullscreenTypeExtraByP
     }
     return windowFullscreenTypeExtraByPid;
   }
-  windowFullscreenTypeExtraByPid = { quns: require(4125) /* GuildThemeSourcePreference */.QueryUserNotificationState.QUNS_UNKNOWN };
+  windowFullscreenTypeExtraByPid = { quns: require(4217) /* GuildThemeSourcePreference */.QueryUserNotificationState.QUNS_UNKNOWN };
 };
 obj.SetGPUBoostEnabledByPid = function SetGPUBoostEnabledByPid(arg0, arg1) {
   const setGPUBoostEnabledByPid = this.getDiscordUtils().setGPUBoostEnabledByPid;
@@ -3218,7 +2534,7 @@ obj.appViewed = function appViewed() {
     const self = this;
     const _performance = performance;
     performance.mark("app_viewed");
-    this.sendIPC(require(5203) /* IPCEvents */.IPCEvents.APP_VIEWED);
+    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.APP_VIEWED);
   }
 };
 obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(arg0) {
@@ -3226,14 +2542,14 @@ obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(a
     const self = this;
     const _performance = performance;
     performance.mark("app_first_render_after_ready_payload");
-    this.sendIPC(require(5203) /* IPCEvents */.IPCEvents.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, arg0);
+    this.sendIPC(require(5294) /* IPCEvents */.IPCEvents.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, arg0);
   }
 };
 obj.appLoaded = function appLoaded() {
-  backwardCompatSend(require(5203) /* IPCEvents */.IPCEvents.APP_LOADED);
+  backwardCompatSend(require(5294) /* IPCEvents */.IPCEvents.APP_LOADED);
 };
 obj.indexLoadedAsync = function indexLoadedAsync() {
-  backwardCompatSend(require(5203) /* IPCEvents */.IPCEvents.APP_ASYNC_INDEX_TSX_LOADED);
+  backwardCompatSend(require(5294) /* IPCEvents */.IPCEvents.APP_ASYNC_INDEX_TSX_LOADED);
 };
 obj.setUseRequireModuleCache = function setUseRequireModuleCache(arg0) {
   let closure_13 = arg0;

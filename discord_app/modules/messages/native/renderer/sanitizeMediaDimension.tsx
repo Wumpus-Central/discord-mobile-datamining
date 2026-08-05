@@ -2,7 +2,7 @@
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
 
 export const sanitizeMediaDimension = function sanitizeMediaDimension(height) {
-  if (typeof height === "__REMOTEDEV__") {
+  if (typeof height !== "number") {
     let num = height;
   } else {
     const _Number = Number;

@@ -154,11 +154,11 @@ export default {
     }
     return tmp;
   },
-  isDiscordDirectAssetUrl(url) {
-    if (null == url) {
+  isDiscordDirectAssetUrl(shareURI) {
+    if (null == shareURI) {
       return false;
     } else {
-      const toURLSafeResult = importDefault(1467).toURLSafe(url);
+      const toURLSafeResult = importDefault(1467).toURLSafe(shareURI);
       let tmp9 = null != toURLSafeResult;
       if (tmp9) {
         const result = require(1351) /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();

@@ -22,12 +22,12 @@ export default function CrunchyrollLinkPreConnect() {
     navigation.push(outer1_4.ERROR);
   }, items1);
   obj = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: null, imgStyle: null, title: null, body: null, redirectDestination: null };
-  obj[3] = importDefault(8998);
+  obj[3] = importDefault(10489);
   obj[4] = callback().image;
   const intl = navigation(1236).intl;
   obj[5] = intl.string(navigation(1236).t.siPkNp);
   const intl2 = navigation(1236).intl;
   obj[6] = intl2.string(navigation(1236).t.oS4NEH);
   obj[7] = closure_6;
-  return jsx(navigation(8951).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: null, imgStyle: null, title: null, body: null, redirectDestination: null });
+  return jsx(navigation(10417).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: null, imgStyle: null, title: null, body: null, redirectDestination: null });
 };

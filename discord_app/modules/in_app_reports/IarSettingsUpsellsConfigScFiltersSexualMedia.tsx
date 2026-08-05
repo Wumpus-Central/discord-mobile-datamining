@@ -22,8 +22,8 @@ obj[4] = function onApply() {
   let explicitContentFriendDm;
   let explicitContentGuilds;
   let explicitContentNonFriendDm;
-  let obj = require(5884) /* resolveExplicitContentSettingWithDefaults */;
-  const explicitContentSettingOrDefault = require(5884) /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
+  let obj = require(5824) /* resolveExplicitContentSettingWithDefaults */;
+  const explicitContentSettingOrDefault = require(5824) /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
   obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   if (explicitContentGuilds === require(1306) /* create */.ExplicitContentRedaction.SHOW) {
@@ -41,9 +41,9 @@ obj[5] = function predicate() {
   let explicitContentFriendDm;
   let explicitContentGuilds;
   let explicitContentNonFriendDm;
-  const explicitContentSettingOrDefault = require(5884) /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
+  const explicitContentSettingOrDefault = require(5824) /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
-  const obj = require(5884) /* resolveExplicitContentSettingWithDefaults */;
+  const obj = require(5824) /* resolveExplicitContentSettingWithDefaults */;
   return explicitContentGuilds === require(1306) /* create */.ExplicitContentRedaction.SHOW || explicitContentFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW;
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");

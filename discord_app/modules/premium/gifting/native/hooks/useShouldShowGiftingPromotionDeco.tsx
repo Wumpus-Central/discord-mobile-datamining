@@ -4,7 +4,7 @@ import { PremiumTypes } from "GuildFeatures";
 const result = require("set").fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
 
 export default function useShouldShowGiftingPromotionDeco(arg0) {
-  const nativeGiftContext = require(8813) /* NativeGiftContextProvider */.useNativeGiftContext();
+  const nativeGiftContext = require(9529) /* NativeGiftContextProvider */.useNativeGiftContext();
   const claimableRewards = nativeGiftContext.claimableRewards;
   if (null != arg0) {
     let tmp4 = arg0 === PremiumTypes.TIER_2;

@@ -37,7 +37,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
     }
     return obj;
   }
-  const tmp4 = importDefault(9813)(id);
+  const tmp4 = importDefault(10049)(id);
   let collectibles;
   if (tmp4 != null) {
     collectibles = tmp4.collectibles;
@@ -80,7 +80,7 @@ export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpda
     const pendingAvatar = outer1_0.pendingAvatar;
     if (null === pendingAvatar) {
       obj.avatar = null;
-    } else if (pendingAvatar.assetOrigin === require(7956) /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
+    } else if (pendingAvatar.assetOrigin === require(8086) /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
       ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);
@@ -100,7 +100,7 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
     pendingAvatar = pendingAvatar.pendingAvatar;
     if (null === pendingAvatar) {
       obj.avatar = null;
-    } else if (pendingAvatar.assetOrigin === require(7956) /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
+    } else if (pendingAvatar.assetOrigin === require(8086) /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
       ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);

@@ -11,8 +11,8 @@ export default function getCoverImageFromActivity(assets, application_id) {
       assetImage = null;
       if (null != assets.assets.large_image) {
         const items = [closure_2, closure_2];
-        assetImage = require(7921) /* updateAssets */.getAssetImage(application_id, assets.assets.large_image, items);
-        const obj = require(7921) /* updateAssets */;
+        assetImage = require(8051) /* updateAssets */.getAssetImage(application_id, assets.assets.large_image, items);
+        const obj = require(8051) /* updateAssets */;
       }
     }
   }

@@ -15,11 +15,11 @@ function GuildRoleSubscriptionsSectionHeader() {
   obj = { variant: "eyebrow", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t["KzCF/6"]);
-  const items = [callback(require(4189) /* Text */.Text, obj), ];
+  const items = [callback(require(4281) /* Text */.Text, obj), ];
   obj = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl2.string(require(1236) /* getSystemLocale */.t["Y+ucR7"]);
-  items[1] = callback(require(4189) /* Text */.Text, obj);
+  items[1] = callback(require(4281) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(closure_3, obj);
 }
@@ -41,11 +41,11 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subs
 
 export default function UserSettingsGuildRoleSubscriptions() {
   const tmp = callback3();
-  importDefault(14246)({ forceRestore: true });
-  const tmp5 = importDefault(14247)({ ensureFresh: true });
-  let obj = require(14248) /* useFetchListingsForGuild */;
+  importDefault(14346)({ forceRestore: true });
+  const tmp5 = importDefault(14347)({ ensureFresh: true });
+  let obj = require(14348) /* useFetchListingsForGuild */;
   if (obj.useFetchListingsForSubscriptions(tmp5).loading) {
-    let tmp6Result = tmp6(importDefault(14251), {});
+    let tmp6Result = tmp6(importDefault(14351), {});
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;

@@ -42,7 +42,7 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   const obj1 = { style: tmp.header, children: null };
   const intl3 = tmp2(1236).intl;
   obj1[1] = intl3.string(require(1236) /* getSystemLocale */.t.kJwpBW);
-  const items = [callback(require(1297) /* Button */.LegacyText, obj1), callback(require(4189) /* Text */.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
+  const items = [callback(require(1297) /* Button */.LegacyText, obj1), callback(require(4281) /* Text */.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
   obj[1] = items;
-  return callback2(importDefault(4622), obj);
+  return callback2(importDefault(4713), obj);
 };

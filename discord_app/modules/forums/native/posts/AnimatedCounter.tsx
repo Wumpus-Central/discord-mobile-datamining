@@ -191,7 +191,7 @@ function BasicCounter(arg0) {
   ({ count, textStyle, textColor, textVariant, formatter } = arg0);
   const obj = { variant: textVariant, color: textColor, style: textStyle, children: null };
   obj[3] = formatter(count);
-  return callback(require(4189) /* Text */.Text, obj);
+  return callback(require(4281) /* Text */.Text, obj);
 }
 let c4 = importAllResult;
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
@@ -221,7 +221,7 @@ const memoResult = importAllResult.memo((textColor) => {
   }
   let defaultFormatter = textColor.formatter;
   if (defaultFormatter === undefined) {
-    defaultFormatter = require(10391) /* defaultFormatter */.defaultFormatter;
+    defaultFormatter = require(10117) /* defaultFormatter */.defaultFormatter;
   }
   if (animate) {
     let obj = { count: null, formatter: null, springConfig: null, textColor: null, textVariant: null, textStyle: null };

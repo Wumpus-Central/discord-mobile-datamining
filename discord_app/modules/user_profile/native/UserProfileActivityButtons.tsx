@@ -97,7 +97,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let analyticsLocations;
   let set;
   let JOINED = dependencyMap;
-  analyticsLocations = importDefault(5519)().analyticsLocations;
+  analyticsLocations = importDefault(5610)().analyticsLocations;
   set = { id: application.id, deeplink_uri: application.deepLinkUri };
   let obj = require(647) /* defaultAreStatesEqual */;
   const items = [analyticsLocations, createGuildRecordFromRust, closure_7, upsertRelationship, handleConnectionOpen, updateVoiceState, getUncachedChannelPermissions, updateActivities, filterPlayingActivities, onAction];
@@ -105,8 +105,8 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(12039).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(12039).ActivityJoinability.JOINED) {
+    if (stateFromStores !== tmp(12221).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(12221).ActivityJoinability.JOINED) {
         const intl2 = tmp(1236).intl;
         let stringResult = intl2.string(tmp(1236).t.DPfdsq);
       } else {
@@ -115,7 +115,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
       }
       obj = { text: null, variant: "active", disabled: null, onPress: null };
       obj[0] = stringResult;
-      JOINED = tmp(12039).ActivityJoinability.JOINED;
+      JOINED = tmp(12221).ActivityJoinability.JOINED;
       obj[2] = stateFromStores === JOINED;
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -124,7 +124,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         const joined = obj.join(obj);
         outer1_1(outer1_2[28]).hideActionSheet();
       };
-      jsx(tmp(4604).Button, { text: null, variant: "active", disabled: null, onPress: null });
+      jsx(tmp(4695).Button, { text: null, variant: "active", disabled: null, onPress: null });
       const tmp6 = jsx;
     }
   }
@@ -137,7 +137,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   let sync_id;
   sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(9088)(activity)) {
+  if (sync_id(9573)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
@@ -147,7 +147,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
       obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.LEgD7t, obj);
       obj = { size: null, source: null, disableColor: true, style: null };
       obj[0] = require(1297) /* Button */.Icon.Sizes.SMALL;
-      obj[1] = sync_id(7924);
+      obj[1] = sync_id(8054);
       obj[3] = tmp.icon;
       obj[1] = jsx(require(1297) /* Button */.Icon, { size: null, source: null, disableColor: true, style: null });
       obj[3] = callback(function*() {
@@ -226,7 +226,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
           }
         }
       });
-      tmp4 = jsx(require(4604) /* Button */.Button, { size: null, source: null, disableColor: true, style: null });
+      tmp4 = jsx(require(4695) /* Button */.Button, { size: null, source: null, disableColor: true, style: null });
     }
   }
   return tmp4;
@@ -236,10 +236,10 @@ export const WatchActivityButton = function WatchActivityButton(arg0) {
   let require;
   ({ activity, onAction: require } = arg0);
   let importDefault;
-  const tmp2 = importDefault(12041)(activity);
+  const tmp2 = importDefault(12223)(activity);
   importDefault = tmp2;
   let tmp3 = null;
-  if (importDefault(7982)(activity)) {
+  if (importDefault(8112)(activity)) {
     tmp3 = null;
     if (null != tmp2) {
       const obj = { text: null, variant: "secondary", onPress: null };
@@ -249,7 +249,7 @@ export const WatchActivityButton = function WatchActivityButton(arg0) {
         callback({ action: "PRESS_WATCH_BUTTON" });
         _undefined(outer1_2[34]).openURL(_undefined);
       };
-      tmp3 = jsx(require(4604) /* Button */.Button, { text: null, variant: "secondary", onPress: null });
+      tmp3 = jsx(require(4695) /* Button */.Button, { text: null, variant: "secondary", onPress: null });
     }
   }
   return tmp3;
@@ -462,7 +462,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   return { value: "HermesInternal", done: null };
                 } else {
                   closure_1 = closure_0.button_urls[closure_2];
-                  if (typeof closure_1 === "__FORMATJS_LISTFORMAT_DATA__") {
+                  if (typeof closure_1 !== "string") {
                     v0 = 0;
                     c5 = 3;
                     return { value: "HermesInternal", done: null };

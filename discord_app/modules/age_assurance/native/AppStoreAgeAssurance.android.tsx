@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
-let obj = { [arg1(16311).AgeSignalsVerificationStatus.VERIFIED]: "VERIFIED", [arg1(16311).AgeSignalsVerificationStatus.SUPERVISED]: "SUPERVISED", [arg1(16311).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_PENDING]: "SUPERVISED_APPROVAL_PENDING", [arg1(16311).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_DENIED]: "SUPERVISED_APPROVAL_DENIED", [arg1(16311).AgeSignalsVerificationStatus.UNKNOWN]: "UNKNOWN", [arg1(16311).AgeSignalsVerificationStatus.DECLARED]: "DECLARED" };
+let obj = { [arg1(16407).AgeSignalsVerificationStatus.VERIFIED]: "VERIFIED", [arg1(16407).AgeSignalsVerificationStatus.SUPERVISED]: "SUPERVISED", [arg1(16407).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_PENDING]: "SUPERVISED_APPROVAL_PENDING", [arg1(16407).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_DENIED]: "SUPERVISED_APPROVAL_DENIED", [arg1(16407).AgeSignalsVerificationStatus.UNKNOWN]: "UNKNOWN", [arg1(16407).AgeSignalsVerificationStatus.DECLARED]: "DECLARED" };
 const entries = Object.entries(obj);
 let closure_4 = Object.fromEntries(entries.map((arg0) => {
   let tmp;
@@ -14,67 +14,18 @@ let closure_4 = Object.fromEntries(entries.map((arg0) => {
 obj = {
   getAgeSignals() {
     return callback(function*() {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+      function toAppStoreAgeCheck(ageLower) {
+        const obj = { platform: "android", ageLower: ageLower.ageLower, ageUpper: ageLower.ageUpper, googleUserStatus: null };
+        let tmp;
+        if (null != ageLower.userStatus) {
+          tmp = table[ageLower.userStatus];
         }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              function toAppStoreAgeCheck(ageLower) {
-                const obj = { platform: "android", ageLower: ageLower.ageLower, ageUpper: ageLower.ageUpper, googleUserStatus: null };
-                let tmp;
-                if (null != ageLower.userStatus) {
-                  tmp = table[ageLower.userStatus];
-                }
-                obj[3] = tmp;
-                return obj;
-              }
-              let obj2 = outer1_0(table[1]);
-              table = 1;
-              c2 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj2.getAgeSignals();
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = toAppStoreAgeCheck(arg1);
-            return obj;
-          }
-        } catch (tmp8) {
-          c2 = tmp;
-          throw tmp8;
-        }
+        obj[3] = tmp;
+        return obj;
       }
+      const obj2 = outer1_0(table[1]);
+      yield obj2.getAgeSignals();
+      return toAppStoreAgeCheck(arg1);
     })();
   },
   getIsConsideredOlderThan(arg0, arg1) {

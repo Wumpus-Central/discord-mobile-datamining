@@ -1,6 +1,6 @@
 // discord_app/modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx
 import noop from "noop";
-import map from "map";
+import handleLoadMessages from "handleLoadMessages";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import regExp from "regExp";
 
@@ -22,7 +22,7 @@ export const useGameMentionsAsPlainText = function useGameMentionsAsPlainText(st
   }, items);
   const games = _require(memo[4]).useGames(memo);
   const obj = _require(memo[4]);
-  const items1 = [map, mergeGuildAvatar];
+  const items1 = [handleLoadMessages, mergeGuildAvatar];
   const items2 = [state, memo];
   return _require(memo[5]).useStateFromStores(items1, () => {
     if (!obj.isNullOrEmpty(nsfwAllowed)) {

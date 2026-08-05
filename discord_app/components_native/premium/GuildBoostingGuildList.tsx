@@ -18,7 +18,7 @@ function GuildBoostingGuildListItem(guildId) {
   let obj = guildId(589);
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(guildId));
-  importDefault(4100);
+  importDefault(4192);
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -31,22 +31,22 @@ function GuildBoostingGuildListItem(guildId) {
       const obj = guildId(outer1_2[12]);
       outer1_1(outer1_2[13]).close();
     };
-    let tmp2Result = tmp2(8344);
+    let tmp2Result = tmp2(8979);
     obj = { guild: null, size: null, style: null, selected: false };
     obj[0] = stateFromStores;
-    tmp2Result = tmp2(5570);
-    obj[1] = tmp5(5570).GuildIconSizes.LARGE;
+    tmp2Result = tmp2(5661);
+    obj[1] = tmp5(5661).GuildIconSizes.LARGE;
     obj[2] = tmp.guildIcon;
     const items1 = [callback(tmp2Result, obj), , ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.guildCardDescription;
     const obj2 = { variant: "text-md/bold", children: null };
     obj2[1] = stateFromStores.name;
-    const items2 = [callback(tmp5(4189).Text, obj2), ];
+    const items2 = [callback(tmp5(4281).Text, obj2), ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.subscriptionInfo;
     const obj4 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
-    obj4[0] = tmp2(9658);
+    obj4[0] = tmp2(9895);
     obj4[1] = tmp.premiumGuildImage;
     const items3 = [callback(closure_4, obj4), ];
     const obj5 = { variant: "text-xs/medium", children: null };
@@ -54,7 +54,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj6 = { subscriberCount: null };
     obj6[0] = tmp8;
     obj5[1] = intl.format(tmp5(1236).t.If4iTS, obj6);
-    items3[1] = callback(tmp5(4189).Text, obj5);
+    items3[1] = callback(tmp5(4281).Text, obj5);
     obj3[1] = items3;
     items2[1] = callback2(closure_3, obj3);
     obj1[1] = items2;
@@ -62,7 +62,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj7 = { guild: null, theme: null };
     obj7[0] = stateFromStores;
     obj7[1] = tmp4;
-    items1[2] = callback(tmp2(12557), obj7);
+    items1[2] = callback(tmp2(12683), obj7);
     obj[4] = items1;
     tmp9 = callback2(tmp2Result, obj);
   }

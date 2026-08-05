@@ -132,7 +132,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((arg0) => callback2(11948)(arg0, callback2(712).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((arg0) => callback2(12100)(arg0, callback2(712).colors.ICON_SUBTLE));
                   found = mapped3.filter((arg0) => null != arg0);
                 }
               }
@@ -182,7 +182,7 @@ export default function GameProfileDetails(game) {
               obj5[1] = platforms.map((platform) => {
                 const obj = { platform, size: "md", color: null };
                 obj[2] = callback2(712).colors.ICON_SUBTLE;
-                return callback3(callback(11939).GameUpdatePlatformIcon, obj, platform);
+                return callback3(callback(12091).GameUpdatePlatformIcon, obj, platform);
               });
               obj4[1] = outer1_8(outer1_5, obj5);
               items.push(obj4);
@@ -252,7 +252,7 @@ export default function GameProfileDetails(game) {
       items[1] = prop;
       obj = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, children: children.label };
       const items1 = [outer1_8(game(memo[13]).Text, obj), ];
-      if (typeof children.value === "y") {
+      if (typeof children.value === "string") {
         obj = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, style: null, children: null };
         obj[3] = tmp3.detailsRowValue;
         obj[4] = children.value;

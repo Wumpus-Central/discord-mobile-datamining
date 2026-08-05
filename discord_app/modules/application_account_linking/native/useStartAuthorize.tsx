@@ -16,7 +16,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   }
   let _require;
   const debug = obj.debug;
-  const authorizationApp = _require(5524).useAuthorizationApp(getOfficialApplicationId);
+  const authorizationApp = _require(5615).useAuthorizationApp(getOfficialApplicationId);
   _require = authorizationApp;
   let prop;
   if (authorizationApp != null) {
@@ -26,7 +26,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   if (null != prop) {
     WEB = AuthorizeFlow.WEB;
   }
-  let obj2 = _require(5524);
+  let obj2 = _require(5615);
   const tmp = undefined !== debug && debug;
   const tmp2 = _require;
   let parentId;
@@ -40,7 +40,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     parentId = id;
   }
-  const authorizedAppsToken = _require(5526).useAuthorizedAppsToken(parentId);
+  const authorizedAppsToken = _require(5617).useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
   _require = undefined;
   _require = callback((arg0) => {

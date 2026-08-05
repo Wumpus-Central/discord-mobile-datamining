@@ -20,7 +20,7 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
   let token = null;
   if (null !== backgroundColor) {
     token = obj.useToken(tmp5);
-    if (typeof backgroundColor !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof backgroundColor === "string") {
       token = backgroundColor;
     }
   }
@@ -28,8 +28,8 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
     let value = token;
     if (1 !== obj2.alpha()) {
       if (null != context) {
-        value = require(7976) /* flattenColorOverOpaqueBackground */.flattenColorOverOpaqueBackground(token, context);
-        const tmp6Result = require(7976) /* flattenColorOverOpaqueBackground */;
+        value = require(8105) /* flattenColorOverOpaqueBackground */.flattenColorOverOpaqueBackground(token, context);
+        const tmp6Result = require(8105) /* flattenColorOverOpaqueBackground */;
       }
     }
     obj2 = importDefault(689)(token);

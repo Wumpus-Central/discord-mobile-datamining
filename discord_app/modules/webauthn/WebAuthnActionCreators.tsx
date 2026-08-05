@@ -6,67 +6,17 @@ const require = arg1;
 function _fetchWebAuthnConditionalChallenge() {
   const self = this;
   const tmp = callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        table = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let body = tmp4;
-            body = undefined;
-            const HTTP = outer1_0(table[2]).HTTP;
-            const obj1 = { url: null, headers: null, rejectWithError: true };
-            obj1[0] = outer1_4.WEBAUTHN_CONDITIONAL_UI_CHALLENGE;
-            obj1[1] = { authorization: "" };
-            c1 = 1;
-            table = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.post(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          body = arg1.body;
-          obj = { challenge: null, ticket: null };
-          obj[0] = body.challenge;
-          obj[1] = body.ticket;
-          table = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = obj;
-          return obj4;
-        }
-      } catch (tmp11) {
-        table = tmp;
-        throw tmp11;
-      }
-    }
+    let body = tmp4;
+    const HTTP = outer1_0(table[2]).HTTP;
+    const obj1 = { url: null, headers: null, rejectWithError: true };
+    obj1[0] = outer1_4.WEBAUTHN_CONDITIONAL_UI_CHALLENGE;
+    obj1[1] = { authorization: "" };
+    yield HTTP.post(obj1);
+    body = arg1.body;
+    const obj = { challenge: null, ticket: null };
+    obj[0] = body.challenge;
+    obj[1] = body.ticket;
+    return obj;
   });
   const _fetchWebAuthnConditionalChallenge = tmp;
   const apply = tmp.apply;
@@ -80,66 +30,16 @@ function _fetchWebAuthnConditionalChallenge() {
 function _fetchWebAuthnPasswordlessChallenge() {
   const self = this;
   const tmp = callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        table = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let body = tmp4;
-            body = undefined;
-            const HTTP = outer1_0(table[2]).HTTP;
-            const obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_4.WEBAUTHN_PASSWORDLESS_CHALLENGE;
-            c1 = 1;
-            table = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.post(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          body = arg1.body;
-          obj = { challenge: null, ticket: null };
-          obj[0] = body.challenge;
-          obj[1] = body.ticket;
-          table = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = obj;
-          return obj4;
-        }
-      } catch (tmp11) {
-        table = tmp;
-        throw tmp11;
-      }
-    }
+    let body = tmp4;
+    const HTTP = outer1_0(table[2]).HTTP;
+    const obj1 = { url: null, rejectWithError: true };
+    obj1[0] = outer1_4.WEBAUTHN_PASSWORDLESS_CHALLENGE;
+    yield HTTP.post(obj1);
+    body = arg1.body;
+    const obj = { challenge: null, ticket: null };
+    obj[0] = body.challenge;
+    obj[1] = body.ticket;
+    return obj;
   });
   const _fetchWebAuthnPasswordlessChallenge = tmp;
   const apply = tmp.apply;
@@ -157,64 +57,15 @@ function _deleteWebAuthnCredential() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0) {
-      if (c1 === 2) {
-        c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = lib(table[2]).HTTP;
-              const obj1 = { url: null, rejectWithError: true };
-              obj1[0] = outer1_4.MFA_WEBAUTHN_CREDENTIAL(lib.id);
-              table = 1;
-              c1 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1).then(() => {
-                let obj = v3(table[3]);
-                obj = { type: "AUTHENTICATOR_DELETE", credential: closure_0 };
-                obj.dispatch(obj);
-              });
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
-        }
-      }
+      const HTTP = lib(table[2]).HTTP;
+      const obj1 = { url: null, rejectWithError: true };
+      obj1[0] = outer1_4.MFA_WEBAUTHN_CREDENTIAL(lib.id);
+      yield HTTP.del(obj1).then(() => {
+        let obj = v3(table[3]);
+        obj = { type: "AUTHENTICATOR_DELETE", credential: closure_0 };
+        obj.dispatch(obj);
+      });
+      return arg1;
     })();
   });
   const _deleteWebAuthnCredential = tmp;
@@ -325,67 +176,17 @@ function _editWebAuthnCredential() {
 function _startRegisterWebAuthnCredential() {
   const self = this;
   const tmp = callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        table = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let body = tmp4;
-            body = undefined;
-            const HTTP = outer1_0(table[2]).HTTP;
-            const obj1 = { url: null, body: null, rejectWithError: false };
-            obj1[0] = outer1_4.MFA_WEBAUTHN_CREDENTIALS;
-            obj1[1] = {};
-            c1 = 1;
-            table = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.post(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          body = arg1.body;
-          obj = { ticket: null, challenge: null };
-          obj[0] = body.ticket;
-          obj[1] = body.challenge;
-          table = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = obj;
-          return obj4;
-        }
-      } catch (tmp11) {
-        table = tmp;
-        throw tmp11;
-      }
-    }
+    let body = tmp4;
+    const HTTP = outer1_0(table[2]).HTTP;
+    const obj1 = { url: null, body: null, rejectWithError: false };
+    obj1[0] = outer1_4.MFA_WEBAUTHN_CREDENTIALS;
+    obj1[1] = {};
+    yield HTTP.post(obj1);
+    body = arg1.body;
+    const obj = { ticket: null, challenge: null };
+    obj[0] = body.ticket;
+    obj[1] = body.challenge;
+    return obj;
   });
   const _startRegisterWebAuthnCredential = tmp;
   const apply = tmp.apply;
@@ -447,7 +248,7 @@ function _finishRegisterWebAuthnCredential() {
               c5 = 1;
               c6 = 1;
               let obj4 = { value: null, done: false };
-              obj4[0] = callback(5003).post(obj1);
+              obj4[0] = callback(5094).post(obj1);
               return obj4;
             }
           } else if (arg0 === 1) {

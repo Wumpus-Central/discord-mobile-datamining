@@ -27,7 +27,7 @@ const result = require("set").fileFinishedImporting("modules/app_database/util/I
 
 export const chain = function chain() {
   const items = [...arguments];
-  if (typeof Chained !== "fileFinishedImporting") {
+  if (typeof Chained !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(Chained.prototype);

@@ -32,16 +32,16 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
     }
   }, items);
   const callback1 = React.useCallback(() => {
-    let obj = _undefined(3894);
+    let obj = _undefined(3986);
     obj = { key: "collectible shop apply error", content: null };
     const intl = onSuccess(1236).intl;
     obj[1] = intl.string(onSuccess(1236).t.CKsXk3);
     obj.open(obj);
   }, []);
-  let obj = onSuccess(9811);
+  let obj = onSuccess(10047);
   handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
   ({ handleUseNow, isApplying, canUseNow } = handleUseNow);
-  const tmp4 = importDefault(9814)({ analyticsLocations });
+  const tmp4 = importDefault(10050)({ analyticsLocations });
   importDefault = tmp4;
   obj = {
     handleUseNow,

@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityCard.tsx
 import importAllResult from "asyncRequireImpl";
-import { View } from "module_4399";
+import { View } from "module_4490";
 import items from "items";
 import { AnalyticEvents } from "ME";
 import jsxProd from "FamilyCenterUsernameHeader";
@@ -16,24 +16,24 @@ let metroImportAll;
 let require = arg1;
 function FamilyCenterActivityCardPrefaceText() {
   const tmp = callback3();
-  const tmp4 = importDefault(6259)();
-  let obj = require(6258) /* useUserIdsForLinkStatus */;
+  const tmp4 = importDefault(7260)();
+  let obj = require(7259) /* useUserIdsForLinkStatus */;
   const activeLinkUserIds = obj.useActiveLinkUserIds();
-  let obj1 = require(5858) /* getEmptyActivityFormatter */;
+  let obj1 = require(6961) /* getEmptyActivityFormatter */;
   const activityWindowTimestampFormatter = obj1.getActivityWindowTimestampFormatter(tmp4);
-  let obj2 = require(6258) /* useUserIdsForLinkStatus */;
+  let obj2 = require(7259) /* useUserIdsForLinkStatus */;
   const activityWindowTimeStamp = obj2.useActivityWindowTimeStamp(activityWindowTimestampFormatter);
-  let obj3 = require(11127) /* useAgeSpecificText */;
+  let obj3 = require(11239) /* useAgeSpecificText */;
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { activeLinks: activeLinkUserIds.length };
   const intl2 = require(1236) /* getSystemLocale */.intl;
-  const ageSpecificText = obj3.useAgeSpecificText(intl.formatToPlainString(importDefault(2225).tazvHQ, obj), intl2.string(importDefault(2225).KrLnkE));
+  const ageSpecificText = obj3.useAgeSpecificText(intl.formatToPlainString(importDefault(2285).tazvHQ, obj), intl2.string(importDefault(2285).KrLnkE));
   obj = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
     obj1 = { color: null, source: null, style: null };
     obj1[0] = tmp.icon.color;
-    obj1[1] = tmp2(13940);
+    obj1[1] = tmp2(14040);
     obj1[2] = tmp.icon;
     tmp12 = callback(tmp5(1297).Icon, obj1);
   }
@@ -47,35 +47,35 @@ function FamilyCenterActivityCardPrefaceText() {
     }
   }
   obj2[3] = tmp15;
-  items[1] = callback(require(4189) /* Text */.Text, obj2);
+  items[1] = callback(require(4281) /* Text */.Text, obj2);
   obj3 = {
     onPress() {
       callback2(paths[17]).pushLazy(callback(paths[19])(paths[18], paths.paths));
     },
     children: null
   };
-  const formatToPlainStringResult = intl.formatToPlainString(importDefault(2225).tazvHQ, obj);
+  const formatToPlainStringResult = intl.formatToPlainString(importDefault(2285).tazvHQ, obj);
   const tmp10 = closure_9;
   const tmp11 = View;
   const obj4 = { color: tmp.icon.color, source: null, size: null, style: null };
-  obj4[1] = importDefault(6553);
+  obj4[1] = importDefault(7556);
   obj4[2] = require(1297) /* Button */.Icon.Sizes.EXTRA_SMALL;
   obj4[3] = tmp.icon;
   obj3[1] = callback(require(1297) /* Button */.Icon, obj4);
-  items[2] = callback(importDefault(8344), obj3);
+  items[2] = callback(importDefault(8979), obj3);
   obj[1] = items;
   return tmp10(tmp11, obj);
 }
 function FamilyCenterHeaderSubText() {
-  const tmp2 = importDefault(6259)();
-  let obj = require(6258) /* useUserIdsForLinkStatus */;
+  const tmp2 = importDefault(7260)();
+  let obj = require(7259) /* useUserIdsForLinkStatus */;
   const activeLinkUserIds = obj.useActiveLinkUserIds();
-  const activityWindowTimestampFormatter = require(5858) /* getEmptyActivityFormatter */.getActivityWindowTimestampFormatter(tmp2);
-  require(6258) /* useUserIdsForLinkStatus */;
+  const activityWindowTimestampFormatter = require(6961) /* getEmptyActivityFormatter */.getActivityWindowTimestampFormatter(tmp2);
+  require(7259) /* useUserIdsForLinkStatus */;
   if (!tmp2) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj[2] = tmp6;
-    let tmp7 = callback(require(4189) /* Text */.Text, obj);
+    let tmp7 = callback(require(4281) /* Text */.Text, obj);
   } else {
     tmp7 = null;
   }
@@ -95,10 +95,10 @@ class FamilyCenterActivityCardHeader {
         tmp3 = jsx;
         tmp4 = View;
         obj = { children: null };
-        tmp5 = f58285;
+        tmp5 = f58461;
         obj1 = { user: null };
         obj1[0] = selectedTeenUser;
-        obj[0] = jsx(f58285, obj1);
+        obj[0] = jsx(f58461, obj1);
         tmp6 = jsx(View, obj);
         tmp9 = tmp6;
       } else {
@@ -135,11 +135,11 @@ class FamilyCenterActivityCardAccountSelect {
     selectTeenUser = obj3.useFamilyCenterActions(obj).selectTeenUser;
     items = [];
     items[0] = activeLinkUsers;
-    f92491 = f92491.useMemo(() => activeLinkUsers.map((id) => {
+    f92781 = f92781.useMemo(() => activeLinkUsers.map((id) => {
       const obj = { label: null, value: null };
-      const name = callback(4032).getName(id);
-      const obj2 = callback(4032);
-      obj[0] = "" + name + " (" + callback(4032).getUserTag(id) + ")";
+      const name = callback(4124).getName(id);
+      const obj2 = callback(4124);
+      obj[0] = "" + name + " (" + callback(4124).getUserTag(id) + ")";
       obj[1] = id.id;
       return obj;
     }), items);
@@ -180,12 +180,12 @@ class FamilyCenterActivityCardAccountSelect {
           const tmp5 = activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths);
         }
       };
-      tmp12 = f58285;
+      tmp12 = f58461;
       obj3 = { user: null, inSelector: true };
       obj3[0] = selectedTeenUser;
       tmp11 = require("render");
       items1 = [, ];
-      items1[0] = jsx(f58285, obj3);
+      items1[0] = jsx(f58461, obj3);
       obj4 = { style: null, size: null, source: null };
       obj4[0] = tmp.icon;
       obj4[1] = require("Button").Icon.Sizes.MEDIUM;
@@ -236,7 +236,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarContainer, children: callback(tmp4(1297).Avatar, obj) };
-  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 428.309 };
+  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 24 };
   obj[5] = NORMAL;
   const items = [callback(View, obj), ];
   const items1 = [tmp.userHeader, ];
@@ -246,7 +246,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   const obj1 = { style: items1, children: null };
   items1[1] = nonSelectorHeader;
-  const items2 = [callback(importDefault(13942), { user }), callback(FamilyCenterHeaderSubText, {})];
+  const items2 = [callback(importDefault(14042), { user }), callback(FamilyCenterHeaderSubText, {})];
   obj1[1] = items2;
   items[1] = closure_9(View, obj1);
   obj[1] = items;
@@ -285,13 +285,13 @@ const result = require("items").fileFinishedImporting("modules/parent_tools/nati
 export default function FamilyCenterActivityCard() {
   const tmp = callback6();
   const require = tmp;
-  let obj = require(13943) /* useSelectedTeenUser */;
+  let obj = require(14043) /* useSelectedTeenUser */;
   const selectedTeenUser = obj.useSelectedTeenUser();
-  require(13944) /* useActionsForDisplayType */;
+  require(14044) /* useActionsForDisplayType */;
   if (undefined === selectedTeenUser) {
     return null;
   } else {
-    const sortedActivityTypeConfigs = tmp2(5858).getSortedActivityTypeConfigs();
+    const sortedActivityTypeConfigs = tmp2(6961).getSortedActivityTypeConfigs();
     obj = { style: null, children: null };
     obj[0] = tmp.card;
     obj = { style: null, children: null };
@@ -320,7 +320,7 @@ export default function FamilyCenterActivityCard() {
       }
       return outer1_8(outer1_4, { style: other, children: outer1_8(outer1_1(outer1_2[31]), { displayType: tmp }) }, "total-" + tmp);
     });
-    const items2 = [callback(View, obj3), callback(importDefault(13946), {}), ];
+    const items2 = [callback(View, obj3), callback(importDefault(14046), {}), ];
     let tmp11Result = null;
     if (tmp6) {
       const obj4 = { style: null, children: null };
@@ -339,7 +339,7 @@ export default function FamilyCenterActivityCard() {
     items[1] = closure_9(View, obj1);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.settingsControls;
-    obj5[1] = callback(importDefault(13956), {});
+    obj5[1] = callback(importDefault(14056), {});
     items[2] = callback(View, obj5);
     obj[1] = items;
     return closure_9(View, obj);

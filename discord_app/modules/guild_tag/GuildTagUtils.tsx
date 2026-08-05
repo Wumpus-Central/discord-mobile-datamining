@@ -131,8 +131,8 @@ export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, merged) 
     if (tmp5) {
       let result = null != merged && null != id;
       if (result) {
-        result = require(3827) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member.getMember(merged, id));
-        const obj3 = require(3827) /* GuildMemberFlags */;
+        result = require(3919) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member.getMember(merged, id));
+        const obj3 = require(3919) /* GuildMemberFlags */;
       }
       tmp5 = !result;
     }

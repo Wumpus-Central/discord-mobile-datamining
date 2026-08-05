@@ -16,7 +16,7 @@ function RestrictedHoursLogoutBlockingLayer(visible) {
   if (visible.visible) {
     const obj = { style: null, pointerEvents: "auto", accessibilityLiveRegion: "polite", children: null };
     obj[0] = tmp.logoutBlockingLayer;
-    obj[3] = callback2(require(5641) /* ActivityIndicator */.ActivityIndicator, { size: "large" });
+    obj[3] = callback2(require(5732) /* ActivityIndicator */.ActivityIndicator, { size: "large" });
     tmp2 = callback2(closure_5, obj);
   }
   return tmp2;
@@ -199,7 +199,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/par
 export default function RestrictedHoursModal() {
   let _slicedToArray;
   let tmp4;
-  const tmp = importDefault(16138)();
+  const tmp = importDefault(16234)();
   let callback = tmp;
   importDefault = React.useRef(false);
   const dependencyMap = React.useRef(true);
@@ -214,18 +214,18 @@ export default function RestrictedHoursModal() {
     if (!tmp4.current) {
       tmp.current = true;
       callback(true);
-      const obj = tmp4(5645);
-      tmp4(5645).logout("restricted_hours").finally(() => {
+      const obj = tmp4(5736);
+      tmp4(5736).logout("restricted_hours").finally(() => {
         if (ref.current) {
           closure_1.current = false;
           callback(false);
         }
       });
-      const logoutResult = tmp4(5645).logout("restricted_hours");
+      const logoutResult = tmp4(5736).logout("restricted_hours");
     }
   }, []);
   importDefault = tmp4;
-  let obj = callback(5574);
+  let obj = callback(5665);
   const items = [callback, tmp4];
   const items1 = [tmp];
   const navigatorScreens = obj.useNavigatorScreens(() => ({
@@ -243,11 +243,11 @@ export default function RestrictedHoursModal() {
       current = tmp4.current;
     }
     if (!current) {
-      const result = callback(16134).closeRestrictedHoursModal();
-      const obj = callback(16134);
+      const result = callback(16230).closeRestrictedHoursModal();
+      const obj = callback(16230);
     }
   }, items1);
-  importDefault(4601)(() => true);
+  importDefault(4692)(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
-  return callback2(callback(11136).Modal, obj);
+  return callback2(callback(11248).Modal, obj);
 };

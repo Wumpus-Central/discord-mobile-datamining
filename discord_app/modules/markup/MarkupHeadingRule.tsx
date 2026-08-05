@@ -12,8 +12,8 @@ obj.match = function match(arg0, allowHeading, str) {
         tmp = null;
       }
     }
-    tmp = require(3892) /* t */.anyScopeRegex(/^ *(#{1,3})(?:\s+)([^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
-    const obj = require(3892) /* t */;
+    tmp = require(3984) /* t */.anyScopeRegex(/^ *(#{1,3})(?:\s+)([^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
+    const obj = require(3984) /* t */;
   }
   return tmp;
 };

@@ -17,7 +17,7 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
     size = AVATAR_SIZE_VARIANT;
   }
   const merged = Object.assign(backgroundColor, Object.create(null));
-  const tmp2 = importDefault(8083)();
+  const tmp2 = importDefault(8757)();
   let obj = { children: null };
   const items = [, , ];
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
@@ -27,7 +27,7 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   const merged1 = Object.assign(merged);
-  items1[1] = callback(importDefault(7980), obj);
+  items1[1] = callback(importDefault(8110), obj);
   obj[0] = items1;
   return callback2(closure_8, obj);
 });

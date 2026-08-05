@@ -1,6 +1,6 @@
 // discord_app/polyfills.android.tsx
 import addLikelySubtags from "addLikelySubtags";
-import module_13377 from "module_13377";
+import module_13473 from "module_13473";
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   const self = this;

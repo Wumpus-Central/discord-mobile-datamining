@@ -2,5 +2,5 @@
 const result = require("set").fileFinishedImporting("modules/custom_status/utils/removeCustomStatus.tsx");
 
 export default function removeCustomStatus() {
-  importDefault(11987)({ text: "", emojiInfo: null, clearAfter: null });
+  importDefault(9377)({ text: "", emojiInfo: null, clearAfter: null });
 };

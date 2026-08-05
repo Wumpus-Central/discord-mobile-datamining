@@ -18,8 +18,8 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   let obj = mute(589);
   const items = [set];
   const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const tmp3 = importDefault(10791)(channel);
-  const muteHandler = mute(10811).createMuteHandler(tmp3, stateFromStores);
+  const tmp3 = importDefault(5869)(channel);
+  const muteHandler = mute(10764).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
   const memo = React.useMemo(() => outer1_6(mute(outer1_3[6]).VoicePanelRiveMicButton, { muted: mute }), items1);
@@ -27,7 +27,7 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   const intl = mute(1236).intl;
   obj[1] = intl.string(mute(1236).t.B3zz0G);
   obj[2] = muteHandler.onPress;
-  obj[3] = importDefault(mute ? 10815 : 10816);
+  obj[3] = importDefault(mute ? 10768 : 10769);
   if (!flag) {
     flag = mute;
   }
@@ -39,5 +39,5 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
     RED_400 = tmp(712).unsafe_rawColors.RED_400;
   }
   obj[7] = RED_400;
-  return jsx(importAll(10542).ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });
+  return jsx(importAll(10577).ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });
 };

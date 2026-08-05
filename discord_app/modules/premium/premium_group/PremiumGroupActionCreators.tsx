@@ -114,89 +114,36 @@ function _fetchEligibleUsers() {
     let c8 = 0;
     let c9 = 0;
     return (function*(arg0, body) {
-      if (c9 === 2) {
-        c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let c7 = 0;
-              body = undefined;
-              let users;
-              let next_index;
-              let ineligible_users;
-              const HTTP = callback(table[5]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = outer1_6.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(body);
-              const obj2 = { index: null, limit: null, search_query: null, include_ineligible: true };
-              obj2[0] = users;
-              let c4 = ineligible_users;
-              if (ineligible_users == null) {
-                c4 = 10;
-              }
-              obj2[1] = c4;
-              obj2[2] = next_index;
-              obj1[1] = obj2;
-              c8 = 1;
-              c9 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c9 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c9 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            body = body.body;
-            users = body.users;
-            next_index = body.next_index;
-            ineligible_users = body.ineligible_users;
-            let createFromServer = 0;
-            const items = [];
-            createFromServer = HermesBuiltin.arraySpread(users.map((arg0) => Object.assign(new c4(arg0), { eligible: true })), createFromServer);
-            let closure_6 = ineligible_users;
-            if (ineligible_users == null) {
-              closure_6 = [];
-            }
-            obj = { users: null, nextIndex: null };
-            createFromServer = HermesBuiltin.arraySpread(closure_6.map((arg0) => Object.assign(new c4(arg0), { eligible: false })), createFromServer);
-            obj[0] = items;
-            obj[1] = next_index;
-            c9 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = obj;
-            return obj5;
-          }
-        } catch (tmp11) {
-          c9 = tmp;
-          throw tmp11;
-        }
+      let c7 = 0;
+      const HTTP = callback(table[5]).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: true };
+      obj1[0] = outer1_6.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(body);
+      const obj2 = { index: null, limit: null, search_query: null, include_ineligible: true };
+      obj2[0] = users;
+      let c4 = ineligible_users;
+      if (ineligible_users == null) {
+        c4 = 10;
       }
+      obj2[1] = c4;
+      obj2[2] = next_index;
+      obj1[1] = obj2;
+      yield HTTP.get(obj1);
+      body = body.body;
+      users = body.users;
+      next_index = body.next_index;
+      ineligible_users = body.ineligible_users;
+      let createFromServer = 0;
+      const items = [];
+      createFromServer = HermesBuiltin.arraySpread(users.map((arg0) => Object.assign(new c4(arg0), { eligible: true })), createFromServer);
+      let closure_6 = ineligible_users;
+      if (ineligible_users == null) {
+        closure_6 = [];
+      }
+      const obj = { users: null, nextIndex: null };
+      createFromServer = HermesBuiltin.arraySpread(closure_6.map((arg0) => Object.assign(new c4(arg0), { eligible: false })), createFromServer);
+      obj[0] = items;
+      obj[1] = next_index;
+      return obj;
     })();
   });
   const _fetchEligibleUsers = tmp;
@@ -741,79 +688,31 @@ function _removeSubscriptionGroupInvite() {
 function _fetchPremiumGroupInvites() {
   const self = this;
   const tmp = callback(function*() {
-    if (c5 === 2) {
+    const callback = tmp3;
+    outer1_1(outer1_2[4]).dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_START" });
+    let c3 = 1;
+    const HTTP = outer1_0(outer1_2[5]).HTTP;
+    const obj1 = { url: null, rejectWithError: true };
+    obj1[0] = outer1_6.PREMIUM_GROUP_INVITES;
+    yield HTTP.get(obj1);
+    if (1 === tmp7) {
+      c3 = 0;
+      let obj3 = callback(709);
+      obj3.dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_FAIL" });
+      let c5 = 3;
+    } else if (arg0 === 1) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp3;
-            let body = tmp7;
-            body = undefined;
-            outer1_1(outer1_2[4]).dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_START" });
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[5]).HTTP;
-            const obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_6.PREMIUM_GROUP_INVITES;
-            c4 = 2;
-            c5 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            let obj3 = callback(709);
-            obj3.dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_FAIL" });
-            c5 = 3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            body = arg1.body;
-            obj = callback(709);
-            obj3 = { type: "PREMIUM_GROUP_INVITES_FETCH_SUCCESS", invites: null };
-            obj3[1] = body;
-            obj.dispatch(obj3);
-            c3 = 0;
-          }
-          c3 = 0;
-          c5 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        }
-      } catch (tmp19) {
-        const dependencyMap = tmp19;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp19;
-        } else {
-          c4 = tmp;
-        }
-      }
+      throw arg1;
+    } else if (arg0 !== 2) {
+      const body = arg1.body;
+      const obj = callback(709);
+      obj3 = { type: "PREMIUM_GROUP_INVITES_FETCH_SUCCESS", invites: null };
+      obj3[1] = body;
+      obj.dispatch(obj3);
+      c3 = 0;
     }
+    c3 = 0;
+    return arg1;
   });
   const _fetchPremiumGroupInvites = tmp;
   const apply = tmp.apply;
@@ -832,94 +731,46 @@ function _fetchPremiumGroupInvite() {
     let c7 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      if (c7 === 2) {
+      let sendRequest = tmp3;
+      const obj1 = { type: "PREMIUM_GROUP_INVITE_FETCH_START", subscriptionGroupMemberId: null };
+      obj1[1] = callback;
+      outer1_1(outer1_2[4]).dispatch(obj1);
+      let c5 = 1;
+      const HTTP = callback(outer1_2[5]).HTTP;
+      const obj2 = { url: null, rejectWithError: true };
+      obj2[0] = c6.PREMIUM_GROUP_INVITE(callback);
+      yield HTTP.get(obj2);
+      if (1 === tmp7) {
+        c5 = 0;
+        let status = createdAt;
+        const obj3 = body(status[4]);
+        const obj4 = { type: "PREMIUM_GROUP_INVITE_FETCH_FAIL", subscriptionGroupMemberId: null, status: null };
+        obj4[1] = callback;
+        status = undefined;
+        if (status != null) {
+          status = status.status;
+        }
+        body = status;
+        if (status == null) {
+          body = 0;
+        }
+        obj4[2] = body;
+        obj3.dispatch(obj4);
+        let c7 = 3;
+      } else if (arg0 === 1) {
         c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let sendRequest = tmp3;
-              let status = tmp7;
-              body = undefined;
-              const obj1 = { type: "PREMIUM_GROUP_INVITE_FETCH_START", subscriptionGroupMemberId: null };
-              obj1[1] = callback;
-              outer1_1(outer1_2[4]).dispatch(obj1);
-              let c5 = 1;
-              const HTTP = callback(outer1_2[5]).HTTP;
-              const obj2 = { url: null, rejectWithError: true };
-              obj2[0] = c6.PREMIUM_GROUP_INVITE(callback);
-              c6 = 2;
-              c7 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj2);
-              return obj3;
-            }
-          } else {
-            if (1 === tmp7) {
-              c5 = 0;
-              status = createdAt;
-              obj3 = body(status[4]);
-              const obj4 = { type: "PREMIUM_GROUP_INVITE_FETCH_FAIL", subscriptionGroupMemberId: null, status: null };
-              obj4[1] = callback;
-              status = undefined;
-              if (status != null) {
-                status = status.status;
-              }
-              body = status;
-              if (status == null) {
-                body = 0;
-              }
-              obj4[2] = body;
-              obj3.dispatch(obj4);
-              c7 = 3;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              body = body.body;
-              obj = body(status[4]);
-              const obj5 = { type: "PREMIUM_GROUP_INVITE_FETCH_SUCCESS", subscriptionGroupMemberId: null, invite: null };
-              obj5[1] = callback;
-              obj5[2] = body;
-              obj.dispatch(obj5);
-              c5 = 0;
-            }
-            c5 = 0;
-            c7 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          }
-        } catch (tmp25) {
-          createdAt = tmp25;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp25;
-          } else {
-            c6 = tmp;
-          }
-        }
+        throw body;
+      } else if (arg0 !== 2) {
+        body = body.body;
+        const obj = body(status[4]);
+        const obj5 = { type: "PREMIUM_GROUP_INVITE_FETCH_SUCCESS", subscriptionGroupMemberId: null, invite: null };
+        obj5[1] = callback;
+        obj5[2] = body;
+        obj.dispatch(obj5);
+        c5 = 0;
       }
+      c5 = 0;
+      return body;
     })();
   });
   const _fetchPremiumGroupInvite = tmp;

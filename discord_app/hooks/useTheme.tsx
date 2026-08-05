@@ -2,14 +2,14 @@
 import { ThemeTypes } from "ME";
 
 function useTheme() {
-  return require(4039) /* AccessibilityAnnouncer */.useThemeContext().theme;
+  return require(4131) /* AccessibilityAnnouncer */.useThemeContext().theme;
 }
 const result = require("set").fileFinishedImporting("hooks/useTheme.tsx");
 
 export default useTheme;
 export { useTheme };
 export const useThemeIndex = function useThemeIndex() {
-  const theme = require(4039) /* AccessibilityAnnouncer */.useThemeContext().theme;
+  const theme = require(4131) /* AccessibilityAnnouncer */.useThemeContext().theme;
   let num = 0;
   if (ThemeTypes.DARK !== theme) {
     if (ThemeTypes.LIGHT === theme) {

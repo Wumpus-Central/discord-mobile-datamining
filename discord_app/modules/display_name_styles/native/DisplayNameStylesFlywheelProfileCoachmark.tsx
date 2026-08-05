@@ -12,7 +12,7 @@ const require = arg1;
 function CoachmarkImage() {
   const tmp = createCacheKey();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  const items = [callback(require(6790) /* AccountAgeTier10LargeBadge */.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
+  const items = [callback(require(5936) /* AccountAgeTier10LargeBadge */.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
   obj = { style: tmp.betaTag };
   items[1] = callback(require(1297) /* Button */.BetaTag, obj);
   obj[1] = items;
@@ -36,10 +36,10 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(589);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(3839).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(3931).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1236).intl;
   const string = intl.string;
-  const tmp6 = markAsDismissed(2583);
+  const tmp6 = markAsDismissed(2643);
   if (result) {
     let stringResult = string(tmp6.h6sykk);
   } else {
@@ -48,7 +48,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   dependencyMap = stringResult;
   const intl2 = tmp(1236).intl;
   const string2 = intl2.string;
-  const tmp4Result = tmp4(2583);
+  const tmp4Result = tmp4(2643);
   if (result) {
     let string2Result = string2(tmp4Result.TyUdka);
   } else {
@@ -70,7 +70,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
       return callback(closure_10, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(3839);
-  const coachmark = visible(8440).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(3931);
+  const coachmark = visible(8575).useCoachmark(visible.targetRef, memo);
   return null;
 };

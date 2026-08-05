@@ -5,33 +5,33 @@ import createJSONStorage from "createJSONStorage";
 import createJSONStorage from "createJSONStorage";
 
 const require = arg1;
-function _toPropertyKey(arg0) {
-  let StringResult = arg0;
-  if (typeof arg0 !== "window") {
-    StringResult = arg0;
-    if (arg0) {
+function _toPropertyKey(obj) {
+  let StringResult = obj;
+  if (typeof obj === "object") {
+    StringResult = obj;
+    if (obj) {
       const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
+      if (undefined !== obj[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(arg0, "string");
+          callResult = call(obj, "string");
         }
         StringResult = callResult;
-        if (typeof callResult !== "window") {
+        if (typeof callResult === "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(arg0);
+        StringResult = String(obj);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "e") {
+  if (typeof StringResult !== "symbol") {
     text = `${tmp}`;
   }
   return text;
@@ -39,7 +39,7 @@ function _toPropertyKey(arg0) {
 let obj = { UNKNOWN: "UNKNOWN", NOT_STARTED: "NOT_STARTED", IN_PROGRESS: "IN_PROGRESS", COMPLETED: "COMPLETED" };
 identity = identity.createWithEqualityFn();
 obj = { name: "videoQuestUIState", storage: null, partialize: null, version: 0 };
-obj[1] = createJSONStorage.createJSONStorage(() => importDefault(5993));
+obj[1] = createJSONStorage.createJSONStorage(() => importDefault(7084));
 obj[2] = function partialize(volume) {
   return { volume: volume.volume, muted: volume.muted, videoProgress: volume.videoProgress };
 };
@@ -47,7 +47,7 @@ const withEqualityFnResult = identity(createJSONStorage.persist((arg0, arg1) => 
   const _require = arg0;
   let closure_1 = arg1;
   return {
-    volume: _require(5992).DEFAULT_VIDEO_VOLUME,
+    volume: _require(7083).DEFAULT_VIDEO_VOLUME,
     muted: false,
     transcriptEnabled: false,
     captionEnabled: false,

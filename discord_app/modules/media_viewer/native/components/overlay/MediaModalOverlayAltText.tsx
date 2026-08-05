@@ -16,7 +16,7 @@ const memoResult = require("noop").memo(function MediaModalOverlayAltTextButton(
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = str(3866).ViewImageDescriptions;
+  const ViewImageDescriptions = str(3958).ViewImageDescriptions;
   let tmp4 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
@@ -33,8 +33,8 @@ const memoResult = require("noop").memo(function MediaModalOverlayAltTextButton(
       obj = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1236).intl;
       obj[2] = intl.string(tmp3(1236).t.Q5VqrN);
-      obj[3] = jsx(tmp3(4189).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(4721).PressableOpacity, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      obj[3] = jsx(tmp3(4281).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(4812).PressableOpacity, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
     }
   }
   return tmp4;

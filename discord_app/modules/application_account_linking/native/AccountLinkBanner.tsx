@@ -59,7 +59,7 @@ function AccountLinkLargeBanner(arg0) {
     items3[2] = callback(closure_4, obj6);
     obj3[1] = items3;
     items2[1] = callback2(closure_4, obj3);
-    const obj7 = { user: null, size: null, guildId: "Array" };
+    const obj7 = { user: null, size: null, guildId: "disabled" };
     obj7[0] = stateFromStores;
     obj7[1] = tmp2(tmp3[17]).AvatarSizes.LARGE_48;
     items2[2] = callback(tmp2(tmp3[17]).Avatar, obj7);
@@ -195,19 +195,19 @@ obj3[5] = { marginTop: PX_122, width: "100%" };
 let closure_23 = createCacheKey.createStyles(obj3);
 let obj4 = { flexDirection: "row", gap: require("Themes").space.PX_12 };
 const memoResult = importAllResult.memo((arg0) => {
-  let obj = importDefault(15185);
+  let obj = importDefault(15199);
   const config = obj.useConfig({ location: "AccountLinkBanner" });
   const bannerSize = config.bannerSize;
   let tmp5Result = null;
   if (config.enabled) {
-    let tmp8 = bannerSize === require(15185) /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE;
+    let tmp8 = bannerSize === require(15199) /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE;
     if (tmp8) {
       obj = {};
       const merged = Object.assign(arg0);
       tmp8 = callback(AccountLinkLargeBanner, obj);
     }
     const items = [tmp8, ];
-    let tmp14 = bannerSize === require(15185) /* apexExperiment */.MobileAccountLinkingBannerSize.MEDIUM;
+    let tmp14 = bannerSize === require(15199) /* apexExperiment */.MobileAccountLinkingBannerSize.MEDIUM;
     if (tmp14) {
       obj = {};
       const merged1 = Object.assign(arg0);
@@ -230,23 +230,23 @@ export const ACCOUNT_LINK_BANNER_MARGIN_TOP = PX_8;
 export const ACCOUNT_LINK_BANNER_MARGIN_BOTTOM = PX_82;
 export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBannerHeight(fontScale) {
   let sum3 = dependencyMap;
-  const config = importDefault(15185).getConfig({ location: "getScaledAccountLinkBannerHeight" });
+  const config = importDefault(15199).getConfig({ location: "getScaledAccountLinkBannerHeight" });
   const bannerSize = config.bannerSize;
   if (!config.enabled) {
     return 0;
-  } else if (bannerSize === require(15185) /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE) {
+  } else if (bannerSize === require(15199) /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE) {
     const sum = PX_8 + PX_12 + closure_16 + PX_16;
-    let tmp3Result = tmp3(9925);
+    let tmp3Result = tmp3(9370);
     const sum1 = sum + tmp3Result.scaleTextLineHeight(c17, fontScale) + PX_4;
-    tmp3Result = tmp3(9925);
+    tmp3Result = tmp3(9370);
     const sum2 = sum1 + 2 * tmp3Result.scaleTextLineHeight(c18, fontScale) + PX_162;
-    sum3 = sum2 + tmp3(4608).MEDIUM_BUTTON_HEIGHT + PX_12;
+    sum3 = sum2 + tmp3(4699).MEDIUM_BUTTON_HEIGHT + PX_12;
     let num = sum3 + PX_82;
   } else {
     num = 0;
-    if (bannerSize === tmp3(15185).MobileAccountLinkingBannerSize.MEDIUM) {
+    if (bannerSize === tmp3(15199).MobileAccountLinkingBannerSize.MEDIUM) {
       const sum4 = PX_8 + PX_12 + 48 + PX_122;
-      num = sum4 + tmp3(4608).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
+      num = sum4 + tmp3(4699).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
     }
   }
 };

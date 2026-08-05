@@ -63,7 +63,7 @@ export const useTieredTenureBadge = function useTieredTenureBadge() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tieredTenureBadgeForUser = require(8435) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
+  let tieredTenureBadgeForUser = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
   if (tieredTenureBadgeForUser == null) {
     tieredTenureBadgeForUser = null;
   }
@@ -97,8 +97,8 @@ export const useTieredTenureBadgesFromSubscriptionData = function useTieredTenur
   if (obj3.isPremiumExactly(stateFromStores, closure_6.TIER_2)) {
     if (null != stateFromStores1) {
       if (null != stateFromStores1.premiumSince) {
-        const obj4 = importDefault(3775)();
-        _require = obj4.diff(importDefault(3775)(stateFromStores1.premiumSince).add(1, "day"), "months");
+        const obj4 = importDefault(3867)();
+        _require = obj4.diff(importDefault(3867)(stateFromStores1.premiumSince).add(1, "day"), "months");
         return values.reduce((arg0, tenureReqNumMonths) => {
           let id = arg0;
           if (closure_0 >= tenureReqNumMonths.tenureReqNumMonths) {
@@ -119,7 +119,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tieredTenureBadgeForUser = require(8435) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
+  let tieredTenureBadgeForUser = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id);
   if (tieredTenureBadgeForUser == null) {
     tieredTenureBadgeForUser = null;
   }
@@ -132,7 +132,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(5923);
+        tmpResult = tmp(7015);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -147,7 +147,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(8435);
+  let tmpResult = tmp(9429);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -160,12 +160,12 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores1 != null) {
     id1 = stateFromStores1.id;
   }
-  let tieredTenureBadgeForUser1 = require(8435) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id1);
+  let tieredTenureBadgeForUser1 = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(id1);
   if (tieredTenureBadgeForUser1 == null) {
     tieredTenureBadgeForUser1 = null;
   }
   const tmp3 = mergeGuildAvatar;
-  const tmpResult1 = require(8435) /* useTieredTenureBadgeForUser */;
+  const tmpResult1 = require(9429) /* useTieredTenureBadgeForUser */;
   const items2 = [reset];
   const stateFromStores2 = require(589) /* initialize */.useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let earnedOnDate = null;
@@ -174,8 +174,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(5923).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(5923);
+        earnedOnDate = tmp(7015).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7015);
       }
     }
   }
@@ -198,7 +198,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   return tmp15;
 };
 export const useTieredTenureBadgeDataForUser = function useTieredTenureBadgeDataForUser(userId) {
-  const tieredTenureBadgeForUser = require(8435) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(userId);
+  const tieredTenureBadgeForUser = require(9429) /* useTieredTenureBadgeForUser */.useTieredTenureBadgeForUser(userId);
   let tmp2 = null;
   if (null != tieredTenureBadgeForUser) {
     tmp2 = dependencyMap[tieredTenureBadgeForUser];

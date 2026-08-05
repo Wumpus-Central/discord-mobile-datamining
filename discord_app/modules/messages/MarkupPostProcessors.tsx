@@ -39958,7 +39958,7 @@ export const checkForSimpleEmbedMessage = function checkForSimpleEmbedMessage(ar
           if (obj.isEmbedInline(first1)) {
             items = [];
           }
-          obj = require(4526) /* getEffectiveVideoProvider */;
+          obj = require(4617) /* getEffectiveVideoProvider */;
         }
       } else {
         items = arg0;
@@ -39972,8 +39972,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4109).isBuildOverrideLink(type.target);
-      const obj = callback(4109);
+      tmp = !callback(4201).isBuildOverrideLink(type.target);
+      const obj = callback(4201);
     }
     return tmp;
   });
@@ -39982,8 +39982,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(7883).isExperimentEmbedURL(type.target);
-      const obj = callback(7883);
+      tmp = !callback(8013).isExperimentEmbedURL(type.target);
+      const obj = callback(8013);
     }
     return tmp;
   });
@@ -40051,7 +40051,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                         let content = type.content;
                         if (Array.isArray(type.content)) {
                           let item = content.forEach(() => { ... });
-                        } else if (typeof content === "y") {
+                        } else if (typeof content === "string") {
                           type.content = type.content.replace(/\n/g, " ");
                           let str = type.content;
                         } else {
@@ -40063,7 +40063,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                         }
                       }
                     });
-                  } else if (typeof content === "y") {
+                  } else if (typeof content === "string") {
                     type.content = type.content.replace(/\n/g, " ");
                     let str = type.content;
                   } else {
@@ -40075,7 +40075,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                   }
                 }
               });
-            } else if (typeof content === "y") {
+            } else if (typeof content === "string") {
               type.content = type.content.replace(/\n/g, " ");
               let str = type.content;
             } else {
@@ -40087,7 +40087,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
             }
           }
         });
-      } else if (typeof content === "y") {
+      } else if (typeof content === "string") {
         type.content = type.content.replace(/\n/g, " ");
         let str = type.content;
       } else {
@@ -40147,7 +40147,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (obj3.isEmbedInline(first1)) {
               items2 = [];
             }
-            obj3 = _require(4526);
+            obj3 = _require(4617);
           }
         } else {
           items2 = arr;
@@ -40170,8 +40170,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
         }
         if (tmp) {
           const content = type.content;
-          let tmp2 = typeof content === "__FORMATJS_LISTFORMAT_DATA__";
-          if (typeof content !== "__FORMATJS_LISTFORMAT_DATA__") {
+          let tmp2 = typeof content !== "string";
+          if (typeof content === "string") {
             tmp2 = "" !== type.content.trim();
             const str2 = type.content;
           }
@@ -40214,8 +40214,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
           }
           if (tmp) {
             const content = type.content;
-            let tmp2 = typeof content === "__FORMATJS_LISTFORMAT_DATA__";
-            if (typeof content !== "__FORMATJS_LISTFORMAT_DATA__") {
+            let tmp2 = typeof content !== "string";
+            if (typeof content === "string") {
               tmp2 = "" !== type.content.trim();
               const str2 = type.content;
             }
@@ -40251,16 +40251,16 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4109).isBuildOverrideLink(type.target);
-        const obj = callback(4109);
+        tmp = !callback(4201).isBuildOverrideLink(type.target);
+        const obj = callback(4201);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(7883).isExperimentEmbedURL(type.target);
-        const obj = callback(7883);
+        tmp = !callback(8013).isExperimentEmbedURL(type.target);
+        const obj = callback(8013);
       }
       return tmp;
     });
@@ -40323,7 +40323,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                           let content = type.content;
                           if (Array.isArray(type.content)) {
                             let item = content.forEach(() => { ... });
-                          } else if (typeof content === "y") {
+                          } else if (typeof content === "string") {
                             type.content = type.content.replace(/\n/g, " ");
                             let str = type.content;
                           } else {
@@ -40335,7 +40335,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                           }
                         }
                       });
-                    } else if (typeof content === "y") {
+                    } else if (typeof content === "string") {
                       type.content = type.content.replace(/\n/g, " ");
                       let str = type.content;
                     } else {
@@ -40347,7 +40347,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                     }
                   }
                 });
-              } else if (typeof content === "y") {
+              } else if (typeof content === "string") {
                 type.content = type.content.replace(/\n/g, " ");
                 let str = type.content;
               } else {
@@ -40359,7 +40359,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
               }
             }
           });
-        } else if (typeof content === "y") {
+        } else if (typeof content === "string") {
           type.content = type.content.replace(/\n/g, " ");
           let str = type.content;
         } else {

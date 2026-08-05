@@ -5,7 +5,7 @@ export default function timeRequire(arg0, arg1) {
   const timestamp = Date.now();
   const diff = Date.now() - timestamp;
   if (diff >= 5) {
-    if (typeof modules.getModules === "fileFinishedImporting") {
+    if (typeof modules.getModules === "function") {
       modules = obj2.getModules();
       const _Object = Object;
       const keys = Object.keys(modules);

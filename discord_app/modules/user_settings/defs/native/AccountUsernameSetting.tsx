@@ -16,7 +16,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => callback(table[6]).getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
   },
   useDescription: function useAccountUsernameSettingDescription() {
-    let obj = require(11076) /* useCurrentUserHasAutomodQuarantinedProfile */;
+    let obj = require(11183) /* useCurrentUserHasAutomodQuarantinedProfile */;
     const guildAutomodProfileQuarantineErrors = obj.useGuildAutomodProfileQuarantineErrors();
     let first;
     if (guildAutomodProfileQuarantineErrors != null) {
@@ -29,7 +29,7 @@ createToggle = {
     if (null != first) {
       obj = { variant: "text-xs/medium", color: "text-feedback-warning", children: null };
       obj[2] = first;
-      tmp5 = jsx(require(4189) /* Text */.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: null });
+      tmp5 = jsx(require(4281) /* Text */.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: null });
     }
     return tmp5;
   },
@@ -38,7 +38,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
   getComponent() {
-    return require(13808) /* UsernameStatusMessage */.default;
+    return require(13908) /* UsernameStatusMessage */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

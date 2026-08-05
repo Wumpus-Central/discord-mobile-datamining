@@ -11,7 +11,7 @@ const require = arg1;
 function CoachmarkImg(badge) {
   badge = badge.badge;
   const tmp = callback2();
-  let obj = require(8408) /* useMobileTenureBadgeImages */;
+  let obj = require(9402) /* useMobileTenureBadgeImages */;
   let id;
   if (badge != null) {
     id = badge.id;
@@ -29,7 +29,7 @@ function CoachmarkImg(badge) {
     const obj1 = { uri: null };
     obj1[0] = medium;
     obj[2] = obj1;
-    obj[1] = jsx(importDefault(5145), { resizeMode: "contain", style: null, source: null });
+    obj[1] = jsx(importDefault(5236), { resizeMode: "contain", style: null, source: null });
     tmp5 = <View resizeMode="contain" style={null} source={null} />;
   }
   return tmp5;
@@ -44,10 +44,10 @@ export default function TieredTenureBadgeCoachmark(arg0) {
   let first;
   let dependencyMap;
   ({ targetRef, badgeId } = arg0);
-  const tieredTenureBadge = tieredTenureBadgeData(5923).getTieredTenureBadge(badgeId);
+  const tieredTenureBadge = tieredTenureBadgeData(7015).getTieredTenureBadge(badgeId);
   tieredTenureBadgeData = null;
   if (null != tieredTenureBadge) {
-    let tmpResult = tmp(5923);
+    let tmpResult = tmp(7015);
     tieredTenureBadgeData = tmpResult.getTieredTenureBadgeData(tieredTenureBadge);
   }
   if (null != tieredTenureBadgeData) {
@@ -56,7 +56,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
   } else {
     items1 = [];
   }
-  tmpResult = tmp(8451);
+  tmpResult = tmp(5931);
   const tmp5 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
@@ -84,7 +84,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     obj[8] = intl3.string(tieredTenureBadgeData(_undefined[12]).t.RzWDqY);
     return obj;
   }, items2);
-  let obj = tieredTenureBadgeData(5923);
-  const coachmark = tieredTenureBadgeData(8440).useCoachmark(targetRef, memo);
+  let obj = tieredTenureBadgeData(7015);
+  const coachmark = tieredTenureBadgeData(8575).useCoachmark(targetRef, memo);
   return null;
 };

@@ -26,7 +26,7 @@ function handleKrispLinkPressed() {
   obj[2] = obj;
   importDefault(698).track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj);
   const obj2 = importDefault(698);
-  importDefault(3890).openURL(articleURL);
+  importDefault(3982).openURL(articleURL);
 }
 ({ Image: c3, View: c4, Pressable: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: error, AnalyticsPages: metroImportAll, AnalyticsSections: c9, HelpdeskArticles: c10 } = ME);
@@ -38,11 +38,11 @@ export default function KrispLogo() {
   let obj = require(589) /* initialize */;
   const items = [handleThemeChange];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
-  let obj1 = require(4039) /* AccessibilityAnnouncer */;
+  let obj1 = require(4131) /* AccessibilityAnnouncer */;
   if (obj1.isThemeLight(stateFromStores)) {
-    let tmp4Result = tmp4(10806);
+    let tmp4Result = tmp4(10759);
   } else {
-    tmp4Result = tmp4(10807);
+    tmp4Result = tmp4(10760);
   }
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
@@ -56,7 +56,7 @@ export default function KrispLogo() {
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = tmp(1236).intl;
   obj2[2] = intl3.string(require(1236) /* getSystemLocale */.t.hvVgAZ);
-  obj1[3] = callback(require(4189) /* Text */.Text, obj2);
+  obj1[3] = callback(require(4281) /* Text */.Text, obj2);
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
   return callback2(closure_4, obj);

@@ -103,25 +103,25 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     let obj = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl5 = require(1236) /* getSystemLocale */.intl;
     obj[2] = intl5.string(require(1236) /* getSystemLocale */.t.t0mEt2);
-    let tmp3 = callback(require(4189) /* Text */.Text, obj);
+    let tmp3 = callback(require(4281) /* Text */.Text, obj);
   } else if (tmp) {
     obj = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl4 = require(1236) /* getSystemLocale */.intl;
     const obj1 = { mutedHook: null };
     obj1[0] = function mutedHook(children) {
-      return callback2(callback(4189).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
+      return callback2(callback(4281).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
     };
     obj[2] = intl4.format(require(1236) /* getSystemLocale */.t.O34r15, obj1);
-    tmp3 = callback(require(4189) /* Text */.Text, obj);
+    tmp3 = callback(require(4281) /* Text */.Text, obj);
   } else if (guildMessageNotifications === UserNotificationSettings.NO_MESSAGES) {
     const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl3 = require(1236) /* getSystemLocale */.intl;
     const obj3 = { notificationHook: null };
     obj3[0] = function notificationHook(children) {
-      return callback2(callback(4189).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
+      return callback2(callback(4281).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
     };
     obj2[2] = intl3.format(require(1236) /* getSystemLocale */.t.nRwUIL, obj3);
-    tmp3 = callback(require(4189) /* Text */.Text, obj2);
+    tmp3 = callback(require(4281) /* Text */.Text, obj2);
   } else {
     if (guildMessageNotifications !== tmp2.ALL_MESSAGES) {
       tmp3 = null;
@@ -136,7 +136,7 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     }
     obj = { variant: "text-sm/medium", color: "text-default", children: null };
     obj[2] = stringResult;
-    callback(require(4189) /* Text */.Text, obj);
+    callback(require(4281) /* Text */.Text, obj);
     const tmp4 = callback;
   }
   return tmp3;

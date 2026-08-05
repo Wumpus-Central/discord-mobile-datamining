@@ -27,14 +27,14 @@ let metroImportAll;
 const require = arg1;
 function ItemSeparator() {
   const tmp = callback4();
-  return callback2(require(7639) /* Form */.FormDivider, { style: callback4().rowFormDivider });
+  return callback2(require(7777) /* Form */.FormDivider, { style: callback4().rowFormDivider });
 }
 function VoiceMemberListSectionHeader(title) {
   const tmp = callback4();
   let obj = { style: tmp.sectionContainer, children: null };
   obj = { style: tmp.sectionTitle, variant: "text-xs/bold", color: "text-default", children: null };
   obj[3] = title.title.toUpperCase();
-  obj[1] = callback2(require(4189) /* Text */.Text, obj);
+  obj[1] = callback2(require(4281) /* Text */.Text, obj);
   return callback2(closure_8, obj);
 }
 function renderSectionHeader(section) {
@@ -193,7 +193,7 @@ function VoiceSectionRow(arg0) {
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
 let closure_24 = createCacheKey.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
-let closure_25 = importAllResult.memo((channel) => callback2(importDefault(12856), { channel: channel.channel }));
+let closure_25 = importAllResult.memo((channel) => callback2(importDefault(12952), { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
   channel(589);
@@ -208,9 +208,9 @@ let closure_26 = importAllResult.memo((channel) => {
       obj = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1236).intl;
       obj[0] = intl.string(tmp4(1236).t["6Qgrev"]);
-      obj[2] = importDefault(10237);
-      obj[3] = tmp4(12516).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(12516).CircularIconButton, obj);
+      obj[2] = importDefault(9638);
+      obj[3] = tmp4(12642).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(12642).CircularIconButton, obj);
       const intl2 = tmp4(1236).intl;
       obj[1] = intl2.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = function onPress() {
@@ -224,7 +224,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(7639).FormRow, obj);
+      items[1] = callback2(tmp4(7777).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

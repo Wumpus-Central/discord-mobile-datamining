@@ -17,7 +17,7 @@ export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
     return value;
   }), 2);
   const dependencyMap = tmp[1];
-  importDefault(4620)(() => {
+  importDefault(4711)(() => {
     const Storage = c2(595).Storage;
     if (null == Storage.get(c2)) {
       const Storage2 = c2(595).Storage;

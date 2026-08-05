@@ -18,7 +18,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
   },
   onValueChange: function handleSecureFramesPersistentCodesToggle(arg0) {
-    const result = importDefault(8904).updatePersistentCodesEnabled(arg0);
+    const result = importDefault(9134).updatePersistentCodesEnabled(arg0);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

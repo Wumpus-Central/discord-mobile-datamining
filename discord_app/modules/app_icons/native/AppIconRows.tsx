@@ -45,7 +45,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return outer1_7(_undefined(_undefined2[9]), obj);
     });
-    obj[1] = callback(merged(5558).TableRowGroup, obj);
+    obj[1] = callback(merged(5649).TableRowGroup, obj);
     return callback(View, obj);
   }
 }
@@ -58,7 +58,7 @@ export default function AppIconRows(onSelect) {
   let limitedTimeAppIcons;
   let officialAppIcons;
   onSelect = onSelect.onSelect;
-  let obj = require(6585) /* fetchCurrentAppIcon */;
+  let obj = require(7582) /* fetchCurrentAppIcon */;
   const appIcons = obj.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
   let obj1 = require(589) /* initialize */;

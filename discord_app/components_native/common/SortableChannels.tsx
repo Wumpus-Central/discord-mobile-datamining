@@ -503,7 +503,7 @@ class SortableChannels extends Component3 {
               id = tmp2.data.channel.id;
             }
           }
-          if (typeof id !== "__FORMATJS_LISTFORMAT_DATA__") {
+          if (typeof id === "string") {
             let tmp22 = obj;
             obj = { y: null, height: null };
             obj[0] = num;

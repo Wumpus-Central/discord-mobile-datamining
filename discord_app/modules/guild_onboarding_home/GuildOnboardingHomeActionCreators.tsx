@@ -17,90 +17,29 @@ function _fetchGuildHomeSettings() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp3;
-              let lib = tmp7;
-              lib = undefined;
-              dependencyMap = undefined;
-              const obj1 = { type: "GUILD_HOME_SETTINGS_FETCH_START", guildId: null };
-              obj1[1] = callback;
-              outer1_1(outer1_2[6]).dispatch(obj1);
-              let c4 = 1;
-              const HTTP = callback(outer1_2[7]).HTTP;
-              let obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-              obj2[0] = outer1_9.GUILD_HOME_SETTINGS(callback);
-              c5 = 2;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj2);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            obj2 = lib(709);
-            const obj4 = { type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: null };
-            obj4[1] = callback;
-            obj2.dispatch(obj4);
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            lib = arg1;
-            dependencyMap = callback(11453).settingsFromServer(lib.body);
-            const obj8 = callback(11453);
-            const obj6 = { type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: null, homeSettings: null };
-            obj6[1] = callback;
-            obj6[2] = dependencyMap;
-            lib(709).dispatch(obj6);
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = dependencyMap;
-            return obj;
-          }
-        } catch (tmp15) {
-          let closure_3 = tmp15;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp15;
-          } else {
-            c5 = tmp;
-          }
-        }
-      }
+      let dependencyMap = tmp3;
+      const obj1 = { type: "GUILD_HOME_SETTINGS_FETCH_START", guildId: null };
+      obj1[1] = callback;
+      outer1_1(outer1_2[6]).dispatch(obj1);
+      let c4 = 1;
+      const HTTP = callback(outer1_2[7]).HTTP;
+      let obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
+      obj2[0] = outer1_9.GUILD_HOME_SETTINGS(callback);
+      yield HTTP.get(obj2);
+      c4 = 0;
+      obj2 = lib(709);
+      const obj4 = { type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: null };
+      obj4[1] = callback;
+      obj2.dispatch(obj4);
+      lib = yield "HermesInternal";
+      dependencyMap = callback(11570).settingsFromServer(lib.body);
+      const obj8 = callback(11570);
+      const obj6 = { type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: null, homeSettings: null };
+      obj6[1] = callback;
+      obj6[2] = dependencyMap;
+      lib(709).dispatch(obj6);
+      c4 = 0;
+      return dependencyMap;
     })();
   });
   const _fetchGuildHomeSettings = tmp;
@@ -185,8 +124,8 @@ function _fetchNewMemberActions() {
             return obj5;
           } else {
             lib = arg1;
-            dependencyMap = callback(11453).actionsFromServer(lib.body);
-            const obj11 = callback(11453);
+            dependencyMap = callback(11570).actionsFromServer(lib.body);
+            const obj11 = callback(11570);
             const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: null, memberActions: null };
             obj6[1] = callback;
             obj6[2] = dependencyMap;
@@ -227,81 +166,34 @@ function _clearNewMemberActions() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
+      const dependencyMap = tmp3;
+      const obj1 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_START", guildId: null };
+      obj1[1] = callback;
+      outer1_1(outer1_2[6]).dispatch(obj1);
+      let c4 = 1;
+      const HTTP = callback(outer1_2[7]).HTTP;
+      const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
+      obj2[0] = outer1_9.GUILD_MEMBER_ACTIONS(callback);
+      yield HTTP.del(obj2);
+      if (1 === tmp7) {
+        c4 = 0;
+        const obj3 = callback2(709);
+        const obj4 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_FAIL", guildId: null };
+        obj4[1] = callback;
+        obj3.dispatch(obj4);
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              const callback2 = tmp7;
-              const obj1 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_START", guildId: null };
-              obj1[1] = callback;
-              outer1_1(outer1_2[6]).dispatch(obj1);
-              let c4 = 1;
-              const HTTP = callback(outer1_2[7]).HTTP;
-              const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-              obj2[0] = outer1_9.GUILD_MEMBER_ACTIONS(callback);
-              c5 = 2;
-              c6 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.del(obj2);
-              return obj3;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              obj3 = callback2(709);
-              const obj4 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_FAIL", guildId: null };
-              obj4[1] = callback;
-              obj3.dispatch(obj4);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj = callback2(709);
-              const obj5 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS", guildId: null };
-              obj5[1] = callback;
-              obj.dispatch(obj5);
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          }
-        } catch (tmp21) {
-          let closure_3 = tmp21;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp21;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const obj = callback2(709);
+        const obj5 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS", guildId: null };
+        obj5[1] = callback;
+        obj.dispatch(obj5);
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _clearNewMemberActions = tmp;
@@ -372,8 +264,8 @@ export const selectHomeResourceChannel = function selectHomeResourceChannel(clos
       obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
     }
     if (flag) {
-      require(4201) /* transitionToChannel */.transitionToChannel(channelId, { navigationReplace: false });
-      const obj3 = require(4201) /* transitionToChannel */;
+      require(4293) /* transitionToChannel */.transitionToChannel(channelId, { navigationReplace: false });
+      const obj3 = require(4293) /* transitionToChannel */;
     }
   }
 };
@@ -398,7 +290,7 @@ export const selectNewMemberActionChannel = function selectNewMemberActionChanne
     obj[3] = actionForChannel.actionType;
     obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
   }
-  require(4201) /* transitionToChannel */.transitionToChannel(id);
+  require(4293) /* transitionToChannel */.transitionToChannel(id);
 };
 export const completeNewMemberAction = function completeNewMemberAction(c0, c1) {
   let obj = importDefault(709);

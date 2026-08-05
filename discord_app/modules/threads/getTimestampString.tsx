@@ -42,7 +42,7 @@ export default function getTimestampString(arg0, arg1) {
     let tmp7 = null;
     if (null != tmp4) {
       let formatToPlainStringResult = tmp4;
-      if (typeof tmp4 !== "y") {
+      if (typeof tmp4 !== "string") {
         const intl = flag(obj[0]).intl;
         obj = { count: null };
         obj[0] = diffResult;

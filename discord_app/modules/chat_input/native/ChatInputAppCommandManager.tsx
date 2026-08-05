@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import importAllResult from "PermissionOverwriteType";
 import handleInit from "handleInit";
 import closure_7 from "handleInit";
-import map from "map";
+import handleLoadMessages from "handleLoadMessages";
 import set from "set";
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -19,6 +19,6 @@ export const ForYouRecentActivitySectionHeader = function ForYouRecentActivitySe
   obj = { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[4] = intl.string(require(1236) /* getSystemLocale */.t.yM9Krm);
-  obj[1] = jsx(require(4189) /* Text */.Text, { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null });
+  obj[1] = jsx(require(4281) /* Text */.Text, { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null });
   return <View style={tmp.textHeader} color="text-muted" variant="text-sm/semibold" accessibilityRole="header">{null}</View>;
 };

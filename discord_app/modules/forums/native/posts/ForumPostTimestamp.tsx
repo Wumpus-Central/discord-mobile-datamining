@@ -17,10 +17,10 @@ export default function ForumPostTimestamp(thread) {
   const tmp = callback();
   const tmp2 = require;
   let color = "text-muted";
-  const children = require(9142) /* useLoadForumUnreadCounts */.useLastActiveTimestamp(thread, useForumChannelStore(thread.parent_id).sortOrder, format);
+  const children = require(8214) /* useLoadForumUnreadCounts */.useLastActiveTimestamp(thread, useForumChannelStore(thread.parent_id).sortOrder, format);
   if (hasUnreads) {
     color = "text-default";
   }
   const style = [textStyle, tmp.text];
-  return jsx(tmp2(4189).Text, { lineClamp: 1, variant: "text-xs/normal", color, style, children });
+  return jsx(tmp2(4281).Text, { lineClamp: 1, variant: "text-xs/normal", color, style, children });
 };

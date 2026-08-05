@@ -27,6 +27,6 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t["1uAmCw"]);
-  obj[1] = jsx(require(4189) /* Text */.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
+  obj[1] = jsx(require(4281) /* Text */.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
   return <View style={tmp.text} color="text-muted" variant="text-sm/semibold">{null}</View>;
 };

@@ -8,7 +8,8 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    return require(9674) /* apexExperiment */.useGameMentionsExperiment({ location: "GameMentionsInAutocomplete" }).enabled;
+    const GameMentionsMobileExperiment = require(5858) /* apexExperiment */.GameMentionsMobileExperiment;
+    return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
   },
   useValue: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.useSetting,
   onValueChange: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.updateSetting
@@ -20,7 +21,8 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    return require(9674) /* apexExperiment */.useGameMentionsExperiment({ location: "GameMentionsInAutocomplete" }).enabled;
+    const GameMentionsMobileExperiment = require(5858) /* apexExperiment */.GameMentionsMobileExperiment;
+    return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
   },
   useValue: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.useSetting,
   onValueChange: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.updateSetting

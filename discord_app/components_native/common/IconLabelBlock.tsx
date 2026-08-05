@@ -45,7 +45,7 @@ prototype["renderText"] = function renderText() {
     obj[2] = items;
     obj[3] = tmp3;
     obj[4] = text;
-    tmp4 = callback2(require(4189) /* Text */.Text, obj);
+    tmp4 = callback2(require(4281) /* Text */.Text, obj);
   }
   return tmp4;
 };
@@ -66,7 +66,7 @@ prototype["renderIcon"] = function renderIcon() {
     const tmp13 = closure_5;
     const tmp14 = callback2;
     const merged = Object.assign(tmp11);
-    const items = [callback2(importDefault(10200), obj), ];
+    const items = [callback2(importDefault(9600), obj), ];
     let tmp14Result = null;
     if (null != error) {
       const obj1 = { style: null };
@@ -81,7 +81,7 @@ prototype["renderIcon"] = function renderIcon() {
     return tmp12(tmp13, obj);
   } else {
     if (null == source) {
-      obj = require(4039) /* AccessibilityAnnouncer */;
+      obj = require(4131) /* AccessibilityAnnouncer */;
       if (obj.isThemeLight(this.context.theme)) {
         darkSource = tmp2;
       }

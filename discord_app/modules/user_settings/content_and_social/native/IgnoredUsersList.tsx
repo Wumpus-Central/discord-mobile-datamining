@@ -11,10 +11,10 @@ const require = arg1;
 function IgnoredUsersList(userIds) {
   userIds = userIds.userIds;
   const tmp = createCacheKey();
-  importDefault(5519);
+  importDefault(5610);
   if (0 === userIds.length) {
     let obj = { Illustration: null, body: null };
-    obj[0] = require(13852) /* getBlockedSource */.Blocked;
+    obj[0] = require(13952) /* getBlockedSource */.Blocked;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[1] = intl.string(require(1236) /* getSystemLocale */.t.PYrWFW);
     let tmp7 = callback(require(1297) /* Button */.EmptyState, obj);
@@ -30,15 +30,15 @@ function IgnoredUsersList(userIds) {
     const obj3 = { numberOfIgnoredUsers: null };
     obj3[0] = userIds.length;
     obj2[3] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.iNKUhU, obj3);
-    const items = [callback(require(4189) /* Text */.Text, obj2), ];
+    const items = [callback(require(4281) /* Text */.Text, obj2), ];
     const obj4 = { hasIcons: true, children: null };
     obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
     const intl3 = require(1236) /* getSystemLocale */.intl;
-    items[1] = callback(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj4, intl3.string(require(1236) /* getSystemLocale */.t["93ZDWE"]));
+    items[1] = callback(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj4, intl3.string(require(1236) /* getSystemLocale */.t["93ZDWE"]));
     obj1[0] = items;
     obj[2] = callback2(ScrollView, obj1);
-    obj[1] = callback(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
-    tmp7 = callback(require(5519) /* context */.AnalyticsLocationProvider, obj);
+    obj[1] = callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+    tmp7 = callback(require(5610) /* context */.AnalyticsLocationProvider, obj);
   }
   return tmp7;
 }

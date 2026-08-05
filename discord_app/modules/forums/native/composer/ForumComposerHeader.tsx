@@ -44,16 +44,16 @@ export default function ForumComposerHeader(height) {
   obj[4] = function onPress() {
     return callback(false);
   };
-  obj[5] = callback(require(5179) /* XSmallIcon */.XSmallIcon, {});
-  const items = [callback(require(4721) /* PressableBase */.PressableOpacity, obj), , , ];
+  obj[5] = callback(require(5270) /* XSmallIcon */.XSmallIcon, {});
+  const items = [callback(require(4812) /* PressableBase */.PressableOpacity, obj), , , ];
   obj = { style: tmp.headerBarContent, children: null };
-  const items1 = [callback(require(4706) /* ForumIcon */.ForumIcon, { size: "sm" }), ];
+  const items1 = [callback(require(4797) /* ForumIcon */.ForumIcon, { size: "sm" }), ];
   const obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
     const intl2 = tmp7(1236).intl;
     title = intl2.string(tmp7(1236).t["7EjFCk"]);
   }
-  const items2 = [callback(require(4189) /* Text */.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(require(4189) /* Text */.Text, { variant: "text-xs/medium", color: "text-default", children: importDefault(4384)(channel) })];
+  const items2 = [callback(require(4281) /* Text */.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(require(4281) /* Text */.Text, { variant: "text-xs/medium", color: "text-default", children: importDefault(4475)(channel) })];
   obj1[1] = items2;
   items1[1] = closure_6(closure_4, obj1);
   obj[1] = items1;
@@ -69,8 +69,8 @@ export default function ForumComposerHeader(height) {
     obj2[1] = intl3.string(tmp7(1236).t.yR6HwZ);
     obj2[2] = tmp.button;
     obj2[3] = onGuidelinesPress;
-    obj2[4] = tmp6(tmp7(4694).BookCheckIcon, {});
-    tmp6Result = tmp6(tmp7(4721).PressableOpacity, obj2);
+    obj2[4] = tmp6(tmp7(4785).BookCheckIcon, {});
+    tmp6Result = tmp6(tmp7(4812).PressableOpacity, obj2);
   }
   items[2] = tmp6Result;
   items[3] = callback(closure_4, { style: tmp.headerBarSeparator });

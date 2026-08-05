@@ -35,8 +35,8 @@ export const useCanReviewGuildMemberApplications = function useCanReviewGuildMem
     hasItem = getUncachedChannelPermissions.can(constants2.KICK_MEMBERS, stateFromStores);
   }
   if (hasItem) {
-    hasItem = _require(4681).guildHasVerificationGate(stateFromStores);
-    const tmpResult = _require(4681);
+    hasItem = _require(4772).guildHasVerificationGate(stateFromStores);
+    const tmpResult = _require(4772);
   }
   return hasItem;
 };

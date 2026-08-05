@@ -24,8 +24,8 @@ function OverlappingSchedulesWarning(conflictingEntries) {
     obj = { spacing: 8, children: null };
     obj = { variant: "text-sm/medium", children: null };
     const intl = require(1236) /* getSystemLocale */.intl;
-    obj[1] = intl.string(importDefault(2225)["26A0Df"]);
-    const items = [callback2(require(4189) /* Text */.Text, obj), ];
+    obj[1] = intl.string(importDefault(2285)["26A0Df"]);
+    const items = [callback2(require(4281) /* Text */.Text, obj), ];
     const obj1 = { spacing: 4, children: null };
     obj1[1] = conflictingEntries.map((dayLabel) => {
       dayLabel = dayLabel.dayLabel;
@@ -33,9 +33,9 @@ function OverlappingSchedulesWarning(conflictingEntries) {
       obj[1] = "" + dayLabel + "  " + dayLabel.timeRange;
       return callback2(callback(table[14]).Text, obj, dayLabel);
     });
-    items[1] = callback2(require(4602) /* Stack */.Stack, obj1);
+    items[1] = callback2(require(4693) /* Stack */.Stack, obj1);
     obj[1] = items;
-    obj[2] = callback3(require(4602) /* Stack */.Stack, obj);
+    obj[2] = callback3(require(4693) /* Stack */.Stack, obj);
     tmp = callback2(require(1297) /* Button */.HelpMessage, obj);
   }
   return tmp;
@@ -563,9 +563,9 @@ export default function ScheduleDowntimeScreen() {
     obj10[1] = callback2(tmp2(stringResult[14]).Text, obj11);
     obj10[3] = function handleStartTimePress() {
       const intl = tmp(rule[15]).intl;
-      const f109802 = (first1) => {
+      const f110082 = (first1) => {
         callback(first1);
-        let obj = f109802(outer1_2[19]);
+        let obj = f110082(outer1_2[19]);
         const result = (obj.timeToMinutes(first1) + 540) % 1440;
         obj = { hours: Math.floor(result / 60), minutes: result % 60 };
         callback2(obj);

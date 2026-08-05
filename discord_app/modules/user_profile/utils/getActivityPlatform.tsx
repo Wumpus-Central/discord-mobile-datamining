@@ -9,23 +9,23 @@ const result = set.fileFinishedImporting("modules/user_profile/utils/getActivity
 
 export default function getActivityPlatform(session_id) {
   const importDefault = session_id;
-  const tmp3 = importDefault(12020)(session_id.session_id);
+  const tmp3 = importDefault(12202)(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(9088)(session_id)) {
-    let tmpResult = tmp(4875);
+  } else if (tmp(9573)(session_id)) {
+    let tmpResult = tmp(4966);
     return tmpResult.get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8183)(session_id)) {
-    tmpResult = tmp(4875);
+  } else if (tmp(8829)(session_id)) {
+    tmpResult = tmp(4966);
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(12005)(session_id)) {
-    return tmp(4875).get(PlatformTypes.XBOX);
-  } else if (tmp(12006)(session_id)) {
-    return tmp(4875).get(PlatformTypes.PLAYSTATION);
+  } else if (tmp(12187)(session_id)) {
+    return tmp(4966).get(PlatformTypes.XBOX);
+  } else if (tmp(12188)(session_id)) {
+    return tmp(4966).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(12022)(session_id)) {
-      if (!tmp(12023)(session_id)) {
-        const found = tmp(4875).find((name) => name.name === session_id.name);
+    if (!tmp(12204)(session_id)) {
+      if (!tmp(12205)(session_id)) {
+        const found = tmp(4966).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -36,6 +36,6 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return tmp(4875).get(PlatformTypes.META_QUEST_OR_HORIZON);
+    return tmp(4966).get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 };

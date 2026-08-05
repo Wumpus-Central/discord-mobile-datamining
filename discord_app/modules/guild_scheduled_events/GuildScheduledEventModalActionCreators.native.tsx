@@ -11,14 +11,14 @@ function openGuildEventDetails(arg0) {
   let recurrenceId;
   ({ event, recurrenceId } = arg0);
   ({ eventId, onClose } = arg0);
-  let obj = importDefault(4161);
+  let obj = importDefault(4253);
   obj = { eventId, event, onCloseActionSheet: onClose, recurrenceId: null };
   if (recurrenceId == null) {
-    recurrenceId = require(8214) /* getRRule */.getNextRecurrenceIdInEvent(event);
-    const tmp2Result = require(8214) /* getRRule */;
+    recurrenceId = require(8864) /* getRRule */.getNextRecurrenceIdInEvent(event);
+    const tmp2Result = require(8864) /* getRRule */;
   }
   obj[3] = recurrenceId;
-  obj.openLazy(require(1959) /* asyncRequireImpl */(8223, dependencyMap.paths), closure_5, obj, "stack");
+  obj.openLazy(require(1959) /* asyncRequireImpl */(8873, dependencyMap.paths), closure_5, obj, "stack");
 }
 function _transitionToEventDetailsFromInvite() {
   const self = this;
@@ -113,7 +113,7 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
   return applyArgumentsResult;
 };
 export const openEndEventModal = function openEndEventModal(channel) {
-  let obj = importDefault(4161);
+  let obj = importDefault(4253);
   obj = { channel };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(12299, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(9069, dependencyMap.paths), closure_4, obj);
 };

@@ -22,77 +22,21 @@ function _getTwitchGame() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let sendRequest = tmp2;
-              let name = tmp3;
-              let data;
-              name = undefined;
-              if (null != outer1_14[closure_0]) {
-                c5 = 3;
-                const obj1 = { value: null, done: true };
-                obj1[0] = tmp27;
-                return obj1;
-              } else {
-                const obj2 = { id: null };
-                obj2[0] = tmp24;
-                c4 = 1;
-                c5 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = outer1_15("/games", obj2, tmp25);
-                return obj3;
-              }
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            data = body.body.data;
-            const first = data[0];
-            name = undefined;
-            if (first != null) {
-              name = first.name;
-            }
-            closure_14[closure_0] = name;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = name;
-            return obj;
-          }
-        } catch (tmp18) {
-          c5 = tmp;
-          throw tmp18;
-        }
+      let sendRequest = tmp2;
+      let name = tmp3;
+      if (null != outer1_14[closure_0]) {
+        return tmp27;
       }
+      const obj2 = { id: null };
+      obj2[0] = tmp24;
+      yield outer1_15("/games", obj2, tmp25);
+      const data = body.body.data;
+      const first = data[0];
+      if (first != null) {
+        name = first.name;
+      }
+      closure_14[closure_0] = name;
+      return name;
     })();
   });
   const _getTwitchGame = tmp;
@@ -132,8 +76,8 @@ prototype["start"] = function start() {
   if (!this._started) {
     self._started = true;
     if (closure_4.isFetching()) {
-      const response = importDefault(4999).fetch();
-      const obj = importDefault(4999);
+      const response = importDefault(5090).fetch();
+      const obj = importDefault(5090);
     } else {
       self._check();
     }

@@ -9,7 +9,7 @@ function useOfficialMessageStyleSettingValue() {
   return require(589) /* initialize */.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
 }
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
-  const result = require(13521) /* setFontSize */.setOfficialMessageStyle(officialMessageStyle);
+  const result = require(13617) /* setFontSize */.setOfficialMessageStyle(officialMessageStyle);
 }
 function useOfficialMessageStyleSettingOptions() {
   return React.useMemo(() => {

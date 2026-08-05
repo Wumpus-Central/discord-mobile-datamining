@@ -197,8 +197,8 @@ let closure_15 = require("getGuildTierFromGuild").memoize((arr, stateFromStores)
   const found = arr.filter((roles) => !stateFromStores(outer1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
   const mapped = found.map(computeEmojiItem);
   const reversed = mapped.reverse();
-  const maxEmojiSlots = _require(4085).getMaxEmojiSlots(stateFromStores);
-  const obj2 = _require(4085);
+  const maxEmojiSlots = _require(4177).getMaxEmojiSlots(stateFromStores);
+  const obj2 = _require(4177);
   const obj3 = importDefault(12);
   [arr2, arr3] = callback(importDefault(12).partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const intl = _require(1236).intl;

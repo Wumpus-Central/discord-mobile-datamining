@@ -14,15 +14,15 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(5858).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(6961).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = stateFromStores.name;
     obj[1] = topUserOrGuildDescription;
     obj = { guild: null, style: null };
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
-    obj[2] = callback(importDefault(5570), obj);
-    return callback(tmp2(5224).TableRow, obj);
+    obj[2] = callback(importDefault(5661), obj);
+    return callback(tmp2(5315).TableRow, obj);
   }
   tmp = createCacheKey();
 }
@@ -38,11 +38,11 @@ export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   let obj = { children: null };
   obj = { variant: "text-md/bold", style: createCacheKey().header, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(importDefault(2225).Lq9Set);
-  const items = [callback(require(4189) /* Text */.Text, obj), ];
+  obj[2] = intl.string(importDefault(2285).Lq9Set);
+  const items = [callback(require(4281) /* Text */.Text, obj), ];
   obj = { hasIcons: true, children: null };
   obj[1] = topGuildActivities.map((guildActivity) => callback(closure_7, { guildActivity }, guildActivity.guild_id));
-  items[1] = callback(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj);
+  items[1] = callback(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
   obj[0] = items;
-  return callback2(require(5555) /* ActionSheet */.ActionSheet, obj);
+  return callback2(require(5646) /* ActionSheet */.ActionSheet, obj);
 };

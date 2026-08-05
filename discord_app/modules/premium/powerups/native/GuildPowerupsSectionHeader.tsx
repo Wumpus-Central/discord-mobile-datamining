@@ -17,7 +17,7 @@ export default function GuildPowerupsSectionHeader(arg0) {
   let title;
   ({ title, description } = arg0);
   const obj = { style: callback3().headerContainer, children: null };
-  const items = [callback(require(4189) /* Text */.Text, { variant: "heading-lg/semibold", accessibilityRole: "header", children: title }), callback(require(4189) /* Text */.Text, { variant: "text-md/normal", children: description })];
+  const items = [callback(require(4281) /* Text */.Text, { variant: "heading-lg/semibold", accessibilityRole: "header", children: title }), callback(require(4281) /* Text */.Text, { variant: "text-md/normal", children: description })];
   obj[1] = items;
   return callback2(View, obj);
 };

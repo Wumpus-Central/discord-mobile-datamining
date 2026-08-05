@@ -4,7 +4,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/mobile
 export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4, arg1) {
   const _require = closure_4;
   const importDefault = arg1;
-  let obj = importDefault(4399);
+  let obj = importDefault(4490);
   obj = {};
   const merged = Object.assign(arg1);
   obj.onDismissed = function onDismissed() {
@@ -14,5 +14,5 @@ export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4,
       onDismissed();
     }
   };
-  obj.pushLazy(_require(1959)(11830, dependencyMap.paths), obj, closure_4, { animation: "none" });
+  obj.pushLazy(_require(1959)(5842, dependencyMap.paths), obj, closure_4, { animation: "none" });
 };

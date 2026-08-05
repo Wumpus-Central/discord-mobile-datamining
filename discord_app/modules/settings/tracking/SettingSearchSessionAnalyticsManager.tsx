@@ -15,15 +15,15 @@ prototype["initialize"] = function initialize() {
 };
 prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
-    const result = require(6511) /* trackSettingSearchInputFocused */.trackSettingSearchQueryEntered();
+    const result = require(5924) /* trackSettingSearchInputFocused */.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = require(6511) /* trackSettingSearchInputFocused */;
+    const obj = require(5924) /* trackSettingSearchInputFocused */;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = require(6511) /* trackSettingSearchInputFocused */;
+    let obj = require(5924) /* trackSettingSearchInputFocused */;
     obj = { searchSessionDuration: null };
     const _Date = Date;
     obj[0] = Date.now() - self.searchSessionStartTime;

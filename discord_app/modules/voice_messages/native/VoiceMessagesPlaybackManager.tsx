@@ -14,8 +14,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
     applyArgumentsResult.appState = AppState.currentState;
     applyArgumentsResult.handleSetPrefersReducedMotion = function handleSetPrefersReducedMotion(prefersReducedMotion) {
       if (obj.isAndroid()) {
-        const result = callback(4591).handleSetPrefersReducedMotion(prefersReducedMotion.prefersReducedMotion);
-        const obj2 = callback(4591);
+        const result = callback(4682).handleSetPrefersReducedMotion(prefersReducedMotion.prefersReducedMotion);
+        const obj2 = callback(4682);
       } else {
         const DCDAccessibilityManager = closure_4.DCDAccessibilityManager;
         const result1 = DCDAccessibilityManager.handleSetPrefersReducedMotion(prefersReducedMotion.prefersReducedMotion);
@@ -25,8 +25,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
       id = id.id;
       if (id.channelId === currentlySelectedChannelId.getCurrentlySelectedChannelId()) {
         if (obj.isAndroid()) {
-          const result = callback(13616).handleVoiceMessageDeleted(id);
-          const obj2 = callback(13616);
+          const result = callback(13712).handleVoiceMessageDeleted(id);
+          const obj2 = callback(13712);
         } else {
           const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
           if (DCDAudioPlayerManager != null) {
@@ -38,8 +38,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       if (obj.isAndroid()) {
-        callback(13616).pauseCurrentPlayer(false);
-        const obj2 = callback(13616);
+        callback(13712).pauseCurrentPlayer(false);
+        const obj2 = callback(13712);
       } else {
         const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
         if (DCDAudioPlayerManager != null) {
@@ -111,8 +111,8 @@ let result = require("handleConnectionOpen").fileFinishedImporting("modules/voic
 export default voiceMessagesPlaybackManager;
 export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
   if (obj.isAndroid()) {
-    importDefault(13616).pauseCurrentPlayer(arg0);
-    const obj2 = importDefault(13616);
+    importDefault(13712).pauseCurrentPlayer(arg0);
+    const obj2 = importDefault(13712);
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
@@ -122,8 +122,8 @@ export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
 };
 export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
   if (obj.isAndroid()) {
-    const result = importDefault(13616).maybePlayCurrentPlayer();
-    const obj2 = importDefault(13616);
+    const result = importDefault(13712).maybePlayCurrentPlayer();
+    const obj2 = importDefault(13712);
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
@@ -133,8 +133,8 @@ export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
 };
 export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
   if (obj.isAndroid()) {
-    const result = importDefault(13616).handleVoiceMessageDeleted(id);
-    const obj2 = importDefault(13616);
+    const result = importDefault(13712).handleVoiceMessageDeleted(id);
+    const obj2 = importDefault(13712);
   } else {
     const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {

@@ -41,18 +41,18 @@ function MuteButton(channelId) {
     navigation.navigate("sidebar", { screen: outer1_12.MUTE, channelId, source: "channel-details-navigation-bar" });
   }, items1);
   const obj2 = channelId(1480);
-  const token = channelId(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(3897);
+  const token = channelId(3989).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(3989);
   const tmp5 = navigation;
-  const token1 = channelId(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token1 = channelId(3989).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   obj = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null };
   const intl = channelId(1236).intl;
   obj[0] = intl.string(channelId(1236).t.w4m945);
   obj[1] = callback;
   obj[2] = token1;
   obj[3] = token;
-  obj[4] = tmp5(stateFromStores ? 10242 : 7737);
-  return closure_15(channelId(6685).IconButton, obj, constants.MUTE);
+  obj[4] = tmp5(stateFromStores ? 9648 : 7868);
+  return closure_15(channelId(7672).IconButton, obj, constants.MUTE);
 }
 function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -78,20 +78,20 @@ function SearchButton(channelId) {
   let obj = channelId(589);
   const items1 = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items1, () => outer1_7.getChannel(channelId));
-  const shouldHideChannelContent = channelId(4407).useShouldHideChannelContent(stateFromStores);
-  let obj2 = channelId(4407);
-  const token = channelId(3897).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(3897);
-  const token1 = channelId(3897).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const shouldHideChannelContent = channelId(4498).useShouldHideChannelContent(stateFromStores);
+  let obj2 = channelId(4498);
+  const token = channelId(3989).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(3989);
+  const token1 = channelId(3989).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   obj = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null, disabled: null };
   const intl = channelId(1236).intl;
   obj[0] = intl.string(channelId(1236).t["5h0QOP"]);
   obj[1] = callback;
   obj[2] = token1;
   obj[3] = token;
-  obj[4] = importDefault(8299);
+  obj[4] = importDefault(5916);
   obj[5] = shouldHideChannelContent;
-  return callback2(channelId(6685).IconButton, obj, constants.SEARCH);
+  return callback2(channelId(7672).IconButton, obj, constants.SEARCH);
 }
 function SettingsButton(channel) {
   channel = channel.channel;
@@ -116,17 +116,17 @@ function SettingsButton(channel) {
       const obj4 = channel(outer1_2[25]);
     }
   }, items);
-  const token = channel(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  let obj2 = channel(3897);
-  const token1 = channel(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token = channel(3989).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  let obj2 = channel(3989);
+  const token1 = channel(3989).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   obj = { accessibilityLabel: null, onPress: null, accessibilityRole: "button", variant: null, size: null, icon: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t["3D5yo/"]);
   obj[1] = callback;
   obj[3] = token1;
   obj[4] = token;
-  obj[5] = navigation(9021);
-  return callback2(channel(6685).IconButton, obj, constants.SETTINGS);
+  obj[5] = navigation(5921);
+  return callback2(channel(7672).IconButton, obj, constants.SETTINGS);
 }
 function NavigationHeader(channel) {
   let onBackPress;
@@ -256,9 +256,9 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
   cleanUp = cleanUp.cleanUp;
   let dependencyMap;
   ({ onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, transitionState } = cleanUp);
-  const tmp2 = transitionState !== width(4538).TransitionStates.YEETED;
+  const tmp2 = transitionState !== width(4629).TransitionStates.YEETED;
   dependencyMap = tmp2;
-  let obj = width(4054);
+  let obj = width(4146);
   class S {
     constructor() {
       str = "none";
@@ -277,12 +277,7 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
       obj = { duration: 200, easing: null };
       Easing = tmp2(tmp3[30]).Easing;
       obj[1] = Easing.bezier(0.25, 0.1, 0.25, 1);
-      fn = function n(arg0) {
-        if (arg0) {
-          outer1_0(outer1_2[30]).runOnJS(closure_1)();
-          const obj = outer1_0(outer1_2[30]);
-        }
-      };
+      fn = function n() { ... };
       obj1 = { runOnJS: tmp2(tmp3[30]).runOnJS, cleanUp };
       fn.__closure = obj1;
       fn.__workletHash = 10411737901360;
@@ -292,15 +287,15 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
       return obj;
     }
   }
-  obj = { isActive: tmp2, withTiming: width(4194).withTiming, Easing: width(4054).Easing, runOnJS: width(4054).runOnJS, cleanUp, width };
+  obj = { isActive: tmp2, withTiming: width(4286).withTiming, Easing: width(4146).Easing, runOnJS: width(4146).runOnJS, cleanUp, width };
   S.__closure = obj;
   S.__workletHash = 1270940013897;
   S.__initData = closure_22;
   const animatedStyle = obj.useAnimatedStyle(S);
   obj = { style: items, children: null };
   items = [callback4().searchHeader, animatedStyle];
-  obj[1] = callback2(cleanUp(15484), { ref, channelId: channel.id, guildId: channel.guild_id, onSuggestionsLayoutMesure: onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, showBackButton: true });
-  return callback2(cleanUp(4054).View, obj);
+  obj[1] = callback2(cleanUp(15581), { ref, channelId: channel.id, guildId: channel.guild_id, onSuggestionsLayoutMesure: onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, showBackButton: true });
+  return callback2(cleanUp(4146).View, obj);
 });
 let closure_25 = { code: "function ChannelDetailsNavigationBarTsx3(){const{isActive,withTiming,timingFast,runOnJS,cleanUp,width}=this.__closure;return{pointerEvents:isActive?'auto':'none',opacity:withTiming(isActive?1:0,timingFast,'animate-always',function(finished){if(finished)runOnJS(cleanUp)();}),width:width};}" };
 let closure_26 = { code: "function ChannelDetailsNavigationBarTsx4(finished){const{runOnJS,cleanUp}=this.__closure;if(finished)runOnJS(cleanUp)();}" };

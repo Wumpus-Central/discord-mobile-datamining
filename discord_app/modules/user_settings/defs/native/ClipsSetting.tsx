@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CLIPS,
   getComponent() {
-    return require(14024) /* ClipsSettingsScreen */.default;
+    return require(14124) /* ClipsSettingsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

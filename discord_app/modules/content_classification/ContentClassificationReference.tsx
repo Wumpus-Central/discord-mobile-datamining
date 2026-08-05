@@ -8,8 +8,8 @@ export const isAgeRestrictedClassificationReference = function isAgeRestrictedCl
   }
   let result = !loaded;
   if (loaded) {
-    result = require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.data);
-    const obj = require(5912) /* isAgeRestrictedContentClassification */;
+    result = require(7004) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.data);
+    const obj = require(7004) /* isAgeRestrictedContentClassification */;
   }
   return result;
 };

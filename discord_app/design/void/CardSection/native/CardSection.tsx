@@ -35,7 +35,7 @@ export default function CardSection(arg0) {
     const items1 = [tmp.title, titleStyle];
     obj[0] = items1;
     obj[2] = title;
-    tmp4 = callback(importDefault(7674), obj);
+    tmp4 = callback(importDefault(7809), obj);
   }
   const items2 = [tmp4, , ];
   let tmp8 = null;

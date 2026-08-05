@@ -12,7 +12,7 @@ class FocusHelperImpl {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     tmp2 = FocusHelperState;
-    if (typeof FocusHelperState !== "fileFinishedImporting") {
+    if (typeof FocusHelperState !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -74,7 +74,7 @@ class FocusHelperImpl {
 }
 const prototype = FocusHelperImpl.prototype;
 prototype["restartState"] = function restartState() {
-  if (typeof closure_3 !== "fileFinishedImporting") {
+  if (typeof closure_3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(closure_3.prototype);
@@ -113,11 +113,11 @@ export default function useFocusHelper() {
   let onAddAnswer = obj.onAddAnswer;
   let obj2;
   obj2 = onAddAnswer(obj2[2])(() => {
-    if (typeof closure_4 !== "fileFinishedImporting") {
+    if (typeof closure_4 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(closure_4.prototype);
-    if (typeof closure_3 !== "fileFinishedImporting") {
+    if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(closure_3.prototype);

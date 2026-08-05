@@ -22,172 +22,120 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
     let c7 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let c3 = tmp3;
+      id = id.id;
+      yield "ct";
+      if (1 === tmp7) {
         if (arg0 === 1) {
+          let c7 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c7 = 3;
+          const obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c3 = tmp3;
-              let closure_2 = tmp7;
-              let id;
-              id = id.id;
-              let c1;
-              closure_2 = undefined;
-              c3 = undefined;
-              let setSecondaryToken;
-              let obj12;
-              c6 = 1;
+          const outer2_1 = outer2_2(outer2_3[5]).getToken(callback);
+          if (null != outer2_1) {
+            if ("" !== c1) {
+              let obj2 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: null };
+              obj2[1] = id;
+              outer2_1(outer2_3[6]).dispatch(obj2);
+              let obj12 = 1;
+              const HTTP = callback(outer2_3[7]).HTTP;
+              const obj3 = { url: null, headers: null, retries: 3, rejectWithError: false };
+              obj3[0] = outer2_8.ME;
+              const obj4 = { authorization: null };
+              obj4[0] = c1;
+              obj3[1] = obj4;
+              let c6 = 3;
               c7 = 1;
-              return { value: "ct", done: "Array" };
+              let obj5 = { value: null, done: false };
+              obj5[0] = HTTP.get(obj3);
+              return obj5;
             }
-          } else {
-            if (1 === tmp7) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                const obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                const outer2_1 = outer2_2(outer2_3[5]).getToken(callback);
-                if (null != outer2_1) {
-                  if ("" !== c1) {
-                    let obj2 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: null };
-                    obj2[1] = id;
-                    outer2_1(outer2_3[6]).dispatch(obj2);
-                    obj12 = 1;
-                    const HTTP = callback(outer2_3[7]).HTTP;
-                    const obj3 = { url: null, headers: null, retries: 3, rejectWithError: false };
-                    obj3[0] = outer2_8.ME;
-                    const obj4 = { authorization: null };
-                    obj4[0] = c1;
-                    obj3[1] = obj4;
-                    c6 = 3;
-                    c7 = 1;
-                    let obj5 = { value: null, done: false };
-                    obj5[0] = HTTP.get(obj3);
-                    return obj5;
-                  }
-                }
-                let obj13 = outer2_1(outer2_3[6]);
-                let obj6 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
-                obj6[1] = id;
-                obj13.dispatch(obj6);
-                c7 = 3;
-                const obj24 = outer2_2(outer2_3[5]);
-              }
-            } else if (2 === tmp7) {
-              obj12 = 0;
-              const outer2_6 = setSecondaryToken;
-              let status;
-              if (outer2_6 != null) {
-                status = outer2_6.status;
-              }
-              let tmp48 = 401 === status;
-              if (!tmp48) {
-                let status1;
-                if (outer2_6 != null) {
-                  status1 = outer2_6.status;
-                }
-                tmp48 = 403 === status1;
-              }
-              outer2_3 = tmp48;
-              let obj10 = outer2_1(outer2_3[6]);
-              let str = "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS";
-              if (outer2_3) {
-                str = "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE";
-              }
-              const obj7 = { type: null, userId: null };
-              obj7[0] = str;
-              obj7[1] = id;
-              obj10.dispatch(obj7);
-              c7 = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = undefined;
-              return obj8;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              obj12 = 0;
-              c7 = 3;
-              const obj9 = { value: null, done: true };
-              obj9[0] = arg1;
-              return obj9;
-            } else {
-              closure_2 = arg1;
-              obj12 = 0;
-              const body = closure_2.body;
-              id = undefined;
-              if (body != null) {
-                id = body.id;
-              }
-              c1 = id;
-              if (id == null) {
-                c1 = null;
-              }
-              setSecondaryToken = c1;
-              if (null == setSecondaryToken) {
-                if (callback !== id) {
-                  obj = outer2_1(outer2_3[6]);
-                  obj10 = { type: "USER_UPDATE", user: null };
-                  obj10[1] = closure_2.body;
-                  obj.dispatch(obj10);
-                }
-                obj2 = outer2_1(outer2_3[6]);
-                const obj11 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: null };
-                obj11[1] = id;
-                obj2.dispatch(obj11);
-              }
-            }
-            obj12 = { expected_user_id: null, actual_user_id: null };
-            obj12[0] = id;
-            obj12[1] = setSecondaryToken;
-            outer2_9.log("Found per-user token authentication mismatch", obj12);
-            obj5 = outer2_1(outer2_3[8]);
-            obj5.track(outer2_7.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, obj12);
-            obj6 = outer2_1(outer2_3[6]);
-            obj13 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
-            obj13[1] = id;
-            obj6.dispatch(obj13);
-            c7 = 3;
-            const obj14 = { value: null, done: true };
-            obj14[0] = undefined;
-            return obj14;
           }
-        } catch (tmp79) {
-          setSecondaryToken = tmp79;
-          if (tmp4 === obj12) {
-            c7 = tmp2;
-            throw tmp79;
-          } else {
-            c6 = tmp;
+          let obj13 = outer2_1(outer2_3[6]);
+          let obj6 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
+          obj6[1] = id;
+          obj13.dispatch(obj6);
+          c7 = 3;
+          const obj24 = outer2_2(outer2_3[5]);
+        }
+      } else if (2 === tmp7) {
+        obj12 = 0;
+        const outer2_6 = setSecondaryToken;
+        let status;
+        if (outer2_6 != null) {
+          status = outer2_6.status;
+        }
+        let tmp48 = 401 === status;
+        if (!tmp48) {
+          let status1;
+          if (outer2_6 != null) {
+            status1 = outer2_6.status;
           }
+          tmp48 = 403 === status1;
+        }
+        outer2_3 = tmp48;
+        let obj10 = outer2_1(outer2_3[6]);
+        let str = "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS";
+        if (outer2_3) {
+          str = "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE";
+        }
+        const obj7 = { type: null, userId: null };
+        obj7[0] = str;
+        obj7[1] = id;
+        obj10.dispatch(obj7);
+        c7 = 3;
+        const obj8 = { value: null, done: true };
+        obj8[0] = undefined;
+        return obj8;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        obj12 = 0;
+        c7 = 3;
+        const obj9 = { value: null, done: true };
+        obj9[0] = arg1;
+        return obj9;
+      } else {
+        let closure_2 = arg1;
+        obj12 = 0;
+        const body = closure_2.body;
+        id = undefined;
+        if (body != null) {
+          id = body.id;
+        }
+        c1 = id;
+        if (id == null) {
+          c1 = null;
+        }
+        setSecondaryToken = c1;
+        if (null == setSecondaryToken) {
+          if (callback !== id) {
+            const obj = outer2_1(outer2_3[6]);
+            obj10 = { type: "USER_UPDATE", user: null };
+            obj10[1] = closure_2.body;
+            obj.dispatch(obj10);
+          }
+          obj2 = outer2_1(outer2_3[6]);
+          const obj11 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: null };
+          obj11[1] = id;
+          obj2.dispatch(obj11);
         }
       }
+      obj12 = { expected_user_id: null, actual_user_id: null };
+      obj12[0] = id;
+      obj12[1] = setSecondaryToken;
+      outer2_9.log("Found per-user token authentication mismatch", obj12);
+      obj5 = outer2_1(outer2_3[8]);
+      obj5.track(outer2_7.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, obj12);
+      obj6 = outer2_1(outer2_3[6]);
+      obj13 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
+      obj13[1] = id;
+      obj6.dispatch(obj13);
     })();
     iter.next();
     return iter;
@@ -226,8 +174,8 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
     importDefault(709).dispatch(obj1);
     const obj4 = importDefault(709);
     const tmp5 = importDefault;
-    resolved = importDefault(5645).switchAccountToken(token, switchSynchronously);
-    const tmp5Result = importDefault(5645);
+    resolved = importDefault(5736).switchAccountToken(token, switchSynchronously);
+    const tmp5Result = importDefault(5736);
   }
   return resolved;
 };

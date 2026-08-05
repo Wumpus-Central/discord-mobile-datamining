@@ -564,27 +564,27 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            let VISUAL_PLACEHOLDER = tmp(7910).MediaGalleryItemType.IMAGE;
+            let VISUAL_PLACEHOLDER = tmp(8040).MediaGalleryItemType.IMAGE;
             let tmp4 = tmp;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              VISUAL_PLACEHOLDER = tmp(7910).MediaGalleryItemType.VIDEO;
+              VISUAL_PLACEHOLDER = tmp(8040).MediaGalleryItemType.VIDEO;
               tmp4 = tmp;
             }
-            tmpResult = tmp(4381);
+            tmpResult = tmp(4472);
           }
-          obj = require(4381) /* urlMatchesFileExtension */;
+          obj = require(4472) /* urlMatchesFileExtension */;
         }
         const size = {};
         const merged = Object.assign(file);
         let tmp4Result = tmp4(1384);
-        size.srcIsAnimated = tmp4Result.hasFlag(file.flags, tmp4(4420).UnfurledMediaItemFlags.IS_ANIMATED);
+        size.srcIsAnimated = tmp4Result.hasFlag(file.flags, tmp4(4511).UnfurledMediaItemFlags.IS_ANIMATED);
         if (!shouldShowMedia.shouldShowMedia) {
           size.height = 0;
           size.width = 0;
         }
-        if (VISUAL_PLACEHOLDER === tmp4(7910).MediaGalleryItemType.IMAGE) {
-          const obj4 = importDefault(7891);
+        if (VISUAL_PLACEHOLDER === tmp4(8040).MediaGalleryItemType.IMAGE) {
+          const obj4 = importDefault(8021);
           ({ proxyUrl, width: width2 } = size);
           if (width2 == null) {
             width2 = 0;
@@ -595,14 +595,14 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
           }
           size.proxyUrl = obj4.getImageSrc(proxyUrl, width2, num3, !shouldShowMedia.shouldAutoPlayGifs);
         }
-        tmp4Result = tmp4(7890);
+        tmp4Result = tmp4(8020);
         size.width = tmp4Result.sanitizeMediaDimension(size.width);
-        size.height = tmp4(7890).sanitizeMediaDimension(size.height);
+        size.height = tmp4(8020).sanitizeMediaDimension(size.height);
         return size;
       }
     }
   }
-  VISUAL_PLACEHOLDER = require(7910) /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  VISUAL_PLACEHOLDER = require(8040) /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
   tmp4 = require;
 }
 let closure_3 = ["checkpointData"];
@@ -614,7 +614,7 @@ let result = require("CheckpointPersonas").fileFinishedImporting("modules/messag
 
 export default function transformMessageComponents(message, arr) {
   let obj = { type: "textDisplayComponent", parserState: null };
-  obj[1] = obj(7881).getInitialParserStateFromMessage(message.message, closure_7);
+  obj[1] = obj(8011).getInitialParserStateFromMessage(message.message, closure_7);
   obj = {};
   const merged = Object.assign(message);
   obj.markdownConfigs = { textDisplayComponent: obj };
@@ -631,17 +631,17 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            return tmp(7910).MediaGalleryItemType.IMAGE;
+            return tmp(8040).MediaGalleryItemType.IMAGE;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              return tmp(7910).MediaGalleryItemType.VIDEO;
+              return tmp(8040).MediaGalleryItemType.VIDEO;
             }
-            tmpResult = tmp(4381);
+            tmpResult = tmp(4472);
           }
-          obj = require(4381) /* urlMatchesFileExtension */;
+          obj = require(4472) /* urlMatchesFileExtension */;
         }
       }
     }
   }
-  return require(7910) /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  return require(8040) /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
 };

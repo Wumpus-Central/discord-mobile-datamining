@@ -117,7 +117,7 @@ function AnimatedContainer(scale) {
 function GroupMemberCount(count) {
   const tmp = callback3(importDefault(1348)("GroupAvatar"));
   let obj = { style: tmp.avatarWrapper, children: null };
-  obj = { style: tmp.overflowCount, children: callback2(require(4189) /* Text */.Text, { variant: "text-sm/semibold", children: items }) };
+  obj = { style: tmp.overflowCount, children: callback2(require(4281) /* Text */.Text, { variant: "text-sm/semibold", children: items }) };
   items = ["+", count.count];
   obj[1] = callback(View, obj);
   return callback(View, obj);
@@ -141,7 +141,7 @@ function GroupMemberAvatar(guildId) {
     obj = { style: null, source: null };
     obj[0] = tmp3.avatar;
     obj[1] = memo;
-    obj[1] = callback(user(5145), obj);
+    obj[1] = callback(user(5236), obj);
     tmp5 = callback(View, obj);
   }
   return tmp5;
@@ -210,7 +210,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   const obj4 = { shadowColor: BLACK1, shadowOpacity: null, shadowOffset: null, shadowRadius: null };
   let DARK_03_LIGHT_02;
   if (!arg0) {
-    DARK_03_LIGHT_02 = require(5034) /* result */.DARK_03_LIGHT_02;
+    DARK_03_LIGHT_02 = require(5125) /* result */.DARK_03_LIGHT_02;
   }
   obj4[1] = DARK_03_LIGHT_02;
   let obj5;

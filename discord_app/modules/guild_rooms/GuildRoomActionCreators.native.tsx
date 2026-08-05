@@ -11,66 +11,20 @@ function _guildRoomConnect() {
     let c3 = 0;
     let c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c3 === 2) {
+      let c6 = 1;
+      const obj1 = callback(table[1]);
+      yield obj1.guildRoomConnect(callback, table, asyncGeneratorStep);
+      if (1 === tmp6) {
+        c6 = 0;
+        let c3 = 3;
+      } else if (arg0 === 1) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c6 = 1;
-              let obj1 = callback(table[1]);
-              c4 = 2;
-              c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.guildRoomConnect(callback, table, asyncGeneratorStep);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp6) {
-              c6 = 0;
-              c3 = 3;
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c6 = 0;
-            }
-            c6 = 0;
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp13) {
-          let closure_5 = tmp13;
-          if (tmp3 === c6) {
-            c3 = tmp2;
-            throw tmp13;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c6 = 0;
       }
+      c6 = 0;
+      return arg1;
     })();
   });
   const _guildRoomConnect = tmp;
@@ -92,66 +46,20 @@ function _guildRoomUpdate() {
     let c3 = 0;
     let c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c3 === 2) {
+      let c6 = 1;
+      const obj1 = callback(table[1]);
+      yield obj1.guildRoomUpdate(callback, table, asyncGeneratorStep);
+      if (1 === tmp6) {
+        c6 = 0;
+        let c3 = 3;
+      } else if (arg0 === 1) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c6 = 1;
-              let obj1 = callback(table[1]);
-              c4 = 2;
-              c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.guildRoomUpdate(callback, table, asyncGeneratorStep);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp6) {
-              c6 = 0;
-              c3 = 3;
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c6 = 0;
-            }
-            c6 = 0;
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp13) {
-          let closure_5 = tmp13;
-          if (tmp3 === c6) {
-            c3 = tmp2;
-            throw tmp13;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c6 = 0;
       }
+      c6 = 0;
+      return arg1;
     })();
   });
   const _guildRoomUpdate = tmp;

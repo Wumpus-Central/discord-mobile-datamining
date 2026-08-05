@@ -9,7 +9,7 @@ let result = require("set").fileFinishedImporting("utils/native/NotificationUtil
 
 export default {
   hasPermission() {
-    return importDefault(10708).requestPermissions((badge) => {
+    return importDefault(10668).requestPermissions((badge) => {
       let _alert;
       let sound;
       ({ alert: _alert, sound } = badge);
@@ -24,11 +24,11 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _require(11520).setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _require(11520);
+    let result = _require(11693).setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = _require(11693);
     importDefault(698).track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const obj2 = importDefault(698);
-    const permissions = importDefault(10708).requestPermissions();
+    const permissions = importDefault(10668).requestPermissions();
     permissions.then((sound) => {
       let _alert;
       let badge;
@@ -102,6 +102,6 @@ export default {
     if (arg1 === undefined) {
       num = 1;
     }
-    require(10285) /* createSoundForPack */.playSound(arg0, num, undefined, arg2);
+    require(9694) /* createSoundForPack */.playSound(arg0, num, undefined, arg2);
   }
 };

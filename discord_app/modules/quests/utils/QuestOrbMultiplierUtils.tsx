@@ -11,7 +11,7 @@ export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMul
   return items.includes(questOrbMultiplierEligibilityForUser);
 };
 export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(perks) {
-  const obj = importDefault(3839);
+  const obj = importDefault(3931);
   if (obj.canUseMoreQuestOrbs(perks)) {
     if (tmpResult.canUseQuestOrbMultiplier(perks)) {
       return obj.NITRO;
@@ -39,11 +39,11 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(5817);
+        tmp4Result = tmp4(6924);
       }
       return NITRO;
     }
-    tmpResult = tmp(3839);
+    tmpResult = tmp(3931);
   } else {
     return null;
   }

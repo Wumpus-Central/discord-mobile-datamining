@@ -83,7 +83,7 @@ class MultiAccountManagerNative extends tmp5 {
 }
 const prototype = MultiAccountManagerNative.prototype;
 prototype["onSwitchStart"] = function onSwitchStart() {
-  const obj = importDefault(4399);
+  const obj = importDefault(4490);
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   tmp3.info("Closing fast-connect socket because of account switch logout");
   let result = obj(15).closeFastConnectSocket();
@@ -102,10 +102,10 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   if (navigateHome) {
     obj = obj(1222);
     obj.transitionTo(constants.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = obj(4050).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = obj(4142).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(4044).setHomeDrawerState(false);
-      const tmpResult = tmp(4044);
+      tmp(4136).setHomeDrawerState(false);
+      const tmpResult = tmp(4136);
     }
     tmp = obj;
   }
@@ -120,15 +120,15 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   }, 100);
 };
 prototype["onSwitchError"] = function onSwitchError(currentUser) {
-  let obj = importDefault(3894);
+  let obj = importDefault(3986);
   obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1236).intl;
   obj[1] = intl.string(obj(1236).t.pqvKWA);
-  obj[2] = importDefault(16277);
+  obj[2] = importDefault(16373);
   obj.open(obj);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
-  const obj = importDefault(4399);
+  const obj = importDefault(4490);
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   obj.pop();
   if (null !== c9) {

@@ -68,7 +68,7 @@ class TableTransaction {
 }
 const prototype = TableTransaction.prototype;
 TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  if (typeof TableTransaction !== "fileFinishedImporting") {
+  if (typeof TableTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(TableTransaction.prototype);
@@ -244,62 +244,13 @@ prototype2["get"] = function get(arg0) {
   let closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    if (many === 2) {
-      many = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        many = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            many = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            many = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c2 = 1;
-            many = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = many.getMany(outer1_0, { limit: 1 });
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          many = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          many = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          const first = arg1[0];
-          let c0 = first;
-          if (first == null) {
-            c0 = null;
-          }
-          many = 3;
-          obj = { value: null, done: true };
-          obj[0] = c0;
-          return obj;
-        }
-      } catch (tmp9) {
-        many = tmp;
-        throw tmp9;
-      }
+    yield many.getMany(outer1_0, { limit: 1 });
+    const first = arg1[0];
+    let c0 = first;
+    if (first == null) {
+      c0 = null;
     }
+    return c0;
   })();
 };
 prototype2["getMany"] = function getMany(items, ordering) {
@@ -467,7 +418,7 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
     let prefix;
     let tableId;
     ({ prefix, tableId } = self);
-    if (typeof outer1_3 !== "fileFinishedImporting") {
+    if (typeof outer1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(outer1_3.prototype);
@@ -534,7 +485,7 @@ prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
   let prefix;
   let tableId;
   ({ prefix, tableId } = this);
-  if (typeof TableTransaction !== "fileFinishedImporting") {
+  if (typeof TableTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(TableTransaction.prototype);

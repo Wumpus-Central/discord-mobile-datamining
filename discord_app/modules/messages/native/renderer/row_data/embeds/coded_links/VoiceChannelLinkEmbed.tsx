@@ -24,7 +24,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
       if (null != guild) {
         if (getUncachedChannelPermissions.can(Permissions.VIEW_CHANNEL, channel)) {
           if (obj9.can(tmp26.CONNECT, channel)) {
-            ({ colors, baseColors } = importDefault(7730)(closure_2));
+            ({ colors, baseColors } = importDefault(7863)(closure_2));
             let icon;
             if (guild != null) {
               icon = guild.icon;
@@ -49,7 +49,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj = {};
             const merged = Object.assign(baseColors);
             tmp4 = importDefault;
-            const tmp6 = importDefault(7730)(closure_2);
+            const tmp6 = importDefault(7863)(closure_2);
             let str;
             if (obj5.isAndroid()) {
               str = "";
@@ -68,14 +68,14 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelText = stringResult;
             obj.onlineText = undefined;
             obj.memberText = undefined;
-            let tmp16Result = tmp16(4654);
+            let tmp16Result = tmp16(4745);
             const assetSource = Image.resolveAssetSource(tmp16Result.getChannelIcon(channel));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.channelIcon = uri;
-            tmp16Result = tmp16(4384);
+            tmp16Result = tmp16(4475);
             obj.titleText = tmp16Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
             obj.titleColor = colors.titleColor;
             let tmp24;

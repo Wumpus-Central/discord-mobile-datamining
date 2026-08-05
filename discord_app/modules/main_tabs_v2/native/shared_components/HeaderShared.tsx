@@ -127,7 +127,7 @@ function HeaderChannelActions(arg0) {
   const tmp = callback2();
   const merged = Object.assign(route.params);
   obj.screenIndex = screenIndex;
-  return callback(importDefault(9136), obj);
+  return callback(importDefault(8205), obj);
 }
 let c3 = importAllResult;
 ({ View: c4, Platform } = get_ActivityIndicator);
@@ -187,7 +187,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
     const items = [_undefined.headerWrapper, gradientTop, { paddingTop: num, minHeight: num + outer1_5 }, navigation];
     return items;
   }, items);
-  if (typeof headerTitle === "y") {
+  if (typeof headerTitle === "string") {
     let tmp6 = renderGenericTitle;
   } else {
     tmp6 = headerTitle;
@@ -207,7 +207,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
   obj[1] = navigation.isFocused() && navigation.canGoBack();
   obj[2] = text;
   const items1 = [fn(obj), , , ];
-  if (typeof headerTitle !== "y") {
+  if (typeof headerTitle !== "string") {
     let name = options.title;
     if (name == null) {
       name = style.route.name;
@@ -333,5 +333,5 @@ export const HeaderIconButton = function HeaderIconButton(color) {
     tintColor = tmp.actionButtonIcon.tintColor;
   }
   obj[4] = closure_6(require(1297) /* Button */.Icon, { color: tintColor, source, resizeMode });
-  return closure_6(require(4721) /* PressableBase */.PressableOpacity, obj);
+  return closure_6(require(4812) /* PressableBase */.PressableOpacity, obj);
 };

@@ -85,7 +85,7 @@ function _updateEmoji() {
           } else if (2 === tmp8) {
             c4 = 0;
             c4 = c3;
-            const tmp18 = new callback2(4093)(c4);
+            const tmp18 = new callback2(4185)(c4);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -168,13 +168,13 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   obj.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
   const HTTP = guildId(530).HTTP;
   obj = { url: Endpoints.GUILD_EMOJIS(guildId), body: { image, name, roles }, headers: null, context: null, oldFormErrors: true, rejectWithError: null };
-  obj[2] = importDefault(7953).buildHeadersForMd5(originalMd5);
+  obj[2] = importDefault(8083).buildHeadersForMd5(originalMd5);
   let page;
   if (analyticsLocation != null) {
     page = analyticsLocation.page;
   }
   obj[3] = { client_event_source: page };
-  const obj3 = importDefault(7953);
+  const obj3 = importDefault(8083);
   const tmp3 = guildId;
   obj[5] = guildId(530).rejectWithMigratedError();
   const tmp3Result = guildId(530);
@@ -207,7 +207,7 @@ export const deleteEmoji = function deleteEmoji(c0, id) {
   const tmp3 = require;
   const tmp3Result = require(530) /* sendRequest */;
   return HTTP.del(obj).then(() => {
-    const AccessibilityAnnouncer = callback(4039).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
     const intl = callback(1236).intl;
     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.L3UUha));
   });
@@ -227,12 +227,12 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
   if (null != customEmojiFromJoinedGuild) {
     let name = customEmojiFromJoinedGuild.id;
     if (name == null) {
-      const result = importDefault(3834).convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
+      const result = importDefault(3926).convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
       name = undefined;
       if (result != null) {
         name = result.name;
       }
-      let obj = importDefault(3834);
+      let obj = importDefault(3926);
     }
     if (name == null) {
       name = customEmojiFromJoinedGuild.name;
@@ -294,12 +294,12 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
   if (null != customEmojiFromJoinedGuild) {
     let name = customEmojiFromJoinedGuild.id;
     if (name == null) {
-      const result = importDefault(3834).convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
+      const result = importDefault(3926).convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
       name = undefined;
       if (result != null) {
         name = result.name;
       }
-      let obj = importDefault(3834);
+      let obj = importDefault(3926);
     }
     if (name == null) {
       name = customEmojiFromJoinedGuild.name;

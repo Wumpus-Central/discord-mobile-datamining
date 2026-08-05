@@ -13,14 +13,14 @@ const toggle = createToggle.createToggle({
   useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
   onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,
   usePredicate: function useHasDmSafetyAlertsSetting() {
-    let flag = importDefault(11082)();
+    let flag = importDefault(11189)();
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = require(10143) /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = require(10143) /* InappropriateConversationExperiment */;
+    const isEligibleForInappropriateConversationWarning = require(10260) /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const obj = require(10260) /* InappropriateConversationExperiment */;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = require(10145) /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn = require(10262) /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }
@@ -41,14 +41,14 @@ let obj = {
   useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
   onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,
   usePredicate: function useHasDmSafetyAlertsSetting() {
-    let flag = importDefault(11082)();
+    let flag = importDefault(11189)();
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = require(10143) /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = require(10143) /* InappropriateConversationExperiment */;
+    const isEligibleForInappropriateConversationWarning = require(10260) /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const obj = require(10260) /* InappropriateConversationExperiment */;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = require(10145) /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn = require(10262) /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }

@@ -34,7 +34,7 @@ prototype["fromServer"] = function fromServer(sku) {
     fromServer = createFromServer.createFromServer(sku);
   }
   obj.sku = fromServer;
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

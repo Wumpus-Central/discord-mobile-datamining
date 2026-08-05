@@ -15,7 +15,7 @@ class AudioManagerStore extends Store {
 const prototype = AudioManagerStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  const audioDevices = importDefault(8845).getAudioDevices();
+  const audioDevices = importDefault(9075).getAudioDevices();
   audioDevices.then((arg0) => {
     let outer1_6 = arg0;
     self.emitChange();
@@ -24,8 +24,8 @@ prototype["initialize"] = function initialize() {
       closure_0.emitChange();
     });
   });
-  const obj = importDefault(8845);
-  const activeAudioDevice = importDefault(8845).getActiveAudioDevice();
+  const obj = importDefault(9075);
+  const activeAudioDevice = importDefault(9075).getActiveAudioDevice();
   activeAudioDevice.then((arg0) => {
     let outer1_7 = arg0;
     self.emitChange();
@@ -34,8 +34,8 @@ prototype["initialize"] = function initialize() {
       closure_0.emitChange();
     });
   });
-  const obj2 = importDefault(8845);
-  importDefault(8845).setSCORetryCount(4);
+  const obj2 = importDefault(9075);
+  importDefault(9075).setSCORetryCount(4);
 };
 prototype["getAudioDevices"] = function getAudioDevices() {
   return closure_6;
@@ -55,10 +55,10 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
       const state = context.state;
       if (RTCConnectionStates.CONNECTING === state) {
         let c9 = true;
-        const result = importDefault(8845).setCommunicationModeOn(true);
+        const result = importDefault(9075).setCommunicationModeOn(true);
         let tmp8 = enforcing !== enforcing;
         if (tmp8) {
-          tmp8 = enforcing.simpleDeviceType !== require(8845) /* enforcing */.AudioDeviceType.INVALID;
+          tmp8 = enforcing.simpleDeviceType !== require(9075) /* enforcing */.AudioDeviceType.INVALID;
         }
         if (tmp8) {
           let tmp4Result = tmp4(12);
@@ -70,15 +70,15 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
             obj[0] = obj;
             tmp4Result.captureMessage("AudioManagerStore received a string for an android audio device", obj);
           } else {
-            tmp4(8845).setActiveAudioDevice(tmp10);
-            const tmp4Result1 = tmp4(8845);
+            tmp4(9075).setActiveAudioDevice(tmp10);
+            const tmp4Result1 = tmp4(9075);
           }
         }
-        const obj2 = importDefault(8845);
+        const obj2 = importDefault(9075);
       } else if (tmp13.DISCONNECTED === state) {
         if (!context.willReconnect) {
           c9 = false;
-          obj = importDefault(8845);
+          obj = importDefault(9075);
           const result1 = obj.setCommunicationModeOn(false);
         }
       }
@@ -96,7 +96,7 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
         obj[0] = obj;
         tmpResult.captureMessage("AudioManagerStore received a string for an android audio device", obj);
       } else {
-        tmpResult = tmp(8845);
+        tmpResult = tmp(9075);
         tmpResult.setActiveAudioDevice(device);
       }
     }

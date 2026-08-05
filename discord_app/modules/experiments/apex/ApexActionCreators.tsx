@@ -13,85 +13,37 @@ function _fetchApexExperimentsMetadata() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0, body) {
-      if (c6 === 2) {
+      const dependencyMap = tmp3;
+      let c4 = 1;
+      const HTTP = callback(outer1_2[4]).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: true };
+      obj1[0] = outer1_7.APEX_EXPERIMENTS_METADATA;
+      const obj2 = { surface: null };
+      obj2[0] = callback;
+      obj1[1] = obj2;
+      yield HTTP.get(obj1);
+      if (1 === tmp7) {
+        c4 = 0;
+        const obj3 = callback2(709);
+        obj3.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" });
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              const callback2 = tmp7;
-              let callback;
-              let c4 = 1;
-              const HTTP = callback(outer1_2[4]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = outer1_7.APEX_EXPERIMENTS_METADATA;
-              const obj2 = { surface: null };
-              obj2[0] = callback;
-              obj1[1] = obj2;
-              c5 = 2;
-              c6 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              obj3 = callback2(709);
-              obj3.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" });
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              const experiments = body.body.experiments;
-              callback = experiments.map((id) => {
-                const variants = id.variants;
-                return { id: id.id, name: id.name, title: id.title, revision: id.revision, unitType: id.unit_type, variants: variants.map((id) => ({ id: id.id, label: id.label, type: id.type })) };
-              });
-              obj = callback2(709);
-              const obj4 = { type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: null };
-              obj4[1] = callback;
-              obj.dispatch(obj4);
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp19) {
-          let closure_3 = tmp19;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp19;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw body;
+      } else if (arg0 !== 2) {
+        const experiments = body.body.experiments;
+        callback = experiments.map((id) => {
+          const variants = id.variants;
+          return { id: id.id, name: id.name, title: id.title, revision: id.revision, unitType: id.unit_type, variants: variants.map((id) => ({ id: id.id, label: id.label, type: id.type })) };
+        });
+        const obj = callback2(709);
+        const obj4 = { type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: null };
+        obj4[1] = callback;
+        obj.dispatch(obj4);
+        c4 = 0;
       }
+      c4 = 0;
+      return body;
     })();
   });
   const _fetchApexExperimentsMetadata = tmp;

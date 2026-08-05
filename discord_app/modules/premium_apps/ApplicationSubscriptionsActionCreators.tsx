@@ -45,92 +45,32 @@ function _fetchAllSubscriptionListingsDataForApplication() {
     let c8 = 0;
     let c6 = 0;
     return (function*(arg0, arg1) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_4 = tmp3;
-              let set = tmp7;
-              let lib;
-              const obj1 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS", applicationId: null, groupListingId: null };
-              obj1[1] = callback;
-              obj1[2] = lib;
-              callback(outer1_2[2]).dispatch(obj1);
-              let c6 = 1;
-              const obj10 = callback(outer1_2[2]);
-              c7 = 2;
-              c8 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = lib(outer1_2[3]).getApplicationSubscriptionGroupListingsForApplication(callback, lib);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c6 = 0;
-            obj2 = callback(709);
-            const obj3 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE", applicationId: null };
-            obj3[1] = callback;
-            obj2.dispatch(obj3);
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            lib = arg1;
-            const obj5 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS", applicationId: null, groupListing: null };
-            obj5[1] = callback;
-            obj5[2] = lib;
-            callback(709).dispatch(obj5);
-            const subscription_listings = lib.subscription_listings;
-            let dependencyMap = subscription_listings;
-            if (subscription_listings == null) {
-              dependencyMap = [];
-            }
-            c8(dependencyMap);
-            c6 = 0;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = lib;
-            return obj;
-          }
-        } catch (tmp18) {
-          let closure_5 = tmp18;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp18;
-          } else {
-            c7 = tmp;
-          }
-        }
+      let closure_4 = tmp3;
+      const obj1 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS", applicationId: null, groupListingId: null };
+      obj1[1] = callback;
+      obj1[2] = lib;
+      callback(outer1_2[2]).dispatch(obj1);
+      let c6 = 1;
+      const obj10 = callback(outer1_2[2]);
+      yield lib(outer1_2[3]).getApplicationSubscriptionGroupListingsForApplication(callback, lib);
+      c6 = 0;
+      const obj2 = callback(709);
+      const obj3 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE", applicationId: null };
+      obj3[1] = callback;
+      obj2.dispatch(obj3);
+      lib = yield "HermesInternal";
+      const obj5 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS", applicationId: null, groupListing: null };
+      obj5[1] = callback;
+      obj5[2] = lib;
+      callback(709).dispatch(obj5);
+      const subscription_listings = lib.subscription_listings;
+      let dependencyMap = subscription_listings;
+      if (subscription_listings == null) {
+        dependencyMap = [];
       }
+      c8(dependencyMap);
+      c6 = 0;
+      return lib;
     })();
   });
   const _fetchAllSubscriptionListingsDataForApplication = tmp;
@@ -150,82 +90,34 @@ function _fetchEntitlementsForGuild() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
+      const dependencyMap = tmp3;
+      const obj1 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS", guildId: null };
+      obj1[1] = callback;
+      callback(outer1_2[2]).dispatch(obj1);
+      let c4 = 1;
+      const obj9 = callback(outer1_2[2]);
+      yield outer1_1(outer1_2[3]).getEntitlementsForGuild(callback);
+      if (1 === tmp7) {
+        c4 = 0;
+        let obj3 = callback(709);
+        obj3 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE", guildId: null };
+        obj3[1] = callback;
+        obj3.dispatch(obj3);
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              let closure_1 = tmp7;
-              closure_1 = undefined;
-              const obj1 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS", guildId: null };
-              obj1[1] = callback;
-              callback(outer1_2[2]).dispatch(obj1);
-              let c4 = 1;
-              const obj9 = callback(outer1_2[2]);
-              c5 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = outer1_1(outer1_2[3]).getEntitlementsForGuild(callback);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              let obj3 = callback(709);
-              obj3 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE", guildId: null };
-              obj3[1] = callback;
-              obj3.dispatch(obj3);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_1 = arg1;
-              obj = callback(709);
-              const obj4 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS", guildId: null, entitlements: null };
-              obj4[1] = callback;
-              obj4[2] = closure_1;
-              obj.dispatch(obj4);
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          }
-        } catch (tmp22) {
-          let set = tmp22;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp22;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        let closure_1 = arg1;
+        const obj = callback(709);
+        const obj4 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS", guildId: null, entitlements: null };
+        obj4[1] = callback;
+        obj4[2] = closure_1;
+        obj.dispatch(obj4);
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _fetchEntitlementsForGuild = tmp;

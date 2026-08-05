@@ -6,7 +6,7 @@ class ClipsManager extends tmp2 {
 }
 const prototype = ClipsManager.prototype;
 prototype["showClipsToast"] = function showClipsToast() {
-  let obj = importDefault(3894);
+  let obj = importDefault(3986);
   obj = { key: "CLIPS_IN_CALL_WARNING", content: null, toastDurationMs: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["d+41qJ"]);

@@ -74,7 +74,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
     merged = Object.assign(obj);
     ({ brand: obj23.brand, last_4: obj23.last4, expires_month: obj23.expiresMonth, expires_year: obj23.expiresYear } = billing_address);
     merged = new.target;
-    if (typeof CreditCardSourceRecord !== "fileFinishedImporting") {
+    if (typeof CreditCardSourceRecord !== "function") {
       merged = HermesBuiltin.throwTypeError();
     }
     merged = CreditCardSourceRecord;
@@ -122,7 +122,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
     merged = Object.assign(obj);
     obj3.email = billing_address.email;
     merged = new.target;
-    if (typeof PaypalSourceRecord !== "fileFinishedImporting") {
+    if (typeof PaypalSourceRecord !== "function") {
       merged = HermesBuiltin.throwTypeError();
     }
     merged = PaypalSourceRecord;
@@ -152,7 +152,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
     merged = Object.assign(obj);
     obj4.username = billing_address.username;
     merged = new.target;
-    if (typeof VenmoSourceRecord !== "fileFinishedImporting") {
+    if (typeof VenmoSourceRecord !== "function") {
       merged = HermesBuiltin.throwTypeError();
     }
     merged = VenmoSourceRecord;
@@ -184,7 +184,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = GiropaySourceRecord;
           merged = Object.assign(obj);
           merged = new.target;
-          if (typeof GiropaySourceRecord !== "fileFinishedImporting") {
+          if (typeof GiropaySourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = GiropaySourceRecord;
@@ -212,7 +212,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = Object.assign(obj);
           ({ email: obj18.email, bank: obj18.bank } = billing_address);
           merged = new.target;
-          if (typeof Przelewy24SourceRecord !== "fileFinishedImporting") {
+          if (typeof Przelewy24SourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = Przelewy24SourceRecord;
@@ -243,7 +243,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = Object.assign(obj);
           obj7.bank = billing_address.bank;
           merged = new.target;
-          if (typeof EPSSourceRecord !== "fileFinishedImporting") {
+          if (typeof EPSSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = EPSSourceRecord;
@@ -271,7 +271,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = PaysafeSourceRecord;
           merged = Object.assign(obj);
           merged = new.target;
-          if (typeof PaysafeSourceRecord !== "fileFinishedImporting") {
+          if (typeof PaysafeSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = PaysafeSourceRecord;
@@ -298,7 +298,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = GcashSourceRecord;
           merged = Object.assign(obj);
           merged = new.target;
-          if (typeof GcashSourceRecord !== "fileFinishedImporting") {
+          if (typeof GcashSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = GcashSourceRecord;
@@ -325,7 +325,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = GrabPayMySourceRecord;
           merged = Object.assign(obj);
           merged = new.target;
-          if (typeof GrabPayMySourceRecord !== "fileFinishedImporting") {
+          if (typeof GrabPayMySourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = GrabPayMySourceRecord;
@@ -352,7 +352,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = MomoWalletSourceRecord;
           merged = Object.assign(obj);
           merged = new.target;
-          if (typeof MomoWalletSourceRecord !== "fileFinishedImporting") {
+          if (typeof MomoWalletSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = MomoWalletSourceRecord;
@@ -379,7 +379,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           merged = KaKaoPaySourceRecord;
           merged = Object.assign(obj);
           merged = new.target;
-          if (typeof KaKaoPaySourceRecord !== "fileFinishedImporting") {
+          if (typeof KaKaoPaySourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = KaKaoPaySourceRecord;
@@ -402,7 +402,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
         } else if (tmp7.GOPAY_WALLET === type) {
           const obj13 = {};
           const merged1 = Object.assign(obj);
-          if (typeof GoPayWalletSourceRecord !== "fileFinishedImporting") {
+          if (typeof GoPayWalletSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           merged = obj13;
@@ -423,7 +423,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
         } else if (tmp7.BANCONTACT === type) {
           const obj14 = {};
           const merged2 = Object.assign(obj);
-          if (typeof BancontactSourceRecord !== "fileFinishedImporting") {
+          if (typeof BancontactSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           const tmp85 = new BancontactSourceRecord(obj14, obj, tmp5, tmp4, tmp3, tmp2, merged, BancontactSourceRecord, new.target, obj);
@@ -441,7 +441,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           const obj15 = {};
           const merged3 = Object.assign(obj);
           obj15.bank = billing_address.bank;
-          if (typeof IdealSourceRecord !== "fileFinishedImporting") {
+          if (typeof IdealSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           const tmp69 = new IdealSourceRecord(obj15, obj, tmp5, tmp4, tmp3, tmp2, merged, IdealSourceRecord, new.target, obj);
@@ -460,7 +460,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           const obj16 = {};
           const merged4 = Object.assign(obj);
           obj16.username = billing_address.username;
-          if (typeof CashAppSourceRecord !== "fileFinishedImporting") {
+          if (typeof CashAppSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           const tmp52 = new CashAppSourceRecord(obj16, obj, tmp5, tmp4, tmp3, tmp2, merged, new.target, CashAppSourceRecord);
@@ -478,7 +478,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
         } else if (tmp7.TDS_WALLET === type) {
           const obj17 = {};
           const merged5 = Object.assign(obj);
-          if (typeof TDSWalletSourceRecord !== "fileFinishedImporting") {
+          if (typeof TDSWalletSourceRecord !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           const tmp36 = new TDSWalletSourceRecord(obj17, obj, tmp5, tmp4, tmp3, tmp2, merged, TDSWalletSourceRecord, new.target, obj);
@@ -496,7 +496,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           const obj18 = {};
           const merged6 = Object.assign(obj);
           obj18.email = billing_address.email;
-          if (typeof prototype2 !== "fileFinishedImporting") {
+          if (typeof prototype2 !== "function") {
             merged = HermesBuiltin.throwTypeError();
           }
           const tmp20 = new prototype2(obj18, obj, tmp5, tmp4, tmp3, tmp2, merged, prototype2, new.target, obj);
@@ -524,7 +524,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
     merged = Object.assign(obj);
     obj19.email = billing_address.email;
     merged = new.target;
-    if (typeof SofortSourceRecord !== "fileFinishedImporting") {
+    if (typeof SofortSourceRecord !== "function") {
       merged = HermesBuiltin.throwTypeError();
     }
     merged = SofortSourceRecord;
@@ -555,7 +555,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
   if (closure_4.CARD === type) {
     let throwTypeErrorResult = CreditCardSourceRecord;
     throwTypeErrorResult = new.target;
-    if (typeof CreditCardSourceRecord !== "fileFinishedImporting") {
+    if (typeof CreditCardSourceRecord !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     throwTypeErrorResult = CreditCardSourceRecord;
@@ -599,7 +599,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
   } else if (tmp6.PAYPAL === type) {
     throwTypeErrorResult = PaypalSourceRecord;
     throwTypeErrorResult = new.target;
-    if (typeof PaypalSourceRecord !== "fileFinishedImporting") {
+    if (typeof PaypalSourceRecord !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     throwTypeErrorResult = PaypalSourceRecord;
@@ -627,7 +627,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         if (tmp6.GIROPAY === type) {
           throwTypeErrorResult = GiropaySourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof GiropaySourceRecord !== "fileFinishedImporting") {
+          if (typeof GiropaySourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = GiropaySourceRecord;
@@ -650,7 +650,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         } else if (tmp6.PRZELEWY24 === type) {
           throwTypeErrorResult = Przelewy24SourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof Przelewy24SourceRecord !== "fileFinishedImporting") {
+          if (typeof Przelewy24SourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = Przelewy24SourceRecord;
@@ -676,7 +676,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         } else if (tmp6.PAYSAFE_CARD === type) {
           throwTypeErrorResult = PaysafeSourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof PaysafeSourceRecord !== "fileFinishedImporting") {
+          if (typeof PaysafeSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = PaysafeSourceRecord;
@@ -699,7 +699,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         } else if (tmp6.GCASH === type) {
           throwTypeErrorResult = GcashSourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof GcashSourceRecord !== "fileFinishedImporting") {
+          if (typeof GcashSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = GcashSourceRecord;
@@ -722,7 +722,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         } else if (tmp6.GRABPAY_MY === type) {
           throwTypeErrorResult = GrabPayMySourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof GrabPayMySourceRecord !== "fileFinishedImporting") {
+          if (typeof GrabPayMySourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = GrabPayMySourceRecord;
@@ -745,7 +745,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         } else if (tmp6.MOMO_WALLET === type) {
           throwTypeErrorResult = MomoWalletSourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof MomoWalletSourceRecord !== "fileFinishedImporting") {
+          if (typeof MomoWalletSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = MomoWalletSourceRecord;
@@ -768,7 +768,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         } else if (tmp6.VENMO === type) {
           throwTypeErrorResult = VenmoSourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof VenmoSourceRecord !== "fileFinishedImporting") {
+          if (typeof VenmoSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = VenmoSourceRecord;
@@ -793,7 +793,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
         } else if (tmp6.KAKAOPAY === type) {
           throwTypeErrorResult = KaKaoPaySourceRecord;
           throwTypeErrorResult = new.target;
-          if (typeof KaKaoPaySourceRecord !== "fileFinishedImporting") {
+          if (typeof KaKaoPaySourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = KaKaoPaySourceRecord;
@@ -814,7 +814,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return throwTypeErrorResult;
           }
         } else if (tmp6.GOPAY_WALLET === type) {
-          if (typeof GoPayWalletSourceRecord !== "fileFinishedImporting") {
+          if (typeof GoPayWalletSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const tmp95 = new GoPayWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
@@ -828,7 +828,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp95;
           }
         } else if (tmp6.BANCONTACT === type) {
-          if (typeof BancontactSourceRecord !== "fileFinishedImporting") {
+          if (typeof BancontactSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const tmp82 = new BancontactSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
@@ -842,7 +842,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp82;
           }
         } else if (tmp6.EPS === type) {
-          if (typeof EPSSourceRecord !== "fileFinishedImporting") {
+          if (typeof EPSSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const tmp69 = new EPSSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
@@ -857,7 +857,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp69;
           }
         } else if (tmp6.IDEAL === type) {
-          if (typeof IdealSourceRecord !== "fileFinishedImporting") {
+          if (typeof IdealSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const tmp56 = new IdealSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
@@ -872,7 +872,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp56;
           }
         } else if (tmp6.CASH_APP === type) {
-          if (typeof CashAppSourceRecord !== "fileFinishedImporting") {
+          if (typeof CashAppSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const tmp42 = new CashAppSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
@@ -887,7 +887,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp42;
           }
         } else if (tmp6.TDS_WALLET === type) {
-          if (typeof TDSWalletSourceRecord !== "fileFinishedImporting") {
+          if (typeof TDSWalletSourceRecord !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const tmp29 = new TDSWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
@@ -901,7 +901,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp29;
           }
         } else if (tmp6.PIX === type) {
-          if (typeof prototype2 !== "fileFinishedImporting") {
+          if (typeof prototype2 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const tmp16 = new prototype2(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
@@ -922,7 +922,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
     }
     throwTypeErrorResult = SofortSourceRecord;
     throwTypeErrorResult = new.target;
-    if (typeof SofortSourceRecord !== "fileFinishedImporting") {
+    if (typeof SofortSourceRecord !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     throwTypeErrorResult = SofortSourceRecord;

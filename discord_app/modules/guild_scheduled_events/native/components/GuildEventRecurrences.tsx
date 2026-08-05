@@ -33,12 +33,12 @@ export default function GuildEventRecurrences(guildEventId) {
   ({ guildId, recurrenceRule, hideViewMoreButton } = guildEventId);
   ref = ref.useRef(null);
   const tmp2 = createCacheKey();
-  ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes: c4 } = importDefault(8335)(guildEventId, guildId, recurrenceRule));
+  ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes: c4 } = importDefault(8970)(guildEventId, guildId, recurrenceRule));
   let obj = { style: tmp2.container, children: null };
   obj = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1236).intl;
   obj[1] = intl.string(guildEventId(1236).t["D/jjoa"]);
-  const items = [callback(guildEventId(4189).Text, obj), , ];
+  const items = [callback(guildEventId(4281).Text, obj), , ];
   obj = {
     style: tmp2.scrollView,
     ref,
@@ -65,7 +65,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = callback(tmp8(4604).Button, obj1);
+    canViewMoreRecurrences = callback(tmp8(4695).Button, obj1);
   }
   items[2] = canViewMoreRecurrences;
   obj[1] = items;

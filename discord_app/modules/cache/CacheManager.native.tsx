@@ -25,7 +25,7 @@ class CacheManager extends tmp3 {
 }
 const prototype = CacheManager.prototype;
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
-  const result = importDefault(5944).doesDatabaseVersionMatchJsConstants();
+  const result = importDefault(7035).doesDatabaseVersionMatchJsConstants();
   result.then((arg0) => {
     if (!arg0) {
       callback(table[6]).writeCaches();
@@ -45,8 +45,8 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
     isConnectedResult = connected.isConnected();
   }
   if (isConnectedResult) {
-    tmp(14550).writeCaches();
-    const tmpResult = tmp(14550);
+    tmp(14650).writeCaches();
+    const tmpResult = tmp(14650);
   }
   return false;
 };
@@ -55,8 +55,8 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
     const _Date = Date;
     if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
       tmp2.verbose("Writing cache from window unfocus");
-      require(14550) /* _writeCaches */.writeCaches();
-      const obj = require(14550) /* _writeCaches */;
+      require(14650) /* _writeCaches */.writeCaches();
+      const obj = require(14650) /* _writeCaches */;
     } else {
       tmp2.verbose("Not writing cache from window unfocus");
     }

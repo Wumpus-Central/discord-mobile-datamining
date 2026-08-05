@@ -17,7 +17,7 @@ let require = arg1;
 function ConnectionBannerIcon(state) {
   state = state.state;
   const tmp = createCacheKey();
-  require(3897) /* map */;
+  require(3989) /* map */;
   if (constants.WAITING_FOR_NETWORK === state) {
     let obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
@@ -31,14 +31,14 @@ function ConnectionBannerIcon(state) {
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
     obj2[1] = tmp5(712).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(15289).ConnectionUnknownIcon, obj2);
+    obj1[1] = callback2(tmp2(15386).ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
     obj3[1] = tmp5(712).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(15291).ConnectionFineIcon, obj3);
+    obj[1] = callback2(tmp2(15388).ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -62,14 +62,14 @@ function ConnectionBannerContent(state) {
     stringResult = intl3.string(tmp4(1236).t.j8lYE2);
   }
   obj[3] = stringResult;
-  items[1] = callback2(require(4189) /* Text */.Text, obj);
+  items[1] = callback2(require(4281) /* Text */.Text, obj);
   obj[1] = items;
   return closure_13(closure_6, obj);
 }
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = createCacheKey();
-  let obj = token(3897);
+  let obj = token(3989);
   token = obj.useToken(importDefault(712).colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = React.useMemo(() => {
@@ -86,10 +86,10 @@ function BackOnlineGlow(opacity) {
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [tmp.glow, { opacity: opacity.progress }];
   obj = { style: tmp.glow, maskElement: null, children: null };
-  obj[1] = callback2(importDefault(4615), { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 });
-  obj[2] = callback2(importDefault(4615), { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 });
-  obj[2] = callback2(importDefault(5169), obj);
-  return callback2(importDefault(4054).View, obj);
+  obj[1] = callback2(importDefault(4706), { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 });
+  obj[2] = callback2(importDefault(4706), { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 });
+  obj[2] = callback2(importDefault(5260), obj);
+  return callback2(importDefault(4146).View, obj);
 }
 function ConnectionBannerInner() {
   let tmp12;
@@ -203,11 +203,11 @@ let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECT
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(12760).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(12856).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
   let dependencyMap;
-  let obj = stateFromStores(12760);
+  let obj = stateFromStores(12856);
   const items = [updateState];
   stateFromStores = hidden(589).useStateFromStores(items, () => state.getState());
   dependencyMap = React.useRef(null);

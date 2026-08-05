@@ -11,7 +11,7 @@ import anyoneHasFlagInContext from "anyoneHasFlagInContext";
 import initialize from "initialize";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
 import { ParticipantTypes } from "ParticipantTypes";
-import jsxProd from "module_4387";
+import jsxProd from "module_4478";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
 
@@ -343,13 +343,13 @@ const memoResult = importAllResult.memo((arg0) => {
   let width;
   ({ channel, pipParticipant, selfParticipant } = arg0);
   const tmp = callback4();
-  let obj = require(10539) /* useIsViewingActivity */;
+  let obj = require(10574) /* useIsViewingActivity */;
   obj = { channelId: channel.id };
   const isViewingActivity = obj.useIsViewingActivity(obj);
-  let obj2 = require(10535) /* useShouldForcePipOrientation */;
+  let obj2 = require(10570) /* useShouldForcePipOrientation */;
   const shouldForcePipOrientation = obj2.useShouldForcePipOrientation({ channel });
   obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  const tmp6 = importDefault(10538)(obj);
+  const tmp6 = importDefault(10573)(obj);
   const obj1 = { style: isViewingActivity ? tmp.backgroundPipFab : tmp.background, children: null };
   const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
   ({ width, height } = importDefault(1474)());

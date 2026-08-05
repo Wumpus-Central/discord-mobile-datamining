@@ -9,8 +9,8 @@ const require = arg1;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   const _require = channelId;
   const dependencyMap = authorId;
-  const eligibleHarmTypesConfigsForContext = _require(5880).getEligibleHarmTypesConfigsForContext();
-  let obj = _require(5880);
+  const eligibleHarmTypesConfigsForContext = _require(5818).getEligibleHarmTypesConfigsForContext();
+  let obj = _require(5818);
   let items = [mergeGuildAvatar];
   const stateFromStores = _require(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = _require(589);
@@ -27,7 +27,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     const merged = Object.assign(arg0);
     obj[harmType.harmType] = harmType.getProtoUserSettings(settings.settings);
     return obj;
-  }, {}), items3, _require(5885).areSettingsEqual);
+  }, {}), items3, _require(5825).areSettingsEqual);
   const items4 = [stateFromStores1, eligibleHarmTypesConfigsForContext, stateFromStores2, authorId, stateFromStores];
   const memo = eligibleHarmTypesConfigsForContext.useMemo(() => {
     if (null != stateFromStores1) {
@@ -56,10 +56,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(5881).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(5821).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(5880).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(5880);
+    NONE = tmp(5818).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(5818);
   }
   return NONE;
 }
@@ -70,7 +70,7 @@ export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypes
   if (null == stateFromStores) {
     let channelIdAndAuthorIdFromMessage = {};
   } else {
-    channelIdAndAuthorIdFromMessage = require(5880) /* getEligibleHarmTypesConfigsForContext */;
+    channelIdAndAuthorIdFromMessage = require(5818) /* getEligibleHarmTypesConfigsForContext */;
     channelIdAndAuthorIdFromMessage = channelIdAndAuthorIdFromMessage.getChannelIdAndAuthorIdFromMessage(stateFromStores);
   }
   return useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelIdAndAuthorIdFromMessage.channelId, channelIdAndAuthorIdFromMessage.authorId);

@@ -2,7 +2,7 @@
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import ADD_MEMBER_QUERY_LIMIT from "ADD_MEMBER_QUERY_LIMIT";
-import { View } from "module_8293";
+import { View } from "module_8931";
 import { MAX_BULK_ROLE_MEMBERS_ADD } from "title";
 import jsxProd from "getNoResultsAltSource";
 import createCacheKey from "createCacheKey";
@@ -11,33 +11,33 @@ let c10;
 let c9;
 let metroImportAll;
 const require = arg1;
-function _toPropertyKey(arg0) {
-  let StringResult = arg0;
-  if (typeof arg0 !== "window") {
-    StringResult = arg0;
-    if (arg0) {
+function _toPropertyKey(obj) {
+  let StringResult = obj;
+  if (typeof obj === "object") {
+    StringResult = obj;
+    if (obj) {
       const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
+      if (undefined !== obj[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(arg0, "string");
+          callResult = call(obj, "string");
         }
         StringResult = callResult;
-        if (typeof callResult !== "window") {
+        if (typeof callResult === "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(arg0);
+        StringResult = String(obj);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "e") {
+  if (typeof StringResult !== "symbol") {
     text = `${tmp}`;
   }
   return text;
@@ -54,14 +54,14 @@ function MemberRow(arg0) {
   let userId;
   ({ disabled, checked } = arg0);
   ({ start, end, guildId, userId, onPress } = arg0);
-  let obj = require(3911) /* useCheckboxA11yNative */;
+  let obj = require(4003) /* useCheckboxA11yNative */;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   obj = { start, end, guildId, userId, onPress, disabled, trailing: null, accessibilityRole: null, accessibilityState: null };
-  obj[6] = callback2(require(7641) /* FormCheckbox */.FormCheckbox, { checked });
+  obj[6] = callback2(require(7779) /* FormCheckbox */.FormCheckbox, { checked });
   obj[7] = accessibilityRole;
   obj[8] = accessibilityState;
-  return callback2(importDefault(10215), obj);
+  return callback2(importDefault(9614), obj);
 }
 class AddMembersBody {
   constructor(arg0) {
@@ -124,7 +124,7 @@ class AddMembersBody {
     tmp8 = length;
     tmp9 = c9;
     obj2 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: null, inActionSheet: null };
-    tmp4Result = require("module_8293");
+    tmp4Result = require("module_8931");
     intl = require("getSystemLocale").intl;
     obj2[0] = intl.string(require("getSystemLocale").t.vMiCaQ);
     values = Object.values(pendingAdditions);

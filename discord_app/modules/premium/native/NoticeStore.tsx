@@ -18,10 +18,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       const value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = importDefault(3775)(value);
+        tmp4 = importDefault(3867)(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(importDefault(3775)());
+        return tmp4.isAfter(importDefault(3867)());
       }
     }
     let tmp6 = null != tmp11;

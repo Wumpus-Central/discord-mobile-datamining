@@ -8,14 +8,14 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 
 export default function isSelectedFromHomeChannel(id) {
   let coerceChannelRouteResult1;
-  const rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
       if (null == rootState) {
         return false;
       } else {
-        const coerceMainRouteResult = require(4044) /* navigationToRootTabHelper */.coerceMainRoute(rootState.routes[rootState.index]);
+        const coerceMainRouteResult = require(4136) /* navigationToRootTabHelper */.coerceMainRoute(rootState.routes[rootState.index]);
         if (null == coerceMainRouteResult) {
           return false;
         } else {
@@ -31,11 +31,11 @@ export default function isSelectedFromHomeChannel(id) {
                 if (null != tmp4) {
                   let tmp6 = require;
                   let tmp7 = dependencyMap;
-                  let obj3 = require(4044) /* navigationToRootTabHelper */;
+                  let obj3 = require(4136) /* navigationToRootTabHelper */;
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
-                      let tmp6Result = tmp6(4044);
+                      let tmp6Result = tmp6(4136);
                       coerceChannelRouteResult1 = tmp6Result.coerceChannelRoute(state.routes[index - 1]);
                       if (null != coerceChannelRouteResult1) {
                         break;
@@ -54,7 +54,7 @@ export default function isSelectedFromHomeChannel(id) {
             return false;
           }
         }
-        const tmpResult = require(4044) /* navigationToRootTabHelper */;
+        const tmpResult = require(4136) /* navigationToRootTabHelper */;
       }
     }
   }

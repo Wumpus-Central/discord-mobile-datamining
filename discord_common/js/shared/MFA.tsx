@@ -151,87 +151,37 @@ function _trySubmit() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0, token) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw token;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = token;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw token;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = token;
-              return obj;
-            } else {
-              let asyncGeneratorStep = tmp4;
-              let closure_0 = token;
-              token = undefined;
-              v0 = 1;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = v0(closure_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw token;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = token;
-            return obj2;
-          } else {
-            token = token.token;
-            const promise = new Promise((arg0, arg1) => {
-              const callback = arg0;
-              let closure_1 = arg1;
-              callback({ "X-Discord-MFA-Authorization": closure_1 }, (body) => {
-                body = body.body;
-                let code;
-                if (body != null) {
-                  code = body.code;
-                }
-                if (60008 !== code) {
-                  const body2 = body.body;
-                  let code1;
-                  if (body2 != null) {
-                    code1 = body2.code;
-                  }
-                  if (60003 !== code1) {
-                    callback();
-                    let flag = false;
-                  }
-                  return flag;
-                }
-                const error = new Error(body.body.message);
-                callback2(error);
-                flag = true;
-              });
-            });
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = promise;
-            return obj;
+      let asyncGeneratorStep = tmp4;
+      let closure_0 = token;
+      yield v0(closure_0);
+      token = token.token;
+      const promise = new Promise((arg0, arg1) => {
+        const callback = arg0;
+        let closure_1 = arg1;
+        callback({ "X-Discord-MFA-Authorization": closure_1 }, (body) => {
+          body = body.body;
+          let code;
+          if (body != null) {
+            code = body.code;
           }
-        } catch (tmp14) {
-          c4 = tmp;
-          throw tmp14;
-        }
-      }
+          if (60008 !== code) {
+            const body2 = body.body;
+            let code1;
+            if (body2 != null) {
+              code1 = body2.code;
+            }
+            if (60003 !== code1) {
+              callback();
+              let flag = false;
+            }
+            return flag;
+          }
+          const error = new Error(body.body.message);
+          callback2(error);
+          flag = true;
+        });
+      });
+      return promise;
     })();
   });
   const _trySubmit = tmp;

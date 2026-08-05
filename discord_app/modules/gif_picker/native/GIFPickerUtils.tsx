@@ -23,9 +23,9 @@ function transformFavoriteGifUrl(url) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      const tmp14Result = tmp14(9611);
+      const tmp14Result = tmp14(9661);
     }
-    obj6 = require(9611) /* shouldRefreshAttachmentUrl */;
+    obj6 = require(9661) /* shouldRefreshAttachmentUrl */;
     tmp14 = require;
   }
   if (regex.test(arg1)) {
@@ -56,7 +56,7 @@ let result = require("isDiscordProxiedAssetUrl").fileFinishedImporting("modules/
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  let obj = sortedFavoriteGIFs(9613);
+  let obj = sortedFavoriteGIFs(9854);
   sortedFavoriteGIFs = obj.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
   obj = {

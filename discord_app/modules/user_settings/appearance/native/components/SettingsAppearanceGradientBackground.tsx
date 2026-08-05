@@ -3,16 +3,16 @@ import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import THEME_ITEM_WIDTH from "THEME_ITEM_WIDTH";
 import { jsx } from "jsxProd";
-import module_4054 from "module_4054";
-import importDefaultResult from "module_4054";
+import module_4146 from "module_4146";
+import importDefaultResult from "module_4146";
 
 const require = arg1;
 let c3 = importAllResult;
-let num = module_4054.processColor("rgba(0, 0, 0, 0)");
+let num = module_4146.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }
-let closure_7 = require("module_4054").createAnimatedComponent(require("LinearGradient").LinearGradientNativeComponent);
+let closure_7 = require("module_4146").createAnimatedComponent(require("LinearGradient").LinearGradientNativeComponent);
 let items = [num, num];
 let closure_8 = { colors: items, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let closure_9 = { code: "function SettingsAppearanceGradientBackgroundTsx1(){const{gradientSize,animatedLinearGradientLoadingProps,themeState,interpolate,tweener,getGradientStartPoint,processColor,interpolateColor}=this.__closure;const{width:width,height:height}=gradientSize.get();if(width===0||height===0){return animatedLinearGradientLoadingProps;}const{themePrev:{colors:colorsPrev,angle:anglePrev},themeCurrent:{colors:colorsCurrent,angle:angleCurrent}}=themeState.get();const angle=90-interpolate(tweener.get(),[0,1],[anglePrev,angleCurrent]);const originPoint=getGradientStartPoint(angle,width,height);return{colors:colorsPrev.map(function(_,i){var _processColor;return(_processColor=processColor(interpolateColor(tweener.get(),[0,1],[colorsPrev[i].hex,colorsCurrent[i].hex])))!==null&&_processColor!==void 0?_processColor:0;}),locations:colorsPrev.map(function(_,i){return interpolate(tweener.get(),[0,1],[colorsPrev[i].stop/100,colorsCurrent[i].stop/100]);}),startPoint:{x:(width/2+originPoint[0])/width,y:(height/2-originPoint[1])/height},endPoint:{x:(width/2-originPoint[0])/width,y:(height/2+originPoint[1])/height}};}" };

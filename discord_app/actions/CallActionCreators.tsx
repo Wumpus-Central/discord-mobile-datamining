@@ -33,7 +33,7 @@ export default {
           if (ensureGuildLoaded) {
             ringable = body.body.ringable;
           }
-          const voiceChannel = id(5005).selectVoiceChannel(id, dependencyMap);
+          const voiceChannel = id(5096).selectVoiceChannel(id, dependencyMap);
           if (ringable) {
             self.ring(tmp2);
           }
@@ -61,11 +61,11 @@ export default {
             obj = { userId: upsertRelationship, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
-          id(4532).show(obj);
+          id(4623).show(obj);
         });
       }
     } else {
-      obj = importDefault(5005);
+      obj = importDefault(5096);
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);
@@ -78,7 +78,7 @@ export default {
   ring(channelId, items, gdm_invite) {
     channel = channel.getChannel(channelId);
     if (null != channel) {
-      let obj = require(8924) /* useCanRingToGuildVoiceChannel */;
+      let obj = require(9156) /* useCanRingToGuildVoiceChannel */;
       const CALLABLE = constants.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {

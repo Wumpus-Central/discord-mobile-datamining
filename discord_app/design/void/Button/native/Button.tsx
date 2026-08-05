@@ -78,13 +78,13 @@ function getButtonStyles(shrink, button) {
     buttonShrink = button.buttonShrink;
   }
   items[1] = buttonShrink;
-  items[2] = require(11768) /* getClass */.getClass(button, "button", combined, disabled ? closure_14.DISABLED : closure_14.DEFAULT);
-  const obj2 = require(11768) /* getClass */;
+  items[2] = require(11929) /* getClass */.getClass(button, "button", combined, disabled ? closure_14.DISABLED : closure_14.DEFAULT);
+  const obj2 = require(11929) /* getClass */;
   const tmp2 = disabled ? closure_14.DISABLED : closure_14.DEFAULT;
   const tmp8 = require;
-  items[3] = require(11768) /* getClass */.getClass(button, "button", size);
-  const obj3 = require(11768) /* getClass */;
-  items[4] = require(11768) /* getClass */.getClass(button, "button", look);
+  items[3] = require(11929) /* getClass */.getClass(button, "button", size);
+  const obj3 = require(11929) /* getClass */;
+  items[4] = require(11929) /* getClass */.getClass(button, "button", look);
   let faded;
   if (!flag3) {
     if (!tmp8Result.isAndroid()) {
@@ -102,7 +102,7 @@ class ButtonText {
   constructor(arg0) {
     ({ children, color, look, size, disabled, style } = global);
     tmp = Object();
-    if (typeof children === "disabledUntil") {
+    if (typeof children !== "function") {
       tmp2 = jsx;
       tmp3 = closure_1;
       tmp4 = closure_2;
@@ -114,7 +114,7 @@ class ButtonText {
       obj[2] = size;
       obj[3] = disabled;
       num = 0;
-      tmp5 = require("module_7674");
+      tmp5 = require("module_7809");
       items = [, ];
       items[0] = getTextStyles(obj, tmp);
       items[1] = style;

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx
 import closure_3 from "Steps";
-import module_8308 from "module_8308";
+import module_8943 from "module_8943";
 import { View } from "metadata";
 import handleFormInit from "handleFormInit";
 import comparator from "comparator";
@@ -87,16 +87,16 @@ export default function GuildProgressActionSheet(guild) {
               let closure_1 = tmp5;
               let base64 = tmp2;
               base64 = undefined;
-              outer1_1(8308).init(outer1_5);
-              const obj6 = outer1_1(8308);
-              outer1_0(11579).hideActionSheet(outer1_0.id);
-              const obj7 = outer1_0(11579);
+              outer1_1(8943).init(outer1_5);
+              const obj6 = outer1_1(8943);
+              outer1_0(11747).hideActionSheet(outer1_0.id);
+              const obj7 = outer1_0(11747);
               const obj1 = { size: null };
               obj1[0] = outer1_10;
               dependencyMap = 1;
               c3 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = outer1_1(4735).openImagePicker(obj1);
+              obj2[0] = outer1_1(4826).openImagePicker(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -110,7 +110,7 @@ export default function GuildProgressActionSheet(guild) {
           } else {
             base64 = arg1.base64;
             if (null != base64) {
-              obj = outer1_1(8308);
+              obj = outer1_1(8943);
               obj.updateIcon(closure_5, base64);
             }
             c3 = 3;

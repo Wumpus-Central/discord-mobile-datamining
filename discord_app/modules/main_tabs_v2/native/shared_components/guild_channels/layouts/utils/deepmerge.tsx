@@ -34,11 +34,11 @@ function merge() {
             }
           }
           let flag = false;
-          if (typeof lib[arg0] !== "window") {
+          if (typeof lib[arg0] === "object") {
             flag = false;
             if (null !== tmp4) {
               const _Object = Object;
-              if (typeof Object.getPrototypeOf === "fileFinishedImporting") {
+              if (typeof Object.getPrototypeOf === "function") {
                 const _Object2 = Object;
                 const prototypeOf = Object.getPrototypeOf(tmp4);
                 const _Object3 = Object;
@@ -53,11 +53,11 @@ function merge() {
           }
           if (flag) {
             let flag2 = false;
-            if (typeof dependencyMap[arg0] !== "window") {
+            if (typeof dependencyMap[arg0] === "object") {
               flag2 = false;
               if (null !== tmp8) {
                 const _Object4 = Object;
-                if (typeof Object.getPrototypeOf === "fileFinishedImporting") {
+                if (typeof Object.getPrototypeOf === "function") {
                   const _Object5 = Object;
                   const prototypeOf1 = Object.getPrototypeOf(tmp8);
                   const _Object6 = Object;

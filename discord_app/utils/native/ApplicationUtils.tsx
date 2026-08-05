@@ -28,7 +28,7 @@ export const installApplication = function installApplication(arg0) {
     obj[1] = function onConfirm() {
       outer1_1(outer1_3[4]).openURL(obj5);
     };
-    return obj5(8204).handleClick(obj);
+    return obj5(8854).handleClick(obj);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;
@@ -65,10 +65,10 @@ export const installApplication = function installApplication(arg0) {
           }
         };
         obj5 = obj2;
-        importDefault(4399).popWithKey(closure_5);
-        const obj9 = importDefault(4399);
+        importDefault(4490).popWithKey(closure_5);
+        const obj9 = importDefault(4490);
         const obj3 = {};
-        const obj10 = importDefault(4399);
+        const obj10 = importDefault(4490);
         const merged = Object.assign(obj2);
         obj3.dismissOAuthModal = function dismissOAuthModal() {
           const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -77,7 +77,7 @@ export const installApplication = function installApplication(arg0) {
           }
           outer1_1(outer1_3[7]).popWithKey(outer1_5);
         };
-        obj10.pushLazy(obj5(1959)(10031, dependencyMap.paths), obj3, closure_5);
+        obj10.pushLazy(obj5(1959)(10852, dependencyMap.paths), obj3, closure_5);
       }
     }
     if (null != installParams) {
@@ -115,9 +115,9 @@ export const installApplication = function installApplication(arg0) {
           callback(arg0);
         }
       };
-      let tmp32Result = tmp32(4399);
+      let tmp32Result = tmp32(4490);
       tmp32Result.popWithKey(closure_5);
-      tmp32Result = tmp32(4399);
+      tmp32Result = tmp32(4490);
       const obj6 = {};
       const obj16 = importDefault(698);
       const tmp33 = dependencyMap;
@@ -129,17 +129,17 @@ export const installApplication = function installApplication(arg0) {
         }
         outer1_1(outer1_3[7]).popWithKey(outer1_5);
       };
-      tmp32Result.pushLazy(obj5(1959)(10031, dependencyMap.paths), obj6, closure_5);
-      const tmp10 = obj5(1959)(10031, dependencyMap.paths);
+      tmp32Result.pushLazy(obj5(1959)(10852, dependencyMap.paths), obj6, closure_5);
+      const tmp10 = obj5(1959)(10852, dependencyMap.paths);
     }
   }
 };
 export const openOAuth2Modal = function openOAuth2Modal(arg0) {
   const _require = arg0;
-  let obj = importDefault(4399);
+  let obj = importDefault(4490);
   obj.popWithKey(closure_5);
   obj = {};
-  const obj2 = importDefault(4399);
+  const obj2 = importDefault(4490);
   const merged = Object.assign(arg0);
   obj.dismissOAuthModal = function dismissOAuthModal() {
     const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -148,21 +148,21 @@ export const openOAuth2Modal = function openOAuth2Modal(arg0) {
     }
     outer1_1(outer1_3[7]).popWithKey(outer1_5);
   };
-  obj2.pushLazy(_require(1959)(10031, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(_require(1959)(10852, dependencyMap.paths), obj, closure_5);
 };
 export const installPrivateChannelIntegration = function installPrivateChannelIntegration(arg0) {
   let applicationId;
   let callback;
   let channelId;
   ({ applicationId, channelId, callback } = arg0);
-  let obj = importDefault(4399);
+  let obj = importDefault(4490);
   obj = { clientId: applicationId, scopes: null, channelId: null, dismissOAuthModal: null, disableGuildSelect: true, callback: null };
-  const items = [require(8178) /* set */.OAuth2Scopes.APPLICATIONS_COMMANDS];
+  const items = [require(8824) /* set */.OAuth2Scopes.APPLICATIONS_COMMANDS];
   obj[1] = items;
   obj[2] = channelId;
   obj[3] = function dismissOAuthModal() {
     return callback(table[7]).popWithKey(closure_5);
   };
   obj[5] = callback;
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(10031, dependencyMap.paths), obj, closure_5);
+  obj.pushLazy(require(1959) /* asyncRequireImpl */(10852, dependencyMap.paths), obj, closure_5);
 };

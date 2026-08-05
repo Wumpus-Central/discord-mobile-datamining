@@ -13,12 +13,12 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   }
   let stateFromStores;
   let importDefault;
-  let obj = stateFromStores(10536);
+  let obj = stateFromStores(10571);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
-  const tmp5 = importDefault(8938)();
+  const tmp5 = importDefault(10662)();
   const items = [createRTCConnection];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => channelId.getChannelId());
-  const tmp7 = importDefault(10700)();
+  const tmp7 = importDefault(10659)();
   importDefault = tmp7;
   const obj2 = stateFromStores(589);
   const tmp4 = importDefault;
@@ -36,20 +36,20 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     return isGuildStageVoiceResult;
   }, items2);
   const obj3 = stateFromStores(589);
-  let num = stateFromStores(10698).useGetStageRTCPanelHeight(stateFromStores);
-  stateFromStores(4044);
+  let num = stateFromStores(10657).useGetStageRTCPanelHeight(stateFromStores);
+  stateFromStores(4136);
   let tmp12 = null != tmp5;
   if (tmp12) {
-    let tmpResult = tmp(4403);
+    let tmpResult = tmp(4494);
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
     tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
   }
-  tmpResult = tmp(10703);
+  tmpResult = tmp(10663);
   let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
-  const tmp14 = null != tmp4(10704)();
+  const tmp14 = null != tmp4(10664)();
   if (!isVoicePanelShowing) {
     let tmp15 = !tmp12;
     if (!tmp12) {

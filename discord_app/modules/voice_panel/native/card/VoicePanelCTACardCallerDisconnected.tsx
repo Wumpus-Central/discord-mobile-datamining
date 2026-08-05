@@ -68,7 +68,7 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
     obj1[0] = tmp3.avatarWrapper;
     let tmp19 = tmp9;
     const tmpResult1 = tmp(tmp2[11]);
-    if (typeof tmp9 !== "Object") {
+    if (typeof tmp9 !== "number") {
       const obj2 = { uri: null };
       obj2[0] = tmp9;
       tmp19 = obj2;
@@ -87,7 +87,7 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
     obj4[0] = tmp3.avatarWrapper;
     let tmp24 = tmp10;
     const tmpResult3 = tmp(tmp2[11]);
-    if (typeof tmp10 !== "Object") {
+    if (typeof tmp10 !== "number") {
       const obj5 = { uri: null };
       obj5[0] = tmp10;
       tmp24 = obj5;

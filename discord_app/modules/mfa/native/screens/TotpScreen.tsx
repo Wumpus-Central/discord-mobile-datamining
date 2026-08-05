@@ -6,7 +6,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function isValidClipboardCode(arg0) {
-  let isMatch = arg0.length === require(14792) /* finishMFACheck */.TOTP_CODE_LENGTH;
+  let isMatch = arg0.length === require(14892) /* finishMFACheck */.TOTP_CODE_LENGTH;
   if (isMatch) {
     isMatch = /^\d+$/.test(arg0);
     const obj = /^\d+$/;

@@ -1,5 +1,5 @@
 // discord_app/modules/clips/ClipsConstants.tsx
-const obj = {};
+let obj = {};
 const result = 30 * require("set").Millis.SECOND;
 obj.SECONDS_30 = result;
 obj[result] = "SECONDS_30";
@@ -11,7 +11,11 @@ obj.MINUTES_2 = result1;
 obj[result1] = "MINUTES_2";
 const result2 = 6 * require("set").Millis.SECOND;
 const result3 = 60 * require("set").Millis.SECOND;
+obj = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
+obj = { TEXT: "text" };
+const obj1 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 const result4 = 14 * require("set").Millis.DAY;
+const obj2 = { fontSize: 32, color: "#FFFFFF", strokeWidth: obj1.NONE, strokeColor: "#000000" };
 const tmp5 = new require("timestamp")("Clips");
 const result5 = require("set").fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
@@ -58,3 +62,55 @@ export const BYTES_PER_GB = 1073741824;
 export const MAX_TRANSIENT_STORAGE_BYTES = 16106127360;
 export const TRANSIENT_AUTOCLIP_DIRNAME = ".autoclip-cache";
 export const ClipsTrackSuffixes = { ALL: ":all", APPLICATION: ":application", VOICE: ":voice", SOUNDBOARD: ":soundboard" };
+export const ClipSignalTypes = { MANUAL: "manual", DISTRIBUTED: "distributed", SHOUTING: "shouting", LAUGHTER: "laughter", GAME_EVENT: "game_event", SPEAKING: "speaking", SOUNDBOARD: "soundboard" };
+export const ClipsHardwareClassification = { UNKNOWN: "unknown", BELOW_MINIMUM: "below_minimum", MEETS_MINIMUM: "meets_minimum", MEETS_AUTO_ENABLE: "meets_auto_enable" };
+export const ClipsSaveNoOpReason = { MAX_CONCURRENT_SAVES: "max_concurrent_saves", NO_ELIGIBLE_SOURCE: "no_eligible_source", MODULE_NOT_LOADED: "module_not_loaded", BUFFER_WARMING_UP: "buffer_warming_up", BRIDGE_SHUTDOWN: "bridge_shutdown", RECORDING_NOT_READY: "recording_not_ready" };
+export const Emotion = { ANGER: "anger", CALM: "calm", DISGUST: "disgust", FEAR: "fear", HAPPY: "happy", NEUTRAL: "neutral", SAD: "sad", SURPRISED: "surprised" };
+export const ClipCropPreset = obj;
+export const getClipCropAspectRatio = function getClipCropAspectRatio(arg0) {
+  if (obj.PORTRAIT_9_16 === arg0) {
+    return 0.5625;
+  } else if (tmp.LANDSCAPE_16_9 === arg0) {
+    return 1.7777777777777777;
+  } else {
+    return null;
+  }
+};
+export const getClipCropBounds = function getClipCropBounds(bounds) {
+  bounds = undefined;
+  if (bounds != null) {
+    bounds = bounds.bounds;
+  }
+  if (null != bounds) {
+    return bounds.bounds;
+  } else {
+    let preset;
+    if (bounds != null) {
+      preset = bounds.preset;
+    }
+    let num = 0.5625;
+    if (obj.PORTRAIT_9_16 !== preset) {
+      num = null;
+      if (obj.LANDSCAPE_16_9 === preset) {
+        num = 1.7777777777777777;
+      }
+    }
+    let tmp3 = null;
+    if (null != num) {
+      obj = { aspectRatio: null };
+      obj[0] = num;
+      tmp3 = obj;
+    }
+    return tmp3;
+  }
+};
+export const ClipTrackType = obj;
+export const CLIP_TRACK_COLORS = { [obj.TEXT]: "#D53FAE" };
+export const DEFAULT_TRACK_DURATION_SECONDS = 5;
+export const MIN_TRACK_DURATION_SECONDS = 1;
+export const DEFAULT_TRACK_POSITION = { x: 0.5, y: 0.5 };
+export const TextStrokeWidth = obj1;
+export const TEXT_STROKE_WIDTH_PX = { [obj1.NONE]: 0, [obj1.SMALL]: 1, [obj1.MEDIUM]: 2, [obj1.LARGE]: 4 };
+export const DEFAULT_TEXT_TRACK_STYLE = obj2;
+export const ClipType = { CLIP: "clip", SCREENSHOT: "screenshot", VOICE_CLIP: "voice_clip" };
+export const GameEventType = { UNCLASSIFIED: "unclassified", KILL: "kill", MULTIKILL: "multikill", DEATH: "death", ASSIST: "assist", ITEM: "item", VICTORY: "victory", DEFEAT: "defeat", LEVEL_UP: "level_up", TREASURE: "treasure", OBJECTIVE_KILL: "objective_kill" };

@@ -65,7 +65,7 @@ function _requestPushNotificationPermission() {
           } else {
             _slicedToArray = arg1;
             if (_slicedToArray === constants3.DENIED) {
-              callback2(10710)();
+              callback2(10670)();
               obj2 = callback2(698);
               const obj3 = { action_type: null, action_location: null };
               obj3[0] = constants.TO_SETTINGS;
@@ -74,7 +74,7 @@ function _requestPushNotificationPermission() {
               dependencyMap();
               obj = 3;
             } else if (_slicedToArray !== constants3.AUTHORIZED) {
-              obj = callback2(11526);
+              obj = callback2(11699);
               const permission = obj.requestPermission((permission_granted) => {
                 let obj = callback(698);
                 obj = { action_type: closure_0, action_location: callback, permission_granted };
@@ -82,7 +82,7 @@ function _requestPushNotificationPermission() {
                 dependencyMap();
               });
             }
-            obj1 = callback(11520);
+            obj1 = callback(11693);
             const result = obj1.updateNotificationAuthorizationStatus(_slicedToArray);
             dependencyMap();
           }
@@ -296,8 +296,8 @@ export const enableProvisionalPushNotification = function enableProvisionalPushN
 export const useCanSeePushNotificationNudge = function useCanSeePushNotificationNudge() {
   let require;
   let tmp4;
-  const isTeenInStrictCountry = require(11527) /* set */.useIsTeenInStrictCountry();
-  const obj = require(11527) /* set */;
+  const isTeenInStrictCountry = require(11700) /* set */.useIsTeenInStrictCountry();
+  const obj = require(11700) /* set */;
   const items = [set];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => state.authorizationStatus);
   const obj2 = require(589) /* initialize */;
@@ -329,8 +329,8 @@ export const useCanSeePushNotificationNudge = function useCanSeePushNotification
 export const useShouldShowPushNotificationNudgeByPromptType = function useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER) {
   let require;
   let tmp7;
-  const isTeenInStrictCountry = require(11527) /* set */.useIsTeenInStrictCountry();
-  let obj = require(11527) /* set */;
+  const isTeenInStrictCountry = require(11700) /* set */.useIsTeenInStrictCountry();
+  let obj = require(11700) /* set */;
   const tmp = require;
   const items = [set];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => state.authorizationStatus);

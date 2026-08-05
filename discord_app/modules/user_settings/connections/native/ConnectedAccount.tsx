@@ -25,7 +25,7 @@ function Integration(integration) {
   let tmp5;
   integration = integration.integration;
   let importDefault;
-  let obj = integration(4193);
+  let obj = integration(4285);
   const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(createCacheKey);
   [tmp5, c1] = callback2(importAllResult.useState(), 2);
   let obj1 = integration(589);
@@ -43,7 +43,7 @@ function Integration(integration) {
       obj[0] = legacyClassComponentStyles.integrationErrorText;
       const intl2 = tmp(1236).intl;
       obj[3] = intl2.string(tmp(1236).t.fEptJP);
-      tmp12 = callback3(tmp(4189).Text, obj);
+      tmp12 = callback3(tmp(4281).Text, obj);
     }
     obj = { style: null, children: null };
     obj[0] = legacyClassComponentStyles.integrationContainer;
@@ -51,17 +51,17 @@ function Integration(integration) {
     obj1[0] = legacyClassComponentStyles.integrationContainerInternal;
     obj2 = { guild: null, size: null, style: null };
     obj2[0] = integration.guild;
-    obj2[1] = tmp(5570).GuildIconSizes.SMALL;
+    obj2[1] = tmp(5661).GuildIconSizes.SMALL;
     obj2[2] = legacyClassComponentStyles.integrationGuildIcon;
-    const items4 = [callback3(importDefault(5570), obj2), , ];
+    const items4 = [callback3(importDefault(5661), obj2), , ];
     const obj3 = { style: null, children: null };
     obj3[0] = legacyClassComponentStyles.integrationTextRowContainer;
     const obj4 = { lineClamp: 1, variant: "text-sm/medium", children: null };
     obj4[2] = integration.guild.name;
-    const items5 = [callback3(tmp(4189).Text, obj4), ];
+    const items5 = [callback3(tmp(4281).Text, obj4), ];
     const tmp16 = callback3;
-    const tmp18 = importDefault(5570);
-    const value = importDefault(4875).get(integration.type);
+    const tmp18 = importDefault(5661);
+    const value = importDefault(4966).get(integration.type);
     let platformUserUrl;
     if (value != null) {
       const getPlatformUserUrl = value.getPlatformUserUrl;
@@ -71,7 +71,7 @@ function Integration(integration) {
     }
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
     obj5[3] = platformUserUrl;
-    items5[1] = tmp16(tmp(4189).Text, obj5);
+    items5[1] = tmp16(tmp(4281).Text, obj5);
     obj3[1] = items5;
     items4[1] = closure_15(View, obj3);
     items4[2] = tmp7;
@@ -99,7 +99,7 @@ function Integration(integration) {
       stringResult = string(RXvQQu.XpeFYr);
     }
     obj7[4] = stringResult;
-    obj7 = tmp8(tmp(4604).Button, obj7);
+    obj7 = tmp8(tmp(4695).Button, obj7);
     obj6[1] = obj7;
     callback3(View, obj6);
     const tmp9 = View;
@@ -108,7 +108,7 @@ function Integration(integration) {
 function RowSwitch(label) {
   const merged = Object.assign(label, Object.create(null));
   const merged1 = Object.assign(merged);
-  return callback3(require(5559) /* TableSwitchRow */.TableSwitchRow, { label: label.label });
+  return callback3(require(5650) /* TableSwitchRow */.TableSwitchRow, { label: label.label });
 }
 let c5 = importAllResult;
 ({ FRIEND_SYNC_PLATFORM_TYPES: c9, ACTIVITY_PLATFORM_TYPES: c10, PlatformTypes: unpackModuleId, HelpdeskArticles: closure_12, Fonts } = ME);
@@ -157,7 +157,7 @@ const PureComponent = importAllResult.PureComponent;
 class ConnectedAccount extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f109831 = applyArgumentsResult;
+    f110111 = applyArgumentsResult;
     obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
@@ -204,100 +204,54 @@ class ConnectedAccount extends PureComponent {
       const account = lib.props.account;
       applyArgumentsResult(outer1_2[13]).disconnect(account.type, account.id);
     };
-    f109831 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f109831 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
       let c3 = 0;
       return (function*(arg0) {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_2 = tmp3;
-                const state = tmp7;
-                const account = outer1_1.props.account;
-                let num5 = 0;
-                if (closure_0) {
-                  num5 = 1;
-                }
-                if (closure_0) {
-                  if (!account.verified) {
-                    const obj1 = { inProgressVisibility: null };
-                    obj1[0] = num5;
-                    outer1_1.setState(obj1);
-                    const obj2 = { platformType: null };
-                    obj2[0] = account.type;
-                    outer1_1(outer1_2[26])(obj2);
-                    c5 = 3;
-                    const obj3 = { value: null, done: true };
-                    obj3[0] = undefined;
-                    return obj3;
-                  }
-                }
-                const obj4 = { isVisible: null };
-                obj4[0] = closure_0;
-                outer1_1.setState(obj4);
-                let c3 = 1;
-                let obj6 = outer1_1(outer1_2[13]);
-                c4 = 2;
-                c5 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = obj6.setVisibility(account.type, account.id, num5);
-                return obj5;
-              }
-            } else {
-              if (1 === tmp7) {
-                c3 = 0;
-                obj6 = { isVisible: null };
-                obj6[0] = !closure_0;
-                state.setState(obj6);
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-              c3 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp22) {
-            if (tmp4 === c3) {
-              c5 = tmp2;
-              throw tmp22;
-            } else {
-              c4 = tmp;
-            }
+        let closure_2 = tmp3;
+        const account = outer1_1.props.account;
+        let num5 = 0;
+        if (closure_0) {
+          num5 = 1;
+        }
+        if (closure_0) {
+          if (!account.verified) {
+            const obj1 = { inProgressVisibility: null };
+            obj1[0] = num5;
+            outer1_1.setState(obj1);
+            const obj2 = { platformType: null };
+            obj2[0] = account.type;
+            outer1_1(outer1_2[26])(obj2);
+            let c5 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = undefined;
+            return obj3;
           }
         }
+        const obj4 = { isVisible: null };
+        obj4[0] = closure_0;
+        outer1_1.setState(obj4);
+        let c3 = 1;
+        let obj6 = outer1_1(outer1_2[13]);
+        yield obj6.setVisibility(account.type, account.id, num5);
+        if (1 === tmp7) {
+          c3 = 0;
+          obj6 = { isVisible: null };
+          obj6[0] = !closure_0;
+          state.setState(obj6);
+          c5 = 3;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
+        }
+        c3 = 0;
+        return arg1;
       })();
     });
     applyArgumentsResult.handleVisibilityChange = function() {
@@ -310,100 +264,54 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f109831 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f109831 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
       let c3 = 0;
       return (function*(arg0) {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_2 = tmp3;
-                const state = tmp7;
-                const account = outer1_1.props.account;
-                let num5 = 0;
-                if (closure_0) {
-                  num5 = 1;
-                }
-                if (closure_0) {
-                  if (!account.verified) {
-                    const obj1 = { inProgressMetadataVisibility: null };
-                    obj1[0] = num5;
-                    outer1_1.setState(obj1);
-                    const obj2 = { platformType: null };
-                    obj2[0] = account.type;
-                    outer1_1(outer1_2[26])(obj2);
-                    c5 = 3;
-                    const obj3 = { value: null, done: true };
-                    obj3[0] = undefined;
-                    return obj3;
-                  }
-                }
-                const obj4 = { isMetadataVisible: null };
-                obj4[0] = closure_0;
-                outer1_1.setState(obj4);
-                let c3 = 1;
-                let obj6 = outer1_1(outer1_2[13]);
-                c4 = 2;
-                c5 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = obj6.setMetadataVisibility(account.type, account.id, num5);
-                return obj5;
-              }
-            } else {
-              if (1 === tmp7) {
-                c3 = 0;
-                obj6 = { isMetadataVisible: null };
-                obj6[0] = !closure_0;
-                state.setState(obj6);
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-              c3 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp22) {
-            if (tmp4 === c3) {
-              c5 = tmp2;
-              throw tmp22;
-            } else {
-              c4 = tmp;
-            }
+        let closure_2 = tmp3;
+        const account = outer1_1.props.account;
+        let num5 = 0;
+        if (closure_0) {
+          num5 = 1;
+        }
+        if (closure_0) {
+          if (!account.verified) {
+            const obj1 = { inProgressMetadataVisibility: null };
+            obj1[0] = num5;
+            outer1_1.setState(obj1);
+            const obj2 = { platformType: null };
+            obj2[0] = account.type;
+            outer1_1(outer1_2[26])(obj2);
+            let c5 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = undefined;
+            return obj3;
           }
         }
+        const obj4 = { isMetadataVisible: null };
+        obj4[0] = closure_0;
+        outer1_1.setState(obj4);
+        let c3 = 1;
+        let obj6 = outer1_1(outer1_2[13]);
+        yield obj6.setMetadataVisibility(account.type, account.id, num5);
+        if (1 === tmp7) {
+          c3 = 0;
+          obj6 = { isMetadataVisible: null };
+          obj6[0] = !closure_0;
+          state.setState(obj6);
+          c5 = 3;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
+        }
+        c3 = 0;
+        return arg1;
       })();
     });
     applyArgumentsResult.handleMetadataVisibilityChange = function() {
@@ -416,81 +324,35 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f109831 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f109831 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
       let c3 = 0;
       return (function*(arg0) {
-        if (c5 === 2) {
+        let closure_2 = tmp3;
+        const account = outer1_1.props.account;
+        const obj1 = { friendSync: null };
+        obj1[0] = closure_0;
+        outer1_1.setState(obj1);
+        let c3 = 1;
+        yield outer1_1(outer1_2[13]).setFriendSync(account.type, account.id, closure_0);
+        if (1 === tmp7) {
+          c3 = 0;
+          const obj3 = { friendSync: null };
+          obj3[0] = !closure_0;
+          state.setState(obj3);
+          let c5 = 3;
+        } else if (arg0 === 1) {
           c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_2 = tmp3;
-                const state = tmp7;
-                const account = outer1_1.props.account;
-                const obj1 = { friendSync: null };
-                obj1[0] = closure_0;
-                outer1_1.setState(obj1);
-                let c3 = 1;
-                c4 = 2;
-                c5 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = outer1_1(outer1_2[13]).setFriendSync(account.type, account.id, closure_0);
-                return obj2;
-              }
-            } else {
-              if (1 === tmp7) {
-                c3 = 0;
-                const obj3 = { friendSync: null };
-                obj3[0] = !closure_0;
-                state.setState(obj3);
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-              c3 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp13) {
-            if (tmp4 === c3) {
-              c5 = tmp2;
-              throw tmp13;
-            } else {
-              c4 = tmp;
-            }
-          }
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
         }
+        c3 = 0;
+        return arg1;
       })();
     });
     applyArgumentsResult.handleFriendSyncChange = function() {
@@ -503,81 +365,35 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f109831 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f109831 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
       let c3 = 0;
       return (function*(arg0) {
-        if (c5 === 2) {
+        let closure_2 = tmp3;
+        const account = outer1_1.props.account;
+        const obj1 = { showActivity: null };
+        obj1[0] = closure_0;
+        outer1_1.setState(obj1);
+        let c3 = 1;
+        yield outer1_1(outer1_2[13]).setShowActivity(account.type, account.id, closure_0);
+        if (1 === tmp7) {
+          c3 = 0;
+          const obj3 = { showActivity: null };
+          obj3[0] = !closure_0;
+          state.setState(obj3);
+          let c5 = 3;
+        } else if (arg0 === 1) {
           c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_2 = tmp3;
-                const state = tmp7;
-                const account = outer1_1.props.account;
-                const obj1 = { showActivity: null };
-                obj1[0] = closure_0;
-                outer1_1.setState(obj1);
-                let c3 = 1;
-                c4 = 2;
-                c5 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = outer1_1(outer1_2[13]).setShowActivity(account.type, account.id, closure_0);
-                return obj2;
-              }
-            } else {
-              if (1 === tmp7) {
-                c3 = 0;
-                const obj3 = { showActivity: null };
-                obj3[0] = !closure_0;
-                state.setState(obj3);
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-              c3 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp13) {
-            if (tmp4 === c3) {
-              c5 = tmp2;
-              throw tmp13;
-            } else {
-              c4 = tmp;
-            }
-          }
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
         }
+        c3 = 0;
+        return arg1;
       })();
     });
     applyArgumentsResult.handleShowActivityChange = function() {
@@ -610,14 +426,14 @@ prototype["componentDidUpdate"] = function componentDidUpdate(account) {
       if (null != inProgressVisibility) {
         obj.isVisible = 1 === inProgressVisibility;
         obj.inProgressVisibility = null;
-        obj = importDefault(4999);
+        obj = importDefault(5090);
         obj.setVisibility(account.type, account.id, inProgressVisibility);
       }
       if (null != inProgressMetadataVisibility) {
         obj.isMetadataVisible = 1 === inProgressMetadataVisibility;
         obj.inProgressMetadataVisibility = null;
-        const result = importDefault(4999).setMetadataVisibility(account.type, account.id, inProgressMetadataVisibility);
-        const obj2 = importDefault(4999);
+        const result = importDefault(5090).setMetadataVisibility(account.type, account.id, inProgressMetadataVisibility);
+        const obj2 = importDefault(5090);
       }
     }
     self.setState(obj);
@@ -628,11 +444,11 @@ prototype["renderUpsell"] = function renderUpsell() {
   if (account.twoWayLink) {
     return null;
   } else if (account.type === constants.XBOX) {
-    let tmp2 = callback3(require(14015) /* XboxTwoWayLinkUpsell */.XboxTwoWayLinkUpsell, {});
+    let tmp2 = callback3(require(14115) /* XboxTwoWayLinkUpsell */.XboxTwoWayLinkUpsell, {});
   } else {
     tmp2 = null;
     if (account.type === tmp.PLAYSTATION) {
-      tmp2 = callback3(require(14018) /* PlayStationTwoWayLinkUpsell */.PlayStationTwoWayLinkUpsell, {});
+      tmp2 = callback3(require(14118) /* PlayStationTwoWayLinkUpsell */.PlayStationTwoWayLinkUpsell, {});
     }
   }
 };
@@ -648,7 +464,7 @@ prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilit
   let isMetadataVisible;
   let isVisible;
   const self = this;
-  let obj = importDefault(4875);
+  let obj = importDefault(4966);
   const value = obj.get(this.props.account.type);
   let hasMetadata;
   if (value != null) {
@@ -678,37 +494,37 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  let obj1 = account(5000);
+  let obj1 = account(5091);
   const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let tmp2Result = tmp2(10037);
+    let tmp2Result = tmp2(10962);
     let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
   } else if (tmp6.STEAM === type) {
-    tmp2Result = tmp2(10037);
+    tmp2Result = tmp2(10962);
     redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
   } else {
     if (tmp6.BLUESKY !== type) {
       if (tmp6.TWITTER !== type) {
         if (tmp6.MASTODON !== type) {
           if (tmp6.EBAY === type) {
-            redditMetadataItems = tmp2(10037).generateEbayMetadataItems(metadata);
-            const tmp2Result1 = tmp2(10037);
+            redditMetadataItems = tmp2(10962).generateEbayMetadataItems(metadata);
+            const tmp2Result1 = tmp2(10962);
           } else if (tmp6.PAYPAL === type) {
-            redditMetadataItems = tmp2(10037).generatePaypalMetadataItems(metadata);
-            const tmp2Result2 = tmp2(10037);
+            redditMetadataItems = tmp2(10962).generatePaypalMetadataItems(metadata);
+            const tmp2Result2 = tmp2(10962);
           } else {
             redditMetadataItems = [];
             if (tmp6.TIKTOK === type) {
-              redditMetadataItems = tmp2(10037).generateTikTokMetadataItems(metadata);
-              const tmp2Result3 = tmp2(10037);
+              redditMetadataItems = tmp2(10962).generateTikTokMetadataItems(metadata);
+              const tmp2Result3 = tmp2(10962);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(10037).generateTwitterMetadataItems(metadata);
-    const tmp2Result4 = tmp2(10037);
+    redditMetadataItems = tmp2(10962).generateTwitterMetadataItems(metadata);
+    const tmp2Result4 = tmp2(10962);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -716,7 +532,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj = { date: null };
     obj[0] = createdAtDate;
     obj[2] = intl.format(tmp2(1236).t["9rfonh"], obj);
-    redditMetadataItems.push(callback3(tmp2(4189).Text, obj, MetadataFields.CREATED_AT));
+    redditMetadataItems.push(callback3(tmp2(4281).Text, obj, MetadataFields.CREATED_AT));
   }
   let intl2 = self.state.metadataRefreshing || self.state.metadataAlreadyRefreshed;
   function handleRefresh() {
@@ -729,7 +545,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     });
   }
   if (0 === redditMetadataItems.length) {
-    let obj12 = self(4875);
+    let obj12 = self(4966);
     const value = obj12.get(account.type);
     let hasMetadata;
     if (value != null) {
@@ -750,13 +566,13 @@ prototype["renderMetadata"] = function renderMetadata() {
       const obj3 = { variant: "text-xs/normal", children: null };
       const intl5 = tmp2(1236).intl;
       obj3[1] = intl5.string(tmp2(1236).t.eH16Gn);
-      items1[1] = callback3(tmp2(4189).Text, obj3);
+      items1[1] = callback3(tmp2(4281).Text, obj3);
       const obj4 = { style: null };
       obj4[0] = tmp.rowDivider;
       items1[2] = callback3(View, obj4);
       let obj5 = { style: null, children: null };
       obj5[0] = tmp.addDetailsButton;
-      let string = tmp2(4604).Button;
+      let string = tmp2(4695).Button;
       const intl6 = tmp2(1236).intl;
       const string2 = intl6.string;
       let Button = tmp2(1236).t;
@@ -773,14 +589,14 @@ prototype["renderMetadata"] = function renderMetadata() {
       items1[3] = callback3(View, obj5);
       const obj7 = { style: null, children: null };
       obj7[0] = tmp.learnMoreButton;
-      Button = tmp2(4604).Button;
+      Button = tmp2(4695).Button;
       const obj8 = { text: null, variant: "secondary", size: "sm", onPress: null };
       intl2 = tmp2(1236).intl;
       string = intl2.string;
       stringResult = string(tmp2(1236).t["8O0mlf"]);
       obj8[0] = stringResult;
       obj8[3] = function onPress() {
-        const obj = self(3890);
+        const obj = self(3982);
         return obj.openURL(self(1945).getArticleURL(constants.CONNECTION_DETAILS));
       };
       tmp = tmp23(Button, obj8);
@@ -809,9 +625,9 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj10[0] = tmp.metadataRefreshIcon;
     obj10[1] = tmp2(1297).Icon.Sizes.SMALL;
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(9704);
+      let tmp9Result = tmp9(9940);
     } else {
-      tmp9Result = tmp9(14020);
+      tmp9Result = tmp9(14120);
     }
     obj10[2] = tmp9Result;
     obj9[6] = callback3(tmp2(1297).Icon, obj10);
@@ -820,13 +636,13 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj12 = { style: null, children: null };
     obj12[0] = tmp.metadataItemsContainer;
     obj12[1] = redditMetadataItems;
-    const items3 = [callback3(View, obj12), callback3(tmp2(4721).PressableOpacity, obj9)];
+    const items3 = [callback3(View, obj12), callback3(tmp2(4812).PressableOpacity, obj9)];
     obj11[1] = items3;
     return callback4(View, obj11);
   }
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
-  let obj = importDefault(4875);
+  let obj = importDefault(4966);
   let tmp2 = null;
   if (set.has(obj.get(this.props.account.type).type)) {
     obj = { label: null, value: null, onValueChange: null };
@@ -839,7 +655,7 @@ prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   return tmp2;
 };
 prototype["renderActivityCheckRow"] = function renderActivityCheckRow() {
-  let obj = importDefault(4875);
+  let obj = importDefault(4966);
   const value = obj.get(this.props.account.type);
   let tmp3 = null;
   if (set2.has(value.type)) {
@@ -871,7 +687,7 @@ prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
       obj1[0] = tmp.integrationCategoryLabel;
       const intl = require(1236) /* getSystemLocale */.intl;
       obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.fOe3fZ);
-      const items1 = [callback3(require(4189) /* Text */.Text, obj1), ];
+      const items1 = [callback3(require(4281) /* Text */.Text, obj1), ];
       const integrations = account.integrations;
       items1[1] = integrations.map((id) => callback(closure_17, { integration: id }, id.id));
       obj[1] = items1;
@@ -887,7 +703,7 @@ prototype["render"] = function render() {
   const tmp = createCacheKey(this.context);
   const props = this.props;
   const account = props.account;
-  let obj = importDefault(4875);
+  let obj = importDefault(4966);
   const value = obj.get(account.type);
   const migrationData = value.migrationData;
   let migrationExperimentEnabled;
@@ -898,14 +714,14 @@ prototype["render"] = function render() {
     const intl = require(1236) /* getSystemLocale */.intl;
     obj = { platformName: null };
     obj[0] = account.name;
-    let name = intl.format(tmp2(2775).Glhokn, obj);
+    let name = intl.format(tmp2(2835).Glhokn, obj);
   } else {
     name = account.name;
   }
   obj = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: null, source: null, disableColor: true };
   obj[3] = require(1297) /* Button */.Icon.Sizes.LARGE;
   let obj3 = require(1416) /* getAvatarURL */;
-  let obj4 = require(4039) /* AccessibilityAnnouncer */;
+  let obj4 = require(4131) /* AccessibilityAnnouncer */;
   const icon = value.icon;
   obj[4] = obj3.makeSource(obj4.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
   let tmp7Result = tmp7(require(1297) /* Button */.Icon, obj);
@@ -916,10 +732,10 @@ prototype["render"] = function render() {
   obj2[2] = self.handleDisconnect;
   obj2[3] = { top: 5, left: 5, bottom: 5, right: 5 };
   obj3 = { style: tmp.deleteConnectionIcon, source: null };
-  obj3[1] = importDefault(7704);
+  obj3[1] = importDefault(7837);
   obj2[4] = closure_14(require(1297) /* Button */.Icon, obj3);
-  obj1[3] = closure_14(require(4721) /* PressableBase */.PressableOpacity, obj2);
-  tmp7Result = tmp7(tmp8(4602).Stack, obj1);
+  obj1[3] = closure_14(require(4812) /* PressableBase */.PressableOpacity, obj2);
+  tmp7Result = tmp7(tmp8(4693).Stack, obj1);
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
   const result2 = self.renderActivityCheckRow();
@@ -928,12 +744,12 @@ prototype["render"] = function render() {
   const obj5 = { style: tmp.connectedAccountItem, children: null };
   const obj6 = { style: tmp.connectedAccountTopContainer, children: null };
   const result4 = self.renderVisibilityCheckRow();
-  obj6[1] = closure_14(require(5224) /* TableRowInner */.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
+  obj6[1] = closure_14(require(5315) /* TableRowInner */.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
   const items = [closure_14(View, obj6), ];
   const obj7 = { style: tmp.connectedAccountContentContainer, children: null };
   const items1 = [self.renderUpsell(), self.renderMetadata(), , ];
   const items2 = [result4, result3, result2, result1];
-  items1[2] = callback4(require(5558) /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
+  items1[2] = callback4(require(5649) /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
   items1[3] = result;
   obj7[1] = items1;
   items[1] = callback4(View, obj7);

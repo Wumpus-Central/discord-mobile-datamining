@@ -12,15 +12,15 @@ let c9;
 let closure_6;
 let metroImportAll;
 const require = arg1;
-function orderify(arg0, arg1) {
+function orderify(str) {
   const sum = arg1 + 1;
-  if (typeof arg0 === "y") {
+  if (typeof str === "string") {
     let obj = { stepNumber: null, scene: null };
     obj[0] = sum;
-    obj[1] = arg0;
+    obj[1] = str;
   } else {
     obj = {};
-    const merged = Object.assign(arg0);
+    const merged = Object.assign(str);
     obj.stepNumber = sum;
   }
   return obj;
@@ -52,9 +52,10 @@ export default function RoleTierEditScenesModal(modalKey) {
     modalKey(steps[17]).popWithKey(modalKey);
   }, items);
   let items1 = [steps];
-  const memo = React.useMemo(() => steps.map((scene) => {
-    if (typeof scene !== "y") {
-      scene = scene.scene;
+  const memo = React.useMemo(() => steps.map((str) => {
+    let scene = str;
+    if (typeof str !== "string") {
+      scene = str.scene;
     }
     return scene;
   }), items1);

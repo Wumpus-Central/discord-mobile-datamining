@@ -10,7 +10,7 @@ const require = arg1;
 ({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 createToggle = {
   useTitle() {
-    const allowFriendsFromMutualGuildsOnly = require(14686) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
+    const allowFriendsFromMutualGuildsOnly = require(14786) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
     const intl = require(1236) /* getSystemLocale */.intl;
     const string = intl.string;
     const t = require(1236) /* getSystemLocale */.t;
@@ -22,7 +22,7 @@ createToggle = {
     return stringResult;
   },
   useDescription() {
-    const allowFriendsFromMutualGuildsOnly = require(14686) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
+    const allowFriendsFromMutualGuildsOnly = require(14786) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
     if (callback2().selectedGuildId === closure_6) {
       const intl2 = tmp(1236).intl;
       const string2 = intl2.string;
@@ -48,8 +48,8 @@ createToggle = {
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = callback2().selectedGuildId;
-    const obj = require(14685) /* useDefaultGuildsRestricted */;
-    const RestrictedGuildIds = require(3866) /* explicitContentFromProto */.RestrictedGuildIds;
+    const obj = require(14785) /* useDefaultGuildsRestricted */;
+    const RestrictedGuildIds = require(3958) /* explicitContentFromProto */.RestrictedGuildIds;
     const setting = RestrictedGuildIds.useSetting();
     let tmp2 = !setting.includes(selectedGuildId);
     if (selectedGuildId === closure_6) {
@@ -70,7 +70,7 @@ createToggle = {
       obj[2] = intl3.string(_require(1236).t.p89ACt);
       const intl4 = _require(1236).intl;
       obj[3] = intl4.string(_require(1236).t.gm1Vej);
-      obj[4] = importDefault(4622).Colors.RED;
+      obj[4] = importDefault(4713).Colors.RED;
       obj[5] = function onConfirm() {
         const DefaultGuildsRestrictedV2 = callback(outer1_2[6]).DefaultGuildsRestrictedV2;
         DefaultGuildsRestrictedV2.updateSetting(callback);
@@ -86,24 +86,24 @@ createToggle = {
         const DefaultGuildsRestrictedV2 = callback(outer1_2[6]).DefaultGuildsRestrictedV2;
         DefaultGuildsRestrictedV2.updateSetting(callback);
       };
-      importDefault(4532).show(obj);
-      const obj3 = importDefault(4532);
+      importDefault(4623).show(obj);
+      const obj3 = importDefault(4623);
     } else {
-      obj = _require(6509);
+      obj = _require(5922);
       const sanitizedRestrictedGuilds = obj.getSanitizedRestrictedGuilds();
       if (arg0) {
         sanitizedRestrictedGuilds.delete(tmp);
       } else {
         sanitizedRestrictedGuilds.add(tmp);
       }
-      let RestrictedGuildIds = _require(3866).RestrictedGuildIds;
+      let RestrictedGuildIds = _require(3958).RestrictedGuildIds;
       const _Array = Array;
       RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
       const tmp2 = _require;
     }
   },
   useIsDisabled() {
-    let isParentallyControlled = require(13874) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    let isParentallyControlled = require(13974) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
     if (isParentallyControlled) {
       isParentallyControlled = tmp2 === closure_6;
     }

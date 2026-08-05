@@ -7,10 +7,10 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   let id;
   id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(3866).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(3958).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(3866).RestrictedGuildIds;
+  const RestrictedGuildIds = id(3958).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
@@ -36,13 +36,13 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj[2] = tmp5;
   obj[3] = callback;
   obj[4] = hasItem1;
-  return jsx(id(5557).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(5648).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
 
 export const useMessageRequestPrivacyOption = function useMessageRequestPrivacyOption(guild) {
   let tmp = null;
-  if (!importDefault(11550)()) {
+  if (!importDefault(11718)()) {
     const obj = { guild: null };
     obj[0] = guild.guild;
     tmp = <MessageRequestRestrictedGuildPrivacyOption guild={null} />;

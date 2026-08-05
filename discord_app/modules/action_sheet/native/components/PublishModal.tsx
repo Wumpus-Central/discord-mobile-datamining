@@ -17,7 +17,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/a
 
 export default function PublishModal(channelId) {
   const tmp = createCacheKey();
-  const tmp3 = callback(importDefault(9892)(channelId.channelId), 2);
+  const tmp3 = callback(importDefault(10135)(channelId.channelId), 2);
   const first = tmp3[0];
   if (tmp3[1]) {
     let obj = { style: null, children: null };

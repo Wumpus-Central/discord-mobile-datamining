@@ -22,7 +22,7 @@ export const SpeakerSpotIllustration = function SpeakerSpotIllustration(width) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(7514);
+  obj[0] = importDefault(6662);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -30,5 +30,5 @@ export const SpeakerSpotIllustration = function SpeakerSpotIllustration(width) {
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5236), { width: num * num3, height: num2 * num3 });
 };

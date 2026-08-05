@@ -6,13 +6,13 @@ const result = require("computeThreadNotificationSetting").fileFinishedImporting
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  let obj = channel(10266);
+  let obj = channel(9676);
   const threadNotificationSetting = obj.useThreadNotificationSetting(channel);
   obj = { header: null, children: null };
   obj = { title: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t.h850Ss);
-  obj[0] = jsx(channel(5246).BottomSheetTitleHeader, { title: null });
+  obj[0] = jsx(channel(5337).BottomSheetTitleHeader, { title: null });
   const obj1 = {
     hasIcons: false,
     value: threadNotificationSetting,
@@ -30,7 +30,7 @@ export default function ThreadNotificationsBottomSheet(channel) {
     const setting = label.setting;
     return callback(channel(table[8]).TableRadioRow, { value: setting, label: label.label }, "" + setting);
   });
-  obj[1] = jsx(channel(7660).TableRadioGroup, {
+  obj[1] = jsx(channel(7795).TableRadioGroup, {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
@@ -41,5 +41,5 @@ export default function ThreadNotificationsBottomSheet(channel) {
     accessibilityLabel: null,
     children: null
   });
-  return jsx(channel(5555).ActionSheet, { title: null });
+  return jsx(channel(5646).ActionSheet, { title: null });
 };

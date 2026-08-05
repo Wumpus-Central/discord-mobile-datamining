@@ -38,7 +38,7 @@ function _getSystemLocale() {
             let closure_1 = tmp2;
             let callback = tmp3;
             callback = undefined;
-            const tmp25 = outer1_1(3804);
+            const tmp25 = outer1_1(3896);
             let prop;
             if (tmp25 != null) {
               const app = tmp25.app;
@@ -47,7 +47,7 @@ function _getSystemLocale() {
               }
             }
             if (null != prop) {
-              const app2 = tmp23(3804).app;
+              const app2 = tmp23(3896).app;
               const preferredSystemLanguages = app2.getPreferredSystemLanguages();
               dependencyMap = 1;
               c3 = 1;

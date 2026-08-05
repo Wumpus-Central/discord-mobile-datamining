@@ -30,7 +30,7 @@ function HomeDrawerDMsRow() {
     const obj2 = { numFriends: null };
     obj2[0] = stateFromStores;
     obj1[3] = intl.format(tmp2(1236).t.N5UIKr, obj2);
-    items1[1] = callback(tmp2(4189).Text, obj1);
+    items1[1] = callback(tmp2(4281).Text, obj1);
     obj[1] = items1;
     tmp5 = callback2(View, obj);
   }
@@ -38,9 +38,9 @@ function HomeDrawerDMsRow() {
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl2 = tmp2(1236).intl;
   obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.YUU0RF);
-  obj3[0] = callback(require(4189) /* Text */.Text, obj4);
+  obj3[0] = callback(require(4281) /* Text */.Text, obj4);
   obj3[1] = tmp5;
-  return callback(require(14981) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
+  return callback(require(15302) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
@@ -50,7 +50,7 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = require("sortActivity").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
 
 export default function HomeDrawerDMsRowWrapper() {
-  const MobileHomeDrawerExperiment = require(4050) /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = require(4142) /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;

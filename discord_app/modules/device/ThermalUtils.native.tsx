@@ -16,13 +16,13 @@ let closure_5 = keys.create((arg0) => {
   let thermalState = dependencyMap;
   if (obj.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() >= 29) {
-      thermalState = importDefault(10630).getThermalState();
+      thermalState = importDefault(10525).getThermalState();
       let resolved = Promise.resolve(thermalState);
-      const obj3 = importDefault(10630);
+      const obj3 = importDefault(10525);
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _require(4173);
+    tmpResult = _require(4265);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

@@ -6,6 +6,6 @@ export default function UnreadSettingNoticeImpressionTracking(id) {
   obj[0] = require(503) /* encodeProperties */.ImpressionTypes.VIEW;
   obj[1] = require(503) /* encodeProperties */.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE;
   const items = [id.id];
-  importDefault(8436)(obj, undefined, items);
+  importDefault(9267)(obj, undefined, items);
   return null;
 };

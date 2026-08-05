@@ -39,13 +39,13 @@ function BurstReactionAnimationContainerInner() {
       first(709).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
-  let obj = _require(4054);
+  let obj = _require(4146);
   let fn = function y() {
     if (null == first) {
       let obj = { opacity: 0 };
     } else {
       obj = { opacity: null };
-      const tmp11 = callback(4194);
+      const tmp11 = callback(4286);
       const withTiming = tmp11.withTiming;
       const obj1 = { duration: 300 };
       if (first1) {
@@ -58,7 +58,7 @@ function BurstReactionAnimationContainerInner() {
           }
         };
         obj = { runOnJS: null, handleComponentFinish: null };
-        obj[0] = callback(4054).runOnJS;
+        obj[0] = callback(4146).runOnJS;
         obj[1] = handleComponentFinish;
         fn.__closure = obj;
         fn.__workletHash = 9326347209552;
@@ -68,7 +68,7 @@ function BurstReactionAnimationContainerInner() {
     }
     return obj;
   };
-  obj = { animationData: first, showAnimation: first1, withTiming: _require(4194).withTiming, runOnJS: _require(4054).runOnJS, handleComponentFinish };
+  obj = { animationData: first, showAnimation: first1, withTiming: _require(4286).withTiming, runOnJS: _require(4146).runOnJS, handleComponentFinish };
   fn.__closure = obj;
   fn.__workletHash = 12044515783370;
   fn.__initData = closure_12;
@@ -84,7 +84,7 @@ function BurstReactionAnimationContainerInner() {
       obj = { style: items, children: null };
       items = [markAsDismissed.fill, closure_7];
       obj = { activeOpacity: null, onPress: null, style: null, children: null };
-      obj[0] = callback(6099).BACKDROP_OPACITY;
+      obj[0] = callback(7163).BACKDROP_OPACITY;
       obj[1] = function onPress() {
         outer1_4(false);
         outer1_5.current = false;
@@ -101,7 +101,7 @@ function BurstReactionAnimationContainerInner() {
           callback(false);
           closure_5.current = false;
         };
-        tmpResult = tmp(first(6141), obj3);
+        tmpResult = tmp(first(7205), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = outer1_8(handleComponentFinish, obj2);
@@ -112,7 +112,7 @@ function BurstReactionAnimationContainerInner() {
         obj5[0] = tmp4.dismissTextContainer;
         const intl = tmp2(1236).intl;
         obj5[2] = intl.string(tmp2(1236).t.QpPMih);
-        const items2 = [tmp(tmp2(4189).Text, obj5), ];
+        const items2 = [tmp(tmp2(4281).Text, obj5), ];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
         items2[1] = tmp(tmp8, obj6);
@@ -122,11 +122,11 @@ function BurstReactionAnimationContainerInner() {
       items1[2] = tmp6Result;
       obj[3] = items1;
       obj[1] = outer1_10(closure_5, obj);
-      obj[1] = outer1_8(first(4054).View, obj);
+      obj[1] = outer1_8(first(4146).View, obj);
       return outer1_8(callback(1297).OverlayView, obj);
     };
-    tmp8 = callback(first(9676), obj);
-    let tmp11 = first(9676);
+    tmp8 = callback(first(9916), obj);
+    let tmp11 = first(9916);
   }
   return tmp8;
 }
@@ -156,5 +156,5 @@ export default function BurstReactionAnimationContainer() {
   const obj = { theme: null, children: null };
   obj[0] = importDefault(712).themes.DARKER;
   obj[1] = callback(BurstReactionAnimationContainerInner, {});
-  return callback(require(3905) /* ManaContext */.ThemeContextProvider, obj);
+  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
 };

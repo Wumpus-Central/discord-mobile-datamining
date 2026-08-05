@@ -59,7 +59,7 @@ class RTCBandwidthMonitor {
   }
 }
 RTCBandwidthMonitor["create"] = function create() {
-  if (typeof RTCBandwidthMonitor !== "fileFinishedImporting") {
+  if (typeof RTCBandwidthMonitor !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(RTCBandwidthMonitor.prototype);

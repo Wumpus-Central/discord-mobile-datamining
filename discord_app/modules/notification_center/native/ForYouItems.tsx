@@ -32,7 +32,7 @@ const require = arg1;
 function ForYouFooter(loading) {
   let tmp = null;
   if (loading.loading) {
-    tmp = callback(require(15309) /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
+    tmp = callback(require(15406) /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
   }
   return tmp;
 }
@@ -42,7 +42,7 @@ function Callout(arg0) {
   let item;
   ({ item, acked, compactMode } = arg0);
   const tmp = createCacheKey();
-  let obj = importAll(4623);
+  let obj = importAll(4714);
   obj = { style: tmp.calloutContainer, pointerEvents: "none", children: null };
   obj = { style: tmp.messagePreviewBarV2 };
   const parser = obj.getParser(callback3());
@@ -55,21 +55,21 @@ function Callout(arg0) {
   }
   obj1[2] = num;
   obj1[3] = parser(item.callout);
-  items[1] = callback(require(4189) /* Text */.Text, obj1);
+  items[1] = callback(require(4281) /* Text */.Text, obj1);
   obj[2] = items;
   return closure_22(closure_7, obj);
 }
 function ForYouMessagePreviewV2(item) {
-  let acked;
   let compactMode;
   let roleStyle;
   item = item.item;
+  const acked = item.acked;
   let guild_id;
   let message_channel_id;
-  ({ acked, compactMode, roleStyle } = item);
+  ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = createCacheKey();
   let SMALL = dependencyMap;
-  let obj = message_channel_id(4623);
+  let obj = message_channel_id(4714);
   const notifCenterV2MessagePreviewParser = obj.getNotifCenterV2MessagePreviewParser(callback4(), closure_28, roleStyle);
   const intl = item(1236).intl;
   const stringResult = intl.string(item(1236).t.BOi07B);
@@ -124,10 +124,10 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(7829)(first);
+    const tmp15 = guild_id(7959)(first);
     let result = stringResult;
     if (null != tmp15) {
-      let tmp2Result = tmp2(6076);
+      let tmp2Result = tmp2(7140);
       result = tmp2Result.formatPollResultNotificationCenterText(tmp15);
     }
   } else if (stickers.length > 0) {
@@ -231,18 +231,22 @@ function ForYouMessagePreviewV2(item) {
     id = message10.author.id;
   }
   obj2[4] = id;
-  const items5 = [item(7881).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, {}), ];
+  let str2 = "text-default";
+  if (acked) {
+    str2 = "text-muted";
+  }
+  const items5 = [item(8011).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj1[3] = items5;
-    items3[1] = tmp21(tmp2(4189).Text, obj1);
+    items3[1] = tmp21(tmp2(4281).Text, obj1);
     obj[2] = items3;
     return tmp21(tmp22, obj);
   } else {
     const obj3 = { style: null, children: null };
     obj3[0] = messagePreviewIconV2.messagePreviewIconV2Container;
     if (constants3.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(9886);
+      let tmp29 = guild_id(10102);
       const obj4 = { source: null, size: null, style: null };
       obj4[0] = tmp29;
       SMALL = tmp2(1297).IconSizes.SMALL;
@@ -254,10 +258,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (tmp28.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (tmp28.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(7681);
+        tmp29 = guild_id(7816);
       }
     }
-    tmp29 = guild_id(9668);
+    tmp29 = guild_id(9905);
   }
 }
 function ApplicationName(applicationId) {
@@ -271,7 +275,7 @@ function ApplicationName(applicationId) {
     obj = { application: null, textVariant: null, iconSize: 16 };
     obj[0] = stateFromStores;
     obj[1] = applicationId.textVariant;
-    tmp5 = callback(importDefault(11735), obj, stateFromStores.id);
+    tmp5 = callback(importDefault(11897), obj, stateFromStores.id);
   }
   return tmp5;
 }
@@ -323,9 +327,8 @@ let obj3 = { mention: null };
 createCacheKey = { color: require("Themes").colors.MENTION_FOREGROUND, backgroundColor: require("Themes").colors.MENTION_BACKGROUND };
 obj3[0] = createCacheKey;
 let closure_26 = createCacheKey.createStyles(obj3);
-let obj5 = { mention: null, em: null };
+let obj5 = { mention: null };
 obj5[0] = { color: require("Themes").colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
-obj5[1] = { fontStyle: "normal" };
 let closure_27 = createCacheKey.createStyles(obj5);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
 createCacheKey = { container: { flex: 1 }, row: null, rowCompact: null, rowActive: null, col: null, unreadIndicatorV2: null, unreadIndicatorCompactV2: null, rowText: null, rowTextV2: null, rowBody: null, rowBodyV2: null, rowBodyAcked: null, rowTime: null, rowTimeV2: null, itemV2: null, calloutContainer: null, calloutTextAcked: null, calloutTextNotAcked: null, messagePreviewContainerV2: null, messagePreviewBarV2: null, messagePreviewIconV2Container: null, messagePreviewIconV2: null, messagePreviewTextV2Acked: null, messagePreviewTextV2NotAcked: null, messagePreviewSystemTextV2: null, refreshSpinner: null, forYouDivider: null, friendRequestNoteContainer: null };
@@ -500,71 +503,25 @@ let closure_35 = importAllResult.memo((item) => {
       obj[1] = tmp6(tmp3[42]);
       obj[2] = tmp2(tmp3[43]).TrashIcon;
       item = navigation(function*() {
-        if (c4 === 2) {
+        const callback = tmp3;
+        let c3 = 1;
+        yield callback(outer2_3[44]).deleteNotificationCenterItem(outer1_0);
+        if (1 === tmp7) {
+          c3 = 0;
+          const obj1 = outer2_1(outer2_3[38]);
+          const obj2 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
+          const intl = callback(outer2_3[18]).intl;
+          obj2[1] = intl.string(callback(outer2_3[18]).t.WDxhvB);
+          obj1.open(obj2);
+          let c4 = 3;
+        } else if (arg0 === 1) {
           c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c1) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                const callback = tmp3;
-                let c3 = 1;
-                c1 = 2;
-                c4 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = callback(outer2_3[44]).deleteNotificationCenterItem(outer1_0);
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                c3 = 0;
-                obj1 = outer2_1(outer2_3[38]);
-                const obj2 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
-                const intl = callback(outer2_3[18]).intl;
-                obj2[1] = intl.string(callback(outer2_3[18]).t.WDxhvB);
-                obj1.open(obj2);
-                c4 = 3;
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-              c3 = 0;
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp20) {
-            let closure_2 = tmp20;
-            if (tmp4 === c3) {
-              c4 = tmp2;
-              throw tmp20;
-            } else {
-              c1 = tmp;
-            }
-          }
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
         }
+        c3 = 0;
+        return arg1;
       });
       obj[3] = function() {
         const self = this;
@@ -666,7 +623,7 @@ let closure_35 = importAllResult.memo((item) => {
   }
   items7[2] = rowBodyAcked;
   obj7[1] = items7;
-  if (typeof tmp10 === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof tmp10 !== "string") {
     obj7[3] = tmp10;
     const items8 = [tmp25(tmp2(tmp3[14]).Text, obj7), ];
     const items9 = [, , ];

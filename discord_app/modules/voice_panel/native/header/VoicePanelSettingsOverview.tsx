@@ -111,13 +111,13 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = { onPress: callback, icon: null, label: null, trailing: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = require(14542) /* WrenchIcon */.WrenchIcon;
-  obj[1] = importDefault(7695);
-  obj[1] = callback(require(5230) /* TableRowIcon */.TableRowIcon, obj);
+  obj[0] = require(14642) /* WrenchIcon */.WrenchIcon;
+  obj[1] = importDefault(7828);
+  obj[1] = callback(require(5321) /* TableRowIcon */.TableRowIcon, obj);
   let intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.iQzQs3);
-  obj[3] = callback(require(5231) /* TableRowArrow */.TableRowArrow, {});
-  return callback(require(5224) /* TableRowInner */.TableRow, obj);
+  obj[3] = callback(require(5322) /* TableRowArrow */.TableRowArrow, {});
+  return callback(require(5315) /* TableRowInner */.TableRow, obj);
 }
 function ActivityDebugToggle() {
   let obj = require(589) /* initialize */;
@@ -130,16 +130,16 @@ function ActivityDebugToggle() {
   }, []);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = require(14542) /* WrenchIcon */.WrenchIcon;
-  obj[1] = importDefault(7695);
-  obj[0] = callback(require(5230) /* TableRowIcon */.TableRowIcon, obj);
+  obj[0] = require(14642) /* WrenchIcon */.WrenchIcon;
+  obj[1] = importDefault(7828);
+  obj[0] = callback(require(5321) /* TableRowIcon */.TableRowIcon, obj);
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["qv5/SP"]);
   obj[2] = stateFromStores;
   obj[3] = callback;
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[4] = intl2.string(require(1236) /* getSystemLocale */.t["qv5/SP"]);
-  return callback(require(5559) /* TableSwitchRow */.TableSwitchRow, obj);
+  return callback(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
 }
 let c3 = importAllResult;
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = ME);

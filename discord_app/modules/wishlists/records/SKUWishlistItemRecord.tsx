@@ -21,7 +21,7 @@ prototype["fromServer"] = function fromServer(sku) {
   } else {
     const obj = { sku: fromServer };
     const merged = Object.assign(sku);
-    if (typeof prototype !== "fileFinishedImporting") {
+    if (typeof prototype !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp11 = new prototype(obj, sku, merged);
@@ -39,7 +39,7 @@ prototype["fromSKU"] = function fromSKU(arg0) {
     ({ id: obj[0], productLine: obj[1], name } = arg0);
     obj[2] = name;
     obj[3] = arg0;
-    if (typeof prototype !== "fileFinishedImporting") {
+    if (typeof prototype !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp8 = new prototype(obj, name, prototype, new.target);

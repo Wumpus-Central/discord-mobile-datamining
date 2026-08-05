@@ -12,11 +12,11 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return importDefault(1416).makeSource(importDefault(11406));
+      return importDefault(1416).makeSource(importDefault(11515));
     } else if (tmp10.FRECENCY === id) {
-      return importDefault(1416).makeSource(importDefault(11407));
+      return importDefault(1416).makeSource(importDefault(11516));
     } else {
-      if (section.type === require(5709) /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION) {
+      if (section.type === require(6891) /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION) {
         let obj = importDefault(1416);
         obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
         ({ id: obj2[0], icon: obj2[1], application } = section);
@@ -62,6 +62,6 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
       }
     };
     obj[4] = upload;
-    importDefault(9684)(obj);
+    importDefault(9922)(obj);
   }
 };

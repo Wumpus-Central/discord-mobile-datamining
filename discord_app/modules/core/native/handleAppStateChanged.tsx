@@ -22,18 +22,18 @@ export default function handleAppStateChanged(state) {
     isAuthenticatedResult = authenticated.isAuthenticated();
   }
   if (isAuthenticatedResult) {
-    isAuthenticatedResult = require(4265) /* createRTCConnection */.default.isDisconnected();
-    const _default = require(4265) /* createRTCConnection */.default;
+    isAuthenticatedResult = require(4356) /* createRTCConnection */.default.isDisconnected();
+    const _default = require(4356) /* createRTCConnection */.default;
   }
   if (isAuthenticatedResult) {
-    let tmp2Result = tmp2(16757);
+    let tmp2Result = tmp2(16854);
     tmp2Result.deferUpdate();
   }
   if (state === constants2.ACTIVE) {
-    require(5736) /* getDeviceMetadata */.trackAppOpened("launcher");
-    const obj5 = require(5736) /* getDeviceMetadata */;
-    const result = require(4035) /* setSystemTheme */.setSystemThemeIfNeeded();
-    const obj6 = require(4035) /* setSystemTheme */;
+    require(6843) /* getDeviceMetadata */.trackAppOpened("launcher");
+    const obj5 = require(6843) /* getDeviceMetadata */;
+    const result = require(4127) /* setSystemTheme */.setSystemThemeIfNeeded();
+    const obj6 = require(4127) /* setSystemTheme */;
   }
   tmp2Result = tmp2(9);
   tmp2Result.appStateChanged(state);

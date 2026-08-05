@@ -9,60 +9,11 @@ const require = arg1;
 function _fetchBugReportConfig() {
   const self = this;
   const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const HTTP = v0(outer1_2[3]).HTTP;
-            const obj1 = { url: null, rejectWithError: false };
-            obj1[0] = outer1_6.BUG_REPORTS;
-            c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1.body;
-          return obj;
-        }
-      } catch (tmp8) {
-        v0 = tmp;
-        throw tmp8;
-      }
-    }
+    const HTTP = v0(outer1_2[3]).HTTP;
+    const obj1 = { url: null, rejectWithError: false };
+    obj1[0] = outer1_6.BUG_REPORTS;
+    yield HTTP.get(obj1);
+    return arg1.body;
   });
   const _fetchBugReportConfig = tmp;
   const apply = tmp.apply;
@@ -200,7 +151,7 @@ function _submitReport() {
                 items.push(obj17);
               }
               let obj19 = dependencyMap;
-              let obj18 = lib(10362);
+              let obj18 = lib(9785);
               let uploadDebugLogFiles = obj18.uploadDebugLogFiles;
               obj19 = lib(500);
               let BUG_REPORTS = outer1_5;
@@ -211,7 +162,7 @@ function _submitReport() {
               }
               uploadDebugLogFiles(ANDROID_APP);
               let constants = 1;
-              obj18 = lib2(5003);
+              obj18 = lib2(5094);
               obj18 = { url: null, attachments: null, fields: null, trackedActionData: null, rejectWithError: false };
               BUG_REPORTS = constants.BUG_REPORTS;
               obj18[0] = BUG_REPORTS;

@@ -12,7 +12,7 @@ const memoResult = require("noop").memo((channel) => {
   channel = channel.channel;
   let _require;
   ({ title, description, selected, onSelectDuration } = channel);
-  let obj = _require(6188);
+  let obj = _require(8167);
   const autoArchiveOptions = obj.getAutoArchiveOptions();
   let hasFlagResult = null != channel && channel.isForumPost();
   if (hasFlagResult) {
@@ -24,7 +24,7 @@ const memoResult = require("noop").memo((channel) => {
   obj[3] = intl.string(_require(1236).t.H4mGfI);
   obj[4] = onSelectDuration;
   obj[6] = autoArchiveOptions.map((value) => outer1_3(_undefined(outer1_1[6]).TableRadioRow, { value: value.value, disabled: _undefined, label: value.label }, value.value));
-  return jsx(_require(7660).TableRadioGroup, { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null });
+  return jsx(_require(7795).TableRadioGroup, { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");
 

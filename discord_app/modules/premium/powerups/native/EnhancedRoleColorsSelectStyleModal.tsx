@@ -56,21 +56,21 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   let closure_4;
   let c5;
   ({ guildId, role } = arg0);
-  const tmp3 = callback2(importDefault(4129)());
+  const tmp3 = callback2(importDefault(4221)());
   dependencyMap = tmp3;
-  let obj = require(4632) /* useHasEnhancedRoleColors */;
+  let obj = require(4723) /* useHasEnhancedRoleColors */;
   hasEnhancedRoleColorsForRole = obj.useHasEnhancedRoleColorsForRole(guildId, role);
-  let obj1 = require(16491) /* useGuildSettingsRoleExampleMessage */;
+  let obj1 = require(16589) /* useGuildSettingsRoleExampleMessage */;
   let intl = require(1236) /* getSystemLocale */.intl;
   closure_4 = obj1.useGuildSettingsRoleExampleMessage(intl.string(require(1236) /* getSystemLocale */.t.Mi9Kbe));
-  c5 = new importDefault(7718)();
+  c5 = new importDefault(7851)();
   obj = { header: null, children: null };
   obj = { title: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["9wVJRB"]);
-  obj[0] = callback(require(5246) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj1 = { style: tmp3.container, children: null };
-  const tmp6 = new importDefault(7718)();
+  const tmp6 = new importDefault(7851)();
   let items = [
     callback(closure_4, {
       style: tmp3.stylesContainer,
@@ -95,7 +95,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           disabled: tmp,
           onPress() {
             outer1_1(id.id);
-            outer2_1(4161).hideActionSheet();
+            outer2_1(4253).hideActionSheet();
           },
           children: null
         };
@@ -109,9 +109,9 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             message.message.roleColor = undefined;
             const result = outer2_0(1938).extractColorStringsFromServerColors(id.colors);
             const obj = outer2_0(1938);
-            message.message.roleColors = outer2_0(7749).processColorStrings(result);
+            message.message.roleColors = outer2_0(7880).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = outer2_1(16492);
+            message.message.avatarURL = outer2_1(12477);
           }
         };
         const items1 = [outer1_9(outer1_1(_undefined[16]), obj), ];
@@ -137,23 +137,23 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     let items1 = [, , ];
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj6[0] = items1;
-    obj6[2] = !tmp4(4057).isFabric();
+    obj6[2] = !tmp4(4149).isFabric();
     const intl4 = tmp4(1236).intl;
-    obj6[3] = intl4.string(tmp(2257)["+/IHLl"]);
-    obj5[0] = tmp7(tmp4(4189).Text, obj6);
-    obj4[2] = intl3.format(tmp(2257).VpEDJc, obj5);
-    const items2 = [tmp7(tmp4(4189).Text, obj4), ];
+    obj6[3] = intl4.string(tmp(2317)["+/IHLl"]);
+    obj5[0] = tmp7(tmp4(4281).Text, obj6);
+    obj4[2] = intl3.format(tmp(2317).VpEDJc, obj5);
+    const items2 = [tmp7(tmp4(4281).Text, obj4), ];
     const obj7 = { style: null, variant: "text-sm/normal", children: null };
     obj7[0] = tmp3.upsellText;
     const intl5 = tmp4(1236).intl;
-    obj7[2] = intl5.string(tmp(2257).FJZeZF);
-    items2[1] = tmp7(tmp4(4189).Text, obj7);
+    obj7[2] = intl5.string(tmp(2317).FJZeZF);
+    items2[1] = tmp7(tmp4(4281).Text, obj7);
     obj3[1] = items2;
     tmp8Result = tmp8(tmp9, obj3);
-    const tmp4Result = tmp4(4057);
+    const tmp4Result = tmp4(4149);
   }
   items[1] = tmp8Result;
   obj1[1] = items;
   obj[1] = closure_10(closure_4, obj1);
-  return callback(require(5247) /* Background */.BottomSheet, obj);
+  return callback(require(5338) /* Background */.BottomSheet, obj);
 };

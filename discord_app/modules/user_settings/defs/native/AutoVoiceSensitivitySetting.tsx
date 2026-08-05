@@ -15,7 +15,7 @@ createToggle = {
   },
   onValueChange: function onAutoVoiceSensitivitySettingValueChange(autoThreshold) {
     mode = mode.getMode();
-    let obj = importDefault(8847);
+    let obj = importDefault(9077);
     obj = { autoThreshold };
     obj.setMode(mode, obj);
   },

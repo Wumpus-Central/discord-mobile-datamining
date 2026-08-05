@@ -19,7 +19,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
       tmp3 = theme.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = require(3866) /* explicitContentFromProto */.ClientThemeSettings;
+      const ClientThemeSettings = require(3958) /* explicitContentFromProto */.ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -198,7 +198,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = require(3866) /* explicitContentFromProto */.MessageDisplayCompact;
+      const MessageDisplayCompact = require(3958) /* explicitContentFromProto */.MessageDisplayCompact;
       messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_10 : closure_11;
     }
     return messageGroupSpacing;
@@ -207,14 +207,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = require(3866) /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = require(3958) /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = require(3866) /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = require(3958) /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
@@ -441,7 +441,7 @@ let items = [
   (saturation) => {
     const obj = {};
     const merged = Object.assign(saturation);
-    obj.alwaysShowLinkDecorations = saturation.saturation <= require(4039) /* AccessibilityAnnouncer */.LOW_SATURATION_THRESHOLD;
+    obj.alwaysShowLinkDecorations = saturation.saturation <= require(4131) /* AccessibilityAnnouncer */.LOW_SATURATION_THRESHOLD;
     return obj;
   },
   (arg0) => {
@@ -508,7 +508,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
           obj = {};
           const merged = Object.assign(obj);
           obj.zoom = zoom.zoom;
-          importDefault(4187).setZoomFactor(obj.zoom);
+          importDefault(4279).setZoomFactor(obj.zoom);
         }
       }
     }
@@ -527,8 +527,8 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     }
     if (obj.zoom !== Accessibility.ZOOM_DEFAULT) {
       obj.zoom = tmp.ZOOM_DEFAULT;
-      importDefault(4187).setZoomFactor(obj.zoom);
-      const obj2 = importDefault(4187);
+      importDefault(4279).setZoomFactor(obj.zoom);
+      const obj2 = importDefault(4279);
     }
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function handleEnableKeyboardMode() {

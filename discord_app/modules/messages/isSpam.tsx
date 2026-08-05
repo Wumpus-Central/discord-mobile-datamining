@@ -36,8 +36,8 @@ export const isSpam = function isSpam(author) {
     flag = false;
   }
   if (flag) {
-    flag = !require(5769) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
-    const obj2 = require(5769) /* getDecisionOutcomeFromMessage */;
+    flag = !require(6876) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
+    const obj2 = require(6876) /* getDecisionOutcomeFromMessage */;
   }
   return flag;
 };

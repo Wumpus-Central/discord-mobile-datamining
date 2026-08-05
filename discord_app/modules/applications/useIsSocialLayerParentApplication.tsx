@@ -11,5 +11,5 @@ export default function useIsSocialLayerParentApplication(arg0) {
   return React.useMemo(() => callback(outer1_1[2]).hasApplicationFlag(callback, outer1_3.PARENT), items);
 };
 export const getIsSocialLayerParentApplication = function getIsSocialLayerParentApplication(application) {
-  return require(5696) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARENT);
+  return require(7510) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARENT);
 };

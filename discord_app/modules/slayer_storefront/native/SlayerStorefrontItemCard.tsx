@@ -26,7 +26,7 @@ export default function SlayerStorefrontItemCard(sku) {
   let dominantColorFromImage;
   let cardImage = createCacheKey();
   let size = num;
-  if (typeof num !== "ay") {
+  if (typeof num !== "object") {
     let obj = { width: null, height: null };
     obj[0] = num;
     obj[1] = num;

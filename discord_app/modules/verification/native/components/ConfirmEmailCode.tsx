@@ -165,82 +165,34 @@ export default function ConfirmEmailCode(onFormSubmit) {
     const intl3 = tmp2(tmp3[12]).intl;
     obj4[0] = intl3.string(tmp2(tmp3[12]).t.K0NPQ6);
     obj4[2] = first(function*() {
-      if (c5 === 2) {
+      let closure_1 = tmp3;
+      let c3 = 1;
+      yield outer1_2();
+      if (1 === tmp7) {
+        c3 = 0;
+        closure_1 = closure_2;
+        let obj3 = new outer1_1(outer1_2[10])(closure_1);
+        const anyErrorMessage = obj3.getAnyErrorMessage();
+        if (null != anyErrorMessage) {
+          const obj4 = outer1_1(outer1_2[15]);
+          const obj2 = { key: "CONFIRM_EMAIL_ERROR", content: null };
+          obj2[1] = outer1_0;
+          obj4.open(obj2);
+        }
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp3;
-              let anyErrorMessage = tmp7;
-              anyErrorMessage = undefined;
-              let c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_2();
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              closure_1 = closure_2;
-              let obj3 = new outer1_1(outer1_2[10])(closure_1);
-              anyErrorMessage = obj3.getAnyErrorMessage();
-              if (null != anyErrorMessage) {
-                let obj4 = outer1_1(outer1_2[15]);
-                const obj2 = { key: "CONFIRM_EMAIL_ERROR", content: null };
-                obj2[1] = outer1_0;
-                obj4.open(obj2);
-              }
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj = outer1_1(outer1_2[15]);
-              obj3 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
-              const intl = outer1_0(outer1_2[12]).intl;
-              obj3[1] = intl.string(outer1_0(outer1_2[12]).t["84yeoz"]);
-              obj.open(obj3);
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          }
-        } catch (tmp33) {
-          closure_2 = tmp33;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp33;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const obj = outer1_1(outer1_2[15]);
+        obj3 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
+        const intl = outer1_0(outer1_2[12]).intl;
+        obj3[1] = intl.string(outer1_0(outer1_2[12]).t["84yeoz"]);
+        obj.open(obj3);
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     });
     items2[3] = callback3(tmp2(tmp3[14]).LinkButton, obj4);
     obj[0] = items2;

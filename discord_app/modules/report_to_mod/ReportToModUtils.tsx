@@ -19,13 +19,13 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
       if (null == guild) {
         return false;
       } else {
-        return importDefault(5796)(guild) && null != importDefault(5795)(guild);
+        return importDefault(5795)(guild) && null != importDefault(5816)(guild);
       }
     }
   } else {
     return false;
   }
-  obj = require(6065) /* canReportUser */;
+  obj = require(5815) /* canReportUser */;
 };
 export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
   let tmp = arg1;
@@ -33,7 +33,7 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
     const items = [createGuildRecordFromRust, mergeGuildAvatar];
     tmp = items;
   }
-  let obj = require(6066) /* getContextForPermission */;
+  let obj = require(5794) /* getContextForPermission */;
   const contextForPermission = obj.getContextForPermission(arg0, tmp);
   if (null == contextForPermission) {
     return false;
@@ -41,10 +41,10 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
     const guild = contextForPermission.guild;
     let tmp7 = null == guild;
     if (!tmp7) {
-      tmp7 = !importDefault(5796)(guild);
+      tmp7 = !importDefault(5795)(guild);
     }
     if (!tmp7) {
-      tmp7 = null == importDefault(5795)(guild);
+      tmp7 = null == importDefault(5816)(guild);
     }
     let hasAnyResult = !tmp7;
     if (!tmp7) {
@@ -52,8 +52,8 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
       obj = { user: null, context: null, checkElevated: false };
       obj[0] = contextForPermission.user;
       obj[1] = guild;
-      hasAnyResult = obj2.hasAny(importAll(3826).computePermissions(obj), ReportToModPermissions);
-      const obj3 = importAll(3826);
+      hasAnyResult = obj2.hasAny(importAll(3918).computePermissions(obj), ReportToModPermissions);
+      const obj3 = importAll(3918);
     }
     return hasAnyResult;
   }
@@ -62,7 +62,7 @@ export const getReportToModChannelId = function getReportToModChannelId(arg0) {
   const guild = store2.getGuild(arg0);
   let tmp2 = null;
   if (null != guild) {
-    tmp2 = importDefault(5795)(guild);
+    tmp2 = importDefault(5816)(guild);
   }
   return tmp2;
 };
@@ -174,8 +174,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(5880).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5881).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(5880);
+          tmp9 = !tmp10(5818).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5821).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(5818);
         }
         return tmp9;
       } else {
@@ -184,7 +184,7 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
     } else {
       return true;
     }
-    obj3 = require(5869) /* isCurrentUserTeen */;
+    obj3 = require(5817) /* isCurrentUserTeen */;
   }
 };
 export const isModeratorReportThreadStarterMessage = function isModeratorReportThreadStarterMessage(isFirstMessageInForumPost, isModeratorReportChannel) {

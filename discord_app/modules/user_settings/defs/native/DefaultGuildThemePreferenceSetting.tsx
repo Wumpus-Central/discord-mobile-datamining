@@ -11,7 +11,7 @@ createToggle = {
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: require("explicitContentFromProto").DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
-    const DefaultGuildThemePreference = require(3866) /* explicitContentFromProto */.DefaultGuildThemePreference;
+    const DefaultGuildThemePreference = require(3958) /* explicitContentFromProto */.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));
   },
   useOptions: function useDefaultGuildThemePreferenceOptions() {
@@ -30,7 +30,7 @@ createToggle = {
     }, []);
   },
   usePredicate() {
-    return require(4122) /* apexExperiment */.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
+    return require(4214) /* apexExperiment */.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
   }
 };
 createToggle = createToggle.createRadio(createToggle);

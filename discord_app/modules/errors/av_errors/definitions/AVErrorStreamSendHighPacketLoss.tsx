@@ -14,7 +14,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
     } else if (0 === obj.getViewerIds(currentUserActiveStream).length) {
       return null;
     } else {
-      rTCConnection = rTCConnection.getRTCConnection(require(4257) /* isStreamKey */.encodeStreamKey(currentUserActiveStream));
+      rTCConnection = rTCConnection.getRTCConnection(require(4348) /* isStreamKey */.encodeStreamKey(currentUserActiveStream));
       let mediaEngineConnectionId;
       if (rTCConnection != null) {
         mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -22,24 +22,24 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else {
-        let tmp8Result = tmp8(16700);
+        let tmp8Result = tmp8(16797);
         const accumulatedStatsWithMinDatapoints = tmp8Result.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
         let tmp6 = null;
         if (null != accumulatedStatsWithMinDatapoints) {
           if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
             obj = { type: null };
-            obj[0] = tmp8(8861).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
-            tmp8Result = tmp8(16697);
-            const merged = Object.assign(tmp8Result.getStreamErrorContext(tmp8(4257).encodeStreamKey(currentUserActiveStream)));
+            obj[0] = tmp8(9091).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
+            tmp8Result = tmp8(16794);
+            const merged = Object.assign(tmp8Result.getStreamErrorContext(tmp8(4348).encodeStreamKey(currentUserActiveStream)));
             const items = [obj];
             const tmp3 = items;
-            const tmp8Result1 = tmp8(4257);
+            const tmp8Result1 = tmp8(4348);
           }
           tmp6 = tmp3;
         }
         return tmp6;
       }
-      const obj5 = require(4257) /* isStreamKey */;
+      const obj5 = require(4348) /* isStreamKey */;
     }
   },
   makeErrorContextKey(streamKey) {

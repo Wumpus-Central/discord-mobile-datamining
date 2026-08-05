@@ -31,70 +31,23 @@ function _postMessageToWebView() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
+      const table = tmp3;
+      let c4 = 1;
+      yield outer1_10.injectJavaScript(outer1_1(outer1_2[10])(closure_0));
+      if (1 === tmp7) {
+        c4 = 0;
+        closure_0 = items3;
+        const obj1 = callback(table[11]);
+        obj1.captureException(closure_0);
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp3;
-              const callback = tmp7;
-              let c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_10.injectJavaScript(outer1_1(outer1_2[10])(closure_0));
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              closure_0 = items3;
-              obj1 = callback(table[11]);
-              obj1.captureException(closure_0);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp20) {
-          items3 = tmp20;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp20;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _postMessageToWebView = tmp;
@@ -172,17 +125,24 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
         if (selfEmbeddedActivityForLocation != null) {
           const url = selfEmbeddedActivityForLocation.url;
         }
-        let tmp13 = typeof parsed === "ay";
-        if (typeof parsed !== "window") {
-          tmp13 = null != tmp11;
+        const iframeId = self.iframeId;
+        let tmp14 = typeof parsed === "object";
+        if (typeof parsed === "object") {
+          tmp14 = null != tmp11;
         }
-        if (tmp13) {
+        if (tmp14) {
+          tmp14 = null != iframeId;
+        }
+        if (tmp14) {
           let obj = outer1_1(outer1_2[13]);
-          obj.handleMessage(parsed, url, outer1_12);
+          obj = { origin: null, iframeId: null };
+          obj[0] = url;
+          obj[1] = iframeId;
+          obj.handleMessage(parsed, obj, outer1_12);
         }
-      } catch (tmp18) {
+      } catch (tmp21) {
         const _SyntaxError = SyntaxError;
-        if (tmp18 instanceof SyntaxError) {
+        if (tmp21 instanceof SyntaxError) {
           if (tmp2.data === outer1_7) {
             const connectedActivityLocation1 = outer1_6.getConnectedActivityLocation();
             if (null != connectedActivityLocation1) {
@@ -192,26 +152,26 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
                 applicationId = selfEmbeddedActivityForLocation1.applicationId;
               }
             }
-            let tmp25 = null != connectedActivityLocation1;
-            if (tmp25) {
-              tmp25 = null != tmp24;
+            let tmp28 = null != connectedActivityLocation1;
+            if (tmp28) {
+              tmp28 = null != tmp27;
             }
-            if (tmp25) {
+            if (tmp28) {
               obj = { location: null, applicationId: null, showFeedback: false };
               obj[0] = connectedActivityLocation1;
-              obj[1] = tmp24;
+              obj[1] = tmp27;
               self.leaveActivity(obj);
-              obj = { body: null, confirmText: null };
+              const obj1 = { body: null, confirmText: null };
               const intl = self(outer1_2[15]).intl;
-              obj[0] = intl.string(self(outer1_2[15]).t.tYBBWz);
+              obj1[0] = intl.string(self(outer1_2[15]).t.tYBBWz);
               const intl2 = self(outer1_2[15]).intl;
-              obj[1] = intl2.string(self(outer1_2[15]).t.BddRzS);
-              outer1_1(outer1_2[14]).show(obj);
-              const obj3 = outer1_1(outer1_2[14]);
+              obj1[1] = intl2.string(self(outer1_2[15]).t.BddRzS);
+              outer1_1(outer1_2[14]).show(obj1);
+              const obj4 = outer1_1(outer1_2[14]);
             }
           }
         } else {
-          throw tmp18;
+          throw tmp21;
         }
       }
     });
@@ -288,7 +248,7 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = importDefault(4533);
+  let obj = importDefault(4624);
   obj = { title: null, body: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.hbiAO6, { code });
@@ -296,7 +256,7 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  let obj = importDefault(4533);
+  let obj = importDefault(4624);
   obj = { title: null, body: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.PtobXW);
@@ -304,23 +264,23 @@ prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
   obj.show(obj);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  let obj = importDefault(3894);
+  let obj = importDefault(3986);
   obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t.JfA7IK);
-  obj[2] = importDefault(10370);
+  obj[2] = importDefault(9793);
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {
-  const releaseFrameIdResult = this.releaseFrameId();
-  if (null != releaseFrameIdResult) {
+  const releaseIframeIdResult = this.releaseIframeId();
+  if (null != releaseIframeIdResult) {
     const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
     const obj = { id: null };
-    obj[0] = releaseFrameIdResult;
+    obj[0] = releaseIframeIdResult;
     ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, obj);
     closure_10.releaseWebView();
   }
-  return releaseFrameIdResult;
+  return releaseIframeIdResult;
 };
 prototype["leaveActivity"] = function leaveActivity(arg0) {
   let _location;
@@ -347,26 +307,26 @@ prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   }
 };
 prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_location, applicationId, showFeedback) {
-  let obj = require(5701) /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
+  let obj = require(10513) /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
   obj = { location: _location, applicationId, showFeedback };
   obj.stopEmbeddedActivity(obj);
   obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null };
   importDefault(709).dispatch(obj);
 };
-prototype["releaseFrameId"] = function releaseFrameId() {
-  this.frameId = undefined;
-  return this.frameId;
+prototype["releaseIframeId"] = function releaseIframeId() {
+  this.iframeId = undefined;
+  return this.iframeId;
 };
-prototype["hasFrameId"] = function hasFrameId() {
-  return null != this.frameId;
+prototype["hasIframeId"] = function hasIframeId() {
+  return null != this.iframeId;
 };
-prototype["getOrCreateFrameId"] = function getOrCreateFrameId() {
-  const frameId = this.frameId;
-  if (null != frameId) {
-    return frameId;
+prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
+  const iframeId = this.iframeId;
+  if (null != iframeId) {
+    return iframeId;
   } else {
     const v4Result = require(514) /* v1 */.v4();
-    tmp.frameId = v4Result;
+    tmp.iframeId = v4Result;
     return v4Result;
   }
 };

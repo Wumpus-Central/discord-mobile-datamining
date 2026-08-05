@@ -12,7 +12,7 @@ createToggle = {
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: require("explicitContentFromProto").AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
-    const AnimateStickers = require(3866) /* explicitContentFromProto */.AnimateStickers;
+    const AnimateStickers = require(3958) /* explicitContentFromProto */.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));
   },
   useOptions: function useAnimateStickerSettingOptions() {

@@ -31,7 +31,7 @@ export const getNames = function getNames(user) {
     names[nick] = names(1856).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
     let str2 = names(1856).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
-  const globalName = importDefault(4032).getGlobalName(user);
+  const globalName = importDefault(4124).getGlobalName(user);
   if (tmp4) {
     const obj6 = names(1856);
     const str4 = names(1856).stripDiacritics(globalName.toLocaleLowerCase());
@@ -39,7 +39,7 @@ export const getNames = function getNames(user) {
     const str5 = names(1856).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
-  const obj4 = importDefault(4032);
+  const obj4 = importDefault(4124);
   tmp4 = null != globalName && null == names[globalName];
   const obj7 = names(1856);
   const str7 = names(1856).stripDiacritics(username.toLocaleLowerCase());

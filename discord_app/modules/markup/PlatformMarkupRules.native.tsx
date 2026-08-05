@@ -19,7 +19,7 @@ obj = {
           const json = JSON.stringify(match[0]);
           tmp3 = null;
         }
-        obj = importDefault(3834);
+        obj = importDefault(3926);
       }
       return tmp3;
     }
@@ -42,7 +42,7 @@ obj[2] = {
       obj[0] = arg0[0];
       return obj;
     } else {
-      obj = importDefault(3834);
+      obj = importDefault(3926);
       const result = obj.maybeTranslateSurrogatesToInlineEmoji(arg0[0]);
       if (null == result) {
         obj = { content: null };
@@ -60,7 +60,7 @@ obj[2] = {
 };
 obj[3] = {
   parse(content) {
-    let obj = importDefault(3834);
+    let obj = importDefault(3926);
     obj = { type: "emoji", content: content[0], surrogate: obj.convertNameToSurrogate(content[1]) };
     return obj;
   }
@@ -95,7 +95,7 @@ obj[4] = {
 };
 obj[5] = {
   parse(arg0, arg1, arg2) {
-    const channelMention = importDefault(4634).channelMention;
+    const channelMention = importDefault(4725).channelMention;
     const parsed = channelMention.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -103,7 +103,7 @@ obj[5] = {
     let mapped = content;
     if (null != content) {
       mapped = content;
-      if (typeof content !== "y") {
+      if (typeof content !== "string") {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
@@ -133,7 +133,7 @@ obj[5] = {
     let mapped1 = inContent;
     if (null != inContent) {
       mapped1 = inContent;
-      if (typeof inContent !== "y") {
+      if (typeof inContent !== "string") {
         const _Array2 = Array;
         let arr4 = inContent;
         if (!(inContent instanceof Array)) {
@@ -164,7 +164,7 @@ obj[5] = {
 };
 obj[6] = {
   parse(arg0, arg1, arg2) {
-    const channelOrMessageUrl = importDefault(4634).channelOrMessageUrl;
+    const channelOrMessageUrl = importDefault(4725).channelOrMessageUrl;
     const parsed = channelOrMessageUrl.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -172,7 +172,7 @@ obj[6] = {
     let mapped = content;
     if (null != content) {
       mapped = content;
-      if (typeof content !== "y") {
+      if (typeof content !== "string") {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
@@ -202,7 +202,7 @@ obj[6] = {
     let mapped1 = inContent;
     if (null != inContent) {
       mapped1 = inContent;
-      if (typeof inContent !== "y") {
+      if (typeof inContent !== "string") {
         const _Array2 = Array;
         let arr4 = inContent;
         if (!(inContent instanceof Array)) {
@@ -233,7 +233,7 @@ obj[6] = {
 };
 obj[7] = {
   parse(arg0, arg1, arg2) {
-    const mediaPostLink = importDefault(4634).mediaPostLink;
+    const mediaPostLink = importDefault(4725).mediaPostLink;
     const parsed = mediaPostLink.parse(arg0, arg1, arg2);
     let obj = {};
     let merged = Object.assign(parsed);
@@ -241,7 +241,7 @@ obj[7] = {
     let mapped = content;
     if (null != content) {
       mapped = content;
-      if (typeof content !== "y") {
+      if (typeof content !== "string") {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
@@ -271,7 +271,7 @@ obj[7] = {
     let mapped1 = inContent;
     if (null != inContent) {
       mapped1 = inContent;
-      if (typeof inContent !== "y") {
+      if (typeof inContent !== "string") {
         const _Array2 = Array;
         let arr4 = inContent;
         if (!(inContent instanceof Array)) {
@@ -302,7 +302,7 @@ obj[7] = {
 };
 obj[8] = {
   parse(arg0, arg1, arg2) {
-    const attachmentLink = importDefault(4637).attachmentLink;
+    const attachmentLink = importDefault(4728).attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
   }
 };
@@ -357,15 +357,15 @@ let obj2 = {
 let result = require("parseRawEmojiObject").fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
 export default obj;
-export const decorateWithIcon = function decorateWithIcon(arg0) {
-  let mapped = arg0;
-  if (null != arg0) {
-    mapped = arg0;
-    if (typeof arg0 !== "y") {
+export const decorateWithIcon = function decorateWithIcon(str) {
+  let mapped = str;
+  if (null != str) {
+    mapped = str;
+    if (typeof str !== "string") {
       const _Array = Array;
-      let arr2 = arg0;
-      if (!(arg0 instanceof Array)) {
-        const items = [arg0];
+      let arr2 = str;
+      if (!(str instanceof Array)) {
+        const items = [str];
         arr2 = items;
       }
       mapped = arr2.map((type) => {

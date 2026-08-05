@@ -78,7 +78,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = require("apply");
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "bottom" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "channel" };
     return tmp3;
   }
 }

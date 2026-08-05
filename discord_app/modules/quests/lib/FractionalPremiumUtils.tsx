@@ -2,7 +2,7 @@
 const result = require("QuestRewardTypes").fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
 export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
-  let obj = require(3839) /* getPremiumPlanItem */;
+  let obj = require(3931) /* getPremiumPlanItem */;
   const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
     const intl2 = tmp(1236).intl;
@@ -26,15 +26,15 @@ export const getFractionalPremiumQuestRewardName = function getFractionalPremium
   const found = rewards.filter((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM);
   const flatMapResult = found.flatMap((quantity) => Array(quantity.quantity).fill(quantity.skuId));
   let obj = { days: null, hours: null, minutes: null };
-  const fractionalPremiumUnitsHoursFromSkuIds = require(3839) /* getPremiumPlanItem */.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
+  const fractionalPremiumUnitsHoursFromSkuIds = require(3931) /* getPremiumPlanItem */.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
   obj[0] = require(1236) /* getSystemLocale */.t.fYmirx;
   obj[1] = require(1236) /* getSystemLocale */.t["C3RO+g"];
   obj[2] = require(1236) /* getSystemLocale */.t.r77oHc;
-  const obj2 = require(3839) /* getPremiumPlanItem */;
-  const obj4 = require(3863) /* resetCache */;
+  const obj2 = require(3931) /* getPremiumPlanItem */;
+  const obj4 = require(3955) /* resetCache */;
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { time: null };
-  const diffAsUnitsResult = require(3863) /* resetCache */.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * importDefault(687).Millis.HOUR);
-  obj[0] = require(3863) /* resetCache */.unitsAsStrings(diffAsUnitsResult, obj);
+  const diffAsUnitsResult = require(3955) /* resetCache */.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * importDefault(687).Millis.HOUR);
+  obj[0] = require(3955) /* resetCache */.unitsAsStrings(diffAsUnitsResult, obj);
   return intl.formatToPlainString(require(1236) /* getSystemLocale */.t["4SqnVD"], obj);
 };

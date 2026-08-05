@@ -20,8 +20,8 @@ class VideoSpinnerTimer {
 const prototype = VideoSpinnerTimer.prototype;
 prototype["onSpinnerStarted"] = function onSpinnerStarted() {
   if (null == this.spinnerVisibleStart) {
-    tmp.spinnerVisibleStart = require(4269) /* sleep */.now();
-    const obj = require(4269) /* sleep */;
+    tmp.spinnerVisibleStart = require(4360) /* sleep */.now();
+    const obj = require(4360) /* sleep */;
   }
 };
 prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerContext, userId, arg2) {
@@ -33,7 +33,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
     }
     const sum = num + 1;
     const result = map.set(arg2, sum);
-    let obj = require(4269) /* sleep */;
+    let obj = require(4360) /* sleep */;
     const diff = obj.now() - self.spinnerVisibleStart;
     self.spinnerVisibleStart = null;
     if (diff < 0) {

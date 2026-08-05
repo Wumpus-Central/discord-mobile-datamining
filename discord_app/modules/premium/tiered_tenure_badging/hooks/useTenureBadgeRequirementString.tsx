@@ -6,12 +6,12 @@ const result = require("getTieredTenureBadgeData").fileFinishedImporting("module
 export const useTenureBadgeRequirementString = function useTenureBadgeRequirementString() {
   let id;
   let tenureReqNumMonths;
-  let obj = require(8434) /* usePremiumSince */;
+  let obj = require(9428) /* usePremiumSince */;
   const tieredTenureBadge = obj.useTieredTenureBadge();
   if (null == tieredTenureBadge) {
     return null;
   } else {
-    const tieredTenureBadgeData = tmp(5923).getTieredTenureBadgeData(tieredTenureBadge);
+    const tieredTenureBadgeData = tmp(7015).getTieredTenureBadgeData(tieredTenureBadge);
     ({ id, tenureReqNumMonths } = tieredTenureBadgeData);
     if (TieredTenureBadge.PREMIUM_TENURE_1_MONTH !== id) {
       if (tmp6.PREMIUM_TENURE_3_MONTH !== id) {
@@ -37,7 +37,7 @@ export const useTenureBadgeRequirementString = function useTenureBadgeRequiremen
     obj = { months: null };
     obj[0] = tenureReqNumMonths;
     formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t.erUSmA, obj);
-    const tmpResult = tmp(5923);
+    const tmpResult = tmp(7015);
   }
 };
 export const getTenureBadgeRequirementString = function getTenureBadgeRequirementString(id, tenureReqNumMonths) {

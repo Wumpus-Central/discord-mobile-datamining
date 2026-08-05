@@ -12,7 +12,7 @@ let metroImportAll;
 let obj = arg1;
 function updateUserGuildSettings(closure_0, arg1, INFREQUENT_USER_ACTION) {
   let closure_1 = arg1;
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69219), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69402), INFREQUENT_USER_ACTION);
 }
 function updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, arg1) {
   const self = this;
@@ -32,61 +32,12 @@ function _updateRecurringDismissibleContentState() {
     let c3 = 0;
     let c2 = 0;
     return (function*(arg0, arg1) {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c3 = 1;
-              c2 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_11.updateAsync("userContent", (recurringDismissibleContentStates) => {
-                const merged = Object.assign(recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0]);
-                const merged1 = Object.assign(closure_1);
-                recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0] = {};
-              }, outer1_6.INFREQUENT_USER_ACTION);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp9) {
-          c2 = tmp;
-          throw tmp9;
-        }
-      }
+      yield outer1_11.updateAsync("userContent", (recurringDismissibleContentStates) => {
+        const merged = Object.assign(recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0]);
+        const merged1 = Object.assign(closure_1);
+        recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0] = {};
+      }, outer1_6.INFREQUENT_USER_ACTION);
+      return arg1;
     })();
   });
   const _updateRecurringDismissibleContentState = tmp;
@@ -107,62 +58,13 @@ function _updateGuildDismissedContent() {
     let c4 = 0;
     let c3 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = closure_2;
-              c4 = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_12(closure_1, (guildDismissibleContentStates) => {
-                const merged = Object.assign(guildDismissibleContentStates.guildDismissibleContentStates[closure_0]);
-                const merged1 = Object.assign(closure_1);
-                guildDismissibleContentStates.guildDismissibleContentStates[closure_0] = {};
-              }, outer1_6.INFREQUENT_USER_ACTION);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp10) {
-          c3 = tmp;
-          throw tmp10;
-        }
-      }
+      let closure_1 = closure_2;
+      yield outer1_12(closure_1, (guildDismissibleContentStates) => {
+        const merged = Object.assign(guildDismissibleContentStates.guildDismissibleContentStates[closure_0]);
+        const merged1 = Object.assign(closure_1);
+        guildDismissibleContentStates.guildDismissibleContentStates[closure_0] = {};
+      }, outer1_6.INFREQUENT_USER_ACTION);
+      return arg1;
     })();
   });
   const _updateGuildDismissedContent = tmp;
@@ -186,7 +88,7 @@ const subscription = require("dispatcher").subscribe("CONNECTION_OPEN", () => {
 const subscription1 = require("dispatcher").subscribe("CONNECTION_CLOSED", () => {
   const timestamp = Date.now();
 });
-if (typeof document !== "Array") {
+if (typeof document !== "undefined") {
   const _document = document;
   const listener = document.addEventListener("mousedown", () => {
 
@@ -720,15 +622,15 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   let closure_0 = arg0;
-  return obj.updateAsync("guilds", (arg0) => f69222(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (arg0) => f69405(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   let closure_0 = arg1;
   closure_0 = id;
-  const f69212 = (arg0) => {
+  const f69395 = (arg0) => {
     arg0.guildThemeSourcePreference = closure_0;
   };
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69219), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69402), UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 obj = Object.create(UserSettingsProtoActionCreators.prototype);
 obj.beforeSendCallbacks = [];
@@ -1096,17 +998,17 @@ export { setGuildThemeSourcePreferenceOverride };
 export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeSourcePreferenceOverride(closure_0) {
   obj = obj(1306).GuildThemeSourcePreference.UNSPECIFIED;
   obj = closure_0;
-  const f69212 = (arg0) => {
+  const f69395 = (arg0) => {
     arg0.guildThemeSourcePreference = closure_0;
   };
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69219), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69402), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateUserChannelSettings = function updateUserChannelSettings(arg0, arg1, arg2, INFREQUENT_USER_ACTION) {
   let closure_0 = arg1;
-  let f69219 = arg2;
+  let f69402 = arg2;
   closure_0 = arg0;
-  f69219 = (channels) => callback(outer1_2[9]).mutateUserChannelSettingsInternal(channels, callback, f69219);
-  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69219), INFREQUENT_USER_ACTION);
+  f69402 = (channels) => callback(outer1_2[9]).mutateUserChannelSettingsInternal(channels, callback, f69402);
+  return obj.updateAsync("guilds", (guilds) => callback(outer1_2[9]).mutateUserGuildSettingsInternal(guilds, callback, f69402), INFREQUENT_USER_ACTION);
 };
 export const addDismissedContent = function addDismissedContent(closure_0) {
   let obj = closure_0;
@@ -1169,7 +1071,7 @@ export const removeDismissedRecurringContent = function removeDismissedRecurring
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f69222 = (guilds) => {
+  const f69405 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1189,7 +1091,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", (arg0) => f69222(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (arg0) => f69405(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync("userContent", (arg0) => {

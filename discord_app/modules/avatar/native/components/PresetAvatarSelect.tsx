@@ -25,8 +25,8 @@ function DefaultAvatarButton(selected) {
   obj[4] = intl.string(require(1236) /* getSystemLocale */.t.vw2RsD);
   obj[5] = onSelect;
   obj = { style: tmp.defaultAvatarButton, source: { uri: source } };
-  obj[6] = closure_4(importDefault(5145), obj);
-  return closure_4(require(4721) /* PressableBase */.PressableOpacity, obj);
+  obj[6] = closure_4(importDefault(5236), obj);
+  return closure_4(require(4812) /* PressableBase */.PressableOpacity, obj);
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let items = [require("set"), require("set"), require("set"), require("set"), require("set"), require("set"), require("set"), require("set")];
@@ -142,7 +142,7 @@ export default function PresetAvatarSelect(arg0) {
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.yP28YL);
-  const items = [callback(require(4189) /* Text */.Text, obj), , ];
+  const items = [callback(require(4281) /* Text */.Text, obj), , ];
   obj = {
     style: tmp.buttonsContainer,
     children: items1.map((arg0) => {

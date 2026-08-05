@@ -50,7 +50,7 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
       const rect = closure_2.get();
       let tmp2 = null == rect;
       if (!tmp2) {
-        if (typeof outer1_4 !== "fileFinishedImporting") {
+        if (typeof outer1_4 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const first = arg0.allTouches[0];

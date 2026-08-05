@@ -9,6 +9,6 @@ export default function trackFriendsListClicked(arg0) {
   ({ tab_opened, source } = arg0);
   let obj = importDefault(698);
   obj = { tab_opened, source };
-  const merged = Object.assign(importDefault(15603)());
+  const merged = Object.assign(importDefault(15699)());
   obj.track(AnalyticEvents.FRIENDS_LIST_CLICKED, obj);
 };

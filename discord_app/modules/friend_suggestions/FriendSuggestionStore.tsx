@@ -41,11 +41,11 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = importDefault(5953).fetch();
-        const obj = importDefault(5953);
+        const response = importDefault(7044).fetch();
+        const obj = importDefault(7044);
       }
     } else {
-      importDefault(5954)();
+      importDefault(7045)();
     }
   },
   FRIEND_SUGGESTION_CREATE: function handleFriendSuggestionCreate(suggestion) {

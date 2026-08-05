@@ -40,7 +40,7 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   if (tmp11) {
     obj.minimumFractionDigits = 0;
   }
-  return require(5674) /* CurrencyCodes */.formatPrice(result, BGN, localeOverride, obj);
+  return require(5765) /* CurrencyCodes */.formatPrice(result, BGN, localeOverride, obj);
 }
 function formatPrice(amount, currency, localeOverride, localeOverride) {
   const timestamp = Date.now();
@@ -48,16 +48,16 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
   if (timestamp < date.getTime()) {
     const platformName = require(500) /* set */.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(5676).default.getUserCountry();
-      const _default2 = tmp2(5676).default;
+      let ipCountryCode = tmp2(5767).default.getUserCountry();
+      const _default2 = tmp2(5767).default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(5678).default.getStoreFront();
+      const storeFront = tmp2(5769).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(5678).default;
+      const _default = tmp2(5769).default;
     } else {
       ipCountryCode = ipCountryCode.ipCountryCode;
     }
@@ -124,7 +124,7 @@ export const formatPercent = function formatPercent(arg0, arg1) {
   return Intl.NumberFormat(arg0, { style: "percent", minimumFractionDigits: 0 }).format(arg1);
 };
 export const formatSubscriptionPlanRate = function formatSubscriptionPlanRate(interval_count) {
-  const price = require(3839) /* getPremiumPlanItem */.getPrice(interval_count.id);
+  const price = require(3931) /* getPremiumPlanItem */.getPrice(interval_count.id);
   return formatRate(formatPrice(price.amount, price.currency), interval_count.interval, "interval_count" in interval_count ? interval_count.interval_count : interval_count.intervalCount);
 };
 export const maybeShortenPrice = function maybeShortenPrice(str) {

@@ -10,7 +10,7 @@ const result = require("isMetaQuest").fileFinishedImporting("modules/activities/
 export default function isActivityJoinableOnCurrentPlatform(type) {
   let tmp = null == type;
   if (!tmp) {
-    tmp = !importDefault(6029)(type, constants.JOIN);
+    tmp = !importDefault(5837)(type, constants.JOIN);
   }
   if (!tmp) {
     tmp = type.type !== constants3.PLAYING;
@@ -77,7 +77,7 @@ export const getCurrentActivityGamePlatform = function getCurrentActivityGamePla
 export const isActivityJoinable = function isActivityJoinable(type) {
   let tmp = null == type;
   if (!tmp) {
-    tmp = !importDefault(6029)(type, constants.JOIN);
+    tmp = !importDefault(5837)(type, constants.JOIN);
   }
   if (!tmp) {
     tmp = type.type !== constants3.PLAYING;

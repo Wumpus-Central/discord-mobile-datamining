@@ -56,7 +56,7 @@ prototype["render"] = function render() {
   const props = this.props;
   ({ source, style } = props);
   let json;
-  if (typeof source !== "window") {
+  if (typeof source === "object") {
     if (!source.uri) {
       const _JSON = JSON;
       json = JSON.stringify(source);
@@ -75,7 +75,7 @@ prototype["render"] = function render() {
   const tmp = callback(props, closure_2);
   const merged = Object.assign(tmp);
   ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
-  obj[1] = jsx(importDefault(5511), { source, style: items1 });
+  obj[1] = jsx(importDefault(5602), { source, style: items1 });
   return <View source={source} style={items1} />;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };

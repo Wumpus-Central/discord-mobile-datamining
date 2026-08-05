@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_ROW_BUTTON,
   getComponent() {
-    return require(14579) /* UserSettingsDesignSystemRowButton */.default;
+    return require(14679) /* UserSettingsDesignSystemRowButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

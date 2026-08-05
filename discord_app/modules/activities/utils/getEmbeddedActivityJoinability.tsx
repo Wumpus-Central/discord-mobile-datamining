@@ -80,8 +80,8 @@ function getEmbeddedActivityJoinability(arg0) {
                   return obj.IS_AFK_CHANNEL;
                 } else {
                   const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(channel.getGuildId());
-                  const obj2 = require(4376) /* allowChannelAccess */;
-                  const isChannelFullResult = require(4376) /* allowChannelAccess */.isChannelFull(channel, VoiceStateStore, GuildStore);
+                  const obj2 = require(4467) /* allowChannelAccess */;
+                  const isChannelFullResult = require(4467) /* allowChannelAccess */.isChannelFull(channel, VoiceStateStore, GuildStore);
                   if (PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
                     if (channel.isVocal()) {
                       if (currentClientVoiceChannelId !== tmp10) {
@@ -105,7 +105,7 @@ function getEmbeddedActivityJoinability(arg0) {
       } else {
         return obj.ACTIVITY_NOT_SUPPORTED_ON_OS;
       }
-      tmp7 = importDefault(10619);
+      tmp7 = importDefault(10531);
     } else {
       return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
     }

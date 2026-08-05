@@ -14,12 +14,12 @@ createToggle = {
     const setDeveloperOptionSettings = require(708) /* setDeveloperOptionSettings */.setDeveloperOptionSettings;
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
-      importDefault(10372).initialize();
-      const obj2 = importDefault(10372);
+      importDefault(9810).initialize();
+      const obj2 = importDefault(9810);
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
-      importDefault(10372).terminate(true);
-      const obj = importDefault(10372);
+      importDefault(9810).terminate(true);
+      const obj = importDefault(9810);
     }
   },
   useValue: function useCreateBugReportSettingToggleValue() {

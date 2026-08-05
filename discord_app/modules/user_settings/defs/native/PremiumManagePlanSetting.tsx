@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require(14035) /* PremiumPlanSelectSettingScreen */.default;
+    return require(14135) /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

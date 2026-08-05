@@ -8,16 +8,16 @@ export default function stripSensitiveLoggingData(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
   const args = obj.args;
-  let tmp2 = typeof args === "ay";
-  if (typeof args !== "window") {
-    tmp2 = typeof obj.cmd === "y";
+  let tmp2 = typeof args === "object";
+  if (typeof args === "object") {
+    tmp2 = typeof obj.cmd === "string";
   }
   let merged3 = obj;
   if (!tmp2) {
     const data = merged3.data;
-    let tmp13 = typeof data === "ay";
-    if (typeof data !== "window") {
-      tmp13 = typeof merged3.cmd === "y";
+    let tmp13 = typeof data === "object";
+    if (typeof data === "object") {
+      tmp13 = typeof merged3.cmd === "string";
     }
     if (!tmp13) {
       return merged3;

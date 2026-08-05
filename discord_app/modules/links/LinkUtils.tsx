@@ -6,7 +6,7 @@ import ME from "ME";
 
 ME = ME.ME;
 const Permissions = ME.Permissions;
-const mapped = Array.from(require("set").StaticChannelRoutes).map((arg0) => importDefault(4181).escape(arg0));
+const mapped = Array.from(require("set").StaticChannelRoutes).map((arg0) => importDefault(4273).escape(arg0));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
 const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + ")(?:/)(\\d+)");

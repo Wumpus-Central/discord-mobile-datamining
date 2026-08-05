@@ -43,9 +43,9 @@ export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
   let hasAccess;
   let isExperimentEnabled;
   let isFreemium;
-  const favoritesAccess = require(10228) /* useFavoritesAccess */.getFavoritesAccess();
+  const favoritesAccess = require(9629) /* useFavoritesAccess */.getFavoritesAccess();
   ({ isExperimentEnabled, isFreemium, hasAccess } = favoritesAccess);
-  const obj = require(10228) /* useFavoritesAccess */;
+  const obj = require(9629) /* useFavoritesAccess */;
   const obj2 = handleConnectionOpen;
   const tmp4 = initializeFromUserSettings;
   let tmp5 = isExperimentEnabled;
@@ -57,7 +57,7 @@ export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
       if (!isFavoritesGuildIdResult) {
         let isFavoritesGuildEnabled = hasAccess;
         if (isFavoritesGuildEnabled) {
-          tmpResult = tmp(10235);
+          tmpResult = tmp(9636);
           isFavoritesGuildEnabled = tmpResult.computeIsFavoritesGuildEnabled(isFreemium, tmp4);
         }
         isFavoritesGuildIdResult = isFavoritesGuildEnabled;

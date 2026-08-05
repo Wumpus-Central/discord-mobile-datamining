@@ -74,9 +74,9 @@ export default function ChannelListPreview(useGradientBackground) {
     obj[0] = themes;
     obj[1] = themeIndex;
     obj[3] = tmp4(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = callback(tmp4(14334), obj);
+    obj[1] = callback(tmp4(14434), obj);
     tmp7 = callback(closure_4, obj);
-    const tmp4Result = tmp4(14334);
+    const tmp4Result = tmp4(14434);
   }
   const items2 = [tmp7, , ];
   const obj1 = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };
@@ -88,8 +88,8 @@ export default function ChannelListPreview(useGradientBackground) {
   obj1[3] = function keyExtractor(id) {
     return id.id;
   };
-  items2[1] = callback(animatedStyles(6679).FlashList, obj1);
-  items2[2] = callback(importDefault(14337), { visible: isNitroLocked, theme: themes[themeIndex] });
+  items2[1] = callback(animatedStyles(7666).FlashList, obj1);
+  items2[2] = callback(importDefault(14437), { visible: isNitroLocked, theme: themes[themeIndex] });
   obj[4] = items2;
-  return closure_6(importDefault(4054).View, obj);
+  return closure_6(importDefault(4146).View, obj);
 };

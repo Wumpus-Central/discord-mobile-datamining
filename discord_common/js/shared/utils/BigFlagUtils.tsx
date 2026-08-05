@@ -86,7 +86,7 @@ HighLow["fromBit"] = function fromBit(arg0) {
     ArrayResult[3 - num] = num2;
     num = num + 1;
   } while (num < 4);
-  if (typeof HighLow !== "fileFinishedImporting") {
+  if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(HighLow.prototype);
@@ -125,7 +125,7 @@ prototype["and"] = function and(parts) {
   parts = parts.parts;
   parts = this.parts;
   const mapped = parts.map((arg0, arg1) => arg0 & parts[arg1]);
-  if (typeof HighLow !== "fileFinishedImporting") {
+  if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(HighLow.prototype);
@@ -137,7 +137,7 @@ prototype["or"] = function or(parts) {
   parts = parts.parts;
   parts = this.parts;
   const mapped = parts.map((arg0, arg1) => arg0 | parts[arg1]);
-  if (typeof HighLow !== "fileFinishedImporting") {
+  if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(HighLow.prototype);
@@ -149,7 +149,7 @@ prototype["xor"] = function xor(parts) {
   parts = parts.parts;
   parts = this.parts;
   const mapped = parts.map((arg0, arg1) => arg0 ^ parts[arg1]);
-  if (typeof HighLow !== "fileFinishedImporting") {
+  if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(HighLow.prototype);
@@ -160,7 +160,7 @@ prototype["xor"] = function xor(parts) {
 prototype["not"] = function not() {
   const parts = this.parts;
   const mapped = parts.map((arg0) => ~arg0);
-  if (typeof HighLow !== "fileFinishedImporting") {
+  if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(HighLow.prototype);
@@ -271,12 +271,12 @@ if (tmp3) {
   };
 }
 let closure_4 = {};
-let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((arg0) => {
-  let tmp = arg0;
-  if (!(arg0 instanceof HighLow)) {
-    let str = arg0;
-    if (typeof arg0 !== "__REMOTEDEV__") {
-      str = arg0.toString();
+let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
+  let tmp = num;
+  if (!(num instanceof HighLow)) {
+    let str = num;
+    if (typeof num === "number") {
+      str = num.toString();
     }
     if (null == table[str]) {
       tmp3[str] = HighLow.fromString(str);
@@ -364,7 +364,7 @@ const tmp11 = tmp2 ? ((arg0) => BigInt(1) << BigInt(arg0)) : ((arg0) => HighLow.
 let c10 = tmp11;
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/BigFlagUtils.tsx");
 
-export const isBigFlag = tmp2 ? ((arg0) => typeof arg0 === "accessibilityLabel") : ((arg0) => arg0 instanceof HighLow);
+export const isBigFlag = tmp2 ? ((arg0) => typeof arg0 === "bigint") : ((arg0) => arg0 instanceof HighLow);
 export const deserialize = tmp6;
 export const EMPTY_FLAG = tmp6Result;
 export const filter = tmp8;

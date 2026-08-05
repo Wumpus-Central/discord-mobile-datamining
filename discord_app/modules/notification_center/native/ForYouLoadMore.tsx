@@ -23,7 +23,7 @@ export const ForYouLoadMore = function ForYouLoadMore(onPressLoad) {
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t["Q/LSXp"]);
     obj[4] = onPressLoad.onPressLoad;
-    tmp4Result = tmp4(tmp2(4604).Button, obj);
+    tmp4Result = tmp4(tmp2(4695).Button, obj);
   }
   obj[1] = tmp4Result;
   return <closure_3 style={callback().container}>{null}</closure_3>;

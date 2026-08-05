@@ -32,8 +32,8 @@ export default function RestrictedBlockedMessageGroup(arg0) {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { count: messages.length };
   obj[2] = intl.format(require(1236) /* getSystemLocale */.t["+FcYM/"], obj);
-  obj[4] = callback2(require(4189) /* Text */.Text, obj);
-  const children = [callback2(require(4721) /* PressableBase */.PressableOpacity, obj), ];
+  obj[4] = callback2(require(4281) /* Text */.Text, obj);
+  const children = [callback2(require(4812) /* PressableBase */.PressableOpacity, obj), ];
   if (mapped) {
     mapped = messages.map((id) => outer1_5(outer1_4, { children: callback(id) }, id.id));
   }

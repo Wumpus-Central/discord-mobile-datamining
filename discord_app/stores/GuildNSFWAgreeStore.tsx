@@ -18,14 +18,14 @@ prototype["initialize"] = function initialize() {
 prototype["didAgree"] = function didAgree(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    const result = require(4407) /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
+    const result = require(4498) /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
     let tmp5 = !result;
     if (!result) {
       tmp5 = table[arg0] || false;
       const tmp7 = table[arg0] || false;
     }
     tmp = tmp5;
-    const obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+    const obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
   }
   return tmp;
 };

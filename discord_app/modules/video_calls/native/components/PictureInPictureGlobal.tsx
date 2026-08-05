@@ -1,5 +1,5 @@
 // discord_app/modules/video_calls/native/components/PictureInPictureGlobal.tsx
-import module_4054 from "module_4054";
+import module_4146 from "module_4146";
 import importAllResult from "useShouldForcePipOrientation";
 import get_ActivityIndicator from "useIsActivityFocused";
 import participantFromServer from "participantFromServer";
@@ -219,7 +219,7 @@ let closure_20 = importAllResult.memo((channel) => {
   const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: null };
   const tmp = callback(importAllResult.useState(() => constants.TOP_RIGHT), 2);
   obj[3] = callback3(closure_19, { channel });
-  return callback3(importDefault(10534), obj);
+  return callback3(importDefault(10569), obj);
 });
 let closure_21 = { code: "function PictureInPictureGlobalTsx1(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}" };
 let closure_22 = { code: "function PictureInPictureGlobalTsx2(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}" };

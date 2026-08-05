@@ -10,88 +10,41 @@ let require = arg1;
 function _reportSessionMeaningfullyOnline() {
   const self = this;
   const tmp = callback(function*() {
-    if (c5 === 2) {
+    const callback = tmp3;
+    let c3 = 1;
+    const HTTP = outer1_0(outer1_2[6]).HTTP;
+    let obj1 = { url: null, rejectWithError: true };
+    obj1[0] = outer1_6.USER_MEANINGFULLY_ONLINE;
+    yield HTTP.post(obj1);
+    if (1 === tmp7) {
+      c3 = 0;
+      const lib = dependencyMap;
+      if (lib instanceof lib(530).HTTPResponseError) {
+        if (429 === lib.status) {
+          obj1 = callback(709);
+          let obj3 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
+          const _Date = Date;
+          obj3[1] = Date.now();
+          obj1.dispatch(obj3);
+          let c5 = 3;
+        }
+      }
+      obj3 = callback(1208);
+      const obj4 = { tags: null };
+      obj4[0] = { app_context: "session_timer" };
+      obj3.captureException(lib, obj4);
       c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp3;
-            let lib = tmp7;
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[6]).HTTP;
-            let obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_6.USER_MEANINGFULLY_ONLINE;
-            c4 = 2;
-            c5 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.post(obj1);
-            return obj2;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            lib = dependencyMap;
-            if (lib instanceof lib(530).HTTPResponseError) {
-              if (429 === lib.status) {
-                obj1 = callback(709);
-                let obj3 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
-                const _Date = Date;
-                obj3[1] = Date.now();
-                obj1.dispatch(obj3);
-                c5 = 3;
-              }
-            }
-            obj3 = callback(1208);
-            const obj4 = { tags: null };
-            obj4[0] = { app_context: "session_timer" };
-            obj3.captureException(lib, obj4);
-            c5 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = undefined;
-            return obj5;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            c3 = 0;
-          }
-          c3 = 0;
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp30) {
-        dependencyMap = tmp30;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp30;
-        } else {
-          c4 = tmp;
-        }
-      }
+      const obj5 = { value: null, done: true };
+      obj5[0] = undefined;
+      return obj5;
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      c3 = 0;
     }
+    c3 = 0;
+    return arg1;
   });
   const _reportSessionMeaningfullyOnline = tmp;
   const apply = tmp.apply;

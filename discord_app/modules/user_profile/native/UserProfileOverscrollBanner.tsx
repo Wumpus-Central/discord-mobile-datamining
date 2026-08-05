@@ -2,8 +2,8 @@
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import module_8388 from "module_8388";
-import importDefaultResult from "module_4054";
+import module_8696 from "module_8696";
+import importDefaultResult from "module_4146";
 
 let c4;
 let c5;
@@ -24,19 +24,19 @@ export default function UserProfileOverscrollBanner(arg0) {
   obj = { style: bannerImageAnimatedStyle, children: null };
   obj = {};
   const merged1 = Object.assign(merged);
-  const items1 = [callback(importDefault(8105), obj), ];
+  const items1 = [callback(importDefault(8761), obj), ];
   const tmp3 = callback;
-  const tmp4 = importDefault(8105);
+  const tmp4 = importDefault(8761);
   let tmp3Result = require(500) /* set */.isIOS() && showBlur;
   if (tmp3Result) {
     const obj1 = { animatedProps: null, style: null };
     obj1[0] = blurAnimatedProps;
     obj1[1] = StyleSheet.absoluteFillObject;
-    tmp3Result = tmp3(module_8388, obj1);
+    tmp3Result = tmp3(module_8696, obj1);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;
-  items[1] = closure_5(importDefault(4054).View, obj);
+  items[1] = closure_5(importDefault(4146).View, obj);
   obj[1] = items;
-  return closure_5(importDefault(4054).View, obj);
+  return closure_5(importDefault(4146).View, obj);
 };

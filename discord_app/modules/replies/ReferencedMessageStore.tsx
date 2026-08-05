@@ -32,14 +32,14 @@ function processMessage(message) {
           obj = { state: null, message: null };
           obj[0] = obj.LOADED;
           ({ channel_id, id } = referenced_message);
-          obj[1] = require(4413) /* createMinimalMessageRecord */.createMessageRecord(referenced_message);
+          obj[1] = require(4504) /* createMinimalMessageRecord */.createMessageRecord(referenced_message);
           const result = obj.set(channel_id, id, obj);
           flag2 = true;
           if (message.type === constants.THREAD_STARTER_MESSAGE) {
             processMessage(referenced_message);
             flag2 = true;
           }
-          const obj5 = require(4413) /* createMinimalMessageRecord */;
+          const obj5 = require(4504) /* createMinimalMessageRecord */;
         } else {
           obj = { state: null };
           obj[0] = obj.DELETED;
@@ -188,7 +188,7 @@ prototype2["set"] = function set(arg0, arg1, arg2) {
   const _channelCaches = this._channelCaches;
   let value = _channelCaches.get(arg0);
   if (null == value) {
-    if (typeof ChannelReferencedMessageCache !== "fileFinishedImporting") {
+    if (typeof ChannelReferencedMessageCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(ChannelReferencedMessageCache.prototype);
@@ -217,10 +217,10 @@ prototype2["updateExistingMessageIfCached"] = function updateExistingMessageIfCa
     if (flag) {
       const obj = { state: null, message: null };
       obj[0] = obj.LOADED;
-      obj[1] = require(4413) /* createMinimalMessageRecord */.createMessageRecord(channel_id);
+      obj[1] = require(4504) /* createMinimalMessageRecord */.createMessageRecord(channel_id);
       const result = value.set(channel_id.id, obj);
       flag = true;
-      const obj3 = require(4413) /* createMinimalMessageRecord */;
+      const obj3 = require(4504) /* createMinimalMessageRecord */;
     }
     tmp = flag;
   }
@@ -332,7 +332,7 @@ const referencedMessageStore = new ReferencedMessageStore(require("dispatcher"),
         if (value.state === obj.LOADED) {
           obj = { state: null, message: null };
           obj[0] = tmp3.LOADED;
-          obj[1] = require(5865) /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage(value.message);
+          obj[1] = require(6968) /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage(value.message);
           const result = obj.set(channelId, messageId, obj);
         }
       }
@@ -370,7 +370,7 @@ const referencedMessageStore = new ReferencedMessageStore(require("dispatcher"),
         if (value.state === obj.LOADED) {
           obj = { state: null, message: null };
           obj[0] = tmp3.LOADED;
-          obj[1] = require(4413) /* createMinimalMessageRecord */.updateMessageRecord(value.message, message);
+          obj[1] = require(4504) /* createMinimalMessageRecord */.updateMessageRecord(value.message, message);
           const result = obj.set(channel_id, id, obj);
         }
       }

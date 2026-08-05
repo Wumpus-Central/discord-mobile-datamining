@@ -11,7 +11,7 @@ class GeneratedTestPoolRecord extends tmp2 {
   }
 }
 GeneratedTestPoolRecord["fromServer"] = function fromServer(arg0) {
-  if (typeof GeneratedTestPoolRecord !== "fileFinishedImporting") {
+  if (typeof GeneratedTestPoolRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new GeneratedTestPoolRecord("Trying to call a non-function", GeneratedTestPoolRecord);

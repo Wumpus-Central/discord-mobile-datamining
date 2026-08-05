@@ -8,12 +8,12 @@ function resetCache() {
   let closure_5 = Object.create(null);
 }
 function syncHourCycleToIntlConfig() {
-  const TimestampHourCycle = require(3866) /* explicitContentFromProto */.TimestampHourCycle;
+  const TimestampHourCycle = require(3958) /* explicitContentFromProto */.TimestampHourCycle;
   const setting = TimestampHourCycle.getSetting();
   let result = setting !== require(1306) /* create */.TimestampHourCycle.AUTO;
   if (result) {
-    result = tmp4(3880).supportsSystemDateFormatter();
-    const tmp4Result = tmp4(3880);
+    result = tmp4(3972).supportsSystemDateFormatter();
+    const tmp4Result = tmp4(3972);
   }
   const values = Object.values(tmp4(1236).intl.formatConfig.time);
   const iter = values[Symbol.iterator]();
@@ -52,38 +52,38 @@ function syncHourCycleToIntlConfig() {
     continue;
   }
 }
-function differenceInCalendarDays(arg0, arg1) {
-  let tmp = typeof arg0 === "y";
-  if (typeof arg0 !== "y") {
-    tmp = typeof arg0 === "Object";
+function differenceInCalendarDays(str, str2) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    tmp = typeof str === "number";
   }
   if (!tmp) {
     const _Date = Date;
-    tmp = arg0 instanceof Date;
+    tmp = str instanceof Date;
   }
-  let date = arg0;
+  let date = str;
   if (!tmp) {
     let obj = { d: null };
-    obj[0] = arg0;
+    obj[0] = str;
     tmp2.error("Invalid date given to startOfDay", obj);
     const _Date2 = Date;
     date = new Date();
   }
   const date1 = new Date(date);
   const time = date1.getTime();
-  let tmp10 = typeof arg1 === "y";
+  let tmp10 = typeof str2 === "string";
   const result = Math.floor((time - 60000 * date1.getTimezoneOffset()) / c4) * c4;
-  if (typeof arg1 !== "y") {
-    tmp10 = typeof arg1 === "Object";
+  if (typeof str2 !== "string") {
+    tmp10 = typeof str2 === "number";
   }
   if (!tmp10) {
     const _Date3 = Date;
-    tmp10 = arg1 instanceof Date;
+    tmp10 = str2 instanceof Date;
   }
-  let date2 = arg1;
+  let date2 = str2;
   if (!tmp10) {
     obj = { d: null };
-    obj[0] = arg1;
+    obj[0] = str2;
     tmp2.error("Invalid date given to startOfDay", obj);
     const _Date4 = Date;
     date2 = new Date();
@@ -95,17 +95,17 @@ function differenceInCalendarDays(arg0, arg1) {
 function dateFormat(date, LL, setting) {
   let obj2 = date;
   if (!obj.isMoment(date)) {
-    obj2 = tmp(3775)(date);
+    obj2 = tmp(3867)(date);
   }
-  obj = importDefault(3775);
+  obj = importDefault(3867);
   if (setting == null) {
-    const TimestampHourCycle = require(3866) /* explicitContentFromProto */.TimestampHourCycle;
+    const TimestampHourCycle = require(3958) /* explicitContentFromProto */.TimestampHourCycle;
     setting = TimestampHourCycle.getSetting();
   }
   const combined = "" + obj2.locale() + ":" + LL + ":" + setting;
   let tmp7 = table[combined];
   if (null == tmp7) {
-    const tmp9 = tmp(3882)(LL);
+    const tmp9 = tmp(3974)(LL);
     table[combined] = tmp9;
     tmp7 = tmp9;
   }
@@ -159,9 +159,9 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj = importDefault(3775);
-  const obj3 = importDefault(3775)();
-  const localeDataResult = importDefault(3775).localeData();
+  const obj = importDefault(3867);
+  const obj3 = importDefault(3867)();
+  const localeDataResult = importDefault(3867).localeData();
   const tmp3 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
@@ -188,16 +188,16 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
     }
     let tmp8 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp8 = tmp(3775)(timestamp);
+      tmp8 = tmp(3867)(timestamp);
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
-  obj4 = importDefault(3775);
+  obj4 = importDefault(3867);
 };
 export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
-  const obj = importDefault(3775);
-  const obj3 = importDefault(3775)();
-  const localeDataResult = importDefault(3775).localeData();
+  const obj = importDefault(3867);
+  const obj3 = importDefault(3867)();
+  const localeDataResult = importDefault(3867).localeData();
   const tmp2 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
@@ -209,10 +209,10 @@ export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
   } else if (-1 === tmp2Result) {
     let tmp6 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp6 = tmp(3775)(timestamp);
+      tmp6 = tmp(3867)(timestamp);
     }
     let str2 = localeDataResult.calendar("lastDay", tmp6, obj3);
-    tmpResult = tmp(3775);
+    tmpResult = tmp(3867);
   } else {
     str2 = "L";
     if (tmp2Result > -7) {
@@ -226,11 +226,11 @@ export const dateStringToMoment = function dateStringToMoment(arg0) {
     const error = new Error("Date string exceeds maximum length");
     throw error;
   } else {
-    return importDefault(3775)(arg0);
+    return importDefault(3867)(arg0);
   }
 };
 export const accessibilityLabelCalendarFormat = function accessibilityLabelCalendarFormat(timestamp) {
-  const obj = importDefault(3775);
+  const obj = importDefault(3867);
   const date = new Date();
   const tmp4 = differenceInCalendarDays(timestamp, date);
   let str = "sameElse";
@@ -251,8 +251,8 @@ export const accessibilityLabelCalendarFormat = function accessibilityLabelCalen
   }
   let str5 = "LLL";
   if ("sameElse" !== str) {
-    str5 = localeDataResult.calendar(str, tmp(3775)(timestamp), tmp(3775)(date));
-    const tmp6 = tmp(3775)(timestamp);
+    str5 = localeDataResult.calendar(str, tmp(3867)(timestamp), tmp(3867)(date));
+    const tmp6 = tmp(3867)(timestamp);
   }
   return dateFormat(timestamp, str5);
 };
@@ -338,8 +338,8 @@ export const formatDateForDatetimeLocal = function formatDateForDatetimeLocal(ar
       const error = new Error("Date string exceeds maximum length");
       throw error;
     } else {
-      str = importDefault(3775)(arg0).format("YYYY-MM-DDTHH:mm");
-      const obj = importDefault(3775)(arg0);
+      str = importDefault(3867)(arg0).format("YYYY-MM-DDTHH:mm");
+      const obj = importDefault(3867)(arg0);
     }
   }
   return str;

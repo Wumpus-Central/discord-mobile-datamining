@@ -178,7 +178,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
             let _catch = outer1_3;
             if (undefined !== outer1_3.DCDSecurityKeyManager.signalUnknownCredential) {
               let obj1 = c0;
-              if (typeof c0 === "y") {
+              if (typeof c0 === "string") {
                 const _JSON = JSON;
                 let cred_id = JSON.parse(obj1).id;
               } else {

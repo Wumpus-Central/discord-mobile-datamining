@@ -62,7 +62,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   }
   let importDefault;
   const tmp = createCacheKey();
-  let obj = require(3897) /* map */;
+  let obj = require(3989) /* map */;
   importDefault = false;
   const Children = React.Children;
   const token = obj.useToken(importDefault(712).modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
@@ -94,7 +94,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     const obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.description;
     obj1[3] = description;
-    tmp6Result = tmp6(tmp2(4189).Text, obj1);
+    tmp6Result = tmp6(tmp2(4281).Text, obj1);
   }
   items[1] = tmp6Result;
   const items1 = [tmp.content, ];
@@ -110,9 +110,9 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     obj2[0] = token;
     obj2[2] = tmp.helperText;
     obj2[3] = helperText;
-    tmp6Result1 = tmp6(tmp2(4189).Text, obj2);
+    tmp6Result1 = tmp6(tmp2(4281).Text, obj2);
   }
   items[3] = tmp6Result1;
   obj[1] = items;
-  return closure_5(require(5225) /* context */.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
+  return closure_5(require(5316) /* context */.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
 };

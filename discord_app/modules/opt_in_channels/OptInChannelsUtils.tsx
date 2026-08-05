@@ -87,7 +87,7 @@ export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(gu
 export const getFirstRouteFor = function getFirstRouteFor(getSections) {
   let channel;
   const sections = getSections.getSections(false);
-  if (sections[require(undefined, 5786) /* computeSubtitle */.SECTION_INDEX_GUILD_ACTIONS] > 0) {
+  if (sections[require(undefined, 6896) /* computeSubtitle */.SECTION_INDEX_GUILD_ACTIONS] > 0) {
     const guildActionSection = getSections.getGuildActionSection();
     const row = guildActionSection.getRow(0);
     if (ChannelListGuildActionRow.GUILD_HOME === row) {
@@ -98,7 +98,7 @@ export const getFirstRouteFor = function getFirstRouteFor(getSections) {
       return constants.MEMBER_SAFETY;
     }
   }
-  let SECTION_INDEX_UNCATEGORIZED_CHANNELS = require(5786) /* computeSubtitle */.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+  let SECTION_INDEX_UNCATEGORIZED_CHANNELS = require(6896) /* computeSubtitle */.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
   if (SECTION_INDEX_UNCATEGORIZED_CHANNELS < getSections.voiceChannelsSectionNumber) {
     while (true) {
       let tmp6 = SECTION_INDEX_UNCATEGORIZED_CHANNELS;
@@ -123,10 +123,10 @@ export const clearRecentChannels = function clearRecentChannels(closure_0, closu
   if (arg2 === undefined) {
     tmp = null;
   }
-  require(10017) /* _bulkClearRecents */.bulkClearRecents(closure_0, closure_1);
-  const obj = require(10017) /* _bulkClearRecents */;
+  require(10947) /* _bulkClearRecents */.bulkClearRecents(closure_0, closure_1);
+  const obj = require(10947) /* _bulkClearRecents */;
   const tmp2 = require;
-  require(5130) /* ack */.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: generateOldThreadCutoff.lastMessageId(channelId) })));
+  require(5221) /* ack */.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: generateOldThreadCutoff.lastMessageId(channelId) })));
   if (null != tmp) {
     tmp2(1222).transitionTo(closure_9.CHANNEL(closure_0, tmp));
     const tmp2Result = tmp2(1222);
@@ -136,7 +136,7 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   const _require = guildId;
   let closure_1 = filterCategoriesByQuery;
   const dependencyMap = arg2;
-  let obj = _require(4009);
+  let obj = _require(4101);
   let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1358).DismissibleContent.CHANNEL_BROWSER_NUX);
   const items = [ensureGuildLoaded];
   const items1 = [guildId];
@@ -219,7 +219,7 @@ export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
     lastMessageIdResult = id;
   }
   obj = { timeAgo: null };
-  const tmp = importDefault(3775);
-  obj[0] = importDefault(3775)(obj.extractTimestamp(lastMessageIdResult)).fromNow();
+  const tmp = importDefault(3867);
+  obj[0] = importDefault(3867)(obj.extractTimestamp(lastMessageIdResult)).fromNow();
   return intl.formatToPlainString(require(1236) /* getSystemLocale */.t["8N0BHR"], obj);
 };

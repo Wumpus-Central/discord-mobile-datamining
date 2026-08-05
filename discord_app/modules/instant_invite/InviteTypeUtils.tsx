@@ -32,8 +32,8 @@ export const isGuildScheduledEventInviteEmbed = function isGuildScheduledEventIn
   }
   return tmp;
 };
-export const isRoleSubscriptionInvite = function isRoleSubscriptionInvite(invite) {
-  return invite.target_type === constants.ROLE_SUBSCRIPTIONS_PURCHASE;
+export const isRoleSubscriptionInvite = function isRoleSubscriptionInvite(target_type) {
+  return target_type.target_type === constants.ROLE_SUBSCRIPTIONS_PURCHASE;
 };
 export const isStreamInvite = function isStreamInvite(invite) {
   let tmp = invite.target_type === constants.STREAM;
@@ -61,7 +61,7 @@ export const isVoiceChannelInvite = function isVoiceChannelInvite(addResult) {
   return tmp;
 };
 export const getInviteType = function getInviteType(body) {
-  if (typeof body.type === "Object") {
+  if (typeof body.type === "number") {
     let GROUP_DM = body.type;
   } else {
     let tmp4 = body.type === constants2.GROUP_DM;
@@ -97,7 +97,7 @@ export const getGuildInviteExtendedType = function getGuildInviteExtendedType(in
   } else if (invite.target_type === constants.EMBEDDED_APPLICATION) {
     PROFILE = obj.APPLICATION;
   } else {
-    obj = require(6026) /* getEstablishedDate */;
+    obj = require(7117) /* getEstablishedDate */;
     if (obj.guildInviteCanEmbedProfile(invite)) {
       PROFILE = obj.PROFILE;
     } else {

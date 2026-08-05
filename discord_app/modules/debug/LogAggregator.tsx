@@ -3,7 +3,7 @@ let c0 = new require("Deque")(5000);
 let tmp2 = new require("Deque")(5000);
 const result = require("set").fileFinishedImporting("modules/debug/LogAggregator.tsx");
 
-export const report = function report(arg0) {
+export const report = function report(str) {
   let length;
   const tmp = (function stringifyMessage(arg0) {
     let str = "";
@@ -12,7 +12,7 @@ export const report = function report(arg0) {
     for (; iter !== undefined; str = str + (error + " ")) {
       error = nextResult;
       let tmp2 = typeof nextResult;
-      if (typeof nextResult !== "y") {
+      if (typeof nextResult !== "string") {
         let tmp10 = tmp2;
         if ("number" !== tmp2) {
           let tmp3 = tmp2;
@@ -38,11 +38,11 @@ export const report = function report(arg0) {
     }
     return str;
   })(HermesBuiltin.copyRestArgs());
-  if (typeof arg0 === "y") {
+  if (typeof str === "string") {
     let obj = { time: null, category: null, message: null };
     const _Date = Date;
     obj[0] = Date.now();
-    obj[1] = arg0;
+    obj[1] = str;
     obj[2] = tmp;
     let arr = tmp2.push(obj);
     arr = tmp2;
@@ -51,7 +51,7 @@ export const report = function report(arg0) {
     obj = { time: null, category: null, timing: null, message: null };
     const _Date2 = Date;
     obj[0] = Date.now();
-    ({ name: obj2[1], timing: obj2[2] } = arg0);
+    ({ name: obj2[1], timing: obj2[2] } = str);
     obj[3] = tmp;
     arr = tmp2.push(obj);
   }

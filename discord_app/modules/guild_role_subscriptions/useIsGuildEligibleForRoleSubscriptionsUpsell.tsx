@@ -18,7 +18,7 @@ export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   }
   const obj = _require(589);
   const tmp = _require;
-  const isUserInCreatorMonetizationEligibleCountry = _require(12642).useIsUserInCreatorMonetizationEligibleCountry();
+  const isUserInCreatorMonetizationEligibleCountry = _require(5790).useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {

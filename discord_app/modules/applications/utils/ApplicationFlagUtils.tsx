@@ -10,11 +10,11 @@ function getApplicationFlags(application) {
     if (tmp5) {
       let tmp2 = application instanceof createExecutable;
       if (!tmp2) {
-        tmp2 = "flags" in application && typeof application.flags === "accessibilityLabel";
-        const tmp3 = "flags" in application && typeof application.flags === "accessibilityLabel";
+        tmp2 = "flags" in application && typeof application.flags === "bigint";
+        const tmp3 = "flags" in application && typeof application.flags === "bigint";
       }
       if (!tmp2) {
-        let tmp4 = "flags" in application && null != application.flags && typeof application.flags === "ay";
+        let tmp4 = "flags" in application && null != application.flags && typeof application.flags === "object";
         if (tmp4) {
           tmp4 = "parts" in application.flags;
         }

@@ -23,5 +23,5 @@ export default function OnGoingCallTimer(style) {
     timestamp = importDefault(11).extractTimestamp(stateFromStores);
     const obj2 = importDefault(11);
   }
-  return jsx(importDefault(12874), { style: style.style, timestamp });
+  return jsx(importDefault(12970), { style: style.style, timestamp });
 };

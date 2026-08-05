@@ -17,7 +17,7 @@ createToggle = {
   },
   useValue: require("useDerivedDmSpamFilterSettingValue").useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
-    const DmSpamFilterV2 = require(3866) /* explicitContentFromProto */.DmSpamFilterV2;
+    const DmSpamFilterV2 = require(3958) /* explicitContentFromProto */.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));
   },
   useSearchTerms() {

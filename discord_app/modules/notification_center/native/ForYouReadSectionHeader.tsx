@@ -22,6 +22,6 @@ export const ForYouReadSectionHeader = function ForYouReadSectionHeader() {
   obj = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.hftC1K);
-  obj[1] = jsx(require(4189) /* Text */.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
+  obj[1] = jsx(require(4281) /* Text */.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
   return <closure_2 style={tmp.textHeader} variant="text-sm/semibold">{null}</closure_2>;
 };

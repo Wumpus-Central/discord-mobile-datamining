@@ -52,9 +52,9 @@ export const withManaTextMigrationHighlight = function withManaTextMigrationHigh
   if (closure_6) {
     const _Proxy = Proxy;
     let obj = { get: null };
-    obj[0] = function get(arg0, arg1, arg2) {
-      const value = Reflect.get(arg0, arg1, arg2);
-      if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    obj[0] = function get(arg0, str) {
+      const value = Reflect.get(arg0, str, arg2);
+      if (typeof str === "string") {
         if (null != value) {
           let obj = callback(table[6]);
           const tmp5 = obj.isThemeLight(theme.theme) ? closure_8 : closure_7;

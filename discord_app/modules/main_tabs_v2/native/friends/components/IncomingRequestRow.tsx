@@ -114,7 +114,7 @@ function IncomingGameFriendRequestRow(arg0) {
   let user;
   ({ user, application } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = importDefault(4032);
+  let obj = importDefault(4124);
   const userTag = obj.useUserTag(user);
   obj = { user, applicationId: application.id, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
   const intl = application(1236).intl;
@@ -143,7 +143,7 @@ let result = require("addApplication").fileFinishedImporting("modules/main_tabs_
 export const IncomingFriendRequestRow = function IncomingFriendRequestRow(user) {
   user = user.user;
   const merged = Object.assign(user, Object.create(null));
-  let obj = importDefault(4032);
+  let obj = importDefault(4124);
   const userTag = obj.useUserTag(user);
   obj = { user, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
   const intl = require(1236) /* getSystemLocale */.intl;

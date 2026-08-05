@@ -2,7 +2,7 @@
 let prototype;
 prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);
-  obj.type = require(5837) /* FeaturedSubblockType */.FeaturedSubblockType.CATEGORY;
+  obj.type = require(6944) /* FeaturedSubblockType */.FeaturedSubblockType.CATEGORY;
   ({ category_store_listing_id: tmp.categoryStoreListingId, name: tmp.name } = unpublished_at);
   let date = null;
   if (null != unpublished_at.unpublished_at) {
@@ -14,11 +14,11 @@ prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(unpublished_at) {
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = require(5837) /* FeaturedSubblockType */.FeaturedSubblockType.CATEGORY;
+  obj.type = require(6944) /* FeaturedSubblockType */.FeaturedSubblockType.CATEGORY;
   ({ category_store_listing_id: tmp2.categoryStoreListingId, name: tmp2.name } = unpublished_at);
   let date = null;
   if (null != unpublished_at.unpublished_at) {

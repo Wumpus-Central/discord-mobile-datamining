@@ -56,7 +56,7 @@ function _sendGuildInvite() {
               code = undefined;
               let defaultChannel = 1;
               outer1_12(callback, callback2, outer1_13.SENDING);
-              const AccessibilityAnnouncer2 = callback(3906).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer2 = callback(3998).AccessibilityAnnouncer;
               const intl2 = callback(1236).intl;
               AccessibilityAnnouncer2.announce(intl2.string(callback(1236).t.kC3ZRG));
               defaultChannel = defaultChannel.getDefaultChannel(callback2, true, outer1_14.CREATE_INSTANT_INVITE);
@@ -65,12 +65,12 @@ function _sendGuildInvite() {
                 throw Error();
               } else {
                 const obj1 = { max_uses: null, max_age: null, unique: true };
-                obj1[0] = callback2(8354).INVITE_OPTIONS_ONCE.value;
-                obj1[1] = callback2(8354).INVITE_OPTIONS_7_DAYS.value;
+                obj1[0] = callback2(8989).INVITE_OPTIONS_ONCE.value;
+                obj1[1] = callback2(8989).INVITE_OPTIONS_7_DAYS.value;
                 c6 = 2;
                 c7 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback2(6696).createInvite(defaultChannel.id, obj1, tmp45);
+                obj2[0] = callback2(7679).createInvite(defaultChannel.id, obj1, tmp45);
                 return obj2;
               }
               tmp45 = dependencyMap;
@@ -79,7 +79,7 @@ function _sendGuildInvite() {
             if (1 === tmp7) {
               defaultChannel = 0;
               callback3(callback, callback2, constants.ERROR);
-              let AccessibilityAnnouncer = callback(3906).AccessibilityAnnouncer;
+              let AccessibilityAnnouncer = callback(3998).AccessibilityAnnouncer;
               let intl = callback(1236).intl;
               AccessibilityAnnouncer.announce(intl.string(callback(1236).t.fEptJP));
               c7 = 3;
@@ -88,10 +88,10 @@ function _sendGuildInvite() {
               throw arg1;
             } else if (arg0 !== 2) {
               code = arg1;
-              let obj4 = callback2(11821);
+              let obj4 = callback2(9051);
               const obj3 = { inviteKey: null, type: null, user: null, location: null, inviteAnalyticsMetadata: null };
               obj3[0] = code.code;
-              obj3[1] = callback(11821).InvitePropertiesType.USER;
+              obj3[1] = callback(9051).InvitePropertiesType.USER;
               obj3[2] = user.getUser(callback);
               obj3[3] = dependencyMap;
               obj4 = { source: null };
@@ -99,7 +99,7 @@ function _sendGuildInvite() {
               obj3[4] = obj4;
               obj4.enqueue(obj3, () => {
                 outer1_12(callback, closure_1, outer1_13.SENT);
-                const AccessibilityAnnouncer = callback(3906).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = callback(3998).AccessibilityAnnouncer;
                 const intl = callback(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(callback(1236).t.PuLLzP));
               });
@@ -138,9 +138,9 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   let obj = importDefault(698);
   obj = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   obj.track(constants.OPEN_POPOUT, obj);
-  const obj3 = importDefault(4161);
+  const obj3 = importDefault(4253);
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(require(1959) /* asyncRequireImpl */(12222, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(require(1959) /* asyncRequireImpl */(12404, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;

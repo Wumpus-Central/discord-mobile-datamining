@@ -36,28 +36,28 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
   let questOrbRewardMultiplier;
   let c6;
   const tmp = createCacheKey();
-  let obj = require(4129) /* useTheme */;
+  let obj = require(4221) /* useTheme */;
   const theme = obj.useTheme();
-  let obj1 = require(3903) /* isThemeLight */;
+  let obj1 = require(3995) /* isThemeLight */;
   const isThemeDarkResult = obj1.isThemeDark(theme);
   dependencyMap = isThemeDarkResult;
-  let obj2 = require(3897) /* map */;
+  let obj2 = require(3989) /* map */;
   const token = obj2.useToken(orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_PINK_START, "dark");
-  let obj3 = require(3897) /* map */;
+  let obj3 = require(3989) /* map */;
   const token1 = obj3.useToken(orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, "dark");
-  let obj4 = require(3897) /* map */;
+  let obj4 = require(3989) /* map */;
   token2 = obj4.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BASE_LOWEST, "dark");
-  let obj5 = require(4037) /* hexToRgba */;
+  let obj5 = require(4129) /* hexToRgba */;
   const items = [obj5.hexOpacityToRgba(token, 1), ];
-  let obj6 = require(4037) /* hexToRgba */;
+  let obj6 = require(4129) /* hexToRgba */;
   items[1] = obj6.hexOpacityToRgba(token1, 0.5);
-  let obj7 = require(3897) /* map */;
+  let obj7 = require(3989) /* map */;
   token3 = obj7.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BRAND);
-  questOrbRewardMultiplier = require(10505) /* useQuests */.useQuestOrbRewardMultiplier(questId.questId);
-  const obj9 = require(10505) /* useQuests */;
+  questOrbRewardMultiplier = require(10374) /* useQuests */.useQuestOrbRewardMultiplier(questId.questId);
+  const obj9 = require(10374) /* useQuests */;
   const tmp6 = orbMultiplierEligibility;
-  const result = require(9498) /* items */.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
-  const tmp13 = orbMultiplierEligibility === require(9498) /* items */.QuestOrbMultiplierEligibilityType.CREPE;
+  const result = require(10394) /* items */.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+  const tmp13 = orbMultiplierEligibility === require(10394) /* items */.QuestOrbMultiplierEligibilityType.CREPE;
   c6 = tmp13;
   const items1 = [tmp13, token2, token3, isThemeDarkResult];
   if (null == questOrbRewardMultiplier) {
@@ -78,13 +78,13 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     let tmp21Result = !tmp13;
     let tmp19 = tmp21Result;
     if (!tmp13) {
-      tmp19 = questOrbRewardMultiplier(tmp2(6630).NitroWheelIcon, { size: "xs", color: "white" });
+      tmp19 = questOrbRewardMultiplier(tmp2(7625).NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
     const items2 = [tmp19, ];
     obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
     obj2[2] = formatToPlainStringResult;
-    items2[1] = questOrbRewardMultiplier(tmp2(4189).Text, obj2);
+    items2[1] = questOrbRewardMultiplier(tmp2(4281).Text, obj2);
     obj1[0] = items2;
     obj3 = { onPress: null, activeOpacity: 0.8, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj3[0] = function onPress() {
@@ -108,7 +108,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
       obj6[1] = items;
       obj6[2] = closure_8;
       obj6[3] = closure_9;
-      tmp21Result = tmp21(tmp6(4615), obj6);
+      tmp21Result = tmp21(tmp6(4706), obj6);
     }
     const items4 = [tmp21Result, ];
     obj7 = { style: null, children: null };
@@ -117,7 +117,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     items4[1] = questOrbRewardMultiplier(token3, obj7);
     obj4[1] = items4;
     obj3[4] = closure_7(token3, obj4);
-    return questOrbRewardMultiplier(tmp2(4721).PressableOpacity, obj3);
+    return questOrbRewardMultiplier(tmp2(4812).PressableOpacity, obj3);
   }
-  const obj10 = require(9498) /* items */;
+  const obj10 = require(10394) /* items */;
 };

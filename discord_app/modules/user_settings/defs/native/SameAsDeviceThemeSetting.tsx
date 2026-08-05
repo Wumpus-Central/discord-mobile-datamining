@@ -17,7 +17,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {
-    const obj = require(14218) /* handleSaveTheme */;
+    const obj = require(14318) /* handleSaveTheme */;
     if (arg0) {
       const result = obj.enableSameAsDeviceTheme();
     } else {

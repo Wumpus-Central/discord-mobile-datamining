@@ -31,7 +31,7 @@ class StreamPreviewTile {
     obj = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "description", borderRadius: false },
+      style: { aspectRatio: "disabled", borderRadius: false },
       disableTransition: true,
       onPress() {
             return callback();
@@ -44,17 +44,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = importDefault(10868);
+    let tmp3 = importDefault(10838);
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = importDefault(10869);
+      tmp3 = importDefault(10839);
     } else if (tmp19.XBOX === voicePlatform) {
-      tmp3 = importDefault(9042);
+      tmp3 = importDefault(10462);
     } else if (tmp19.PLAYSTATION === voicePlatform) {
-      tmp3 = importDefault(9063);
+      tmp3 = importDefault(10840);
     } else if (tmp19.QUEST === voicePlatform) {
-      tmp3 = importDefault(10870);
+      tmp3 = importDefault(10841);
     }
   }
   let tmp14 = null;
@@ -80,7 +80,7 @@ class TileOverlay {
     ({ bottom, left, top, right } = tmp4);
     tmp5 = reveal;
     reveal = defineProperty.useContext(require("useRevealProviderValue").RevealContext).reveal;
-    obj = require("module_4054");
+    obj = require("module_4146");
     class T {
       constructor() {
         tmp = reveal;
@@ -146,7 +146,7 @@ class TileOverlay {
     obj4[1] = tmp7(View, obj5);
     items1[1] = jsx(View, obj4);
     obj2[2] = items1;
-    return tmp7(require("module_4054").View, obj2);
+    return tmp7(require("module_4146").View, obj2);
   }
 }
 let c3 = importAllResult;

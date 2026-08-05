@@ -53,7 +53,7 @@ export default function UserSettingsVoiceOutputOptions() {
   obj = { label: null, subLabel: null };
   const intl2 = stateFromStores1(1236).intl;
   obj[0] = intl2.string(stateFromStores1(1236).t.xPHVBs);
-  obj1 = { style: tmp.slider, children: callback(importDefault(10786), obj2) };
+  obj1 = { style: tmp.slider, children: callback(importDefault(10747), obj2) };
   obj2 = {
     style: tmp.slider,
     value: stateFromStores,
@@ -62,7 +62,7 @@ export default function UserSettingsVoiceOutputOptions() {
     }
   };
   obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(5224).TableRow, obj), ];
+  const items4 = [callback(stateFromStores1(5315).TableRow, obj), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
@@ -73,11 +73,11 @@ export default function UserSettingsVoiceOutputOptions() {
     const obj5 = { value: null, onValueChange: null };
     obj5[0] = stateFromStores2;
     obj5[1] = callback;
-    obj4[1] = tmp9(importDefault(10786), obj5);
+    obj4[1] = tmp9(importDefault(10747), obj5);
     obj3[1] = tmp9(View, obj4);
-    tmp9Result = tmp9(tmp2(5224).TableRow, obj3);
+    tmp9Result = tmp9(tmp2(5315).TableRow, obj3);
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return closure_10(stateFromStores1(10779).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(10740).UserSettingsTableRowGroup, obj);
 };

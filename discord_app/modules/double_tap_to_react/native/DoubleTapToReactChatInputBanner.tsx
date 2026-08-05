@@ -44,7 +44,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
     url = emoji.url;
   }
   obj1[4] = url;
-  const items1 = [closure_9(importDefault(5210), obj1), closure_9(require(4189) /* Text */.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
+  const items1 = [closure_9(importDefault(5301), obj1), closure_9(require(4281) /* Text */.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
   obj[1] = items1;
   const items2 = [closure_10(View, obj), , ];
   const obj3 = { style: tmp.text, children: null };
@@ -52,7 +52,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   const obj5 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
   obj5[2] = intl.string(require(1236) /* getSystemLocale */.t["6RUX7d"]);
-  const items3 = [closure_9(require(4189) /* Text */.Text, obj5), closure_9(require(11458) /* renderChannelBadge */.NewBadge, {})];
+  const items3 = [closure_9(require(4281) /* Text */.Text, obj5), closure_9(require(11575) /* renderChannelBadge */.NewBadge, {})];
   obj4[1] = items3;
   const items4 = [closure_10(View, obj4), ];
   const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -60,13 +60,13 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj6[2] = intl2.format(require(1236) /* getSystemLocale */.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children) {
-      return callback2(callback(4189).Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
+      return callback2(callback(4281).Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
     },
     tapHereHook(children) {
-      return callback2(callback(4189).Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
+      return callback2(callback(4281).Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
     }
   });
-  items4[1] = closure_9(require(4189) /* Text */.Text, obj6);
+  items4[1] = closure_9(require(4281) /* Text */.Text, obj6);
   obj3[1] = items4;
   items2[1] = closure_10(View, obj3);
   const obj8 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -74,8 +74,8 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj8[2] = intl3.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
   obj8[3] = emoji.handleDismissBanner;
   obj8[4] = tmp.closeButton;
-  obj8[5] = closure_9(require(5179) /* XSmallIcon */.XSmallIcon, { size: "sm", color: "icon-subtle" });
-  items2[2] = closure_9(require(4721) /* PressableBase */.PressableOpacity, obj8);
+  obj8[5] = closure_9(require(5270) /* XSmallIcon */.XSmallIcon, { size: "sm", color: "icon-subtle" });
+  items2[2] = closure_9(require(4812) /* PressableBase */.PressableOpacity, obj8);
   obj[1] = items2;
   return closure_10(View, obj);
 }

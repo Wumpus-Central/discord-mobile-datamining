@@ -11,7 +11,7 @@ export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open
 export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = function PortalKeyboard(children) {
-  let obj = require(4044) /* navigationToRootTabHelper */;
+  let obj = require(4136) /* navigationToRootTabHelper */;
   if (obj.useIsModalOpen()) {
     if (tmpResult.isIOS()) {
       let tmp3 = modal;
@@ -19,7 +19,7 @@ export const PortalKeyboard = function PortalKeyboard(children) {
     obj = { hostName: null, children: null };
     obj[0] = tmp3;
     obj[1] = children.children;
-    return jsx(tmp(4064).Portal, { hostName: null, children: null });
+    return jsx(tmp(4156).Portal, { hostName: null, children: null });
   }
   tmp3 = c3;
 };
@@ -28,5 +28,5 @@ export const PortalKeyboardHost = function PortalKeyboardHost(name) {
   if (name === undefined) {
     name = c3;
   }
-  return jsx(require(4064) /* Portal */.PortalHost, { name });
+  return jsx(require(4156) /* Portal */.PortalHost, { name });
 };

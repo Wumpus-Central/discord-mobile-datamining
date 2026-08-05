@@ -5,7 +5,7 @@ const result = require("set").fileFinishedImporting("modules/telemetry_ring/trac
 
 export default function trackZoomedInHttpRequest(arg0) {
   try {
-    let obj = importDefault(13266);
+    let obj = importDefault(13362);
     obj = {};
     const merged = Object.assign(arg0);
     obj.source = "zoomed_in";

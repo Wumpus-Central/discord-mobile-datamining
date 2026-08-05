@@ -1,6 +1,6 @@
 // discord_app/modules/panels/morphable/native/AppFreezer.tsx
 import "noop";
-import module_8138 from "module_8138";
+import module_8784 from "module_8784";
 import { jsx } from "jsxProd";
 import set from "set";
 
@@ -29,5 +29,5 @@ export default function AppFreezer(children) {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(4551).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(lockKeys(4642).Freeze, { freeze, placeholder, children: children.children });
 };

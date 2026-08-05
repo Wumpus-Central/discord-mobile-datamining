@@ -171,7 +171,7 @@ export default function UserSettingsDesignSystemCoachmark() {
   obj = { children: null };
   obj = { children: null };
   obj[0] = callback(Content, {});
-  obj[0] = callback(require(5506) /* Layer */.LayerScope, obj);
+  obj[0] = callback(require(5597) /* Layer */.LayerScope, obj);
   obj[2] = callback(closure_6, obj);
-  return callback(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

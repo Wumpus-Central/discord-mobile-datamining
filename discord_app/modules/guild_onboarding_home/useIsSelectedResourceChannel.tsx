@@ -28,6 +28,6 @@ export default function useIsSelectedResourceChannel(arg0) {
   if (stateFromStores == null) {
     tmp2 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const obj2 = _require(5662);
-  return null != stateFromStores && _require(5662).useCanSeeOnboardingHome(tmp2);
+  const obj2 = _require(5753);
+  return null != stateFromStores && _require(5753).useCanSeeOnboardingHome(tmp2);
 };

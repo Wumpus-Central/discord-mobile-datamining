@@ -12,7 +12,7 @@ export default function FormCheckboxRow(selected) {
   let accessibilityState;
   selected = selected.selected;
   const merged = Object.assign(selected, Object.create(null));
-  let obj = require(3911) /* useCheckboxA11yNative */;
+  let obj = require(4003) /* useCheckboxA11yNative */;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   obj = {};
@@ -20,7 +20,7 @@ export default function FormCheckboxRow(selected) {
   const merged1 = Object.assign(merged);
   obj.accessibilityRole = accessibilityRole;
   obj.accessibilityState = accessibilityState;
-  obj.trailing = jsx(importDefault(5243), { selected });
+  obj.trailing = jsx(importDefault(5334), { selected });
   obj.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
-  return jsx(importDefault(5217), {});
+  return jsx(importDefault(5308), {});
 };

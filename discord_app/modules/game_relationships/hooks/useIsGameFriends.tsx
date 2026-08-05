@@ -14,5 +14,5 @@ export const useIsGameFriends = function useIsGameFriends(id) {
     const gameRelationshipsForUserByType = outer1_3.getGameRelationshipsForUserByType(closure_0, outer1_4.FRIEND);
     const items = [gameRelationshipsForUserByType.length > 0, outer1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5025).isVersionEqual), 1)[0];
+  }, items1, _require(5116).isVersionEqual), 1)[0];
 };

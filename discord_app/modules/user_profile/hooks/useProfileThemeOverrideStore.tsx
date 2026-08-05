@@ -21,7 +21,7 @@ const result = require("useTheme").fileFinishedImporting("modules/user_profile/h
 export const useProfileThemeOverrideStore = tmp2;
 export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
   const tmp = tmp2((themeOverride) => themeOverride.themeOverride);
-  const tmp3 = importDefault(4129)();
+  const tmp3 = importDefault(4221)();
   if (null == tmp) {
     return null;
   } else {
@@ -46,7 +46,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       if (null != first) {
         tmp8 = tmp3;
         if (null != tmp7) {
-          let obj = require(7993) /* getProfileTheme */;
+          let obj = require(8123) /* getProfileTheme */;
           let profileTheme = obj.getProfileTheme(first);
           if (profileTheme == null) {
             profileTheme = tmp3;
@@ -68,8 +68,8 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
     if (themeType !== ThemeTypes.DARK) {
       let isThemeLightResult = themeType === tmp11.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = require(4039) /* AccessibilityAnnouncer */.isThemeLight(tmp3);
-        const obj3 = require(4039) /* AccessibilityAnnouncer */;
+        isThemeLightResult = require(4131) /* AccessibilityAnnouncer */.isThemeLight(tmp3);
+        const obj3 = require(4131) /* AccessibilityAnnouncer */;
       }
       let DARKER = themeType;
       if (isThemeLightResult) {
@@ -77,7 +77,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       }
     } else {
       DARKER = tmp3;
-      const obj2 = require(4039) /* AccessibilityAnnouncer */;
+      const obj2 = require(4131) /* AccessibilityAnnouncer */;
     }
     obj = { theme: null, primaryColor: null, secondaryColor: null };
     obj[0] = DARKER;

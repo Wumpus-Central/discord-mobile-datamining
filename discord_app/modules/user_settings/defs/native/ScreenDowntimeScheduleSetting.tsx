@@ -13,14 +13,14 @@ const toggle = createToggle.createToggle({
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = require(3866) /* explicitContentFromProto */.EnableScreenDowntimeScheduleNotifications;
+    const EnableScreenDowntimeScheduleNotifications = require(3958) /* explicitContentFromProto */.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = require(5859) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
-    const obj = require(5859) /* apexExperiment */;
-    const tmp2 = importDefault(13961)();
-    const hasActiveParentLinks = require(6258) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    let isFamilyCenterV3Enabled = require(6962) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
+    const obj = require(6962) /* apexExperiment */;
+    const tmp2 = importDefault(14061)();
+    const hasActiveParentLinks = require(7259) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }
@@ -42,14 +42,14 @@ let obj = {
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = require(3866) /* explicitContentFromProto */.EnableScreenDowntimeScheduleNotifications;
+    const EnableScreenDowntimeScheduleNotifications = require(3958) /* explicitContentFromProto */.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = require(5859) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
-    const obj = require(5859) /* apexExperiment */;
-    const tmp2 = importDefault(13961)();
-    const hasActiveParentLinks = require(6258) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    let isFamilyCenterV3Enabled = require(6962) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
+    const obj = require(6962) /* apexExperiment */;
+    const tmp2 = importDefault(14061)();
+    const hasActiveParentLinks = require(7259) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }

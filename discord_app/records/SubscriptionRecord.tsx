@@ -237,8 +237,8 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = require(3852) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = require(3852) /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = require(3944) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
+        const obj2 = require(3944) /* isPremiumGiftingSupported */;
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }

@@ -5,8 +5,8 @@ const result = require("enforcing").fileFinishedImporting("modules/native_permis
 
 export default function openPrivacySettings() {
   if (obj.isAndroid()) {
-    importDefault(4745).openPrivacySettings();
-    const obj2 = importDefault(4745);
+    importDefault(4836).openPrivacySettings();
+    const obj2 = importDefault(4836);
   } else {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     DeviceSettingsManager.openPrivacySettings();

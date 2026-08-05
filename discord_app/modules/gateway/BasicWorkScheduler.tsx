@@ -26,7 +26,7 @@ prototype["_trackAppBackgrounded"] = function _trackAppBackgrounded(_isBackgroun
     self._isBackgrounded = _isBackgrounded;
     if (tmp) {
       const telemetry = self.telemetry;
-      telemetry.track(require(12723) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryEvent.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED);
+      telemetry.track(require(12819) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryEvent.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED);
       self._processWorkCallback();
     }
     tmp = self._isBackgrounded && self.hasWorkScheduled;
@@ -54,9 +54,9 @@ prototype["_processWorkCallback"] = function _processWorkCallback(arg0) {
       self._workCallbackFn();
       self.clearWorkTimeout();
       const telemetry2 = self.telemetry;
-      telemetry2.measure(require(12723) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, self._consecutiveFlushesBeforeQueueEmpty);
+      telemetry2.measure(require(12819) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, self._consecutiveFlushesBeforeQueueEmpty);
       const telemetry3 = self.telemetry;
-      telemetry3.track(require(12723) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryEvent.EXCEEDED_MAX_CONSECUTIVE_FLUSHES);
+      telemetry3.track(require(12819) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryEvent.EXCEEDED_MAX_CONSECUTIVE_FLUSHES);
       self._consecutiveFlushesBeforeQueueEmpty = 0;
       self._nextDispatchTimeout = closure_6;
     } else {
@@ -72,7 +72,7 @@ prototype["_processWorkCallback"] = function _processWorkCallback(arg0) {
           const telemetry = self.telemetry;
           const _parseInt = parseInt;
           const _HermesInternal = HermesInternal;
-          telemetry.measure(require(12723) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, parseInt("" + self._consecutiveFlushesBeforeQueueEmpty));
+          telemetry.measure(require(12819) /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, parseInt("" + self._consecutiveFlushesBeforeQueueEmpty));
         }
         self._consecutiveFlushesBeforeQueueEmpty = 0;
         self._criticalWorkScheduled = false;
@@ -142,10 +142,10 @@ prototype["requestWorkTimeout"] = function requestWorkTimeout(flush, arg1) {
   self._workCallbackFn = flush;
   if (!self.hasWorkScheduled) {
     let telemetry = self.telemetry;
-    telemetry.time(self(12723).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+    telemetry.time(self(12819).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
     if (self._nextDispatchTimeout === closure_6) {
       const telemetry2 = self.telemetry;
-      telemetry2.track(tmp(12723).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
+      telemetry2.track(tmp(12819).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
     }
     if (flag) {
       self._queueIdleCallback();

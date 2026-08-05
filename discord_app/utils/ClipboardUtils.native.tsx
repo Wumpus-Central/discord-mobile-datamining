@@ -88,5 +88,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return importDefault(5548).getString();
+  return importDefault(5639).getString();
 };

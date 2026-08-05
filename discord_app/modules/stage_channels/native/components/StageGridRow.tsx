@@ -12,18 +12,18 @@ const memoResult = require("noop").memo((row) => {
   ({ channel: require, participants } = row);
   let THIRD;
   const tmp = callback();
-  let obj = require(4724) /* getIsScreenLandscape */;
+  let obj = require(4815) /* getIsScreenLandscape */;
   let containerLandscape = obj.useIsScreenLandscape();
   let num = 3;
   if (0 === row.row) {
     num = participants.length;
   }
   if (1 === num) {
-    THIRD = tmp2(10853).StageTileSize.FULL;
+    THIRD = tmp2(10822).StageTileSize.FULL;
   } else if (2 === num) {
-    THIRD = tmp2(10853).StageTileSize.HALF;
+    THIRD = tmp2(10822).StageTileSize.HALF;
   } else {
-    THIRD = tmp2(10853).StageTileSize.THIRD;
+    THIRD = tmp2(10822).StageTileSize.THIRD;
   }
   const items = [tmp.container, ];
   if (containerLandscape) {

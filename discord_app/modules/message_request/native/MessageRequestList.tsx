@@ -229,7 +229,7 @@ export default function MessageRequestList(goToMessageRequestPreview) {
     obj[2] = obj2;
     obj[3] = function renderItem(item) {
       item = item.item;
-      if (typeof item === "y") {
+      if (typeof item === "string") {
         let obj = { style: null, children: null };
         obj[0] = _undefined.sectionContainer;
         obj = { variant: "eyebrow", color: "text-default", children: null };

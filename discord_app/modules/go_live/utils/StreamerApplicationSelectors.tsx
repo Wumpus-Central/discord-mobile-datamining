@@ -6,7 +6,7 @@ const require = arg1;
 function _findPlayingActivity(type) {
   let tmp = type.type === ActivityTypes.PLAYING;
   if (tmp) {
-    tmp = !importDefault(6028)(type);
+    tmp = !importDefault(7119)(type);
   }
   return tmp;
 }

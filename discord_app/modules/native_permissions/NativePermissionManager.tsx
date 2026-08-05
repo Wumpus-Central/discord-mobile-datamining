@@ -13,7 +13,7 @@ prototype["isEnabled"] = function isEnabled() {
     const tmpResult = tmp(500);
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(4738).ProcessArgs;
+    const ProcessArgs = tmp(4829).ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;
@@ -32,8 +32,8 @@ prototype["_terminate"] = function _terminate() {
 };
 prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
   if (mode.mode === InputModes.PUSH_TO_TALK) {
-    const permission = require(4736) /* NativePermissionsRequestOptions */.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
-    const _default = require(4736) /* NativePermissionsRequestOptions */.default;
+    const permission = require(4827) /* NativePermissionsRequestOptions */.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
+    const _default = require(4827) /* NativePermissionsRequestOptions */.default;
   }
 };
 const nativePermissionManager = new NativePermissionManager();

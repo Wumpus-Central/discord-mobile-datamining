@@ -54,6 +54,9 @@ prototype["getStorefrontData"] = function getStorefrontData(arg0) {
 prototype["getStorefrontDataForApplicationId"] = function getStorefrontDataForApplicationId(arg0) {
   return dependencyMap2[arg0];
 };
+prototype["getLoadedStorefrontApplicationIds"] = function getLoadedStorefrontApplicationIds() {
+  return Object.keys(closure_5);
+};
 prototype["getStorefrontFetchState"] = function getStorefrontFetchState(closure_0) {
   if ("guild" === closure_0.type) {
     let guildId = closure_0.guildId;
@@ -389,7 +392,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
       const merged7 = Object.assign(obj9);
       obj9 = obj5;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "r" };
+      obj = { state: "error", fetchedAt: null, storefront: "Array" };
       const _Date = Date;
       obj[1] = Date.now();
       if (null != guildId) {

@@ -2,9 +2,9 @@
 const result = require("set").fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
 
 export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId) {
-  if (typeof skuId.skuId !== "y") {
-    if (typeof skuId.skuId !== "Object") {
-      if (typeof skuId.sku_id === "y") {
+  if (typeof skuId.skuId !== "string") {
+    if (typeof skuId.skuId !== "number") {
+      if (typeof skuId.sku_id === "string") {
         const _String = String;
         let StringResult = String(skuId.sku_id);
       } else {
@@ -17,21 +17,21 @@ export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId)
 };
 export const parseServerUserCollectibles = function parseServerUserCollectibles(collectibles) {
   let tmp = null;
-  if (typeof collectibles !== "window") {
+  if (typeof collectibles === "object") {
     tmp = null;
     if (null != collectibles) {
       let tmp2 = null;
       if ("nameplate" in collectibles) {
         tmp2 = null;
-        if (typeof collectibles.nameplate !== "window") {
+        if (typeof collectibles.nameplate === "object") {
           const nameplate = collectibles.nameplate;
           let tmp6 = null;
-          if (typeof nameplate !== "window") {
+          if (typeof nameplate === "object") {
             tmp6 = null;
             if (null != nameplate) {
-              if (typeof nameplate.skuId !== "y") {
-                if (typeof nameplate.skuId !== "Object") {
-                  if (typeof nameplate.sku_id === "y") {
+              if (typeof nameplate.skuId !== "string") {
+                if (typeof nameplate.skuId !== "number") {
+                  if (typeof nameplate.sku_id === "string") {
                     const _String = String;
                     let StringResult = String(nameplate.sku_id);
                   } else {
@@ -43,11 +43,11 @@ export const parseServerUserCollectibles = function parseServerUserCollectibles(
                   tmp6 = null;
                   if ("label" in nameplate) {
                     tmp6 = null;
-                    if (typeof nameplate.label !== "__FORMATJS_LISTFORMAT_DATA__") {
+                    if (typeof nameplate.label === "string") {
                       tmp6 = null;
                       if ("palette" in nameplate) {
                         tmp6 = null;
-                        if (typeof nameplate.palette !== "__FORMATJS_LISTFORMAT_DATA__") {
+                        if (typeof nameplate.palette === "string") {
                           let obj = { skuId: null, label: null, palette: null };
                           obj[0] = StringResult;
                           ({ label: obj2[1], palette: obj2[2] } = nameplate);
@@ -62,9 +62,9 @@ export const parseServerUserCollectibles = function parseServerUserCollectibles(
                             obj.expiresAt = nameplate.expires_at;
                             tmp6 = obj;
                           }
-                          tmp7 = "asset" in nameplate && typeof nameplate.asset === "y";
-                          tmp8 = "expiresAt" in nameplate && typeof nameplate.expiresAt === "Object";
-                          tmp9 = "expires_at" in nameplate && typeof nameplate.expires_at === "Object";
+                          tmp7 = "asset" in nameplate && typeof nameplate.asset === "string";
+                          tmp8 = "expiresAt" in nameplate && typeof nameplate.expiresAt === "number";
+                          tmp9 = "expires_at" in nameplate && typeof nameplate.expires_at === "number";
                         }
                       }
                     }

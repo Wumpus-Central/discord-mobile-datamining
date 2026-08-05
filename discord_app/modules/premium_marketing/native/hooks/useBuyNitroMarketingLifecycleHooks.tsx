@@ -21,7 +21,7 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   const dependencyMap = tmp;
   _require = initialLoadCompleted;
   promotionMarketingComponent = undefined;
-  promotionMarketingComponent = _require(6566).usePromotionMarketingComponent(_require(6570).MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = _require(7564).usePromotionMarketingComponent(_require(7568).MarketingComponentType.PREMIUM_TAB);
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;
@@ -46,9 +46,9 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     let BuyNitroPurchaseLock = initialLoadCompleted(tmp[10]).BuyNitroPurchaseLock;
     BuyNitroPurchaseLock.end();
     return () => {
-      const BuyNitroPurchaseLock = callback(6571).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = callback(7569).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = callback(6571).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = callback(7569).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
     };
   }, []);

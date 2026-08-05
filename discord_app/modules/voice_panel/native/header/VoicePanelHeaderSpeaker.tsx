@@ -23,7 +23,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   let canShowTooltip;
   let targetRef;
   ({ targetRef, canShowTooltip } = arg0);
-  importDefault(15970)(targetRef, canShowTooltip);
+  importDefault(16066)(targetRef, canShowTooltip);
   return null;
 });
 const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChannel) {
@@ -219,7 +219,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConne
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        let obj = { onPress: null, ref: "Array" };
+        let obj = { onPress: null, ref: "a" };
         obj[0] = closure_15;
         tmp = obj;
       }

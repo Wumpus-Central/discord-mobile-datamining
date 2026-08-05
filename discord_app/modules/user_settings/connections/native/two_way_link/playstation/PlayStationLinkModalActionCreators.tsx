@@ -4,11 +4,11 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_s
 
 export default {
   showModal(locationStack, platformType) {
-    let obj = importDefault(4399);
+    let obj = importDefault(4490);
     obj = { locationStack, platformType };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(8976, dependencyMap.paths), obj, c3);
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(10473, dependencyMap.paths), obj, c3);
   },
   hideModal() {
-    importDefault(4399).popWithKey(c3);
+    importDefault(4490).popWithKey(c3);
   }
 };

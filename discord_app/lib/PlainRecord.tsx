@@ -3,46 +3,46 @@ import { TypeTag } from "TypeTag";
 import importDefaultResult from "TypeTag";
 
 const require = arg1;
-function isValueEqual(getTime, getTime2) {
-  if (null != getTime) {
-    if (null != getTime2) {
-      let tmp11 = getTime === getTime2;
+function isValueEqual(items, current) {
+  if (null != items) {
+    if (null != current) {
+      let tmp11 = items === current;
       if (!tmp11) {
         const _Date = Date;
-        if (!(getTime instanceof Date)) {
+        if (!(items instanceof Date)) {
           const _Set = Set;
-          if (getTime instanceof Set) {
+          if (items instanceof Set) {
             const _Set2 = Set;
-            if (getTime2 instanceof Set) {
-              let areSetsEqualResult = require(1414) /* areSetsEqual */.areSetsEqual(getTime, getTime2);
+            if (current instanceof Set) {
+              let areSetsEqualResult = require(1414) /* areSetsEqual */.areSetsEqual(items, current);
               const obj2 = require(1414) /* areSetsEqual */;
             }
           }
           const _Array = Array;
-          if (Array.isArray(getTime)) {
+          if (Array.isArray(items)) {
             const _Array2 = Array;
-            if (Array.isArray(getTime2)) {
-              areSetsEqualResult = require(643) /* shallowEqual */.areArraysShallowEqual(getTime, getTime2);
+            if (Array.isArray(current)) {
+              areSetsEqualResult = require(643) /* shallowEqual */.areArraysShallowEqual(items, current);
               const obj = require(643) /* shallowEqual */;
             }
           }
-          areSetsEqualResult = typeof getTime === "ay";
-          if (typeof getTime !== "window") {
-            areSetsEqualResult = typeof getTime2 === "ay";
+          areSetsEqualResult = typeof items === "object";
+          if (typeof items === "object") {
+            areSetsEqualResult = typeof current === "object";
           }
           if (areSetsEqualResult) {
-            areSetsEqualResult = importDefault(643)(getTime, getTime2);
+            areSetsEqualResult = importDefault(643)(items, current);
           }
         } else {
           const _Date2 = Date;
         }
-        const time = getTime.getTime();
-        areSetsEqualResult = time === getTime2.getTime();
+        const time = items.getTime();
+        areSetsEqualResult = time === current.getTime();
       }
     }
     return tmp11;
   }
-  tmp11 = getTime === getTime2;
+  tmp11 = items === current;
 }
 function isPlainRecordDataEqual(arg0, arg1) {
   if (arg0 === arg1) {
@@ -68,12 +68,12 @@ const result = require("areSetsEqual").fileFinishedImporting("lib/PlainRecord.ts
 
 export default importDefaultResult;
 export { TypeTag };
-export const set = function set(arg0, arg1, getTime2) {
+export const set = function set(arg0, arg1, current) {
   let tmp = arg0;
-  if (!isValueEqual(arg0[arg1], getTime2)) {
+  if (!isValueEqual(arg0[arg1], current)) {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj[arg1] = getTime2;
+    obj[arg1] = current;
     tmp = obj;
   }
   return tmp;
@@ -132,14 +132,14 @@ export const tryReuseExistingInPlacePlainRecord = function tryReuseExistingInPla
   }
   return tmp;
 };
-export const objectIsPlainRecordOfType = function objectIsPlainRecordOfType(arg0, arg1) {
-  let tmp = typeof arg1 === "ay";
-  if (typeof arg1 !== "window") {
-    tmp = null != arg1;
+export const objectIsPlainRecordOfType = function objectIsPlainRecordOfType(arg0, obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null != obj;
   }
   if (tmp) {
-    tmp = (TypeTag in arg1 && arg1[TypeTag]) === arg0;
-    const tmp2 = TypeTag in arg1 && arg1[TypeTag];
+    tmp = (TypeTag in obj && obj[TypeTag]) === arg0;
+    const tmp2 = TypeTag in obj && obj[TypeTag];
   }
   return tmp;
 };

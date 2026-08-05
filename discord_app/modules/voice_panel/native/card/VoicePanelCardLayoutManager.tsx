@@ -480,7 +480,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
               ({ item, dimensions } = obj);
               let num7 = dimensions.height;
               const id = item.id;
-              if (typeof closure_20 !== "fileFinishedImporting") {
+              if (typeof closure_20 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let arr = closure_14;

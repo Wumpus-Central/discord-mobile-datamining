@@ -54,7 +54,7 @@ prototype["handleConnect"] = function handleConnect(v) {
     if (null == currentUser) {
       v.close(constants2.CLOSE_NORMAL, "User logged out");
     } else {
-      obj.user = importDefault(10646)(currentUser);
+      obj.user = importDefault(10549)(currentUser);
     }
   }
   self.dispatch(v, null, constants3.DISPATCH, constants5.READY, obj);
@@ -86,7 +86,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
-          if (typeof tmp25.scope === "ay") {
+          if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
@@ -121,7 +121,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
-          if (typeof tmp25.scope === "ay") {
+          if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
@@ -244,7 +244,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
-          if (typeof tmp25.scope === "ay") {
+          if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
@@ -380,7 +380,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
-          if (typeof tmp25.scope === "ay") {
+          if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
@@ -682,13 +682,13 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
     const subscriptions = this.subscriptions;
     const item = subscriptions.forEach((evt) => {
       if (evt.evt === RELATIONSHIP_UPDATE) {
-        let tmp5 = typeof prototype === "fileFinishedImporting";
-        if (typeof prototype !== "disabledUntil") {
+        let tmp5 = typeof prototype === "function";
+        if (typeof prototype === "function") {
           tmp5 = !tmp13(evt);
         }
         if (!tmp5) {
-          let tmp = typeof tmp13 === "ay";
-          if (typeof tmp13 !== "window") {
+          let tmp = typeof tmp13 === "object";
+          if (typeof tmp13 === "object") {
             let args = evt.args;
             if (args == null) {
               args = {};
@@ -701,7 +701,7 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
           tmp5 = tmp;
         }
         if (!tmp5) {
-          if (typeof callback !== "disabledUntil") {
+          if (typeof callback === "function") {
             callback = tmp6(evt);
           }
           self.dispatch(evt.socket, null, outer1_6.DISPATCH, evt.evt, callback);
@@ -734,7 +734,7 @@ prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
         let closure_0 = arg0;
         const socket = closure_1;
         const timeout = setTimeout(() => {
-          if (typeof closure_0 !== "fileFinishedImporting") {
+          if (typeof closure_0 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           outer1_5.removeSubscription(callback2, outer1_9, { uniqueId: outer1_4 });
@@ -751,7 +751,7 @@ prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
         });
       });
       return promise.then((arg0) => {
-        if (typeof removeSubscription !== "fileFinishedImporting") {
+        if (typeof removeSubscription !== "function") {
           HermesBuiltin.throwTypeError();
         }
         self.removeSubscription(closure_1, outer1_9, { uniqueId: closure_4 });

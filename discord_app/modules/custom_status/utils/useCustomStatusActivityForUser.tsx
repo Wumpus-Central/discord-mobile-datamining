@@ -11,8 +11,8 @@ export default function useCustomStatusActivityForUser(arg0) {
   const items = [fetchFingerprint];
   const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getId() === closure_0);
   const obj = _require(589);
-  const customStatusActivity = _require(8084).useCustomStatusActivity();
-  const obj2 = _require(8084);
+  const customStatusActivity = _require(9366).useCustomStatusActivity();
+  const obj2 = _require(9366);
   const items1 = [sortActivity];
   let stateFromStores1 = _require(589).useStateFromStores(items1, () => outer1_3.findActivity(closure_0, (type) => type.type === constants.CUSTOM_STATUS));
   if (stateFromStores) {

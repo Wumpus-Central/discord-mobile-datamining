@@ -179,14 +179,14 @@ export const BaseRive = forwardRefResult;
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   let _require = AnimationState2;
   let dependencyMap = playIfNeeded;
-  const iter = _require(3923).useRiveNumber(AnimationState, instance);
+  const iter = _require(4015).useRiveNumber(AnimationState, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
   const items = [AnimationState2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
     if (null != closure_0) {
-      if (typeof str === "__REMOTEDEV__") {
+      if (typeof str !== "number") {
         const _Number = Number;
         const _parseFloat = parseFloat;
         let num = 0;
@@ -226,7 +226,7 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
 export const useStringBinding = function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   let _require = LVL2;
   let dependencyMap = playIfNeeded;
-  const iter = _require(3923).useRiveString(LVL, instance);
+  const iter = _require(4015).useRiveString(LVL, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
@@ -259,7 +259,7 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
 export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
   let _require = reducedMotionEnabled;
   let dependencyMap = playIfNeeded;
-  const iter = _require(3923).useRiveBoolean(reducedMotion, instance);
+  const iter = _require(4015).useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
@@ -293,7 +293,7 @@ export const useBooleanBinding = function useBooleanBinding(reducedMotion, insta
 export const useColorBinding = function useColorBinding(FillColor, instance, FillColor2, FillColor1, playIfNeeded) {
   const _require = FillColor2;
   const dependencyMap = FillColor1;
-  const iter = _require(3923).useRiveColor(FillColor, instance);
+  const iter = _require(4015).useRiveColor(FillColor, instance);
   const setValue = iter.setValue;
   const value = iter.value;
   let closure_4 = value;
@@ -324,7 +324,7 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
 export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, stateFromStores) {
   let _require = arg2;
   let dependencyMap = arg4;
-  const iter = _require(3923).useRiveEnum(FillColor, instance);
+  const iter = _require(4015).useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
@@ -357,7 +357,7 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
 export const useTriggerBinding = function useTriggerBinding(startAnimation, instance, startAnimation2, startAnimation1, playIfNeeded) {
   const _require = startAnimation2;
   const dependencyMap = playIfNeeded;
-  let obj = _require(3923);
+  let obj = _require(4015);
   let tmp;
   if (null != startAnimation1) {
     obj = { onTrigger: null };
@@ -368,7 +368,7 @@ export const useTriggerBinding = function useTriggerBinding(startAnimation, inst
   const items = [startAnimation2, trigger, playIfNeeded];
   const effect = trigger.useEffect(() => {
     let tmp2 = closure_0;
-    if (typeof closure_0 !== "T") {
+    if (typeof closure_0 !== "boolean") {
       let tmp4 = 0 !== tmp;
       if (tmp4) {
         tmp4 = null != tmp;
@@ -395,7 +395,7 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
         let c0 = false;
         const RiveImages = img(instance[3]).RiveImages;
         let uri = tmp;
-        if (typeof tmp !== "__REMOTEDEV__") {
+        if (typeof tmp === "number") {
           uri = playIfNeeded.resolveAssetSource(tmp).uri;
         }
         const fromURLAsync = RiveImages.loadFromURLAsync(uri);
@@ -449,7 +449,7 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
   const effect = file.useEffect(() => {
     if (null != closure_1) {
       if (null != closure_2) {
-        if (typeof closure_3 !== "__FORMATJS_LISTFORMAT_DATA__") {
+        if (typeof closure_3 === "string") {
           try {
             const artboardPropertyResult = closure_1.artboardProperty(closure_0);
             if (artboardPropertyResult != null) {

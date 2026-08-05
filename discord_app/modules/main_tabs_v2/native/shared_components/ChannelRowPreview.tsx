@@ -13,35 +13,35 @@ function PreviewIcon(icon) {
   if ("image" === icon) {
     let obj = {};
     const merged1 = Object.assign(merged);
-    return callback(require(4705) /* ImageIcon */.ImageIcon, obj);
+    return callback(require(4796) /* ImageIcon */.ImageIcon, obj);
   } else if ("video" === icon) {
     obj = {};
     const merged2 = Object.assign(merged);
-    return callback(require(6640) /* VideoIcon */.VideoIcon, obj);
+    return callback(require(7635) /* VideoIcon */.VideoIcon, obj);
   } else if ("audio" === icon) {
     const obj1 = {};
     const merged3 = Object.assign(merged);
-    return callback(require(9083) /* MusicIcon */.MusicIcon, obj1);
+    return callback(require(9568) /* MusicIcon */.MusicIcon, obj1);
   } else if ("attachment" === icon) {
     const obj2 = {};
     const merged4 = Object.assign(merged);
-    return callback(require(9691) /* AttachmentIcon */.AttachmentIcon, obj2);
+    return callback(require(9706) /* AttachmentIcon */.AttachmentIcon, obj2);
   } else if ("link" === icon) {
     const obj3 = {};
     const merged5 = Object.assign(merged);
-    return callback(require(4137) /* LinkIcon */.LinkIcon, obj3);
+    return callback(require(4229) /* LinkIcon */.LinkIcon, obj3);
   } else if ("sticker" === icon) {
     const obj4 = {};
     const merged6 = Object.assign(merged);
-    return callback(require(6632) /* StickerIcon */.StickerIcon, obj4);
+    return callback(require(7627) /* StickerIcon */.StickerIcon, obj4);
   } else if ("call-active" === icon) {
     const obj5 = {};
     const merged7 = Object.assign(merged);
-    return callback(require(9092) /* PhoneCallIcon */.PhoneCallIcon, obj5);
+    return callback(require(8209) /* PhoneCallIcon */.PhoneCallIcon, obj5);
   } else if ("call-ended" === icon) {
     obj = {};
     const merged8 = Object.assign(merged);
-    return callback(require(9139) /* PhoneHangUpIcon */.PhoneHangUpIcon, obj);
+    return callback(require(8211) /* PhoneHangUpIcon */.PhoneHangUpIcon, obj);
   }
 }
 class ChannelRowPreview {
@@ -76,7 +76,7 @@ class ChannelRowPreview {
         str2 = "markup";
         if ("markup" === type) {
           tmp9 = jsx;
-          tmp10 = f48689;
+          tmp10 = f47209;
           if ("markup" === formattedMessagePreview.type) {
             content = formattedMessagePreview.markup;
           } else {
@@ -229,9 +229,9 @@ let closure_9 = importAllResult.memo((arg0) => {
   let markup;
   let muted;
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
-  const fontScale = require(4610) /* getFontScale */.useFontScale();
-  const obj = require(4610) /* getFontScale */;
-  return require(10296) /* getOrParseMessagePreviewMarkupAST */.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
+  const fontScale = require(4701) /* getFontScale */.useFontScale();
+  const obj = require(4701) /* getFontScale */;
+  return require(9708) /* getOrParseMessagePreviewMarkupAST */.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
 });
 const memoResult = importAllResult.memo((message) => {
   const _require = message;

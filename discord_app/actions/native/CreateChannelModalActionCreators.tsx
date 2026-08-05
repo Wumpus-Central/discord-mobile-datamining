@@ -10,7 +10,7 @@ export default {
   open(arg0, arg1, arg2, arg3) {
     const self = this;
     if (null != arg1) {
-      const obj2 = importDefault(4399);
+      const obj2 = importDefault(4490);
       const tmp = arg0;
       let obj = { channelType: null, guildId: null, categoryId: null, cloneChannelId: null, onChannelCreated: null };
       obj[0] = tmp;
@@ -29,13 +29,13 @@ export default {
           const obj = self(outer1_2[2]);
         }
       };
-      obj2.pushLazy(self(1959)(8276, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(self(1959)(8914, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       const tmp2 = arg2;
       const tmp3 = arg3;
-      const tmp9 = self(1959)(8276, dependencyMap.paths);
+      const tmp9 = self(1959)(8914, dependencyMap.paths);
     }
   },
   close() {
-    importDefault(4399).popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    importDefault(4490).popWithKey(CREATE_CHANNEL_MODAL_KEY);
   }
 };

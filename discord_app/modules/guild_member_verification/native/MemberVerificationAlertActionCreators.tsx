@@ -24,7 +24,7 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
       });
     }
   };
-  importDefault(4533).openLazy(obj);
+  importDefault(4624).openLazy(obj);
 };
 export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId) {
   let closure_0 = guildId;
@@ -51,7 +51,7 @@ export const openMemberVerificationPendingAlert = function openMemberVerificatio
       });
     }
   };
-  importDefault(4533).openLazy(obj);
+  importDefault(4624).openLazy(obj);
 };
 export const openMemberVerificationCancelPendingAlert = function openMemberVerificationCancelPendingAlert(arg0) {
   let dependencyMap;
@@ -83,7 +83,7 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
       });
     }
   };
-  importDefault(4533).openLazy(obj);
+  importDefault(4624).openLazy(obj);
 };
 export const openMemberVerificationRejectedAlert = function openMemberVerificationRejectedAlert(canWithdraw) {
   let onClose;
@@ -103,7 +103,7 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
       let closure_3;
       let fn;
       let onClose;
-      if (typeof fn !== "fileFinishedImporting") {
+      if (typeof fn !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = onClose(paths[3]);
@@ -140,7 +140,7 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     obj[0] = intl.string(tmp2(1236).t.BddRzS);
     obj[1] = fn;
   }
-  dependencyMap = jsx(onClose(4604).Button, obj);
+  dependencyMap = jsx(onClose(4695).Button, obj);
   let result = fn(1844).dismissGlobalKeyboard();
   let obj3 = fn(1844);
   const tmp = jsx;
@@ -165,7 +165,7 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
       });
     }
   };
-  onClose(4533).openLazy(obj);
+  onClose(4624).openLazy(obj);
 };
 export const openMemberVerificationUpdateAlert = function openMemberVerificationUpdateAlert() {
   let obj = importAll(1844);
@@ -181,7 +181,7 @@ export const openMemberVerificationUpdateAlert = function openMemberVerification
       });
     }
   };
-  importDefault(4533).openLazy(obj);
+  importDefault(4624).openLazy(obj);
 };
 export function closeMemberVerificationAlert(arg0) {
   let closure_0 = arg0;
@@ -217,5 +217,5 @@ export const openMemberVerificationIncompleteAlert = function openMemberVerifica
       });
     }
   };
-  importDefault(4533).openLazy(obj);
+  importDefault(4624).openLazy(obj);
 };

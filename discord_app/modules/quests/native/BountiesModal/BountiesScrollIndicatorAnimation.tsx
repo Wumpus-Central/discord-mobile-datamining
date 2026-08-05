@@ -13,7 +13,7 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
   let tmp6;
   let tmp7;
   const visible = startAnimation.visible;
-  let obj = require(3897) /* map */;
+  let obj = require(3989) /* map */;
   const token = obj.useToken(importDefault(712).colors.TEXT_DEFAULT);
   const tmp = callback2();
   const tmp2 = require;
@@ -25,7 +25,7 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
       tmp7((arg0) => arg0 + 1);
     }
   }
-  obj = { style: tmp.container, children: jsx(tmp2(3905).BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: obj }, tmp6) };
+  obj = { style: tmp.container, children: jsx(tmp2(3997).BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: obj }, tmp6) };
   obj = { color: token, startAnimation: !startAnimation.isFadingInContent };
   return <View color={token} startAnimation={!arg0.isFadingInContent} />;
 };

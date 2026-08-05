@@ -148,7 +148,7 @@ export default function handleSupportedURL(payload) {
       if (null != inviteCode) {
         result = payload;
         result = inviteCode;
-        let obj2 = { deeplinkAttemptId: null, fromDeeplink: true, location: "Deep Link" };
+        let obj2 = { deeplinkAttemptId: null, location: "Deep Link" };
         obj2[0] = deeplinkAttemptId;
         result = payload(inviteCode[23]).showInvite(inviteCode, username, obj2);
         flag = true;
@@ -162,7 +162,7 @@ export default function handleSupportedURL(payload) {
       if (null != inviteCode) {
         const result = payload(tmp[25]).dismissGlobalKeyboard();
         const obj2 = payload(tmp[25]);
-        obj = { deeplinkAttemptId: null, fromDeeplink: true, location: "Deep Link" };
+        obj = { deeplinkAttemptId: null, location: "Deep Link" };
         obj[0] = deeplinkAttemptId;
         payload(tmp[23]).showInvite(tmp3, username, obj);
         const obj3 = payload(tmp[23]);

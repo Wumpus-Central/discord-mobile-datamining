@@ -54,7 +54,7 @@ function collectGuildAnalyticsMetadata(guildId) {
       obj[6] = num;
       let NONE = store3.getGuildPermissions(guild);
       if (NONE == null) {
-        NONE = importAll(3826).NONE;
+        NONE = importAll(3918).NONE;
       }
       obj[7] = String(NONE);
       const features = guild.features;
@@ -91,11 +91,11 @@ function collectChannelAnalyticsMetadata(channel) {
       if (null != guildId) {
         let NONE2 = store3.getChannelPermissions(channel);
         if (NONE2 == null) {
-          NONE2 = importAll(3826).NONE;
+          NONE2 = importAll(3918).NONE;
         }
         let NONE = NONE2;
       } else {
-        NONE = importAll(3826).NONE;
+        NONE = importAll(3918).NONE;
       }
       obj[3] = String(NONE);
       obj[4] = false;
@@ -280,7 +280,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj);
       const tmp9Result = obj(12)(store4.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(4391).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(4482).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }
@@ -334,17 +334,17 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         obj3[5] = channel.isSpoilerChannel();
         obj3[6] = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
         const unreadSetting = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
-        obj3[7] = require(4392) /* Presets */.presetFromSettings(unreadSetting, updateUserGuildSettingsInternal.resolvedMessageNotifications(channel));
+        obj3[7] = require(4483) /* Presets */.presetFromSettings(unreadSetting, updateUserGuildSettingsInternal.resolvedMessageNotifications(channel));
         obj3[8] = channel.guild_id;
         ({ guildUnread: obj6[9], guildMentionCount: obj6[10] } = snapshot);
         obj3[11] = updateUserGuildSettingsInternal.isMuted(channel.guild_id);
         obj3[12] = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
-        const obj7 = require(4392) /* Presets */;
+        const obj7 = require(4483) /* Presets */;
         const guildUnreadSetting = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
-        obj3[13] = require(4392) /* Presets */.presetFromSettings(guildUnreadSetting, updateUserGuildSettingsInternal.getMessageNotifications(channel.guild_id));
+        obj3[13] = require(4483) /* Presets */.presetFromSettings(guildUnreadSetting, updateUserGuildSettingsInternal.getMessageNotifications(channel.guild_id));
         ({ parent_id: obj6[14], parentChannelThreadType: obj6[15] } = channel);
-        const obj8 = require(4392) /* Presets */;
-        obj3[16] = require(4394) /* hasPendingMemberAction */.hasPendingMemberAction(channel.guild_id, selectedChannelId);
+        const obj8 = require(4483) /* Presets */;
+        obj3[16] = require(4485) /* hasPendingMemberAction */.hasPendingMemberAction(channel.guild_id, selectedChannelId);
         obj3[17] = store3.can(constants3.SEND_MESSAGES, channel);
         return obj3;
       }

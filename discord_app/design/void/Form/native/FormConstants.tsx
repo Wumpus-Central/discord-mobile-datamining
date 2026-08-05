@@ -53,8 +53,8 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
       }
       obj3 = map;
     } else {
-      require(4039) /* AccessibilityAnnouncer */.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
-      const tmpResult = require(4039) /* AccessibilityAnnouncer */;
+      require(4131) /* AccessibilityAnnouncer */.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
+      const tmpResult = require(4131) /* AccessibilityAnnouncer */;
     }
   } else {
     return closure_6;

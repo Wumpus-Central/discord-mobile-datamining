@@ -17,6 +17,6 @@ export default function GuildPowerupsBoostGem(arg0) {
   const obj = { style: null, children: null };
   const items = [callback().boostGemContainer, style];
   obj[0] = items;
-  obj[1] = jsx(importDefault(11627), { width: gemWidth, height: gemHeight });
+  obj[1] = jsx(importDefault(11795), { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;
 };

@@ -2,7 +2,7 @@
 import { AnalyticEvents } from "ME";
 
 const EMAIL_VERIFICATION_MODAL_KEY = "EMAIL_VERIFICATION_MODAL_KEY";
-const result = require("module_4399").fileFinishedImporting("actions/native/EmailVerificationModalActionCreators.tsx");
+const result = require("module_4490").fileFinishedImporting("actions/native/EmailVerificationModalActionCreators.tsx");
 
 export default {
   open() {
@@ -14,7 +14,7 @@ export default {
       importDefault(698).track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
       const obj = importDefault(698);
     }
-    importDefault(4399).pushLazy(require(1959) /* asyncRequireImpl */(9187, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
+    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(8263, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
   },
   close() {
     importDefault(709).wait(() => {

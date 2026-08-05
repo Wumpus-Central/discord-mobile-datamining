@@ -52,14 +52,14 @@ function _startContactSyncForDiscoverability() {
                 phone = currentUser.phone;
               }
               const localAccount = outer1_8.getLocalAccount(outer1_11.CONTACTS);
-              callback(11785);
+              callback(11947);
               if (null == phone) {
                 const _Error = Error;
                 const error = new Error("Cannot start contact sync without a phone number");
                 throw error;
               } else {
                 outer1_6(tmp31);
-                let obj4 = outer1_1(11789);
+                let obj4 = outer1_1(11951);
                 let obj1 = { enabled: null, name: null };
                 obj1[0] = tmp15;
                 obj1[1] = tmp31;
@@ -80,7 +80,7 @@ function _startContactSyncForDiscoverability() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(11785);
+              obj1 = callback(11947);
               dependencyMap = 2;
               c3 = 1;
               obj4 = { value: null, done: false };
@@ -137,65 +137,15 @@ export const previousOnboardingStep = function previousOnboardingStep() {
 };
 export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildTemplatesModal(SLIDE_IN) {
   let closure_0 = SLIDE_IN;
-  importDefault(4399).pushLazy(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === paths) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            paths = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(paths[10])(paths[9], paths.paths);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          closure_0 = arg1.default;
-          obj = { animation: null };
-          obj[0] = closure_0;
-          closure_0.modalConfig = obj;
-          c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = closure_0;
-          return obj3;
-        }
-      } catch (tmp12) {
-        c3 = tmp;
-        throw tmp12;
-      }
-    }
+  importDefault(4490).pushLazy(callback(function*() {
+    let closure_1 = tmp5;
+    let closure_0 = tmp2;
+    yield outer1_0(paths[10])(paths[9], paths.paths);
+    closure_0 = arg1.default;
+    const obj = { animation: null };
+    obj[0] = closure_0;
+    closure_0.modalConfig = obj;
+    return closure_0;
   }), {}, closure_12);
 };
 export const transitionToHubEmailConnectionModal = function transitionToHubEmailConnectionModal(SLIDE_IN, arg1) {
@@ -203,12 +153,12 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(11860);
+  let obj = importDefault(12010);
   obj = {
     onCloseExtra(arg0) {
       if (arg0) {
-        const result = callback(11863).setNewUserFlowCompleted();
-        const obj2 = callback(11863);
+        const result = callback(12013).setNewUserFlowCompleted();
+        const obj2 = callback(12013);
       } else {
         callback2(709).dispatch({ type: "ONBOARDING_STEP" });
         const obj = callback2(709);
@@ -219,69 +169,19 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   obj.open(obj, SLIDE_IN);
 };
 export const openDiscoverabilityModal = function openDiscoverabilityModal() {
-  importDefault(4399).pushLazy(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === paths) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let callback = tmp2;
-            callback = undefined;
-            paths = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(paths[10])(paths[13], paths.paths);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          callback = arg1.default;
-          obj = { animation: null };
-          obj[0] = callback(paths[14]).ModalAnimation.SLIDE_IN_OUT;
-          callback.modalConfig = obj;
-          c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = callback;
-          return obj3;
-        }
-      } catch (tmp15) {
-        c3 = tmp;
-        throw tmp15;
-      }
-    }
+  importDefault(4490).pushLazy(callback(function*() {
+    let closure_1 = tmp5;
+    let callback = tmp2;
+    yield outer1_0(paths[10])(paths[13], paths.paths);
+    callback = arg1.default;
+    const obj = { animation: null };
+    obj[0] = callback(paths[14]).ModalAnimation.SLIDE_IN_OUT;
+    callback.modalConfig = obj;
+    return callback;
   }), {}, closure_10);
 };
 export const closeDiscoverabilityModal = function closeDiscoverabilityModal(skip) {
-  let obj = importDefault(4399);
+  let obj = importDefault(4490);
   obj.popWithKey(closure_10);
   obj = { type: "ONBOARDING_STEP", skip };
   importDefault(709).dispatch(obj);

@@ -11,7 +11,7 @@ export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavig
   }
 };
 export const useSelectedSpecialNavigationPath = function useSelectedSpecialNavigationPath() {
-  const obj = require(4021) /* _extends */;
+  const obj = require(4113) /* _extends */;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

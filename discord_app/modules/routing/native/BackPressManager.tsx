@@ -2,9 +2,9 @@
 import "initialize";
 
 function handleBackPress() {
-  let obj = require(9311) /* updateContextMenuState */;
+  let obj = require(8409) /* updateContextMenuState */;
   obj.hideContextMenu();
-  const keyboardType = require(4059) /* useKeyboardType */.getKeyboardType();
+  const keyboardType = require(4151) /* useKeyboardType */.getKeyboardType();
   let flag = keyboardType !== require(1579) /* KeyboardTypes */.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };

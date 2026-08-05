@@ -17,7 +17,7 @@ const result = require("createNativeStackNavigator").fileFinishedImporting("modu
 
 export default function ICYMICustomScoresModal() {
   const _require = createNativeStackNavigator();
-  let obj = _require(5574);
+  let obj = _require(5665);
   let closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -41,12 +41,12 @@ export default function ICYMICustomScoresModal() {
       const obj = { title: null, headerLeft: null };
       const intl = lib(1236).intl;
       obj[0] = intl.string(lib(1236).t.jVshKt);
-      obj[1] = lib(9127).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(10197)());
+      obj[1] = lib(8193).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(callback(9597)());
       return obj;
     },
     getComponent() {
-      return lib(15348).default;
+      return lib(15445).default;
     }
   };
   const items = [
@@ -55,11 +55,11 @@ export default function ICYMICustomScoresModal() {
       name: "guild",
       options(navigation) {
         const obj = { headerLeft: null };
-        obj[0] = lib(9127).getRenderModalBackImage(navigation.navigation);
+        obj[0] = lib(8193).getRenderModalBackImage(navigation.navigation);
         return obj;
       },
       getComponent() {
-        return lib(15349).default;
+        return lib(15446).default;
       }
     })
   ];

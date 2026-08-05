@@ -13,84 +13,36 @@ const require = arg1;
 function _fetchDefaultSoundsFromApi2() {
   const self = this;
   const tmp = callback(function*() {
-    if (c5 === 2) {
+    let callback2 = tmp3;
+    let c3 = 1;
+    const HTTP = outer1_0(outer1_2[5]).HTTP;
+    const obj1 = { url: null, rejectWithError: null };
+    obj1[0] = outer1_6.SOUNDBOARD_DEFAULT_SOUNDS;
+    obj1[1] = outer1_0(outer1_2[5]).rejectWithMigratedError();
+    yield HTTP.get(obj1);
+    if (1 === tmp7) {
+      c3 = 0;
+      callback2 = dependencyMap;
+      let obj3 = callback2(709);
+      obj3.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" });
+      const obj4 = callback(5863);
+      const tmp28 = new callback2(4185)(callback2);
+      const result = obj4.captureOrIgnoreApiError(tmp28);
+      let c5 = 3;
+    } else if (arg0 === 1) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let callback2 = tmp3;
-            let callback = tmp7;
-            callback = undefined;
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[5]).HTTP;
-            const obj1 = { url: null, rejectWithError: null };
-            obj1[0] = outer1_6.SOUNDBOARD_DEFAULT_SOUNDS;
-            obj1[1] = outer1_0(outer1_2[5]).rejectWithMigratedError();
-            c4 = 2;
-            c5 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            callback2 = dependencyMap;
-            let obj3 = callback2(709);
-            obj3.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" });
-            let obj4 = callback(5855);
-            const tmp28 = new callback2(4093)(callback2);
-            const result = obj4.captureOrIgnoreApiError(tmp28);
-            c5 = 3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            const body = arg1.body;
-            callback = body.map((body) => callback(tmp31[6]).soundboardSoundFromAPI(body, c5));
-            obj = callback2(709);
-            obj3 = { type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: null };
-            obj3[1] = callback;
-            obj.dispatch(obj3);
-            c3 = 0;
-          }
-          c3 = 0;
-          c5 = 3;
-          obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        }
-      } catch (tmp31) {
-        dependencyMap = tmp31;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp31;
-        } else {
-          c4 = tmp;
-        }
-      }
+      throw arg1;
+    } else if (arg0 !== 2) {
+      const body = arg1.body;
+      callback = body.map((body) => callback(tmp31[6]).soundboardSoundFromAPI(body, c5));
+      const obj = callback2(709);
+      obj3 = { type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: null };
+      obj3[1] = callback;
+      obj.dispatch(obj3);
+      c3 = 0;
     }
+    c3 = 0;
+    return arg1;
   });
   const _fetchDefaultSoundsFromApi2 = tmp;
   const apply = tmp.apply;
@@ -129,7 +81,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  let obj = SOUNDBOARD_SOUNDS_RECEIVED(8052);
+  let obj = SOUNDBOARD_SOUNDS_RECEIVED(5864);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -158,91 +110,37 @@ function _maybeFetchSoundboardSounds() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+      let sendRequest = tmp3;
+      let table = tmp2;
+      const _performance2 = performance;
+      let closure_0 = performance.now();
+      let tmp19 = !outer1_10;
+      if (!outer1_10) {
+        let disableAnalytics;
+        if (tmp30 != null) {
+          disableAnalytics = tmp30.disableAnalytics;
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let sendRequest = tmp3;
-              let table = tmp2;
-              let closure_0;
-              let callback;
-              table = undefined;
-              sendRequest = undefined;
-              const _performance2 = performance;
-              closure_0 = performance.now();
-              let tmp19 = !outer1_10;
-              if (!outer1_10) {
-                let disableAnalytics;
-                if (tmp30 != null) {
-                  disableAnalytics = tmp30.disableAnalytics;
-                }
-                callback = disableAnalytics;
-                if (disableAnalytics == null) {
-                  callback = false;
-                }
-                tmp19 = !callback;
-              }
-              callback = tmp19;
-              if (tmp19) {
-                outer1_10 = true;
-              }
-              const items = [outer1_12(), outer1_13()];
-              c4 = 1;
-              c5 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(items);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            table = arg1;
-            if (callback) {
-              const _performance = performance;
-              sendRequest = performance.now();
-              obj = callback(table[11]);
-              const obj3 = { elapsed_ms: null };
-              obj3[0] = sendRequest - closure_0;
-              obj.track(constants.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED, obj3);
-            }
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = table;
-            return obj4;
-          }
-        } catch (tmp22) {
-          c5 = tmp;
-          throw tmp22;
+        let callback = disableAnalytics;
+        if (disableAnalytics == null) {
+          callback = false;
         }
+        tmp19 = !callback;
       }
+      callback = tmp19;
+      if (tmp19) {
+        outer1_10 = true;
+      }
+      const items = [outer1_12(), outer1_13()];
+      table = yield Promise.all(items);
+      if (callback) {
+        const _performance = performance;
+        sendRequest = performance.now();
+        const obj = callback(table[11]);
+        const obj3 = { elapsed_ms: null };
+        obj3[0] = sendRequest - closure_0;
+        obj.track(constants.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED, obj3);
+      }
+      return table;
     })();
   });
   const _maybeFetchSoundboardSounds = tmp;
@@ -267,94 +165,23 @@ function _uploadSound() {
       let c3;
       let c4;
       let c5;
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp5;
-              c1 = tmp2;
-              let callback;
-              c1 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({ guildId: c0, name: c1, sound: c2, volume: c3, emojiId: c4, emojiName: c5 } = callback);
-              let closure_6;
-              c3 = 1;
-              c4 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj2 = { url: null, body: null, rejectWithError: null };
-              obj2[0] = closure_6.GUILD_SOUNDBOARD_SOUNDS(callback);
-              const obj3 = { name: null, sound: null, volume: null, emoji_id: null, emoji_name: null };
-              obj3[0] = c1;
-              obj3[1] = dependencyMap;
-              obj3[2] = c3;
-              obj3[3] = c4;
-              obj3[4] = c5;
-              obj2[1] = obj3;
-              obj2[2] = callback(530).rejectWithMigratedError();
-              c3 = 2;
-              c4 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.post(obj2);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_6 = arg1;
-            obj = callback(4646);
-            c4 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
-            return obj6;
-          }
-        } catch (tmp12) {
-          c4 = tmp;
-          throw tmp12;
-        }
-      }
+      c1 = tmp2;
+      ({ guildId: c0, name: c1, sound: c2, volume: c3, emojiId: c4, emojiName: c5 } = callback);
+      yield "ct";
+      const HTTP = callback(530).HTTP;
+      const obj2 = { url: null, body: null, rejectWithError: null };
+      obj2[0] = closure_6.GUILD_SOUNDBOARD_SOUNDS(callback);
+      const obj3 = { name: null, sound: null, volume: null, emoji_id: null, emoji_name: null };
+      obj3[0] = c1;
+      obj3[1] = dependencyMap;
+      obj3[2] = c3;
+      obj3[3] = c4;
+      obj3[4] = c5;
+      obj2[1] = obj3;
+      obj2[2] = callback(530).rejectWithMigratedError();
+      closure_6 = yield HTTP.post(obj2);
+      const obj = callback(4737);
+      return obj.soundboardSoundFromAPI(closure_6.body, callback);
     })();
     iter.next();
     return iter;
@@ -381,93 +208,22 @@ function _updateSound() {
       let c3;
       let c4;
       let c5;
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp5;
-              c1 = tmp2;
-              let callback;
-              c1 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({ guildId: c0, soundId: c1, name: c2, volume: c3, emojiId: c4, emojiName: c5 } = callback);
-              let closure_6;
-              c3 = 1;
-              c4 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj2 = { url: null, body: null, rejectWithError: null };
-              obj2[0] = closure_6.GUILD_SOUNDBOARD_SOUND(callback, c1);
-              const obj3 = { name: null, volume: null, emoji_id: null, emoji_name: null };
-              obj3[0] = dependencyMap;
-              obj3[1] = c3;
-              obj3[2] = c4;
-              obj3[3] = c5;
-              obj2[1] = obj3;
-              obj2[2] = callback(530).rejectWithMigratedError();
-              c3 = 2;
-              c4 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.patch(obj2);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_6 = arg1;
-            obj = callback(4646);
-            c4 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
-            return obj6;
-          }
-        } catch (tmp12) {
-          c4 = tmp;
-          throw tmp12;
-        }
-      }
+      c1 = tmp2;
+      ({ guildId: c0, soundId: c1, name: c2, volume: c3, emojiId: c4, emojiName: c5 } = callback);
+      yield "ct";
+      const HTTP = callback(530).HTTP;
+      const obj2 = { url: null, body: null, rejectWithError: null };
+      obj2[0] = closure_6.GUILD_SOUNDBOARD_SOUND(callback, c1);
+      const obj3 = { name: null, volume: null, emoji_id: null, emoji_name: null };
+      obj3[0] = dependencyMap;
+      obj3[1] = c3;
+      obj3[2] = c4;
+      obj3[3] = c5;
+      obj2[1] = obj3;
+      obj2[2] = callback(530).rejectWithMigratedError();
+      closure_6 = yield HTTP.patch(obj2);
+      const obj = callback(4737);
+      return obj.soundboardSoundFromAPI(closure_6.body, callback);
     })();
     iter.next();
     return iter;
@@ -605,7 +361,7 @@ function _fetchSoundGuildData() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = handleSoundCreateOrUpdate;
-            const tmp25 = new callback(4093)(callback);
+            const tmp25 = new callback(4185)(callback);
             throw tmp25;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -620,7 +376,7 @@ function _fetchSoundGuildData() {
             lib = arg1;
             let discoverableGuild = null;
             if (null != lib.body) {
-              obj = lib(6692);
+              obj = lib(5865);
               discoverableGuild = obj.makeDiscoverableGuild(lib.body);
             }
             c5 = 0;

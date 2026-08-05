@@ -32,7 +32,7 @@ function VanityMetric(label) {
     str = "%";
   }
   const sum = result + str;
-  if (typeof label === "y") {
+  if (typeof label === "string") {
     const intl = tmp2(1236).intl;
     obj = { name: null, value: null };
     obj[0] = label;
@@ -46,7 +46,7 @@ function VanityMetric(label) {
   }
   style = [createCacheKey().connectedAccountVanityMetadata, ];
   style[1] = style;
-  return callback(require(4189) /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style, children });
+  return callback(require(4281) /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style, children });
 }
 function VanityItem(style) {
   let imageAlt;
@@ -60,7 +60,7 @@ function VanityItem(style) {
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataItem: arr[1] } = tmp);
   items[2] = style;
   obj = { source: imageSrc, accessibilityLabel: imageAlt, style: tmp.connectedAccountVanityMetadataItemIcon, disableColor: true };
-  const items1 = [callback(require(1297) /* Button */.Icon, obj), callback(require(4189) /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label })];
+  const items1 = [callback(require(1297) /* Button */.Icon, obj), callback(require(4281) /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label })];
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -73,7 +73,7 @@ function VanityTag(arg0) {
   const items = [, , ];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataTag: arr[1] } = tmp);
   items[2] = style;
-  return callback(View, { style: items, children: callback(require(4189) /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) });
+  return callback(View, { style: items, children: callback(require(4281) /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) });
 }
 function VanityDate(arg0) {
   let date;
@@ -86,10 +86,10 @@ function VanityDate(arg0) {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { value: null, name: null };
   const tmp = createCacheKey();
-  obj[0] = require(5000) /* officialApplicationIds */.getCreatedAtDate(date, locale);
+  obj[0] = require(5091) /* officialApplicationIds */.getCreatedAtDate(date, locale);
   obj[1] = label;
   obj[3] = intl.format(require(1236) /* getSystemLocale */.t.HLoinF, obj);
-  return callback(require(4189) /* Text */.Text, obj);
+  return callback(require(4281) /* Text */.Text, obj);
 }
 ({ MetadataFields: c4, MetadataItemTypes: c5 } = OperatorTypes);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -220,7 +220,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     obj = { count: null };
     obj[0] = NumberResult1;
     obj[1] = intl.format(require(1236) /* getSystemLocale */.t.Y88M5x, obj);
-    obj[2] = importDefault(10038);
+    obj[2] = importDefault(10963);
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj[3] = intl2.string(require(1236) /* getSystemLocale */.t.HKUEZo);
     items.push(callback(VanityItem, obj, tmp2.STEAM_ITEM_COUNT_DOTA2));
@@ -232,7 +232,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const obj2 = { count: null };
     obj2[0] = NumberResult2;
     obj1[1] = intl3.format(require(1236) /* getSystemLocale */.t.Y88M5x, obj2);
-    obj1[2] = importDefault(10039);
+    obj1[2] = importDefault(10964);
     const intl4 = require(1236) /* getSystemLocale */.intl;
     obj1[3] = intl4.string(require(1236) /* getSystemLocale */.t.C8p1Sh);
     items.push(callback(VanityItem, obj1, tmp2.STEAM_ITEM_COUNT_TF2));

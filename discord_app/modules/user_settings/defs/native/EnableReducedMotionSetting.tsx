@@ -18,7 +18,7 @@ createToggle = {
     if (arg0) {
       str = "reduce";
     }
-    const result = require(13521) /* setFontSize */.setPrefersReducedMotion(str);
+    const result = require(13617) /* setFontSize */.setPrefersReducedMotion(str);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

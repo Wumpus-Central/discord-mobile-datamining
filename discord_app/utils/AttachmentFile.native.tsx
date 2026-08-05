@@ -70,13 +70,13 @@ function _getAttachmentFile() {
               return obj3;
             } else {
               items = arg1;
-              logger = lib(4727).getAttachmentPayload(lib, callback, items.name);
+              logger = lib(4818).getAttachmentPayload(lib, callback, items.name);
               c6 = 2;
-              const obj10 = lib(4727);
+              const obj10 = lib(4818);
               c7 = 4;
               c8 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(4735).getFileSize(items.uri);
+              obj4[0] = lib(4826).getFileSize(items.uri);
               return obj4;
             }
           } else {
@@ -229,10 +229,10 @@ export const cancelGetAttachmentFile = function cancelGetAttachmentFile(found) {
 export const fileIsInAppDir = function fileIsInAppDir(uri) {
   const replaced = uri.replace(/^file:\/\//, "");
   try {
-    let startsWithResult = "" !== require(4735) /* openImagePickerUnhandled */.getAppDir();
+    let startsWithResult = "" !== require(4826) /* openImagePickerUnhandled */.getAppDir();
     if (startsWithResult) {
-      startsWithResult = replaced.startsWith(require(4735) /* openImagePickerUnhandled */.getAppDir());
-      const tmpResult = require(4735) /* openImagePickerUnhandled */;
+      startsWithResult = replaced.startsWith(require(4826) /* openImagePickerUnhandled */.getAppDir());
+      const tmpResult = require(4826) /* openImagePickerUnhandled */;
     }
     return startsWithResult;
   } catch (tmp4) {

@@ -18,7 +18,7 @@ export const TableRowArrow = function TableRowArrow() {
   const tmp = importDefault;
   const tmp3 = importDefault(1348)("TableRowArrow");
   const tmp5 = jsx;
-  obj[2] = tmp(tmp3 ? 5232 : 5233);
-  obj[3] = require(4606) /* IconSizes */.IconSizes.CUSTOM;
-  return tmp5(importDefault(4606), obj);
+  obj[2] = tmp(tmp3 ? 5323 : 5324);
+  obj[3] = require(4697) /* IconSizes */.IconSizes.CUSTOM;
+  return tmp5(importDefault(4697), obj);
 };

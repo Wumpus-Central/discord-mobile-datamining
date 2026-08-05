@@ -10,7 +10,7 @@ export default function RowCheckmark(selected) {
   if (selected.selected) {
     const obj = { color: null };
     obj[0] = importDefault(712).unsafe_rawColors.BRAND_500;
-    tmp = jsx(require(5213) /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: null });
+    tmp = jsx(require(5304) /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: null });
   }
   return tmp;
 };

@@ -75,7 +75,7 @@ export const getTotalStickerCountForTier = function getTotalStickerCountForTier(
     const features = guild.features;
     if (features.has(closure_11.MORE_STICKERS)) {
       if (premiumTier === BoostedGuildTiers.TIER_3) {
-        let MAX_STICKER_SLOTS = require(4087) /* PremiumGuildOverrides */.PremiumGuildOverrides.MAX_STICKER_SLOTS;
+        let MAX_STICKER_SLOTS = require(4179) /* PremiumGuildOverrides */.PremiumGuildOverrides.MAX_STICKER_SLOTS;
       }
       return MAX_STICKER_SLOTS;
     }
@@ -212,7 +212,7 @@ export const getTiers = (arg0) => {
   const obj20 = { title: null, description: null, icon: null };
   const intl27 = tmp2(1236).intl;
   const obj21 = { fileSize: null };
-  let tmp2Result = tmp2(4088);
+  let tmp2Result = tmp2(4180);
   obj21[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_2].limits.fileSize / 1024, { useKibibytes: true });
   obj20[0] = intl27.formatToPlainString(tmp2(1236).t.t95LnM, obj21);
   const intl28 = tmp2(1236).intl;
@@ -299,7 +299,7 @@ export const getTiers = (arg0) => {
   const obj38 = { title: null, description: null, icon: null };
   const intl46 = tmp2(1236).intl;
   const obj39 = { fileSize: null };
-  tmp2Result = tmp2(4088);
+  tmp2Result = tmp2(4180);
   obj39[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, { useKibibytes: true });
   obj38[0] = intl46.formatToPlainString(tmp2(1236).t.t95LnM, obj39);
   const intl47 = tmp2(1236).intl;
@@ -427,7 +427,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = importDefault(3775)().diff(importDefault(3775)(arg0), "months");
+  let num = importDefault(3867)().diff(importDefault(3867)(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -435,7 +435,7 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = importDefault(3775)();
+  const obj = importDefault(3867)();
   const keys = Object.keys(table);
   for (const item10021 of keys) {
     let tmp4 = table;
@@ -472,8 +472,8 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
   currentUser = currentUser.getCurrentUser();
   if (!tmp3) {
-    const guildBoostSlots = require(4089) /* _fetchAppliedGuildBoostsForGuild */.fetchGuildBoostSlots();
-    const obj2 = require(4089) /* _fetchAppliedGuildBoostsForGuild */;
+    const guildBoostSlots = require(4181) /* _fetchAppliedGuildBoostsForGuild */.fetchGuildBoostSlots();
+    const obj2 = require(4181) /* _fetchAppliedGuildBoostsForGuild */;
   }
   let values = importDefault(12).values(tmp2.boostSlots);
   let prop;
@@ -497,7 +497,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     const intl7 = require(1236) /* getSystemLocale */.intl;
     const obj = { premiumGroupProductName: null };
     obj[0] = callback();
-    return intl7.formatToPlainString(tmp7(2807)["5xN/C1"], obj);
+    return intl7.formatToPlainString(tmp7(2867)["5xN/C1"], obj);
   } else {
     const _Object = Object;
     values = Object.values(tmp2.boostSlots);
@@ -529,8 +529,8 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
         } else if (null == premiumTypeSubscription.renewalMutations) {
           return null;
         } else {
-          const numPremiumGuildSubscriptions = importAll(3839).getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
-          const obj5 = importAll(3839);
+          const numPremiumGuildSubscriptions = importAll(3931).getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
+          const obj5 = importAll(3931);
           if (obj6.getNumPremiumGuildSubscriptions(premiumTypeSubscription.additionalPlans) > numPremiumGuildSubscriptions) {
             const intl3 = require(1236) /* getSystemLocale */.intl;
             let stringResult = intl3.string(require(1236) /* getSystemLocale */.t.x25mZR);
@@ -744,7 +744,7 @@ export const getMaxEmojiSlots = function getMaxEmojiSlots(stateFromStores) {
   return Math.max(tmp, sum);
 };
 export const getNumberOfAppliedBoostsNeededForTier = function getNumberOfAppliedBoostsNeededForTier(id) {
-  return Math.max(0, AppliedGuildBoostsRequiredForBoostedGuildTier[arg1] - require(4100) /* useGuildAppliedBoostCount */.getGuildPowerupsBoostCount(id.id).available);
+  return Math.max(0, AppliedGuildBoostsRequiredForBoostedGuildTier[arg1] - require(4192) /* useGuildAppliedBoostCount */.getGuildPowerupsBoostCount(id.id).available);
 };
 export const isGuildBoostSlotCanceled = function isGuildBoostSlotCanceled(subscription) {
   subscription = subscription.subscription;
@@ -772,7 +772,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4119).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4211).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= outer1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

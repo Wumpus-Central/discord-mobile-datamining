@@ -18,9 +18,9 @@ function startBackgroundTask(arg0) {
       obj = { title: null, content: null, priority: null, type: null, usesGateway: false };
       obj[0] = title;
       obj[1] = content;
-      obj[2] = tmp(6047).ServiceNotificationPriority.MEDIUM;
-      obj[3] = tmp(6047).ServiceNotificationType.FILE_UPLOAD;
-      return importDefault(6046).addServiceHandler(obj);
+      obj[2] = tmp(7137).ServiceNotificationPriority.MEDIUM;
+      obj[3] = tmp(7137).ServiceNotificationType.FILE_UPLOAD;
+      return importDefault(7136).addServiceHandler(obj);
     }
   } else {
     const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
@@ -34,8 +34,8 @@ if (!set.isAndroid()) {
 function endBackgroundTask(c7) {
   if (c7 !== num) {
     if (obj.isAndroid()) {
-      importDefault(6046).removeServiceHandler(c7);
-      const obj2 = importDefault(6046);
+      importDefault(7136).removeServiceHandler(c7);
+      const obj2 = importDefault(7136);
     } else {
       const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
       DCDBackgroundTaskManager.endBackgroundTask(c7);

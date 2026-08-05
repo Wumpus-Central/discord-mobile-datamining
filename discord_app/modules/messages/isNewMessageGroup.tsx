@@ -18,7 +18,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
     } else {
       let REPLY = constants;
       if (type.type > constants.DEFAULT) {
-        const tmp35 = importDefault(5927)(content);
+        const tmp35 = importDefault(5799)(content);
         let tmp36 = !tmp35;
         if (tmp35) {
           type = type.type;
@@ -27,7 +27,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
         }
         let tmp32 = tmp36;
       } else {
-        tmp32 = importDefault(5927)(content);
+        tmp32 = importDefault(5799)(content);
         if (!tmp32) {
           let tmp7 = content.author.id !== type.author.id;
           if (!tmp7) {
@@ -46,10 +46,10 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                 }
                 let tmp15 = !tmp14;
                 if (tmp14) {
-                  const isSameDayResult = require(3863) /* resetCache */.isSameDay(content.timestamp, type.timestamp);
+                  const isSameDayResult = require(3955) /* resetCache */.isSameDay(content.timestamp, type.timestamp);
                   let tmp18 = !isSameDayResult;
                   if (isSameDayResult) {
-                    const isWithinIntervalResult = tmp16(3863).isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                    const isWithinIntervalResult = tmp16(3955).isWithinInterval(content.timestamp, type.timestamp, closure_6);
                     let tmp21 = !isWithinIntervalResult;
                     if (isWithinIntervalResult) {
                       const hasFlagResult2 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
@@ -97,10 +97,10 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                       tmp21 = tmp24;
                     }
                     tmp18 = tmp21;
-                    const tmp16Result = tmp16(3863);
+                    const tmp16Result = tmp16(3955);
                   }
                   tmp15 = tmp18;
-                  const obj2 = require(3863) /* resetCache */;
+                  const obj2 = require(3955) /* resetCache */;
                   tmp16 = require;
                 }
                 tmp11 = tmp15;

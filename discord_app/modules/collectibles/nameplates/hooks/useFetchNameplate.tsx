@@ -2,7 +2,7 @@
 const result = require("getNameplateData").fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {
-  let obj = require(8048) /* useFetchCollectiblesProduct */;
+  let obj = require(10029) /* useFetchCollectiblesProduct */;
   const fetchCollectiblesProduct = obj.useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;

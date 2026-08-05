@@ -49,7 +49,7 @@ Object.defineProperty(prototype, "validContentScanVersion", {
       const _Math = Math;
       return Math.min(num2, 4);
     }
-    obj = require(5867) /* apexExperiment */;
+    obj = require(5820) /* apexExperiment */;
   },
   set: undefined
 });

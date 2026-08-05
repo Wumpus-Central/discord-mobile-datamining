@@ -11,8 +11,8 @@ export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAge
   if (tmp) {
     if (!freshTeenActivityWithMap.isLoading()) {
       if (obj.canRefetch()) {
-        importDefault(5800).initialPageLoad();
-        const obj2 = importDefault(5800);
+        importDefault(6907).initialPageLoad();
+        const obj2 = importDefault(6907);
       }
     }
     obj = freshTeenActivityWithMap;

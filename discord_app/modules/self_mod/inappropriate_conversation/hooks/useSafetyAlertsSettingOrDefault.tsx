@@ -22,8 +22,8 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     return flag;
   });
   const obj2 = require(589) /* initialize */;
-  let userIsTeen = require(7713) /* useUserIsTeen */.useUserIsTeen();
-  const obj3 = require(7713) /* useUserIsTeen */;
+  let userIsTeen = require(7846) /* useUserIsTeen */.useUserIsTeen();
+  const obj3 = require(7846) /* useUserIsTeen */;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

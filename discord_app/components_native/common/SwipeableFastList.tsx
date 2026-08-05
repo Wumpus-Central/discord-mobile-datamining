@@ -104,7 +104,7 @@ prototype["render"] = function render() {
   const obj = {};
   const merged = Object.assign(this.props);
   ({ handleScroll: obj.onScroll, renderRow: obj.renderItem } = this);
-  return jsx(importDefault(7683), {});
+  return jsx(importDefault(7818), {});
 };
 SwipeableFastList.defaultProps = {
   bounceFirstRowOnMount: true,

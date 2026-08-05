@@ -50,15 +50,15 @@ export default {
         const mediaEngine = supported.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = require(5006) /* selectVoiceChannelAdditional */;
+      const obj5 = require(5097) /* selectVoiceChannelAdditional */;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },
   disconnect() {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != remoteSessionId) {
-      importAll(9048).remoteDisconnect(remoteSessionId);
-      const obj = importAll(9048);
+      importAll(10773).remoteDisconnect(remoteSessionId);
+      const obj = importAll(10773);
     }
     const voiceChannel = this.selectVoiceChannel(null);
   }

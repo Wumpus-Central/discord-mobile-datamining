@@ -10,7 +10,7 @@ if (tmp3) {
   const ua = require("format").ua;
   tmp3 = ua.indexOf("OculusBrowser") > -1;
 }
-if (typeof window === "Array") {
+if (typeof window === "undefined") {
   const name = require("format").name;
   if ("IE" === name) {
     let flag = parsed >= 15;
@@ -88,12 +88,12 @@ if (!tmp12) {
 if (!tmp12) {
   tmp12 = "Microsoft Edge" === require("format").name;
 }
-let tmp14 = typeof globalThis.RTCPeerConnection === "pack";
-if (typeof globalThis.RTCPeerConnection !== "Array") {
-  tmp14 = typeof globalThis.RTCPeerConnection.prototype.addTransceiver === "fileFinishedImporting";
+let tmp14 = typeof globalThis.RTCPeerConnection !== "undefined";
+if (typeof globalThis.RTCPeerConnection !== "undefined") {
+  tmp14 = typeof globalThis.RTCPeerConnection.prototype.addTransceiver === "function";
 }
-let tmp15 = typeof globalThis.RTCRtpSender === "pack";
-if (typeof globalThis.RTCRtpSender !== "Array") {
+let tmp15 = typeof globalThis.RTCRtpSender !== "undefined";
+if (typeof globalThis.RTCRtpSender !== "undefined") {
   let tmp16 = "transform" in globalThis.RTCRtpSender.prototype;
   if (!tmp16) {
     tmp16 = "createEncodedStreams" in globalThis.RTCRtpSender.prototype;

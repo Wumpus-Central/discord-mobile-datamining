@@ -6,7 +6,7 @@ let result = require("getDeviceMetadata").fileFinishedImporting("modules/local_p
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(5736).trackAppOpened("notification");
+    data(6843).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -40,7 +40,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const promise = data(tmp2[8])(tmp2[9], tmp2.paths);
       }
     }
-    let obj2 = data(5736);
+    let obj2 = data(6843);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

@@ -89,7 +89,7 @@ function _computeCategories(arg0) {
       } else {
         let tmp26 = require;
         let tmp27 = dependencyMap;
-        obj6 = require(9369) /* GuildNSFWContentLevel */;
+        obj6 = require(8601) /* GuildNSFWContentLevel */;
         let tmp28 = guild;
         if (obj6.shouldNSFWGateGuild(guild.id)) {
           let obj7 = { type: null, label: null, footer: null, emojis: null, isSectionNitroLocked: null };
@@ -126,7 +126,7 @@ function _computeCategories(arg0) {
     } else if (tmp3.UNICODE === type) {
       let tmp60 = importDefault;
       let tmp61 = dependencyMap;
-      let obj19 = importDefault(3834);
+      let obj19 = importDefault(3926);
       let tmp62 = nextResult;
       let byCategory = obj19.getByCategory(tmp2.name);
       if (isNativeEmojiPickerEnabled) {
@@ -235,7 +235,7 @@ function _computeSearchResults(emojis) {
   const obj1 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
   const set = new Set();
   const tmp2 = pushCategory;
-  obj1[3] = require(9351) /* initializeSearch */.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
+  obj1[3] = require(8563) /* initializeSearch */.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
   obj1[4] = constants2.PREMIUM_UPSELL;
   obj[1] = obj1;
   obj[2] = rowSize;

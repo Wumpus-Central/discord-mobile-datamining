@@ -142,9 +142,9 @@ export default function pollConnectionStats(on) {
     return applyArgumentsResult;
   }
   const dependencyMap = false;
-  on.on(_require(4290).MediaEngineEvent.Destroy, () => {
+  on.on(_require(4381).MediaEngineEvent.Destroy, () => {
     let c1 = true;
     return true;
   });
-  let timerId = setTimeout(pollStats, _require(4299).STATS_INTERVAL);
+  let timerId = setTimeout(pollStats, _require(4390).STATS_INTERVAL);
 };

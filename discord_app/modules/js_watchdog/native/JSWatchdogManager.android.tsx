@@ -232,7 +232,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_0 = undefined;
             c1 = undefined;
             if (null == outer1_0._timeoutId) {
-              if (null != outer1_1(16261)) {
+              if (null != outer1_1(16357)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj1 = { value: null, done: false };
@@ -253,7 +253,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_0._enabled = true;
               if (closure_0._pingCompleted) {
                 let checkForStallReportResult;
-                obj = outer1_1(16261);
+                obj = outer1_1(16357);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -286,7 +286,7 @@ prototype["stopWatchdog"] = function stopWatchdog() {
 prototype["reportStall"] = function reportStall(c1, c0, is_previous, _analyticsReportsRemaining) {
   let obj = importDefault(698);
   obj = {};
-  const merged = Object.assign(require(5736) /* getDeviceMetadata */.getDeviceMetadata());
+  const merged = Object.assign(require(6843) /* getDeviceMetadata */.getDeviceMetadata());
   obj.version = 1;
   obj.stall_time = c1.stallTime;
   obj.is_previous = is_previous;
@@ -332,7 +332,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             let closure_0 = tmp2;
             closure_0 = undefined;
             if (null != outer1_0._cachedSession) {
-              let obj1 = outer1_0(5734);
+              let obj1 = outer1_0(6840);
               if (!obj1.isSessionExpired(outer1_0._cachedSession)) {
                 const uuid = outer1_0._cachedSession.uuid;
                 c3 = 3;
@@ -341,7 +341,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(5726).getSession();
+            obj1[0] = outer1_0(6832).getSession();
             return obj1;
           }
         } else if (arg0 === 1) {

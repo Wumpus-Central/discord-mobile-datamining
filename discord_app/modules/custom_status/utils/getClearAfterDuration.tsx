@@ -8,7 +8,7 @@ export default function getClearAfterDuration(arg0) {
   if (arg0 === ClearAfterValues.TODAY) {
     DAY = importDefault(687).Millis.DAY;
   } else {
-    importDefault(38)(typeof DAY === "Object", "Invalid custom status clear timeout");
+    importDefault(38)(typeof DAY === "number", "Invalid custom status clear timeout");
   }
   return DAY;
 };

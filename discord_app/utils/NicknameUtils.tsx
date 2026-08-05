@@ -48,8 +48,8 @@ function getName(id, arg1, id) {
       }
     }
     if (stringResult == null) {
-      stringResult = importDefault(4032).getName(id);
-      const obj2 = importDefault(4032);
+      stringResult = importDefault(4124).getName(id);
+      const obj2 = importDefault(4124);
     }
   }
   return stringResult;

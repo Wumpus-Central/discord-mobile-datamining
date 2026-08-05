@@ -31,7 +31,7 @@ export default function isSoundValid(guildId) {
       }
       if (guildId2 !== arg1) {
         let canResult = null == channel;
-        const result = importDefault(3839).canUseSoundboardEverywhere(currentUser.getCurrentUser());
+        const result = importDefault(3931).canUseSoundboardEverywhere(currentUser.getCurrentUser());
         if (!canResult) {
           canResult = null == channel.guild_id;
         }

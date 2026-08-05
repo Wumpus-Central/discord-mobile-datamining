@@ -10,7 +10,7 @@ const pressable = createToggle.createPressable({
   onPress: require("navigateToDevTools").navigateToDevTools,
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(require(13655) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13655) /* DevToolsScreens */.PerformanceTestingScreens)];
+    const items = [...Object.values(require(13751) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13751) /* DevToolsScreens */.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true
@@ -24,7 +24,7 @@ const obj = {
   onPress: require("navigateToDevTools").navigateToDevTools,
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(require(13655) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13655) /* DevToolsScreens */.PerformanceTestingScreens)];
+    const items = [...Object.values(require(13751) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13751) /* DevToolsScreens */.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true

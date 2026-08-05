@@ -194,66 +194,17 @@ export default {
     let closure_0 = id;
     let closure_1 = arg1;
     return callback(function*() {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_0 = tmp4;
-              let obj2 = v0(6080);
-              v0 = 1;
-              dependencyMap = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj2.unarchiveThreadIfNecessary(outer1_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            const HTTP = outer1_0(530).HTTP;
-            const obj3 = { url: null, body: null, rejectWithError: null };
-            obj3[0] = outer1_5.CHANNEL(closure_0);
-            const obj4 = { applied_tags: null };
-            obj4[0] = v0;
-            obj3[1] = obj4;
-            obj3[2] = outer1_0(530).rejectWithMigratedError();
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = HTTP.patch(obj3);
-            return obj;
-          }
-        } catch (tmp8) {
-          dependencyMap = tmp;
-          throw tmp8;
-        }
-      }
+      let closure_0 = tmp4;
+      const obj2 = v0(7144);
+      yield obj2.unarchiveThreadIfNecessary(outer1_0);
+      const HTTP = outer1_0(530).HTTP;
+      const obj3 = { url: null, body: null, rejectWithError: null };
+      obj3[0] = outer1_5.CHANNEL(closure_0);
+      const obj4 = { applied_tags: null };
+      obj4[0] = v0;
+      obj3[1] = obj4;
+      obj3[2] = outer1_0(530).rejectWithMigratedError();
+      return HTTP.patch(obj3);
     })();
   },
   hideAdminOnboarding(channelId, hide) {
@@ -262,19 +213,19 @@ export default {
     obj.dispatch(obj);
   },
   markPostAsSeen(arg0, feedItemId, timestampMillis) {
-    const obj = require(9145) /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemSeen(require(9146) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = require(8218) /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemSeen(require(8219) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   markPostAsUnseen(arg0, feedItemId, timestampMillis) {
-    const obj = require(9145) /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemUnseen(require(9146) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = require(8218) /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemUnseen(require(8219) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
     if (IMMEDIATE_WITH_COOLDOWN === undefined) {
-      IMMEDIATE_WITH_COOLDOWN = require(9147) /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
+      IMMEDIATE_WITH_COOLDOWN = require(8220) /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
     }
-    const obj = require(9145) /* markAnalyticsFeedItemSeen */;
-    const result = obj.flushAnalyticsFeedItems(require(9146) /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
+    const obj = require(8218) /* markAnalyticsFeedItemSeen */;
+    const result = obj.flushAnalyticsFeedItems(require(8219) /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
   },
   searchForumPosts(guild_id, id, outer1_5, c1, c2) {
     let closure_0 = guild_id;
@@ -283,87 +234,40 @@ export default {
     const callback = c1;
     let closure_4 = c2;
     return callback(function*() {
-      if (c4 === 2) {
+      let closure_1 = tmp3;
+      let obj1 = { type: "FORUM_SEARCH_START", channelId: null };
+      obj1[1] = outer1_1;
+      outer1_1(709).dispatch(obj1);
+      let dependencyMap = 1;
+      const obj13 = outer1_1(7144);
+      yield obj13.searchThreads(outer1_0, outer1_1, dependencyMap, c3, c4);
+      if (1 === tmp7) {
+        dependencyMap = 0;
+        obj1 = outer1_1(709);
+        const obj3 = { type: "FORUM_SEARCH_FAILURE", channelId: null };
+        obj3[1] = closure_1;
+        obj1.dispatch(obj3);
         c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp3;
-              let length = tmp7;
-              length = undefined;
-              let obj1 = { type: "FORUM_SEARCH_START", channelId: null };
-              obj1[1] = outer1_1;
-              outer1_1(709).dispatch(obj1);
-              let dependencyMap = 1;
-              const obj13 = outer1_1(6080);
-              c3 = 2;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj13.searchThreads(outer1_0, outer1_1, dependencyMap, c3, c4);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              dependencyMap = 0;
-              obj1 = outer1_1(709);
-              const obj3 = { type: "FORUM_SEARCH_FAILURE", channelId: null };
-              obj3[1] = closure_1;
-              obj1.dispatch(obj3);
-              c4 = 3;
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              length = arg1;
-              const obj4 = { guildId: null, channelId: null, numSearchResults: null };
-              obj4[0] = length;
-              obj4[1] = closure_1;
-              obj4[2] = length.length;
-              outer1_0(6082).trackForumSearched(obj4);
-              const obj7 = outer1_0(6082);
-              const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
-              obj5[1] = closure_1;
-              obj5[2] = length;
-              outer1_1(709).dispatch(obj5);
-              dependencyMap = 0;
-              const obj9 = outer1_1(709);
-            }
-            dependencyMap = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp13) {
-          if (tmp4 === dependencyMap) {
-            c4 = tmp2;
-            throw tmp13;
-          } else {
-            c3 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const length = arg1;
+        const obj4 = { guildId: null, channelId: null, numSearchResults: null };
+        obj4[0] = length;
+        obj4[1] = closure_1;
+        obj4[2] = length.length;
+        outer1_0(7146).trackForumSearched(obj4);
+        const obj7 = outer1_0(7146);
+        const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
+        obj5[1] = closure_1;
+        obj5[2] = length;
+        outer1_1(709).dispatch(obj5);
+        dependencyMap = 0;
+        const obj9 = outer1_1(709);
       }
+      dependencyMap = 0;
+      return arg1;
     })();
   },
   updateForumSearchQuery(id, query) {

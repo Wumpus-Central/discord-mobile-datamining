@@ -37,7 +37,7 @@ prototype["fromServer"] = function fromServer(sku_id) {
   }
   const someResult = closure_5.some((rewardSkuId) => rewardSkuId.rewardSkuId === sku_id);
   let mapped;
-  const tmp5 = sku_id(4234)(prices);
+  const tmp5 = sku_id(4326)(prices);
   if (bundled_products != null) {
     mapped = bundled_products.map(fromServer.fromServer);
   }
@@ -56,7 +56,7 @@ prototype["fromServer"] = function fromServer(sku_id) {
     const _Date2 = Date;
     date1 = new Date(expires_at);
   }
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

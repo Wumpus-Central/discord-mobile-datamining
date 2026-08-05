@@ -25,11 +25,11 @@ function ClearInputButton(onPress) {
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
   obj = { source: null, style: null, size: null };
-  obj[0] = importDefault(9007);
+  obj[0] = importDefault(8279);
   obj[1] = createCacheKey().closeIcon;
   obj[2] = require(1297) /* Button */.Icon.Sizes.SMALL;
   obj[5] = callback(require(1297) /* Button */.Icon, obj);
-  return callback(require(4721) /* PressableBase */.PressableOpacity, obj);
+  return callback(require(4812) /* PressableBase */.PressableOpacity, obj);
 }
 function EditCustomStatusWithPreview(navigation) {
   navigation = navigation.navigation;
@@ -368,7 +368,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.Iuzg8R);
-      return callback3(callback(9127).GenericHeaderTitle, obj);
+      return callback3(callback(8193).GenericHeaderTitle, obj);
     };
     obj[2] = analyticsLocations(outer1_2[30]).getHeaderCloseButton(_prompt(outer1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
@@ -387,5 +387,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj[3] = obj;
-  return tmp2(analyticsLocations(5574).Navigator, obj);
+  return tmp2(analyticsLocations(5665).Navigator, obj);
 };

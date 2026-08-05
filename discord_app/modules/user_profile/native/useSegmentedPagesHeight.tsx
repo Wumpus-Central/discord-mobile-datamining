@@ -4,10 +4,10 @@ import noop from "noop";
 
 const require = arg1;
 let closure_5 = { code: "function useSegmentedPagesHeightTsx1(){const{pageHeights,visiblePageRange,fillHeight}=this.__closure;var _heights$lo,_heights$hi;const heights=pageHeights.get();const[lo,hi]=visiblePageRange.get();const contentHeight=Math.max((_heights$lo=heights[lo])!==null&&_heights$lo!==void 0?_heights$lo:0,(_heights$hi=heights[hi])!==null&&_heights$hi!==void 0?_heights$hi:0);const height=Math.max(contentHeight,fillHeight);return height>0?{height:height}:{};}" };
-let result = require("module_4054").fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
+let result = require("module_4146").fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
 
 export const usePageHeights = function usePageHeights() {
-  let obj = sharedValue(4054);
+  let obj = sharedValue(4146);
   sharedValue = obj.useSharedValue([]);
   let closure_1 = React.useRef([]);
   let items = [sharedValue];

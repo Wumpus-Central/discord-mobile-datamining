@@ -12,7 +12,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   const optional = chatInputRef.optional;
   let ref;
   const dependencyMap = arg1;
-  let obj = chatInputRef(15479);
+  let obj = chatInputRef(15576);
   obj = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
   const items = [threadSettingsDraft.parentChannelId];
@@ -68,8 +68,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   const stateFromStores = chatInputRef(589).useStateFromStores(items4, () => outer1_4.getChannel(threadSettingsDraft.parentChannelId));
   let str = "";
   if (null != stateFromStores) {
-    str = tmp(6186).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
-    const tmpResult = tmp(6186);
+    str = tmp(8165).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
+    const tmpResult = tmp(8165);
   }
   const intl = tmp(1236).intl;
   const string = intl.string;
@@ -80,7 +80,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
     stringResult = string(t.j3XWjD);
   }
   obj = { defaultValue: null, errorMessage: null, label: null, accessibilityLabel: null, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" };
-  obj[0] = threadSettingsDraft(5182)(ref);
+  obj[0] = threadSettingsDraft(5273)(ref);
   obj[1] = renderErrorResult;
   obj[2] = stringResult;
   obj[3] = stringResult;
@@ -101,7 +101,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   }
   obj[12] = str;
   obj[13] = arg1;
-  return jsx(chatInputRef(6730).TextInput, { defaultValue: null, errorMessage: null, label: null, accessibilityLabel: null, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" });
+  return jsx(chatInputRef(7713).TextInput, { defaultValue: null, errorMessage: null, label: null, accessibilityLabel: null, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" });
 }));
 const result = require("ME").fileFinishedImporting("modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx");
 

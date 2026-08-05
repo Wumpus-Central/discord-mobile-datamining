@@ -12,10 +12,10 @@ function SearchListSectionLabel(label) {
   label = label.label;
   let obj = { style: callback().spacer, children: null };
   let tmpResult = label;
-  if (typeof label !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof label === "string") {
     obj = { title: null };
     obj[0] = label;
-    tmpResult = tmp(require(5558) /* TableRowGroupTitle */.TableRowGroupTitle, obj);
+    tmpResult = tmp(require(5649) /* TableRowGroupTitle */.TableRowGroupTitle, obj);
   }
   obj[1] = tmpResult;
   return <View style={callback().spacer}>{null}</View>;
@@ -23,10 +23,10 @@ function SearchListSectionLabel(label) {
 function SearchListSectionSubLabel(subLabel) {
   subLabel = subLabel.subLabel;
   let obj = { style: callback().subLabel, children: null };
-  if (typeof subLabel === "y") {
+  if (typeof subLabel === "string") {
     obj = { variant: "text-xs/normal", color: "text-muted", children: null };
     obj[2] = subLabel;
-    let tmpResult = tmp(require(4189) /* Text */.Text, obj);
+    let tmpResult = tmp(require(4281) /* Text */.Text, obj);
   } else {
     const _Array = Array;
     tmpResult = subLabel;
@@ -61,11 +61,11 @@ function renderItem(item) {
     obj[0] = item.label;
     return <SearchListSectionSubLabel subLabel={null} />;
   } else if (tmp.SETTING_SEARCH_RESULT === type) {
-    return require(13701) /* GuildSelectDefaultIcon */.renderSettingSearchResultItem(item);
+    return require(13797) /* GuildSelectDefaultIcon */.renderSettingSearchResultItem(item);
   } else if (tmp.SECTION_ROW === type) {
-    return require(13701) /* GuildSelectDefaultIcon */.renderSettingItem(item);
+    return require(13797) /* GuildSelectDefaultIcon */.renderSettingItem(item);
   } else if (tmp.SECTION_ROW_PLACEHOLDER === type) {
-    obj = require(13701) /* GuildSelectDefaultIcon */;
+    obj = require(13797) /* GuildSelectDefaultIcon */;
     return obj.renderSettingSearchResultPlaceholderItem(item);
   }
 }
@@ -86,7 +86,7 @@ function keyExtractor(type) {
     }
   }
   let label = arg1;
-  if (typeof type.label !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof type.label === "string") {
     label = type.label;
   }
   return "" + type.type + "-" + label;
@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo((node) => {
   const items = [field, node];
   const memo = importAllResult.useMemo(() => node(outer1_2[12]).toSettingListItems(node, field), items);
   const ref = importAllResult.useRef(null);
-  let obj = node(14725);
+  let obj = node(14825);
   obj.useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   obj = { style: tmp.container, children: null };
   obj = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
@@ -121,7 +121,7 @@ const memoResult = importAllResult.memo((node) => {
   obj[5] = renderItem;
   obj[6] = memo;
   obj[7] = getItemType;
-  obj[1] = jsx(node(6679).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
+  obj[1] = jsx(node(7666).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
   return <View ref={ref} ListHeaderComponent={node.ListHeaderComponent} contentContainerStyle={null} scrollIndicatorInsets={null} keyExtractor={null} renderItem={null} data={null} getItemType={null} />;
 });
 const memoResult1 = importAllResult.memo((node) => {

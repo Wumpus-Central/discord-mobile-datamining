@@ -10,6 +10,6 @@ export const HomeDrawerAddServerRowExpandedChildren = function HomeDrawerAddServ
   obj = { variant: "text-md/medium", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.l5WIbf);
-  obj[0] = jsx(require(4189) /* Text */.Text, { variant: "text-md/medium", color: "text-default", children: null });
-  return jsx(require(14981) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", children: null });
+  obj[0] = jsx(require(4281) /* Text */.Text, { variant: "text-md/medium", color: "text-default", children: null });
+  return jsx(require(15302) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", children: null });
 };

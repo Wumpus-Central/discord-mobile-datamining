@@ -10,8 +10,8 @@ const memoResult = require("noop").memo((arg0) => {
   let primaryColor;
   let secondaryColor;
   ({ primaryColor, secondaryColor, fallbackBackground, containerStyle, children } = arg0);
-  const colors = require(8384) /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
-  return jsx(importDefault(4615), { colors, style, children });
+  const colors = require(8755) /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
+  return jsx(importDefault(4706), { colors, style, children });
 });
 const result = require("useUserProfileGradientColors").fileFinishedImporting("modules/user_profile/native/UserProfileGradientContainer.tsx");
 

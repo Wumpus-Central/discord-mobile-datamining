@@ -7,7 +7,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function ImageGraphic(source) {
   const tmp = callback();
-  return jsx(importDefault(5145), { source: source.src, style: callback().image, resizeMode: "contain", accessibilityElementsHidden: true });
+  return jsx(importDefault(5236), { source: source.src, style: callback().image, resizeMode: "contain", accessibilityElementsHidden: true });
 }
 function RiveGraphic(riveProps) {
   riveProps = riveProps.riveProps;

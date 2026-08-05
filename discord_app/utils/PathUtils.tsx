@@ -1,7 +1,7 @@
 // discord_app/utils/PathUtils.tsx
 const result = require("set").fileFinishedImporting("utils/PathUtils.tsx");
 
-export const pathJoin = function pathJoin(closure_1, closure_13) {
+export const pathJoin = function pathJoin(closure_1, closure_15) {
   const items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {

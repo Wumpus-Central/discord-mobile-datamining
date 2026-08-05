@@ -12,33 +12,33 @@ import { RelationshipTypes } from "ME";
 import set from "noop";
 
 const require = arg1;
-function _toPropertyKey(arg0) {
-  let StringResult = arg0;
-  if (typeof arg0 !== "window") {
-    StringResult = arg0;
-    if (arg0) {
+function _toPropertyKey(obj) {
+  let StringResult = obj;
+  if (typeof obj === "object") {
+    StringResult = obj;
+    if (obj) {
       const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
+      if (undefined !== obj[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(arg0, "string");
+          callResult = call(obj, "string");
         }
         StringResult = callResult;
-        if (typeof callResult !== "window") {
+        if (typeof callResult === "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(arg0);
+        StringResult = String(obj);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "e") {
+  if (typeof StringResult !== "symbol") {
     text = `${tmp}`;
   }
   return text;
@@ -438,7 +438,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
   self.onUpdate = onUpdate;
   let userSearchContext = null;
   if (flag) {
-    userSearchContext = importDefault(6170).getUserSearchContext((results) => {
+    userSearchContext = importDefault(7234).getUserSearchContext((results) => {
       results = results.results;
       let items;
       if (items.currentQuery === results.query) {
@@ -471,7 +471,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
         }
       }
     }, 20);
-    const obj = importDefault(6170);
+    const obj = importDefault(7234);
   }
   self.userSearchContext = userSearchContext;
   const subscription = importDefault(709).subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
@@ -533,7 +533,7 @@ prototype["unsubscribe"] = function unsubscribe() {
 };
 prototype["fetch"] = function fetch(toLocaleLowerCase) {
   const self = this;
-  let obj = require(5951) /* cleanString */;
+  let obj = require(7042) /* cleanString */;
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   if ("" === cleanStringResult) {
     const userSearchContext2 = self.userSearchContext;
@@ -542,8 +542,8 @@ prototype["fetch"] = function fetch(toLocaleLowerCase) {
     }
   } else {
     if (arg1) {
-      const members = importDefault(5108).requestMembers(null, cleanStringResult);
-      const obj2 = importDefault(5108);
+      const members = importDefault(5199).requestMembers(null, cleanStringResult);
+      const obj2 = importDefault(5199);
     }
     const userSearchContext = self.userSearchContext;
     if (userSearchContext != null) {
@@ -558,7 +558,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
   let self = this;
   self = this;
   let _require = toLocaleLowerCase;
-  let obj = _require(5951);
+  let obj = _require(7042);
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   _require = cleanStringResult;
   if (this.currentQuery === cleanStringResult) {
@@ -639,7 +639,7 @@ prototype["initializeUsersFromStores"] = function initializeUsersFromStores() {
 };
 prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   const self = this;
-  const all = importDefault(5947).getAll();
+  const all = importDefault(7038).getAll();
   return all.then((arg0) => {
     while (tmp !== undefined) {
       let tmp3 = self;
@@ -649,7 +649,7 @@ prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   });
 };
 prototype["updateUser"] = function updateUser(id) {
-  if (importDefault(5947).shouldUseCache) {
+  if (importDefault(7038).shouldUseCache) {
     return false;
   } else {
     const self = this;
@@ -658,7 +658,7 @@ prototype["updateUser"] = function updateUser(id) {
         const indexMap = self.indexMap;
         return indexMap.delete(id);
       }
-      obj = require(5951) /* cleanString */;
+      obj = require(7042) /* cleanString */;
     }
     const value = self.getItem(id);
     if (null == value) {
@@ -679,7 +679,7 @@ prototype["getItem"] = function getItem(closure_0) {
     return null;
   } else {
     const self = this;
-    names = require(5951) /* cleanString */.getNames(user);
+    names = require(7042) /* cleanString */.getNames(user);
     ({ nick, names } = names);
     let obj = { user: null, names: null, affinity: null, firstMatch: null };
     obj[0] = user;
@@ -693,9 +693,9 @@ prototype["getItem"] = function getItem(closure_0) {
       nick = isMatch(names, self.currentQuery, { contains: true });
     }
     obj[3] = nick;
-    const obj4 = require(5951) /* cleanString */;
+    const obj4 = require(7042) /* cleanString */;
     const tmp12 = require;
-    const relationshipType = require(5951) /* cleanString */.getRelationshipType(user.id);
+    const relationshipType = require(7042) /* cleanString */.getRelationshipType(user.id);
     if (relationshipType !== RelationshipTypes.FRIEND) {
       const gameFriendsForUser = authStore.getGameFriendsForUser(closure_0);
       if (gameFriendsForUser.length > 0) {

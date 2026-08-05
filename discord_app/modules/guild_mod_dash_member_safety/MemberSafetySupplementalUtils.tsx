@@ -228,8 +228,8 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
   }
 };
 export const useGetIntegrationIconString = function useGetIntegrationIconString(arg0) {
-  const obj = importDefault(4875);
-  const value = obj.get(require(5764) /* PlatformTypes */.useLegacyPlatformType(arg0));
+  const obj = importDefault(4966);
+  const value = obj.get(require(6871) /* PlatformTypes */.useLegacyPlatformType(arg0));
   let tmp5 = null;
   if (null != value) {
     const items = [, ];
@@ -238,10 +238,10 @@ export const useGetIntegrationIconString = function useGetIntegrationIconString(
     if (items.includes(arg0)) {
       let str = value.icon;
       const _HermesInternal = HermesInternal;
-      const tmp2Result = require(4039) /* AccessibilityAnnouncer */;
+      const tmp2Result = require(4131) /* AccessibilityAnnouncer */;
       str = "url('";
-      const combined = "url('" + require(4039) /* AccessibilityAnnouncer */.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
-      const tmp7 = require(4039) /* AccessibilityAnnouncer */.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
+      const combined = "url('" + require(4131) /* AccessibilityAnnouncer */.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
+      const tmp7 = require(4131) /* AccessibilityAnnouncer */.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
     }
   }
   return tmp5;

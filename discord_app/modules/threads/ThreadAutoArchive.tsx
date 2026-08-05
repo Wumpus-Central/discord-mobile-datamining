@@ -39,9 +39,9 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    const obj = importDefault(3775);
-    label = importDefault(3775).duration(arg0, "minutes").humanize();
-    const durationResult = importDefault(3775).duration(arg0, "minutes");
+    const obj = importDefault(3867);
+    label = importDefault(3867).duration(arg0, "minutes").humanize();
+    const durationResult = importDefault(3867).duration(arg0, "minutes");
   }
   return label;
 };

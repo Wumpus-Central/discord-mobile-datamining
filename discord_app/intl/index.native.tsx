@@ -55,7 +55,7 @@ obj = {
   $link(children) {
     let tmp;
     [tmp] = arg2;
-    return jsx(require(13256) /* IntlLink */.IntlLink, { target: tmp, children }, arg1);
+    return jsx(require(13352) /* IntlLink */.IntlLink, { target: tmp, children }, arg1);
   }
 };
 const reactFormatter = module_1274.makeReactFormatter(obj);

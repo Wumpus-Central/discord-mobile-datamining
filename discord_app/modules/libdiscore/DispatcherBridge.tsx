@@ -242,7 +242,7 @@ class DispatcherBridge {
 
           }, require("dispatcher").DispatchBand.Database);
           _default = require("getState").default;
-          f100651 = _default;
+          f100936 = _default;
           addChangeListenerResult = _default.addChangeListener(() => {
             if ("active" !== _default.getState()) {
               let _Date = Date;

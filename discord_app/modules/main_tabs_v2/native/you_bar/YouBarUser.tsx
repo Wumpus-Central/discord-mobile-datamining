@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   _require = tmp5;
-  let obj1 = _require(4054);
+  let obj1 = _require(4146);
   sharedValue = obj1.useSharedValue(isQuestRendered ? closure_8 : closure_7);
   const items1 = [!isQuestRendered, sharedValue];
   const effect = importAllResult.useEffect(() => {
@@ -47,8 +47,8 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   S.__closure = { nameMargin: sharedValue };
   S.__workletHash = 12063452832866;
   S.__initData = closure_12;
-  const animatedStyle = _require(4054).useAnimatedStyle(S);
-  let obj3 = sharedValue(4032);
+  const animatedStyle = _require(4146).useAnimatedStyle(S);
+  let obj3 = sharedValue(4124);
   const name = obj3.useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
@@ -57,26 +57,26 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
       obj = { isLargeAvatar: null, onPress: null };
       obj[0] = tmp5;
       obj[1] = isQuestRendered.onAvatarPress;
-      const items2 = [callback(tmp9(15280), obj), ];
+      const items2 = [callback(tmp9(15377), obj), ];
       obj1 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj1[0] = items3;
       const obj2 = { userId: null, username: null };
       obj2[0] = stateFromStores.id;
       obj2[1] = name;
-      obj1[1] = callback(tmp9(15281), obj2);
-      items2[1] = callback(tmp9(4054).View, obj1);
+      obj1[1] = callback(tmp9(15378), obj2);
+      items2[1] = callback(tmp9(4146).View, obj1);
       obj[1] = items2;
     }
     return tmp11(tmp12, obj);
   }
   obj3 = { style: items4, children: null };
   items4 = [tmp.youButton];
-  const items5 = [callback(sharedValue(15279), { isLarge: !isQuestRendered }), ];
+  const items5 = [callback(sharedValue(15376), { isLarge: !isQuestRendered }), ];
   const obj4 = { style: items6, children: null };
   items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj4[1] = callback(View, { style: tmp.placeholder });
-  items5[1] = callback(sharedValue(4054).View, obj4);
+  items5[1] = callback(sharedValue(4146).View, obj4);
   obj3[1] = items5;
   obj = obj3;
 });

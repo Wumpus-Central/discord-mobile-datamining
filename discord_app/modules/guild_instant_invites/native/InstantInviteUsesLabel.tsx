@@ -15,5 +15,5 @@ export default function InstantInviteUsesLabel(style) {
     combined = "" + uses + "/" + maxUses;
   }
   const children = ["Uses: ", combined];
-  return jsxs(require(4189) /* Text */.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
+  return jsxs(require(4281) /* Text */.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
 };

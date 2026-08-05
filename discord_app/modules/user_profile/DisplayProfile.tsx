@@ -114,7 +114,7 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(require(5901) /* items */.isGameWidget);
+      found = widgets.filter(require(6991) /* items */.isGameWidget);
     }
     return found;
   },
@@ -136,7 +136,7 @@ Object.defineProperty(prototype, "primaryColor", {
 });
 Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
   get: function canUsePremiumProfileCustomization() {
-    return importDefault(3839).isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+    return importDefault(3931).isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
   },
   set: undefined
 });
@@ -288,7 +288,7 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
   }
 };
 prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
-  let obj = require(7947) /* useAvatarsWithGuilds */;
+  let obj = require(8077) /* useAvatarsWithGuilds */;
   obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let bio;
@@ -300,7 +300,7 @@ prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
   return obj.getProfilePreviewValue(obj);
 };
 prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  let obj = require(7947) /* useAvatarsWithGuilds */;
+  let obj = require(8077) /* useAvatarsWithGuilds */;
   obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;

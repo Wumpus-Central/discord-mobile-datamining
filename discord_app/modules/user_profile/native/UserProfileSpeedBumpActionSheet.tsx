@@ -17,11 +17,11 @@ let unpackModuleId;
 const require = arg1;
 function InformationTable(speedBumpType) {
   let items;
-  let obj = { icon: importDefault(8365), text: null };
+  let obj = { icon: importDefault(8709), text: null };
   const intl = items(1236).intl;
   obj[1] = intl.string(items(1236).t.kcuWva);
   items = [obj, ];
-  obj = { icon: importDefault(8365), text: null };
+  obj = { icon: importDefault(8709), text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t.QxrDY1);
@@ -41,7 +41,7 @@ function InformationTable(speedBumpType) {
     obj[3] = icon.text;
     return outer1_12(items(outer1_2[14]).TableRow, obj, arg1);
   });
-  return callback2(items(5558).TableRowGroup, obj);
+  return callback2(items(5649).TableRowGroup, obj);
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: unpackModuleId } = ME);

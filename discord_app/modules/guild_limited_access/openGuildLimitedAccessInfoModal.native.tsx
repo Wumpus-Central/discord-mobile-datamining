@@ -9,7 +9,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_limited_a
 export default function openGuildLimitedAccessInfoModal(arg0) {
   const _require = arg0;
   Keyboard.dismiss();
-  let obj = _require(4052);
+  let obj = _require(4144);
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
@@ -27,5 +27,5 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
       });
     }
   };
-  importDefault(4533).openLazy(obj);
+  importDefault(4624).openLazy(obj);
 };

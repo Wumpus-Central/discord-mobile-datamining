@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 export const useAnimationDelayedAutoFocus = function useAnimationDelayedAutoFocus(autoFocus, onPress) {
   const _require = autoFocus;
   const dependencyMap = onPress;
-  const awaitAnimationCompletion = _require(11353).useAwaitAnimationCompletion();
+  const awaitAnimationCompletion = _require(11462).useAwaitAnimationCompletion();
   let closure_3 = awaitAnimationCompletion.useRef(false);
   const items = [autoFocus, onPress, awaitAnimationCompletion];
   const effect = awaitAnimationCompletion.useEffect(() => {

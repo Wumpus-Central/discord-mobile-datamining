@@ -37,9 +37,9 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = importDefault(3775)();
-    const tmp5 = importDefault(3775)(arg0);
-    return require(3863) /* resetCache */.isWithinInterval(tmp4, tmp5, arg1);
+    const tmp4 = importDefault(3867)();
+    const tmp5 = importDefault(3867)(arg0);
+    return require(3955) /* resetCache */.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
   }
@@ -52,11 +52,11 @@ function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
   let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(6042)(obj);
+  const tmp3 = file(7132)(obj);
   const require = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
   obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(5718).receiveMessage(channel_id, tmp3, true, obj);
+  file(6826).receiveMessage(channel_id, tmp3, true, obj);
   if (null != file) {
     file(709).wait(() => file(outer1_2[16]).restoreFailedUpload(tmp3.id, file));
     const tmpResult = file(709);
@@ -81,80 +81,27 @@ function _resumeSendingMessage() {
     return (function*(arg0) {
       let c1;
       let file;
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let reinjectEphemerals = tmp5;
-              let channel = tmp2;
-              c1 = undefined;
-              channel = undefined;
-              reinjectEphemerals = undefined;
-              ({ file, sendMessageOptions: c1 } = lib);
-              channel = outer1_7.getChannel(lib.channel_id);
-              if (null == channel) {
-                c5 = 3;
-                return { value: false, done: true };
-              } else {
-                let items;
-                if (file != null) {
-                  items = file.items;
-                }
-                c1 = items;
-                if (items == null) {
-                  c1 = undefined;
-                }
-                reinjectEphemerals = c1;
-                c4 = 1;
-                c5 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = lib(outer1_2[18])(outer1_2[17], outer1_2.paths);
-                return obj1;
-              }
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            obj = {};
-            const merged = Object.assign(lib);
-            const tmp16 = new c5(obj);
-            arg1.default(channel, tmp16, reinjectEphemerals, c1);
-            c5 = 3;
-            return { value: true, done: true };
-          }
-        } catch (tmp26) {
-          c5 = tmp;
-          throw tmp26;
-        }
+      let reinjectEphemerals = tmp5;
+      let channel = tmp2;
+      ({ file, sendMessageOptions: c1 } = lib);
+      channel = outer1_7.getChannel(lib.channel_id);
+      if (null == channel) {
+        return false;
       }
+      if (file != null) {
+        const items = file.items;
+      }
+      c1 = items;
+      if (items == null) {
+        c1 = undefined;
+      }
+      reinjectEphemerals = c1;
+      yield lib(outer1_2[18])(outer1_2[17], outer1_2.paths);
+      const obj = {};
+      const merged = Object.assign(lib);
+      const tmp16 = new c5(obj);
+      arg1.default(channel, tmp16, reinjectEphemerals, c1);
+      return true;
     })();
   });
   const _resumeSendingMessage = tmp;
@@ -401,7 +348,7 @@ function _writeMessage(arg0, id) {
     channel_id = id.channel_id;
   }
   tmp2.verbose("_writeMessage", id, channel_id);
-  if (typeof _getMessages !== "fileFinishedImporting") {
+  if (typeof _getMessages !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const Storage = require(595) /* Storage */.Storage;
@@ -430,7 +377,7 @@ function _writeMessage(arg0, id) {
 class LocalMessageCacheManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f109621 = applyArgumentsResult;
+    f109901 = applyArgumentsResult;
     // PrivateIsIn (0x32)
     if (tmp) {
       str = "Cannot initialize private field twice.";
@@ -725,10 +672,10 @@ class LocalMessageCacheManager extends tmp3 {
           c11 = undefined;
           ({ content: c3, id: c4, channel_id: c5, tts: c6, nonce: c7, timestamp: c8, type: c9, flags: c10, state: c11 } = message2);
           outer1_10(() => {
-            if (typeof outer1_16 !== "fileFinishedImporting") {
+            if (typeof outer1_16 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof outer1_15 !== "fileFinishedImporting") {
+            if (typeof outer1_15 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             const Storage = outer1_0(outer1_2[10]).Storage;
@@ -747,7 +694,7 @@ class LocalMessageCacheManager extends tmp3 {
             obj[5] = c4;
             obj[6] = c7;
             let toISOStringResult = c8;
-            if (typeof c8 !== "y") {
+            if (typeof c8 !== "string") {
               toISOStringResult = c8.toISOString();
             }
             obj[7] = toISOStringResult;
@@ -794,9 +741,9 @@ class LocalMessageCacheManager extends tmp3 {
           continue;
         }
       };
-      f109621 = undefined;
+      f109901 = undefined;
       closure_1 = applyArgumentsResult;
-      f109621 = _rehydrateFailedMessages((arg0) => {
+      f109901 = _rehydrateFailedMessages((arg0) => {
         let closure_0 = arg0;
         let c2 = 0;
         let c1 = 0;
@@ -911,10 +858,10 @@ class LocalMessageCacheManager extends tmp3 {
           c11 = undefined;
           ({ content: c3, id: c4, channel_id: c5, tts: c6, nonce: c7, timestamp: c8, type: c9, flags: c10, state: c11 } = message2);
           callback(() => {
-            if (typeof outer1_16 !== "fileFinishedImporting") {
+            if (typeof outer1_16 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof outer1_15 !== "fileFinishedImporting") {
+            if (typeof outer1_15 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             const Storage = outer1_0(outer1_2[10]).Storage;
@@ -933,7 +880,7 @@ class LocalMessageCacheManager extends tmp3 {
             obj[5] = c4;
             obj[6] = c7;
             let toISOStringResult = c8;
-            if (typeof c8 !== "y") {
+            if (typeof c8 !== "string") {
               toISOStringResult = c8.toISOString();
             }
             obj[7] = toISOStringResult;
@@ -972,10 +919,10 @@ class LocalMessageCacheManager extends tmp3 {
             obj[0] = file;
             file = tmp2;
             outer1_10(() => {
-              if (typeof outer1_16 !== "fileFinishedImporting") {
+              if (typeof outer1_16 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof outer1_15 !== "fileFinishedImporting") {
+              if (typeof outer1_15 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const Storage = tmp2(outer1_2[10]).Storage;
@@ -1008,10 +955,10 @@ class LocalMessageCacheManager extends tmp3 {
         const obj = { file: file.file };
         const messageId = file.messageId;
         callback(() => {
-          if (typeof outer1_16 !== "fileFinishedImporting") {
+          if (typeof outer1_16 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (typeof outer1_15 !== "fileFinishedImporting") {
+          if (typeof outer1_15 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const Storage = tmp2(outer1_2[10]).Storage;
@@ -1031,10 +978,10 @@ class LocalMessageCacheManager extends tmp3 {
         const obj = { state: constants.SEND_FAILED };
         messageId = messageId.messageId;
         callback(() => {
-          if (typeof outer1_16 !== "fileFinishedImporting") {
+          if (typeof outer1_16 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (typeof outer1_15 !== "fileFinishedImporting") {
+          if (typeof outer1_15 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const Storage = tmp2(outer1_2[10]).Storage;

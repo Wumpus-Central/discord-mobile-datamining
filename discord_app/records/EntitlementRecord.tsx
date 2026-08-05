@@ -75,7 +75,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (fulfillment_status == null) {
     fulfillment_status = null;
   }
-  if (typeof EntitlementRecord !== "fileFinishedImporting") {
+  if (typeof EntitlementRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp22 = new EntitlementRecord(str, tmp18, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);
@@ -130,7 +130,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
         if (!obj.canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly)) {
           return false;
         }
-        obj = importDefault(3839);
+        obj = importDefault(3931);
       }
       const _Date = Date;
       const date = new Date();
@@ -162,7 +162,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
   return false;
 };
 prototype["isFulfilled"] = function isFulfilled() {
-  return this.fulfillmentStatus === require(4236) /* set */.EntitlementTenantFulfillmentStatus.FULFILLED;
+  return this.fulfillmentStatus === require(4328) /* set */.EntitlementTenantFulfillmentStatus.FULFILLED;
 };
 const result = require("createdAt").fileFinishedImporting("records/EntitlementRecord.tsx");
 

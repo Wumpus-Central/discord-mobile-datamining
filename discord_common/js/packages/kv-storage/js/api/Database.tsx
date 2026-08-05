@@ -25,65 +25,16 @@ Database["open"] = function open(arg0, arg1) {
   let closure_0 = arg0;
   let closure_1 = arg1;
   return callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        table = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = outer1_5;
-            const Host = outer1_0(table[1]).Host;
-            c1 = 1;
-            table = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = Host.open(outer1_0, c1);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = new closure_0(arg1);
-          return obj;
-        }
-      } catch (tmp13) {
-        table = tmp;
-        throw tmp13;
-      }
-    }
+    let closure_0 = outer1_5;
+    const Host = outer1_0(table[1]).Host;
+    yield Host.open(outer1_0, c1);
+    return new closure_0(arg1);
   })();
 };
 Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
   const Host = obj(1916).Host;
   const openSyncUnsafeResult = Host.openSyncUnsafe(arg0, arg1);
-  if (typeof Database !== "fileFinishedImporting") {
+  if (typeof Database !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(Database.prototype);
@@ -293,7 +244,7 @@ prototype["state"] = function state() {
 prototype["transaction"] = function transaction(arg0, arg1) {
   const self = this;
   let closure_1 = arg1;
-  if (typeof DatabaseTransaction !== "fileFinishedImporting") {
+  if (typeof DatabaseTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(DatabaseTransaction.prototype);

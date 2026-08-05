@@ -1,16 +1,16 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType";
-import importDefaultResult from "module_10598";
+import importDefaultResult from "module_5884";
 
 let VoiceChannelEffectAnimationType;
 let c4;
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [require("module_10588")];
-const items1 = [require("module_10589"), require("module_10590"), require("module_10591"), require("module_10592"), require("module_10593"), require("module_10594"), require("module_10595"), require("module_10596"), require("module_10597"), require("module_10598"), require("module_10599"), require("module_10600"), require("module_10601"), require("module_10602"), require("module_10603"), require("module_10604"), require("module_10605"), require("module_10606"), require("module_10607"), require("module_10608"), require("module_10609")];
+const items = [require("module_5874")];
+const items1 = [require("module_5875"), require("module_5876"), require("module_5877"), require("module_5878"), require("module_5879"), require("module_5880"), require("module_5881"), require("module_5882"), require("module_5883"), require("module_5884"), require("module_5885"), require("module_5886"), require("module_5887"), require("module_5888"), require("module_5889"), require("module_5890"), require("module_5891"), require("module_5892"), require("module_5893"), require("module_5894"), require("module_5895")];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
-const memoizeResult = require("module_10598").memoize((arg0) => {
+const memoizeResult = require("module_5884").memoize((arg0) => {
   let closure_0 = arg0;
   return new Promise((arg0) => {
     let closure_0 = arg0;
@@ -35,7 +35,7 @@ const memoizeResult = require("module_10598").memoize((arg0) => {
     };
   });
 });
-let result = require("module_10588").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
+let result = require("module_5874").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
 
 export const CUSTOM_CALL_SOUND_ANIMATION_RANGE = { start: 10, end: 15 };
 export const AnimationTypeToAnimations = obj;
@@ -67,13 +67,13 @@ export const getEffectUrl = function getEffectUrl(emoji) {
     obj[2] = tmp;
     return importDefault(1416).getEmojiURL(obj);
   } else {
-    obj = importDefault(3834);
+    obj = importDefault(3926);
     const result = obj.convertSurrogateToName(emoji.name, false);
-    const byName = importDefault(3834).getByName(result);
+    const byName = importDefault(3926).getByName(result);
     let str = "";
     if (null != byName) {
-      str = importDefault(3838).getURL(byName.surrogates);
-      const tmp2Result = importDefault(3838);
+      str = importDefault(3930).getURL(byName.surrogates);
+      const tmp2Result = importDefault(3930);
     }
     return str;
   }

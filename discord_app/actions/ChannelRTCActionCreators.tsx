@@ -33,9 +33,9 @@ export default {
     }
     let obj = importDefault(698);
     obj = { video_layout: layout };
-    const merged = Object.assign(require(4388) /* collectGuildAnalyticsMetadata */.collectVoiceAnalyticsMetadata(channelId));
+    const merged = Object.assign(require(4479) /* collectGuildAnalyticsMetadata */.collectVoiceAnalyticsMetadata(channelId));
     obj.track(constants2.VIDEO_LAYOUT_TOGGLED, obj);
-    const obj3 = require(4388) /* collectGuildAnalyticsMetadata */;
+    const obj3 = require(4479) /* collectGuildAnalyticsMetadata */;
     obj = { type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout, appContext: APP };
     importDefault(709).dispatch(obj);
   },

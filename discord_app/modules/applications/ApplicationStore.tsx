@@ -128,16 +128,16 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
   let applicationId;
   let lastUsedMs;
   if (null != botUserIdToAppUsage) {
-    if (typeof botUserIdToAppUsage.botUserIdToAppUsage !== "window") {
+    if (typeof botUserIdToAppUsage.botUserIdToAppUsage === "object") {
       for (const key10002 in arg0.botUserIdToAppUsage) {
         let tmp3 = key10002;
         ({ applicationId, lastUsedMs } = arg0.botUserIdToAppUsage[key10002]);
-        let tmp = typeof applicationId === "y";
-        if (typeof applicationId !== "__FORMATJS_LISTFORMAT_DATA__") {
+        let tmp = typeof applicationId === "string";
+        if (typeof applicationId === "string") {
           tmp = applicationId.length > 0;
         }
         if (tmp) {
-          tmp = typeof lastUsedMs === "Object";
+          tmp = typeof lastUsedMs === "number";
         }
         if (tmp) {
           tmp = lastUsedMs > 0;

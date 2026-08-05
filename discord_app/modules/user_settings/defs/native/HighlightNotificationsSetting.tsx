@@ -23,7 +23,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
   getComponent() {
-    return require(14501) /* Row */.default;
+    return require(14601) /* Row */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

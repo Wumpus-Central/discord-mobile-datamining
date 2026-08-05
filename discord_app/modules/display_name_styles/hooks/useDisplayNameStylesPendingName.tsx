@@ -8,8 +8,8 @@ const result = require("nameFromUser").fileFinishedImporting("modules/display_na
 export const useDisplayNameStylesPendingName = function useDisplayNameStylesPendingName(stateFromStores, guildId) {
   const _require = stateFromStores;
   const importDefault = guildId;
-  const name = importDefault(4032).useName(stateFromStores);
-  const obj = importDefault(4032);
+  const name = importDefault(4124).useName(stateFromStores);
+  const obj = importDefault(4124);
   const items = [handleFormOpen, trackCommunicationDisabled];
   const items1 = [guildId, stateFromStores];
   let str = _require(589).useStateFromStores(items, () => {

@@ -27,7 +27,7 @@ function LegalDisclaimer() {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS };
   obj[2] = intl.format(require(1236) /* getSystemLocale */.t.FSPTDI, obj);
-  return callback(require(4189) /* Text */.Text, obj);
+  return callback(require(4281) /* Text */.Text, obj);
 }
 function SocialBadge(onPress) {
   let iconSource;
@@ -44,10 +44,10 @@ function SocialBadge(onPress) {
   obj[1] = num;
   obj[2] = onPress;
   obj = { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true };
-  const items = [callback(require(1297) /* Button */.Icon, obj), callback(require(4189) /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
+  const items = [callback(require(1297) /* Button */.Icon, obj), callback(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
     obj = { source: null, style: null };
-    obj[0] = importDefault(10751);
+    obj[0] = importDefault(10711);
     obj[1] = tmp.socialBadgeArrow;
     tmp5Result = callback(require(1297) /* Button */.Icon, obj);
   }

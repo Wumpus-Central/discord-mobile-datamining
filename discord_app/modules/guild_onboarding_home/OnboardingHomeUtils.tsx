@@ -14,7 +14,7 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 
 export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id) {
   const _require = guild_id;
-  const tmp = importDefault(5663)(guild_id);
+  const tmp = importDefault(5754)(guild_id);
   importDefault = tmp;
   const items = [ensureGuildLoaded, createGuildRecordFromRust, initialize];
   const items1 = [guild_id, tmp];
@@ -111,7 +111,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           }
           return hasItem;
         } else {
-          let result = tmp14(5126).isGuildOnboardingSettingsAvailable(id);
+          let result = tmp14(5217).isGuildOnboardingSettingsAvailable(id);
           if (result) {
             const features = guild.features;
             result = features.has(constants.GUILD_ONBOARDING);

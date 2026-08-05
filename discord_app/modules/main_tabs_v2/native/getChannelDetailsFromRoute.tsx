@@ -6,12 +6,12 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const coerceChannelRouteResult = require(4044) /* navigationToRootTabHelper */.coerceChannelRoute(currentRoute);
+  const coerceChannelRouteResult = require(4136) /* navigationToRootTabHelper */.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
     const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
   } else if (flag) {
-    const coerceGuildsRouteResult = tmp(4044).coerceGuildsRoute(currentRoute);
+    const coerceGuildsRouteResult = tmp(4136).coerceGuildsRoute(currentRoute);
     if (null != coerceGuildsRouteResult) {
       const params = coerceGuildsRouteResult.params;
       let guildId;
@@ -34,6 +34,6 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items3 = [undefined, undefined];
     return items3;
   }
-  const obj = require(4044) /* navigationToRootTabHelper */;
+  const obj = require(4136) /* navigationToRootTabHelper */;
   tmp = require;
 };

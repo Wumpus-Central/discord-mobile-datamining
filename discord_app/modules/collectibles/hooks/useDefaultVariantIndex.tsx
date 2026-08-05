@@ -15,7 +15,7 @@ export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
       const variants = product.variants;
       num = Math.max(0, variants.findIndex((skuId) => !set.has(skuId.skuId)));
     }
-    tmpResult = _require(5814);
+    tmpResult = _require(6921);
   }
   return num;
 };

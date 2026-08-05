@@ -21,17 +21,17 @@ function reset() {
   let c15 = false;
 }
 function handleUserStoreChange() {
-  const tmp = !importDefault(3839).canUseClientThemes(currentUser.getCurrentUser());
+  const tmp = !importDefault(3931).canUseClientThemes(currentUser.getCurrentUser());
   if (tmp === c14) {
     return false;
   } else {
     c14 = tmp;
   }
-  const obj = importDefault(3839);
+  const obj = importDefault(3931);
 }
 function handleSelectivelySyncedStoreChange() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = require(3866) /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = require(3958) /* explicitContentFromProto */.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     if (null == backgroundGradientPresetId) {
       if (null == c3) {
@@ -56,7 +56,7 @@ function handleSameAsDeviceThemeToggle() {
 }
 function handleUserSettingsProtoStoreUpdate() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = require(3866) /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = require(3958) /* explicitContentFromProto */.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     let result = useSystemTheme.useSystemTheme !== SystemThemeState.ON;
     if (!result) {
@@ -66,8 +66,8 @@ function handleUserSettingsProtoStoreUpdate() {
       result = handleThemeChange.isSameAsDeviceThemeEnabled();
     }
     if (!result) {
-      require(4035) /* setSystemTheme */.setUseSystemTheme(SystemThemeState.OFF);
-      const tmpResult = require(4035) /* setSystemTheme */;
+      require(4127) /* setSystemTheme */.setUseSystemTheme(SystemThemeState.OFF);
+      const tmpResult = require(4127) /* setSystemTheme */;
     }
     if (null != backgroundGradientPresetId) {
       let tmp13 = null == tmp12;
@@ -167,8 +167,8 @@ Object.defineProperty(prototype, "gradientPreset", {
 prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
   if (null != this.gradientPreset) {
-    linearGradientForBackgroundGradient = require(4036) /* getThemeForColor */.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
-    const obj = require(4036) /* getThemeForColor */;
+    linearGradientForBackgroundGradient = require(4128) /* getThemeForColor */.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
+    const obj = require(4128) /* getThemeForColor */;
   }
   return linearGradientForBackgroundGradient;
 };
@@ -228,9 +228,9 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
               let c15 = true;
             }
           }
-          tmp6Result = tmp6(4032);
+          tmp6Result = tmp6(4124);
         }
-        obj2 = require(4009) /* UNSAFE_isDismissibleContentDismissed */;
+        obj2 = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
         tmp6 = require;
       }
     }

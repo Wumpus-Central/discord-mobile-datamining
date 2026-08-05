@@ -60,7 +60,7 @@ function updateSpeaker(arg0) {
     if (null != lastActiveStream) {
       tmp21 = tmp20;
       if (null == tmp20) {
-        const participant1 = obj.getParticipant(closure_2, require(4257) /* isStreamKey */.encodeStreamKey(lastActiveStream));
+        const participant1 = obj.getParticipant(closure_2, require(4348) /* isStreamKey */.encodeStreamKey(lastActiveStream));
         let id;
         if (participant1 != null) {
           id = participant1.id;
@@ -73,7 +73,7 @@ function updateSpeaker(arg0) {
         if (!result1) {
           tmp21 = id;
         }
-        const obj2 = require(4257) /* isStreamKey */;
+        const obj2 = require(4348) /* isStreamKey */;
       }
     }
     tmp2 = tmp21;

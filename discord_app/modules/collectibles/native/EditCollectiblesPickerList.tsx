@@ -14,7 +14,7 @@ let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }
 obj = { paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 };
 obj[3] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-let closure_8 = importAllResult.memo((children) => <closure_5 style={callback().header}>{jsx(require(4189) /* Text */.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}</closure_5>);
+let closure_8 = importAllResult.memo((children) => <closure_5 style={callback().header}>{jsx(require(4281) /* Text */.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}</closure_5>);
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
 export const EditCollectiblesPickerList = function EditCollectiblesPickerList(sections) {

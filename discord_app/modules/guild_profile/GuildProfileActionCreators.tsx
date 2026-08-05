@@ -16,66 +16,15 @@ function _fetchGuildTopGames() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp2;
-              let closure_1 = tmp5;
-              let lib;
-              const HTTP = lib(outer1_2[6]).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_9.GUILD_TOP_GAMES(lib);
-              obj1[1] = lib(outer1_2[6]).rejectWithMigratedError();
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            lib = arg1;
-            obj = lib(table[7]);
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = obj.buildTopGamesFromServer(lib.body.top_games);
-            return obj4;
-          }
-        } catch (tmp11) {
-          c4 = tmp;
-          throw tmp11;
-        }
-      }
+      const table = tmp2;
+      let closure_1 = tmp5;
+      const HTTP = lib(outer1_2[6]).HTTP;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_9.GUILD_TOP_GAMES(lib);
+      obj1[1] = lib(outer1_2[6]).rejectWithMigratedError();
+      lib = yield HTTP.get(obj1);
+      const obj = lib(table[7]);
+      return obj.buildTopGamesFromServer(lib.body.top_games);
     })();
   });
   const _fetchGuildTopGames = tmp;
@@ -180,8 +129,8 @@ export const saveGuildProfile = function saveGuildProfile(outer1_0, name) {
     const HTTP = _require(530).HTTP;
     obj = { url: null, body: null, rejectWithError: null };
     obj[0] = closure_9.GUILD_PROFILE(outer1_0);
-    obj[1] = _require(5188).buildGuildProfileUpdateForServer(name);
-    const obj4 = _require(5188);
+    obj[1] = _require(5279).buildGuildProfileUpdateForServer(name);
+    const obj4 = _require(5279);
     obj[2] = _require(530).rejectWithMigratedError();
     const obj5 = _require(530);
     const patchResult = HTTP.patch(obj);
@@ -260,9 +209,9 @@ export const fetchGuildTopGames = function fetchGuildTopGames() {
   }
   return applyArgumentsResult;
 };
-export const trackGuildProfileViewed = function trackGuildProfileViewed(enabled, bottomSheetRef) {
-  const tmp = null != selfMember.getSelfMember(enabled);
+export const trackGuildProfileViewed = function trackGuildProfileViewed(guildId, analyticsLocations) {
+  const tmp = null != selfMember.getSelfMember(guildId);
   let obj = importDefault(698);
-  obj = { guild_id: enabled, location_stack: bottomSheetRef, is_member: tmp, has_join_request: null != request.getRequest(enabled) };
+  obj = { guild_id: guildId, location_stack: analyticsLocations, is_member: tmp, has_join_request: null != request.getRequest(guildId) };
   obj.track(constants.GUILD_PROFILE_VIEWED, obj);
 };

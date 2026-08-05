@@ -32,7 +32,7 @@ const memoResult = require("noop").memo(function VoiceOrStageSummaryRow(arg0) {
   let dependencyMap;
   let closure_3;
   let c4;
-  let tmp3 = importDefault(15825)();
+  let tmp3 = importDefault(15921)();
   dependencyMap = tmp3;
   const size = tmp3.voiceOrStageSummaryRow.size;
   closure_3 = Math.max(users.length - max, 0);
@@ -102,12 +102,12 @@ const memoResult = require("noop").memo(function VoiceOrStageSummaryRow(arg0) {
     let obj2 = { size: null, style: null, source: null };
     obj2[0] = max(1297).Icon.Sizes.CUSTOM;
     obj2[1] = { height: 14, width: 14 };
-    obj2[2] = importDefault(15518);
+    obj2[2] = importDefault(15615);
     const items4 = [c4(max(1297).Icon, obj2), ];
     let obj3 = { variant: "text-sm/bold", style: null, children: null };
     obj3[1] = { marginLeft: 4 };
     obj3[2] = audienceCount;
-    items4[1] = c4(max(4189).Text, obj3);
+    items4[1] = c4(max(4281).Text, obj3);
     obj1[1] = items4;
     obj[1] = tmp5(tmp6, obj1);
     tmp8Result = tmp8(tmp6, obj);

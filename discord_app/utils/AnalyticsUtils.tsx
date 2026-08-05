@@ -29,18 +29,18 @@ function expandEventProperties(arg0) {
   let obj2 = obj;
   if (null == obj.location) {
     if (null == obj.source) {
-      tmp.client_performance_cpu = importDefault(5964).getCurrentCPUUsagePercent();
-      const obj6 = importDefault(5964);
-      tmp.client_performance_memory = importDefault(5964).getCurrentMemoryUsageKB();
-      const obj7 = importDefault(5964);
-      tmp.cpu_core_count = importDefault(5964).getCPUCoreCount();
+      tmp.client_performance_cpu = importDefault(7055).getCurrentCPUUsagePercent();
+      const obj6 = importDefault(7055);
+      tmp.client_performance_memory = importDefault(7055).getCurrentMemoryUsageKB();
+      const obj7 = importDefault(7055);
+      tmp.cpu_core_count = importDefault(7055).getCPUCoreCount();
       tmp.accessibility_features = getAccessibilityFeatures();
       tmp.rendered_locale = obj2(1236).intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
-      const obj8 = importDefault(5964);
-      const processUptime = importDefault(5964).getProcessUptime();
+      const obj8 = importDefault(7055);
+      const processUptime = importDefault(7055).getProcessUptime();
       if (null != processUptime) {
         const _Math2 = Math;
         tmp.uptime_process_renderer = Math.floor(processUptime);
@@ -73,7 +73,7 @@ function expandEventProperties(arg0) {
       const source = obj.source;
       obj = {};
       const merged = Object.assign(callback(obj, closure_5));
-      if (typeof source === "y") {
+      if (typeof source === "string") {
         obj = { source: null };
         obj[0] = source;
         let obj1 = obj;
@@ -88,7 +88,7 @@ function expandEventProperties(arg0) {
     const _location = obj.location;
     obj2 = {};
     const merged2 = Object.assign(callback(obj, closure_4));
-    if (typeof _location === "y") {
+    if (typeof _location === "string") {
       const obj3 = { location: null };
       obj3[0] = _location;
       let obj4 = obj3;
@@ -116,7 +116,7 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
 function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require(13276) /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require(13372) /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
     let obj = importDefault(1208);
     obj = { category: "analytics", message: null };
@@ -124,13 +124,13 @@ function addBreadcrumb(arg0) {
     obj.addBreadcrumb(obj);
   }
 }
-function expandLocation(arg0) {
-  if (typeof arg0 === "y") {
+function expandLocation(str) {
+  if (typeof str === "string") {
     let obj = { location: null };
-    obj[0] = arg0;
+    obj[0] = str;
   } else {
     obj = { location: null, location_page: null, location_section: null, location_object: null, location_object_type: null };
-    ({ page: obj2[0], page: obj2[1], section: obj2[2], object: obj2[3], objectType: obj2[4] } = arg0);
+    ({ page: obj2[0], page: obj2[1], section: obj2[2], object: obj2[3], objectType: obj2[4] } = str);
   }
   return obj;
 }

@@ -10,8 +10,8 @@ obj = {
   colors: require("mapValues")(SemanticColors, (arg0, arg1) => ({ [closure_7]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: require("mapValues")(Shadows, (arg0) => {
-    let f67183 = arg0;
-    f67183 = (shadowOffset) => {
+    let f67366 = arg0;
+    f67366 = (shadowOffset) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
@@ -20,34 +20,34 @@ obj = {
     };
     let shadowOffset = {
       resolve(isAndroid) {
-        return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f67366(f67366[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       }
     };
-    f67183 = (shadowColorAndroid) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
+    f67366 = (shadowColorAndroid) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
     const shadowColor = {
       resolve(isAndroid) {
-        return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f67366(f67366[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       }
     };
-    f67183 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f67183 = (shadowRadius) => shadowRadius.shadowRadius;
-    f67183 = (elevation) => elevation.elevation;
+    f67366 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f67366 = (shadowRadius) => shadowRadius.shadowRadius;
+    f67366 = (elevation) => elevation.elevation;
     return {
       shadowOffset,
       shadowColor,
       shadowOpacity: {
         resolve(isAndroid) {
-          return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67366(f67366[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67366(f67366[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       elevation: {
         resolve(isAndroid) {
-          return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67366(f67366[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       }
     };
@@ -77,8 +77,8 @@ obj = {
 };
 obj = {
   isSemanticColor(backgroundColor) {
-    let tmp = typeof backgroundColor === "ay";
-    if (typeof backgroundColor !== "window") {
+    let tmp = typeof backgroundColor === "object";
+    if (typeof backgroundColor === "object") {
       tmp = null !== backgroundColor;
     }
     if (tmp) {
@@ -92,7 +92,7 @@ obj = {
   resolveSemanticColor(theme, TEXT_FEEDBACK_CRITICAL, semanticColorContextFromThemeContext) {
     let tmp = (function sanitizeTheme(theme) {
       let tmp = theme;
-      if (typeof theme !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof theme === "string") {
         const formatted = theme.toUpperCase();
         if (formatted in table) {
           tmp = table[formatted];

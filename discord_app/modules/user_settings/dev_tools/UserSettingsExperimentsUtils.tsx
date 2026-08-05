@@ -12,7 +12,7 @@ function matchesDeep(item10014, item10021) {
       }
     }
   } else {
-    if (typeof item10014 !== "window") {
+    if (typeof item10014 === "object") {
       if (null !== item10014) {
         const _Object = Object;
         const values = Object.values(item10014);
@@ -27,7 +27,7 @@ function matchesDeep(item10014, item10021) {
         }
       }
     }
-    if (typeof item10014 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof item10014 === "string") {
       const formatted = item10014.toLowerCase();
       if (formatted.includes(item10021.toLowerCase())) {
         return true;
@@ -146,6 +146,6 @@ export const getBestMatches = function getBestMatches(arg0, str) {
       continue;
     }
     const found1 = items.filter((arg0) => undefined !== arg0);
-    return importDefault(4343)(found1.reverse());
+    return importDefault(4434)(found1.reverse());
   }
 };

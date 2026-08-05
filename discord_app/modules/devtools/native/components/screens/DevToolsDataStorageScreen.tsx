@@ -4,7 +4,7 @@ import importAllResult from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "styles";
 import { PersistedStore } from "getClass";
 import fetchFingerprint from "fetchFingerprint";
-import { jsx } from "module_9250";
+import { jsx } from "module_8337";
 import createCacheKey from "createCacheKey";
 
 let require = arg1;
@@ -14,9 +14,9 @@ function DevToolsPersistedStoresActionSheet(store) {
   let obj = { header: null, children: null };
   obj = { title: null };
   obj[0] = store.getName();
-  obj[0] = jsx(store(5246).BottomSheetTitleHeader, { title: null });
+  obj[0] = jsx(store(5337).BottomSheetTitleHeader, { title: null });
   obj = { hasIcons: false, children: null };
-  obj[1] = jsx(store(5557).ActionSheetRow, {
+  obj[1] = jsx(store(5648).ActionSheetRow, {
     variant: "danger",
     label: "Clear persisted store",
     subLabel: "App restart required to re-init the cleared store",
@@ -26,8 +26,8 @@ function DevToolsPersistedStoresActionSheet(store) {
       close();
     }
   });
-  obj[1] = jsx(store(5557).ActionSheetRow.Group, { hasIcons: false, children: null });
-  return jsx(store(5555).ActionSheet, { hasIcons: false, children: null });
+  obj[1] = jsx(store(5648).ActionSheetRow.Group, { hasIcons: false, children: null });
+  return jsx(store(5646).ActionSheet, { hasIcons: false, children: null });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -36,7 +36,7 @@ obj[0] = obj;
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
 obj[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = importAllResult.memo(() => jsx(require(5224) /* TableRowInner */.TableRow, {
+let closure_10 = importAllResult.memo(() => jsx(require(5315) /* TableRowInner */.TableRow, {
   label: "Disable Database",
   start: true,
   onPress() {
@@ -63,14 +63,14 @@ let closure_11 = importAllResult.memo(() => {
     combined = "Handle: " + stateFromStores.handle;
   }
   obj[3] = combined;
-  return jsx(require(5224) /* TableRowInner */.TableRow, { label: str, start: true, end: true, subLabel: null });
+  return jsx(require(5315) /* TableRowInner */.TableRow, { label: str, start: true, end: true, subLabel: null });
 });
-let closure_12 = importAllResult.memo(() => jsx(require(5224) /* TableRowInner */.TableRow, {
+let closure_12 = importAllResult.memo(() => jsx(require(5315) /* TableRowInner */.TableRow, {
   label: "Disable + Remove Database",
   onPress() {
     const result = callback(1923).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
     const obj = callback(1923);
-    callback(3894).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    callback(3986).open({ key: "disable_database_and_remove", content: "Database has been removed." });
   }
 }));
 let closure_13 = importAllResult.memo(() => {
@@ -83,7 +83,7 @@ let closure_13 = importAllResult.memo(() => {
       navigation.navigate("cacheStats");
     }
   };
-  return jsx(_require(5224).TableRow, {
+  return jsx(_require(5315).TableRow, {
     label: "View Cache Stats",
     end: true,
     onPress() {

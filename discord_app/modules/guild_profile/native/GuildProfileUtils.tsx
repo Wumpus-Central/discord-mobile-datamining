@@ -16,7 +16,7 @@ export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfi
       guildIconURL = obj.getGuildIconURL(obj);
     }
   }
-  let brandColorPrimary = importDefault(7915)(guildIconURL, token);
+  let brandColorPrimary = importDefault(8045)(guildIconURL, token);
   brandColorPrimary = undefined;
   if (guildProfile != null) {
     brandColorPrimary = guildProfile.brandColorPrimary;
@@ -44,8 +44,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
     if (null == guildIconURL) {
       return null;
     } else {
-      require(7915) /* hasFetchedColors */.maybeFetchColors(guildIconURL);
-      const useColorStore = require(7915) /* hasFetchedColors */.useColorStore;
+      require(8045) /* hasFetchedColors */.maybeFetchColors(guildIconURL);
+      const useColorStore = require(8045) /* hasFetchedColors */.useColorStore;
       const tmp13 = useColorStore.getState().palette[guildIconURL];
       let first;
       if (tmp13 != null) {
@@ -58,9 +58,9 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[1] = tmp5;
         obj[2] = tmp6;
         const tmp3 = callback(first, 3);
-        const obj2 = tmp8(5813)(obj);
+        const obj2 = tmp8(6920)(obj);
         let num2 = 1;
-        ({ h, s, l } = tmp8(5813)(obj).toHsl());
+        ({ h, s, l } = tmp8(6920)(obj).toHsl());
         if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
           num2 = maybeApplyNoTextColorForLightCustomTheme.saturation;
         }
@@ -68,12 +68,12 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[0] = h;
         obj[1] = s * num2;
         obj[2] = l;
-        const toHslResult = tmp8(5813)(obj).toHsl();
-        return tmp8(5813)(obj).toHexString();
+        const toHslResult = tmp8(6920)(obj).toHsl();
+        return tmp8(6920)(obj).toHexString();
       } else {
         return null;
       }
-      const obj7 = require(7915) /* hasFetchedColors */;
+      const obj7 = require(8045) /* hasFetchedColors */;
     }
     const obj5 = importDefault(1416);
   }

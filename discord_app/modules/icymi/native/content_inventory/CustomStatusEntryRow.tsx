@@ -12,9 +12,9 @@ export default function CustomStatusEntryRow(content) {
   let visible;
   content = content.content;
   ({ renderForScreenshot, visible } = content);
-  let obj = require(15398) /* useReplyActions */;
+  let obj = require(15495) /* useReplyActions */;
   const replyActions = obj.useReplyActions({ content });
   ({ openEmojiPicker, openReplyActionSheet } = replyActions);
   obj = { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } };
-  return jsx(importDefault(15403), { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } });
+  return jsx(importDefault(15500), { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } });
 };

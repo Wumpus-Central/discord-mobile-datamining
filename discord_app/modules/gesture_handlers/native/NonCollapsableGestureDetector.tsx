@@ -14,5 +14,5 @@ export const NonCollapsableGestureDetector = function NonCollapsableGestureDetec
   const merged = Object.assign(callback(children, closure_2));
   obj = { style: closure_6, collapsable: false, children: children.children };
   obj.children = <View style={closure_6} collapsable={false}>{arg0.children}</View>;
-  return jsx(require(5277) /* Directions */.GestureDetector, { style: closure_6, collapsable: false, children: children.children });
+  return jsx(require(5368) /* Directions */.GestureDetector, { style: closure_6, collapsable: false, children: children.children });
 };

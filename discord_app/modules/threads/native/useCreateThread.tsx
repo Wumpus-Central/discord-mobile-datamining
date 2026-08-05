@@ -17,8 +17,8 @@ export default function useCreateThread(arg0) {
   let useDefaultThreadName;
   let analyticsLocations;
   ({ parentChannel, parentMessageId, threadSettings, privateThreadMode, location: _location, onThreadCreated, useDefaultThreadName } = arg0);
-  analyticsLocations = importDefault(5519)().analyticsLocations;
-  let obj = analyticsLocations(6186);
+  analyticsLocations = importDefault(5610)().analyticsLocations;
+  let obj = analyticsLocations(8165);
   obj = {
     parentChannel,
     parentMessageId,
@@ -60,99 +60,43 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
   const threadSettings = parentChannel.threadSettings;
   let analyticsLocations;
   ({ appliedTags, onThreadCreated } = parentChannel);
-  analyticsLocations = analyticsLocations(5519)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5610)().analyticsLocations;
   _require = undefined;
   _require = callback((arg0) => {
     let closure_0 = arg0;
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (effectiveKestrelLimit === 2) {
-        effectiveKestrelLimit = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+      let obj7 = tmp4;
+      obj7 = new analyticsLocations(outer2_2[10])();
+      const kestrelConfig = guildId(outer2_2[11]).getKestrelConfig({ location: "native.useCreateForumPost" });
+      const obj8 = guildId(outer2_2[11]);
+      const maxFileSizeResult = guildId(outer2_2[12]).maxFileSize(guildId.getGuildId());
+      const obj9 = guildId(outer2_2[12]);
+      obj7.on("progress", (currentSize) => {
+        if (currentSize.currentSize > c3) {
+          obj7.cancel();
+          let obj = outer2_1(8168);
+          obj = { channelId: null, uploads: null, draftType: null, resetState: true };
+          obj[0] = guildId.id;
+          obj[1] = guildId;
+          obj[2] = outer2_5.FirstThreadMessage;
+          obj.setUploads(obj);
+          obj = { file: null, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null };
+          obj[0] = currentSize;
+          obj[1] = tmp;
+          obj[2] = dependencyMap;
+          obj[3] = guildId.getGuildId();
+          obj[4] = obj7;
+          outer2_1(8170)(obj);
+          const tmp10 = outer2_1(8170);
         }
-      } else {
-        try {
-          effectiveKestrelLimit = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              effectiveKestrelLimit = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              effectiveKestrelLimit = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj7 = tmp4;
-              obj7 = undefined;
-              c2 = undefined;
-              effectiveKestrelLimit = undefined;
-              let noop;
-              obj7 = new analyticsLocations(outer2_2[10])();
-              const kestrelConfig = guildId(outer2_2[11]).getKestrelConfig({ location: "native.useCreateForumPost" });
-              const obj8 = guildId(outer2_2[11]);
-              const maxFileSizeResult = guildId(outer2_2[12]).maxFileSize(guildId.getGuildId());
-              c2 = maxFileSizeResult;
-              const obj9 = guildId(outer2_2[12]);
-              effectiveKestrelLimit = guildId(outer2_2[11]).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
-              obj7.on("progress", (currentSize) => {
-                if (currentSize.currentSize > c3) {
-                  obj7.cancel();
-                  let obj = outer2_1(6189);
-                  obj = { channelId: null, uploads: null, draftType: null, resetState: true };
-                  obj[0] = guildId.id;
-                  obj[1] = guildId;
-                  obj[2] = outer2_5.FirstThreadMessage;
-                  obj.setUploads(obj);
-                  obj = { file: null, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null };
-                  obj[0] = currentSize;
-                  obj[1] = tmp;
-                  obj[2] = dependencyMap;
-                  obj[3] = guildId.getGuildId();
-                  obj[4] = obj7;
-                  outer2_1(6191)(obj);
-                  const tmp10 = outer2_1(6191);
-                }
-              });
-              c2 = 1;
-              effectiveKestrelLimit = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj7.uploadFiles(guildId);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            effectiveKestrelLimit = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            effectiveKestrelLimit = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            noop = arg1;
-            obj = { uploaderFile: null, files: null };
-            obj[0] = obj7._file;
-            obj[1] = noop;
-            effectiveKestrelLimit = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = obj;
-            return obj3;
-          }
-        } catch (tmp8) {
-          effectiveKestrelLimit = tmp;
-          throw tmp8;
-        }
-      }
+      });
+      let noop = yield obj7.uploadFiles(guildId);
+      let obj = { uploaderFile: null, files: null };
+      obj[0] = obj7._file;
+      obj[1] = noop;
+      return obj;
     })();
   });
   const items = [analyticsLocations, parentChannel];
@@ -166,7 +110,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     }
     return applyArgumentsResult;
   }, items);
-  let obj = _require(6186);
+  let obj = _require(8165);
   obj = { parentChannel, name: null, appliedTags: null, analyticsLocations: null, onThreadCreated: null, upload: null };
   let str;
   if (threadSettings != null) {

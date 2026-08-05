@@ -165,7 +165,7 @@ export const useAppLauncherFrecentApps = function useAppLauncherFrecentApps(cont
   let onlyActivityApps;
   context = context.context;
   ({ onlyActivityApps, allowCommandFetch, includeAuthorizedAppsAndFetch } = context);
-  let obj = importAll(8028);
+  let obj = importAll(9455);
   obj = { context, filters: obj, options: closure_12, allowFetch: allowCommandFetch };
   const discovery = obj.useDiscovery(obj);
   obj = { loading: discovery.loading, frecentApps: useFrecentApps(obj1) };

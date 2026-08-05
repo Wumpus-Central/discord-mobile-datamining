@@ -9,7 +9,7 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: function useClassicChatFontScaleValue() {
-    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, require(3806) /* isIterable */.shallow);
+    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, require(3898) /* isIterable */.shallow);
   },
   onValueChange: function onClassicChatFontScaleChange(arg0) {
     const _require = arg0;
@@ -28,7 +28,7 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: function useClassicChatFontScaleValue() {
-    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, require(3806) /* isIterable */.shallow);
+    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, require(3898) /* isIterable */.shallow);
   },
   onValueChange: function onClassicChatFontScaleChange(arg0) {
     const _require = arg0;

@@ -38,9 +38,9 @@ export const ContentInventoryReplyRow = function ContentInventoryReplyRow(onPres
   let obj = { style: tmp.replyContainer, children: null };
   obj = { accessibilityRole: "button", onPress: onPress.onReply, style: tmp.contentInventoryPressable, accessibilityLabel: reactText, pointerEvents: "box-only", children: null };
   obj = { style: tmp.contentInventoryContainer, children: null };
-  const items = [callback(require(4189) /* Text */.Text, { variant: "text-md/medium", color: "input-placeholder-text-default", lineClamp: 1, style: tmp.contentInventoryText, children: reactText }), callback(require(6579) /* ReactionIcon */.ReactionIcon, { style: tmp.icon, size: "custom" })];
+  const items = [callback(require(4281) /* Text */.Text, { variant: "text-md/medium", color: "input-placeholder-text-default", lineClamp: 1, style: tmp.contentInventoryText, children: reactText }), callback(require(7576) /* ReactionIcon */.ReactionIcon, { style: tmp.icon, size: "custom" })];
   obj[1] = items;
   obj[5] = callback2(View, obj);
-  obj[1] = callback(require(4721) /* PressableBase */.PressableOpacity, obj);
+  obj[1] = callback(require(4812) /* PressableBase */.PressableOpacity, obj);
   return callback(View, obj);
 };

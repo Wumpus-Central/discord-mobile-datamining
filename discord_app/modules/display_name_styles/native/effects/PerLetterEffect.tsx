@@ -49,7 +49,6 @@ export default function PerLetterEffect(name) {
   obj = {};
   const merged = Object.assign(textProps);
   obj.textBreakStrategy = "simple";
-  obj.accessible = true;
   let accessibilityLabel = textProps.accessibilityLabel;
   if (accessibilityLabel == null) {
     accessibilityLabel = name;
@@ -58,6 +57,6 @@ export default function PerLetterEffect(name) {
   const items1 = [name.textStyle, { lineHeight: "r" }];
   obj.style = items1;
   obj.children = memo;
-  obj[1] = jsx(name(4189).Text, {});
+  obj[1] = jsx(name(4281).Text, {});
   return <closure_4 />;
 };

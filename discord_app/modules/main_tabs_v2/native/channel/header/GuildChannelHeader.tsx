@@ -30,8 +30,8 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(3897).useToken(importDefault(712).modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(3897);
+  const token = channel(3989).useToken(importDefault(712).modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(3989);
   const items = [getMemberListId, initialize];
   const stateFromStoresObject = channel(589).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -83,8 +83,8 @@ function GuildChannelMemberCount(channel) {
     const count = outer1_6.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(10157);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(5568).ICON_SIZE[token]);
+    const tmpResult = tmp(12455);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(5659).ICON_SIZE[token]);
   }
 }
 function computeVisibleChannelName(channel) {
@@ -110,8 +110,8 @@ function computeVisibleChannelName(channel) {
       stringResult1 = string(ai6Lbr.ZTNur7);
     }
   } else {
-    stringResult = tmp(4384).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
-    const tmpResult = tmp(4384);
+    stringResult = tmp(4475).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const tmpResult = tmp(4475);
   }
   return stringResult;
 }
@@ -121,7 +121,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   let dependencyMap;
   let callback;
   const items = [guild(1358).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = callback(guild(8451).useSelectedDismissibleContent(items, undefined, true), 2);
+  const tmp = callback(guild(5931).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp2;
   const tmp3 = tmp[0] === guild(1358).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   callback = tmp3;
@@ -150,8 +150,8 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj[6] = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(8451);
-  const coachmark = guild(8440).useCoachmark(guild.iconRef, memo);
+  let obj = guild(5931);
+  const coachmark = guild(8575).useCoachmark(guild.iconRef, memo);
   return null;
 }
 let c4 = importAllResult;

@@ -73,22 +73,22 @@ prototype3["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal
   return this.appStore.shouldCollectSignal;
 };
 RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(regionalFeatureConfig) {
-  if (typeof SettingsConfig !== "fileFinishedImporting") {
+  if (typeof SettingsConfig !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(SettingsConfig.prototype);
   obj.teenByDefault = regionalFeatureConfig.teen_by_default_settings;
-  if (typeof AgeVerificationConfig !== "fileFinishedImporting") {
+  if (typeof AgeVerificationConfig !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(AgeVerificationConfig.prototype);
   obj.gatedFeatures = regionalFeatureConfig.age_gated_features;
-  if (typeof AppStoreConfig !== "fileFinishedImporting") {
+  if (typeof AppStoreConfig !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj1 = Object.create(AppStoreConfig.prototype);
   obj1.shouldCollectSignal = true === regionalFeatureConfig.should_collect_app_store_signal;
-  if (typeof RegionalFeatureConfig !== "fileFinishedImporting") {
+  if (typeof RegionalFeatureConfig !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj2 = Object.create(RegionalFeatureConfig.prototype);

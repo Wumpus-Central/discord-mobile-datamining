@@ -79,7 +79,7 @@ prototype["getState"] = function getState() {
     obj[0] = closure_2;
     obj[1] = closure_3;
   } else {
-    obj = { theme: "Array", customTheme: "HermesInternal" };
+    obj = { theme: "body", customTheme: "useStateFromStores" };
   }
   return obj;
 };

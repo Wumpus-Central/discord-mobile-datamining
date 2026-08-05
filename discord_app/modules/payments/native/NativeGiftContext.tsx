@@ -270,7 +270,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       closure_13 = undefined;
       table = undefined;
       jsx = undefined;
-      obj = { orderId: "a", planId: 1124074003, planSelection: 137745, giftInfo: "<string:499777539>" };
+      obj = { orderId: "a", planId: "arc", planSelection: "csod\u00E1lkoz\u00F3", giftInfo: "d\u00F6bbent" };
       obj = { premiumType: null, planInterval: null };
       obj[0] = first;
       obj[1] = first1;
@@ -883,57 +883,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
         setOrder(lib(setRevision[34]).PaymentFlowStep.REVIEW);
         obj = { productId: productIdForGift, isGift: true, analyticsLoadId: lib.load_id, analyticsLocation: lib.location, analyticsLocations: lib.location_stack, allowPlanChange: false, giftInfoOptions: memo1, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
         lib = setOrder(function*() {
-          if (c0 === 2) {
-            c0 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c0 = 2;
-              if (0 === c1) {
-                if (arg0 === 1) {
-                  c0 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c0 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  c1 = 1;
-                  c0 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = outer1_39(c1);
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
-                c0 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c0 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                c0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-            } catch (tmp7) {
-              c0 = tmp;
-              throw tmp7;
-            }
-          }
+          yield outer1_39(c1);
+          return arg1;
         });
         obj[7] = function() {
           const self = this;
@@ -950,7 +901,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
         };
         obj[9] = orderContext.orderId;
         obj = { load_id: lib.load_id, succeededOnlyFields: null };
-        let obj1 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
+        const obj1 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
         const intl = tmp(tmp2[17]).intl;
         obj1[0] = first3 !== intl.string(lib(setRevision[17]).t.ZkOo1U);
         obj[1] = obj1;

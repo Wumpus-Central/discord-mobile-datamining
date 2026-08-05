@@ -16,7 +16,7 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 };
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
-    return { gameName: "o", gameId: "borderRadius", exe: "description", distributor: "Promise", sku: "Array", gameMetadata: "accessibilityRole", rawExePath: "runOnJS" };
+    return { gameName: "Array", gameId: "call", exe: "ix", distributor: "value", sku: "sa", gameMetadata: "o", rawExePath: "isArray" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     let id = streamApplication.id;
@@ -65,8 +65,8 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     obj[4] = sku;
     let subgameMetadata;
     if (null != streamApplication) {
-      subgameMetadata = require(4364) /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(streamApplication);
-      const obj4 = require(4364) /* _openRobloxURLWithRootPlaceId */;
+      subgameMetadata = require(4455) /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(streamApplication);
+      const obj4 = require(4455) /* _openRobloxURLWithRootPlaceId */;
     }
     obj[5] = subgameMetadata;
     obj[6] = str;

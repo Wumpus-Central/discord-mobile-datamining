@@ -51,7 +51,7 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
   return tmp;
 };
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "Array" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "a" };
 };
 export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, arg1) {
   return arg1 === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;
@@ -79,8 +79,8 @@ export const getSingleColorGuildThemeGradientColors = function getSingleColorGui
   return items;
 };
 export const getRandomSingleColorGuildTheme = function getRandomSingleColorGuildTheme() {
-  const diff = require(4042) /* items */.COLOR_PALETTE.length - 1;
-  const tmp2 = require(4042) /* items */.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
+  const diff = require(4134) /* items */.COLOR_PALETTE.length - 1;
+  const tmp2 = require(4134) /* items */.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
   const obj = { color: null, baseMix: null };
   const bound = Math.min(45, Math.round(100 * importDefault(689)(tmp2).get("hsl.l")));
   const obj2 = importDefault(689)(tmp2);

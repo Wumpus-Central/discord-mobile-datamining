@@ -13,13 +13,13 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   let inputStyle;
   let state;
   let trailing;
-  let obj = require(6743) /* useInputStyles */;
+  let obj = require(5909) /* useInputStyles */;
   obj = { size: size.size, isRound: size.isRound };
   const inputStyles = obj.useInputStyles(obj);
-  let obj2 = require(6737) /* useTextFieldState */;
+  let obj2 = require(5903) /* useTextFieldState */;
   const textField = obj2.useTextField(size, ref);
   ({ inputProps, innerRef, state } = textField);
-  let obj3 = require(6738) /* useInputClearButton */;
+  let obj3 = require(5904) /* useInputClearButton */;
   const inputClearButtonConfig = obj3.useInputClearButtonConfig(size, state);
   let tmp6;
   if (null != inputClearButtonConfig) {
@@ -27,7 +27,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
     ({ content: obj5[0], pressableProps: obj5[1] } = inputClearButtonConfig);
     tmp6 = obj;
   }
-  let tmpResult = tmp(6742);
+  let tmpResult = tmp(5908);
   const inputAttachments = tmpResult.useInputAttachments(size, tmp6);
   let tmp8 = null;
   ({ trailing, inputStyle } = inputAttachments);
@@ -46,7 +46,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
         return items;
       };
       const merged = Object.assign(size.leadingPressableProps);
-      tmpResult = tmp(6742);
+      tmpResult = tmp(5908);
       obj2.children = tmpResult.renderInputAttachment(undefined, size.leadingText, inputStyles.text);
       obj1[1] = <closure_2 style={null} />;
       tmp8 = <closure_3 style={null}>{null}</closure_3>;
@@ -58,7 +58,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   obj3.leading = tmp8;
   obj3.trailing = trailing;
   obj3.inputStyle = inputStyle;
-  return jsx(require(6745) /* BaseTextField */.BaseTextField, {});
+  return jsx(require(5911) /* BaseTextField */.BaseTextField, {});
 });
 const result = require("jsxProd").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 

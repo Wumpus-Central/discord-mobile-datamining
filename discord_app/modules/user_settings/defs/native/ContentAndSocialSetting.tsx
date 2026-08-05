@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return require(14676) /* ContentAndSocialSettings */.default;
+    return require(14776) /* ContentAndSocialSettings */.default;
   }
 };
 const route = createToggle.createRoute(obj);

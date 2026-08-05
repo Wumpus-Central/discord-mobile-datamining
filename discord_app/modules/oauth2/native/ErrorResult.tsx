@@ -27,7 +27,7 @@ export default function ErrorResult(error) {
   let obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.inner, children: null };
   obj = { source: null, style: null };
-  obj[0] = importDefault(8970);
+  obj[0] = importDefault(10436);
   obj[1] = tmp.image;
   const items = [callback(closure_3, obj), ];
   const obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
@@ -36,7 +36,7 @@ export default function ErrorResult(error) {
     error = intl.string(tmp3(1236).t.mqn873);
   }
   obj1[2] = error;
-  items[1] = callback(require(4189) /* Text */.Text, obj1);
+  items[1] = callback(require(4281) /* Text */.Text, obj1);
   obj[1] = items;
   const items1 = [closure_6(closure_4, obj), ];
   let tmp6Result = null;
@@ -47,9 +47,9 @@ export default function ErrorResult(error) {
     obj2[2] = function onPress() {
       return callback(table[10]).pop();
     };
-    tmp6Result = tmp6(tmp3(4604).Button, obj2);
+    tmp6Result = tmp6(tmp3(4695).Button, obj2);
   }
   items1[1] = tmp6Result;
   obj[2] = items1;
-  return closure_6(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_6(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

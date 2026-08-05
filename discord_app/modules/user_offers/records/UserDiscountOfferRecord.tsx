@@ -53,7 +53,7 @@ UserDiscountOfferRecord["createFromServer"] = function createFromServer(discount
     _Date = new.target;
     date2 = new Date(discount.expires_at);
   }
-  if (typeof UserDiscountOfferRecord !== "fileFinishedImporting") {
+  if (typeof UserDiscountOfferRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp12 = new UserDiscountOfferRecord(str, _Date2, _Date, UserDiscountOfferRecord, new.target, id, discount_id, obj, user_id, date);

@@ -21,7 +21,7 @@ function getFirstSkemaFieldError(errors, arg1) {
       let tmp11 = tmp9;
       if (null != tmp9) {
         let tmp12 = tmp9;
-        if (typeof tmp9 === "ay") {
+        if (typeof tmp9 === "object") {
           let tmp13 = arg1;
           let tmp14 = getFirstSkemaFieldError;
           if (arg1 == null) {

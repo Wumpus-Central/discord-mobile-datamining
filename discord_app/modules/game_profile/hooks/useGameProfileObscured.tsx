@@ -12,8 +12,8 @@ export default function useGameProfileObscured(contentClassification) {
     result = false === tmp4;
   }
   if (result) {
-    result = require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.contentClassification);
-    const tmpResult = require(5912) /* isAgeRestrictedContentClassification */;
+    result = require(7004) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+    const tmpResult = require(7004) /* isAgeRestrictedContentClassification */;
   }
   return result;
 };
@@ -23,8 +23,8 @@ export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAl
     result = false === nsfwAllowed;
   }
   if (result) {
-    result = require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(game.contentClassification);
-    const obj = require(5912) /* isAgeRestrictedContentClassification */;
+    result = require(7004) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(game.contentClassification);
+    const obj = require(7004) /* isAgeRestrictedContentClassification */;
   }
   return result;
 };

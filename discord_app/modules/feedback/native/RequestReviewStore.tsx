@@ -7,13 +7,13 @@ import { Store } from "initialize";
 
 const require = arg1;
 function showReviewRequestModal() {
-  const rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = tmp(4044);
+    let tmpResult = tmp(4136);
     tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
   }
-  tmpResult = tmp(6747);
+  tmpResult = tmp(5913);
   const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
   const tmp5 = null != voiceChannelId.getVoiceChannelId();
   if (tmp3) {
@@ -23,20 +23,20 @@ function showReviewRequestModal() {
         closure_9.revision = 1;
         const Storage = tmp(595).Storage;
         const result = Storage.set(RequestReviewStore, closure_9);
-        importDefault(12770)();
+        importDefault(12866)();
         let c10 = false;
         const obj5 = importDefault(698);
       }
     }
   }
-  const obj = require(4045) /* getRootNavigationRef */;
+  const obj = require(4137) /* getRootNavigationRef */;
   importDefault(698).track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
   if (-1 !== timeout) {
     const _clearTimeout = clearTimeout;
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = tmp(12769).RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = tmp(12865).RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = c10;
   if (c10) {
@@ -51,7 +51,7 @@ function showReviewRequestModal() {
   }
   if (tmp18) {
     const _setTimeout = setTimeout;
-    timeout = setTimeout(showReviewRequestModal, tmp(4269).MS_PER_MINUTE);
+    timeout = setTimeout(showReviewRequestModal, tmp(4360).MS_PER_MINUTE);
   }
 }
 function handleConnectionClosedOrInterrupted() {
@@ -79,8 +79,8 @@ RequestReviewStore.displayName = "RequestReviewStore";
 const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    let obj = require(12772) /* getFirstInstallTimeMillis */;
-    obj = { from: "authed", unit: require(4269) /* sleep */.TimeUnits.DAYS };
+    let obj = require(12868) /* getFirstInstallTimeMillis */;
+    obj = { from: "authed", unit: require(4360) /* sleep */.TimeUnits.DAYS };
     let tmp3 = obj.getFirstInstallTimeElapsed(obj) >= 10;
     const someResult = guilds.some((member_count) => member_count.member_count >= 5);
     if (revision.revision < 1) {
@@ -106,7 +106,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = tmp(12769).RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = tmp(12865).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = c10;
     if (c10) {
@@ -121,7 +121,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     if (tmp13) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, tmp(4269).MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, tmp(4360).MS_PER_MINUTE);
     }
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -130,7 +130,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = require(12769) /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = require(12865) /* apexExperiment */.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -145,7 +145,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     if (tmp6) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, require(4269) /* sleep */.MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, require(4360) /* sleep */.MS_PER_MINUTE);
     }
   },
   CONNECTION_CLOSED: handleConnectionClosedOrInterrupted,
@@ -157,7 +157,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = require(12769) /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = require(12865) /* apexExperiment */.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -172,7 +172,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     if (tmp6) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, require(4269) /* sleep */.MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, require(4360) /* sleep */.MS_PER_MINUTE);
     }
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
@@ -182,7 +182,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = tmp(12769).RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = tmp(12865).RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = c10;
       if (c10) {
@@ -197,7 +197,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(showReviewRequestModal, tmp(4269).MS_PER_MINUTE);
+        timeout = setTimeout(showReviewRequestModal, tmp(4360).MS_PER_MINUTE);
       }
     } else if (-1 !== timeout) {
       const _clearTimeout2 = clearTimeout;

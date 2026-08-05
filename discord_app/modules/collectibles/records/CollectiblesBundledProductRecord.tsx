@@ -12,11 +12,11 @@ prototype["fromServer"] = function fromServer(arg0) {
   let summary;
   let type;
   ({ prices, type, premium_type, name, sku_id, summary } = arg0);
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.prices = importDefault(4234)(prices);
+  obj.prices = importDefault(4326)(prices);
   obj.type = type;
   obj.premiumType = premium_type;
   obj.name = name;

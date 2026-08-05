@@ -12,7 +12,7 @@ class SearchTokensManager extends tmp2 {
 }
 const prototype = SearchTokensManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  this._unsubscribeIntlLoadingStore = callback(require(10116) /* SearchTokenTypes */.refreshSearchTokens);
+  this._unsubscribeIntlLoadingStore = callback(require(11624) /* SearchTokenTypes */.refreshSearchTokens);
 };
 prototype["_terminate"] = function _terminate() {
   const _unsubscribeIntlLoadingStore = this._unsubscribeIntlLoadingStore;

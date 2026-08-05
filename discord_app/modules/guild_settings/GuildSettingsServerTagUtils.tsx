@@ -14,7 +14,7 @@ export const canUseMobileServerTagSettings = function canUseMobileServerTagSetti
     enabled = getUncachedChannelPermissions.can(Permissions.MANAGE_GUILD, guild);
   }
   if (enabled) {
-    let obj = importDefault(8312);
+    let obj = importDefault(8947);
     obj = { location: null };
     obj[0] = GuildSettingsServerTag;
     enabled = obj.getConfig(obj).enabled;
@@ -25,18 +25,18 @@ export const canViewMobileServerTag = function canViewMobileServerTag(id) {
   const guild = store.getGuild(id);
   let enabled = null != guild;
   if (enabled) {
-    let obj = require(7946) /* guildHasTag */;
+    let obj = require(8076) /* guildHasTag */;
     enabled = obj.guildSupportsTags(guild);
   }
   if (enabled) {
-    enabled = require(7946) /* guildHasTag */.guildHasTag(guild);
-    const obj2 = require(7946) /* guildHasTag */;
+    enabled = require(8076) /* guildHasTag */.guildHasTag(guild);
+    const obj2 = require(8076) /* guildHasTag */;
   }
   if (enabled) {
     obj = { location: null };
     obj[0] = GuildSettingsServerTag;
-    enabled = importDefault(8312).getConfig(obj).enabled;
-    const obj3 = importDefault(8312);
+    enabled = importDefault(8947).getConfig(obj).enabled;
+    const obj3 = importDefault(8947);
   }
   return enabled;
 };

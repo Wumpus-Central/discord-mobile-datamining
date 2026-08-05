@@ -15,10 +15,10 @@ export const useFormatStringWithCommonPremiumParams = function useFormatStringWi
   if (-1 !== body.indexOf("{price}")) {
     if (stateFromStores) {
       try {
-        const defaultPrice = importDefault(3839).getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
-        const obj2 = importDefault(3839);
-        str = require(5673) /* formatSingleCurrencyPrice */.formatPrice(defaultPrice.amount, defaultPrice.currency);
-        const tmpResult = require(5673) /* formatSingleCurrencyPrice */;
+        const defaultPrice = importDefault(3931).getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+        const obj2 = importDefault(3931);
+        str = require(5764) /* formatSingleCurrencyPrice */.formatPrice(defaultPrice.amount, defaultPrice.currency);
+        const tmpResult = require(5764) /* formatSingleCurrencyPrice */;
       } catch (err) {
       }
     }

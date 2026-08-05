@@ -12,29 +12,29 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
-    return require(5711) /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
+    return require(8156) /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+    let obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(6752).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
-        const result = importDefault(6750).showAgeVerificationGetStartedModal(obj);
-        const obj2 = importDefault(6750);
+        obj[0] = tmp(7722).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        const result = importDefault(7720).showAgeVerificationGetStartedModal(obj);
+        const obj2 = importDefault(7720);
       }
     }
-    const ViewNsfwCommands = tmp(3866).ViewNsfwCommands;
+    const ViewNsfwCommands = tmp(3958).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
-    let shouldAgeVerifyForSettingsToggles = require(4407) /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
-    const obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
-    let flag = require(5712) /* useNSFWAllowed */.useNSFWAllowed();
+    let shouldAgeVerifyForSettingsToggles = require(4498) /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
+    const obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+    let flag = require(8157) /* useNSFWAllowed */.useNSFWAllowed();
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = tmp(4409);
+    let tmpResult = tmp(4500);
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }
@@ -59,29 +59,29 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
-    return require(5711) /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
+    return require(8156) /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+    let obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(6752).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
-        const result = importDefault(6750).showAgeVerificationGetStartedModal(obj);
-        const obj2 = importDefault(6750);
+        obj[0] = tmp(7722).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        const result = importDefault(7720).showAgeVerificationGetStartedModal(obj);
+        const obj2 = importDefault(7720);
       }
     }
-    const ViewNsfwCommands = tmp(3866).ViewNsfwCommands;
+    const ViewNsfwCommands = tmp(3958).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
-    let shouldAgeVerifyForSettingsToggles = require(4407) /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
-    const obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
-    let flag = require(5712) /* useNSFWAllowed */.useNSFWAllowed();
+    let shouldAgeVerifyForSettingsToggles = require(4498) /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
+    const obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+    let flag = require(8157) /* useNSFWAllowed */.useNSFWAllowed();
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = tmp(4409);
+    let tmpResult = tmp(4500);
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }

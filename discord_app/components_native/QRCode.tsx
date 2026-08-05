@@ -45,11 +45,11 @@ QRCode.prototype["render"] = function render() {
   const tmp6 = closure_9;
   const tmp7 = importDefault;
   const merged = Object.assign(tmp2);
-  const items1 = [callback2(importDefault(12263), obj1), ];
+  const items1 = [callback2(importDefault(9021), obj1), ];
   if (blur) {
     const obj2 = { style: null, blurTheme: "dark" };
     obj2[0] = closure_7.absoluteFill;
-    tmp3Result = tmp3(tmp7(4594), obj2);
+    tmp3Result = tmp3(tmp7(4685), obj2);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;
@@ -75,14 +75,14 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const items = [callback2(QRCode, obj), , ];
   obj = { style: items1, children: null };
   items1 = [tmp.qrCodeOverlay, closure_7.absoluteFill];
-  obj1 = { style: tmp[frozen[SIZE_40]], source: require(12277) /* registerAsset */ };
+  obj1 = { style: tmp[frozen[SIZE_40]], source: require(9035) /* registerAsset */ };
   obj[1] = callback2(closure_6, obj1);
   items[1] = callback2(closure_5, obj);
   let tmp6Result = null;
   if (props.blur) {
     const obj2 = { style: null };
     obj2[0] = closure_7.absoluteFill;
-    tmp6Result = callback2(importDefault(8388), obj2);
+    tmp6Result = callback2(importDefault(8696), obj2);
   }
   items[2] = tmp6Result;
   obj[1] = items;

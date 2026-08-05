@@ -95,94 +95,34 @@ function _fetchMetadataForGuild() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let obj4 = tmp3;
-              body = tmp7;
-              body = undefined;
-              obj4 = undefined;
-              let c4 = 1;
-              const HTTP = callback(outer1_2[4]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-              obj1[0] = c6.GUILD_DISCOVERY_METADATA(callback);
-              c5 = 2;
-              c6 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            obj2 = body(obj4[5]);
-            obj2.dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            obj4 = { primaryCategoryId: null, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
-            obj4[0] = body.primary_category_id;
-            obj4[1] = body.category_ids;
-            obj4[2] = body.keywords;
-            obj4[3] = body.emoji_discoverability_enabled;
-            obj4[4] = body.partner_actioned_timestamp;
-            obj4[5] = body.partner_application_timestamp;
-            obj4[6] = body.is_published;
-            obj4[7] = body.reasons_to_join;
-            obj4[8] = body.social_links;
-            obj4[9] = body.about;
-            const obj5 = { type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: null, metadata: null };
-            obj5[1] = callback;
-            obj5[2] = obj4;
-            body(obj4[5]).dispatch(obj5);
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = obj4;
-            return obj;
-          }
-        } catch (tmp13) {
-          let dispatcher = tmp13;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp13;
-          } else {
-            c5 = tmp;
-          }
-        }
-      }
+      let obj4 = tmp3;
+      let c4 = 1;
+      const HTTP = callback(outer1_2[4]).HTTP;
+      const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+      obj1[0] = c6.GUILD_DISCOVERY_METADATA(callback);
+      yield HTTP.get(obj1);
+      c4 = 0;
+      const obj2 = body(obj4[5]);
+      obj2.dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
+      yield "HermesInternal";
+      body = body.body;
+      obj4 = { primaryCategoryId: null, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
+      obj4[0] = body.primary_category_id;
+      obj4[1] = body.category_ids;
+      obj4[2] = body.keywords;
+      obj4[3] = body.emoji_discoverability_enabled;
+      obj4[4] = body.partner_actioned_timestamp;
+      obj4[5] = body.partner_application_timestamp;
+      obj4[6] = body.is_published;
+      obj4[7] = body.reasons_to_join;
+      obj4[8] = body.social_links;
+      obj4[9] = body.about;
+      const obj5 = { type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: null, metadata: null };
+      obj5[1] = callback;
+      obj5[2] = obj4;
+      body(obj4[5]).dispatch(obj5);
+      c4 = 0;
+      return obj4;
     })();
   });
   const _fetchMetadataForGuild = tmp;
@@ -202,79 +142,32 @@ function _fetchSlugForGuild() {
     let c5 = 0;
     let c3 = 0;
     return (function*(arg0, body) {
-      if (c5 === 2) {
+      const dependencyMap = tmp3;
+      let c3 = 1;
+      const HTTP = callback(outer1_2[4]).HTTP;
+      const obj1 = { url: null, rejectWithError: true };
+      obj1[0] = outer1_6.GUILD_DISCOVERY_SLUG(callback);
+      yield HTTP.get(obj1);
+      if (1 === tmp7) {
+        c3 = 0;
+        let obj3 = slug(709);
+        obj3 = { type: "GUILD_DISCOVERY_SLUG_FETCH_FAIL", guildId: null };
+        obj3[1] = callback;
+        obj3.dispatch(obj3);
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              let slug = tmp7;
-              slug = undefined;
-              let c3 = 1;
-              const HTTP = callback(outer1_2[4]).HTTP;
-              const obj1 = { url: null, rejectWithError: true };
-              obj1[0] = outer1_6.GUILD_DISCOVERY_SLUG(callback);
-              c4 = 2;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              let obj3 = slug(709);
-              obj3 = { type: "GUILD_DISCOVERY_SLUG_FETCH_FAIL", guildId: null };
-              obj3[1] = callback;
-              obj3.dispatch(obj3);
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              slug = body.body.slug;
-              obj = slug(709);
-              const obj4 = { type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug: null };
-              obj4[1] = slug;
-              obj.dispatch(obj4);
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp24) {
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp24;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw body;
+      } else if (arg0 !== 2) {
+        slug = body.body.slug;
+        const obj = slug(709);
+        const obj4 = { type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug: null };
+        obj4[1] = slug;
+        obj.dispatch(obj4);
+        c3 = 0;
       }
+      c3 = 0;
+      return body;
     })();
   });
   const _fetchSlugForGuild = tmp;

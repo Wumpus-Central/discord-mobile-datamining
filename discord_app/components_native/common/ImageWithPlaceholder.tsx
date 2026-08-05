@@ -41,6 +41,6 @@ export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
   obj = { style };
   const merged2 = Object.assign(merged);
   obj = { style: closure_4, resizeMode: "cover", source: { uri }, alt };
-  obj.children = jsx(importDefault(5145), { style: closure_4, resizeMode: "cover", source: { uri }, alt });
+  obj.children = jsx(importDefault(5236), { style: closure_4, resizeMode: "cover", source: { uri }, alt });
   tmp4 = <closure_2 style={closure_4} resizeMode="cover" source={{ uri }} alt={alt} />;
 };

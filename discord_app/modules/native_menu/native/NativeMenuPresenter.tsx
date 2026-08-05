@@ -18,7 +18,7 @@ export default function MenuContainer() {
     }
     return null != key;
   }, items1);
-  importDefault(4601)(callback);
+  importDefault(4692)(callback);
   let tmp4 = null;
   if (null != key) {
     tmp4 = null;

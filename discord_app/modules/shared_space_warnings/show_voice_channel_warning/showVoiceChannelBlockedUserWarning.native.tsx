@@ -13,7 +13,7 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
   state = state.getState();
   if (state === require(691) /* keys */.AppStates.ACTIVE) {
     callback2();
-    let obj = importDefault(4161);
+    let obj = importDefault(4253);
     obj = { channelId: null, blockedUserId: null, impressionName: null, impressionProperties: null };
     obj[0] = channelId;
     obj[1] = id;
@@ -24,8 +24,8 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj[1] = items;
     obj[2] = constants.POST_JOIN_SHEET;
     obj[3] = obj;
-    obj.openLazy(tmp2(1959)(12812, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
-    const tmp11 = tmp2(1959)(12812, dependencyMap.paths);
+    obj.openLazy(tmp2(1959)(12908, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
+    const tmp11 = tmp2(1959)(12908, dependencyMap.paths);
   } else {
     callback();
   }

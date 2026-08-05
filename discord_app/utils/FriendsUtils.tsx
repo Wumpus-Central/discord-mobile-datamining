@@ -19,9 +19,9 @@ function validateDiscordTag(arr) {
       }
       obj[2] = str2.length;
       obj[3] = tmp4[0].length;
-      let tmp5Result = tmp5(8210);
+      let tmp5Result = tmp5(8860);
       obj[4] = tmp5Result.isEmail(arr);
-      tmp5Result = tmp5(8210);
+      tmp5Result = tmp5(8860);
       obj[5] = tmp5Result.isInvite(arr);
       obj[6] = regex.test(arr);
       obj.track(constants2.FRIEND_REQUEST_FAILED, obj);
@@ -90,6 +90,6 @@ export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, 
     obj[0] = substr;
     formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["ihb+UW"], obj);
   }
-  importDefault(38)(typeof formatToPlainStringResult === "y", "abortCode should be a string for a11y");
+  importDefault(38)(typeof formatToPlainStringResult === "string", "abortCode should be a string for a11y");
   return formatToPlainStringResult;
 };

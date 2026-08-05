@@ -10,8 +10,8 @@ export const showAudioOutputSelector = function showAudioOutputSelector(channelI
     obj = { channelId: null, isConnectedToVoiceChannel: null };
     obj[0] = channelId;
     obj[1] = closure_1;
-    importDefault(4161).openLazy(require(1959) /* asyncRequireImpl */(8867, dependencyMap.paths), closure_4, obj);
-    const obj2 = importDefault(4161);
+    importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(9097, dependencyMap.paths), closure_4, obj);
+    const obj2 = importDefault(4253);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

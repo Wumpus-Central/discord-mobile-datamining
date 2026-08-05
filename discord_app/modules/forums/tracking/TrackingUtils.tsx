@@ -51,23 +51,23 @@ function collectForumAnalyticsMetadata(sessionId) {
       obj[3] = mapped;
       obj[4] = channel.hasFlag(ChannelFlags.REQUIRE_TAG);
       obj[5] = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
-      obj[6] = importDefault(6087).getFilterTagIdsAnalytics();
-      const obj3 = importDefault(6087);
-      obj[7] = importDefault(6087).getSortOrderAnalytics(channel.id);
+      obj[6] = importDefault(7151).getFilterTagIdsAnalytics();
+      const obj3 = importDefault(7151);
+      obj[7] = importDefault(7151).getSortOrderAnalytics(channel.id);
       if (sessionId == null) {
-        let tmp8Result = tmp8(6086);
+        let tmp8Result = tmp8(7150);
         sessionId = tmp8Result.getForumChannelSessionId(channel.id);
       }
       obj[8] = sessionId;
-      tmp8Result = tmp8(6087);
+      tmp8Result = tmp8(7151);
       obj[9] = tmp8Result.getLayoutAnalytics(channel.id);
       obj[10] = channel.defaultSortOrder;
-      const obj4 = importDefault(6087);
-      obj[11] = importDefault(6087).getTagSettingAnalytics(channel.id);
+      const obj4 = importDefault(7151);
+      obj[11] = importDefault(7151).getTagSettingAnalytics(channel.id);
       obj[12] = channel.defaultForumLayout;
       obj[13] = channel.isModeratorReportChannel();
       tmp = obj;
-      const tmp8Result1 = importDefault(6087);
+      const tmp8Result1 = importDefault(7151);
     }
   }
   return tmp;
@@ -75,7 +75,7 @@ function collectForumAnalyticsMetadata(sessionId) {
 const result = require("updateFromGuild").fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
 
 export const getForumChannelSessionId = function getForumChannelSessionId(arg0) {
-  return importDefault(6086).getForumChannelSessionId(arg0);
+  return importDefault(7150).getForumChannelSessionId(arg0);
 };
 export const convertSortOrderToReadableString = function convertSortOrderToReadableString(sortOrder) {
   if (require(1381) /* set */.ThreadSortOrder.CREATION_DATE === sortOrder) {
@@ -241,14 +241,14 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
           }
           obj.forum_post_applied_tag_ids = items;
           obj.forum_post_is_pinned = channel.hasFlag(ChannelFlags.PINNED);
-          let tmp8Result = tmp8(6088);
+          let tmp8Result = tmp8(7152);
           const readStateSnapshotAnalytics = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
           let isNew;
           if (readStateSnapshotAnalytics != null) {
             isNew = readStateSnapshotAnalytics.isNew;
           }
           obj.forum_post_is_new = isNew;
-          tmp8Result = tmp8(6088);
+          tmp8Result = tmp8(7152);
           const readStateSnapshotAnalytics1 = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
           let hasUnreads;
           if (readStateSnapshotAnalytics1 != null) {

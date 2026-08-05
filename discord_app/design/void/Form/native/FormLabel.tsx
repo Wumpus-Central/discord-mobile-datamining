@@ -17,5 +17,5 @@ export default function FormLabel(children) {
   if (color === undefined) {
     color = "mobile-text-heading-primary";
   }
-  return jsx(require(4189) /* Text */.Text, { variant: "heading-md/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
+  return jsx(require(4281) /* Text */.Text, { variant: "heading-md/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
 };

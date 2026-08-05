@@ -41,11 +41,11 @@ function sortActivity(type, type2) {
   let diff = num2 - num;
   if (!diff) {
     let num3 = 0;
-    if (importDefault(4281)(type2)) {
+    if (importDefault(4372)(type2)) {
       num3 = 1;
     }
     let num4 = 0;
-    if (tmp3(4281)(type)) {
+    if (tmp3(4372)(type)) {
       num4 = 1;
     }
     diff = num3 - num4;

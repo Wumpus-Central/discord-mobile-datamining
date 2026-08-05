@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_9725";
+import importAllResult from "module_9961";
 import { View } from "preload";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import GuildFeatures from "GuildFeatures";
@@ -69,7 +69,7 @@ let closure_17 = createCacheKey.createStyles(() => {
   obj[11] = { width: 24, height: 24 };
   const obj9 = {};
   const obj8 = { marginTop: importDefault(712).space.PX_12 };
-  const merged1 = Object.assign(importDefault(5113)(Fonts.PRIMARY_NORMAL, importDefault(712).colors.WHITE, 16));
+  const merged1 = Object.assign(importDefault(5204)(Fonts.PRIMARY_NORMAL, importDefault(712).colors.WHITE, 16));
   obj9.marginStart = -8;
   obj[12] = obj9;
   obj[13] = { height: 75, right: 8 };
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     }
     return prop;
   });
-  let obj1 = _require(9722);
+  let obj1 = _require(9958);
   let cardAsset;
   if (stateFromStores != null) {
     cardAsset = stateFromStores.cardAsset;
@@ -120,19 +120,19 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (stateFromStores != null) {
     backgroundAsset = stateFromStores.backgroundAsset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = _require(9722).useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
+  const themeAndReducedMotionAwareAssetUrl1 = _require(9958).useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
   let tmp9 = null != claimableRewards;
   if (tmp9) {
     tmp9 = 1 === claimableRewards.length;
   }
   const tmp10 = callback3(tmp9);
-  const tmp2Result = _require(9722);
-  let stringResult1 = importDefault(9723)(premiumType, constants.MONTH);
-  const tmp12 = importDefault(9335)(premiumType);
-  let obj3 = importDefault(8814);
+  const tmp2Result = _require(9958);
+  let stringResult1 = importDefault(9959)(premiumType, constants.MONTH);
+  const tmp12 = importDefault(8435)(premiumType);
+  let obj3 = importDefault(9531);
   const config = obj3.useConfig({ location: "PremiumGiftFeaturesCard" });
   ({ showGiftPrice, useNewCopy } = config);
-  let promotionalButton = importDefault(9724)(premiumType) && null != claimableRewards;
+  let promotionalButton = importDefault(9960)(premiumType) && null != claimableRewards;
   if (promotionalButton) {
     promotionalButton = claimableRewards.length > 0;
   }
@@ -140,7 +140,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (promotionalButton) {
     tmp16 = null != themeAndReducedMotionAwareAssetUrl;
   }
-  const tmp14 = importDefault(9723)(premiumType, constants.YEAR);
+  const tmp14 = importDefault(9959)(premiumType, constants.YEAR);
   [tmp18, c0] = callback(importAllResult.useState(0), 2);
   const items1 = [tmp10.card, style, ];
   let promotional = promotionalButton;
@@ -159,12 +159,12 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     obj1 = { uri: null };
     obj1[0] = themeAndReducedMotionAwareAssetUrl;
     obj[2] = obj1;
-    tmp22 = callback2(tmp11(5145), obj);
+    tmp22 = callback2(tmp11(5236), obj);
   }
   const items2 = [tmp22, ];
   const obj2 = { premiumType, opacity: null, style: null };
   let num3 = 1;
-  let tmp11Result = tmp11(7972);
+  let tmp11Result = tmp11(8101);
   if (tmp16) {
     num3 = 0.82;
   }
@@ -185,7 +185,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       obj3[1] = claimableRewards;
       obj3[2] = isSelected;
       obj3[3] = callback;
-      tmp30 = callback2(tmp11(9725), obj3);
+      tmp30 = callback2(tmp11(9961), obj3);
     }
     const items4 = [tmp30, ];
     let tmp32 = null != themeAndReducedMotionAwareAssetUrl1;
@@ -199,7 +199,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       const obj6 = { uri: null };
       obj6[0] = themeAndReducedMotionAwareAssetUrl1;
       obj4[2] = obj6;
-      tmp32 = callback2(tmp11(5145), obj4);
+      tmp32 = callback2(tmp11(5236), obj4);
     }
     const obj7 = { children: null };
     items4[1] = tmp32;
@@ -210,7 +210,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     const obj8 = { premiumType: null, style: null };
     obj8[0] = premiumType;
     let wumpusNoPrice = !showGiftPrice;
-    tmp11Result = tmp11(9339);
+    tmp11Result = tmp11(8551);
     if (!showGiftPrice) {
       wumpusNoPrice = tmp10.wumpusNoPrice;
     }
@@ -241,13 +241,13 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       obj10[0] = items8;
       const intl3 = tmp2(1236).intl;
       obj10[3] = intl3.string(tmp2(1236).t.JgsVht);
-      items6[3] = tmp34(tmp2(4189).Text, obj10);
+      items6[3] = tmp34(tmp2(4281).Text, obj10);
       const obj11 = { style: null, features: null, iconStyle: null, labelStyle: null, rowStyle: null };
       obj11[0] = tmp10.features;
       obj11[1] = tmp12;
       ({ featureIcon: obj19[2], featureText: obj19[3] } = tmp10);
       obj11[4] = obj[str];
-      items6[4] = tmp34(tmp11(9344), obj11);
+      items6[4] = tmp34(tmp11(8556), obj11);
       const obj12 = { style: null };
       obj12[0] = { flexGrow: 1 };
       items6[5] = tmp34(tmp21, obj12);
@@ -268,14 +268,14 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       const obj14 = { variant: "primary-overlay", text: null, onPress: null };
       obj14[1] = stringResult;
       obj14[2] = variant.onPress;
-      obj13[1] = tmp34(tmp2(4604).Button, obj14);
+      obj13[1] = tmp34(tmp2(4695).Button, obj14);
       items6[6] = tmp34(tmp21, obj13);
       obj2.children = items6;
       items2[1] = tmp20(tmp11Result, obj2);
       obj[1] = items2;
       return tmp20(tmp21, obj);
     } else {
-      const Text = tmp2(4189).Text;
+      const Text = tmp2(4281).Text;
       const obj15 = { style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
       const items10 = [tmp10.pricing, obj6[str]];
       obj15[0] = items10;

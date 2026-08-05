@@ -182,14 +182,14 @@ export const filterFullMembersByQuery = function filterFullMembersByQuery(str, i
   const formatted = str.trim().toLowerCase();
   let tmp8Result = id.id === formatted;
   if (!tmp8Result) {
-    tmp8Result = importDefault(5106)(formatted, id.name.toLowerCase());
+    tmp8Result = importDefault(5197)(formatted, id.name.toLowerCase());
     const str2 = id.name;
-    const tmp5 = importDefault(5106);
+    const tmp5 = importDefault(5197);
   }
   if (!tmp8Result) {
-    tmp8Result = importDefault(5106)(formatted, id.userTag.toLowerCase());
+    tmp8Result = importDefault(5197)(formatted, id.userTag.toLowerCase());
     const str3 = id.userTag;
-    const tmp8 = importDefault(5106);
+    const tmp8 = importDefault(5197);
   }
   return tmp8Result;
 };

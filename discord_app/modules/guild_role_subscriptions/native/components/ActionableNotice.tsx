@@ -27,7 +27,7 @@ export default function ActionableNotice(arg0) {
   let obj = { style: items, children: null };
   items = [style, tmp.container];
   obj = { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message };
-  const items1 = [callback(require(4189) /* Text */.Text, obj), ];
+  const items1 = [callback(require(4281) /* Text */.Text, obj), ];
   obj = { style: tmp.actionButton, children: null };
   const obj1 = { size: "sm", onPress: onClick, disabled: null, text: null };
   if (!submitting) {
@@ -35,7 +35,7 @@ export default function ActionableNotice(arg0) {
   }
   obj1[2] = submitting;
   obj1[3] = ctaMessage;
-  obj[1] = callback(require(4604) /* Button */.Button, obj1);
+  obj[1] = callback(require(4695) /* Button */.Button, obj1);
   items1[1] = callback(View, obj);
   obj[1] = items1;
   return closure_4(View, obj);

@@ -14,13 +14,13 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const FriendSourceFlagsSetting = setting(3866).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(3958).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return React.useMemo(() => setting(outer1_1[4]).computeFlags(setting), items).all;
   },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
-    const FriendSourceFlagsSetting = require(3866) /* explicitContentFromProto */.FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = require(3958) /* explicitContentFromProto */.FriendSourceFlagsSetting;
     if (arg0) {
       let tmp3 = tmp;
     } else {
@@ -29,7 +29,7 @@ createToggle = {
     FriendSourceFlagsSetting.updateSetting(tmp3);
   },
   useIsDisabled() {
-    return require(13874) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    return require(13974) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

@@ -3,14 +3,14 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 
 export const createStageEndSystemMessage = function createStageEndSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = require(7748) /* getMessageAuthorWithProcessedColor */;
+  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { content: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, topic: null };
-  obj[1] = importDefault(7750)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  obj[1] = importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   obj[2] = message.content;
   obj[0] = intl.formatToParts(require(1236) /* getSystemLocale */.t.vMJhvG, obj);
-  const merged = Object.assign(importDefault(7751)(roleStyle));
+  const merged = Object.assign(importDefault(7882)(roleStyle));
   return obj;
 };

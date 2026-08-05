@@ -36,19 +36,19 @@ export default function Divider(outer) {
     flag2 = false;
   }
   const tmp2 = callback(importDefault(1348)("FormDivider"));
-  let obj = require(3905) /* ManaContext */;
+  let obj = require(3997) /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  const profileThemeValues = require(5541) /* useProfileThemeValues */.useProfileThemeValues(theme);
+  const profileThemeValues = require(5632) /* useProfileThemeValues */.useProfileThemeValues(theme);
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
-    obj[0] = tmp3(4037).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj[0] = tmp3(4129).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
     tmp7 = obj;
-    const tmp3Result = tmp3(4037);
+    const tmp3Result = tmp3(4129);
   }
   let tmp10Result = null;
-  if (!React.useContext(require(5223) /* context */.RedesignCompatContext)) {
+  if (!React.useContext(require(5314) /* context */.RedesignCompatContext)) {
     const items = [flag ? tmp2.dividerOuter : tmp2.divider, , , ];
     if (flag2) {
       flag2 = tmp2.dividerHasIcon;

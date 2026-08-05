@@ -196,7 +196,7 @@ prototype["getReaction"] = function getReaction(arg0) {
 };
 prototype["getContentMessage"] = function getContentMessage() {
   let self = this;
-  if (importDefault(5887)(this)) {
+  if (importDefault(5827)(this)) {
     self = this.messageSnapshots[0].message;
   }
   return self;
@@ -536,7 +536,7 @@ prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
       tmp2 = 1 === Object.keys(prop).length;
     }
     if (tmp2) {
-      tmp2 = require(8032) /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL in prop;
+      tmp2 = require(9459) /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL in prop;
     }
     return tmp2;
   }

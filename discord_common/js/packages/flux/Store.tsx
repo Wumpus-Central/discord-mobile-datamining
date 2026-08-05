@@ -73,7 +73,7 @@ Store["initialize"] = function initialize() {
   let c5 = true;
   const item = arr.forEach((initializeIfNeeded) => initializeIfNeeded.initializeIfNeeded());
   if (null != closure_3) {
-    if (typeof closure_3 !== "fileFinishedImporting") {
+    if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     require();

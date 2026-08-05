@@ -48,9 +48,9 @@ let result = require("MAX_FAVORITES").fileFinishedImporting("modules/user_settin
 
 export default {
   init() {
-    importDefault(1343)[UserSettingsTypes.PRELOADED_USER_SETTINGS] = importDefault(13538);
+    importDefault(1343)[UserSettingsTypes.PRELOADED_USER_SETTINGS] = importDefault(13634);
     const tmp = importDefault(1343);
-    importDefault(1343)[UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = importDefault(13539);
+    importDefault(1343)[UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = importDefault(13635);
     const tmp2 = importDefault(1343);
     const subscription = importDefault(709).subscribe("CONNECTION_OPEN", handleConnectionOpen);
     const obj = importDefault(709);

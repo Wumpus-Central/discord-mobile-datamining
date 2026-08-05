@@ -24,7 +24,7 @@ let closure_9 = importAllResult.memo((arg0) => {
   const obj = { style: null, children: null };
   const items = [callback3().sectionHeader, { height }];
   obj[0] = items;
-  obj[1] = callback(require(4189) /* Text */.Text, { variant: "text-sm/bold", color: "text-muted", children: title });
+  obj[1] = callback(require(4281) /* Text */.Text, { variant: "text-sm/bold", color: "text-muted", children: title });
   return callback(View, obj);
 });
 let closure_10 = importAllResult.memo((item) => {
@@ -34,9 +34,9 @@ let closure_10 = importAllResult.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(10361);
+  let obj = item(9784);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(10361).getFeatureId(feature);
+  const featureId1 = item(9784).getFeatureId(feature);
   obj = {
     start,
     end,
@@ -48,8 +48,8 @@ let closure_10 = importAllResult.memo((item) => {
     trailing: null
   };
   obj = { selected: featureId === featureId1 };
-  obj[4] = callback(item(7661).FormRadio, obj);
-  return callback(item(5224).TableRow, obj);
+  obj[4] = callback(item(7796).FormRadio, obj);
+  return callback(item(5315).TableRow, obj);
 });
 const obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

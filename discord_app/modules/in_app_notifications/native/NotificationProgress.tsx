@@ -15,11 +15,11 @@ function Progress(percent) {
   first = tmp2[0];
   dependencyMap = tmp2[1];
   callback = React.useCallback((nativeEvent) => callback(nativeEvent.nativeEvent.layout.width), []);
-  let obj = percent(4054);
+  let obj = percent(4146);
   const fn = function n() {
     let obj = percent;
     let value = percent;
-    if (typeof percent !== "Object") {
+    if (typeof percent !== "number") {
       value = obj.get();
     }
     obj = { translateX: first * (value / 100) - first };
@@ -39,7 +39,7 @@ function Progress(percent) {
   items[1] = { opacity: num };
   obj[1] = items;
   const items1 = [tmp.progress, animatedStyle];
-  obj[2] = jsx(first(4054).View, { style: items1 });
+  obj[2] = jsx(first(4146).View, { style: items1 });
   return <View onLayout={callback} style={null}>{null}</View>;
 }
 function RedesignProgress(percent) {
@@ -54,11 +54,11 @@ function RedesignProgress(percent) {
   first = tmp2[0];
   dependencyMap = tmp2[1];
   callback = React.useCallback((nativeEvent) => callback(nativeEvent.nativeEvent.layout.width), []);
-  let obj = percent(4054);
+  let obj = percent(4146);
   const fn = function n() {
     let obj = percent;
     let value = percent;
-    if (typeof percent !== "Object") {
+    if (typeof percent !== "number") {
       value = obj.get();
     }
     obj = { translateX: first * (value / 100) - first };
@@ -77,10 +77,10 @@ function RedesignProgress(percent) {
   }
   items[1] = { opacity: num };
   obj[1] = items;
-  obj = { style: tmp.progressTrack, children: tmp7(first(4054).View, { style: items1 }) };
+  obj = { style: tmp.progressTrack, children: tmp7(first(4146).View, { style: items1 }) };
   items1 = [tmp.progressRedesign, "ALERT" === type ? tmp.progressBarWarning : tmp.progressBarBrand, animatedStyle];
-  obj[2] = <View style={tmp.progressTrack}>{tmp7(first(4054).View, { style: items1 })}</View>;
-  return <View style={tmp.progressTrack}>{tmp7(first(4054).View, { style: items1 })}</View>;
+  obj[2] = <View style={tmp.progressTrack}>{tmp7(first(4146).View, { style: items1 })}</View>;
+  return <View style={tmp.progressTrack}>{tmp7(first(4146).View, { style: items1 })}</View>;
 }
 createCacheKey = { progress: null, progressRedesign: null, progressBarBrand: null, progressBarWarning: null, progressTrack: null, progressContainerTop: null, progressContainerBottom: null };
 createCacheKey = { borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_BRAND, height: 4 };
@@ -104,7 +104,7 @@ export default function NotificationProgress(percent) {
   let type;
   percent = percent.percent;
   ({ canExpand, type } = percent);
-  let obj = require(10316) /* context */;
+  let obj = require(9731) /* context */;
   const inAppNotificationContext = obj.useInAppNotificationContext();
   if (canExpand) {
     obj = { percent: null, hideProgress: null, type: null };

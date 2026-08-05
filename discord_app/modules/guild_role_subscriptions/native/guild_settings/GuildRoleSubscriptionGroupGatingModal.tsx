@@ -20,6 +20,6 @@ export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.csJWVI);
   obj[3] = constants.GROUP;
   const merged = Object.assign(arg0);
-  obj.children = jsx(importDefault(16586), { isFullServerGating: tmp2, onChange: tmp3 });
-  return jsx(importDefault(16596), { title: null, description: null, canProceedToNextStep: true, nextStep: null });
+  obj.children = jsx(importDefault(16683), { isFullServerGating: tmp2, onChange: tmp3 });
+  return jsx(importDefault(16693), { title: null, description: null, canProceedToNextStep: true, nextStep: null });
 };

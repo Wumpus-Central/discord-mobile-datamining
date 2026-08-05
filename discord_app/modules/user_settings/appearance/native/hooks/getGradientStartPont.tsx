@@ -44,7 +44,7 @@ const fn = function t(arg0, arg1, arg2) {
     sum = result + 360;
   }
   if (sum % 90 === 0) {
-    if (typeof getHorizontalOrVerticalStartPoint !== "fileFinishedImporting") {
+    if (typeof getHorizontalOrVerticalStartPoint !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (0 === sum) {
@@ -65,7 +65,7 @@ const fn = function t(arg0, arg1, arg2) {
     const _Math2 = Math;
     const tanResult = Math.tan(sum * Math.PI / 180);
     const result1 = -1 / tanResult;
-    if (typeof getStartCornerToIntersect !== "fileFinishedImporting") {
+    if (typeof getStartCornerToIntersect !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const result2 = arg1 / 2;

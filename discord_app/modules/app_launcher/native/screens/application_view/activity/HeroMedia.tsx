@@ -16,7 +16,7 @@ export default function HeroMedia(width) {
   ({ applicationId, containerHeight } = width);
   const tmp = callback();
   width = { width: width.width }.width;
-  require(10939) /* useDefaultAppLauncherWidth */;
+  require(9468) /* useDefaultAppLauncherWidth */;
   let bound = width;
   if (width == null) {
     let tmp8 = width;
@@ -27,11 +27,11 @@ export default function HeroMedia(width) {
   }
   const diff = bound - 2 * DEFAULT_CONTENT_PADDING;
   const rounded = Math.floor(9 * diff / 16);
-  const tmp13 = importDefault(10684)({ applicationId, size: diff, names: ["embedded_cover"] });
+  const tmp13 = importDefault(10643)({ applicationId, size: diff, names: ["embedded_cover"] });
   let tmp2Result = tmp2(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = tmp2(5525);
+  tmp2Result = tmp2(5616);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {
@@ -43,7 +43,7 @@ export default function HeroMedia(width) {
   }
   let tmp18 = null;
   if (null != prop1) {
-    tmp18 = importDefault(11246)(applicationId, prop.activity_preview_video_asset_id);
+    tmp18 = importDefault(11357)(applicationId, prop.activity_preview_video_asset_id);
   }
   let tmp21Result = null;
   if (null != tmp18) {
@@ -107,7 +107,7 @@ export const useHeroMediaDimensions = function useHeroMediaDimensions(arg0) {
     obj = {};
   }
   const width = obj.width;
-  require(10939) /* useDefaultAppLauncherWidth */;
+  require(9468) /* useDefaultAppLauncherWidth */;
   let bound = width;
   if (width == null) {
     let tmp5 = width;

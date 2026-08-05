@@ -23,7 +23,7 @@ function VoiceChatCallScreenHeaderIconInner(onPress) {
   }
   obj[3] = noop;
   obj[4] = children;
-  obj[1] = closure_6(importDefault(10736), obj);
+  obj[1] = closure_6(importDefault(10696), obj);
   return closure_6(View, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -58,7 +58,7 @@ export default function VoiceChatHeaderIcon(disabled) {
   obj[2] = require(1297) /* Button */.Icon.Sizes.SMALL_20;
   const items1 = [callback(require(1297) /* Button */.Icon, obj), children];
   obj[6] = items1;
-  return closure_7(require(4721) /* PressableBase */.PressableOpacity, obj);
+  return closure_7(require(4812) /* PressableBase */.PressableOpacity, obj);
 };
 export const useVoiceChatMentions = function useVoiceChatMentions(arg0) {
   const _require = arg0;
@@ -71,5 +71,5 @@ export const VoiceChatCallScreenHeaderIcon = function VoiceChatCallScreenHeaderI
   obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(VoiceChatCallScreenHeaderIconInner, obj);
-  return callback(require(3905) /* ManaContext */.ThemeContextProvider, obj);
+  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
 };

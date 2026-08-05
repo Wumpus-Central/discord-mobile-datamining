@@ -14,12 +14,12 @@ export const PaintIllocon = function PaintIllocon(size) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(7382);
+  obj[0] = importDefault(6528);
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5145), { uri: null });
+  return jsx(importDefault(5236), { uri: null });
 };

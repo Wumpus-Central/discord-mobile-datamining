@@ -14,68 +14,19 @@ function _startStageInstance() {
     let c6 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = constants.STAGE_INSTANCES;
-              const obj2 = { channel_id: null, topic: null, privacy_level: null, guild_scheduled_event_id: null, send_start_notification: null };
-              obj2[0] = callback;
-              obj2[1] = dependencyMap;
-              obj2[2] = asyncGeneratorStep;
-              obj2[3] = closure_4;
-              obj2[4] = constants;
-              obj1[1] = obj2;
-              obj1[2] = callback(530).rejectWithMigratedError();
-              c6 = 1;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          c5 = tmp;
-          throw tmp5;
-        }
-      }
+      const HTTP = callback(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = constants.STAGE_INSTANCES;
+      const obj2 = { channel_id: null, topic: null, privacy_level: null, guild_scheduled_event_id: null, send_start_notification: null };
+      obj2[0] = callback;
+      obj2[1] = dependencyMap;
+      obj2[2] = asyncGeneratorStep;
+      obj2[3] = closure_4;
+      obj2[4] = constants;
+      obj1[1] = obj2;
+      obj1[2] = callback(530).rejectWithMigratedError();
+      yield HTTP.post(obj1);
+      return body.body;
     })();
   });
   const _startStageInstance = tmp;
@@ -96,65 +47,16 @@ function _updateStageInstance() {
     let c4 = 0;
     let c3 = 0;
     return (function*(arg0, body) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = c3.STAGE_INSTANCE(callback);
-              const obj2 = { topic: null, privacy_level: null };
-              obj2[0] = dependencyMap;
-              obj2[1] = asyncGeneratorStep;
-              obj1[1] = obj2;
-              obj1[2] = callback(530).rejectWithMigratedError();
-              c4 = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.patch(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          c3 = tmp;
-          throw tmp5;
-        }
-      }
+      const HTTP = callback(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = c3.STAGE_INSTANCE(callback);
+      const obj2 = { topic: null, privacy_level: null };
+      obj2[0] = dependencyMap;
+      obj2[1] = asyncGeneratorStep;
+      obj1[1] = obj2;
+      obj1[2] = callback(530).rejectWithMigratedError();
+      yield HTTP.patch(obj1);
+      return body.body;
     })();
   });
   const _updateStageInstance = tmp;

@@ -12,7 +12,7 @@ function NewBadge() {
   obj = { variant: "text-sm/bold", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.c2GSIl);
-  obj[1] = jsx(require(4189) /* Text */.Text, { variant: "text-sm/bold", color: "text-default", children: null });
+  obj[1] = jsx(require(4281) /* Text */.Text, { variant: "text-sm/bold", color: "text-default", children: null });
   return <View variant="text-sm/bold" color="text-default">{null}</View>;
 }
 const TOPICAL_NAVIGATION_HEADER_COACHMARK = require("DismissibleContent").DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
@@ -32,7 +32,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   let dependencyMap;
   ({ children, isLast } = arg0);
   const ref = React.useRef(null);
-  let obj = first(8451);
+  let obj = first(5931);
   const tmp3 = callback(obj.useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
@@ -53,7 +53,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     return obj;
   }, items);
   const tmp = createCacheKey();
-  const coachmark = first(8440).useCoachmark(ref, memo);
+  const coachmark = first(8575).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   callback = React.useCallback(() => {

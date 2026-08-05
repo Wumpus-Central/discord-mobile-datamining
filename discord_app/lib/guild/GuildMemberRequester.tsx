@@ -120,7 +120,7 @@ prototype2["_getGuildState"] = function _getGuildState(_guildId) {
   const self = this;
   let tmp = this._guildStates[_guildId];
   if (null == tmp) {
-    if (typeof GuildMemberRequestState !== "fileFinishedImporting") {
+    if (typeof GuildMemberRequestState !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let closure_0 = _guildId;

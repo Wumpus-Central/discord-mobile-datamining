@@ -7,15 +7,15 @@ obj = {
     return intl.string(require(1236) /* getSystemLocale */.t.JALI2K);
   },
   usePredicate() {
-    return require(10506) /* getIsEligibleForQuests */.getIsEligibleForQuests();
+    return require(10375) /* getIsEligibleForQuests */.getIsEligibleForQuests();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(6010);
-      obj = { fromContent: callback(5042).QuestContent.USER_SETTINGS };
+      let obj = callback(7101);
+      obj = { fromContent: callback(5133).QuestContent.USER_SETTINGS };
       const result = obj.setQuestHomeUtmContext(obj);
       return true;
     };
@@ -24,7 +24,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUESTS,
   getComponent() {
-    return require(14046) /* QuestHomeSetting */.default;
+    return require(14146) /* QuestHomeSetting */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -60,11 +60,11 @@ function trackInvite(channelId) {
   }
   id = id.getId();
   invite = invite.getInvite(inviteKey);
-  let obj = require(4179) /* readSnowflake */;
+  let obj = require(4271) /* readSnowflake */;
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(6024);
+    let tmp3Result = tmp3(7115);
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -75,7 +75,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(5982);
+    tmp3Result = tmp3(7073);
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = store.getChannel(channelId.channelId);
@@ -116,14 +116,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(6027).getStreamerApplication(lastActiveStream, sortActivity);
+              const streamerApplication = tmp3(7118).getStreamerApplication(lastActiveStream, sortActivity);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(6027);
+              const tmp3Result1 = tmp3(7118);
             }
           }
         }
@@ -149,15 +149,15 @@ function trackInvite(channelId) {
     obj.message_id = messageId;
     obj.send_type = constants4.DIRECT_MESSAGE;
     obj.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-    let inviteInstanceId = tmp3(4179).getInviteInstanceId(result.baseCode, messageId);
+    let inviteInstanceId = tmp3(4271).getInviteInstanceId(result.baseCode, messageId);
     if (inviteInstanceId == null) {
       inviteInstanceId = null;
     }
     obj.invite_instance_id = inviteInstanceId;
     const merged1 = Object.assign(overrideProperties);
-    const tmp3Result2 = tmp3(4179);
-    importDefault(4388).trackWithMetadata(constants.INVITE_SENT, obj);
-    const obj13 = importDefault(4388);
+    const tmp3Result2 = tmp3(4271);
+    importDefault(4479).trackWithMetadata(constants.INVITE_SENT, obj);
+    const obj13 = importDefault(4479);
   } else {
     let tmp12 = null != invite;
     if (tmp12) {
@@ -179,15 +179,15 @@ function trackInvite(channelId) {
       obj2.message_id = messageId;
       obj2.send_type = constants4.DIRECT_MESSAGE;
       obj2.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-      let inviteInstanceId1 = tmp3(4179).getInviteInstanceId(result.baseCode, messageId);
+      let inviteInstanceId1 = tmp3(4271).getInviteInstanceId(result.baseCode, messageId);
       if (inviteInstanceId1 == null) {
         inviteInstanceId1 = null;
       }
       obj2.invite_instance_id = inviteInstanceId1;
       const merged3 = Object.assign(overrideProperties);
-      const tmp3Result3 = tmp3(4179);
-      importDefault(4388).trackWithMetadata(constants.INVITE_SENT, obj2);
-      const obj8 = importDefault(4388);
+      const tmp3Result3 = tmp3(4271);
+      importDefault(4479).trackWithMetadata(constants.INVITE_SENT, obj2);
+      const obj8 = importDefault(4479);
     }
   }
 }
@@ -330,7 +330,7 @@ let closure_54 = {
     messageGetter() {
       const intl = require(1236) /* getSystemLocale */.intl;
       const obj = { maxSizeMb: null };
-      obj[0] = require(4727) /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
+      obj[0] = require(4818) /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
       return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.DYFPg2, obj);
     }
   },
@@ -364,19 +364,19 @@ let obj14 = {
   },
   sendBotMessage(id, intl, messageName, nonce) {
     if (null != messageName) {
-      let obj = importDefault(4388);
+      let obj = importDefault(4479);
       obj = { message_author: "Clyde", message_name: null };
       obj[1] = messageName;
       obj.trackWithMetadata(constants.AUTOMATED_MESSAGE_RECEIVED, obj);
     }
     obj = { messageId: nonce, channelId: id, content: intl, loggingName: messageName };
-    obj14.receiveMessage(id, require(6042) /* createMessage */.createBotMessage(obj));
+    obj14.receiveMessage(id, require(7132) /* createMessage */.createBotMessage(obj));
   },
   sendNitroSystemMessage(channelId, content, nonce) {
     obj = { channelId, nonce, type: constants6.NITRO_NOTIFICATION, content, flags: closure_33.EPHEMERAL, author: obj };
     obj = { id: closure_40, username: "Nitro Notification", discriminator: closure_41, avatar: "nitro", bot: true };
     obj = {};
-    const merged = Object.assign(importDefault(6042)(obj));
+    const merged = Object.assign(importDefault(7132)(obj));
     obj.state = constants9.SENT;
     obj.channel_id = channelId;
     obj14.receiveMessage(channelId, obj, true);
@@ -385,7 +385,7 @@ let obj14 = {
     obj = { channelId, type: constants6.GIFTING_PROMPT, content: "", flags: closure_33.EPHEMERAL, author: obj, giftingPrompt };
     obj = { id: closure_40, username: "Gifting Prompt", discriminator: closure_41, avatar: "gifting_prompt", bot: true };
     obj = {};
-    const merged = Object.assign(importDefault(6042)(obj));
+    const merged = Object.assign(importDefault(7132)(obj));
     obj.state = constants9.SENT;
     obj14.receiveMessage(channelId, obj, true);
   },
@@ -393,7 +393,7 @@ let obj14 = {
     obj = { channelId, type: constants6.GUILD_BOOST_UPSELL, content: "", flags: closure_33.EPHEMERAL, author: obj, boostingPrompt };
     obj = { id: closure_40, username: "Guild Boost Upsell", discriminator: closure_41, avatar: "guild_boost_upsell", bot: true };
     obj = {};
-    const merged = Object.assign(importDefault(6042)(obj));
+    const merged = Object.assign(importDefault(7132)(obj));
     obj.state = constants9.SENT;
     obj14.receiveMessage(channelId, obj, true);
   },
@@ -426,8 +426,8 @@ let obj14 = {
       let obj = { isDM: null, isGDM: null };
       obj[0] = channel.isDM();
       obj[1] = channel.isGroupDM();
-      const match = require(4393) /* t */.match(obj);
-      const str = require(4393) /* t */;
+      const match = require(4484) /* t */.match(obj);
+      const str = require(4484) /* t */;
       const withResult = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
         const intl = callback(1236).intl;
@@ -477,15 +477,15 @@ let obj14 = {
         obj[0] = intl.string(callback(1236).t.i4AbAS);
         return obj;
       });
-      const nonce = require(6043) /* snowflakeSequence */.createNonce();
+      const nonce = require(7133) /* snowflakeSequence */.createNonce();
       obj14.sendBotMessage(c0, message, messageName, nonce);
-      const obj8 = require(6043) /* snowflakeSequence */;
+      const obj8 = require(7133) /* snowflakeSequence */;
       obj = { action: null, messageId: null, channelId: null, context: null };
-      obj[0] = require(5865) /* redactionSettingToRenderedString */.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT;
+      obj[0] = require(6968) /* redactionSettingToRenderedString */.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT;
       obj[1] = nonce;
       obj[2] = c0;
       obj[3] = EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED;
-      const result = require(5865) /* redactionSettingToRenderedString */.trackMediaRedactionAction(obj);
+      const result = require(6968) /* redactionSettingToRenderedString */.trackMediaRedactionAction(obj);
       let tmp = null != attachments;
       if (tmp) {
         tmp = attachments.length > 0;
@@ -498,7 +498,7 @@ let obj14 = {
         obj1[3] = attachments;
         obj1.dispatch(obj1);
       }
-      const obj9 = require(5865) /* redactionSettingToRenderedString */;
+      const obj9 = require(6968) /* redactionSettingToRenderedString */;
     }
   },
   truncateMessages(channelId, truncateBottom, truncateTop) {
@@ -531,7 +531,7 @@ let obj14 = {
     }
   },
   trackJump(channelId, id, Present, extraProperties) {
-    let obj = importDefault(4388);
+    let obj = importDefault(4479);
     obj = { context: Present, channel_id: channelId, message_id: id };
     const merged = Object.assign(extraProperties);
     obj.trackWithMetadata(constants.JUMP, obj);
@@ -558,7 +558,7 @@ let obj14 = {
       extraProperties = null;
     }
     ({ isPreload, returnMessageId, skipLocalFetch, jumpType, avoidInitialScroll, onJumpComplete } = arg0);
-    if (typeof context !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof context === "string") {
       obj14.trackJump(channelId, messageId, context, extraProperties);
     }
     if (MediaPlayerManager != null) {
@@ -632,7 +632,7 @@ let obj14 = {
           } else {
             closure_0 = arg1;
             if (closure_0.body.length > 0) {
-              obj = outer1_0(4413);
+              obj = outer1_0(4504);
               dependencyMap = 3;
               const obj5 = { value: null, done: true };
               obj5[0] = obj.createMessageRecord(closure_0.body[0]);
@@ -714,7 +714,7 @@ let obj14 = {
         if (jump != null) {
           messageId = jump.messageId;
         }
-        if (typeof RemoteFetch !== "fileFinishedImporting") {
+        if (typeof RemoteFetch !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj1 = Object.create(RemoteFetch.prototype);
@@ -870,8 +870,8 @@ let obj14 = {
               closure_2 = undefined;
               dependencyMap = undefined;
               basicChannel = outer1_17.getBasicChannel(outer1_0);
-              const orCreate = outer1_1(4864).getOrCreate(outer1_0);
-              const obj13 = outer1_1(4864);
+              const orCreate = outer1_1(4955).getOrCreate(outer1_0);
+              const obj13 = outer1_1(4955);
               const databaseResult = outer1_1(1907).database();
               c1 = databaseResult;
               if (null != databaseResult) {
@@ -924,7 +924,7 @@ let obj14 = {
                 tmp30 = closure_2.connectionId === outer1_6.lastTimeConnectedChanged();
               }
               dependencyMap = tmp30;
-              obj2 = outer1_1(5749);
+              obj2 = outer1_1(6856);
               const result = obj2.recordChannelFetchedLocal(basicChannel, c1, closure_2, dependencyMap, ClickArea, closure_2.messages);
               let obj3 = outer1_1(709);
               obj3 = { type: "LOCAL_MESSAGES_LOADED", guildId: null, channelId: null, users: null, members: null, messages: null, stale: null };
@@ -994,7 +994,7 @@ let obj14 = {
                     orCreate = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(5738).load(c1, basicChannel, c1));
+                    obj1[0] = obj2.tryLoadAsync(() => outer2_1(6845).load(c1, basicChannel, c1));
                     return obj1;
                   }
                 }
@@ -1372,7 +1372,7 @@ let obj14 = {
     return obj;
   },
   sendInvite(c1, code, c3, c4, content) {
-    const tmp = importDefault(6048)(code);
+    const tmp = importDefault(7138)(code);
     content = tmp;
     if (null != content) {
       const _HermesInternal = HermesInternal;
@@ -1394,7 +1394,7 @@ let obj14 = {
     if (arg4 === undefined) {
       flag = false;
     }
-    if (typeof str === "y") {
+    if (typeof str === "string") {
       let obj = { content: null, invalidEmojis: null, validNonShortcutEmojis: null, tts: null };
       obj[0] = str;
       obj[1] = [];
@@ -1464,7 +1464,7 @@ let obj14 = {
   },
   validateMessage(invalidEmojis, currentUser, throwTypeErrorResult) {
     if (invalidEmojis.some((animated) => animated.animated)) {
-      let obj = importDefault(3839);
+      let obj = importDefault(3931);
       if (!obj.canUseAnimatedEmojis(currentUser)) {
         const intl = require(1236) /* getSystemLocale */.intl;
         let stringResult = intl.string(require(1236) /* getSystemLocale */.t["V5/GgC"]);
@@ -1832,17 +1832,17 @@ let obj14 = {
                       let content;
                       let guildId;
                       let id;
-                      let message;
                       let overrideProperties;
+                      let pendingReplyActionSource;
                       let userId;
-                      message = ok;
+                      pendingReplyActionSource = ok;
                       if (ok.ok) {
                         let obj14 = outer3_1(outer3_3[65]);
                         obj14.donateSentMessage(closure_0, c0);
                         let obj = { sendAnalytics: null, poll: null };
                         obj = { duration: null, queueSize: null };
-                        obj[0] = message;
-                        obj[1] = message;
+                        obj[0] = pendingReplyActionSource;
+                        obj[1] = pendingReplyActionSource;
                         obj[0] = obj;
                         obj[1] = outer1_6;
                         outer3_55.receiveMessage(c0, ok.body, true, obj);
@@ -1851,7 +1851,7 @@ let obj14 = {
                           let obj19 = outer3_0(outer3_3[52]);
                           const sendForwardResult = obj17.sendForward(outer3_0(outer3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId);
                           obj17.sendForward(outer3_0(outer3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId).then(() => {
-                            const body = message.body;
+                            const body = pendingReplyActionSource.body;
                             let id;
                             if (body != null) {
                               id = body.id;
@@ -1868,7 +1868,7 @@ let obj14 = {
                             }
                             outer4_1(outer4_3[37]).track(outer4_27.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, { referenced_message_id: id, guild_id, channel_id, destination_channel_id: attachments.alsoForwardToChannelId });
                           }).catch((arg0) => {
-                            const body = message.body;
+                            const body = pendingReplyActionSource.body;
                             let id;
                             const combined = "Failed to forward thread message to parent channel LogId:" + ClickArea;
                             if (body != null) {
@@ -1877,7 +1877,7 @@ let obj14 = {
                             outer4_49.log(combined, { referencedMessageId: id, channelId: c0, destinationChannelId: attachments.alsoForwardToChannelId, error: arg0.toString() });
                           });
                           const nextPromise = obj17.sendForward(outer3_0(outer3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId).then(() => {
-                            const body = message.body;
+                            const body = pendingReplyActionSource.body;
                             let id;
                             if (body != null) {
                               id = body.id;
@@ -1908,115 +1908,117 @@ let obj14 = {
                           const obj21 = outer3_0(outer3_3[76]);
                         }
                         let result1 = outer3_9.recordMessageSendApiResponse(outer1_13);
+                        pendingReplyActionSource = outer3_35;
                         if (outer1_12 === outer3_35.REPLY) {
                           id = ok.body.id;
-                          message = c0;
+                          pendingReplyActionSource = c0;
                           if (outer1_5 != null) {
                             const message_id = outer1_5.message_id;
                           }
-                          const pendingReplyActionSource = outer3_11.getPendingReplyActionSource(message);
+                          pendingReplyActionSource = outer3_11;
+                          pendingReplyActionSource = outer3_11.getPendingReplyActionSource(pendingReplyActionSource);
                           if ("message_swipe" === pendingReplyActionSource) {
-                            message = null;
+                            pendingReplyActionSource = null;
                             if (null != message_id) {
-                              message = outer3_21;
-                              message = outer3_21.getMessage(message, message_id);
+                              pendingReplyActionSource = outer3_21;
+                              pendingReplyActionSource = outer3_21.getMessage(pendingReplyActionSource, message_id);
                             }
-                            message = outer3_17;
-                            message = outer3_17.getChannel(message);
-                            message = outer3_25;
-                            message = outer3_25.getCurrentUser();
-                            message = outer3_1;
-                            message = outer3_3;
-                            message = outer3_27;
+                            pendingReplyActionSource = outer3_17;
+                            pendingReplyActionSource = outer3_17.getChannel(pendingReplyActionSource);
+                            pendingReplyActionSource = outer3_25;
+                            pendingReplyActionSource = outer3_25.getCurrentUser();
+                            pendingReplyActionSource = outer3_1;
+                            pendingReplyActionSource = outer3_3;
+                            pendingReplyActionSource = outer3_27;
                             let obj2 = { message_id: null, channel_id: null, guild_id: null, swipe_action: "reply", is_own_message: null };
                             obj2[0] = id;
-                            obj2[1] = message;
-                            message = undefined;
-                            if (message != null) {
-                              message = message.guild_id;
+                            obj2[1] = pendingReplyActionSource;
+                            pendingReplyActionSource = undefined;
+                            if (pendingReplyActionSource != null) {
+                              pendingReplyActionSource = pendingReplyActionSource.guild_id;
                             }
-                            obj2[2] = message;
-                            message = null != message;
-                            if (message) {
-                              message = undefined;
-                              if (message != null) {
-                                message = message.author.id;
+                            obj2[2] = pendingReplyActionSource;
+                            pendingReplyActionSource = null != pendingReplyActionSource;
+                            if (pendingReplyActionSource) {
+                              pendingReplyActionSource = undefined;
+                              if (pendingReplyActionSource != null) {
+                                pendingReplyActionSource = pendingReplyActionSource.author.id;
                               }
-                              message = message.id === message;
+                              pendingReplyActionSource = pendingReplyActionSource.id === pendingReplyActionSource;
                             }
-                            obj2[4] = message;
-                            message = outer3_1(outer3_3[37]).track(outer3_27.MESSAGE_SWIPE_ACTION_SENT, obj2);
+                            obj2[4] = pendingReplyActionSource;
+                            pendingReplyActionSource = outer3_1(outer3_3[37]).track(outer3_27.MESSAGE_SWIPE_ACTION_SENT, obj2);
                             const obj25 = outer3_1(outer3_3[37]);
                           } else if ("message_shortcut" === pendingReplyActionSource) {
-                            message = outer3_17;
-                            message = outer3_17.getChannel(message);
-                            message = outer3_1;
-                            message = outer3_3;
-                            message = outer3_27;
+                            pendingReplyActionSource = outer3_17;
+                            pendingReplyActionSource = outer3_17.getChannel(pendingReplyActionSource);
+                            pendingReplyActionSource = outer3_1;
+                            pendingReplyActionSource = outer3_3;
+                            pendingReplyActionSource = outer3_27;
                             let obj3 = { message_id: null, channel_id: null, guild_id: null, original_message_id: null, action: "reply" };
                             obj3[0] = id;
-                            obj3[1] = message;
-                            message = undefined;
-                            if (message != null) {
-                              message = message.guild_id;
+                            obj3[1] = pendingReplyActionSource;
+                            pendingReplyActionSource = undefined;
+                            if (pendingReplyActionSource != null) {
+                              pendingReplyActionSource = pendingReplyActionSource.guild_id;
                             }
-                            obj3[2] = message;
+                            obj3[2] = pendingReplyActionSource;
                             obj3[3] = message_id;
-                            message = outer3_0;
-                            message = outer3_3;
+                            pendingReplyActionSource = outer3_0;
+                            pendingReplyActionSource = outer3_3;
                             const obj41 = outer3_1(outer3_3[37]);
-                            message = undefined;
-                            if (message != null) {
-                              message = message.guild_id;
+                            pendingReplyActionSource = undefined;
+                            if (pendingReplyActionSource != null) {
+                              pendingReplyActionSource = pendingReplyActionSource.guild_id;
                             }
-                            message = obj3;
-                            message = Object.assign(outer3_0(outer3_3[33]).collectGuildAnalyticsMetadata(message));
-                            message = outer3_0;
-                            message = outer3_3;
+                            pendingReplyActionSource = obj3;
+                            pendingReplyActionSource = Object.assign(outer3_0(outer3_3[33]).collectGuildAnalyticsMetadata(pendingReplyActionSource));
+                            pendingReplyActionSource = outer3_0;
+                            pendingReplyActionSource = outer3_3;
                             const obj23 = outer3_0(outer3_3[33]);
-                            message = obj3;
-                            message = Object.assign(outer3_0(outer3_3[33]).collectChannelAnalyticsMetadata(message));
-                            message = obj41.track(outer3_27.MESSAGE_SHORTCUT_ACTION_SENT, obj3);
+                            pendingReplyActionSource = obj3;
+                            pendingReplyActionSource = Object.assign(outer3_0(outer3_3[33]).collectChannelAnalyticsMetadata(pendingReplyActionSource));
+                            pendingReplyActionSource = obj41.track(outer3_27.MESSAGE_SHORTCUT_ACTION_SENT, obj3);
                             const obj24 = outer3_0(outer3_3[33]);
                           }
                         }
-                        message = outer3_1;
-                        message = outer3_3;
+                        pendingReplyActionSource = outer3_1;
+                        pendingReplyActionSource = outer3_3;
                         const obj20 = outer3_1(outer3_3[57]);
                         let obj4 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: null, channelId: null };
-                        message = outer3_24;
+                        pendingReplyActionSource = outer3_24;
                         obj4[1] = outer3_24.SendMessage;
-                        message = c0;
+                        pendingReplyActionSource = c0;
                         obj4[2] = c0;
-                        message = outer3_1(outer3_3[46]).dispatch(obj4);
-                        message = outer3_1;
-                        message = outer3_3;
+                        pendingReplyActionSource = outer3_1(outer3_3[46]).dispatch(obj4);
+                        pendingReplyActionSource = outer3_1;
+                        pendingReplyActionSource = outer3_3;
                         const obj27 = outer3_1(outer3_3[46]);
                         let obj5 = { type: "EMOJI_TRACK_USAGE", emojiUsed: null };
-                        message = closure_1;
+                        pendingReplyActionSource = closure_1;
                         obj5[1] = closure_1;
-                        message = outer3_1(outer3_3[46]).dispatch(obj5);
-                        message = outer3_1;
-                        message = outer3_3;
+                        pendingReplyActionSource = outer3_1(outer3_3[46]).dispatch(obj5);
+                        pendingReplyActionSource = outer3_1;
+                        pendingReplyActionSource = outer3_3;
                         const obj29 = outer3_1(outer3_3[46]);
                         const obj6 = { type: "STICKER_TRACK_USAGE", stickerIds: null };
-                        message = rounded;
+                        pendingReplyActionSource = rounded;
                         obj6[1] = rounded;
-                        message = outer3_1(outer3_3[46]).dispatch(obj6);
-                        message = outer3_1;
-                        message = outer3_3;
+                        pendingReplyActionSource = outer3_1(outer3_3[46]).dispatch(obj6);
+                        pendingReplyActionSource = outer3_1;
+                        pendingReplyActionSource = outer3_3;
                         const obj31 = outer3_1(outer3_3[46]);
                         let obj7 = { type: "LOCAL_MESSAGE_CREATE", message: null };
                         const obj8 = { channel_id: null, author: null };
-                        message = c0;
+                        pendingReplyActionSource = c0;
                         obj8[0] = c0;
-                        message = outer3_25;
+                        pendingReplyActionSource = outer3_25;
                         obj8[1] = outer3_25.getCurrentUser();
                         obj7[1] = obj8;
-                        message = outer3_1(outer3_3[46]).dispatch(obj7);
+                        pendingReplyActionSource = outer3_1(outer3_3[46]).dispatch(obj7);
                         let obj9 = { content: null, channelId: null, messageId: null, location: null, inviteAnalyticsMetadata: null };
                         obj9[0] = closure_0;
-                        message = c0;
+                        pendingReplyActionSource = c0;
                         obj9[1] = c0;
                         obj9[2] = ok.body.id;
                         let str4 = closure_2;
@@ -2025,26 +2027,26 @@ let obj14 = {
                           str5 = "chat_input";
                         }
                         obj9[3] = str5;
-                        message = length;
+                        pendingReplyActionSource = length;
                         obj9[4] = length;
-                        ({ channelId: message, messageId: id, location: attachments, inviteAnalyticsMetadata: message, overrideProperties, content } = obj9);
+                        ({ channelId: pendingReplyActionSource, messageId: id, location: attachments, inviteAnalyticsMetadata: pendingReplyActionSource, overrideProperties, content } = obj9);
                         if (overrideProperties === undefined) {
                           overrideProperties = {};
                         }
                         let messageByReference = overrideProperties;
                         let id2;
-                        message = outer3_16;
+                        pendingReplyActionSource = outer3_16;
                         id2 = outer3_16.getId();
-                        message = outer3_1;
-                        message = outer3_3;
+                        pendingReplyActionSource = outer3_1;
+                        pendingReplyActionSource = outer3_3;
                         const obj33 = outer3_1(outer3_3[46]);
-                        message = outer3_1(outer3_3[28])(content).forEach((url) => {
+                        pendingReplyActionSource = outer3_1(outer3_3[28])(content).forEach((url) => {
                           let applicationId;
                           let code;
                           let type;
                           let type2;
                           ({ type, code } = url);
-                          let obj = message(message[29]);
+                          let obj = pendingReplyActionSource(pendingReplyActionSource[29]);
                           if (obj.isApplicationCodedLink(type)) {
                             let tmpResult = tmp(tmp2[29]);
                             const applicationCodedLinkData = tmpResult.getApplicationCodedLinkData(type, code, url.url);
@@ -2082,10 +2084,10 @@ let obj14 = {
                           } else if (tmp(tmp2[30]).CodedLinkType.INVITE === type) {
                             obj = { inviteKey: null, channelId: null, messageId: null, location: null, inviteAnalyticsMetadata: null, overrideProperties: null };
                             obj[0] = code;
-                            obj[1] = message;
+                            obj[1] = pendingReplyActionSource;
                             obj[2] = id;
                             obj[3] = attachments;
-                            obj[4] = message;
+                            obj[4] = pendingReplyActionSource;
                             obj[5] = ClickArea;
                             outer1_53(obj);
                           } else if (tmp(tmp2[30]).CodedLinkType.TEMPLATE === type) {
@@ -2150,20 +2152,20 @@ let obj14 = {
                           }
                         });
                         let str6 = str4;
-                        message = c0;
+                        pendingReplyActionSource = c0;
                         if (str4 == null) {
                           str6 = "chat_input";
                         }
-                        message = c2;
+                        pendingReplyActionSource = c2;
                         id = ok.body.id;
                         attachments = str6;
-                        message = c2.isGiftLinkSentOnBehalfOfUser;
-                        message = outer3_0;
-                        message = outer3_3;
+                        pendingReplyActionSource = c2.isGiftLinkSentOnBehalfOfUser;
+                        pendingReplyActionSource = outer3_0;
+                        pendingReplyActionSource = outer3_3;
                         const arr2 = outer3_1(outer3_3[28])(content);
                         const obj37 = outer3_0(outer3_3[41]);
-                        message = outer3_0(outer3_3[41]).findGiftCodes(closure_0).forEach((arg0) => {
-                          const channel = outer1_17.getChannel(message);
+                        pendingReplyActionSource = outer3_0(outer3_3[41]).findGiftCodes(closure_0).forEach((arg0) => {
+                          const channel = outer1_17.getChannel(pendingReplyActionSource);
                           if (null != channel) {
                             const obj = { location: null, gift_code: null, guild_id: null, channel_id: null, channel_type: null, message_id: null, automatic_send: null };
                             obj[0] = attachments;
@@ -2171,43 +2173,43 @@ let obj14 = {
                             obj[2] = channel.getGuildId();
                             ({ id: obj3[3], type: obj3[4] } = channel);
                             obj[5] = id;
-                            obj[6] = message;
-                            id(message[33]).trackWithMetadata(outer1_27.GIFT_CODE_SENT, obj);
-                            const obj2 = id(message[33]);
+                            obj[6] = pendingReplyActionSource;
+                            id(pendingReplyActionSource[33]).trackWithMetadata(outer1_27.GIFT_CODE_SENT, obj);
+                            const obj2 = id(pendingReplyActionSource[33]);
                           }
                         });
-                        message = c2;
+                        pendingReplyActionSource = c2;
                         if (null != c2.gifMetadata) {
-                          message = c2;
-                          message = c0;
+                          pendingReplyActionSource = c2;
+                          pendingReplyActionSource = c0;
                           if (str4 == null) {
                             str4 = "chat_input";
                           }
-                          message = outer3_17;
-                          let channel = outer3_17.getChannel(message);
+                          pendingReplyActionSource = outer3_17;
+                          let channel = outer3_17.getChannel(pendingReplyActionSource);
                           if (null != channel) {
-                            message = outer3_1;
-                            message = outer3_3;
-                            message = outer3_27;
+                            pendingReplyActionSource = outer3_1;
+                            pendingReplyActionSource = outer3_3;
+                            pendingReplyActionSource = outer3_27;
                             const obj10 = { location: null, message_id: null, gif_provider: null, load_id: null, source_object: null, gif_url: null, gif_id: null };
                             obj10[0] = str4;
                             obj10[1] = ok.body.id;
                             ({ gif_provider: obj44[2], load_id: obj44[3], source_object: obj44[4], gif_url: obj44[5], gif_id: obj44[6] } = c2.gifMetadata);
-                            message = outer3_0;
-                            message = outer3_3;
+                            pendingReplyActionSource = outer3_0;
+                            pendingReplyActionSource = outer3_3;
                             const obj43 = outer3_1(outer3_3[37]);
-                            message = obj10;
-                            message = Object.assign(outer3_0(outer3_3[33]).collectGuildAnalyticsMetadata(channel.getGuildId()));
-                            message = outer3_0;
-                            message = outer3_3;
+                            pendingReplyActionSource = obj10;
+                            pendingReplyActionSource = Object.assign(outer3_0(outer3_3[33]).collectGuildAnalyticsMetadata(channel.getGuildId()));
+                            pendingReplyActionSource = outer3_0;
+                            pendingReplyActionSource = outer3_3;
                             const obj45 = outer3_0(outer3_3[33]);
-                            message = obj10;
-                            message = Object.assign(outer3_0(outer3_3[33]).collectChannelAnalyticsMetadata(channel));
-                            message = obj43.track(outer3_27.MESSAGE_SENT_WITH_GIF, obj10);
+                            pendingReplyActionSource = obj10;
+                            pendingReplyActionSource = Object.assign(outer3_0(outer3_3[33]).collectChannelAnalyticsMetadata(channel));
+                            pendingReplyActionSource = obj43.track(outer3_27.MESSAGE_SENT_WITH_GIF, obj10);
                             const obj46 = outer3_0(outer3_3[33]);
                           }
                         }
-                        message = c0;
+                        pendingReplyActionSource = c0;
                         attachments = ok.body.attachments;
                         if (attachments == null) {
                           attachments = [];
@@ -2218,12 +2220,12 @@ let obj14 = {
                         }
                         id = ok.body.id;
                         if (attachments.length === items.length) {
-                          message = outer3_17;
-                          message = outer3_17.getChannel(message);
-                          if (null != message) {
-                            message = outer3_12;
-                            messageByReference = outer3_12.getMessageByReference(message);
-                            message = items.forEach((clip) => {
+                          pendingReplyActionSource = outer3_17;
+                          pendingReplyActionSource = outer3_17.getChannel(pendingReplyActionSource);
+                          if (null != pendingReplyActionSource) {
+                            pendingReplyActionSource = outer3_12;
+                            messageByReference = outer3_12.getMessageByReference(pendingReplyActionSource);
+                            pendingReplyActionSource = items.forEach((clip) => {
                               clip = clip.clip;
                               if (null != clip) {
                                 let someResult = ClickArea.state === outer1_13.LOADED;
@@ -2231,37 +2233,37 @@ let obj14 = {
                                   const attachments = ClickArea.message.attachments;
                                   someResult = attachments.some(() => { ... });
                                 }
-                                let obj = id(message[37]);
+                                let obj = id(pendingReplyActionSource[37]);
                                 obj = {};
-                                const merged = Object.assign(attachments(message[42]).getClipBaseProperties(clip));
-                                const obj3 = attachments(message[42]);
-                                const merged1 = Object.assign(attachments(message[42]).getClipContextProperties("trackClipsShared"));
+                                const merged = Object.assign(attachments(pendingReplyActionSource[42]).getClipBaseProperties(clip));
+                                const obj3 = attachments(pendingReplyActionSource[42]);
+                                const merged1 = Object.assign(attachments(pendingReplyActionSource[42]).getClipContextProperties("trackClipsShared"));
                                 obj.channel_id = clip;
-                                obj.guild_id = message.getGuildId();
-                                obj.channel_type = message.type;
+                                obj.guild_id = pendingReplyActionSource.getGuildId();
+                                obj.channel_type = pendingReplyActionSource.type;
                                 ({ applicationId: obj2.application_id, id: obj2.clip_uuid, remoteClipId: obj2.remote_clip_id } = clip);
                                 obj.message_id = id;
                                 obj.attachment_id = attachments[arg1].id;
                                 obj.is_distributed_clip_reply = someResult;
                                 obj.track(outer1_27.CLIP_SHARED, obj);
-                                const obj4 = attachments(message[42]);
+                                const obj4 = attachments(pendingReplyActionSource[42]);
                               }
                             });
                           }
                         }
-                        message = outer1_15;
+                        pendingReplyActionSource = outer1_15;
                         if (null != outer1_15) {
-                          message = outer3_1;
-                          message = outer3_3;
+                          pendingReplyActionSource = outer3_1;
+                          pendingReplyActionSource = outer3_3;
                           let obj11 = { type: "UPLOAD_COMPLETE", channelId: null, file: null, aborted: false };
-                          message = c0;
+                          pendingReplyActionSource = c0;
                           obj11[1] = c0;
-                          message = outer1_15;
+                          pendingReplyActionSource = outer1_15;
                           obj11[2] = outer1_15._file;
-                          message = outer3_1(outer3_3[46]).dispatch(obj11);
+                          pendingReplyActionSource = outer3_1(outer3_3[46]).dispatch(obj11);
                           const obj39 = outer3_1(outer3_3[46]);
                         }
-                        message = message(ok);
+                        pendingReplyActionSource = pendingReplyActionSource(ok);
                         const findGiftCodesResult = outer3_0(outer3_3[41]).findGiftCodes(closure_0);
                       } else {
                         obj = { hasErr: null, status: null, code: null, error: null };
@@ -2302,8 +2304,8 @@ let obj14 = {
                                     flag = false;
                                   }
                                 } else {
-                                  message = outer3_0;
-                                  message = outer3_3;
+                                  pendingReplyActionSource = outer3_0;
+                                  pendingReplyActionSource = outer3_3;
                                   const AUTOMOD_ERROR_CODES = outer3_0(outer3_3[78]).AUTOMOD_ERROR_CODES;
                                   if (AUTOMOD_ERROR_CODES.has(ok.body.code)) {
                                     obj2 = outer3_1(outer3_3[46]);
@@ -2339,7 +2341,9 @@ let obj14 = {
                           }
                         }
                         if (flag) {
-                          outer3_55.deleteMessage(c0, outer1_14, true);
+                          if (null != outer3_21.getMessage(c0, outer1_14)) {
+                            outer3_55.deleteMessage(c0, outer1_14, true);
+                          }
                         } else {
                           if (null != outer1_15) {
                             obj7 = outer3_1(outer3_3[46]);
@@ -2377,17 +2381,17 @@ let obj14 = {
                           }
                           obj17 = { failureCode: null, errorMessage: null };
                           obj17[0] = status;
-                          let message1;
+                          let message;
                           if (ok.hasErr) {
-                            message1 = ok.err.message;
+                            message = ok.err.message;
                           }
-                          obj17[1] = message1;
+                          obj17[1] = message;
                           let result3 = obj11.logMessageSendFailure(obj17);
                           obj13 = outer3_1(outer3_3[72]);
                           let result4 = obj13.cancelPendingSendRequests(c0);
                           const item = result4.forEach((messageId) => {
                             logger.log("Cancelling pending message", messageId.nonce);
-                            let obj = id(message[46]);
+                            let obj = id(pendingReplyActionSource[46]);
                             obj = { type: "MESSAGE_SEND_FAILED", messageId: messageId.nonce, channelId: messageId.channelId };
                             obj.dispatch(obj);
                           });
@@ -2562,7 +2566,7 @@ let obj14 = {
                   obj.track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj);
                 }
               })(outer1_1, outer1_0);
-              let obj1 = outer1_1(6080);
+              let obj1 = outer1_1(7144);
               obj2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2611,18 +2615,18 @@ let obj14 = {
             obj2[4] = closure_0;
             obj2[5] = dependencyMap;
             const obj3 = { type: null, message: null };
-            obj3[0] = outer1_0(6149).MessageDataType.EDIT;
+            obj3[0] = outer1_0(7213).MessageDataType.EDIT;
             obj3[1] = obj2;
-            outer1_1(6149).enqueue(obj3, (hasErr) => {
+            outer1_1(7213).enqueue(obj3, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = outer2_0(6181).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = outer2_0(7245).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
                 let obj = { type: null, message: null };
-                obj[0] = outer2_0(6149).MessageDataType.EDIT;
+                obj[0] = outer2_0(7213).MessageDataType.EDIT;
                 obj[1] = obj2;
                 let obj1 = outer2_1(709);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
@@ -2633,7 +2637,7 @@ let obj14 = {
                 obj[2] = obj;
                 obj1.dispatch(obj);
               }
-              const AccessibilityAnnouncer = outer2_0(4039).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer = outer2_0(4131).AccessibilityAnnouncer;
               const announce = AccessibilityAnnouncer.announce;
               const intl = outer2_0(1236).intl;
               const string = intl.string;
@@ -2696,7 +2700,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(6080);
+              let obj1 = outer1_1(7144);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2769,7 +2773,7 @@ let obj14 = {
               let closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              let obj1 = outer1_1(6080);
+              let obj1 = outer1_1(7144);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2915,14 +2919,14 @@ let obj14 = {
                   let obj = tmp4(709);
                   obj = { type: "MESSAGE_DELETE", id: tmp4, channelId: closure_0 };
                   obj.dispatch(obj).then(() => {
-                    const AccessibilityAnnouncer = callback(4039).AccessibilityAnnouncer;
+                    const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
                     const intl = callback(1236).intl;
                     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.RYMs7s));
                   });
                 })();
                 dependencyMap = 3;
               } else {
-                let obj1 = outer1_1(6080);
+                let obj1 = outer1_1(7144);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -2943,7 +2947,7 @@ let obj14 = {
               let obj = tmp4(709);
               obj = { type: "MESSAGE_DELETE", id: tmp4, channelId: closure_0 };
               obj.dispatch(obj).then(() => {
-                const AccessibilityAnnouncer = callback(4039).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
                 const intl = callback(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(callback(1236).t.RYMs7s));
               });
@@ -2963,13 +2967,13 @@ let obj14 = {
   },
   dismissAutomatedMessage(loggingName) {
     if (null != loggingName.loggingName) {
-      let obj = importDefault(4388);
+      let obj = importDefault(4479);
       obj = { message_name: null, message_author: null };
       obj[0] = loggingName.loggingName;
       obj[1] = loggingName.author.username;
       obj.trackWithMetadata(constants.AUTOMATED_MESSAGE_DISMISSED, obj);
     }
-    const result = require(6182) /* fetchAndReconcileGiftIntentDismissals */.logGiftIntentMessageDismissed(loggingName.channel_id, loggingName.id);
+    const result = require(7246) /* fetchAndReconcileGiftIntentDismissals */.logGiftIntentMessageDismissed(loggingName.channel_id, loggingName.id);
     this.deleteMessage(loggingName.channel_id, loggingName.id, true);
   },
   revealMessage(id, messageId) {
@@ -3035,7 +3039,7 @@ let obj14 = {
               formatToPlainStringResult = intl.string(outer1_0(1236).t.z2gyNF);
             }
             c0 = formatToPlainStringResult;
-            obj3 = outer1_1(4532);
+            obj3 = outer1_1(4623);
             const obj4 = { title: null, body: null, confirmText: null };
             const intl3 = outer1_0(1236).intl;
             obj4[0] = intl3.string(outer1_0(1236).t.Vd1hs6);
@@ -3100,7 +3104,7 @@ let obj11 = {
   messageGetter() {
     const intl = require(1236) /* getSystemLocale */.intl;
     const obj = { maxSizeMb: null };
-    obj[0] = require(4727) /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
+    obj[0] = require(4818) /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
     return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.DYFPg2, obj);
   }
 };

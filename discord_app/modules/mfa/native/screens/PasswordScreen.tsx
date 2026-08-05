@@ -31,84 +31,37 @@ export default function PasswordScreen(finish) {
   function _sendPassword() {
     const self = this;
     const tmp = _undefined(function*() {
-      if (c6 === 2) {
+      let closure_2 = tmp3;
+      outer1_1(null);
+      outer1_3(true);
+      let v0 = 1;
+      const obj1 = { mfaType: "password", data: null };
+      obj1[1] = outer1_2;
+      yield outer1_0(obj1);
+      if (1 === tmp7) {
+        v0 = 0;
+        let message = callback;
+        const body = message.body;
+        message = undefined;
+        if (body != null) {
+          message = body.message;
+        }
+        if (message == null) {
+          message = message.message;
+        }
+        closure_1(message);
+        callback(false);
+        let c6 = 3;
+        const tmp15 = closure_1;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
-              outer1_1(null);
-              outer1_3(true);
-              let v0 = 1;
-              const obj1 = { mfaType: "password", data: null };
-              obj1[1] = outer1_2;
-              c5 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = outer1_0(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              v0 = 0;
-              let message = callback;
-              const body = message.body;
-              message = undefined;
-              if (body != null) {
-                message = body.message;
-              }
-              if (message == null) {
-                message = message.message;
-              }
-              closure_1(message);
-              callback(false);
-              c6 = 3;
-              const tmp15 = closure_1;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              v0(true);
-              v0 = 0;
-            }
-            v0 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp31) {
-          callback = tmp31;
-          if (tmp4 === v0) {
-            c6 = tmp2;
-            throw tmp31;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        v0(true);
+        v0 = 0;
       }
+      v0 = 0;
+      return arg1;
     });
     const _sendPassword = tmp;
     const apply = tmp.apply;
@@ -150,7 +103,7 @@ export default function PasswordScreen(finish) {
   obj1[10] = tmp15;
   obj[1] = jsx(finish(first[9]).TextInput, { autoFocus: true, required: true, textContentType: "password", label: null, placeholder: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true });
   obj[1] = <View style={screenStyles.inputContainer}>{null}</View>;
-  let obj2 = { text: null, disabled: null, loading: null, onPress: null };
+  const obj2 = { text: null, disabled: null, loading: null, onPress: null };
   const tmp12 = importDefault(first[7]);
   const tmp14 = View;
   const intl4 = tmp13(tmp2[8]).intl;

@@ -22,8 +22,8 @@ export default function AppIcon(size) {
     num = 56;
   }
   const tmp = createCacheKey();
-  const tmp2 = importDefault(4129)();
-  let obj = require(4039) /* AccessibilityAnnouncer */;
+  const tmp2 = importDefault(4221)();
+  let obj = require(4131) /* AccessibilityAnnouncer */;
   let num2 = 1;
   if (obj.isThemeDark(tmp2)) {
     num2 = 0;

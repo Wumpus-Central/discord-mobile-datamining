@@ -160,7 +160,7 @@ export default function GlobalStatusIndicator(children) {
 };
 export const useGlobalStatusIndicatorHeightSharedValue = function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
   const _require = globalStatusIndicatorState;
-  const sharedValue = _require(4054).useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = _require(4146).useSharedValue(globalStatusIndicatorState.height);
   const items = [globalStatusIndicatorState.height, sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);

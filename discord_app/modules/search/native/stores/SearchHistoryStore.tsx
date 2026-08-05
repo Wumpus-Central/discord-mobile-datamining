@@ -83,7 +83,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
   }
   if (null != searchHistories) {
     let closure_4 = require(12) /* apply */.mapValues(searchHistories, (arg0) => {
-      if (typeof closure_3 !== "fileFinishedImporting") {
+      if (typeof closure_3 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj = Object.create(closure_3.prototype);
@@ -97,7 +97,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
 prototype2["getSearchHistory"] = function getSearchHistory(handleChange) {
   let obj = dependencyMap[handleChange];
   if (obj == null) {
-    if (typeof SearchHistory !== "fileFinishedImporting") {
+    if (typeof SearchHistory !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SearchHistory.prototype);
@@ -117,7 +117,7 @@ const searchHistoryStore = new SearchHistoryStore(require("dispatcher"), {
     id = id.id;
     let obj = dependencyMap[id];
     if (obj == null) {
-      if (typeof SearchHistory !== "fileFinishedImporting") {
+      if (typeof SearchHistory !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchHistory.prototype);
@@ -131,7 +131,7 @@ const searchHistoryStore = new SearchHistoryStore(require("dispatcher"), {
     id = id.id;
     let obj = dependencyMap[id];
     if (obj == null) {
-      if (typeof SearchHistory !== "fileFinishedImporting") {
+      if (typeof SearchHistory !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchHistory.prototype);

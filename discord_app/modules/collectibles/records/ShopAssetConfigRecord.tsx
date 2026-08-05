@@ -9,7 +9,7 @@ class AssetDisplayConfigRecord {
 }
 const prototype = AssetDisplayConfigRecord.prototype;
 AssetDisplayConfigRecord["fromServer"] = function fromServer(arg0) {
-  if (typeof AssetDisplayConfigRecord !== "fileFinishedImporting") {
+  if (typeof AssetDisplayConfigRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   ({ desktop_max_height: tmp2.desktopMaxHeight, mobile_max_height: tmp2.mobileMaxHeight, responsive: tmp2.responsive, background_style: tmp2.backgroundStyle } = arg0);

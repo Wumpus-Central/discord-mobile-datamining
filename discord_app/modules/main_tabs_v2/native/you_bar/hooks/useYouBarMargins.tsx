@@ -18,7 +18,7 @@ export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
 };
 export const useYouBarBottomMargin = function useYouBarBottomMargin() {
   const bottom = importDefault(1581)().bottom;
-  require(3897) /* map */;
+  require(3989) /* map */;
   if (tmp2) {
     const _Math2 = Math;
     let bound = Math.max(tmp5, bottom);

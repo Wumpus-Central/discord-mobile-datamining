@@ -27,9 +27,9 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
   if (tmp) {
     recipientId = channel.getRecipientId();
   }
-  const strangerDangerWarning = _require(10445).useStrangerDangerWarning(channel.id);
+  const strangerDangerWarning = _require(10254).useStrangerDangerWarning(channel.id);
   const hasFlagResult = channel.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj = _require(10445);
+  const obj = _require(10254);
   const items = [recipientId, processChannel, strangerDangerWarning, hasFlagResult];
   const items1 = [strangerDangerWarning, tmp, channel.id, recipientId, hasFlagResult];
   return _require(589).useStateFromStores(items, () => {

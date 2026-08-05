@@ -28,9 +28,9 @@ function IgnoredInformationTable() {
     obj[3] = icon.text();
     obj[4] = icon.subtext();
     obj[6] = icon.a11yLabel();
-    return callback2(callback(5224).TableRow, obj, arg1);
+    return callback2(callback(5315).TableRow, obj, arg1);
   });
-  return callback2(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback2(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
 }
 let c4 = importAllResult;
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: c9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
@@ -163,7 +163,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
   [tmp3, c4] = callback(undefined.useState(false), 2);
   const bottom = channelId(1581)().bottom;
   let tmp2 = callback(undefined.useState(false), 2);
-  const items = [channelId(5539).IGNORE_CONFIRMATION_ACTION_SHEET];
+  const items = [channelId(5630).IGNORE_CONFIRMATION_ACTION_SHEET];
   let obj = userId(589);
   const items1 = [mergeGuildAvatar];
   const items2 = [userId];
@@ -219,7 +219,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     obj6[0] = tmp.avatarIconContainer;
     const obj7 = { size: null, source: null };
     obj7[0] = tmp7(1297).Icon.Sizes.MEDIUM;
-    obj7[1] = tmp4(8368);
+    obj7[1] = tmp4(8307);
     obj6[1] = closure_13(tmp7(1297).Icon, obj7);
     items6[1] = closure_13(stateFromStores, obj6);
     obj3[1] = items6;
@@ -228,14 +228,14 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     obj8[0] = tmp.title;
     const intl = tmp7(1236).intl;
     const obj9 = { username: null };
-    obj9[0] = tmp4(4383).getName(stateFromStores1, channelId, stateFromStores);
+    obj9[0] = tmp4(4474).getName(stateFromStores1, channelId, stateFromStores);
     obj8[4] = intl.format(tmp7(1236).t["WrQD/Y"], obj9);
-    items7[1] = closure_13(tmp7(4189).Text, obj8);
+    items7[1] = closure_13(tmp7(4281).Text, obj8);
     const obj10 = { style: null, variant: "heading-md/medium", color: "text-default", accessibilityRole: "header", children: null };
     obj10[0] = tmp.subTitle;
     const intl2 = tmp7(1236).intl;
     obj10[4] = intl2.string(tmp7(1236).t.JKL1u1);
-    items7[2] = closure_13(tmp7(4189).Text, obj10);
+    items7[2] = closure_13(tmp7(4281).Text, obj10);
     obj2[1] = items7;
     const items8 = [closure_14(stateFromStores, obj2), , , ];
     const obj11 = { style: null, children: null };
@@ -250,7 +250,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     const obj14 = { icon: null, label: null, variant: "danger", subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
     const obj15 = { size: null, source: null, color: null };
     obj15[0] = tmp7(1297).Icon.Sizes.MEDIUM;
-    obj15[1] = tmp4(8367);
+    obj15[1] = tmp4(8397);
     obj15[2] = tmp.destructiveIcon.color;
     obj14[0] = closure_13(tmp7(1297).Icon, obj15);
     const intl4 = tmp7(1236).intl;
@@ -258,7 +258,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     const obj16 = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
     const intl5 = tmp7(1236).intl;
     obj16[2] = intl5.string(tmp7(1236).t.NTnf1T);
-    obj14[3] = closure_13(tmp7(4189).Text, obj16);
+    obj14[3] = closure_13(tmp7(4281).Text, obj16);
     const intl6 = tmp7(1236).intl;
     obj14[4] = intl6.string(tmp7(1236).t["fZ+p9C"]);
     obj14[5] = function onPress() {
@@ -269,8 +269,8 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
       obj = { userId, channelId, onSuccess: encodeProperties, impressionName: userId(outer1_2[32]).ImpressionNames.BLOCK_USER_CONFIRMATION };
       obj3.openLazy(userId(outer1_2[31])(outer1_2[30], outer1_2.paths), outer1_9, obj, "replaceTopSheet");
     };
-    obj13[2] = closure_13(tmp7(5224).TableRow, obj14);
-    obj12[1] = closure_13(tmp7(5558).TableRowGroup, obj13);
+    obj13[2] = closure_13(tmp7(5315).TableRow, obj14);
+    obj12[1] = closure_13(tmp7(5649).TableRowGroup, obj13);
     items8[2] = closure_13(stateFromStores, obj12);
     const obj17 = { style: null, children: null };
     obj17[0] = tmp.button;
@@ -296,7 +296,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     };
     obj18[3] = tmp3;
     obj18[4] = tmp3;
-    const items9 = [closure_13(tmp7(4604).Button, obj18), ];
+    const items9 = [closure_13(tmp7(4695).Button, obj18), ];
     const obj19 = { onPress: null, style: null, variant: "text-sm/normal", color: "text-default", children: null };
     obj19[0] = handleClose;
     const obj20 = { textAlign: "center", marginTop: null, paddingBottom: null };
@@ -306,22 +306,22 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     const intl8 = tmp7(1236).intl;
     const obj21 = { articleLink: null };
     obj21[0] = function articleLink() {
-      channelId(4161).hideActionSheet();
-      const obj = channelId(4161);
+      channelId(4253).hideActionSheet();
+      const obj = channelId(4253);
       const articleURL = channelId(1945).getArticleURL(constants3.STEALTH_REMEDIATION_FEATURE_GUIDE);
       const obj2 = channelId(1945);
-      channelId(3890).openURL(articleURL);
+      channelId(3982).openURL(articleURL);
     };
     obj19[4] = intl8.format(tmp7(1236).t.iX9qtL, obj21);
-    items9[1] = closure_13(tmp7(4189).Text, obj19);
+    items9[1] = closure_13(tmp7(4281).Text, obj19);
     obj17[1] = items9;
     items8[3] = closure_14(stateFromStores, obj17);
     obj4[0] = items8;
-    obj[4] = closure_14(tmp7(5249).BottomSheetScrollView, obj4);
-    obj[1] = closure_13(tmp7(5247).BottomSheet, obj);
-    tmp12Result = tmp12(tmp7(5519).AnalyticsLocationProvider, obj);
+    obj[4] = closure_14(tmp7(5340).BottomSheetScrollView, obj4);
+    obj[1] = closure_13(tmp7(5338).BottomSheet, obj);
+    tmp12Result = tmp12(tmp7(5610).AnalyticsLocationProvider, obj);
     const tmp20 = stateFromStores1;
-    const tmp4Result = tmp4(4383);
+    const tmp4Result = tmp4(4474);
   }
   return tmp12Result;
 });

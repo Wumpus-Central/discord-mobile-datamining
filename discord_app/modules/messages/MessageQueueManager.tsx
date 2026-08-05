@@ -9,7 +9,7 @@ class MessageQueueManager extends tmp2 {
   }
 }
 MessageQueueManager.prototype["handleLogout"] = function handleLogout() {
-  importDefault(6149).clear();
+  importDefault(7213).clear();
 };
 const messageQueueManager = new MessageQueueManager();
 const result = require("set").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");

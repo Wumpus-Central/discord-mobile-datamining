@@ -6,7 +6,7 @@ class APIError {
     if (importDefault === undefined) {
       str = "An unexpected error occurred.";
     }
-    if (typeof global === "y") {
+    if (typeof global === "string") {
       tmp4 = require;
       obj = { message: null, code: null };
       obj[0] = global;

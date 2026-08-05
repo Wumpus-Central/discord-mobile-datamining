@@ -40,9 +40,9 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     tmp6 = tmp4 | constants.CONTEXTLESS;
   }
   if (flag2) {
-    const AllowActivityPartyPrivacyFriends2 = require(3866) /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
+    const AllowActivityPartyPrivacyFriends2 = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
     const setting = AllowActivityPartyPrivacyFriends2.getSetting();
-    const AllowActivityPartyPrivacyVoiceChannel2 = require(3866) /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
+    const AllowActivityPartyPrivacyVoiceChannel2 = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
     const PARTY_PRIVACY_FRIENDS2 = constants.PARTY_PRIVACY_FRIENDS;
     const setting1 = AllowActivityPartyPrivacyVoiceChannel2.getSetting();
     if (setting) {
@@ -66,9 +66,9 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     if (!value) {
       return tmp6;
     } else {
-      const AllowActivityPartyPrivacyFriends = require(3866) /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
+      const AllowActivityPartyPrivacyFriends = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
       const setting2 = AllowActivityPartyPrivacyFriends.getSetting();
-      const AllowActivityPartyPrivacyVoiceChannel = require(3866) /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
+      const AllowActivityPartyPrivacyVoiceChannel = require(3958) /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
       const PARTY_PRIVACY_FRIENDS = constants.PARTY_PRIVACY_FRIENDS;
       const setting3 = AllowActivityPartyPrivacyVoiceChannel.getSetting();
       if (setting2) {
@@ -97,7 +97,7 @@ export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActiv
   }
   let hasFlagResult = require(1384) /* hasFlag */.hasFlag(num, constants.CONTEXTLESS);
   if (hasFlagResult) {
-    hasFlagResult = importDefault(6028)(remoteApplicationActivity);
+    hasFlagResult = importDefault(7119)(remoteApplicationActivity);
   }
   return hasFlagResult;
 };

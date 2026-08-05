@@ -16,7 +16,7 @@ export default function ReportProblem(arg0) {
   let importDefault;
   let require;
   ({ stream: require, analyticsData: importDefault } = arg0);
-  importDefault(4620)(() => {
+  importDefault(4711)(() => {
     let obj = outer1_0(outer1_2[7]);
     const streamerApplication = obj.getStreamerApplication(ownerId, outer1_3);
     obj = { type: "Stream Issue Sheet", other_user_id: ownerId.ownerId, application_id: null, application_name: null, game_id: null };
@@ -38,7 +38,7 @@ export default function ReportProblem(arg0) {
     outer1_1(outer1_2[8]).track(outer1_4.OPEN_POPOUT, obj);
   });
   let tmp = createCacheKey();
-  const mapped = importDefault(16060)({ isStreamer: false, isEndStream: false }).map((label) => {
+  const mapped = importDefault(16156)({ isStreamer: false, isEndStream: false }).map((label) => {
     const value = label.value;
     return outer1_5(outer1_0(outer1_2[13]).ActionSheetRow, {
       label: label.label,
@@ -60,9 +60,9 @@ export default function ReportProblem(arg0) {
   obj = { title: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.XuqqwI);
-  obj[1] = jsx(require(5246) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
+  obj[1] = jsx(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
   obj = { style: tmp.container, children: null };
-  obj[1] = jsx(require(5557) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: false, children: mapped });
-  obj[2] = jsx(require(5249) /* BottomSheetModal */.BottomSheetScrollView, { style: tmp.container, children: null });
-  return jsx(require(5555) /* ActionSheet */.ActionSheet, { style: tmp.container, children: null });
+  obj[1] = jsx(require(5648) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: false, children: mapped });
+  obj[2] = jsx(require(5340) /* BottomSheetModal */.BottomSheetScrollView, { style: tmp.container, children: null });
+  return jsx(require(5646) /* ActionSheet */.ActionSheet, { style: tmp.container, children: null });
 };

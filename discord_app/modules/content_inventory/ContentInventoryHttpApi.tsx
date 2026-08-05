@@ -82,7 +82,7 @@ function _getMyContentInventory() {
           } else if (2 === tmp7) {
             constants = 0;
             c6 = body;
-            const aPIError = new callback(4092).APIError(c6);
+            const aPIError = new callback(4184).APIError(c6);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -192,7 +192,7 @@ function _getContentInventoryOutbox() {
             obj4 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE", userId: null };
             obj4[1] = callback;
             obj4.dispatch(obj4);
-            const aPIError = new callback(4092).APIError(dependencyMap);
+            const aPIError = new callback(4184).APIError(dependencyMap);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -247,98 +247,50 @@ function _deleteContentInventoryEntryHistory() {
     let c9 = 0;
     let c7 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c9 === 2) {
+      let closure_5 = tmp3;
+      let c7 = 1;
+      callback(709).dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" });
+      const HTTP = lib(530).HTTP;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_5.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(lib.id);
+      const obj9 = callback(709);
+      obj1[1] = lib(530).rejectWithMigratedError();
+      yield HTTP.del(obj1);
+      if (1 === tmp7) {
+        c7 = 0;
+        let message;
+        if (body != null) {
+          body = body.body;
+          if (body != null) {
+            message = body.message;
+          }
+        }
+        let dispatcher = message;
+        if (message == null) {
+          const intl = lib(1236).intl;
+          dispatcher = intl.string(lib(1236).t.FMbL3s);
+        }
+        let obj3 = callback(709);
+        obj3 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: null };
+        obj3[1] = dispatcher;
+        obj3.dispatch(obj3);
+        let c9 = 3;
+      } else if (arg0 === 1) {
         c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const obj = callback(709);
+        const obj4 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS", userId: null, entry: null };
+        obj4[1] = callback;
+        obj4[2] = lib;
+        obj.dispatch(obj4);
+        if (dependencyMap != null) {
+          dependencyMap();
         }
-      } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_5 = tmp3;
-              let closure_4 = tmp7;
-              let dispatcher;
-              let c7 = 1;
-              callback(709).dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" });
-              const HTTP = lib(530).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_5.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(lib.id);
-              const obj9 = callback(709);
-              obj1[1] = lib(530).rejectWithMigratedError();
-              c8 = 2;
-              c9 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c7 = 0;
-              let message;
-              if (body != null) {
-                body = body.body;
-                if (body != null) {
-                  message = body.message;
-                }
-              }
-              dispatcher = message;
-              if (message == null) {
-                const intl = lib(1236).intl;
-                dispatcher = intl.string(lib(1236).t.FMbL3s);
-              }
-              let obj3 = callback(709);
-              obj3 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: null };
-              obj3[1] = dispatcher;
-              obj3.dispatch(obj3);
-              c9 = 3;
-            } else if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj = callback(709);
-              const obj4 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS", userId: null, entry: null };
-              obj4[1] = callback;
-              obj4[2] = lib;
-              obj.dispatch(obj4);
-              if (dependencyMap != null) {
-                dependencyMap();
-              }
-              c7 = 0;
-            }
-            c7 = 0;
-            c9 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          }
-        } catch (tmp30) {
-          body = tmp30;
-          if (tmp4 === c7) {
-            c9 = tmp2;
-            throw tmp30;
-          } else {
-            c8 = tmp;
-          }
-        }
+        c7 = 0;
       }
+      c7 = 0;
+      return arg1;
     })();
   });
   const _deleteContentInventoryEntryHistory = tmp;

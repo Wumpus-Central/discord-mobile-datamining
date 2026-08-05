@@ -3,7 +3,7 @@ import importAllResult from "useSafeAreaInsets";
 import { Platform } from "useGradientBottom";
 import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes";
 import ME from "ME";
-import jsxProd from "module_4203";
+import jsxProd from "module_4295";
 import createCacheKey from "createCacheKey";
 
 let c4;
@@ -17,8 +17,8 @@ let c3 = importAllResult;
 let closure_8 = createCacheKey.createStyles({ container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } });
 let closure_9 = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
 let closure_10 = importAllResult.memo(() => {
-  const windowDimensions = importAllResult.useContext(importDefault(10050)).windowDimensions;
-  let obj = windowDimensions(4054);
+  const windowDimensions = importAllResult.useContext(importDefault(11557)).windowDimensions;
+  let obj = windowDimensions(4146);
   const fn = function n() {
     return { width: windowDimensions.get().width, height: windowDimensions.get().height };
   };
@@ -29,8 +29,8 @@ let closure_10 = importAllResult.memo(() => {
   obj = { style: items, children: null };
   items = [callback2().gradientWrapper, animatedStyle];
   const tmp = callback2();
-  obj[1] = callback(importDefault(4723), { absolute: true });
-  return callback(importDefault(7684), obj);
+  obj[1] = callback(importDefault(4814), { absolute: true });
+  return callback(importDefault(7819), obj);
 });
 const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
   const callback = importAllResult.useCallback(() => {
@@ -41,17 +41,17 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj[0] = intl2.string(require(1236) /* getSystemLocale */.t["5MstTl"]);
-    obj[1] = tmp(4148);
+    obj[1] = tmp(4240);
     obj[2] = callback;
-    let tmp5Result = tmp5(tmp(11444), obj);
-    const tmpResult = tmp(11444);
+    let tmp5Result = tmp5(tmp(11553), obj);
+    const tmpResult = tmp(11553);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t["5MstTl"]);
-    obj[1] = tmp(4148);
+    obj[1] = tmp(4240);
     obj[2] = callback;
-    tmp5Result = tmp5(require(6685) /* IconButton */.IconButton, obj);
+    tmp5Result = tmp5(require(7672) /* IconButton */.IconButton, obj);
   }
   return tmp5Result;
 });

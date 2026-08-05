@@ -33,7 +33,7 @@ export default function FormSwitch(value) {
     color = tmp4.track.color;
   }
   if (null == borderColor) {
-    let obj = require(4039) /* AccessibilityAnnouncer */;
+    let obj = require(4131) /* AccessibilityAnnouncer */;
     if (obj.isThemeDark(tmp7)) {
       borderColor = importDefault(712).unsafe_rawColors.PRIMARY_400;
     }

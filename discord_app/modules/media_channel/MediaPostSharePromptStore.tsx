@@ -42,7 +42,7 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatc
             }
           }
         }
-        obj2 = require(7728) /* useIsFirstMessageInMediaPost */;
+        obj2 = require(7861) /* useIsFirstMessageInMediaPost */;
       }
     }
   },

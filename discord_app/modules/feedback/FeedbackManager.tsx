@@ -12,7 +12,7 @@ let closure_6;
 let require = arg1;
 function optOutEligibilityCheck(hotspot) {
   const _require = hotspot;
-  const InAppFeedbackStates = _require(3866).InAppFeedbackStates;
+  const InAppFeedbackStates = _require(3958).InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[hotspot.feedbackType];
   let optOutExpiryTime;
   if (tmp3 != null) {
@@ -33,7 +33,7 @@ function optOutEligibilityCheck(hotspot) {
     tmp10 = !tmp5;
   }
   if (tmp10) {
-    const InAppFeedbackStates2 = _require(3866).InAppFeedbackStates;
+    const InAppFeedbackStates2 = _require(3958).InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       let obj = {};
       const merged = Object.assign(arg0);
@@ -55,7 +55,7 @@ function triggerRateEligibilityCheck(chance) {
 }
 function recencyEligibilityCheck(cooldown, storageKey) {
   const _require = storageKey;
-  const InAppFeedbackStates = _require(3866).InAppFeedbackStates;
+  const InAppFeedbackStates = _require(3958).InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[storageKey.feedbackType];
   let lastImpressionTime;
   if (tmp3 != null) {
@@ -83,7 +83,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     isNaNResult = Number.isNaN(tmp7);
   }
   if (!isNaNResult) {
-    const InAppFeedbackStates2 = tmp(3866).InAppFeedbackStates;
+    const InAppFeedbackStates2 = tmp(3958).InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       let obj = {};
       const merged = Object.assign(arg0);
@@ -166,7 +166,7 @@ obj5.storageKey = "searchResultsFeedback";
 obj5.feedbackType = FeedbackType.SEARCH_RESULTS;
 const items1 = [
   function searchResultsEligibilityCheck() {
-    return require(16192) /* useIsSearchResultsFeedbackExperimentEnabled */.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
+    return require(16288) /* useIsSearchResultsFeedbackExperimentEnabled */.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
   }
 ];
 obj5.eligibilityChecks = items1;

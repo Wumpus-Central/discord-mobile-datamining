@@ -10,7 +10,7 @@ export default function openCustomKeyboard(secondaryTextFieldRef) {
   secondaryTextFieldRef = secondaryTextFieldRef.secondaryTextFieldRef;
   require(1478) /* computeEntryState */.setKeyboardType(keyboardParams);
   let obj = require(1478) /* computeEntryState */;
-  require(5639) /* runAfterInteractions */.runAfterInteractions(() => {
+  require(5730) /* runAfterInteractions */.runAfterInteractions(() => {
     const current = ref.current;
     current.blur();
     if (secondaryTextFieldRef != null) {

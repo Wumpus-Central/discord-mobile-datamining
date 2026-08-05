@@ -22,112 +22,64 @@ function disconnectRemote() {
 function _disconnectRemote() {
   const self = this;
   const tmp = callback(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp3;
-            const awaitingRemoteSessionInfo = outer1_6.getAwaitingRemoteSessionInfo();
-            let nonce;
-            if (awaitingRemoteSessionInfo != null) {
-              nonce = awaitingRemoteSessionInfo.nonce;
-            }
-            v0(outer1_2[6]).dispatch({ type: "REMOTE_SESSION_DISCONNECT" });
-            let type;
-            if (awaitingRemoteSessionInfo != null) {
-              type = awaitingRemoteSessionInfo.type;
-            }
-            let tmp24 = type !== outer1_9.PLAYSTATION;
-            if (tmp24) {
-              let type1;
-              if (awaitingRemoteSessionInfo != null) {
-                type1 = awaitingRemoteSessionInfo.type;
-              }
-              tmp24 = type1 !== tmp23.PLAYSTATION_STAGING;
-            }
-            if (!tmp24) {
-              let commandId;
-              if (awaitingRemoteSessionInfo != null) {
-                commandId = awaitingRemoteSessionInfo.commandId;
-              }
-              tmp24 = null == commandId;
-            }
-            if (!tmp24) {
-              let deviceId;
-              if (awaitingRemoteSessionInfo != null) {
-                deviceId = awaitingRemoteSessionInfo.deviceId;
-              }
-              tmp24 = null == deviceId;
-            }
-            const items = [];
-            if (!tmp24) {
-              items.push(outer1_17(awaitingRemoteSessionInfo.type, awaitingRemoteSessionInfo.deviceId, awaitingRemoteSessionInfo.commandId));
-            }
-            if (null != nonce) {
-              items.push(outer1_14(nonce));
-            }
-            let c3 = 1;
-            v0 = 2;
-            c4 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(items);
-            return obj1;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            obj1 = v0(4532);
-            const obj2 = { title: null, body: null };
-            const intl = callback(1236).intl;
-            obj2[0] = intl.string(callback(1236).t.LNhXcL);
-            const intl2 = callback(1236).intl;
-            obj2[1] = intl2.string(callback(1236).t.QnKxtP);
-            obj1.show(obj2);
-            c4 = 3;
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            c3 = 0;
-          }
-          c3 = 0;
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp32) {
-        const dependencyMap = tmp32;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp32;
-        } else {
-          v0 = tmp;
-        }
-      }
+    const callback = tmp3;
+    const awaitingRemoteSessionInfo = outer1_6.getAwaitingRemoteSessionInfo();
+    if (awaitingRemoteSessionInfo != null) {
+      const nonce = awaitingRemoteSessionInfo.nonce;
     }
+    v0(outer1_2[6]).dispatch({ type: "REMOTE_SESSION_DISCONNECT" });
+    if (awaitingRemoteSessionInfo != null) {
+      const type = awaitingRemoteSessionInfo.type;
+    }
+    let tmp24 = type !== outer1_9.PLAYSTATION;
+    if (tmp24) {
+      let type1;
+      if (awaitingRemoteSessionInfo != null) {
+        type1 = awaitingRemoteSessionInfo.type;
+      }
+      tmp24 = type1 !== tmp23.PLAYSTATION_STAGING;
+    }
+    if (!tmp24) {
+      let commandId;
+      if (awaitingRemoteSessionInfo != null) {
+        commandId = awaitingRemoteSessionInfo.commandId;
+      }
+      tmp24 = null == commandId;
+    }
+    if (!tmp24) {
+      let deviceId;
+      if (awaitingRemoteSessionInfo != null) {
+        deviceId = awaitingRemoteSessionInfo.deviceId;
+      }
+      tmp24 = null == deviceId;
+    }
+    const items = [];
+    if (!tmp24) {
+      items.push(outer1_17(awaitingRemoteSessionInfo.type, awaitingRemoteSessionInfo.deviceId, awaitingRemoteSessionInfo.commandId));
+    }
+    if (null != nonce) {
+      items.push(outer1_14(nonce));
+    }
+    let c3 = 1;
+    yield Promise.all(items);
+    if (1 === tmp7) {
+      c3 = 0;
+      const obj1 = v0(4623);
+      const obj2 = { title: null, body: null };
+      const intl = callback(1236).intl;
+      obj2[0] = intl.string(callback(1236).t.LNhXcL);
+      const intl2 = callback(1236).intl;
+      obj2[1] = intl2.string(callback(1236).t.QnKxtP);
+      obj1.show(obj2);
+      let c4 = 3;
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      c3 = 0;
+    }
+    c3 = 0;
+    return arg1;
   });
   const _disconnectRemote = tmp;
   const apply = tmp.apply;
@@ -755,7 +707,7 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
   disconnectRemote();
 };
 export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, arg1, first) {
-  let obj = require(8849) /* snapVolumeToDefault */;
+  let obj = require(9079) /* snapVolumeToDefault */;
   const result = obj.coerceAudioContextForProto(first);
   if (null != result) {
     obj = { type: "REMOTE_COMMAND", sessionId: null, payload: null };

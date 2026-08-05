@@ -12,9 +12,9 @@ function GuildChannelLabel(channel) {
   channel = channel.channel;
   let obj = { style: callback().content, children: null };
   const tmp = callback();
-  const tmp2 = importDefault(4384)(channel);
+  const tmp2 = importDefault(4475)(channel);
   obj = { channel, layout: closure_5, name: tmp2 };
-  obj[1] = require(15520) /* ChannelContentComponent */.renderChannelContent(obj);
+  obj[1] = require(15617) /* ChannelContentComponent */.renderChannelContent(obj);
   return <closure_4 channel={channel} layout={closure_5} name={tmp2} />;
 }
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
@@ -32,11 +32,11 @@ const memoResult = require("noop").memo(function GuildChannelRow(channel) {
   ({ subtitle, trailing, extras, onPress, voiceStates } = channel);
   const merged = Object.assign(channel, Object.create(null));
   const tmp2 = callback();
-  let obj = require(15522) /* LaunchpadChannelIcon */;
+  let obj = require(15619) /* LaunchpadChannelIcon */;
   const channelAccessibilityProps = obj.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
   obj = { style: tmp2.simpleIcon, source: null };
-  obj[1] = require(4654) /* getChannelIcon */.getSimpleChannelIcon(channel);
-  const obj3 = require(4654) /* getChannelIcon */;
+  obj[1] = require(4745) /* getChannelIcon */.getSimpleChannelIcon(channel);
+  const obj3 = require(4745) /* getChannelIcon */;
   obj = {};
   const merged1 = Object.assign(channelAccessibilityProps);
   const merged2 = Object.assign(merged);
@@ -48,7 +48,7 @@ const memoResult = require("noop").memo(function GuildChannelRow(channel) {
   obj.onPress = onPress;
   obj.trailing = trailing;
   obj.extras = extras;
-  return jsx(require(15512) /* SearchListRow */.SearchListRow, {});
+  return jsx(require(15609) /* SearchListRow */.SearchListRow, {});
 });
 const result = require("MessageEmbedTypes").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelRow.tsx");
 

@@ -7,11 +7,11 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
   let primaryColor2;
   let saturation;
   let secondaryColor;
-  let obj = require(3904) /* getGradientThemeFromFlags */;
+  let obj = require(3996) /* getGradientThemeFromFlags */;
   const primaryColor = themeContext.primaryColor;
   const gradientThemeFromFlags = obj.getGradientThemeFromFlags(themeContext);
   ({ contrast, saturation, enabledExperiments } = themeContext);
-  let obj1 = require(4004) /* getGradientColorByPercentage */;
+  let obj1 = require(4096) /* getGradientColorByPercentage */;
   let gradientThemeMetadata = obj1.getGradientThemeMetadata(gradientThemeFromFlags, themeContext.gradient);
   if (null != primaryColor) {
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
@@ -43,7 +43,7 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       obj[6] = int2hexResult1;
       obj[1] = obj;
       tmp9 = obj;
-      tmpResult1 = tmp(3899);
+      tmpResult1 = tmp(3991);
     }
     gradientThemeMetadata = tmp9;
   }

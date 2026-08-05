@@ -29,7 +29,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
           if (height > 0) {
             let str3 = "IMAGE";
             if (!obj2.isImageFile(filename)) {
-              let tmp5Result = tmp5(4381);
+              let tmp5Result = tmp5(4472);
               let str5 = "INVALID";
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
@@ -49,7 +49,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
               str3 = str5;
             }
             let str = str3;
-            obj2 = require(4381) /* urlMatchesFileExtension */;
+            obj2 = require(4472) /* urlMatchesFileExtension */;
           }
           return str;
         }
@@ -67,7 +67,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     if (obj.isPlaintextPreviewableFile(filename)) {
       str2 = "PLAINTEXT_PREVIEW";
     }
-    obj = require(9936) /* set */;
+    obj = require(10176) /* set */;
   }
   str = str2;
 };
@@ -86,9 +86,9 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             if (tmpResult.isVideoContentType(contentType)) {
               return "VIDEO";
             }
-            tmpResult = tmp(4381);
+            tmpResult = tmp(4472);
           }
-          obj = require(4381) /* urlMatchesFileExtension */;
+          obj = require(4472) /* urlMatchesFileExtension */;
           tmp = require;
         }
       }

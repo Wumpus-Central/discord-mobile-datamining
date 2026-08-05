@@ -14,7 +14,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => obj.saveCameraUploadsToDevice);
   },
   onValueChange: function onSaveCameraUploadsToDeviceValueChange(saveCameraUploadsToDevice) {
-    let obj = importDefault(6209);
+    let obj = importDefault(8620);
     obj = { saveCameraUploadsToDevice };
     const result = obj.updatedUnsyncedSettings(obj);
   }

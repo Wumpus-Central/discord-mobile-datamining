@@ -12,77 +12,31 @@ function _transferToPlaystationWithAlert() {
     let c8 = 0;
     let c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c8 === 2) {
+      let closure_4 = tmp3;
+      let asyncGeneratorStep = tmp5;
+      const lib = lib2;
+      let c6 = 1;
+      yield lib(10773).transferToPlayStation(lib, lib2.id, dependencyMap);
+      if (1 === tmp8) {
+        c6 = 0;
+        const obj1 = lib2(4623);
+        const obj2 = { title: null, body: null };
+        const intl = lib(1236).intl;
+        obj2[0] = intl.string(lib(1236).t.QL1y93);
+        const intl2 = lib(1236).intl;
+        const obj3 = { deviceName: null };
+        obj3[0] = lib.name;
+        obj2[1] = intl2.formatToPlainString(lib(1236).t["6ZyNH/"], obj3);
+        obj1.show(obj2);
+        let c8 = 3;
+      } else if (arg0 === 1) {
         c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_4 = tmp3;
-              let asyncGeneratorStep = tmp5;
-              const lib = lib2;
-              let c6 = 1;
-              c7 = 2;
-              c8 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = lib(9048).transferToPlayStation(lib, lib2.id, dependencyMap);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp8) {
-              c6 = 0;
-              obj1 = lib2(4532);
-              const obj2 = { title: null, body: null };
-              const intl = lib(1236).intl;
-              obj2[0] = intl.string(lib(1236).t.QL1y93);
-              const intl2 = lib(1236).intl;
-              const obj3 = { deviceName: null };
-              obj3[0] = lib.name;
-              obj2[1] = intl2.formatToPlainString(lib(1236).t["6ZyNH/"], obj3);
-              obj1.show(obj2);
-              c8 = 3;
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c6 = 0;
-            }
-            c6 = 0;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp29) {
-          let closure_5 = tmp29;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp29;
-          } else {
-            c7 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c6 = 0;
       }
+      c6 = 0;
+      return arg1;
     })();
   });
   const _transferToPlaystationWithAlert = tmp;

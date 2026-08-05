@@ -171,8 +171,8 @@ export default function buildFavoritesSectionButtons(hasFavoritesAccess) {
       if (tmp2) {
         let obj = { label: null, IconComponent: null, isDestructive: true, onPress: null };
         const intl2 = require(1236) /* getSystemLocale */.intl;
-        obj[0] = intl2.string(importDefault(2971).TN4nAX);
-        obj[1] = require(9430) /* StarIcon */.StarIcon;
+        obj[0] = intl2.string(importDefault(3031).TN4nAX);
+        obj[1] = require(8666) /* StarIcon */.StarIcon;
         obj[3] = function onPress() {
           return (function removeChannelFromFavorites(closure_0) {
             const self = this;
@@ -191,8 +191,8 @@ export default function buildFavoritesSectionButtons(hasFavoritesAccess) {
         if (!tmp3) {
           obj = { label: null, IconComponent: null, trailing: null, onPress: null };
           const intl = require(1236) /* getSystemLocale */.intl;
-          obj[0] = intl.string(importDefault(2971).G9fGlP);
-          obj[1] = require(9432) /* StarOutlineIcon */.StarOutlineIcon;
+          obj[0] = intl.string(importDefault(3031).G9fGlP);
+          obj[1] = require(8668) /* StarOutlineIcon */.StarOutlineIcon;
           let tmp10;
           if (tmp4) {
             obj = { size: null };

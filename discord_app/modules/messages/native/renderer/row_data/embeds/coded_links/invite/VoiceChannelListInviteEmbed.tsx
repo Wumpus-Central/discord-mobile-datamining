@@ -23,7 +23,7 @@ export const canShowVoiceChannelListInviteEmbed = function canShowVoiceChannelLi
     const guild = store2.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild) {
-      let channel = importDefault(9512)(invite).channel;
+      let channel = importDefault(10907)(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;
@@ -51,7 +51,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     let guild = store2.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild) {
-      let channel = displayNameStylesEnabled(9512)(invite).channel;
+      let channel = displayNameStylesEnabled(10907)(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;
@@ -74,11 +74,11 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
   } else {
     guild = tmp.guild;
     const channel2 = tmp.channel;
-    ({ colors, baseColors } = displayNameStylesEnabled(7730)(closure_2));
+    ({ colors, baseColors } = displayNameStylesEnabled(7863)(closure_2));
     let assetUriForEmbed;
     if (null != guild.icon) {
-      assetUriForEmbed = guild(7734).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
-      let obj2 = guild(7734);
+      assetUriForEmbed = guild(7865).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
+      let obj2 = guild(7865);
     }
     voiceStatesForChannelAlt = voiceStatesForChannelAlt.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     const items = [];
@@ -107,7 +107,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
         guildMemberAvatarURLSimple = obj.getUserAvatarURL(member.user, false, 24);
       }
       let assetUriForEmbed = guildMemberAvatarURLSimple;
-      if (typeof guildMemberAvatarURLSimple !== "__REMOTEDEV__") {
+      if (typeof guildMemberAvatarURLSimple === "number") {
         assetUriForEmbed = guild(outer1_2[17]).getAssetUriForEmbed(guildMemberAvatarURLSimple);
         const obj6 = guild(outer1_2[17]);
       }
@@ -153,8 +153,8 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const tmp20 = obj;
     const tmp29 = processColor;
     const tmp39 = displayNameStylesEnabled;
-    const tmp41 = displayNameStylesEnabled(7730)(closure_2);
-    const embedScrollGradientBackground = guild(4004).getEmbedScrollGradientBackground();
+    const tmp41 = displayNameStylesEnabled(7863)(closure_2);
+    const embedScrollGradientBackground = guild(4096).getEmbedScrollGradientBackground();
     let backgroundColor = tmp29(embedScrollGradientBackground);
     if (backgroundColor == null) {
       backgroundColor = baseColors.backgroundColor;
@@ -165,16 +165,16 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     obj.guildName = guild.name;
     obj.guildIcon = assetUriForEmbed;
     obj.headerText = "";
-    const obj4 = guild(4004);
-    obj.titleText = guild(4384).computeChannelName(channel2, mergeGuildAvatar, upsertRelationship);
+    const obj4 = guild(4096);
+    obj.titleText = guild(4475).computeChannelName(channel2, mergeGuildAvatar, upsertRelationship);
     obj.titleColor = voiceStatesForChannelAlt.length > 0 ? colors.voiceActiveColor : colors.voiceMutedColor;
     const intl = tmp30(1236).intl;
     obj.acceptLabelText = intl.string(guild(1236).t.gpqgah);
     ({ acceptLabelGreenColor: obj3.acceptLabelColor, acceptLabelGreenBackgroundColor: obj3.acceptLabelBackgroundColor } = colors);
-    const tmp30Result = guild(4384);
+    const tmp30Result = guild(4475);
     const tmp35 = currentClientVoiceChannelId === channel2.id;
     const items1 = [trackCommunicationDisabled];
-    obj.canBeAccepted = tmp39(9513).canAcceptInvite(items1, invite);
+    obj.canBeAccepted = tmp39(10908).canAcceptInvite(items1, invite);
     obj.embedCanBeTapped = true;
     obj.type = InviteTypes.GUILD;
     obj.voiceUsers = mapped;
@@ -182,7 +182,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const intl2 = tmp30(1236).intl;
     obj.emptyStateText = intl2.string(guild(1236).t.zSqdrS);
     const intl3 = tmp30(1236).intl;
-    const tmp39Result = tmp39(9513);
+    const tmp39Result = tmp39(10908);
     obj.streamingLabel = intl3.string(guild(1236).t.dI3q4h).toUpperCase();
     obj.voiceHeaderBackgroundColor = colors.voiceHeaderBackgroundColor;
     obj.reducedMotion = tmp20.useReducedMotion;

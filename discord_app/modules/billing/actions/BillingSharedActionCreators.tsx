@@ -62,7 +62,7 @@ function _validatePaymentSourceBillingAddress() {
           } else if (1 === tmp7) {
             c4 = 0;
             callback2 = set;
-            obj2 = callback(3861);
+            obj2 = callback(3953);
             callback = obj2.parseV8BillingAddressSkemaErrorToBillingError(callback2);
             obj3 = callback2(709);
             const obj5 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: null };
@@ -113,69 +113,19 @@ function _popupBridgeState() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const table = tmp2;
-              let state = tmp5;
-              state = undefined;
-              const HTTP = callback(outer1_2[4]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-              obj1[0] = outer1_7.BILLING_POPUP_BRIDGE(callback);
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            state = body.body.state;
-            obj = state(table[6]);
-            const obj4 = { type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state: null, paymentSourceType: null };
-            obj4[1] = state;
-            obj4[2] = callback;
-            obj.dispatch(obj4);
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = state;
-            return obj5;
-          }
-        } catch (tmp17) {
-          c4 = tmp;
-          throw tmp17;
-        }
-      }
+      const table = tmp2;
+      let state = tmp5;
+      const HTTP = callback(outer1_2[4]).HTTP;
+      const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+      obj1[0] = outer1_7.BILLING_POPUP_BRIDGE(callback);
+      yield HTTP.post(obj1);
+      state = body.body.state;
+      const obj = state(table[6]);
+      const obj4 = { type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state: null, paymentSourceType: null };
+      obj4[1] = state;
+      obj4[2] = callback;
+      obj.dispatch(obj4);
+      return state;
     })();
   });
   const _popupBridgeState = tmp;
@@ -414,17 +364,17 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
       obj3.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj);
       flag = false;
     }
-    let billingError = new require(4092) /* V6OrEarlierAPIError */.BillingError(combined);
+    let billingError = new require(4184) /* V6OrEarlierAPIError */.BillingError(combined);
     let flag2 = flag;
     let tmp12 = obj;
     let tmp15 = require;
   } else {
     let tmp6 = message;
-    if (typeof message !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof message === "string") {
       tmp6 = stringResult;
     }
     const obj1 = { failure_message: null, status_code: null };
-    const billingError1 = new require(4092) /* V6OrEarlierAPIError */.BillingError(tmp6);
+    const billingError1 = new require(4184) /* V6OrEarlierAPIError */.BillingError(tmp6);
     ({ message: obj2[0], code: obj2[1] } = billingError1);
     tmp12 = obj1;
     billingError = billingError1;
@@ -438,7 +388,7 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
     }
   }
   importDefault(709).dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: billingError });
-  if (typeof message !== "y") {
+  if (typeof message !== "string") {
     message = billingError.message;
   }
   const error1 = new Error(message);
@@ -449,8 +399,8 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
     const merged2 = Object.assign(tmp12);
     const merged3 = Object.assign(obj.extra);
     obj2.extra = obj3;
-    const result = tmp15(3854).captureBillingException(error1, obj2);
-    const tmp15Result = tmp15(3854);
+    const result = tmp15(3946).captureBillingException(error1, obj2);
+    const tmp15Result = tmp15(3946);
   }
   return error1;
 };

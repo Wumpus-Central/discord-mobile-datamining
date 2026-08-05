@@ -7,10 +7,10 @@ const result = require("apexExperiment").fileFinishedImporting("modules/user_pro
 export const PrivateProfilesExperiment = apexExperiment;
 export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesExperiment(UserProfilePrivacyNotice) {
   let enabled = apexExperiment.useConfig({ location: UserProfilePrivacyNotice }).enabled;
-  const isInPrivateProfilesStrictExperiment = require(12196) /* apexExperiment */.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
+  const isInPrivateProfilesStrictExperiment = require(12378) /* apexExperiment */.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
   const obj = { location: UserProfilePrivacyNotice };
-  const obj2 = require(12196) /* apexExperiment */;
-  const isInPrivateProfilesStrictGbExperiment = require(12197) /* apexExperiment */.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
+  const obj2 = require(12378) /* apexExperiment */;
+  const isInPrivateProfilesStrictGbExperiment = require(12379) /* apexExperiment */.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
   if (!enabled) {
     enabled = isInPrivateProfilesStrictExperiment;
   }
@@ -22,12 +22,12 @@ export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesE
 export const getIsInPrivateProfilesExperiment = function getIsInPrivateProfilesExperiment(ProfilePrivacySetting) {
   let enabled = apexExperiment.getConfig({ location: ProfilePrivacySetting }).enabled;
   if (!enabled) {
-    enabled = require(12196) /* apexExperiment */.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
-    const obj2 = require(12196) /* apexExperiment */;
+    enabled = require(12378) /* apexExperiment */.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
+    const obj2 = require(12378) /* apexExperiment */;
   }
   if (!enabled) {
-    enabled = require(12197) /* apexExperiment */.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
-    const obj3 = require(12197) /* apexExperiment */;
+    enabled = require(12379) /* apexExperiment */.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
+    const obj3 = require(12379) /* apexExperiment */;
   }
   return enabled;
 };

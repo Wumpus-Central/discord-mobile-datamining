@@ -9,7 +9,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    importDefault(3890).openURL(MarketingURLs.PRIVACY);
+    importDefault(3982).openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 });
@@ -20,10 +20,10 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    importDefault(3890).openURL(MarketingURLs.PRIVACY);
+    importDefault(3982).openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 };
-const result = require("module_3890").fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
+const result = require("module_3982").fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
 
 export default pressable;

@@ -48,9 +48,9 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items1 = [upsertRelationship];
   stateFromStoresArray1 = _require(589).useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
   const obj2 = _require(589);
-  gameRelationshipsByType = _require(12068).useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  gameRelationshipsByType = _require(12250).useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = _undefined(8825).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = _undefined(9003).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -112,7 +112,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
   const intl2 = _require(1236).intl;
   obj[4] = intl2.string(_require(1236).t.TdEu5X);
-  const items5 = [callback(_require(4189).Text, obj), memo, callback(_require(5569).ChevronSmallRightIcon, { size: "sm" })];
+  const items5 = [callback(_require(4281).Text, obj), memo, callback(_require(5660).ChevronSmallRightIcon, { size: "sm" })];
   obj[5] = items5;
-  return callback2(_require(4721).PressableOpacity, obj);
+  return callback2(_require(4812).PressableOpacity, obj);
 };

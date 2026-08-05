@@ -20,7 +20,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     VoiceNotificationManager = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flex", connectionState: "container", selfMute: false, deafened: true, isPushToTalk: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==", embeddedActivity: null, isStreaming: "b4c9ac154b2122e14fc424ce2fde282f" };
+    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "Jamaica", isPushToTalk: "JM", embeddedActivity: "+1 876", isStreaming: null };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = outer1_9.getChannelId();
       const state = outer1_9.getState();
@@ -225,7 +225,7 @@ prototype["terminate"] = function terminate() {
 };
 let set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flex", connectionState: "container", selfMute: false, deafened: true, isPushToTalk: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==", embeddedActivity: null, isStreaming: "b4c9ac154b2122e14fc424ce2fde282f" };
+set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: "Jamaica", isPushToTalk: "JM", embeddedActivity: "+1 876", isStreaming: null };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = outer1_9.getChannelId();
   const state = outer1_9.getState();

@@ -15,15 +15,15 @@ export const parseRoom = function parseRoom(roomId) {
   return { roomId: roomId.room_id, participants: participants.map(parseParticipant), seats: seats.map(parseSeat) };
 };
 export const getHavenSoundControlName = function getHavenSoundControlName(arg0) {
-  if (require(12836) /* HavenGenres */.HavenSoundKeys.RADIO === arg0) {
+  if (require(12932) /* HavenGenres */.HavenSoundKeys.RADIO === arg0) {
     const intl3 = tmp(1236).intl;
-    return intl3.string(importDefault(2937).AjiGKB);
-  } else if (tmp(12836).HavenSoundKeys.ENVIRONMENT === arg0) {
+    return intl3.string(importDefault(2997).AjiGKB);
+  } else if (tmp(12932).HavenSoundKeys.ENVIRONMENT === arg0) {
     const intl2 = tmp(1236).intl;
-    return intl2.string(importDefault(2937).YEYIbI);
-  } else if (tmp(12836).HavenSoundKeys.CAMPFIRE === arg0) {
+    return intl2.string(importDefault(2997).YEYIbI);
+  } else if (tmp(12932).HavenSoundKeys.CAMPFIRE === arg0) {
     const intl = tmp(1236).intl;
-    return intl.string(importDefault(2937)["Vk9+Ez"]);
+    return intl.string(importDefault(2997)["Vk9+Ez"]);
   } else {
     return "";
   }

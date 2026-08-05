@@ -185,7 +185,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 prototype["compute"] = function compute() {
   let self = this;
   self = this;
-  const dependencyMap = importDefault(3775)();
+  const dependencyMap = importDefault(3867)();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     let tmpResult = tmp(12);

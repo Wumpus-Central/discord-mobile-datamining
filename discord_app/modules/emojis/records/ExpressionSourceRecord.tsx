@@ -24,92 +24,45 @@ function _getEmojiSourceData() {
     let c5 = 0;
     let c3 = 0;
     return (function*(arg0, body) {
-      if (c5 === 2) {
+      let closure_2 = tmp3;
+      let obj3 = null;
+      let c3 = 1;
+      const HTTP = callback(outer1_2[3]).HTTP;
+      const obj1 = { url: null, oldFormErrors: true, timeout: 5000, rejectWithError: true };
+      obj1[0] = c4.EMOJI_SOURCE_DATA(obj3);
+      yield HTTP.get(obj1);
+      if (1 === tmp7) {
+        c3 = 0;
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
+        throw body;
+      } else if (arg0 !== 2) {
+        body = body.body;
+        let type;
+        if (body != null) {
+          type = body.type;
+        }
+        if (type === constants.GUILD) {
+          const obj = { guild: null, type: null };
+          obj[0] = closure_9.createFromServer(body.guild);
+          obj[1] = body.type;
+          obj3 = obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let closure_2 = tmp3;
-              body = tmp7;
-              body = undefined;
-              let obj3 = null;
-              let c3 = 1;
-              const HTTP = callback(outer1_2[3]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, timeout: 5000, rejectWithError: true };
-              obj1[0] = c4.EMOJI_SOURCE_DATA(obj3);
-              c4 = 2;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              body = body.body;
-              let type;
-              if (body != null) {
-                type = body.type;
-              }
-              if (type === constants.GUILD) {
-                obj = { guild: null, type: null };
-                obj[0] = closure_9.createFromServer(body.guild);
-                obj[1] = body.type;
-                obj3 = obj;
-              } else {
-                let type1;
-                if (body != null) {
-                  type1 = body.type;
-                }
-                if (type1 === constants.APPLICATION) {
-                  obj3 = { application: null, type: null };
-                  obj3[0] = closure_10.createFromServer(body.application);
-                  obj3[1] = body.type;
-                }
-              }
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
+          let type1;
+          if (body != null) {
+            type1 = body.type;
           }
-        } catch (tmp26) {
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp26;
-          } else {
-            c4 = tmp;
+          if (type1 === constants.APPLICATION) {
+            obj3 = { application: null, type: null };
+            obj3[0] = closure_10.createFromServer(body.application);
+            obj3[1] = body.type;
           }
         }
+        c3 = 0;
       }
+      c3 = 0;
+      return body;
     })();
   });
   const _getEmojiSourceData = tmp;
@@ -164,72 +117,21 @@ prototype["isDiscoverable"] = function isDiscoverable() {
 ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiId(arg0) {
   let closure_0 = arg0;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
+    let closure_1 = tmp5;
+    let type = tmp2;
+    type = yield outer1_7(outer1_0);
+    let guild = null;
+    if (null != type) {
+      type = undefined;
+      if (type != null) {
+        type = type.type;
       }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let type = tmp2;
-            type = undefined;
-            c2 = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_7(outer1_0);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          type = arg1;
-          let guild = null;
-          if (null != type) {
-            type = undefined;
-            if (type != null) {
-              type = type.type;
-            }
-            guild = null;
-            if (type === outer1_6.GUILD) {
-              guild = outer1_0.guild;
-            }
-          }
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = guild;
-          return obj;
-        }
-      } catch (tmp18) {
-        c3 = tmp;
-        throw tmp18;
+      guild = null;
+      if (type === outer1_6.GUILD) {
+        guild = outer1_0.guild;
       }
     }
+    return guild;
   })();
 };
 ExpressionSourceGuildRecord["_mapCommon"] = function _mapCommon(id) {
@@ -248,7 +150,7 @@ ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildR
   obj.presenceCount = null;
   obj.memberCount = null;
   obj.emojis = null;
-  if (typeof ExpressionSourceGuildRecord !== "fileFinishedImporting") {
+  if (typeof ExpressionSourceGuildRecord !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
@@ -267,7 +169,7 @@ ExpressionSourceGuildRecord["createFromDiscoverableGuild"] = function createFrom
   ({ premiumSubscriptionCount: obj.premiumSubscriberCount, presenceCount: obj.presenceCount, memberCount } = emojis);
   obj.memberCount = memberCount;
   obj.emojis = emojis.emojis;
-  if (typeof ExpressionSourceGuildRecord !== "fileFinishedImporting") {
+  if (typeof ExpressionSourceGuildRecord !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
@@ -282,7 +184,7 @@ ExpressionSourceGuildRecord["createFromServer"] = function createFromServer(id) 
   let str = obj;
   const merged = Object.assign(_mapCommonResult);
   ({ premium_tier: obj.premiumTier, premium_subscription_count: obj.premiumSubscriberCount, approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, emojis: obj.emojis } = id);
-  if (typeof ExpressionSourceGuildRecord !== "fileFinishedImporting") {
+  if (typeof ExpressionSourceGuildRecord !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
@@ -316,7 +218,7 @@ prototype2["createFromServer"] = function createFromServer(arg0) {
   let id;
   let name;
   ({ id, name } = arg0);
-  if (typeof prototype2 !== "fileFinishedImporting") {
+  if (typeof prototype2 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new prototype2("Trying to call a non-function", prototype2, new.target);

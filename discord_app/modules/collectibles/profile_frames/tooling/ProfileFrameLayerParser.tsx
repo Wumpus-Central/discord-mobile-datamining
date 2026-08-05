@@ -18,7 +18,7 @@ const items3 = [...set1];
 obj[obj.INVALID_ANCHOR] = "invalid anchor (expected: " + items3.join(", ") + ")";
 obj[obj.INVALID_RESPONSIVE] = "invalid suffix (expected '" + "responsive" + "')";
 obj[obj.BORDER_HAS_ANCHOR] = "border layers must omit the anchor";
-let closure_8 = { [arg1(8092).ProfileFrameLayerOrder.FRONT]: 0, [arg1(8092).ProfileFrameLayerOrder.BACK]: 1 };
+let closure_8 = { [arg1(8725).ProfileFrameLayerOrder.FRONT]: 0, [arg1(8725).ProfileFrameLayerOrder.BACK]: 1 };
 const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx");
 
 export const PREVIEW_FILENAME = "preview";
@@ -37,7 +37,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
       const substr = arr2.slice(2);
       if (obj14.test(tmp19)) {
         if (set.has(tmp20)) {
-          if (tmp20 === require(8093) /* ProfileFrameLayerType */.ProfileFrameLayerType.BORDER) {
+          if (tmp20 === require(8726) /* ProfileFrameLayerType */.ProfileFrameLayerType.BORDER) {
             if (substr.length > 0) {
               if (set1.has(substr[0])) {
                 let obj = { parsed: null, errorType: null };
@@ -62,7 +62,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
               const _Number2 = Number;
               obj3[0] = Number(tmp19);
               obj3[1] = tmp20;
-              obj3[2] = tmp4(8094).ProfileFrameLayerAnchor.CENTER;
+              obj3[2] = tmp4(8727).ProfileFrameLayerAnchor.CENTER;
               obj3[3] = 1 === substr.length;
               obj2[0] = obj3;
               return obj2;
@@ -89,7 +89,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
                   obj7[0] = Number(tmp19);
                   obj7[1] = tmp20;
                   obj7[2] = first;
-                  obj7[3] = 2 === substr.length || tmp20 === tmp4(8093).ProfileFrameLayerType.RAIL;
+                  obj7[3] = 2 === substr.length || tmp20 === tmp4(8726).ProfileFrameLayerType.RAIL;
                   obj6[0] = obj7;
                   return obj6;
                 }

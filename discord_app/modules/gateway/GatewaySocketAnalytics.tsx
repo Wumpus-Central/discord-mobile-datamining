@@ -69,7 +69,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
         startsWithResult = "" !== tmp4[0];
       }
       if (startsWithResult) {
-        startsWithResult = typeof tmp4[0] === "y";
+        startsWithResult = typeof tmp4[0] === "string";
       }
       if (startsWithResult) {
         const first = tmp4[0];
@@ -77,7 +77,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
       }
       if (startsWithResult) {
         let num = 0;
-        if (typeof tmp4[1] !== "window") {
+        if (typeof tmp4[1] === "object") {
           num = 0;
           if ("micros" in tmp4[1]) {
             let _Math = Math;

@@ -41,8 +41,8 @@ export const canChannelBeDefault = function canChannelBeDefault(guild_id, id) {
     }
     let isChannelGatedResult = channelGated.isChannelGated(guild_id, id);
     if (!isChannelGatedResult) {
-      isChannelGatedResult = importAll(3826).canEveryoneRole(VIEW_CHANNEL, channel.getChannel(id));
-      const obj3 = importAll(3826);
+      isChannelGatedResult = importAll(3918).canEveryoneRole(VIEW_CHANNEL, channel.getChannel(id));
+      const obj3 = importAll(3918);
     }
     return isChannelGatedResult;
   }

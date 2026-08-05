@@ -61,7 +61,7 @@ prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
 };
 prototype["destroyFramerateScaleFactorTimers"] = function destroyFramerateScaleFactorTimers() {
   const self = this;
-  if (typeof this.framerateReductionTimeout !== "__REMOTEDEV__") {
+  if (typeof this.framerateReductionTimeout === "number") {
     const _clearTimeout = clearTimeout;
     clearTimeout(self.framerateReductionTimeout);
     self.framerateReductionTimeout = undefined;

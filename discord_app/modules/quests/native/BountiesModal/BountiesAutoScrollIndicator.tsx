@@ -9,7 +9,7 @@ let closure_6;
 const require = arg1;
 function BouncingArrow(children) {
   let sharedValue;
-  sharedValue = sharedValue(4054).useSharedValue(0);
+  sharedValue = sharedValue(4146).useSharedValue(0);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
     let obj = sharedValue(outer1_2[3]);
@@ -25,7 +25,7 @@ function BouncingArrow(children) {
     const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(outer1_2[4]).withTiming(0, obj)), -1));
     return () => outer1_0(outer1_2[3]).cancelAnimation(closure_0);
   }, items);
-  let obj = sharedValue(4054);
+  let obj = sharedValue(4146);
   const fn = function l() {
     let obj = { transform: null };
     obj = { translateY: sharedValue.get() };
@@ -36,8 +36,8 @@ function BouncingArrow(children) {
   fn.__closure = { translateY: sharedValue };
   fn.__workletHash = 10126349088819;
   fn.__initData = closure_7;
-  const style = sharedValue(4054).useAnimatedStyle(fn);
-  return callback(importDefault(4054).View, { style, children: children.children });
+  const style = sharedValue(4146).useAnimatedStyle(fn);
+  return callback(importDefault(4146).View, { style, children: children.children });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { code: "function BountiesAutoScrollIndicatorTsx1(){const{translateY}=this.__closure;return{transform:[{translateY:translateY.get()}]};}" };
@@ -55,17 +55,17 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
   }
   let _require;
   const tmp = createCacheKey();
-  let obj = _require(3897);
+  let obj = _require(3989);
   const token = obj.useToken(importDefault(712).colors.WHITE);
   obj = { size: "md", color: null };
   obj[1] = importDefault(712).colors.WHITE;
-  const tmp6 = callback(_require(14102).ArrowSmallUpIcon, obj);
+  const tmp6 = callback(_require(14202).ArrowSmallUpIcon, obj);
   _require = tmp6;
   obj = { style: tmp.root, children: null };
   const obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
   const intl = _require(1236).intl;
   obj1[2] = intl.string(_require(1236).t.eafsh4);
-  const items = [callback(_require(4189).Text, obj1), ];
+  const items = [callback(_require(4281).Text, obj1), ];
   const obj2 = { style: tmp.ringContainer, children: null };
   if (flag) {
     const obj3 = { size: 40, width: 3, fill: null, duration: 0, rotation: 0, lineCap: "round", tintColor: null, backgroundColor: "rgba(255, 255, 255, 0.35)", children: null };
@@ -74,7 +74,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return c0;
     };
-    let tmp5Result = tmp5(_require(14104).AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(_require(14204).AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

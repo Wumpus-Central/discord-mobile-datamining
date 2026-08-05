@@ -16,8 +16,8 @@ export const sendSMS = function sendSMS(body, recipients) {
     if (recipients == null) {
       recipients = [];
     }
-    importDefault(4368).sendSMS(str, recipients);
-    const obj2 = importDefault(4368);
+    importDefault(4459).sendSMS(str, recipients);
+    const obj2 = importDefault(4459);
   } else {
     const DCDSend = closure_4.DCDSend;
     DCDSend.sendSMS(body, recipients);
@@ -37,8 +37,8 @@ export const sendMail = function sendMail(subject, subject, recipients) {
     if (recipients == null) {
       recipients = [];
     }
-    importDefault(4368).sendMail(str, str2, recipients);
-    const obj2 = importDefault(4368);
+    importDefault(4459).sendMail(str, str2, recipients);
+    const obj2 = importDefault(4459);
   } else {
     const DCDSend = closure_4.DCDSend;
     DCDSend.sendMail(subject, subject);
@@ -46,8 +46,8 @@ export const sendMail = function sendMail(subject, subject, recipients) {
 };
 export const canSendSMS = function canSendSMS() {
   if (obj.isAndroid()) {
-    let resolved = Promise.resolve(importDefault(4368).canSendSMS());
-    const obj2 = importDefault(4368);
+    let resolved = Promise.resolve(importDefault(4459).canSendSMS());
+    const obj2 = importDefault(4459);
   } else {
     const DCDSend = closure_4.DCDSend;
     resolved = DCDSend.canSendSMS();
@@ -56,8 +56,8 @@ export const canSendSMS = function canSendSMS() {
 };
 export const canSendMail = function canSendMail() {
   if (obj.isAndroid()) {
-    let resolved = Promise.resolve(importDefault(4368).canSendMail());
-    const obj2 = importDefault(4368);
+    let resolved = Promise.resolve(importDefault(4459).canSendMail());
+    const obj2 = importDefault(4459);
   } else {
     const DCDSend = closure_4.DCDSend;
     resolved = DCDSend.canSendMail();
@@ -68,7 +68,7 @@ export const canOpenUrlScheme = function canOpenUrlScheme(closure_3) {
   const _require = closure_3;
   if (obj.isAndroid()) {
     try {
-      return Promise.resolve(importDefault(4368).canOpenUrlScheme(closure_3));
+      return Promise.resolve(importDefault(4459).canOpenUrlScheme(closure_3));
     } catch (err) {
       return Promise.resolve(false);
     }

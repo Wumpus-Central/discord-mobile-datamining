@@ -253,13 +253,13 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                     if (c4 instanceof Error) {
                       return c4;
                     } else {
-                      if (typeof c4 !== "window") {
+                      if (typeof c4 === "object") {
                         if (null != c4) {
                           if ("status" in c4) {
-                            if (typeof c4.status === "Object") {
+                            if (typeof c4.status === "number") {
                               const retryAfter = c4.retryAfter;
                               let tmp5;
-                              if (typeof retryAfter !== "__REMOTEDEV__") {
+                              if (typeof retryAfter === "number") {
                                 const _Number = Number;
                                 if (Number.isFinite(retryAfter)) {
                                   if (retryAfter > 0) {
@@ -269,7 +269,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                               }
                               if ("body" in c4) {
                                 if (null != c4.body) {
-                                  if (typeof c4.body !== "window") {
+                                  if (typeof c4.body === "object") {
                                     if ("message" in c4.body) {
                                       const _String2 = String;
                                       const obj3 = new closure_9(String(c4.body.message));
@@ -307,7 +307,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                         let closure_1 = arg1;
                         retryAfter = retryAfter.retryAfter;
                         let tmp2;
-                        if (typeof retryAfter !== "__REMOTEDEV__") {
+                        if (typeof retryAfter === "number") {
                           const _Number = Number;
                           if (Number.isFinite(retryAfter)) {
                             if (retryAfter > 0) {

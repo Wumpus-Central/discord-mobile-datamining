@@ -9,7 +9,7 @@ SearchFetchManager.prototype["create"] = function create(arg0) {
   let searchType;
   ({ id, searchType, searchQuery } = arg0);
   this.cancel(id);
-  const searchFetcherImpl = new require(10126) /* fetch */.SearchFetcherImpl(id, searchType, searchQuery);
+  const searchFetcherImpl = new require(11634) /* fetch */.SearchFetcherImpl(id, searchType, searchQuery);
   const result = this.set(id, searchFetcherImpl);
   return searchFetcherImpl;
 };

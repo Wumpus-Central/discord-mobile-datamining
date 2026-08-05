@@ -13,16 +13,16 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
     const obj3 = importDefault(698);
     obj = { avatar: null, avatar_description: null };
     ({ imageUri: obj6[0], description: obj6[1] } = pendingImage);
-    const result = require(9235) /* saveProfileAndAccountRequest */.saveProfileAndAccountRequest(obj);
-    const obj5 = require(9235) /* saveProfileAndAccountRequest */;
+    const result = require(8321) /* saveProfileAndAccountRequest */.saveProfileAndAccountRequest(obj);
+    const obj5 = require(8321) /* saveProfileAndAccountRequest */;
   }
   if (null != fn) {
     fn();
   } else {
-    obj = importDefault(4399);
+    obj = importDefault(4490);
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
-    require(11809) /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
-    const obj2 = require(11809) /* _startContactSyncForDiscoverability */;
+    require(11971) /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
+    const obj2 = require(11971) /* _startContactSyncForDiscoverability */;
   }
 };
 export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
@@ -52,8 +52,8 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
       const tmpResult = tmp(tmp2[11]);
     }
   };
-  importDefault(4532).show(obj);
+  importDefault(4623).show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  importDefault(4399).pushLazy(require(1959) /* asyncRequireImpl */(16283, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

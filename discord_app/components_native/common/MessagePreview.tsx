@@ -31,5 +31,5 @@ export default function MessagePreview(channelId) {
     callback(table[6]).clearMessages();
   }, []);
   obj = { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 };
-  return jsx(onBeforeJumpToMessage(9317).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 });
+  return jsx(onBeforeJumpToMessage(8417).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 });
 };

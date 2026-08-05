@@ -293,98 +293,38 @@ function _createReferralTrial() {
     let c7 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === constants) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let dispatcher = tmp3;
-              let closure_2 = tmp7;
-              let callback;
-              let callback2;
-              let currentlySelectedChannelId = 1;
-              const HTTP = callback(outer1_2[4]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-              obj1[0] = c7.CREATE_REFERRAL(callback);
-              constants = 2;
-              c7 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            currentlySelectedChannelId = 0;
-            closure_2 = createdAt;
-            let obj5 = callback2(closure_2[5]);
-            obj5.dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" });
-            if (closure_2.body.code === constants.INVALID_MESSAGE_SEND_USER) {
-              callback2 = currentlySelectedChannelId.getCurrentlySelectedChannelId();
-              if (null != callback2) {
-                let obj6 = callback2(closure_2[7]);
-                obj6.sendClydeError(callback2, closure_2.body.code);
-              }
-            }
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            currentlySelectedChannelId = 0;
-            c7 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            callback2 = body;
-            if (body == null) {
-              callback2 = null;
-            }
-            callback = callback2;
-            obj = callback2(closure_2[5]);
-            const obj4 = { type: "BILLING_CREATE_REFERRAL_SUCCESS", userTrialOffer: null };
-            obj4[1] = callback;
-            obj.dispatch(obj4);
-            obj5 = { userTrialOffer: null };
-            obj5[0] = callback;
-            currentlySelectedChannelId = 0;
-            c7 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = obj5;
-            return obj6;
-          }
-        } catch (tmp40) {
-          createdAt = tmp40;
-          if (tmp4 === currentlySelectedChannelId) {
-            c7 = tmp2;
-            throw tmp40;
-          } else {
-            constants = tmp;
-          }
+      let dispatcher = tmp3;
+      let currentlySelectedChannelId = 1;
+      const HTTP = callback(outer1_2[4]).HTTP;
+      const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+      obj1[0] = c7.CREATE_REFERRAL(callback);
+      yield HTTP.post(obj1);
+      currentlySelectedChannelId = 0;
+      let closure_2 = createdAt;
+      let obj5 = callback2(closure_2[5]);
+      obj5.dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" });
+      if (closure_2.body.code === constants.INVALID_MESSAGE_SEND_USER) {
+        callback2 = currentlySelectedChannelId.getCurrentlySelectedChannelId();
+        if (null != callback2) {
+          const obj6 = callback2(closure_2[7]);
+          obj6.sendClydeError(callback2, closure_2.body.code);
         }
       }
+      yield "HermesInternal";
+      body = body.body;
+      callback2 = body;
+      if (body == null) {
+        callback2 = null;
+      }
+      callback = callback2;
+      const obj = callback2(closure_2[5]);
+      const obj4 = { type: "BILLING_CREATE_REFERRAL_SUCCESS", userTrialOffer: null };
+      obj4[1] = callback;
+      obj.dispatch(obj4);
+      obj5 = { userTrialOffer: null };
+      obj5[0] = callback;
+      currentlySelectedChannelId = 0;
+      return obj5;
     })();
   });
   const _createReferralTrial = tmp;
@@ -404,90 +344,31 @@ function _resolveReferralTrialOffer() {
     let c7 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let dispatcher = tmp3;
-              const dependencyMap = tmp7;
-              let callback2;
-              let c5 = 1;
-              const HTTP = callback(outer1_2[4]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-              obj1[0] = c7.REFERRAL_OFFER_ID_RESOLVE(callback);
-              c6 = 2;
-              c7 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            let obj5 = callback2(709);
-            const obj3 = { type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: null };
-            obj3[1] = callback;
-            obj5.dispatch(obj3);
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            body = body.body;
-            callback2 = body;
-            if (body == null) {
-              callback2 = null;
-            }
-            obj = callback2(709);
-            obj5 = { type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer: null };
-            obj5[1] = callback2;
-            obj.dispatch(obj5);
-            const obj6 = { userTrialOffer: null };
-            obj6[0] = callback2;
-            c5 = 0;
-            c7 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = obj6;
-            return obj7;
-          }
-        } catch (tmp27) {
-          let createdAt = tmp27;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp27;
-          } else {
-            c6 = tmp;
-          }
-        }
+      let dispatcher = tmp3;
+      let c5 = 1;
+      const HTTP = callback(outer1_2[4]).HTTP;
+      const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+      obj1[0] = c7.REFERRAL_OFFER_ID_RESOLVE(callback);
+      yield HTTP.get(obj1);
+      c5 = 0;
+      let obj5 = callback2(709);
+      const obj3 = { type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: null };
+      obj3[1] = callback;
+      obj5.dispatch(obj3);
+      yield "HermesInternal";
+      body = body.body;
+      callback2 = body;
+      if (body == null) {
+        callback2 = null;
       }
+      const obj = callback2(709);
+      obj5 = { type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer: null };
+      obj5[1] = callback2;
+      obj.dispatch(obj5);
+      const obj6 = { userTrialOffer: null };
+      obj6[0] = callback2;
+      c5 = 0;
+      return obj6;
     })();
   });
   const _resolveReferralTrialOffer = tmp;

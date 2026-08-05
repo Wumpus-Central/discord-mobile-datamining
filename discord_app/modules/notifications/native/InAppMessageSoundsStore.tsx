@@ -21,5 +21,5 @@ export const setInAppMessageSoundsEnabled = function setInAppMessageSoundsEnable
   store.setState({ isEnabled });
 };
 export const useInAppMessageSoundsEnabled = function useInAppMessageSoundsEnabled() {
-  return store((isEnabled) => isEnabled.isEnabled, require(3806) /* isIterable */.shallow);
+  return store((isEnabled) => isEnabled.isEnabled, require(3898) /* isIterable */.shallow);
 };

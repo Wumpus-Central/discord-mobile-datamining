@@ -164,7 +164,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   let tmp2Result = tmp2(589);
   const items2 = [filterStaffGuild];
   const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => outer1_10.getCustomGuildScore(guildId));
-  tmp2Result = tmp2(8188);
+  tmp2Result = tmp2(8834);
   const numberToCustomScoreResult = tmp2Result.numberToCustomScore(stateFromStores1);
   React = numberToCustomScoreResult;
   const items3 = [handleReset];
@@ -318,6 +318,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj[2] = callback;
   obj[3] = memo;
   obj[4] = keyExtractor;
-  obj[1] = callback(navigation(6679).AnimatedFlashList, obj);
+  obj[1] = callback(navigation(7666).AnimatedFlashList, obj);
   return callback(guildChannels, obj);
 };

@@ -42,8 +42,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getPendingReply"] = function getPendingReply(id) {
   return dependencyMap[id];
 };
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(message) {
-  return table[message];
+prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(pendingReplyActionSource) {
+  return table[pendingReplyActionSource];
 };
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";

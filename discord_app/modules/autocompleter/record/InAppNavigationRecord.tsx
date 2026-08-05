@@ -27,7 +27,7 @@ prototype["fromType"] = function fromType(arg0) {
     obj = { path: null, type: null };
     obj[0] = Routes.COLLECTIBLES_SHOP;
     obj[1] = tmp7.SHOP;
-    if (typeof prototype !== "fileFinishedImporting") {
+    if (typeof prototype !== "function") {
       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const tmp96 = new prototype("Trying to call a non-function", tmp6, tmp5);
@@ -45,7 +45,7 @@ prototype["fromType"] = function fromType(arg0) {
     obj = { path: null, type: null };
     obj[0] = Routes.NITRO_HOME;
     obj[1] = tmp7.NITRO_HOME;
-    if (typeof prototype !== "fileFinishedImporting") {
+    if (typeof prototype !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const tmp86 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
@@ -63,7 +63,7 @@ prototype["fromType"] = function fromType(arg0) {
     const obj1 = { path: null, type: null };
     obj1[0] = Routes.QUEST_HOME;
     obj1[1] = tmp7.QUEST_HOME;
-    if (typeof prototype !== "fileFinishedImporting") {
+    if (typeof prototype !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const tmp76 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
@@ -81,7 +81,7 @@ prototype["fromType"] = function fromType(arg0) {
     let obj2 = { path: null, type: null };
     obj2[0] = Routes.GLOBAL_DISCOVERY_APPS;
     obj2[1] = tmp7.APPS_HOME;
-    if (typeof prototype !== "fileFinishedImporting") {
+    if (typeof prototype !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const tmp66 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
@@ -100,14 +100,14 @@ prototype["fromType"] = function fromType(arg0) {
     throwTypeErrorResult = arg2;
     if (tmp7.SETTINGS === arg0) {
       if (settingsPathToRouteResult == null) {
-        obj2 = require(5046) /* settingsPathToRoute */;
+        obj2 = require(5137) /* settingsPathToRoute */;
         settingsPathToRouteResult = obj2.settingsPathToRoute(UserSettingsPath.ACCOUNT);
       }
       const obj3 = { path: null, label: null, type: null };
       obj3[0] = settingsPathToRouteResult;
       obj3[1] = arg2;
       obj3[2] = tmp7.SETTINGS;
-      if (typeof prototype !== "fileFinishedImporting") {
+      if (typeof prototype !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       const tmp57 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
@@ -127,7 +127,7 @@ prototype["fromType"] = function fromType(arg0) {
         APP = Routes.APP;
       }
       const PLAYGROUND = tmp7.PLAYGROUND;
-      if (typeof prototype !== "fileFinishedImporting") {
+      if (typeof prototype !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       const tmp42 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
@@ -148,7 +148,7 @@ prototype["fromType"] = function fromType(arg0) {
       const obj4 = { path: null, type: null };
       obj4[0] = Routes.COLLECTIBLES_SHOP;
       obj4[1] = tmp7.SHOP_ORBS_TAB;
-      if (typeof prototype !== "fileFinishedImporting") {
+      if (typeof prototype !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       const tmp30 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
@@ -169,7 +169,7 @@ prototype["fromType"] = function fromType(arg0) {
       const _HermesInternal = HermesInternal;
       obj[0] = "" + QUEST_HOME + "?filter=" + VIRTUAL_CURRENCY;
       obj[1] = tmp7.QUEST_ORBS;
-      if (typeof prototype !== "fileFinishedImporting") {
+      if (typeof prototype !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       const tmp21 = new prototype("Trying to call a non-function", tmp6, tmp5, "", tmp3, QUEST_HOME, VIRTUAL_CURRENCY);

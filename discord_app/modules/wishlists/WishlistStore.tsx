@@ -209,7 +209,7 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
     let recipientId;
     let skuId;
     ({ recipientId, skuId } = arg0);
-    const firstWishlistId = require(5899) /* createUserWidgetFromServer */.default.getFirstWishlistId(recipientId);
+    const firstWishlistId = require(6989) /* createUserWidgetFromServer */.default.getFirstWishlistId(recipientId);
     let tmp2 = null != firstWishlistId;
     if (tmp2) {
       tmp2 = null != dependencyMap[firstWishlistId];

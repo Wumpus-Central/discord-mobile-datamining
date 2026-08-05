@@ -2,7 +2,7 @@
 import { PremiumGiftStyles } from "GuildFeatures";
 
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
-const result = require("module_8789").fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
+const result = require("module_9505").fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
 
 export const LottieType = obj;
 export const getLottieType = function getLottieType(giftStyle) {
@@ -15,68 +15,68 @@ export const getLottieType = function getLottieType(giftStyle) {
 };
 export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACTION) {
   if (PremiumGiftStyles.STANDARD_BOX === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp17(8789);
-    } else if (tmp17(7862).AnimationState.LOOP === ACTION) {
-      return tmp17(8790);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp17(9505);
+    } else if (tmp17(7992).AnimationState.LOOP === ACTION) {
+      return tmp17(9506);
     } else {
-      return tmp17(8791);
+      return tmp17(9507);
     }
   } else if (tmp.CAKE === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp15(8792);
-    } else if (tmp15(7862).AnimationState.LOOP === ACTION) {
-      return tmp15(8793);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp15(9508);
+    } else if (tmp15(7992).AnimationState.LOOP === ACTION) {
+      return tmp15(9509);
     } else {
-      return tmp15(8794);
+      return tmp15(9510);
     }
   } else if (tmp.CHEST === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp13(8795);
-    } else if (tmp13(7862).AnimationState.LOOP === ACTION) {
-      return tmp13(8796);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp13(9511);
+    } else if (tmp13(7992).AnimationState.LOOP === ACTION) {
+      return tmp13(9512);
     } else {
-      return tmp13(8797);
+      return tmp13(9513);
     }
   } else if (tmp.COFFEE === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp11(8798);
-    } else if (tmp11(7862).AnimationState.LOOP === ACTION) {
-      return tmp11(8799);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp11(9514);
+    } else if (tmp11(7992).AnimationState.LOOP === ACTION) {
+      return tmp11(9515);
     } else {
-      return tmp11(8800);
+      return tmp11(9516);
     }
   } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp9(8801);
-    } else if (tmp9(7862).AnimationState.LOOP === ACTION) {
-      return tmp9(8802);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp9(9517);
+    } else if (tmp9(7992).AnimationState.LOOP === ACTION) {
+      return tmp9(9518);
     } else {
-      return tmp9(8803);
+      return tmp9(9519);
     }
   } else if (tmp.SEASONAL_CAKE === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp7(8804);
-    } else if (tmp7(7862).AnimationState.LOOP === ACTION) {
-      return tmp7(8805);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp7(9520);
+    } else if (tmp7(7992).AnimationState.LOOP === ACTION) {
+      return tmp7(9521);
     } else {
-      return tmp7(8806);
+      return tmp7(9522);
     }
   } else if (tmp.SEASONAL_CHEST === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp5(8807);
-    } else if (tmp5(7862).AnimationState.LOOP === ACTION) {
-      return tmp5(8808);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp5(9523);
+    } else if (tmp5(7992).AnimationState.LOOP === ACTION) {
+      return tmp5(9524);
     } else {
-      return tmp5(8809);
+      return tmp5(9525);
     }
   } else if (tmp.SEASONAL_COFFEE === giftStyle) {
-    if (require(7862) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
-      return tmp3(8810);
-    } else if (tmp3(7862).AnimationState.LOOP === ACTION) {
-      return tmp3(8811);
+    if (require(7992) /* _sendGiftMessage */.AnimationState.IDLE === ACTION) {
+      return tmp3(9526);
+    } else if (tmp3(7992).AnimationState.LOOP === ACTION) {
+      return tmp3(9527);
     } else {
-      return tmp3(8812);
+      return tmp3(9528);
     }
   } else {
     if (tmp.SNOWGLOBE !== giftStyle) {

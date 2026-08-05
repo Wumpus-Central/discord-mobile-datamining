@@ -23,7 +23,7 @@ BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
   let total;
   ({ total, subtotal, tax, invoice_items } = currency);
   let mapped = invoice_items.map((skuId) => ({ skuId: skuId.sku_id, quantity: skuId.quantity, description: skuId.description }));
-  if (typeof BaseInvoiceRecord !== "fileFinishedImporting") {
+  if (typeof BaseInvoiceRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new BaseInvoiceRecord("Trying to call a non-function", invoice_items, BaseInvoiceRecord, new.target, total, subtotal, tax);
@@ -72,7 +72,7 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
     });
     let found = mapped.filter((arg0) => null != arg0);
     ({ total, subtotal, tax, currency } = invoice_preview);
-    if (typeof BaseInvoiceRecord !== "fileFinishedImporting") {
+    if (typeof BaseInvoiceRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp5 = new BaseInvoiceRecord("Trying to call a non-function", BaseInvoiceRecord, new.target, total, subtotal, tax, currency, found);
@@ -129,7 +129,7 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   const invoice_items = body.invoice_items;
   let mapped;
   if (invoice_items != null) {
-    mapped = invoice_items.map(require(3849) /* coalesceInvoiceItems */.createInvoiceItemFromServer);
+    mapped = invoice_items.map(require(3941) /* coalesceInvoiceItems */.createInvoiceItemFromServer);
     const tmp3 = require;
   }
   obj[1] = mapped;
@@ -140,7 +140,7 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   const tmp6 = new.target;
   obj[8] = new Date(body.subscription_period_end);
   ({ status: obj[9], orbs_reward: obj[10], checkout_context: obj[11] } = body);
-  if (typeof tmp !== "fileFinishedImporting") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp8 = new InvoiceRecord(obj, tmp3, Date, Date, tmp6);
@@ -158,7 +158,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   invoice_items = invoice_items.invoice_items;
   let mapped;
   if (invoice_items != null) {
-    mapped = invoice_items.map(require(3849) /* coalesceInvoiceItems */.createInvoiceItemFromServer);
+    mapped = invoice_items.map(require(3941) /* coalesceInvoiceItems */.createInvoiceItemFromServer);
     const tmp3 = require;
   }
   const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: null, subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null };
@@ -170,7 +170,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   const orbs_reward = invoice_items.orbs_reward;
   obj[9] = orbs_reward;
   obj[10] = invoice_items.checkout_context;
-  if (typeof InvoiceRecord !== "fileFinishedImporting") {
+  if (typeof InvoiceRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp9 = new InvoiceRecord(obj, tmp3, tmp5, tmp7, orbs_reward, InvoiceRecord);

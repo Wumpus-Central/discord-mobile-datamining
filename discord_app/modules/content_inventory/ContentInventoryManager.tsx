@@ -55,7 +55,7 @@ function canFetch(GLOBAL_FEED) {
       } else {
         return false;
       }
-      obj = require(12765) /* apexExperiment */;
+      obj = require(12861) /* apexExperiment */;
     }
     return true;
   }
@@ -101,7 +101,7 @@ function scheduleNextFetch() {
               flag = false;
             }
           }
-          obj9 = require(12765) /* apexExperiment */;
+          obj9 = require(12861) /* apexExperiment */;
         }
       } else {
         flag = false;
@@ -179,142 +179,89 @@ function _fetchInventory() {
       let c0;
       let c1;
       let force;
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let refresh_token = tmp3;
+      ({ feedId: c0, feature: c1, force } = callback);
+      if (force === undefined) {
+        force = false;
+      }
+      yield "ct";
+      if (1 === tmp7) {
         if (arg0 === 1) {
+          let c7 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c7 = 3;
+          let obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
+          if (!callback5(callback)) {
+            if (!force) {
               c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let refresh_token = tmp3;
-              force = tmp7;
-              let callback;
-              let callback2;
-              force = undefined;
-              ({ feedId: c0, feature: c1, force } = callback);
-              if (force === undefined) {
-                force = false;
-              }
-              refresh_token = undefined;
-              let _handleConnectionOpen;
-              let c5;
-              c6 = undefined;
-              c7 = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "ct", done: "Array" };
             }
-          } else {
-            if (1 === tmp7) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                let obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                if (!callback5(callback)) {
-                  if (!force) {
-                    c7 = 3;
-                  }
-                }
-                c5 = 1;
-                refresh_token = feed.getFeed(callback);
-                set.add(callback);
-                callback4(callback, { loading: true });
-                let obj3 = callback(force[11]);
-                refresh_token = undefined;
-                if (refresh_token != null) {
-                  refresh_token = refresh_token.refresh_token;
-                }
-                const obj2 = { token: null, feedId: null, feature: null };
-                obj2[0] = refresh_token;
-                obj2[1] = callback;
-                obj2[2] = callback2;
-                c6 = 3;
-                c7 = 1;
-                obj3 = { value: null, done: false };
-                obj3[0] = obj3.getMyContentInventory(obj2);
-                return obj3;
-              }
-            } else if (2 === tmp7) {
-              c5 = 0;
-              const value = store.get(callback);
-              callback2 = value;
-              if (value == null) {
-                callback2 = 0;
-              }
-              c5 = callback2;
-              if (c5 < 4) {
-                const _Math = Math;
-                c6 = callback2(force[9]).Millis.MINUTE * Math.pow(2, c5);
-                c7 = callback3(c5);
-                const _setTimeout = setTimeout;
-                const result = closure_14.set(callback, setTimeout(() => outer1_23({ feedId: c0, feature: c1, force }), c6 + c7));
-                const result1 = store.set(callback, c5 + 1);
-              } else {
-                obj1 = callback2(force[12]);
-                const obj4 = { type: "CONTENT_INVENTORY_CLEAR_FEED", feedId: null };
-                obj4[1] = callback;
-                obj1.dispatch(obj4);
-              }
-              set.delete(callback);
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              _handleConnectionOpen = arg1;
-              const obj5 = { type: "CONTENT_INVENTORY_SET_FEED", feedId: null, feed: null };
-              obj5[1] = callback;
-              obj5[2] = _handleConnectionOpen;
-              callback2(force[12]).dispatch(obj5);
-              const result2 = store.set(callback, 0);
-              set.delete(callback);
-              callback4(callback, { loading: false });
-              if (callback === closure_12) {
-                let c17 = null;
-                callback6();
-              }
-              c5 = 0;
-              const obj10 = callback2(force[12]);
-            }
-            c5 = 0;
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           }
-        } catch (tmp66) {
-          _handleConnectionOpen = tmp66;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp66;
-          } else {
-            c6 = tmp;
+          let c5 = 1;
+          refresh_token = feed.getFeed(callback);
+          set.add(callback);
+          callback4(callback, { loading: true });
+          let obj3 = callback(force[11]);
+          refresh_token = undefined;
+          if (refresh_token != null) {
+            refresh_token = refresh_token.refresh_token;
           }
+          const obj2 = { token: null, feedId: null, feature: null };
+          obj2[0] = refresh_token;
+          obj2[1] = callback;
+          obj2[2] = callback2;
+          let c6 = 3;
+          c7 = 1;
+          obj3 = { value: null, done: false };
+          obj3[0] = obj3.getMyContentInventory(obj2);
+          return obj3;
         }
+      } else if (2 === tmp7) {
+        c5 = 0;
+        const value = store.get(callback);
+        callback2 = value;
+        if (value == null) {
+          callback2 = 0;
+        }
+        c5 = callback2;
+        if (c5 < 4) {
+          const _Math = Math;
+          c6 = callback2(force[9]).Millis.MINUTE * Math.pow(2, c5);
+          c7 = callback3(c5);
+          const _setTimeout = setTimeout;
+          const result = closure_14.set(callback, setTimeout(() => outer1_23({ feedId: c0, feature: c1, force }), c6 + c7));
+          const result1 = store.set(callback, c5 + 1);
+        } else {
+          obj1 = callback2(force[12]);
+          const obj4 = { type: "CONTENT_INVENTORY_CLEAR_FEED", feedId: null };
+          obj4[1] = callback;
+          obj1.dispatch(obj4);
+        }
+        set.delete(callback);
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        let _handleConnectionOpen = arg1;
+        const obj5 = { type: "CONTENT_INVENTORY_SET_FEED", feedId: null, feed: null };
+        obj5[1] = callback;
+        obj5[2] = _handleConnectionOpen;
+        callback2(force[12]).dispatch(obj5);
+        const result2 = store.set(callback, 0);
+        set.delete(callback);
+        callback4(callback, { loading: false });
+        if (callback === closure_12) {
+          let c17 = null;
+          callback6();
+        }
+        c5 = 0;
+        const obj10 = callback2(force[12]);
       }
+      c5 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -389,7 +336,7 @@ function handleSpotifyNewTrack(connectionId) {
   }
 }
 function handleFetchGameProfileFeed() {
-  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: require(16675) /* ContentInventoryFeature */.ContentInventoryFeature.GAME_PROFILE });
+  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: require(16772) /* ContentInventoryFeature */.ContentInventoryFeature.GAME_PROFILE });
 }
 let closure_11 = 2 * require("set").Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;

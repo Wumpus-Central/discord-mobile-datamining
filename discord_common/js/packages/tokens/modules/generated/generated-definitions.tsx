@@ -1152,19 +1152,24 @@ set = {
   resolve(enabledExperiments) {
     enabledExperiments = enabledExperiments.enabledExperiments;
     if (0 === enabledExperiments.length) {
-      return 14;
+      return 8;
     } else {
       const iter = enabledExperiments[Symbol.iterator]();
       while (iter !== undefined) {
-        if ("mobile-visual-refresh" === iter.next()) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
           let tmp4 = iter;
           iter.return();
-          let num = 13;
-          return 13;
+          let num = 10;
+          return 10;
         }
       }
-      return 14;
+      return 8;
     }
+  }
+};
+set = {
+  resolve() {
+    return 14;
   }
 };
 set = {
@@ -1176,15 +1181,39 @@ set = {
   resolve(enabledExperiments) {
     enabledExperiments = enabledExperiments.enabledExperiments;
     if (0 === enabledExperiments.length) {
-      return "text-sm/semibold";
+      return 4;
     } else {
       const iter = enabledExperiments[Symbol.iterator]();
       while (iter !== undefined) {
-        if ("mobile-visual-refresh" === iter.next()) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
           let tmp4 = iter;
           iter.return();
-          let str2 = "text-xs/semibold";
+          return 0;
+        }
+      }
+      return 4;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-sm/semibold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === nextResult) {
+          let tmp6 = iter;
+          iter.return();
+          let str4 = "text-xs/semibold";
           return "text-xs/semibold";
+        } else if ("mobile-visual-refresh-floating" === nextResult) {
+          let tmp5 = iter;
+          iter.return();
+          let str3 = "text-sm/semibold";
+          return "text-sm/semibold";
         }
       }
       return "text-sm/semibold";
@@ -1208,8 +1237,8 @@ set = {
         } else if ("mobile-visual-refresh-floating" === nextResult) {
           let tmp5 = iter;
           iter.return();
-          let num = 54;
-          return 54;
+          let num = 58;
+          return 58;
         }
       }
       return 40;
@@ -1299,6 +1328,50 @@ set = {
   resolve(enabledExperiments) {
     enabledExperiments = enabledExperiments.enabledExperiments;
     if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 27;
+          return 27;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 40;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === nextResult) {
+          let tmp6 = iter;
+          iter.return();
+          let num2 = 32;
+          return 32;
+        } else if ("mobile-visual-refresh-floating" === nextResult) {
+          let tmp5 = iter;
+          iter.return();
+          let num = 36;
+          return 36;
+        }
+      }
+      return 40;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
       return 32;
     } else {
       const iter = enabledExperiments[Symbol.iterator]();
@@ -1336,24 +1409,6 @@ set = {
         }
       }
       return 12;
-    }
-  }
-};
-set = {
-  resolve(enabledExperiments) {
-    enabledExperiments = enabledExperiments.enabledExperiments;
-    if (0 === enabledExperiments.length) {
-      return 8;
-    } else {
-      const iter = enabledExperiments[Symbol.iterator]();
-      while (iter !== undefined) {
-        if ("mobile-visual-refresh-floating" === iter.next()) {
-          let tmp4 = iter;
-          iter.return();
-          return 0;
-        }
-      }
-      return 8;
     }
   }
 };
@@ -3187,17 +3242,20 @@ export const _private = {
       USER_ROW_LABEL_LINE_HEIGHT_ANDROID: set,
       USER_ROW_LABEL_LINE_HEIGHT_IOS: set,
       VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH: set,
+      VOICE_MESSAGE_CHAT_GAP: set,
       VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID: set,
       VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS: set,
+      VOICE_MESSAGE_DURATION_MARGIN_LEFT: set,
       VOICE_MESSAGE_DURATION_TEXT_STYLE: set,
       VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT: set,
       VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT: set,
       VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM: set,
       VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL: set,
       VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL: set,
+      VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT: set,
+      VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH: set,
       VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS: set,
       VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL: set,
-      VOICE_MESSAGE_RECORDING_WAVEFORM_MARGIN_LEFT: set,
       VOICE_PANEL_CONTROLS_BORDER_RADIUS: set,
       VOICE_PANEL_CONTROLS_PADDING: set,
       VOICE_PANEL_GUTTER: set,

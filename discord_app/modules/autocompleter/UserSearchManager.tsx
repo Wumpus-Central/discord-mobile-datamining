@@ -917,7 +917,7 @@ prototype2["rebootWebworker"] = function rebootWebworker() {
     _worker.terminate();
     self._worker = null;
   }
-  self._worker = require(6171) /* UserSearchWorkerManager */;
+  self._worker = require(7235) /* UserSearchWorkerManager */;
 };
 prototype2["updateUsers"] = function updateUsers(arr) {
   const _worker = this._worker;
@@ -993,7 +993,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(handleUserSea
     const error = new Error("SearchContextManager: No webworker initialized");
     throw error;
   } else {
-    if (typeof UserSearchContext !== "fileFinishedImporting") {
+    if (typeof UserSearchContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (num === undefined) {

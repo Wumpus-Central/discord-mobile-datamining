@@ -3,13 +3,13 @@ import { RPC_SCOPE_CONFIG } from "RPC_SCOPE_CONFIG";
 
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
 
-export default function validateScope(arr) {
+export default function validateScope(arr, str) {
   const RPC_SCOPE_CONFIG = arr;
-  if (null == arg1) {
+  if (null == str) {
     return true;
-  } else if (typeof arg1 === "y") {
-    return arr.includes(arg1);
-  } else if (typeof arg1 === "window") {
+  } else if (typeof str === "string") {
+    return arr.includes(str);
+  } else if (typeof str !== "object") {
     return false;
   } else {
     const _Array2 = Array;

@@ -9,7 +9,7 @@ function useRoleColorSettingValue() {
   return require(589) /* initialize */.useStateFromStores(items, () => roleStyle.roleStyle);
 }
 function onRoleColorSettingValueChange(roleStyle) {
-  require(13521) /* setFontSize */.setRoleStyle(roleStyle);
+  require(13617) /* setFontSize */.setRoleStyle(roleStyle);
 }
 function useRoleColorSettingOptions() {
   return React.useMemo(() => {

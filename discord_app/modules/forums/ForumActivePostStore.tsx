@@ -312,7 +312,7 @@ const forumActivePostStore = new ForumActivePostStore(require("dispatcher"), {
     channel = channel.channel;
     if (null != channel.parent_id) {
       if (channel.parent_id === c12) {
-        const isForumPostPinnedResult = require(6071) /* getCreationDefaultFormatter */.isForumPostPinned(channel.id);
+        const isForumPostPinnedResult = require(5832) /* getCreationDefaultFormatter */.isForumPostPinned(channel.id);
         const hasItem = set2.has(channel.id);
         if (isForumPostPinnedResult) {
           if (!hasItem) {

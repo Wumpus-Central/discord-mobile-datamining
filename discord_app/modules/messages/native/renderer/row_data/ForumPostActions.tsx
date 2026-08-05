@@ -9,7 +9,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
   let emojiId;
   let emojiName;
   ({ defaultReactionEmoji, customGuildEmoji } = arg0);
-  let obj = require(7740) /* apexExperiment */;
+  let obj = require(7871) /* apexExperiment */;
   const result = obj.shouldSkipAccessibilityLabels();
   let tmp4;
   if (null != defaultReactionEmoji) {
@@ -20,7 +20,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        obj = { id: null, name: "a", animated: false, src: false, displayName: false };
+        obj = { id: null, name: "a", animated: "t", src: "a", displayName: "isArray" };
         obj[0] = emojiId;
         obj[2] = customGuildEmoji.animated;
         obj = { id: null, animated: null, size: 48 };
@@ -29,7 +29,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         obj[3] = importDefault(1416).getEmojiURL(obj);
         let accessibleEmojiDisplayName = str2;
         if (!result) {
-          let tmpResult = tmp(3832);
+          let tmpResult = tmp(3924);
           const obj1 = { id: null, name: null, animated: null };
           obj1[0] = emojiId;
           obj1[1] = str2;
@@ -48,11 +48,11 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
       }
       let obj2 = { id: "Array", name: false, animated: null, src: null, displayName: 0 };
       obj2[1] = emojiName;
-      obj2 = importDefault(3838);
+      obj2 = importDefault(3930);
       obj2[3] = obj2.getURL(emojiName);
       let accessibleEmojiDisplayName1 = str;
       if (!result) {
-        tmpResult = tmp(3832);
+        tmpResult = tmp(3924);
         const obj3 = { id: "Array", name: false, animated: null };
         obj3[1] = str;
         accessibleEmojiDisplayName1 = tmpResult.getAccessibleEmojiDisplayName(false, 0, obj3);
@@ -76,20 +76,20 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   let showMediaPostSharePrompt;
   ({ isFollowing, defaultReaction } = arg0);
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
-  const getAssetUriForEmbed = require(7734) /* frozen */.getAssetUriForEmbed;
+  const getAssetUriForEmbed = require(7865) /* frozen */.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(tmp4(4146));
+    let assetUriForEmbed = getAssetUriForEmbed(tmp4(4238));
     let tmp6 = tmp4;
     let tmp8 = tmp;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(tmp4(7737));
+    assetUriForEmbed = getAssetUriForEmbed(tmp4(7868));
     tmp6 = tmp4;
     tmp8 = tmp;
   }
   if (null != assetUriForEmbed) {
-    let tmp8Result = tmp8(7734);
+    let tmp8Result = tmp8(7865);
     let stringResult;
-    const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(4138));
+    const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(4230));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
@@ -114,11 +114,11 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       obj[1] = intl3.formatToParts(tmp8(1236).t.YtCu5p, obj);
       const intl4 = tmp8(1236).intl;
       obj[2] = intl4.string(tmp8(1236).t.C5UQC9);
-      tmp8Result = tmp8(7734);
-      obj[3] = tmp8Result.getAssetUriForEmbed(tmp6(7738));
-      obj[4] = tmp8(7734).getAssetUriForEmbed(tmp6(7739));
+      tmp8Result = tmp8(7865);
+      obj[3] = tmp8Result.getAssetUriForEmbed(tmp6(7869));
+      obj[4] = tmp8(7865).getAssetUriForEmbed(tmp6(7870));
       tmp14 = obj;
-      const tmp8Result1 = tmp8(7734);
+      const tmp8Result1 = tmp8(7865);
     }
     const obj2 = { numDisplayedReactions: 3, isFollowing: null, followIcon: null, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
     obj2[1] = isFollowing;
@@ -142,6 +142,6 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   } else {
     tmp6Result = tmp6(1208);
     const _HermesInternal = HermesInternal;
-    tmp6Result.captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4146 : 7737));
+    tmp6Result.captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4238 : 7868));
   }
 };

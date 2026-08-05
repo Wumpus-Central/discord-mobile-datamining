@@ -10,9 +10,9 @@ const require = arg1;
 let closure_6 = { code: "function ChannelSafeAreaBottomAnimatedAndroidTsx1(){const{heightSharedValue}=this.__closure;return{height:heightSharedValue.get()};}" };
 const memoResult = require("noop").memo(function ChannelSafeAreaBottom(channelId) {
   let _require;
-  const tmp = importDefault(10435)();
+  const tmp = importDefault(10242)();
   _require = tmp;
-  let obj = _require(4054);
+  let obj = _require(4146);
   const fn = function n() {
     return { height: _undefined.get() };
   };
@@ -21,9 +21,9 @@ const memoResult = require("noop").memo(function ChannelSafeAreaBottom(channelId
   fn.__initData = closure_6;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: animatedStyle, children: null };
-  const items = [absoluteFill.absoluteFill, importDefault(10439)(channelId.channelId)];
+  const items = [absoluteFill.absoluteFill, importDefault(10247)(channelId.channelId)];
   obj[1] = <closure_4 style={items} />;
-  return jsx(importDefault(4054).View, { style: animatedStyle, children: null });
+  return jsx(importDefault(4146).View, { style: animatedStyle, children: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx");
 

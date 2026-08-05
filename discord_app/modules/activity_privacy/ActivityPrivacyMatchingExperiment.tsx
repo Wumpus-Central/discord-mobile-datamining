@@ -5,7 +5,7 @@ let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-pr
 const result = require("set").fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");
 
 export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPrivacyCopyExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let obj = require(12195) /* apexExperiment */;
+  let obj = require(12377) /* apexExperiment */;
   let copyChanges = obj.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   obj = { location: ActivityPrivacyDefaultSharingSetting };
   if (!copyChanges) {
@@ -14,7 +14,7 @@ export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPriv
   return copyChanges;
 };
 export const getIsInActivityPrivacyUpsellExperiment = function getIsInActivityPrivacyUpsellExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let obj = require(12195) /* apexExperiment */;
+  let obj = require(12377) /* apexExperiment */;
   let upsell = obj.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   if (!upsell) {
     obj = { location: null };

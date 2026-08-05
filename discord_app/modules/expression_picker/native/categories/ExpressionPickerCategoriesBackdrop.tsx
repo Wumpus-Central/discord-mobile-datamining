@@ -14,7 +14,7 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.borderTopWidth = StyleSheet.hairlineWidth;
 obj.borderTopColor = require("Themes").colors.BACKGROUND_BASE_LOWEST;
 obj[0] = obj;
-createCacheKey = { backgroundColor: require("Themes").colors.PROFILE_GRADIENT_NOTE_BACKGROUND, height: require("ME").EXPRESSION_FOOTER_HEIGHT, bottom: "Array" };
+createCacheKey = { backgroundColor: require("Themes").colors.PROFILE_GRADIENT_NOTE_BACKGROUND, height: require("ME").EXPRESSION_FOOTER_HEIGHT, bottom: "disabled" };
 obj[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function EmojiPickerCategoriesBackdrop() {
@@ -31,7 +31,7 @@ const memoResult = require("noop").memo(function EmojiPickerCategoriesBackdrop()
     obj[0] = tmp.backdrop;
     const obj1 = { style: null };
     obj1[0] = tmp.backdrop;
-    obj[1] = tmp3(importDefault(8388), obj1);
+    obj[1] = tmp3(importDefault(8696), obj1);
     tmp3Result = tmp3(tmp4, obj);
   }
   return tmp3Result;

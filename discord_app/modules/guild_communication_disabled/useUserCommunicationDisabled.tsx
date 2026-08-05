@@ -30,7 +30,7 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
   const items2 = [prop, ];
   const obj = _require(589);
   const tmp = _require;
-  items2[1] = _require(3810).isMemberCommunicationDisabled(stateFromStores);
+  items2[1] = _require(3902).isMemberCommunicationDisabled(stateFromStores);
   return items2;
 };
 export const useCurrentUserCommunicationDisabled = function useCurrentUserCommunicationDisabled(guild_id) {
@@ -62,7 +62,7 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     prop = null;
   }
   const items3 = [prop, ];
-  tmpResult = tmp(3810);
+  tmpResult = tmp(3902);
   items3[1] = tmpResult.isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 };
@@ -81,6 +81,6 @@ export const userCommunicationDisabled = function userCommunicationDisabled(id, 
   if (prop == null) {
     prop = null;
   }
-  const items = [prop, require(3810) /* isCommunicationDisabled */.isMemberCommunicationDisabled(member)];
+  const items = [prop, require(3902) /* isCommunicationDisabled */.isMemberCommunicationDisabled(member)];
   return items;
 };

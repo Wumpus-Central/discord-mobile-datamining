@@ -47,13 +47,13 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   }
 };
 export const getSettingTitle = function getSettingTitle(closure_0) {
-  const cachedSettingTitle = require(13703) /* map */.getCachedSettingTitle(closure_0);
-  const obj = require(13703) /* map */;
+  const cachedSettingTitle = require(13799) /* map */.getCachedSettingTitle(closure_0);
+  const obj = require(13799) /* map */;
   importDefault(38)(null != cachedSettingTitle, "Setting " + closure_0 + " is missing a title.");
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
-  const entries = Object.entries(items(13704).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(13800).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((arg0) => {
     let tmp;
@@ -79,7 +79,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   const set = new Set();
-  const entries = Object.entries(items(13704).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(13800).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((arg0) => {
     let tmp;
     let tmp2;

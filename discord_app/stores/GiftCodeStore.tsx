@@ -17,14 +17,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4078).Timeout();
+      const timeout = new code(4170).Timeout();
       closure_7[code] = timeout;
       value = obj.get(code);
       if (null != value) {
         if (null != value.expiresAt) {
           const expiresAt = value.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - importDefault(3775)().valueOf();
+          const diff = valueOfResult - importDefault(3867)().valueOf();
           if (diff <= 0) {
             obj.delete(code);
             delete tmp2[tmp];
@@ -105,7 +105,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = importDefault(3775)();
+          const obj4 = importDefault(3867)();
         }
       }
       tmp18 = closure_7;
@@ -122,9 +122,9 @@ function resolveMessageGiftCodes(message, arg1) {
       return false;
     }
   }
-  let obj = require(4428) /* _resolveGiftCode */;
-  const isGiftCodeEmbedResult = require(4428) /* _resolveGiftCode */.isGiftCodeEmbed(message);
-  const findGiftCodes = require(4428) /* _resolveGiftCode */.findGiftCodes;
+  let obj = require(4519) /* _resolveGiftCode */;
+  const isGiftCodeEmbedResult = require(4519) /* _resolveGiftCode */.isGiftCodeEmbed(message);
+  const findGiftCodes = require(4519) /* _resolveGiftCode */.findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let embeds;
     if (message != null) {
@@ -247,10 +247,10 @@ prototype["getIsAccepting"] = function getIsAccepting(code) {
   return closure_10.includes(code);
 };
 prototype["getUserGiftCodesFetchingForSKUAndPlan"] = function getUserGiftCodesFetchingForSKUAndPlan(skuId, subscriptionPlanId) {
-  return set.has(require(4428) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
+  return set.has(require(4519) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
 };
 prototype["getUserGiftCodesLoadedAtForSKUAndPlan"] = function getUserGiftCodesLoadedAtForSKUAndPlan(skuId, subscriptionPlanId) {
-  const obj = require(4428) /* _resolveGiftCode */;
+  const obj = require(4519) /* _resolveGiftCode */;
   return table2[obj.makeComboId(obj, skuId, subscriptionPlanId)];
 };
 prototype["getResolvingCodes"] = function getResolvingCodes() {
@@ -355,7 +355,7 @@ const giftCodeStore = new GiftCodeStore(require("dispatcher"), {
     let skuId;
     let subscriptionPlanId;
     ({ skuId, subscriptionPlanId } = arg0);
-    set.add(require(4428) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
+    set.add(require(4519) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
   },
   GIFT_CODES_FETCH_SUCCESS: function handleGiftCodesFetchSuccess(giftCodes) {
     let skuId;
@@ -363,7 +363,7 @@ const giftCodeStore = new GiftCodeStore(require("dispatcher"), {
     giftCodes = giftCodes.giftCodes;
     ({ skuId, subscriptionPlanId } = giftCodes);
     const item = giftCodes.forEach(updateGiftCode);
-    const comboId = require(4428) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId);
+    const comboId = require(4519) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId);
     closure_13[comboId] = Date.now();
     set.delete(comboId);
   },
@@ -371,7 +371,7 @@ const giftCodeStore = new GiftCodeStore(require("dispatcher"), {
     let skuId;
     let subscriptionPlanId;
     ({ skuId, subscriptionPlanId } = arg0);
-    set.delete(require(4428) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
+    set.delete(require(4519) /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
   },
   MESSAGE_CREATE: handleMessage,
   MESSAGE_UPDATE: handleMessage,

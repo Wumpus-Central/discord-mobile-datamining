@@ -13,5 +13,5 @@ export default function MoreYouCanDoRow(arg0) {
   let title;
   let variant;
   ({ title, description, variant, onClick, icon, disabled } = arg0);
-  return jsx(require(5224) /* TableRowInner */.TableRow, { label, subLabel, onPress, icon, variant, disabled });
+  return jsx(require(5315) /* TableRowInner */.TableRow, { label, subLabel, onPress, icon, variant, disabled });
 };

@@ -14,7 +14,7 @@ function init(channelId, location, subsection) {
   obj.dispatch(obj);
 }
 function open(arg0, arg1, arg2) {
-  let obj = require(4045) /* getRootNavigationRef */;
+  let obj = require(4137) /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {

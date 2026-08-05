@@ -10,13 +10,13 @@ class StatusBarAndroid extends StatusBar {
 }
 const prototype = StatusBarAndroid.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
-  this._stackEntry = importDefault(6683).pushStackEntry(this.props);
+  this._stackEntry = importDefault(7670).pushStackEntry(this.props);
 };
 prototype["componentDidUpdate"] = function componentDidUpdate() {
-  this._stackEntry = importDefault(6683).replaceStackEntry(this._stackEntry, this.props);
+  this._stackEntry = importDefault(7670).replaceStackEntry(this._stackEntry, this.props);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  importDefault(6683).popStackEntry(this._stackEntry);
+  importDefault(7670).popStackEntry(this._stackEntry);
   this._stackEntry = null;
 };
 prototype["render"] = function render() {

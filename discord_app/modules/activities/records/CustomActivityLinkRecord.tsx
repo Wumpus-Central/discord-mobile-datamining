@@ -30,11 +30,11 @@ class CustomActivityLinkRecord {
 }
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
-  if (this.type === require(12303) /* CustomLinkType */.CustomLinkType.MANAGED) {
-    let tmpResult = tmp(7921);
+  if (this.type === require(12129) /* CustomLinkType */.CustomLinkType.MANAGED) {
+    let tmpResult = tmp(8051);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === tmp(12303).CustomLinkType.QUICK) {
-    tmpResult = tmp(12300);
+  } else if (self.type === tmp(12129).CustomLinkType.QUICK) {
+    tmpResult = tmp(12126);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

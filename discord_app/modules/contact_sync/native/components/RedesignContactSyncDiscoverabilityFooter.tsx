@@ -18,6 +18,6 @@ export default function RedesignContactSyncDiscoverabilityFooter(arg0) {
   obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.a5QL24);
   obj[1] = onValueChanged;
   obj[2] = discoverabilityEnabled;
-  obj[2] = jsx(require(5559) /* TableSwitchRow */.TableSwitchRow, { label: null, onValueChange: null, value: null });
-  return jsx(require(5558) /* TableRowGroupTitle */.TableRowGroup, { label: null, onValueChange: null, value: null });
+  obj[2] = jsx(require(5650) /* TableSwitchRow */.TableSwitchRow, { label: null, onValueChange: null, value: null });
+  return jsx(require(5649) /* TableRowGroupTitle */.TableRowGroup, { label: null, onValueChange: null, value: null });
 };

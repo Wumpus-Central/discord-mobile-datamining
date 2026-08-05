@@ -6,7 +6,7 @@ import { GuildFeatures } from "ME";
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
-export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, JOIN_GUILD) {
+export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, INVITE_USER) {
   if (null != guildId) {
     guild = guild.getGuild(guildId);
     let hasItem = null != guild;
@@ -15,7 +15,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
       hasItem = features.has(GuildFeatures.HUB);
     }
     if (hasItem) {
-      const items = [JOIN_GUILD];
+      const items = [INVITE_USER];
       const result = items(1355).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {

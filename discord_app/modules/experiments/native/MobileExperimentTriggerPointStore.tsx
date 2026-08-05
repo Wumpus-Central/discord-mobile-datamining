@@ -6,7 +6,7 @@ import importDefaultResult from "dispatcher";
 
 const require = arg1;
 function handleConnectionOpen() {
-  const MobileConnectionOpenTriggerPoint = require(12767) /* commonTriggerPointConfiguration */.MobileConnectionOpenTriggerPoint;
+  const MobileConnectionOpenTriggerPoint = require(12863) /* commonTriggerPointConfiguration */.MobileConnectionOpenTriggerPoint;
   MobileConnectionOpenTriggerPoint.trigger();
 }
 class MobileExperimentTriggerPointStore extends Store {

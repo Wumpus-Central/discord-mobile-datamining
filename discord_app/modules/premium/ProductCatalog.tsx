@@ -1155,20 +1155,20 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
       perks = isPremiumWithFractionalPremiumOnly.perks;
     }
     if (null != perks) {
-      const config = importDefault(13141).getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== _undefined(13141).DenormalizedPerksReadConfig.CONTROL) {
+      const config = importDefault(13237).getConfig({ location: "product_catalog_can_user_use" });
+      if (config !== _undefined(13237).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
         const tmp9Result = tmp9(1890);
-        if (config === tmp9(13141).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        if (config === tmp9(13237).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;
       }
-      const obj = importDefault(13141);
+      const obj = importDefault(13237);
     }
   }
   return COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);

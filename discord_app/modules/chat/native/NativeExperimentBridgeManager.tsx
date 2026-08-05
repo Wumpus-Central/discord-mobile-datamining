@@ -10,8 +10,8 @@ function syncYYTextReplacementExperiment() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        const result = setShouldEnableYYTextReplacement(require(16681) /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
-        const tmpResult = require(16681) /* shouldEnableYYTextReplacement */;
+        const result = setShouldEnableYYTextReplacement(require(16778) /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const tmpResult = require(16778) /* shouldEnableYYTextReplacement */;
       }
     }
   }
@@ -22,7 +22,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(16681);
+        let tmpResult = tmp(16778);
         const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
       }
     }
@@ -31,7 +31,7 @@ function updateIOSExperiments() {
   if (NSUserDefaultsBridge2 != null) {
     const setShouldFixPushNotificationRawPayload = NSUserDefaultsBridge2.setShouldFixPushNotificationRawPayload;
     if (setShouldFixPushNotificationRawPayload != null) {
-      tmpResult = tmp(4867);
+      tmpResult = tmp(4958);
       const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
     }
   }
@@ -55,7 +55,7 @@ function updateAndroidExperiments() {
   obj[3] = locale.locale;
   const obj2 = importDefault(698);
   const obj3 = store;
-  const config = importDefault(16683).getConfig({ location: "NativeExperimentBridgeManager" });
+  const config = importDefault(16780).getConfig({ location: "NativeExperimentBridgeManager" });
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;

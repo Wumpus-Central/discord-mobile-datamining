@@ -8,7 +8,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function onAccountDisablePress() {
-    importDefault(13861)(false);
+    importDefault(13961)(false);
   }
 });
 const obj = {
@@ -18,7 +18,7 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function onAccountDisablePress() {
-    importDefault(13861)(false);
+    importDefault(13961)(false);
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");

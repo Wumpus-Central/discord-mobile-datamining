@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/components/MediaModal.tsx
 import IMPACT_LIGHT from "IMPACT_LIGHT";
 import get_ActivityIndicator from "handleOrientationChange";
-import module_8138 from "module_8138";
+import module_8784 from "module_8784";
 import getState from "getState";
 import ME from "ME";
 import { jsx } from "useMediaShareActions";
@@ -17,7 +17,7 @@ let unpackModuleId;
 const require = arg1;
 ({ Image: c5, Modal: closure_6, StyleSheet: error, View: metroImportAll } = get_ActivityIndicator);
 ({ Base64JPEGPrefix: unpackModuleId, Base64GIFPrefix: closure_12, AppStates: map1 } = ME);
-let result = require("module_8138").fileFinishedImporting("modules/media_viewer/native/components/MediaModal.tsx");
+let result = require("module_8784").fileFinishedImporting("modules/media_viewer/native/components/MediaModal.tsx");
 
 export default function MediaModal(originLayout) {
   let onEndReached;

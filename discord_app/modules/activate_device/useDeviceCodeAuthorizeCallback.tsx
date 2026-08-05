@@ -47,7 +47,7 @@ function _createTwoWayLink() {
               let url;
               let c4;
               state = undefined;
-              const result = callback(13035).clientIdToActivateDevicePlatform(callback);
+              const result = callback(13131).clientIdToActivateDevicePlatform(callback);
               dependencyMap = result;
               if (null == result) {
                 c9 = 1;
@@ -58,9 +58,9 @@ function _createTwoWayLink() {
               } else {
                 url = null;
                 let c8 = 1;
-                let obj10 = callback2(4999);
+                let obj10 = callback2(5090);
                 const obj2 = { twoWayLinkType: null, userCode: null };
-                obj2[0] = callback(8952).TwoWayLinkType.DEVICE_CODE;
+                obj2[0] = callback(10418).TwoWayLinkType.DEVICE_CODE;
                 obj2[1] = tmp84;
                 c9 = 4;
                 c10 = 1;
@@ -68,7 +68,7 @@ function _createTwoWayLink() {
                 obj3[0] = obj10.authorize(result, obj2);
                 return obj3;
               }
-              const obj20 = callback(13035);
+              const obj20 = callback(13131);
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -124,18 +124,18 @@ function _createTwoWayLink() {
               c4 = null;
               c8 = 2;
               callback2(38)(null != url, "No URL in authorize response");
-              state = callback(5000).getCallbackParamsFromURL(url).state;
+              state = callback(5091).getCallbackParamsFromURL(url).state;
               callback2(38)(null != state, "Authorize URL state query parameter must be present");
               c4 = state;
               c8 = 3;
-              const obj17 = callback(5000);
+              const obj17 = callback(5091);
               const obj8 = { code: null, state: null };
               obj8[0] = callback;
               obj8[1] = c4;
               c9 = 8;
               c10 = 1;
               const obj9 = { value: null, done: false };
-              obj9[0] = callback2(4999).callback(dependencyMap, obj8);
+              obj9[0] = callback2(5090).callback(dependencyMap, obj8);
               return obj9;
             }
           } else if (5 === tmp9) {
@@ -257,66 +257,20 @@ function _silentlyFinishTwoWayLinkError() {
     let c3 = 0;
     let c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c3 === 2) {
+      let c6 = 1;
+      const obj1 = callback(table[7]);
+      yield obj1.finishUserCodeTwoWayLinkError(callback, closure_1, table);
+      if (1 === tmp6) {
+        c6 = 0;
+        let c3 = 3;
+      } else if (arg0 === 1) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c6 = 1;
-              let obj1 = callback(table[7]);
-              c4 = 2;
-              c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.finishUserCodeTwoWayLinkError(callback, closure_1, table);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp6) {
-              c6 = 0;
-              c3 = 3;
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c6 = 0;
-            }
-            c6 = 0;
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp13) {
-          let closure_5 = tmp13;
-          if (tmp3 === c6) {
-            c3 = tmp2;
-            throw tmp13;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c6 = 0;
       }
+      c6 = 0;
+      return arg1;
     })();
   });
   const _silentlyFinishTwoWayLinkError = tmp;
@@ -376,7 +330,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                   c6 = 4;
                   c7 = 1;
                   const obj1 = { value: null, done: false };
-                  obj1[0] = callback(8965).finishUserCode(tmp49.userCode, "granted");
+                  obj1[0] = callback(10431).finishUserCode(tmp49.userCode, "granted");
                   return obj1;
                 } else {
                   c5 = 3;
@@ -397,7 +351,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                 }
               } else {
                 c5 = 1;
-                let obj3 = callback(8965);
+                let obj3 = callback(10431);
                 c6 = 6;
                 c7 = 1;
                 obj3 = { value: null, done: false };

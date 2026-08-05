@@ -20,189 +20,215 @@ function _startLurking() {
     let c7 = 0;
     let c8 = 0;
     const iter = (function*(arg0, arg1) {
-      let joinSource = tmp5;
-      let onSuccess = tmp2;
-      let obj1;
-      let length;
-      let throwTypeErrorResult = callback;
-      throwTypeErrorResult = lib;
-      if (obj1 === undefined) {
-        obj1 = {};
-      }
-      throwTypeErrorResult = length;
-      let page;
-      onSuccess = undefined;
-      joinSource = undefined;
-      let loadId;
-      let shouldNavigate;
-      let c9;
-      let history;
-      let joinedAt;
-      let obj3;
-      loadId = 1;
-      shouldNavigate = 1;
-      yield "ct";
-      if (1 === tmp5) {
-        if (arg0 === 1) {
-          shouldNavigate = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          shouldNavigate = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          throwTypeErrorResult = onSuccess;
-          throwTypeErrorResult = obj1;
-          page = obj1.channelId;
-          throwTypeErrorResult = obj1;
-          onSuccess = obj1.onSuccess;
-          throwTypeErrorResult = obj1;
-          joinSource = obj1.joinSource;
-          throwTypeErrorResult = obj1;
-          loadId = obj1.loadId;
-          throwTypeErrorResult = obj1;
-          shouldNavigate = obj1.shouldNavigate;
-          throwTypeErrorResult = shouldNavigate;
-          let tmp24 = undefined === shouldNavigate;
-          if (!tmp24) {
-            tmp24 = shouldNavigate;
+      if (shouldNavigate === 2) {
+        shouldNavigate = 3;
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      } else {
+        throwTypeErrorResult = arg1;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp3;
+        if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          c9 = tmp24;
-          let obj6 = callback(obj1[5]);
-          history = obj6.getHistory();
-          joinedAt = joinSource.getGuild(callback);
-          obj3 = { sourceLocationStack: null, state: null };
-          obj3[0] = length;
-          const obj4 = { analyticsSource: null };
-          obj4[0] = lib;
-          obj3[1] = obj4;
-          if (null != joinedAt) {
-            if (null != joinedAt.joinedAt) {
-              if (c9) {
-                if (null == page) {
-                  throwTypeErrorResult = onSuccess;
-                  throwTypeErrorResult = joinSource;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = obj1;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = obj3;
-                  throwTypeErrorResult = callback(obj1[6]).transitionToGuild(callback, obj3);
-                  const obj19 = callback(obj1[6]);
-                } else {
-                  throwTypeErrorResult = obj1;
-                  const obj5 = {};
-                  throwTypeErrorResult = obj3;
-                  throwTypeErrorResult = obj5;
-                  throwTypeErrorResult = history.CHANNEL(callback, page, obj1.messageId);
-                  throwTypeErrorResult = Object.assign(obj3);
-                  obj5.navigationReplace = true;
-                  obj5.openChannel = true;
-                  throwTypeErrorResult = lib(obj1[7])(throwTypeErrorResult, obj5);
-                  const tmp96 = lib(obj1[7]);
+        } else {
+          try {
+            shouldNavigate = 2;
+            if (0 === loadId) {
+              if (arg0 === 1) {
+                shouldNavigate = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                shouldNavigate = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let joinSource = tmp5;
+                let onSuccess = tmp2;
+                let obj1;
+                let length;
+                throwTypeErrorResult = callback;
+                throwTypeErrorResult = lib;
+                if (obj1 === undefined) {
+                  obj1 = {};
                 }
-              }
-            }
-          }
-          if (null != joinedAt) {
-            if (page.isLurking(callback)) {
-              if (c9) {
-                const obj15 = lib(obj1[8]);
-                obj6 = {};
-                const merged = Object.assign(obj3);
-                obj6.welcomeModalChannelId = page;
-                obj6.navigationReplace = null != page;
-                obj6.openChannel = null != page;
-                obj6.search = history.location.search;
-                loadId = 2;
+                throwTypeErrorResult = length;
+                let page;
+                onSuccess = undefined;
+                joinSource = undefined;
+                loadId = undefined;
+                shouldNavigate = undefined;
+                let c9;
+                let history;
+                let joinedAt;
+                let obj3;
+                let closure_13;
+                loadId = 1;
                 shouldNavigate = 1;
-                const obj7 = { value: null, done: false };
-                obj7[0] = obj15.transitionToGuildSync(callback, obj6, page, obj1.messageId);
-                return obj7;
+                return { value: "ct", done: "Array" };
               }
+            } else {
+              if (1 === tmp5) {
+                if (arg0 === 1) {
+                  shouldNavigate = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  shouldNavigate = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = arg1;
+                  return obj2;
+                } else {
+                  throwTypeErrorResult = onSuccess;
+                  throwTypeErrorResult = obj1;
+                  page = obj1.channelId;
+                  throwTypeErrorResult = obj1;
+                  onSuccess = obj1.onSuccess;
+                  throwTypeErrorResult = obj1;
+                  joinSource = obj1.joinSource;
+                  throwTypeErrorResult = obj1;
+                  loadId = obj1.loadId;
+                  throwTypeErrorResult = obj1;
+                  shouldNavigate = obj1.shouldNavigate;
+                  throwTypeErrorResult = shouldNavigate;
+                  let tmp24 = undefined === shouldNavigate;
+                  if (!tmp24) {
+                    tmp24 = shouldNavigate;
+                  }
+                  c9 = tmp24;
+                  let obj6 = callback(obj1[5]);
+                  history = obj6.getHistory();
+                  joinedAt = joinSource.getGuild(callback);
+                  obj3 = { sourceLocationStack: null, state: null };
+                  obj3[0] = length;
+                  const obj4 = { analyticsSource: null };
+                  obj4[0] = lib;
+                  obj3[1] = obj4;
+                  if (null != joinedAt) {
+                    if (null != joinedAt.joinedAt) {
+                      if (c9) {
+                        if (null == page) {
+                          throwTypeErrorResult = callback(obj1[6]).transitionToGuild(callback, obj3);
+                          const obj17 = callback(obj1[6]);
+                        } else {
+                          const obj5 = {};
+                          const tmp84 = lib(obj1[7]);
+                          const merged = Object.assign(obj3);
+                          obj5.navigationReplace = true;
+                          obj5.openChannel = true;
+                          tmp84(history.CHANNEL(callback, page, obj1.messageId), obj5);
+                          const CHANNELResult = history.CHANNEL(callback, page, obj1.messageId);
+                        }
+                      }
+                    }
+                  }
+                  if (null != joinedAt) {
+                    if (page.isLurking(callback)) {
+                      if (c9) {
+                        let obj12 = lib(obj1[8]);
+                        obj6 = {};
+                        const merged1 = Object.assign(obj3);
+                        obj6.welcomeModalChannelId = page;
+                        obj6.navigationReplace = null != page;
+                        obj6.openChannel = null != page;
+                        obj6.search = history.location.search;
+                        loadId = 2;
+                        shouldNavigate = 1;
+                        const obj7 = { value: null, done: false };
+                        obj7[0] = obj12.transitionToGuildSync(callback, obj6, page, obj1.messageId);
+                        return obj7;
+                      }
+                    }
+                  }
+                  let tmp45;
+                  if (length != null) {
+                    tmp45 = tmp44[length.length - 1];
+                  }
+                  page = tmp45;
+                  if (tmp45 == null) {
+                    page = undefined;
+                    if (lib != null) {
+                      page = lib.page;
+                    }
+                  }
+                  closure_13 = page;
+                  let obj9 = lib(obj1[8]);
+                  const obj8 = { lurker: true, source: null, loadId: null, lurkLocation: null };
+                  obj8[1] = joinSource;
+                  obj8[2] = loadId;
+                  obj8[3] = closure_13;
+                  loadId = 3;
+                  shouldNavigate = 1;
+                  obj9 = { value: null, done: false };
+                  obj9[0] = obj9.joinGuild(callback, obj8);
+                  return obj9;
+                }
+              } else if (2 === tmp5) {
+                if (arg0 === 1) {
+                  shouldNavigate = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  shouldNavigate = 3;
+                  const obj10 = { value: null, done: true };
+                  obj10[0] = arg1;
+                  return obj10;
+                }
+              } else if (3 === tmp5) {
+                if (arg0 === 1) {
+                  shouldNavigate = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  shouldNavigate = 3;
+                  const obj11 = { value: null, done: true };
+                  obj11[0] = arg1;
+                  return obj11;
+                } else {
+                  throwTypeErrorResult = onSuccess;
+                  throwTypeErrorResult = c9;
+                  if (c9) {
+                    obj1 = lib(obj1[8]);
+                    obj12 = {};
+                    const merged2 = Object.assign(obj3);
+                    obj12.welcomeModalChannelId = page;
+                    obj12.navigationReplace = null != page;
+                    obj12.openChannel = null != page;
+                    obj12.search = history.location.search;
+                    loadId = 4;
+                    shouldNavigate = 1;
+                    const obj13 = { value: null, done: false };
+                    obj13[0] = obj1.transitionToGuildSync(callback, obj12, page, obj1.messageId);
+                    return obj13;
+                  }
+                }
+              } else if (arg0 === 1) {
+                shouldNavigate = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                shouldNavigate = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              }
+              throwTypeErrorResult = onSuccess;
+              throwTypeErrorResult = null;
+              if (onSuccess != null) {
+                throwTypeErrorResult = throwTypeErrorResult();
+              }
+              shouldNavigate = 3;
+              return { value: "HermesInternal", done: null };
             }
-          }
-          let tmp45;
-          if (length != null) {
-            tmp45 = tmp44[length.length - 1];
-          }
-          page = tmp45;
-          if (tmp45 == null) {
-            page = undefined;
-            if (lib != null) {
-              page = lib.page;
-            }
-          }
-          let closure_13 = page;
-          let obj9 = callback(obj1[9]);
-          if (obj9.getMobileLurkerServerPreview("startLurking").enabled) {
-            let obj10 = callback(obj1[10]);
-            obj10.trackLurkStarted(callback, joinSource, closure_13);
-          }
-          let obj11 = lib(obj1[8]);
-          const obj8 = { lurker: true, source: null, loadId: null, lurkLocation: null };
-          obj8[1] = joinSource;
-          obj8[2] = loadId;
-          obj8[3] = closure_13;
-          loadId = 3;
-          shouldNavigate = 1;
-          obj9 = { value: null, done: false };
-          obj9[0] = obj11.joinGuild(callback, obj8);
-          return obj9;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          shouldNavigate = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          shouldNavigate = 3;
-          obj10 = { value: null, done: true };
-          obj10[0] = arg1;
-          return obj10;
-        }
-      } else if (3 === tmp5) {
-        if (arg0 === 1) {
-          shouldNavigate = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          shouldNavigate = 3;
-          obj11 = { value: null, done: true };
-          obj11[0] = arg1;
-          return obj11;
-        } else {
-          throwTypeErrorResult = onSuccess;
-          throwTypeErrorResult = c9;
-          if (c9) {
-            obj1 = lib(obj1[8]);
-            const obj12 = {};
-            const merged1 = Object.assign(obj3);
-            obj12.welcomeModalChannelId = page;
-            obj12.navigationReplace = null != page;
-            obj12.openChannel = null != page;
-            obj12.search = history.location.search;
-            loadId = 4;
-            shouldNavigate = 1;
-            const obj13 = { value: null, done: false };
-            obj13[0] = obj1.transitionToGuildSync(callback, obj12, page, obj1.messageId);
-            return obj13;
+          } catch (throwTypeErrorResult) {
+            shouldNavigate = throwTypeErrorResult;
+            throw throwTypeErrorResult;
           }
         }
-      } else if (arg0 === 1) {
-        shouldNavigate = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        shouldNavigate = 3;
-        const obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
       }
-      throwTypeErrorResult = onSuccess;
-      throwTypeErrorResult = null;
-      if (onSuccess != null) {
-        throwTypeErrorResult = throwTypeErrorResult();
-      }
-      shouldNavigate = 3;
-      yield "HermesInternal";
     })();
     iter.next();
     return iter;
@@ -261,12 +287,12 @@ function _getDiscoverableGuild() {
               let lib;
               first = undefined;
               let c4 = 1;
-              const HTTP = lib(outer1_2[12]).HTTP;
+              const HTTP = lib(outer1_2[10]).HTTP;
               const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
               obj1[0] = outer1_9.GUILD_DISCOVERY;
               const obj2 = { guild_ids: null };
               obj2[0] = lib;
-              obj1[1] = outer1_1(outer1_2[13]).stringify(obj2);
+              obj1[1] = outer1_1(outer1_2[11]).stringify(obj2);
               c5 = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -360,7 +386,7 @@ function _fetchPublicDiscoveryGuild() {
               let closure_1 = tmp6;
               body = undefined;
               let c3 = 1;
-              const HTTP = callback(table[12]).HTTP;
+              const HTTP = callback(table[10]).HTTP;
               const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
               const _String = String;
               obj1[0] = outer1_9.GUILD_DISCOVERY_SLUG(String(body));
@@ -435,7 +461,7 @@ const result = require("handleInviteData").fileFinishedImporting("utils/GuildDis
 export const AnalyticsContexts = { SEARCH: "Search", RECOMMENDED: "Recommended", POPULAR: "Popular", RECOMMENDED_E3: "Recommended - E3", HEADER: "Header", GLOBAL_DISCOVERY: "Global Discovery", FORWARD_BREADCRUMB: "Forward Breadcrumb" };
 export const IOS_MINIMUM_MEMBER_COUNT = ">1000";
 export const MINIMUM_MEMBER_COUNT = ">200";
-export const startLurking = function startLurking(id, c4, arg2, c42) {
+export const startLurking = function startLurking(guildId, c4, arg2, c42) {
   const self = this;
   const apply = _startLurking.apply;
   if (typeof apply === "unknown") {

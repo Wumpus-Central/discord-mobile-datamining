@@ -48,7 +48,7 @@ function getMemberListId(arg0) {
       str = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
-    obj = importAll(3826);
+    obj = importAll(3918);
   } else {
     memberListId = channel.memberListId;
   }
@@ -91,7 +91,7 @@ prototype["updateOwnerId"] = function updateOwnerId() {
   if (null == guild) {
     return false;
   } else {
-    const guildVisualOwnerId = importAll(3826).getGuildVisualOwnerId(guild);
+    const guildVisualOwnerId = importAll(3918).getGuildVisualOwnerId(guild);
     let flag = self.ownerId !== guildVisualOwnerId;
     if (flag) {
       self.ownerId = guildVisualOwnerId;
@@ -521,7 +521,7 @@ prototype2["get"] = function get(guildId, listId) {
   }
   let tmp2 = tmp[listId];
   if (null == tmp2) {
-    if (typeof MemberList !== "fileFinishedImporting") {
+    if (typeof MemberList !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(MemberList.prototype);

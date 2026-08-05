@@ -13,9 +13,9 @@ let c4;
 let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  let obj = _require(5987);
+  let obj = _require(7078);
   const result = obj.isBillableQuestContent(questContent);
-  let obj1 = _require(5987);
+  let obj1 = _require(7078);
   const adContext = obj1.getAdContext(questContent);
   const tmp4 = callback2();
   const tmp5 = callback();

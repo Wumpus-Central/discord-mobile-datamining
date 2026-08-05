@@ -12,6 +12,6 @@ export default function DiscordGestureHandlerRootView(arg0) {
   let style;
   ({ children, style } = arg0);
   const obj = { style: styles.flex, children: null };
-  obj[1] = jsx(require(5277) /* Directions */.GestureHandlerRootView, { style, children });
-  return jsx(importDefault(13629), { style: styles.flex, children: null });
+  obj[1] = jsx(require(5368) /* Directions */.GestureHandlerRootView, { style, children });
+  return jsx(importDefault(13725), { style: styles.flex, children: null });
 };

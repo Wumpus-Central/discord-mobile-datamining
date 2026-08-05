@@ -3,7 +3,7 @@ import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import IconSizes from "IconSizes";
-import importDefaultResult from "module_4054";
+import importDefaultResult from "module_4146";
 
 const require = arg1;
 createCacheKey = { checkbox: null, unselected: null, selected: null, checkmark: null };

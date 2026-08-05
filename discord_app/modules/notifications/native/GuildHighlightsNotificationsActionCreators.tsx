@@ -10,7 +10,7 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
   const dependencyMap = TRENDING_CONTENT_PUSH;
   const constants = NOTIFICATION_CENTER;
   let closure_4 = arg4;
-  let obj = importDefault(4161);
+  let obj = importDefault(4253);
   obj = { guildId, feedbackSettings: null };
   obj = { reasons: null, onFeedbackShown: null, onFeedbackCompleted: null };
   const obj1 = { value: constants.TOO_MANY, label: null };
@@ -54,5 +54,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     obj.track(constants.FEEDBACK_FORM_SUBMITTED, obj);
   };
   obj[1] = obj;
-  obj.openLazy(_require(1959)(9531, dependencyMap.paths), "GuildHighlightsNotifications", obj);
+  obj.openLazy(_require(1959)(11000, dependencyMap.paths), "GuildHighlightsNotifications", obj);
 };

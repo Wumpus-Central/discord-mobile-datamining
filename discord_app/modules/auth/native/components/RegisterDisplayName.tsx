@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/components/RegisterDisplayName.tsx
 import closure_3 from "useRegistrationUIStore";
 import _slicedToArray from "_slicedToArray";
-import module_13813 from "module_13813";
+import module_13913 from "module_13913";
 import { View } from "useInitialRegistrationStep";
 import isRateLimited from "isRateLimited";
 import useRegistrationUIStore from "useRegistrationUIStore";

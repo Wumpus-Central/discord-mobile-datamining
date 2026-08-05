@@ -11,7 +11,7 @@ export default function usePendingAvatarSettings(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
   let dependencyMap;
-  const tmp2 = guildId(7944)(isTryItOut.analyticsLocations);
+  const tmp2 = guildId(8074)(isTryItOut.analyticsLocations);
   dependencyMap = tmp2;
   let obj = isTryItOut(647);
   const items = [handleFormOpen];
@@ -54,11 +54,11 @@ export default function usePendingAvatarSettings(isTryItOut) {
   }, items2);
   obj = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: null };
   if (isTryItOut) {
-    setTryItOutAvatar = tmp3(7948).setTryItOutAvatar;
+    setTryItOutAvatar = tmp3(8078).setTryItOutAvatar;
   }
   obj[3] = setTryItOutAvatar;
   if (isTryItOut) {
-    setTryItOutAvatarDecoration = tmp3(7948).setTryItOutAvatarDecoration;
+    setTryItOutAvatarDecoration = tmp3(8078).setTryItOutAvatarDecoration;
   }
   obj[4] = setTryItOutAvatarDecoration;
   return obj;

@@ -124,7 +124,7 @@ const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-let closure_19 = { [arg1(8355).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(8355).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(8355).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(8355).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(8355).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(8355).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(8355).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(8355).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(8355).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(8355).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let closure_19 = { [arg1(8990).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(8990).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(8990).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(8990).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(8990).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(8990).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(8990).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(8990).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(8990).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(8990).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
 let items = [require("get label").INVITE_OPTIONS_14_DAYS, require("get label").INVITE_OPTIONS_30_DAYS, require("get label").INVITE_OPTIONS_60_DAYS];
 obj = {
   getMaxAgeOptionByValue(label) {
@@ -134,7 +134,7 @@ obj = {
   },
   getMaxAgeOptions(arg0) {
     const _require = arg0;
-    const MAX_AGE_OPTIONS = _require(8355).MAX_AGE_OPTIONS;
+    const MAX_AGE_OPTIONS = _require(8990).MAX_AGE_OPTIONS;
     return MAX_AGE_OPTIONS.filter((value) => {
       const hasItem = outer1_20.includes(value);
       let tmp2 = !hasItem;
@@ -374,8 +374,8 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       let importDefault;
       ({ rows: c0, counts: c1 } = obj5);
       if (obj5.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        obj1 = importDefault(5035);
-        const obj6 = { query: null, limit: 3, guildId: "borderRadius" };
+        obj1 = importDefault(5126);
+        const obj6 = { query: null, limit: 3, guildId: "View" };
         obj6[0] = tmp44;
         let item = obj1.queryChannels(obj6).forEach((item) => {
           _undefined.push({ type: outer1_12.CHANNEL, item: item.record, isSuggested: false, score: item.score });
@@ -435,7 +435,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     let dependencyMap;
     c3 = undefined;
     ({ omitUserIds: c0, shownUserIds: c1, rows: c2, counts: c3 } = obj8);
-    obj5 = importDefault(5035);
+    obj5 = importDefault(5126);
     const obj9 = { query: null, limit: 50 };
     obj9[0] = obj8.query;
     const item1 = obj5.queryDMUsers(obj9).forEach((record) => {
@@ -463,7 +463,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     c0 = undefined;
     importDefault = undefined;
     ({ rows: c0, counts: c1, query: query2 } = obj4);
-    obj7 = importDefault(5035);
+    obj7 = importDefault(5126);
     let obj10 = { query: null, limit: 50, fuzzy: false };
     obj10[0] = query2;
     const queryDMUsersResult = obj5.queryDMUsers(obj9);
@@ -480,7 +480,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     dependencyMap = undefined;
     c3 = undefined;
     ({ rows: c0, counts: c1, omitUserIds: c2, shownUserIds: c3, query: query3 } = obj11);
-    obj10 = importDefault(5035);
+    obj10 = importDefault(5126);
     const obj12 = { query: null, limit: 500, _fuzzy: false };
     obj12[0] = query3;
     const queryGroupDMsResult = obj7.queryGroupDMs(obj10);

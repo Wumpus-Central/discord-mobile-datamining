@@ -125,7 +125,7 @@ prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
   const Storage = require(595) /* Storage */.Storage;
   const value = Storage.get(this.getAckedEndOffsetStorageKey());
   let num = -1;
-  if (typeof value !== "__REMOTEDEV__") {
+  if (typeof value === "number") {
     const _Number = Number;
     num = -1;
     if (Number.isFinite(value)) {
@@ -169,101 +169,56 @@ prototype["_drainOnce"] = function _drainOnce(arg0) {
   let closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
+    let closure_0 = tmp2;
+    const budget = outer1_1.getBudget(outer1_0.mode);
+    const _readAckedEndOffsetResult = outer1_1._readAckedEndOffset();
+    if (_readAckedEndOffsetResult >= 0) {
+      const tmp27 = _readAckedEndOffsetResult;
+    }
+    yield outer1_1._collectPages(budget, tmp27);
+    if (1 === tmp5) {
       if (arg0 === 1) {
+        let c3 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        c3 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let maxReturnedEndOffset = tmp5;
-            let closure_0 = tmp2;
-            let tmp27;
-            closure_0 = undefined;
-            maxReturnedEndOffset = undefined;
-            const budget = outer1_1.getBudget(outer1_0.mode);
-            const _readAckedEndOffsetResult = outer1_1._readAckedEndOffset();
-            if (_readAckedEndOffsetResult >= 0) {
-              tmp27 = _readAckedEndOffsetResult;
-            }
-            c2 = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1._collectPages(budget, tmp27);
-            return obj1;
-          }
+        closure_0 = arg1;
+        if (0 !== closure_0.length) {
+          let c2 = 2;
+          c3 = 1;
+          const obj3 = { value: null, done: false };
+          obj3[0] = maxReturnedEndOffset._exportPages(closure_0, closure_0.flush);
+          return obj3;
         } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              if (0 !== closure_0.length) {
-                c2 = 2;
-                c3 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = maxReturnedEndOffset._exportPages(closure_0, closure_0.flush);
-                return obj3;
-              } else {
-                c3 = 3;
-              }
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            if (arg1) {
-              maxReturnedEndOffset = closure_0[0].maxReturnedEndOffset;
-              if (!maxReturnedEndOffset._resetting) {
-                let isFiniteResult = typeof maxReturnedEndOffset === "Object";
-                if (typeof maxReturnedEndOffset !== "__REMOTEDEV__") {
-                  const _Number = Number;
-                  isFiniteResult = Number.isFinite(maxReturnedEndOffset);
-                }
-                if (isFiniteResult) {
-                  isFiniteResult = maxReturnedEndOffset >= 0;
-                }
-                if (isFiniteResult) {
-                  maxReturnedEndOffset._writeAckedEndOffset(maxReturnedEndOffset);
-                }
-              }
-            }
-          }
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
         }
-      } catch (tmp29) {
-        c3 = tmp;
-        throw tmp29;
+      }
+    } else if (arg0 === 1) {
+      c3 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      if (arg1) {
+        maxReturnedEndOffset = closure_0[0].maxReturnedEndOffset;
+        if (!maxReturnedEndOffset._resetting) {
+          let isFiniteResult = typeof maxReturnedEndOffset === "number";
+          if (typeof maxReturnedEndOffset === "number") {
+            const _Number = Number;
+            isFiniteResult = Number.isFinite(maxReturnedEndOffset);
+          }
+          if (isFiniteResult) {
+            isFiniteResult = maxReturnedEndOffset >= 0;
+          }
+          if (isFiniteResult) {
+            maxReturnedEndOffset._writeAckedEndOffset(maxReturnedEndOffset);
+          }
+        }
       }
     }
+    return arg1;
   })();
 };
 prototype["_collectPages"] = function _collectPages(budget, arg1) {

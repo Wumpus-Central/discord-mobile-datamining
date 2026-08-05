@@ -551,98 +551,53 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
         let c1;
         let c2;
         let c3;
-        if (styles === 2) {
-          styles = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
+        c1 = tmp2;
+        ({ url: c0, width: c1, height: c2, type: c3 } = lib.nativeEvent);
+        yield "ct";
+        if (1 === tmp5) {
           if (arg0 === 1) {
+            let styles = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            styles = 3;
+            let obj1 = { value: null, done: true };
+            obj1[0] = arg1;
+            return obj1;
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            styles = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                styles = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                styles = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                c2 = tmp5;
-                c1 = tmp2;
-                let lib;
-                c1 = undefined;
-                c2 = undefined;
-                c3 = undefined;
-                ({ url: c0, width: c1, height: c2, type: c3 } = lib.nativeEvent);
-                styles = undefined;
-                c3 = 1;
+            if (outer1_11.state.current.focused) {
+              if (outer1_11.props.current.canUpload) {
+                obj1 = lib(outer2_3[42]);
+                c3 = 2;
                 styles = 1;
-                return { value: "ct", done: "Array" };
+                const obj2 = { value: null, done: false };
+                obj2[0] = obj1.getImageDimensionsIfMissing(lib, outer1_1, outer1_2);
+                return obj2;
               }
-            } else {
-              if (1 === tmp5) {
-                if (arg0 === 1) {
-                  styles = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  styles = 3;
-                  let obj1 = { value: null, done: true };
-                  obj1[0] = arg1;
-                  return obj1;
-                } else {
-                  if (outer1_11.state.current.focused) {
-                    if (outer1_11.props.current.canUpload) {
-                      obj1 = lib(outer2_3[42]);
-                      c3 = 2;
-                      styles = 1;
-                      const obj2 = { value: null, done: false };
-                      obj2[0] = obj1.getImageDimensionsIfMissing(lib, outer1_1, outer1_2);
-                      return obj2;
-                    }
-                  }
-                  styles = 3;
-                }
-              } else if (arg0 === 1) {
-                styles = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                styles = arg1;
-                const obj3 = { channelId: null, file: null, draftType: null };
-                obj3[0] = outer1_11.props.current.channel.id;
-                const obj4 = { uri: null, originalUri: null, width: null, height: null, mimeType: null, platform: null, id: null };
-                obj4[0] = lib;
-                obj4[1] = lib;
-                obj4[2] = styles.width;
-                obj4[3] = styles.height;
-                obj4[4] = c3;
-                obj4[5] = lib(outer2_3[44]).UploadPlatform.REACT_NATIVE;
-                const obj7 = outer2_1(outer2_3[43]);
-                obj4[6] = lib(outer2_3[45]).v4();
-                obj3[1] = obj4;
-                obj3[2] = outer2_14.ChannelMessage;
-                obj7.addFile(obj3);
-                const obj10 = lib(outer2_3[45]);
-              }
-              styles = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
             }
-          } catch (tmp16) {
-            styles = tmp;
-            throw tmp16;
+            styles = 3;
           }
+        } else if (arg0 === 1) {
+          styles = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          styles = arg1;
+          const obj3 = { channelId: null, file: null, draftType: null };
+          obj3[0] = outer1_11.props.current.channel.id;
+          const obj4 = { uri: null, originalUri: null, width: null, height: null, mimeType: null, platform: null, id: null };
+          obj4[0] = lib;
+          obj4[1] = lib;
+          obj4[2] = styles.width;
+          obj4[3] = styles.height;
+          obj4[4] = c3;
+          obj4[5] = lib(outer2_3[44]).UploadPlatform.REACT_NATIVE;
+          const obj7 = outer2_1(outer2_3[43]);
+          obj4[6] = lib(outer2_3[45]).v4();
+          obj3[1] = obj4;
+          obj3[2] = outer2_14.ChannelMessage;
+          obj7.addFile(obj3);
+          const obj10 = lib(outer2_3[45]);
         }
+        return arg1;
       })();
       iter.next();
       return iter;
@@ -732,7 +687,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj6[0] = getState.props.current.channel;
           obj6[1] = outer1_28;
           obj6[2] = function onDismissKeyboard() {
-            return callback(4052).dismissKeyboard();
+            return callback(4144).dismissKeyboard();
           };
           obj6[3] = function onRestoreKeyboard() {
             return closure_12.handleToggleKeyboard({ type: outer1_0(outer1_3[48]).KeyboardTypes.SYSTEM });
@@ -751,7 +706,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj7[0] = getState.props.current.channel;
           obj7[1] = outer1_32.CAMERA_BUTTON;
           obj7[2] = function onDismissKeyboard() {
-            return callback(4052).dismissKeyboard();
+            return callback(4144).dismissKeyboard();
           };
           obj7[3] = function onRestoreKeyboard() {
             return closure_12.handleToggleKeyboard({ type: outer1_0(outer1_3[48]).KeyboardTypes.SYSTEM });

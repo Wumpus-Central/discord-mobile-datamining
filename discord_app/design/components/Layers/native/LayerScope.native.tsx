@@ -15,7 +15,7 @@ function Layer(zIndex) {
   let context;
   let dependencyMap;
   let callback;
-  context = React.useContext(zIndex(5508).LayerContext);
+  context = React.useContext(zIndex(5599).LayerContext);
   dependencyMap = callback(React.useState({}), 2)[1];
   callback = React.useRef(null);
   const items = [context];
@@ -52,7 +52,7 @@ export const LayerScope = function LayerScope(arg0) {
   let zIndex;
   ({ children, zIndex } = arg0);
   const obj = {
-    value: importDefault(5507)(() => {
+    value: importDefault(5598)(() => {
       const layerContextManager = new callback(table[6]).LayerContextManager();
       return layerContextManager;
     }),
@@ -60,5 +60,5 @@ export const LayerScope = function LayerScope(arg0) {
   };
   const items = [children, callback2(Layer, { zIndex })];
   obj[1] = items;
-  return callback3(require(5508) /* add */.LayerContext.Provider, obj);
+  return callback3(require(5599) /* add */.LayerContext.Provider, obj);
 };

@@ -7,7 +7,7 @@ const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  let obj = hasAccess(10228);
+  let obj = hasAccess(9629);
   hasAccess = obj.useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   obj = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
@@ -23,7 +23,7 @@ export default function useFavoritesGuildHideAction() {
   }, items);
   const intl = hasAccess(1236).intl;
   if (hasAccess) {
-    let ojM1xJ = importDefault(2971)["8FO0y9"];
+    let ojM1xJ = importDefault(3031)["8FO0y9"];
   } else {
     ojM1xJ = tmp(1236).t.ojM1xJ;
   }
@@ -31,7 +31,7 @@ export default function useFavoritesGuildHideAction() {
   let stringResult;
   if (hasAccess) {
     const intl2 = tmp(1236).intl;
-    stringResult = intl2.string(importDefault(2971).FaHxWl);
+    stringResult = intl2.string(importDefault(3031).FaHxWl);
   }
   obj[2] = stringResult;
   obj[3] = callback;

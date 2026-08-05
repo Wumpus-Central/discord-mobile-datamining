@@ -12,7 +12,7 @@ export const isRolePowerful = function isRolePowerful(role) {
 };
 export const getPowerfulPermissionTitles = function getPowerfulPermissionTitles(arg0, arg1) {
   const items = [];
-  importDefault(15679);
+  importDefault(15774);
   for (const item10015 of closure_5) {
     let str = item10015;
     let tmp3 = hasPermission;

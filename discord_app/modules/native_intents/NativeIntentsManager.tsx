@@ -16,18 +16,18 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function indexingEnabled() {
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasSearch();
+  obj[1] = !importDefault(16820).hasSearch();
   return obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled;
 }
 function makeSearchItem(channel, guild, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require(4384) /* computeChannelName */;
+  let obj = require(4475) /* computeChannelName */;
   const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
-  const channelName1 = require(4384) /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, false);
+  const channelName1 = require(4475) /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, false);
   const items = [channelName, channelName1];
   if (channel.isGuildVocal()) {
     const _HermesInternal = HermesInternal;
@@ -37,9 +37,9 @@ function makeSearchItem(channel, guild, flag) {
   const items2 = [];
   channel = authStore.getChannel(channel.parent_id);
   if (null != channel) {
-    let tmpResult = tmp(4384);
+    let tmpResult = tmp(4475);
     const channelName2 = tmpResult.computeChannelName(channel, tmp3, tmp4, true);
-    tmpResult = tmp(4384);
+    tmpResult = tmp(4475);
     const channelName3 = tmpResult.computeChannelName(channel, tmp3, tmp4, false);
     items2.push(channelName2);
     items2.push(channelName3);
@@ -64,8 +64,8 @@ function makeSearchItem(channel, guild, flag) {
   }
   const CHANNELResult = closure_14.CHANNEL(id, channel.id);
   obj = { id: CHANNELResult, relatedUniqueIdentifier: CHANNELResult, type: "url", title: sum, displayName: sum, thumbnailURL: null, rankingHint: null, keywords: null, alternateNames: null, isUpdate: null };
-  const obj2 = require(4384) /* computeChannelName */;
-  const channelIconURL = require(12035) /* getChannelIconURL */.getChannelIconURL(channel, 128, false);
+  const obj2 = require(4475) /* computeChannelName */;
+  const channelIconURL = require(12217) /* getChannelIconURL */.getChannelIconURL(channel, 128, false);
   let startsWithResult;
   if (channelIconURL != null) {
     const startsWith = channelIconURL.startsWith;
@@ -153,9 +153,9 @@ function makeGuildDomain(guild, flag) {
   return obj;
 }
 function setChannelActivity(channelId) {
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasUserActivity();
+  obj[1] = !importDefault(16820).hasUserActivity();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).activityEnabled) {
     let channel;
     if (null != channelId) {
@@ -163,7 +163,7 @@ function setChannelActivity(channelId) {
     }
     if (null != channel) {
       const guild = store.getGuild(channel.guild_id);
-      const obj5 = require(4384) /* computeChannelName */;
+      const obj5 = require(4475) /* computeChannelName */;
       const channelName = obj5.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
       let str2 = "";
       if (null != guild) {
@@ -188,7 +188,7 @@ function setChannelActivity(channelId) {
         const mapped = recipients.map(tmp11.getUser);
         const first = callback(mapped.filter(tmp10(1351).isNotNullish), 1)[0];
         if (null != first) {
-          let tmpResult = tmp(4032);
+          let tmpResult = tmp(4124);
           const globalName = tmpResult.getGlobalName(first);
           if (null != globalName) {
             items1.push(globalName);
@@ -199,7 +199,7 @@ function setChannelActivity(channelId) {
           if (null != nickname) {
             items1.push(nickname);
           }
-          tmpResult = tmp(4032);
+          tmpResult = tmp(4124);
           const name = tmpResult.getName(first);
           if (null != name) {
             items1.push(name);
@@ -218,14 +218,14 @@ function setChannelActivity(channelId) {
       obj[4] = sum;
       obj[5] = items3;
       obj[6] = sum;
-      tmp(16723).setActivity(obj);
+      tmp(16820).setActivity(obj);
       obj6 = upsertRelationship;
       tmp10 = require;
       tmp11 = mergeGuildAvatar;
-      const tmpResult1 = tmp(16723);
+      const tmpResult1 = tmp(16820);
     } else {
-      tmp(16723).resignActivity();
-      const tmpResult2 = tmp(16723);
+      tmp(16820).resignActivity();
+      const tmpResult2 = tmp(16820);
     }
   }
 }
@@ -283,12 +283,12 @@ function indexChannelUpdates(items) {
       continue;
     }
     if (items.length > 0) {
-      importDefault(16723).indexDomains(items);
-      const obj3 = importDefault(16723);
+      importDefault(16820).indexDomains(items);
+      const obj3 = importDefault(16820);
     }
     if (items1.length > 0) {
-      importDefault(16723).deleteSearchItems(items1);
-      const obj4 = importDefault(16723);
+      importDefault(16820).deleteSearchItems(items1);
+      const obj4 = importDefault(16820);
     }
   }
 }
@@ -304,21 +304,21 @@ class NativeIntentsManager extends tmp3 {
 const prototype = NativeIntentsManager.prototype;
 prototype["handleInit"] = function handleInit() {
   setChannelActivity(currentlySelectedChannelId.getCurrentlySelectedChannelId());
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  let obj2 = importDefault(16723);
+  let obj2 = importDefault(16820);
   obj[1] = !obj2.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).clearEnabled) {
-    let tmp2Result = tmp2(16723);
+    let tmp2Result = tmp2(16820);
     tmp2Result.clearSearchIndex();
   }
-  tmp2Result = tmp2(16722);
+  tmp2Result = tmp2(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasSearch();
+  obj[1] = !importDefault(16820).hasSearch();
   if (tmp2Result.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     const obj1 = { autoTrackExposure: true, disable: null };
-    const tmp2Result2 = tmp2(16722);
-    obj1[1] = !tmp2(16723).hasSearch();
+    const tmp2Result2 = tmp2(16819);
+    obj1[1] = !tmp2(16820).hasSearch();
     if (tmp2Result2.getCurrentConfig({ location: "NativeIntentsManager" }, obj1).searchEnabled) {
       const guildsArray = store.getGuildsArray();
       const mapped = guildsArray.map((arg0) => callback(arg0));
@@ -334,19 +334,19 @@ prototype["handleInit"] = function handleInit() {
       obj2[0] = closure_10;
       obj2[1] = items;
       mapped.push(obj2);
-      importDefault(16723).indexDomains(mapped);
-      const obj12 = importDefault(16723);
+      importDefault(16820).indexDomains(mapped);
+      const obj12 = importDefault(16820);
     }
-    const tmp2Result3 = tmp2(16723);
+    const tmp2Result3 = tmp2(16820);
   }
 };
 prototype["handleLogout"] = function handleLogout() {
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasSearch();
+  obj[1] = !importDefault(16820).hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).clearEnabled) {
-    importDefault(16723).clearSearchIndex();
-    const tmpResult = importDefault(16723);
+    importDefault(16820).clearSearchIndex();
+    const tmpResult = importDefault(16820);
   }
 };
 prototype["handleChannelSelect"] = function handleChannelSelect(channelId) {
@@ -354,15 +354,15 @@ prototype["handleChannelSelect"] = function handleChannelSelect(channelId) {
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasSearch();
+  obj[1] = !importDefault(16820).hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     if (getUncachedChannelPermissions.can(constants3.VIEW_CHANNEL, channel)) {
       const guild = store.getGuild(channel.guild_id);
       if (null != guild) {
         if (null == guild) {
-          let tmpResult = tmp(16723);
+          let tmpResult = tmp(16820);
           let id;
           if (guild != null) {
             id = guild.id;
@@ -401,13 +401,13 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   }
 };
 prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasSearch();
+  obj[1] = !importDefault(16820).hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     const items = [channel.channel.id];
-    importDefault(16723).deleteSearchItems(items);
-    const tmpResult = importDefault(16723);
+    importDefault(16820).deleteSearchItems(items);
+    const tmpResult = importDefault(16820);
   }
 };
 prototype["handleChannelUpdates"] = function handleChannelUpdates(channels) {
@@ -415,30 +415,30 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(channels) {
 };
 prototype["handleGuildCreateOrUpdate"] = function handleGuildCreateOrUpdate(guild) {
   guild = guild.guild;
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasSearch();
+  obj[1] = !importDefault(16820).hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     guild = store.getGuild(guild.id);
     if (null != guild) {
-      let tmpResult = tmp(16723);
+      let tmpResult = tmp(16820);
       const items = [makeGuildDomain(guild, "GUILD_UPDATE" === guild.type)];
       tmpResult.indexDomains(items);
     } else {
-      tmpResult = tmp(16723);
+      tmpResult = tmp(16820);
       const items1 = [guild.id];
       tmpResult.deleteSearchDomains(items1);
     }
   }
 };
 prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
-  let obj = importDefault(16722);
+  let obj = importDefault(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !importDefault(16723).hasSearch();
+  obj[1] = !importDefault(16820).hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     const items = [guild.guild.id];
-    importDefault(16723).deleteSearchDomains(items);
-    const tmpResult = importDefault(16723);
+    importDefault(16820).deleteSearchDomains(items);
+    const tmpResult = importDefault(16820);
   }
 };
 prototype["handleThreadUpdate"] = function handleThreadUpdate(channel) {

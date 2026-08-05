@@ -13,8 +13,8 @@ createToggle = {
     return "Build installed from builds.discord.tools";
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
-    const obj = require(13892) /* useStaffOrDeveloperSettingPredicate */;
-    return hasUpdatesConfigured.hasUpdatesConfigured && require(13892) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = require(13992) /* useStaffOrDeveloperSettingPredicate */;
+    return hasUpdatesConfigured.hasUpdatesConfigured && require(13992) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
   }
 };
 createToggle = createToggle.createStatic(createToggle);

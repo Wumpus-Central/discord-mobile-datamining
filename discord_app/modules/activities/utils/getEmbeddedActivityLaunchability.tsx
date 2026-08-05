@@ -54,7 +54,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     } else {
       return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
     }
-    obj2 = require(10547) /* useIsActivitiesEnabledForCurrentPlatform */;
+    obj2 = require(10530) /* useIsActivitiesEnabledForCurrentPlatform */;
   } else {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }

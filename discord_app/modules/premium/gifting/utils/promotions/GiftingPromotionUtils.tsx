@@ -168,9 +168,9 @@ export const combinePromotionStyles = function combinePromotionStyles(background
   return tmp;
 };
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
-  const GiftPromotionReminderExperiment = require(8817) /* apexExperiment */.GiftPromotionReminderExperiment;
+  const GiftPromotionReminderExperiment = require(9534) /* apexExperiment */.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == marketingComponentByType.getMarketingComponentByType(tmp(6570).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (null == marketingComponentByType.getMarketingComponentByType(tmp(7568).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;
     } else {
       const giftPromotion = obj.getGiftPromotion();
@@ -180,10 +180,10 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let tmpResult = tmp(4009);
+        let tmpResult = tmp(4101);
         let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1358).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
         if (isDismissed) {
-          tmpResult = tmp(4009);
+          tmpResult = tmp(4101);
           isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1358).DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
         }
         tmp5 = isDismissed;

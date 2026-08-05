@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/fastest_list/utils/
 
 export default function getFastestListSectionsWithErrorChecking(itemSizes) {
   if (tmp) {
-    let obj = require(9254) /* logFastestListError */;
+    let obj = require(8341) /* logFastestListError */;
     obj = { itemSizesLength: null, itemKeysLength: null, listId: null, detail: "Using non-uniform item sizes or list keys forces a full iteration of the list entries. This will cause performance issues on slower devices, please consider using a uniform configuration." };
     obj[0] = itemSizes.itemSizes.length;
     obj[1] = itemSizes.itemKeys.length;

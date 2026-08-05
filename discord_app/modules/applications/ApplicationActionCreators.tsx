@@ -157,81 +157,31 @@ let obj = {
     let require;
     ({ name: require, guildId: importDefault, type: dependencyMap, teamId: dispatcher } = arg0);
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = outer1_7.APPLICATIONS;
-              const obj2 = { name: null, type: null, guild_id: null, team_id: null };
-              obj2[0] = outer1_0;
-              obj2[1] = dependencyMap;
-              obj2[2] = outer1_1;
-              obj2[3] = c3;
-              obj1[1] = obj2;
-              obj1[2] = outer1_0(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1.body;
-            let tmp8 = null != closure_1;
-            if (tmp8) {
-              tmp8 = null != dependencyMap;
-            }
-            if (tmp8) {
-              obj = outer1_1(709);
-              const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
-              obj5[1] = body;
-              obj.dispatch(obj5);
-            }
-            c3 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = outer1_0;
-            return obj6;
-          }
-        } catch (tmp16) {
-          c3 = tmp;
-          throw tmp16;
-        }
+      let closure_1 = tmp2;
+      let body = tmp5;
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = outer1_7.APPLICATIONS;
+      const obj2 = { name: null, type: null, guild_id: null, team_id: null };
+      obj2[0] = outer1_0;
+      obj2[1] = dependencyMap;
+      obj2[2] = outer1_1;
+      obj2[3] = c3;
+      obj1[1] = obj2;
+      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      yield HTTP.post(obj1);
+      body = arg1.body;
+      let tmp8 = null != closure_1;
+      if (tmp8) {
+        tmp8 = null != dependencyMap;
       }
+      if (tmp8) {
+        const obj = outer1_1(709);
+        const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
+        obj5[1] = body;
+        obj.dispatch(obj5);
+      }
+      return outer1_0;
     })();
   },
   getApplicationsForGuild(closure_0, arg1) {
@@ -242,73 +192,23 @@ let obj = {
     const includeTeam = obj.includeTeam;
     let closure_2 = Object.assign(obj, Object.create(null));
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: null };
-              obj1[0] = outer1_7.GUILD_APPLICATIONS(outer1_0);
-              const obj2 = {};
-              const merged = Object.assign(dependencyMap);
-              obj2.include_team = outer1_1;
-              obj1[1] = obj2;
-              obj1[2] = outer1_0(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1.body;
-            obj = outer1_1(709);
-            const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null };
-            obj5[1] = body;
-            obj.dispatch(obj5);
-            c3 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          }
-        } catch (tmp12) {
-          c3 = tmp;
-          throw tmp12;
-        }
-      }
+      let closure_1 = tmp2;
+      let body = tmp5;
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: null };
+      obj1[0] = outer1_7.GUILD_APPLICATIONS(outer1_0);
+      const obj2 = {};
+      const merged = Object.assign(dependencyMap);
+      obj2.include_team = outer1_1;
+      obj1[1] = obj2;
+      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      body = arg1.body;
+      const obj = outer1_1(709);
+      const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null };
+      obj5[1] = body;
+      obj.dispatch(obj5);
+      return body;
     })();
   },
   transferApplication(arg0) {
@@ -316,72 +216,22 @@ let obj = {
     let require;
     ({ applicationId: require, teamId: importDefault } = arg0);
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = outer1_7.APPLICATION_OWNER_TRANSFER(outer1_0);
-              const obj2 = { team_id: null };
-              obj2[0] = outer1_1;
-              obj1[1] = obj2;
-              obj1[2] = outer1_0(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1.body;
-            obj = outer1_1(709);
-            const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
-            obj5[1] = body;
-            obj.dispatch(obj5);
-            c3 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          }
-        } catch (tmp12) {
-          c3 = tmp;
-          throw tmp12;
-        }
-      }
+      let closure_1 = tmp2;
+      let body = tmp5;
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = outer1_7.APPLICATION_OWNER_TRANSFER(outer1_0);
+      const obj2 = { team_id: null };
+      obj2[0] = outer1_1;
+      obj1[1] = obj2;
+      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      yield HTTP.post(obj1);
+      body = arg1.body;
+      const obj = outer1_1(709);
+      const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
+      obj5[1] = body;
+      obj.dispatch(obj5);
+      return body;
     })();
   },
   fetchApplications(arg0) {

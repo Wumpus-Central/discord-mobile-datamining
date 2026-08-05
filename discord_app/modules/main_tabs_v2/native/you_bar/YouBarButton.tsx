@@ -69,7 +69,7 @@ function YouBarButtonIcon(hasBadge) {
   }
   let items1 = [size2, badgeSize, num4, num3];
   const items2 = [memo, hasBadge];
-  const memo1 = obj1.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "channelId", bottom: "end", padding: "jsxs", minWidth: "method" }), items1);
+  const memo1 = obj1.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "k", padding: "key", minWidth: "Date" }), items1);
   obj = { style: { position: "relative", height: tmp, width: tmp }, children: null };
   const memo2 = obj1.useMemo(() => {
     if (size2) {
@@ -124,7 +124,7 @@ const memoResult = importAllResult.memo(function YouBarButton(arg0) {
   obj[4] = onPress;
   obj[5] = onLongPress;
   obj[6] = closure_5;
-  obj[0] = closure_7(require(6685) /* IconButton */.IconButton, obj);
+  obj[0] = closure_7(require(7672) /* IconButton */.IconButton, obj);
   return closure_7(YouBarButtonContainer, obj);
 });
 let result = require("CONNECTION_BANNER_HEIGHT").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");

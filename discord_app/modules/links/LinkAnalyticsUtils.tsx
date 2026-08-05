@@ -17,7 +17,7 @@ const items = [
     if (null == safeParseWithQueryResult) {
       return null;
     } else {
-      const tryParseChannelPathResult = require(4385) /* ME */.tryParseChannelPath(safeParseWithQueryResult.path);
+      const tryParseChannelPathResult = require(4476) /* ME */.tryParseChannelPath(safeParseWithQueryResult.path);
       if (null == tryParseChannelPathResult) {
         return null;
       } else {
@@ -34,7 +34,7 @@ const items = [
         }
         UNKNOWN = constants.UNKNOWN;
       }
-      const obj2 = require(4385) /* ME */;
+      const obj2 = require(4476) /* ME */;
     }
   },
   (arg0) => {

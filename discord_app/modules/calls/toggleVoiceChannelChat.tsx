@@ -19,7 +19,7 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
           if (open == null) {
             tmp3 = !chatOpen.getChatOpen(channelId);
           }
-          importDefault(4387).updateChatOpen(channelId, tmp3);
+          importDefault(4478).updateChatOpen(channelId, tmp3);
           obj = { channelId: null, chatOpen: null };
           obj[0] = channelId;
           obj[1] = tmp3;

@@ -102,7 +102,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       const Storage = require(595) /* Storage */.Storage;
       const value = Storage.get(combined);
       if (null != value) {
-        if (typeof value === "ay") {
+        if (typeof value === "object") {
           let str4 = value.reactiveCheckStatus;
           if (str4 == null) {
             str4 = "unchecked";

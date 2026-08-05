@@ -10,7 +10,7 @@ createToggle = {
   parent: null,
   IconComponent: require("StaffBadgeIcon").StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    let obj = require(13657) /* updateDevToolsSettings */;
+    let obj = require(13753) /* updateDevToolsSettings */;
     obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
   },

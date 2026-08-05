@@ -34,17 +34,17 @@ export default function GuildEventsNoContent(guild) {
   let stateFromStores = obj.useStateFromStores(items, () => outer1_4.can(outer1_6.MANAGE_ROLES, guild), items1);
   obj = { style: tmp.container, children: null };
   obj = { icon: null, IconComponent: null };
-  obj[0] = onClose(8330);
-  obj[1] = guild(8331).CalendarIcon;
-  const items2 = [callback(onClose(6727), obj), , , ];
+  obj[0] = onClose(8965);
+  obj[1] = guild(8966).CalendarIcon;
+  const items2 = [callback(onClose(7710), obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1236).intl;
   obj1[4] = intl.string(guild(1236).t["WgZ+3D"]);
-  items2[1] = callback(guild(4189).Text, obj1);
+  items2[1] = callback(guild(4281).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = guild(1236).intl;
   obj2[3] = intl2.string(guild(1236).t["v/S/PG"]);
-  items2[2] = callback(guild(4189).Text, obj2);
+  items2[2] = callback(guild(4281).Text, obj2);
   if (stateFromStores) {
     const obj3 = { style: null, variant: "text-sm/normal", color: "text-default", children: null };
     obj3[0] = tmp.subtitle;
@@ -55,7 +55,7 @@ export default function GuildEventsNoContent(guild) {
       onClose(outer1_2[15]).open(guild.id, outer1_5.ROLES);
     };
     obj3[3] = intl3.format(tmp2(1236).t["K+DH2o"], obj4);
-    stateFromStores = callback(tmp2(4189).Text, obj3);
+    stateFromStores = callback(tmp2(4281).Text, obj3);
   }
   items2[3] = stateFromStores;
   obj[1] = items2;

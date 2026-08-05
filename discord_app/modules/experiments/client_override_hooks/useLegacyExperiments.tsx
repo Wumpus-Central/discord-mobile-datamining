@@ -22,7 +22,7 @@ function parseRegisteredExperiments(registeredExperiments) {
     ({ title: obj[3], buckets } = type);
     obj[4] = buckets.map((bucket) => {
       const obj = { id: bucket.valueOf(), label: null, shortLabel: null, type: null };
-      if (typeof type.description === "ay") {
+      if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[arg1];
       } else {
         experimentBucketName = outer1_1(outer1_2[6]).getExperimentBucketName(bucket);

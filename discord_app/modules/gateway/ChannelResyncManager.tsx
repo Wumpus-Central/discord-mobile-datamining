@@ -448,72 +448,23 @@ function _scheduleGuildResyncs() {
 function _getResyncGuilds() {
   const self = this;
   const tmp = callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        table = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = tmp4;
-            let obj3 = v0(table[13]);
-            v0 = 1;
-            table = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = obj3.getAll();
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          obj = { eligible: null, ineligible: null };
-          obj[0] = [];
-          obj[1] = [];
-          table = 3;
-          obj3 = { value: null, done: true };
-          obj3[0] = arg1.reduce((ineligible, id) => {
-            if (null == guild.getGuild(id.id)) {
-              if (!unavailable.isUnavailable(id.id)) {
-                ineligible = ineligible.ineligible;
-                ineligible.push(id);
-              }
-              return ineligible;
-            }
-            const eligible = ineligible.eligible;
-            eligible.push(id);
-          }, obj);
-          return obj3;
+    let closure_0 = tmp4;
+    const obj3 = v0(table[13]);
+    yield obj3.getAll();
+    const obj = { eligible: null, ineligible: null };
+    obj[0] = [];
+    obj[1] = [];
+    return arg1.reduce((ineligible, id) => {
+      if (null == guild.getGuild(id.id)) {
+        if (!unavailable.isUnavailable(id.id)) {
+          ineligible = ineligible.ineligible;
+          ineligible.push(id);
         }
-      } catch (tmp8) {
-        table = tmp;
-        throw tmp8;
+        return ineligible;
       }
-    }
+      const eligible = ineligible.eligible;
+      eligible.push(id);
+    }, obj);
   });
   const _getResyncGuilds = tmp;
   const apply = tmp.apply;
@@ -526,7 +477,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require(12748);
+  let obj = _require(12844);
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;

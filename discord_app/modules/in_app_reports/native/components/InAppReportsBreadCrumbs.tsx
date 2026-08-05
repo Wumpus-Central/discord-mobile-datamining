@@ -53,10 +53,10 @@ export default function Breadcrumbs(element) {
       } else {
         obj = { style: null, children: null };
         obj[0] = tmp2.container;
-        let map = _require(4189).Text;
+        let map = _require(4281).Text;
         obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
         obj[0] = tmp2.title;
-        const REPORT_TO_MOD = _require(7700).ReportMenuTypeSets.REPORT_TO_MOD;
+        const REPORT_TO_MOD = _require(7833).ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
         const intl = _require(1236).intl;
         const string = intl.string;

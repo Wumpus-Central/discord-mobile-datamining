@@ -16,14 +16,14 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   let powerup;
   ({ guildId, powerup } = arg0);
   const tmp = callback3();
-  const tmp4 = importDefault(11604)(guildId, powerup);
-  let obj = require(11624) /* useCalculatePowerupCardStatus */;
-  const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp4, importDefault(11601)(guildId, powerup, "GuildPowerupsBottomSheet"));
-  let str = importDefault(11625)(powerup, true);
+  const tmp4 = importDefault(11772)(guildId, powerup);
+  let obj = require(11792) /* useCalculatePowerupCardStatus */;
+  const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp4, importDefault(11769)(guildId, powerup, "GuildPowerupsBottomSheet"));
+  let str = importDefault(11793)(powerup, true);
   if (str == null) {
     str = "";
   }
-  const tmp5 = importDefault(11601)(guildId, powerup, "GuildPowerupsBottomSheet");
+  const tmp5 = importDefault(11769)(guildId, powerup, "GuildPowerupsBottomSheet");
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   let str2;
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -33,7 +33,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   if (powerup.type === constants.LEVEL) {
     obj = { style: null };
     obj[0] = tmp.gemContainer;
-    let tmp15 = callback(tmp2(11626), obj);
+    let tmp15 = callback(tmp2(11794), obj);
     let tmp14 = callback;
   } else if (tmp10 === closure_7) {
     obj = { style: null, children: null };
@@ -42,7 +42,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
     const obj2 = { reducedMotion: null };
     obj2[0] = stateFromStores;
     obj1[1] = obj2;
-    obj[1] = callback(tmp6(3905).GameServerHostingRive, obj1);
+    obj[1] = callback(tmp6(3997).GameServerHostingRive, obj1);
     tmp15 = callback(tmp12, obj);
     tmp14 = callback;
   } else {
@@ -50,12 +50,12 @@ function GuildPowerupsBottomSheetHeader(arg0) {
     obj3[0] = str;
     obj3[1] = tmp.image;
     tmp14 = callback;
-    tmp15 = callback(tmp2(11628), obj3);
+    tmp15 = callback(tmp2(11796), obj3);
   }
   const obj4 = { children: null };
   const items1 = [tmp15, ];
   const obj5 = { style: tmp.headerContainer, children: null };
-  const items2 = [tmp14(require(4189) /* Text */.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: powerup.title }), tmp14(require(11629) /* GuildPowerupCardFooterActive */.GuildPowerupsCardFooter, { cost: powerup.cost, costDecorator: str2, status: calculatePowerupCardStatus, style: tmp.statusContainer })];
+  const items2 = [tmp14(require(4281) /* Text */.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: powerup.title }), tmp14(require(11797) /* GuildPowerupCardFooterActive */.GuildPowerupsCardFooter, { cost: powerup.cost, costDecorator: str2, status: calculatePowerupCardStatus, style: tmp.statusContainer })];
   obj5[1] = items2;
   items1[1] = closure_9(View, obj5);
   obj4[0] = items1;
@@ -65,10 +65,10 @@ function GuildPowerupsBottomSheetLevelBody(powerup) {
   let c0;
   const tmp = callback3();
   c0 = tmp;
-  const arr = importDefault(11631)(powerup.powerup);
+  const arr = importDefault(11799)(powerup.powerup);
   return callback(View, {
     style: tmp.levelContainer,
-    children: importDefault(11631)(powerup.powerup).map((children) => {
+    children: importDefault(11799)(powerup.powerup).map((children) => {
       let obj = _undefined(outer1_2[18]);
       obj = { style: _undefined.perkContainer, children: null };
       const iconForPerk = obj.getIconForPerk(children.perkIcon);
@@ -87,7 +87,7 @@ function GuildPowerupsBottomSheetBody(powerup) {
     let obj = { style: null, variant: "text-md/medium", children: null };
     obj[0] = tmp.description;
     obj[2] = powerup.description;
-    const items = [callback(require(4189) /* Text */.Text, obj), ];
+    const items = [callback(require(4281) /* Text */.Text, obj), ];
     let tmp5Result = null != powerup.deactivationCooldownPeriodDays;
     if (tmp5Result) {
       tmp5Result = powerup.deactivationCooldownPeriodDays > 0;
@@ -97,13 +97,13 @@ function GuildPowerupsBottomSheetBody(powerup) {
       obj[0] = tmp.cooldownInfo;
       const obj1 = { size: "xs", color: null };
       obj1[1] = importDefault(712).colors.TEXT_MUTED;
-      const items1 = [tmp7(tmp8(4149).CircleInformationIcon, obj1), ];
+      const items1 = [tmp7(tmp8(4241).CircleInformationIcon, obj1), ];
       const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = tmp8(1236).intl;
       const obj3 = { cooldownDays: null };
       obj3[0] = powerup.deactivationCooldownPeriodDays;
-      obj2[2] = intl.formatToPlainString(importDefault(2257).GMhQcE, obj3);
-      items1[1] = tmp7(tmp8(4189).Text, obj2);
+      obj2[2] = intl.formatToPlainString(importDefault(2317).GMhQcE, obj3);
+      items1[1] = tmp7(tmp8(4281).Text, obj2);
       obj[1] = items1;
       tmp5Result = tmp5(View, obj);
     }
@@ -132,22 +132,22 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   let importDefault;
   let dependencyMap;
   const tmp = callback3();
-  const tmp4 = importDefault(11618)(guildId);
-  ({ showToggleButton, showConfigureButton, isPowerupActive } = importDefault(11636)(guildId, powerup));
+  const tmp4 = importDefault(11786)(guildId);
+  ({ showToggleButton, showConfigureButton, isPowerupActive } = importDefault(11804)(guildId, powerup));
   if (showConfigureButton) {
-    let result = powerup.skuId !== isPowerupActive(4084).GUILD_POWERUP_TAG_SKU_ID;
+    let result = powerup.skuId !== isPowerupActive(4176).GUILD_POWERUP_TAG_SKU_ID;
     if (!result) {
-      result = tmp6(8311).canUseMobileServerTagSettings(guildId);
-      const tmp6Result = tmp6(8311);
+      result = tmp6(8946).canUseMobileServerTagSettings(guildId);
+      const tmp6Result = tmp6(8946);
     }
     showConfigureButton = result;
     tmp6 = isPowerupActive;
   }
-  const tmp5 = importDefault(11636)(guildId, powerup);
-  ({ disabled, reason } = importDefault(11637)(guildId, powerup, isPowerupActive));
-  const tmp8 = importDefault(11637)(guildId, powerup, isPowerupActive);
-  ({ onActivate: c1, isLoading } = importDefault(11638)(guildId, powerup));
-  dependencyMap = tmp2(11644)(guildId, powerup);
+  const tmp5 = importDefault(11804)(guildId, powerup);
+  ({ disabled, reason } = importDefault(11805)(guildId, powerup, isPowerupActive));
+  const tmp8 = importDefault(11805)(guildId, powerup, isPowerupActive);
+  ({ onActivate: c1, isLoading } = importDefault(11806)(guildId, powerup));
+  dependencyMap = tmp2(11810)(guildId, powerup);
   if (tmp4) {
     let tmp14 = !showConfigureButton;
     const hasItem = set.has(powerup.skuId);
@@ -169,8 +169,8 @@ function GuildPowerupsBottomSheetFooter(arg0) {
       obj = { style: null, variant: "text-md/bold", children: null };
       obj[0] = tmp.description;
       const intl = isPowerupActive(1236).intl;
-      obj[2] = intl.string(tmp2(2257)["jo5++h"]);
-      tmp14 = callback(isPowerupActive(4189).Text, obj);
+      obj[2] = intl.string(tmp2(2317)["jo5++h"]);
+      tmp14 = callback(isPowerupActive(4281).Text, obj);
     }
     const items = [tmp14, , , ];
     let tmp21 = disabled;
@@ -180,15 +180,15 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     if (tmp21) {
       const obj1 = { text: null };
       obj1[0] = reason;
-      tmp21 = callback(tmp2(11650), obj1);
+      tmp21 = callback(tmp2(11816), obj1);
     }
     items[1] = tmp21;
     if (showConfigureButton) {
       const obj2 = { variant: "primary", text: null, onPress: null };
       const intl2 = isPowerupActive(1236).intl;
-      obj2[1] = intl2.string(tmp2(2257).g5Ds69);
+      obj2[1] = intl2.string(tmp2(2317).g5Ds69);
       obj2[2] = tmp10;
-      showConfigureButton = callback(isPowerupActive(4604).Button, obj2);
+      showConfigureButton = callback(isPowerupActive(4695).Button, obj2);
     }
     items[2] = showConfigureButton;
     if (showToggleButton) {
@@ -207,7 +207,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
       obj3[0] = str;
       const intl3 = isPowerupActive(1236).intl;
       const string = intl3.string;
-      let TZsu1U = tmp2(2257);
+      let TZsu1U = tmp2(2317);
       if (isPowerupActive) {
         TZsu1U = TZsu1U.TZsu1U;
         let stringResult = string(TZsu1U);
@@ -226,7 +226,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
           tmp();
         }
       };
-      callback(isPowerupActive(4604).Button, obj3);
+      callback(isPowerupActive(4695).Button, obj3);
       const tmp27 = callback;
       const tmp28 = isPowerupActive;
     }
@@ -267,12 +267,12 @@ export default function GuildPowerupsBottomSheet(arg0) {
   let guildId;
   let powerup;
   ({ guildId, powerup } = arg0);
-  let obj = require(11648) /* ModalType */;
-  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, require(11648) /* ModalType */.ModalType.DETAIL);
+  let obj = require(11814) /* ModalType */;
+  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, require(11814) /* ModalType */.ModalType.DETAIL);
   obj = { startExpanded: true, children: null };
   obj = { style: callback3().container, children: null };
   const items = [callback(GuildPowerupsBottomSheetHeader, { guildId, powerup }), callback(GuildPowerupsBottomSheetBody, { guildId, powerup }), callback(GuildPowerupsBottomSheetFooter, { guildId, powerup })];
   obj[1] = items;
   obj[1] = callback2(View, obj);
-  return callback(require(5247) /* Background */.BottomSheet, obj);
+  return callback(require(5338) /* Background */.BottomSheet, obj);
 };

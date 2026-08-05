@@ -54,7 +54,7 @@ export const getGuildAcronym = function getGuildAcronym(guild) {
 };
 export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   let tmp = currentUser;
-  if (typeof currentUser !== "y") {
+  if (typeof currentUser !== "string") {
     let id = null;
     if (null != currentUser) {
       id = currentUser.id;
@@ -72,7 +72,7 @@ export const isGuildOwnerWithRequiredMfaLevel = function isGuildOwnerWithRequire
   let tmp3 = !tmp;
   if (!tmp) {
     let tmp4 = mfaEnabled;
-    if (typeof mfaEnabled !== "y") {
+    if (typeof mfaEnabled !== "string") {
       let id = null;
       if (null != mfaEnabled) {
         id = mfaEnabled.id;
@@ -91,7 +91,7 @@ export const getGuildEveryoneRoleId = function getGuildEveryoneRoleId(closure_7)
 };
 export const updateJoinedAt = function updateJoinedAt(guild, joinedAt) {
   let date = joinedAt;
-  if (typeof joinedAt !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof joinedAt === "string") {
     const _Date = Date;
     date = new Date(joinedAt);
   }

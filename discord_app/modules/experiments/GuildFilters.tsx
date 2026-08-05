@@ -133,7 +133,7 @@ obj[require("MurmurHashV3").v3("guild_hub_types")] = (arg0) => {
     if (guild == null) {
       guild = outer1_3.getGuild(arg0);
     }
-    let someResult = null != guild && typeof guild.hubType === "Object";
+    let someResult = null != guild && typeof guild.hubType === "number";
     if (someResult) {
       someResult = guild.some((arg0) => guild.hubType === arg0);
     }

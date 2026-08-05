@@ -25,7 +25,7 @@ export const formatDateRelativeTime = function formatDateRelativeTime(arg0, arg1
   } else if (arg1 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
-  return importDefault(5760)(arg0, tmp2, false);
+  return importDefault(6867)(arg0, tmp2, false);
 };
 export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
   if (null != joinedAt) {

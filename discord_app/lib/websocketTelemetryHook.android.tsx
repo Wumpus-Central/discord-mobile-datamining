@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("lib/websocketTelemetryHook.
 
 export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
   let closure_0 = arg0;
-  function handleMessage(arg0, arg1) {
+  function handleMessage(arg0, str) {
     const obj = {};
     const tmp = (function sanitizeUrl(arg0) {
       let hostname;
@@ -39,15 +39,15 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       obj.url = tmp;
     }
     let flag = false;
-    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
-      if (arg1.length > 0) {
-        if ("{" === arg1[0]) {
+    if (typeof str === "string") {
+      if (str.length > 0) {
+        if ("{" === str[0]) {
           try {
             const _JSON = JSON;
-            const parsed = JSON.parse(arg1);
+            const parsed = JSON.parse(str);
             let tmp5 = null != parsed;
             if (tmp5) {
-              tmp5 = typeof tmp4 === "ay";
+              tmp5 = typeof tmp4 === "object";
             }
             if (tmp5) {
               if (null != tmp4.op) {
@@ -76,10 +76,10 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       }
     }
     if (!flag) {
-      flag = null == arg1;
+      flag = null == str;
     }
     if (!flag) {
-      flag = typeof arg1 === "y";
+      flag = typeof str === "string";
     }
     if (!flag) {
       obj.type = "binary";
@@ -89,14 +89,14 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
     } catch (err) {
     }
   }
-  if (typeof globalThis === "pack") {
+  if (typeof globalThis !== "undefined") {
     let _globalThis = globalThis;
   } else {
     _globalThis = closure_0;
     if (undefined === closure_0) {
       let _window = window;
       _window = null;
-      if (typeof window !== "Array") {
+      if (typeof window !== "undefined") {
         _window = window;
       }
       _globalThis = _window;
@@ -113,7 +113,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
         constructor() {
           items = [...arguments];
           obj = WebSocket(...items);
-          if (typeof items[0] === "y") {
+          if (typeof items[0] === "string") {
             str = items[0];
           } else {
             str = obj.url;
@@ -123,7 +123,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
             }
           }
           c0 = str;
-          if (typeof obj.addEventListener !== "disabledUntil") {
+          if (typeof obj.addEventListener === "function") {
             str2 = "message";
             listener = obj.addEventListener("message", (data) => {
               data = undefined;

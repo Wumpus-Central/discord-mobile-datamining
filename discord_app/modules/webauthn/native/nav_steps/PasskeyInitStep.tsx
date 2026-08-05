@@ -29,14 +29,14 @@ function CredentialList(navigation) {
     obj = { style: null, children: null };
     obj[0] = tmp3.upsellContainer;
     obj = { source: null, style: null };
-    obj[0] = importDefault(13772);
+    obj[0] = importDefault(13872);
     obj[1] = tmp3.keychainImage;
     const items1 = [callback2(closure_5, obj), ];
     let obj1 = { variant: "text-md/normal", style: null, children: null };
     obj1[1] = tmp3.upsellText;
     let intl2 = tmp(1236).intl;
     obj1[2] = intl2.string(tmp(1236).t.FSNwFW);
-    items1[1] = callback2(tmp(4189).Text, obj1);
+    items1[1] = callback2(tmp(4281).Text, obj1);
     obj[1] = items1;
     return callback3(closure_6, obj);
   } else {
@@ -84,7 +84,7 @@ function CredentialList(navigation) {
       obj[2] = formatResult;
       return outer1_9(navigation(_undefined2[20]).TableRow, obj, label.id);
     });
-    return callback2(tmp(5558).TableRowGroup, obj2);
+    return callback2(tmp(5649).TableRowGroup, obj2);
   }
   const tmp4 = callback(React.useState(false), 2);
 }
@@ -144,6 +144,6 @@ export default function PasskeyInitStep(arg0) {
     obj1[0] = navigation;
     obj[1] = callback2(CredentialList, obj1);
     obj[0] = callback2(closure_6, obj);
-    return callback2(navigation(7639).Form, obj);
+    return callback2(navigation(7777).Form, obj);
   }
 };

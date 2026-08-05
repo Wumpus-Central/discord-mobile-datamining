@@ -80,7 +80,7 @@ const actionSheetStore = new ActionSheetStore(require("dispatcher"), {
     let impressionName;
     let impressionProperties;
     let key;
-    if (typeof setContent !== "fileFinishedImporting") {
+    if (typeof setContent !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let str = stackingBehavior.stackingBehavior;
@@ -116,7 +116,7 @@ const actionSheetStore = new ActionSheetStore(require("dispatcher"), {
     let key;
     let obj = { key: QuickSwitcher };
     const merged = Object.assign(arg0);
-    if (typeof setContent !== "fileFinishedImporting") {
+    if (typeof setContent !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let str = obj.stackingBehavior;

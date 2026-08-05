@@ -22,7 +22,7 @@ export default function getGameMediaRefURL(arg0, type, size) {
       }
       return tmp7;
     } else if ("url" === type) {
-      obj = require(4224) /* isImageProxyURL */;
+      obj = require(4316) /* isImageProxyURL */;
       size = undefined;
       if (size != null) {
         size = size.size;

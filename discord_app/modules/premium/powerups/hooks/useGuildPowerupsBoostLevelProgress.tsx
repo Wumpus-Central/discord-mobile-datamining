@@ -11,7 +11,7 @@ const result = require("useGuildAppliedBoostCount").fileFinishedImporting("modul
 
 export default function useGuildPowerupBoostLevelProgress(arg0) {
   const _require = arg0;
-  const tmp = importDefault(4100)(arg0);
+  const tmp = importDefault(4192)(arg0);
   const items = [createGuildRecordFromRust];
   const stateFromStores = _require(589).useStateFromStores(items, () => {
     const guild = outer1_3.getGuild(closure_0);
@@ -41,7 +41,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
   return num + tmp.available;
 };
 export const getGuildPowerupBoostLevelProgress = function getGuildPowerupBoostLevelProgress(id) {
-  const guildPowerupsBoostCount = require(4100) /* useGuildAppliedBoostCount */.getGuildPowerupsBoostCount(id);
+  const guildPowerupsBoostCount = require(4192) /* useGuildAppliedBoostCount */.getGuildPowerupsBoostCount(id);
   guild = guild.getGuild(id);
   let premiumTier;
   if (guild != null) {

@@ -22,12 +22,12 @@ export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell(
   obj[1] = intl2.format(require(1236) /* getSystemLocale */.t.lTZBit, { help_article: articleURL });
   obj = { style: callback().upsellImage, source: null, resizeMode: "contain" };
   const tmp = callback();
-  obj[1] = importDefault(14019);
-  obj[2] = jsx(importDefault(5145), { style: callback().upsellImage, source: null, resizeMode: "contain" });
+  obj[1] = importDefault(14119);
+  obj[2] = jsx(importDefault(5236), { style: callback().upsellImage, source: null, resizeMode: "contain" });
   obj[3] = require(1358) /* DismissibleContent */.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj[4] = function onPress() {
     const items = [constants.RELINK_UPSELL];
     return callback(table[10]).showModal(items, constants2.PLAYSTATION);
   };
-  return jsx(require(14016) /* OneWayToTwoWayNewTag */.OneWayToTwoWayLinkUpsell, { style: callback().upsellImage, source: null, resizeMode: "contain" });
+  return jsx(require(14116) /* OneWayToTwoWayNewTag */.OneWayToTwoWayLinkUpsell, { style: callback().upsellImage, source: null, resizeMode: "contain" });
 };

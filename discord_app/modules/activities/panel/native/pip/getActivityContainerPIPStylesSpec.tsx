@@ -12,7 +12,7 @@ const fn = function t(isLandscape) {
   }
   if (pipOrientationLockState === OrientationLockState.PORTRAIT) {
     const result = pipWidth * LANDSCAPE_ACTIVITY_ASPECT_RATIO;
-    let marginTop = -1 * importDefault(9927)(result / 2);
+    let marginTop = -1 * importDefault(10167)(result / 2);
     let marginLeft = 0;
     let shouldVerticallyCenter = true;
     let shouldHorizontallyCenter = false;
@@ -20,7 +20,7 @@ const fn = function t(isLandscape) {
     let width = pipWidth;
   } else {
     width = height * LANDSCAPE_ACTIVITY_ASPECT_RATIO;
-    marginLeft = -1 * importDefault(9927)(width / 2);
+    marginLeft = -1 * importDefault(10167)(width / 2);
     marginTop = 0;
     shouldVerticallyCenter = false;
     shouldHorizontallyCenter = true;

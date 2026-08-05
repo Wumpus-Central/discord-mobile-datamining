@@ -24,7 +24,7 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof Dao !== "fileFinishedImporting") {
+  if (typeof Dao !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(Dao.prototype);
@@ -91,7 +91,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   let closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof outer1_2 !== "fileFinishedImporting") {
+    if (typeof outer1_2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(outer1_2.prototype);
@@ -101,7 +101,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   const table = this.table;
-  if (typeof DaoTransaction !== "fileFinishedImporting") {
+  if (typeof DaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(DaoTransaction.prototype);
@@ -127,7 +127,7 @@ class DaoTransaction {
 const prototype2 = DaoTransaction.prototype;
 DaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new require(1912) /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
-  if (typeof DaoTransaction !== "fileFinishedImporting") {
+  if (typeof DaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(DaoTransaction.prototype);

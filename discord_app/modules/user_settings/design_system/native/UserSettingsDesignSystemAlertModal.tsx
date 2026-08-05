@@ -62,12 +62,12 @@ function DemoModal() {
     }
   }), []);
   let obj = { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null };
-  const items = [jsx(require(4537) /* getAlertModalItemKey */.AlertActionButton, { variant: "destructive", onPress: callback, text: "Clear" }, "clear"), jsx(require(4537) /* getAlertModalItemKey */.AlertActionButton, { variant: "secondary", onPress: callback, text: "Cancel" }, "cancel")];
+  const items = [jsx(require(4628) /* getAlertModalItemKey */.AlertActionButton, { variant: "destructive", onPress: callback, text: "Clear" }, "clear"), jsx(require(4628) /* getAlertModalItemKey */.AlertActionButton, { variant: "secondary", onPress: callback, text: "Cancel" }, "cancel")];
   obj[2] = items;
-  return jsx(require(4537) /* getAlertModalItemKey */.AlertModal, { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null });
+  return jsx(require(4628) /* getAlertModalItemKey */.AlertModal, { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null });
 }
 function openDemoModal() {
-  require(4534) /* useAlertStore */.openAlert("demo-1", <DemoModal />);
+  require(4625) /* useAlertStore */.openAlert("demo-1", <DemoModal />);
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 let closure_9 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
@@ -75,7 +75,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/u
 
 export default function UserSettingsDesignSystemAlertModal() {
   let obj = { children: null };
-  obj = { style: callback2().container, children: jsx(require(4604) /* Button */.Button, { children: null }) };
+  obj = { style: callback2().container, children: jsx(require(4695) /* Button */.Button, { children: null }) };
   obj = { onPress: openDemoModal, text: "Show Alert" };
   obj[0] = <closure_4 onPress={openDemoModal} text="Show Alert" />;
   return <closure_5 onPress={openDemoModal} text="Show Alert" />;

@@ -8,7 +8,7 @@ import { Permissions } from "ME";
 let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
 export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
-  let obj = require(8011) /* experiment */;
+  let obj = require(8141) /* experiment */;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
     if (null != guildId) {
       discoverableVoiceState = discoverableVoiceState.getDiscoverableVoiceState(guildId, id);
@@ -19,18 +19,18 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         channel = channel.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = tmp(4654);
+          let tmpResult = tmp(4745);
           const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = tmp(4407);
+            tmpResult = tmp(4498);
             let result = tmpResult.shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(4407).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = tmp(4407);
+              result = tmp(4498).shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult1 = tmp(4498);
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {

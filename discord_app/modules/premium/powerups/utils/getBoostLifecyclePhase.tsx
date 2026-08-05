@@ -4,7 +4,7 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/ut
 
 export const BOOST_EXPIRING_DISPLAY_WINDOW_DAYS = 3;
 export const BOOST_EXPIRING_DISPLAY_WINDOW_MS = 259200000;
-export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, closure_4) {
+export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, closure_3) {
   if (!ended.ended) {
     if (null != ended.endsAt) {
       const endsAt = ended.endsAt;
@@ -12,7 +12,7 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, closu
     }
     if (null != ended.endsAt) {
       const endsAt2 = ended.endsAt;
-      if (endsAt2.getTime() - closure_4 <= c2) {
+      if (endsAt2.getTime() - closure_3 <= c2) {
         let obj = { phase: "expiring", endsAt: null };
         obj[1] = ended.endsAt;
       }

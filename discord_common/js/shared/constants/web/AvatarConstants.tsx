@@ -19,10 +19,10 @@ export const AvatarSizeSpecs = frozen;
 export const getAvatarSpecs = function getAvatarSpecs(arg0) {
   return frozen[arg0];
 };
-export const getAvatarSize = function getAvatarSize(arg0) {
-  let size = arg0;
-  if (typeof arg0 !== "Object") {
-    size = frozen[arg0].size;
+export const getAvatarSize = function getAvatarSize(num) {
+  let size = num;
+  if (typeof num !== "number") {
+    size = frozen[num].size;
   }
   return size;
 };

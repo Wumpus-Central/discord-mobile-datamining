@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return require(13706) /* ProfileCustomizationSubsection */.default;
+    return require(13802) /* ProfileCustomizationSubsection */.default;
   }
 };
 const route = createToggle.createRoute(obj);

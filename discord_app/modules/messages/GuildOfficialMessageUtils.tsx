@@ -30,7 +30,7 @@ function useCanManageGuildOfficialMessages(arg0, arg1, location) {
   if (enabled) {
     enabled = obj2.useExperiment(obj).enabled;
   }
-  obj2 = importDefault(6051);
+  obj2 = importDefault(5797);
   const tmp = arg0;
   const tmp2 = _require;
   const items2 = [getUncachedChannelPermissions];
@@ -64,8 +64,8 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
     tmp5 = mixResult;
   }
   obj4 = importDefault(689);
-  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(4039).WCAGContrastRatios.Text, saturationFactor: num };
-  return require(4037) /* hexToRgba */.getAccessibleForegroundColor(obj);
+  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(4131).WCAGContrastRatios.Text, saturationFactor: num };
+  return require(4129) /* hexToRgba */.getAccessibleForegroundColor(obj);
 };
 export function showGuildOfficialMessageGradient(officialMessageStyle) {
   let tmp = "no_gradient" !== officialMessageStyle;
@@ -88,7 +88,7 @@ export const isGuildOfficialMessagesEnabled = function isGuildOfficialMessagesEn
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    let obj = importDefault(6051);
+    let obj = importDefault(5797);
     obj = { guildId: null, location: null };
     obj[0] = guild.id;
     obj[1] = GuildSettingsModalLanding;
@@ -126,7 +126,7 @@ export const canManageGuildOfficialMessages = function canManageGuildOfficialMes
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    let obj = importDefault(6051);
+    let obj = importDefault(5797);
     obj = { guildId: null, location: null };
     obj[0] = features.id;
     obj[1] = arg2;
@@ -143,18 +143,18 @@ export const useCanToggleGuildOfficialMessages = function useCanToggleGuildOffic
   const tmpResult = useCanManageGuildOfficialMessages(guild_id, channel, LongPressMessageActionSheet);
   let tmp3 = !tmpResult;
   if (tmpResult) {
-    tmp3 = importDefault(5927)(message);
+    tmp3 = importDefault(5799)(message);
   }
   if (tmp3) {
     return !tmp3;
   } else if (message.hasFlag(constants3.IS_GUILD_OFFICIAL)) {
-    let isActiveChannelOrUnarchivableThread = require(6052) /* useCanUnarchiveThread */.getIsActiveChannelOrUnarchivableThread(channel);
-    const obj2 = require(6052) /* useCanUnarchiveThread */;
+    let isActiveChannelOrUnarchivableThread = require(5798) /* useCanUnarchiveThread */.getIsActiveChannelOrUnarchivableThread(channel);
+    const obj2 = require(5798) /* useCanUnarchiveThread */;
   } else {
     isActiveChannelOrUnarchivableThread = null != channel && !channel.isPrivate();
     if (isActiveChannelOrUnarchivableThread) {
-      isActiveChannelOrUnarchivableThread = require(6052) /* useCanUnarchiveThread */.getIsActiveChannelOrUnarchivableThread(channel);
-      const obj = require(6052) /* useCanUnarchiveThread */;
+      isActiveChannelOrUnarchivableThread = require(5798) /* useCanUnarchiveThread */.getIsActiveChannelOrUnarchivableThread(channel);
+      const obj = require(5798) /* useCanUnarchiveThread */;
     }
     if (isActiveChannelOrUnarchivableThread) {
       isActiveChannelOrUnarchivableThread = channel.type !== constants.GUILD_VOICE;
@@ -171,7 +171,7 @@ export const canSendGuildOfficialMessages = function canSendGuildOfficialMessage
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    let obj = importDefault(6051);
+    let obj = importDefault(5797);
     obj = { guildId: null, location: null };
     obj[0] = guild.id;
     obj[1] = _sendMessage;
@@ -183,8 +183,8 @@ export const canSendGuildOfficialMessages = function canSendGuildOfficialMessage
   if (enabled) {
     let isActiveChannelOrUnarchivableThread = null != channel && !channel.isPrivate();
     if (isActiveChannelOrUnarchivableThread) {
-      isActiveChannelOrUnarchivableThread = require(6052) /* useCanUnarchiveThread */.getIsActiveChannelOrUnarchivableThread(channel);
-      const obj3 = require(6052) /* useCanUnarchiveThread */;
+      isActiveChannelOrUnarchivableThread = require(5798) /* useCanUnarchiveThread */.getIsActiveChannelOrUnarchivableThread(channel);
+      const obj3 = require(5798) /* useCanUnarchiveThread */;
     }
     if (isActiveChannelOrUnarchivableThread) {
       isActiveChannelOrUnarchivableThread = channel.type !== constants.GUILD_VOICE;

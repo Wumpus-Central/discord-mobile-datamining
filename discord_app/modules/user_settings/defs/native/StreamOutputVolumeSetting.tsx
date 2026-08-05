@@ -48,10 +48,10 @@ createToggle = {
       }
     }
     importDefault(38)(null != tmp2, "Can not set stream volume without active stream");
-    importDefault(8847).setLocalVolume(tmp2.ownerId, arg0, require(4290) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
+    importDefault(9077).setLocalVolume(tmp2.ownerId, arg0, require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
   },
   usePredicate: function useHasStreamVolumeSetting() {
-    const obj = importDefault(10782);
+    const obj = importDefault(10743);
     let items = [reset, fetchFingerprint];
     const obj2 = require(589) /* initialize */;
     return require(589) /* initialize */.useStateFromStores(items, () => {

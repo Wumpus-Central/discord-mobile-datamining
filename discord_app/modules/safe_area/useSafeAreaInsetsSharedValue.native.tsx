@@ -1,19 +1,19 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx
-import module_4054 from "module_4054";
+import module_4146 from "module_4146";
 import useSafeAreaInsets from "useSafeAreaInsets";
-import module_4054 from "module_4054";
+import module_4146 from "module_4146";
 import useSafeAreaInsets from "useSafeAreaInsets";
 
 let obj = { main: null, share: null };
 obj = {};
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj[0] = module_4054.makeMutable(obj);
+obj[0] = module_4146.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj[1] = module_4054.makeMutable(obj);
+obj[1] = module_4146.makeMutable(obj);
 function _loop(iter) {
   let closure_0 = iter;
-  importDefault(10437)((arg0) => {
+  importDefault(10244)((arg0) => {
     outer1_1(outer1_2[3])(outer1_3[closure_0], arg0);
   }, iter);
 }

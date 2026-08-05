@@ -3,7 +3,7 @@ import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "openCollectiblesShop";
 import getFetchState from "getFetchState";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "Button";
+import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 
 let c4;
@@ -14,7 +14,7 @@ const require = arg1;
 function ShopThisLookCard(skuId) {
   skuId = skuId.skuId;
   const size = skuId.size;
-  let obj = skuId(12229);
+  let obj = skuId(12412);
   let obj1 = skuId(589);
   const items = [getFetchState];
   const items1 = [skuId];
@@ -33,7 +33,7 @@ function ShopThisLookCard(skuId) {
     obj[1] = function renderPreview() {
       return callback(closure_4, {});
     };
-    let tmp13 = callback(importDefault(8680), obj);
+    let tmp13 = callback(importDefault(9273), obj);
   } else {
     tmp13 = null;
     if (null != stateFromStores) {
@@ -42,17 +42,17 @@ function ShopThisLookCard(skuId) {
         obj[0] = stateFromStores;
         obj[1] = size;
         obj[2] = skuId.onPress;
-        let tmp5Result = tmp5(importDefault(9785), obj);
+        let tmp5Result = tmp5(importDefault(10020), obj);
       } else {
         obj1 = { style: null, children: null };
         obj1[0] = tmp.disabledCard;
         const obj2 = { sku: null, size: null };
         obj2[0] = stateFromStores;
         obj2[1] = size;
-        obj1[1] = tmp5(importDefault(9785), obj2);
+        obj1[1] = tmp5(importDefault(10020), obj2);
         tmp5Result = tmp5(closure_5, obj1);
       }
-      tmp2Result = skuId(12233);
+      tmp2Result = skuId(12416);
     }
   }
   return tmp13;
@@ -81,29 +81,29 @@ export default function ShopThisLookActionSheet(arg0) {
   let dependencyMap;
   ({ userId, guildId } = arg0);
   const tmp = createCacheKey();
-  let obj = _require(8372);
+  let obj = _require(8734);
   const equippedCollectibleSkuIds = obj.useEquippedCollectibleSkuIds(userId, guildId);
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12206)(obj));
-  const tmp2 = analyticsLocations(12206)(obj);
-  analyticsLocations = analyticsLocations(5519)(analyticsLocations(5539).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12388)(obj));
+  const tmp2 = analyticsLocations(12388)(obj);
+  analyticsLocations = analyticsLocations(5610)(analyticsLocations(5630).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = React.useCallback((initialProductSkuId) => {
-    let obj = analyticsLocations(4161);
+    let obj = analyticsLocations(4253);
     obj.hideActionSheet();
-    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(5539).USER_PROFILE_OVERFLOW_MENU };
-    const result = _undefined(5802).openCollectiblesShopMobile(obj);
+    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(5630).USER_PROFILE_OVERFLOW_MENU };
+    const result = _undefined(6909).openCollectiblesShopMobile(obj);
   }, items);
   obj = { startExpanded: true, title: null, children: null };
-  const tmp3 = analyticsLocations(5519);
+  const tmp3 = analyticsLocations(5610);
   const intl = _require(1236).intl;
   obj[1] = intl.string(_require(1236).t.xNdRDO);
   const obj1 = { style: tmp.container, children: null };
   const obj2 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.description, children: null };
   const intl2 = _require(1236).intl;
   obj2[3] = intl2.string(_require(1236).t["ws+0Lr"]);
-  const items1 = [callback(_require(4189).Text, obj2), , ];
-  const tmp4 = analyticsLocations(11711);
+  const items1 = [callback(_require(4281).Text, obj2), ];
+  const tmp4 = analyticsLocations(9386);
   const items2 = [tmp.itemsContainer, { gap, width: rowWidth }];
   items1[1] = callback(closure_5, {
     style: items2,
@@ -118,13 +118,6 @@ export default function ShopThisLookActionSheet(arg0) {
       }, skuId);
     })
   });
-  const obj4 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = _require(1236).intl;
-  obj4[1] = intl3.string(_require(1236).t.WAI6xu);
-  obj4[2] = function onPress() {
-    return analyticsLocations(4161).hideActionSheet();
-  };
-  items1[2] = callback(_require(4604).Button, obj4);
   obj1[1] = items1;
   obj[2] = callback2(closure_5, obj1);
   return callback(tmp4, obj);

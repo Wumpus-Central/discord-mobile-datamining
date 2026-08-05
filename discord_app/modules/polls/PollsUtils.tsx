@@ -14,7 +14,7 @@ let unpackModuleId;
 const require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(6078).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7142).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -258,7 +258,7 @@ export const getPollReplyPreview = function getPollReplyPreview(message) {
   return str;
 };
 export const getPollResultsReplyPreview = function getPollResultsReplyPreview(message) {
-  let obj = require(4422) /* useNullableMessageAuthor */;
+  let obj = require(4513) /* useNullableMessageAuthor */;
   const first = message.embeds[0];
   let str;
   const messageAuthor = obj.getMessageAuthor(message);
@@ -285,7 +285,7 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
 };
 export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPreviewMobile(message2) {
   if ("author" in message2) {
-    let obj = require(4422) /* useNullableMessageAuthor */;
+    let obj = require(4513) /* useNullableMessageAuthor */;
     const first = message2.embeds[0];
     let str;
     const messageAuthor = obj.getMessageAuthor(message2);

@@ -23,7 +23,7 @@ createToggle = {
     return items;
   },
   usePredicate() {
-    return importDefault(10782).useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
+    return importDefault(10743).useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);

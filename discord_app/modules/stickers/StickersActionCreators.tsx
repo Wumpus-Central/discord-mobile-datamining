@@ -19,71 +19,21 @@ function _fetchStickerPack() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let loadSavedGuildStickers = tmp2;
-              body = tmp5;
-              body = undefined;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_9.STICKER_PACK(callback);
-              const obj8 = callback(outer1_2[8]);
-              obj1[1] = callback(outer1_2[9]).rejectWithMigratedError();
-              c4 = 1;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj8.httpGetWithCountryCodeQuery(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            obj = callback2(body[10]);
-            const obj4 = { type: "STICKER_PACK_FETCH_SUCCESS", packId: null, pack: null, ingestStickers: null };
-            obj4[1] = callback;
-            obj4[2] = body;
-            obj4[3] = callback2;
-            obj.dispatch(obj4);
-            c5 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp14) {
-          c5 = tmp;
-          throw tmp14;
-        }
-      }
+      let loadSavedGuildStickers = tmp2;
+      body = tmp5;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_9.STICKER_PACK(callback);
+      const obj8 = callback(outer1_2[8]);
+      obj1[1] = callback(outer1_2[9]).rejectWithMigratedError();
+      yield obj8.httpGetWithCountryCodeQuery(obj1);
+      body = body.body;
+      const obj = callback2(body[10]);
+      const obj4 = { type: "STICKER_PACK_FETCH_SUCCESS", packId: null, pack: null, ingestStickers: null };
+      obj4[1] = callback;
+      obj4[2] = body;
+      obj4[3] = callback2;
+      obj.dispatch(obj4);
+      return body;
     })();
   });
   const _fetchStickerPack = tmp;
@@ -102,102 +52,61 @@ function _fetchStickerPacks() {
     let c3 = 0;
     let c4 = 0;
     const iter = (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+      const dependencyMap = tmp3;
+      let sticker_packs = tmp2;
+      let obj1 = locale;
+      if (locale === undefined) {
+        obj1 = {};
+      }
+      locale = obj1.locale;
+      if (locale === undefined) {
+        locale = outer1_5.locale;
+      }
+      yield "ct";
+      if (1 === tmp6) {
         if (arg0 === 1) {
+          let c4 = 3;
           throw body;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
+          c4 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = body;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              let sticker_packs = tmp2;
-              let locale;
-              let obj1 = locale;
-              if (locale === undefined) {
-                obj1 = {};
-              }
-              locale = obj1.locale;
-              if (locale === undefined) {
-                locale = outer1_5.locale;
-              }
-              sticker_packs = undefined;
-              c3 = 1;
+          if (!closure_8.isFetchingStickerPacks) {
+            if (!closure_8.hasLoadedStickerPacks) {
+              let obj3 = sticker_packs(709);
+              obj3.wait(() => {
+                sticker_packs(tmp3[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
+              });
+              const HTTP = locale(530).HTTP;
+              obj3 = { url: null, query: null, rejectWithError: null };
+              obj3[0] = constants.STICKER_PACKS;
+              const obj4 = { locale: null };
+              obj4[0] = locale;
+              obj3[1] = obj4;
+              let obj6 = locale(530);
+              obj3[2] = obj6.rejectWithMigratedError();
+              let c3 = 2;
               c4 = 1;
-              return { value: "ct", done: "Array" };
+              const obj5 = { value: null, done: false };
+              obj5[0] = HTTP.get(obj3);
+              return obj5;
             }
-          } else {
-            if (1 === tmp6) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw body;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = body;
-                return obj2;
-              } else {
-                if (!closure_8.isFetchingStickerPacks) {
-                  if (!closure_8.hasLoadedStickerPacks) {
-                    let obj3 = sticker_packs(709);
-                    obj3.wait(() => {
-                      sticker_packs(tmp3[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
-                    });
-                    const HTTP = locale(530).HTTP;
-                    obj3 = { url: null, query: null, rejectWithError: null };
-                    obj3[0] = constants.STICKER_PACKS;
-                    const obj4 = { locale: null };
-                    obj4[0] = locale;
-                    obj3[1] = obj4;
-                    let obj6 = locale(530);
-                    obj3[2] = obj6.rejectWithMigratedError();
-                    c3 = 2;
-                    c4 = 1;
-                    const obj5 = { value: null, done: false };
-                    obj5[0] = HTTP.get(obj3);
-                    return obj5;
-                  }
-                }
-                c4 = 3;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              sticker_packs = body.body.sticker_packs;
-              obj = sticker_packs(709);
-              obj6 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: null };
-              obj6[1] = sticker_packs;
-              obj.dispatch(obj6);
-            }
-            c4 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = body;
-            return obj7;
           }
-        } catch (tmp26) {
-          c4 = tmp;
-          throw tmp26;
+          c4 = 3;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw body;
+      } else if (arg0 !== 2) {
+        sticker_packs = body.body.sticker_packs;
+        const obj = sticker_packs(709);
+        obj6 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: null };
+        obj6[1] = sticker_packs;
+        obj.dispatch(obj6);
       }
+      return body;
     })();
     iter.next();
     return iter;
@@ -273,7 +182,7 @@ function _fetchSticker() {
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4528);
+              obj = body(4619);
               if (obj.isStandardSticker(body)) {
                 obj1 = callback2(709);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
@@ -286,7 +195,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4528);
+            obj10 = body(4619);
           }
         } catch (tmp24) {
           c4 = tmp;
@@ -474,110 +383,54 @@ function _createGuildSticker() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp2;
-              let lib = tmp5;
-              let guildId;
-              lib = undefined;
-              guildId = guildId.guildId;
-              const HTTP = callback(outer1_2[9]).HTTP;
-              const obj1 = { url: null, body: null, fields: null, attachments: null, headers: null, rejectWithError: null };
-              obj1[0] = outer1_9.GUILD_STICKER_PACKS(guildId);
-              let body;
-              if ("web" === guildId.platform) {
-                body = tmp33.body;
-              }
-              obj1[1] = body;
-              let tmp11;
-              if ("mobile" === guildId.platform) {
-                const obj2 = { name: "name", value: null };
-                obj2[1] = tmp33.name;
-                const items = [obj2, , ];
-                const obj3 = { name: "tags", value: null };
-                obj3[1] = tmp33.tags;
-                items[1] = obj3;
-                const obj4 = { name: "description", value: null };
-                obj4[1] = tmp33.description;
-                items[2] = obj4;
-                tmp11 = items;
-              }
-              obj1[2] = tmp11;
-              let tmp12;
-              if ("mobile" === guildId.platform) {
-                const obj5 = { name: "file", file: null };
-                ({ uri: obj7[0], name: obj7[1], mimeType: obj7[2] } = tmp33);
-                obj5[1] = { uri: null, name: null, type: null };
-                const items1 = [obj5];
-                tmp12 = items1;
-                const obj6 = { uri: null, name: null, type: null };
-              }
-              obj1[3] = tmp12;
-              let obj7 = outer1_1(outer1_2[12]);
-              obj1[4] = obj7.buildHeadersForMd5(guildId.originalMd5);
-              obj1[5] = callback(outer1_2[9]).rejectWithMigratedError();
-              c3 = 1;
-              c4 = 1;
-              obj7 = { value: null, done: false };
-              obj7[0] = HTTP.post(obj1);
-              return obj7;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
-          } else {
-            lib = arg1;
-            let id;
-            const obj9 = { type: "GUILD_STICKERS_CREATE_SUCCESS", guildId: null, sticker: null };
-            obj9[1] = guildId;
-            const obj10 = {};
-            const merged = Object.assign(lib.body);
-            currentUser = currentUser.getCurrentUser();
-            if (currentUser != null) {
-              id = currentUser.id;
-            }
-            obj10.user_id = id;
-            obj9[2] = obj10;
-            lib(table[10]).dispatch(obj9);
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = lib.body;
-            return obj;
-          }
-        } catch (tmp16) {
-          c4 = tmp;
-          throw tmp16;
-        }
+      const table = tmp2;
+      let lib = tmp5;
+      guildId = guildId.guildId;
+      const HTTP = callback(outer1_2[9]).HTTP;
+      const obj1 = { url: null, body: null, fields: null, attachments: null, headers: null, rejectWithError: null };
+      obj1[0] = outer1_9.GUILD_STICKER_PACKS(guildId);
+      if ("web" === guildId.platform) {
+        const body = tmp33.body;
       }
+      obj1[1] = body;
+      if ("mobile" === guildId.platform) {
+        const obj2 = { name: "name", value: null };
+        obj2[1] = tmp33.name;
+        const items = [obj2, , ];
+        const obj3 = { name: "tags", value: null };
+        obj3[1] = tmp33.tags;
+        items[1] = obj3;
+        const obj4 = { name: "description", value: null };
+        obj4[1] = tmp33.description;
+        items[2] = obj4;
+        const tmp11 = items;
+      }
+      obj1[2] = tmp11;
+      if ("mobile" === guildId.platform) {
+        const obj5 = { name: "file", file: null };
+        ({ uri: obj7[0], name: obj7[1], mimeType: obj7[2] } = tmp33);
+        obj5[1] = { uri: null, name: null, type: null };
+        const items1 = [obj5];
+        const tmp12 = items1;
+        const obj6 = { uri: null, name: null, type: null };
+      }
+      obj1[3] = tmp12;
+      const obj7 = outer1_1(outer1_2[12]);
+      obj1[4] = obj7.buildHeadersForMd5(guildId.originalMd5);
+      obj1[5] = callback(outer1_2[9]).rejectWithMigratedError();
+      lib = yield HTTP.post(obj1);
+      const obj9 = { type: "GUILD_STICKERS_CREATE_SUCCESS", guildId: null, sticker: null };
+      obj9[1] = guildId;
+      const obj10 = {};
+      const merged = Object.assign(lib.body);
+      currentUser = currentUser.getCurrentUser();
+      if (currentUser != null) {
+        const id = currentUser.id;
+      }
+      obj10.user_id = id;
+      obj9[2] = obj10;
+      lib(table[10]).dispatch(obj9);
+      return lib.body;
     })();
   });
   const _createGuildSticker = tmp;
@@ -598,62 +451,13 @@ function _updateGuildSticker() {
     let c4 = 0;
     let c3 = 0;
     return (function*(arg0, body) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = outer1_9.GUILD_STICKER(callback, closure_1);
-              obj1[1] = dependencyMap;
-              obj1[2] = callback(530).rejectWithMigratedError();
-              c4 = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.patch(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          c3 = tmp;
-          throw tmp5;
-        }
-      }
+      const HTTP = callback(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = outer1_9.GUILD_STICKER(callback, closure_1);
+      obj1[1] = dependencyMap;
+      obj1[2] = callback(530).rejectWithMigratedError();
+      yield HTTP.patch(obj1);
+      return body.body;
     })();
   });
   const _updateGuildSticker = tmp;

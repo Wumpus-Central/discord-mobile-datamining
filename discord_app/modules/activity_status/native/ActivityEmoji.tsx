@@ -24,7 +24,7 @@ export default function ActivityEmoji(emoji) {
   const tmp = callback();
   let ReactionIcon = emoji;
   let obj = dependencyMap;
-  const AnimateEmoji = emoji(3866).AnimateEmoji;
+  const AnimateEmoji = emoji(3958).AnimateEmoji;
   let animated;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -62,7 +62,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(6579).ReactionIcon;
+    ReactionIcon = ReactionIcon(7576).ReactionIcon;
     obj = { style: null, size: "sm" };
     obj[0] = style;
     <ReactionIcon style={null} size="sm" />;
@@ -83,6 +83,6 @@ export default function ActivityEmoji(emoji) {
     items2[2] = obj1;
     obj[3] = items2;
     obj[4] = tmp.emoji;
-    jsx(importDefault(5210), { width: null, height: null });
+    jsx(importDefault(5301), { width: null, height: null });
   }
 };

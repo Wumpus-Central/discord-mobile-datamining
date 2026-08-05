@@ -47,7 +47,7 @@ function AnimatedToast(toast) {
   let tmp10 = null != content;
   const isScreenReaderEnabled = merged(cleanUp[11]).useIsScreenReaderEnabled();
   if (tmp10) {
-    tmp10 = typeof content === "y";
+    tmp10 = typeof content === "string";
   }
   c10 = tmp10;
   const position = merged.position;
@@ -195,7 +195,7 @@ const memoResult = importAllResult.memo(() => {
     }
   }, items1);
   obj = { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren };
-  return jsx(stateFromStoresArray(4538).TransitionGroup, { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren });
+  return jsx(stateFromStoresArray(4629).TransitionGroup, { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren });
 });
 let result = require("ToastStore").fileFinishedImporting("modules/toast/native/ToastContainer.tsx");
 

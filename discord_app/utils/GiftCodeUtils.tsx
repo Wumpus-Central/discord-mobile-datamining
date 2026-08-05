@@ -166,7 +166,7 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl8.string(v5(1236).t.roztIr);
   } else if (tmp.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
     const intl6 = v5(1236).intl;
-    let obj = v5(3839);
+    let obj = v5(3931);
     const intl7 = v5(1236).intl;
     const string = intl7.string;
     const t = v5(1236).t;
@@ -197,11 +197,11 @@ function getGiftCodeRedeemError(error, currentUser) {
 }
 ({ Endpoints: error, AnalyticEvents: metroImportAll, AbortCodes: c9, GiftCodeModalStates: c10, MessageEmbedTypes: unpackModuleId, MessageTypes: closure_12 } = ME);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = GuildFeatures);
-let items = [require("set").escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((arg0) => importDefault(4181).escape(arg0))];
+let items = [require("set").escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((arg0) => importDefault(4273).escape(arg0))];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
 let regExp = new RegExp("(?: |^|https?://)(?:" + items.join("|") + ")/([a-z0-9-]+)", "gi");
 const items2 = ["discord.com/billing/promotions", "promos.discord.gg"];
-const items3 = [...items2.map((arg0) => importDefault(4181).escape(arg0))];
+const items3 = [...items2.map((arg0) => importDefault(4273).escape(arg0))];
 const regExp1 = new RegExp("(?: |^|https?://)(?:" + items3.join("|") + ")(/|(/)?\\?code=)([a-z0-9-]+)", "gi");
 c0 = 4;
 let mapped = require("ME").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
@@ -222,8 +222,8 @@ const result = require("handleSubscribeFailure").fileFinishedImporting("utils/Gi
 
 export const GiftExperience = obj;
 export const getGiftExperience = function getGiftExperience(arg0, arg1) {
-  if (!v5(4430).isMobile) {
-    if (!v5(4430).isTablet) {
+  if (!v5(4521).isMobile) {
+    if (!v5(4521).isTablet) {
       if (null == arg0) {
         if (!arg1) {
           let DEFAULT = obj.CUSTOM_STYLE;
@@ -236,8 +236,8 @@ export const getGiftExperience = function getGiftExperience(arg0, arg1) {
   DEFAULT = obj.DEFAULT;
 };
 export const shouldShowCustomGiftExperience = function shouldShowCustomGiftExperience(arg0) {
-  if (!v5(4430).isMobile) {
-    if (!v5(4430).isTablet) {
+  if (!v5(4521).isMobile) {
+    if (!v5(4521).isTablet) {
       if (null != arg0) {
         let DEFAULT = obj.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD;
         let tmp5 = obj;
@@ -365,7 +365,7 @@ export const resolveGiftCode = function resolveGiftCode() {
 export const trackGiftCodeCopy = function trackGiftCodeCopy(giftCode, sku) {
   let obj = importDefault(698);
   obj = {};
-  const merged = Object.assign(importDefault(4524)(sku, false, false));
+  const merged = Object.assign(importDefault(4615)(sku, false, false));
   const merged1 = Object.assign(giftCode.analyticsData);
   obj.track(constants.GIFT_CODE_COPIED, obj);
 };
@@ -466,9 +466,9 @@ export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGif
 };
 export const getSubscriptionGiftSuccessText = function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   const v5 = getOrFetchSubscriptionPlan;
-  const match = v5(4393).match(getOrFetchSubscriptionPlan);
+  const match = v5(4484).match(getOrFetchSubscriptionPlan);
   let obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = v5(4393);
+  const str = v5(4484);
   obj = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with(obj, () => {
     const intl = subscriptionPlan(outer1_2[12]).intl;
@@ -621,11 +621,11 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (tmp.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(4393).match(subscriptionPlan);
+      const match = subscriptionPlan(4484).match(subscriptionPlan);
       obj = { interval: null, premiumSubscriptionType: null };
       obj[0] = constants6.MONTH;
       obj[1] = closure_13.TIER_2;
-      const str = subscriptionPlan(4393);
+      const str = subscriptionPlan(4484);
       const obj1 = { interval: null, premiumSubscriptionType: null };
       obj1[0] = constants6.YEAR;
       obj1[1] = closure_13.TIER_2;

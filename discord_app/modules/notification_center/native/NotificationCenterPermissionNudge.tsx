@@ -31,31 +31,31 @@ function NotificationCenterBannerImpl(onDismiss) {
   obj = { style: tmp.iconContainer, children: null };
   obj = { size: "md", color: null };
   obj[1] = importDefault(712).colors.ICON_STRONG;
-  obj[1] = callback4(onDismiss(10241).BellSlashIcon, obj);
+  obj[1] = callback4(onDismiss(9647).BellSlashIcon, obj);
   const items = [callback4(View, obj), , ];
   const obj1 = { style: tmp.contentContainer, children: null };
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
   const intl = onDismiss(1236).intl;
   obj2[2] = intl.string(onDismiss(1236).t.G6YBna);
-  const items1 = [callback4(onDismiss(4189).Text, obj2), , ];
+  const items1 = [callback4(onDismiss(4281).Text, obj2), , ];
   const obj3 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
   const obj4 = { marginTop: null };
   obj4[0] = importDefault(712).space.PX_4;
   obj3[2] = obj4;
   const intl2 = onDismiss(1236).intl;
   obj3[3] = intl2.string(onDismiss(1236).t["9CoPDE"]);
-  items1[1] = callback4(onDismiss(4189).Text, obj3);
+  items1[1] = callback4(onDismiss(4281).Text, obj3);
   const obj5 = { style: tmp.ctaButton, children: null };
   const obj6 = { variant: "primary", size: "md", text: null, onPress: null };
   const intl3 = onDismiss(1236).intl;
   obj6[2] = intl3.string(onDismiss(1236).t.a4bgO0);
   obj6[3] = function onPress() {
-    let obj = onDismiss(11519);
+    let obj = onDismiss(11692);
     const pushNotificationPermission = obj.requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_8);
     obj = { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     callback(698).track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
   };
-  obj5[1] = callback4(onDismiss(4604).Button, obj6);
+  obj5[1] = callback4(onDismiss(4695).Button, obj6);
   items1[2] = callback4(View, obj5);
   obj1[1] = items1;
   items[1] = callback5(View, obj1);
@@ -73,8 +73,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   };
   const intl4 = onDismiss(1236).intl;
   obj7[3] = intl4.string(onDismiss(1236).t.WAI6xu);
-  obj7[4] = callback4(onDismiss(5179).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = callback4(onDismiss(4721).PressableHighlight, obj7);
+  obj7[4] = callback4(onDismiss(5270).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = callback4(onDismiss(4812).PressableHighlight, obj7);
   obj[1] = items;
   return callback5(View, obj);
 }
@@ -94,9 +94,9 @@ let obj2 = { alignSelf: "flex-start", marginTop: require("Themes").space.PX_12 }
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/notification_center/native/NotificationCenterPermissionNudge.tsx");
 
 export default function NotificationCenterPermissionNudge() {
-  let obj = importDefault(14460);
-  const canSeePushNotificationNudge = require(11519) /* _requestPushNotificationPermission */.useCanSeePushNotificationNudge();
-  const obj2 = require(11519) /* _requestPushNotificationPermission */;
+  let obj = importDefault(14560);
+  const canSeePushNotificationNudge = require(11692) /* _requestPushNotificationPermission */.useCanSeePushNotificationNudge();
+  const obj2 = require(11692) /* _requestPushNotificationPermission */;
   let prop = null;
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
@@ -104,10 +104,10 @@ export default function NotificationCenterPermissionNudge() {
       prop = tmp2(1358).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
-  const tmp5 = callback(require(8451) /* useSelectedDismissibleContent */.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
+  const tmp5 = callback(require(5931) /* useSelectedDismissibleContent */.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
   require = tmp6;
   const items = [tmp5[1]];
-  const obj3 = require(8451) /* useSelectedDismissibleContent */;
+  const obj3 = require(5931) /* useSelectedDismissibleContent */;
   let tmp8 = null;
   if (tmp5[0] === require(1358) /* DismissibleContent */.DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER) {
     obj = { onDismiss: null };

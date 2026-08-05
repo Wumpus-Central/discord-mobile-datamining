@@ -526,8 +526,8 @@ export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
 export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
   const _require = arg1;
-  const theme = _require(3905).useThemeContext().theme;
-  const obj = _require(3905);
+  const theme = _require(3997).useThemeContext().theme;
+  const obj = _require(3997);
   const items = [_getSystemLocale];
   const dependencyMap = _require(589).useStateFromStores(items, () => _getSystemLocale.locale);
   return arr.map((applicationRoleConnection) => {

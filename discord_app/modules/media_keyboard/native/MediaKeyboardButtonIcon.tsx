@@ -13,11 +13,11 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     let _require;
     let chatInputFloating;
     const merged = Object.assign(arg0, undefined);
-    const tmp6 = chatInputFloating(4059)();
+    const tmp6 = chatInputFloating(4151)();
     _require = tmp6;
     let obj = _require(1348);
     chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "MediaKeyboardButtonIcon" }).chatInputFloating;
-    let obj1 = _require(4054);
+    let obj1 = _require(4146);
     const fn = function s() {
       let tmp4 = _undefined === _undefined(outer1_2[5]).KeyboardTypes.MEDIA;
       if (!tmp4) {
@@ -41,8 +41,8 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = tmp6;
     obj[1] = _require(1579).KeyboardTypes;
     obj[2] = chatInputFloating;
-    obj[3] = _require(4194).withTiming;
-    obj[4] = _require(4197).timingStandard;
+    obj[3] = _require(4286).withTiming;
+    obj[4] = _require(4289).timingStandard;
     fn.__closure = obj;
     fn.__workletHash = 12686941860647;
     fn.__initData = closure_4;
@@ -51,7 +51,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = animatedStyle;
     obj1 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(_require(10224).PlusLargeIcon, {});
-    return jsx(chatInputFloating(4054).View, { style: null, children: null });
+    obj[1] = jsx(_require(9625).PlusLargeIcon, {});
+    return jsx(chatInputFloating(4146).View, { style: null, children: null });
   }
 };

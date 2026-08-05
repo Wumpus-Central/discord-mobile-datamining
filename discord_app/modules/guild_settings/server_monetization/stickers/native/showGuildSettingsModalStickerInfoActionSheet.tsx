@@ -6,7 +6,7 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
   let guildId;
   let stickerId;
   ({ guildId, stickerId } = arg0);
-  let obj = importDefault(4161);
+  let obj = importDefault(4253);
   obj = {
     guildId,
     stickerId,
@@ -14,5 +14,5 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
       callback(table[0]).hideActionSheet(closure_3);
     }
   };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(16441, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(16539, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
 };

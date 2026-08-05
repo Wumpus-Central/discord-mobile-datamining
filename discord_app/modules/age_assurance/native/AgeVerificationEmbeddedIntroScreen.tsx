@@ -23,7 +23,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   ({ entryPoint, navigation } = arg0);
   ({ onClose, modalSessionId, classificationId } = arg0);
   const tmp = createCacheKey();
-  let obj = navigation(6758);
+  let obj = navigation(7727);
   const items = [navigation];
   const isSuspendedUser = obj.useIsSuspendedUser();
   const callback = React.useCallback(() => {
@@ -33,32 +33,32 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj = { children: null };
   const obj1 = { align: "center", justify: "center", spacing: 24, children: null };
   const obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-  const items1 = [callback(navigation(6790).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+  const items1 = [callback(navigation(5936).ShieldSpotIllustration, { height: 100, width: 177 }), ];
   const obj3 = { align: "center", justify: "center", spacing: 8, children: null };
   const obj4 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  let obj7 = navigation(4409);
+  let obj7 = navigation(4500);
   obj4[3] = obj7.getAgeVerificationGetStartedTitle(entryPoint);
-  const items2 = [callback(navigation(4189).Text, obj4), ];
+  const items2 = [callback(navigation(4281).Text, obj4), ];
   const obj5 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: null };
-  obj5[3] = navigation(4409).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser);
-  items2[1] = callback(navigation(4189).Text, obj5);
+  obj5[3] = navigation(4500).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser);
+  items2[1] = callback(navigation(4281).Text, obj5);
   obj3[3] = items2;
-  items1[1] = callback2(navigation(4602).Stack, obj3);
+  items1[1] = callback2(navigation(4693).Stack, obj3);
   obj2[3] = items1;
-  const items3 = [callback2(navigation(4602).Stack, obj2), callback(navigation(7633).AgeVerificationMethodsContainer, { ageVerificationMethods: importDefault(7631)({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
+  const items3 = [callback2(navigation(4693).Stack, obj2), callback(navigation(7771).AgeVerificationMethodsContainer, { ageVerificationMethods: importDefault(7769)({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
   obj1[3] = items3;
-  const items4 = [callback2(navigation(4602).Stack, obj1), ];
+  const items4 = [callback2(navigation(4693).Stack, obj1), ];
   const obj6 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };
   const intl = navigation(1236).intl;
   obj7 = {
     handleOnHelpUrlHook() {
-      const obj = callback(6750);
+      const obj = callback(7720);
       obj.openUrl(callback(1945).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
     }
   };
-  obj6[3] = intl.format(importDefault(2743).lG69e1, obj7);
-  items4[1] = callback(navigation(4189).Text, obj6);
+  obj6[3] = intl.format(importDefault(2803).lG69e1, obj7);
+  items4[1] = callback(navigation(4281).Text, obj6);
   obj[0] = items4;
-  obj[0] = callback2(navigation(6789).ModalContent, obj);
-  return callback(navigation(6788).ModalScreen, obj);
+  obj[0] = callback2(navigation(7758).ModalContent, obj);
+  return callback(navigation(7757).ModalScreen, obj);
 };

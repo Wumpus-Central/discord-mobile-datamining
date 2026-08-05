@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_HAPTICS,
   getComponent() {
-    return require(14617) /* HapticButton */.default;
+    return require(14717) /* HapticButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

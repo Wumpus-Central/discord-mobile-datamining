@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_4203";
+import importAllResult from "module_4295";
 import get_ActivityIndicator from "ComponentDispatcher";
 import ME from "ME";
-import jsxProd from "module_4054";
+import jsxProd from "module_4146";
 import createCacheKey from "createCacheKey";
 
 let c10;

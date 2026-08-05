@@ -10,11 +10,11 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   let message;
   let onShare;
   ({ applicationId, customId, linkId, message, onShare } = arg0);
-  let obj = require(4052) /* getBestActiveInput */;
+  let obj = require(4144) /* getBestActiveInput */;
   obj.dismissKeyboard();
   obj = { applicationId, customId, linkId, message, onShare };
-  importDefault(4399).pushLazy(require(1959) /* asyncRequireImpl */(13562, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
+  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(13658, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
 };
 export const closeActivityShareLinkModal = function closeActivityShareLinkModal() {
-  importDefault(4399).popWithKey(ACTIVITY_SHARE_LINK_MODAL);
+  importDefault(4490).popWithKey(ACTIVITY_SHARE_LINK_MODAL);
 };
