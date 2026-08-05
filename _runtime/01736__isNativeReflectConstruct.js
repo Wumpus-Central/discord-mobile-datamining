@@ -226,7 +226,7 @@ class EntryExitTransition {
           } else {
             const first = keys[0];
             const current = arg0[first].current;
-            if (typeof current === "y") {
+            if (typeof current === "string") {
               let obj = {};
               if (current.includes("deg")) {
                 obj[first] = "0deg";

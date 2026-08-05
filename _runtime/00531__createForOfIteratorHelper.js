@@ -7,8 +7,8 @@ let require;
 let _exports = exports;
 function _createForOfIteratorHelper(iterable) {
   let closure_0 = iterable;
-  iterable = typeof Symbol === "pack";
-  if (typeof Symbol !== "Array") {
+  iterable = typeof Symbol !== "undefined";
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     iterable = iterable[Symbol.iterator];
   }
@@ -59,7 +59,7 @@ function _createForOfIteratorHelper(iterable) {
     if (!Array.isArray(iterable)) {
       arr = undefined;
       if (iterable) {
-        if (typeof iterable === "y") {
+        if (typeof iterable === "string") {
           const _Array4 = Array;
           let array = new Array(length2);
           class F {
@@ -258,7 +258,7 @@ class Response {
           tmp6 = trim;
           formatted = str5.toLowerCase();
           str6 = arr2.slice(index + 1);
-          if (typeof trim !== "fileFinishedImporting") {
+          if (typeof trim !== "function") {
             str8 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -338,12 +338,12 @@ class Response {
     return error;
   }
 }
-if (typeof window === "pack") {
+if (typeof window !== "undefined") {
   const _window = window;
   let self = window;
 } else {
   const _self = self;
-  if (typeof self === "Array") {
+  if (typeof self === "undefined") {
     let _console = console;
     console.warn("Using browser-only version of superagent in non-browser environment");
     self = undefined;
@@ -461,8 +461,8 @@ class Request {
     if (1 === arguments.length) {
       str = "";
     }
-    tmp = typeof str === "ay";
-    if (typeof str !== "window") {
+    tmp = typeof str === "object";
+    if (typeof str === "object") {
       tmp5 = null;
       tmp = null !== str;
     }
@@ -476,7 +476,7 @@ class Request {
       tmp3 = globalThis;
       _btoa = btoa;
       str3 = "auto";
-      if (typeof btoa !== "disabledUntil") {
+      if (typeof btoa === "function") {
         str3 = "basic";
       }
       obj = { type: null };
@@ -484,7 +484,7 @@ class Request {
       tmp2 = obj;
     }
     tmp4 = tmp2.encoder || ((arg0) => {
-      if (typeof btoa === "fileFinishedImporting") {
+      if (typeof btoa === "function") {
         const _btoa = btoa;
         return btoa(arg0);
       } else {
@@ -497,7 +497,7 @@ class Request {
   }
   query(arg0) {
     tmp = global;
-    if (typeof global !== "y") {
+    if (typeof global !== "string") {
       tmp7 = closure_0;
       tmp8 = closure_2;
       obj = require("_createForOfIteratorHelper");
@@ -604,7 +604,7 @@ class Request {
   _isHost(arg0) {
     tmp = global;
     if (global) {
-      tmp = typeof global === "ay";
+      tmp = typeof global === "object";
     }
     if (tmp) {
       tmp2 = globalThis;
@@ -750,7 +750,7 @@ class Request {
               if ("HEAD" === self.method) {
               } else {
                 result = tmp2;
-                if (typeof tmp2 === "y") {
+                if (typeof tmp2 === "string") {
                 } else {
                   result = tmp2;
                   if (self._isHost(tmp2)) {
@@ -903,13 +903,13 @@ if (0 < items.length) {
     length = items.length;
   } while (num2 < length);
 }
-function del(arg0, arg1, arg2) {
+function del(arg0, fn) {
   let tmp = arg2;
   const obj = _exports("DELETE", arg0);
-  let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  let tmp2 = fn;
+  if (typeof fn === "function") {
     tmp2 = null;
-    tmp = arg1;
+    tmp = fn;
   }
   if (tmp2) {
     obj.send(tmp2);
@@ -920,13 +920,13 @@ function del(arg0, arg1, arg2) {
   return obj;
 }
 require("_createForOfIteratorHelper").prototype.del = require("_createForOfIteratorHelper").prototype.delete;
-_exports.get = (arg0, type) => {
+_exports.get = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("GET", arg0);
-  let tmp2 = type;
-  if (typeof type !== "disabledUntil") {
+  let tmp2 = fn;
+  if (typeof fn === "function") {
     tmp2 = null;
-    tmp = type;
+    tmp = fn;
   }
   if (tmp2) {
     const query = obj.query(tmp2);
@@ -936,13 +936,13 @@ _exports.get = (arg0, type) => {
   }
   return obj;
 };
-_exports.head = (arg0, type) => {
+_exports.head = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("HEAD", arg0);
-  let tmp2 = type;
-  if (typeof type !== "disabledUntil") {
+  let tmp2 = fn;
+  if (typeof fn === "function") {
     tmp2 = null;
-    tmp = type;
+    tmp = fn;
   }
   if (tmp2) {
     const query = obj.query(tmp2);
@@ -952,13 +952,13 @@ _exports.head = (arg0, type) => {
   }
   return obj;
 };
-_exports.options = (arg0, arg1, arg2) => {
+_exports.options = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("OPTIONS", arg0);
-  let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  let tmp2 = fn;
+  if (typeof fn === "function") {
     tmp2 = null;
-    tmp = arg1;
+    tmp = fn;
   }
   if (tmp2) {
     obj.send(tmp2);
@@ -970,13 +970,13 @@ _exports.options = (arg0, arg1, arg2) => {
 };
 _exports.del = del;
 _exports.delete = del;
-_exports.patch = (arg0, arg1, arg2) => {
+_exports.patch = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("PATCH", arg0);
-  let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  let tmp2 = fn;
+  if (typeof fn === "function") {
     tmp2 = null;
-    tmp = arg1;
+    tmp = fn;
   }
   if (tmp2) {
     obj.send(tmp2);
@@ -986,13 +986,13 @@ _exports.patch = (arg0, arg1, arg2) => {
   }
   return obj;
 };
-_exports.post = (arg0, arg1, arg2) => {
+_exports.post = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("POST", arg0);
-  let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  let tmp2 = fn;
+  if (typeof fn === "function") {
     tmp2 = null;
-    tmp = arg1;
+    tmp = fn;
   }
   if (tmp2) {
     obj.send(tmp2);
@@ -1002,13 +1002,13 @@ _exports.post = (arg0, arg1, arg2) => {
   }
   return obj;
 };
-_exports.put = (arg0, arg1, arg2) => {
+_exports.put = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("PUT", arg0);
-  let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  let tmp2 = fn;
+  if (typeof fn === "function") {
     tmp2 = null;
-    tmp = arg1;
+    tmp = fn;
   }
   if (tmp2) {
     obj.send(tmp2);
@@ -1019,14 +1019,14 @@ _exports.put = (arg0, arg1, arg2) => {
   return obj;
 };
 
-export default (arg0, arg1) => {
-  if (typeof arg1 === "fileFinishedImporting") {
+export default (arg0, fn) => {
+  if (typeof fn === "function") {
     const request = new _exports.Request("GET", arg0);
-    let endResult = request.end(arg1);
+    let endResult = request.end(fn);
   } else if (1 === arguments.length) {
     endResult = new _exports.Request("GET", arg0);
   } else {
-    endResult = new _exports.Request(arg0, arg1);
+    endResult = new _exports.Request(arg0, fn);
   }
   return endResult;
 };

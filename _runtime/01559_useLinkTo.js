@@ -13,7 +13,7 @@ export default function useLinkTo() {
       const _Error3 = Error;
       const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
       throw error;
-    } else if (typeof path === "y") {
+    } else if (typeof path === "string") {
       if (path.startsWith("/")) {
         const options = context1.options;
         let getStateFromPath;

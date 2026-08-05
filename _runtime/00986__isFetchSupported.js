@@ -57,7 +57,7 @@ arg5.supportsHistory = function supportsHistory() {
   return "history" in require(821).GLOBAL_OBJ && require(821).GLOBAL_OBJ.history;
 };
 arg5.supportsNativeFetch = function supportsNativeFetch() {
-  if (typeof globalThis.EdgeRuntime === "y") {
+  if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (_isFetchSupported()) {
     if (isNativeFunction(require(821).GLOBAL_OBJ.fetch)) {
@@ -66,7 +66,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
       let flag2 = false;
       const _document = tmp5(821).GLOBAL_OBJ.document;
       if (_document) {
-        if (typeof _document.createElement !== "disabledUntil") {
+        if (typeof _document.createElement === "function") {
           try {
             const element = <iframe />;
             element.hidden = true;

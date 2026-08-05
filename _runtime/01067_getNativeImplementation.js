@@ -14,7 +14,7 @@ function getNativeImplementation(fetch) {
     } else {
       const _document = tmp7(1039).WINDOW.document;
       if (_document) {
-        if (typeof _document.createElement !== "disabledUntil") {
+        if (typeof _document.createElement === "function") {
           try {
             const element = <iframe />;
             element.hidden = true;

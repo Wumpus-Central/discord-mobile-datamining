@@ -7,22 +7,22 @@ arg5.flattenArray = function flattenArray(style) {
     }
     const item = style.forEach((arr) => {
       if (Array.isArray(arr)) {
-        if (typeof closure_1 !== "fileFinishedImporting") {
+        if (typeof closure_1 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let item = arr.forEach((arr) => {
           if (Array.isArray(arr)) {
-            if (typeof closure_1 !== "fileFinishedImporting") {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let item = arr.forEach((arr) => {
               if (Array.isArray(arr)) {
-                if (typeof closure_1 !== "fileFinishedImporting") {
+                if (typeof closure_1 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let item = arr.forEach((arr) => {
                   if (Array.isArray(arr)) {
-                    if (typeof closure_1 !== "fileFinishedImporting") {
+                    if (typeof closure_1 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let item = arr.forEach(() => { ... });
@@ -48,15 +48,15 @@ arg5.flattenArray = function flattenArray(style) {
     return items1;
   }
 };
-arg5.has = (arg0, arg1) => {
-  let tmp = typeof arg1 === "fileFinishedImporting";
-  if (typeof arg1 !== "fileFinishedImporting") {
-    tmp = typeof arg1 === "ay";
+arg5.has = (arg0, fn) => {
+  let tmp = typeof fn === "function";
+  if (typeof fn !== "function") {
+    tmp = typeof fn === "object";
   }
   if (tmp) {
-    let tmp3 = null != arg1;
+    let tmp3 = null != fn;
     if (tmp3) {
-      tmp3 = arg0 in arg1;
+      tmp3 = arg0 in fn;
     }
     tmp = tmp3;
   }

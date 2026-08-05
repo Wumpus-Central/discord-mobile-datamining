@@ -1,16 +1,16 @@
 // _runtime/03379_formatDistance.js
-let closure_0 = { lessThanXSeconds: { one: "menos de um segundo", other: "menos de {{count}} segundos" }, xSeconds: { one: "1 segundo", other: "{{count}} segundos" }, halfAMinute: "meio minuto", lessThanXMinutes: { one: "menos de um minuto", other: "menos de {{count}} minutos" }, xMinutes: { one: "1 minuto", other: "{{count}} minutos" }, aboutXHours: { one: "cerca de 1 hora", other: "cerca de {{count}} horas" }, xHours: { one: "1 hora", other: "{{count}} horas" }, xDays: { one: "1 dia", other: "{{count}} dias" }, aboutXWeeks: { one: "cerca de 1 semana", other: "cerca de {{count}} semanas" }, xWeeks: { one: "1 semana", other: "{{count}} semanas" }, aboutXMonths: { one: "cerca de 1 m\u00EAs", other: "cerca de {{count}} meses" }, xMonths: { one: "1 m\u00EAs", other: "{{count}} meses" }, aboutXYears: { one: "cerca de 1 ano", other: "cerca de {{count}} anos" }, xYears: { one: "1 ano", other: "{{count}} anos" }, overXYears: { one: "mais de 1 ano", other: "mais de {{count}} anos" }, almostXYears: { one: "quase 1 ano", other: "quase {{count}} anos" } };
+let closure_0 = { lessThanXSeconds: { one: "mindre end \u00E9t sekund", other: "mindre end {{count}} sekunder" }, xSeconds: { one: "1 sekund", other: "{{count}} sekunder" }, halfAMinute: "\u00E9t halvt minut", lessThanXMinutes: { one: "mindre end \u00E9t minut", other: "mindre end {{count}} minutter" }, xMinutes: { one: "1 minut", other: "{{count}} minutter" }, aboutXHours: { one: "cirka 1 time", other: "cirka {{count}} timer" }, xHours: { one: "1 time", other: "{{count}} timer" }, xDays: { one: "1 dag", other: "{{count}} dage" }, aboutXWeeks: { one: "cirka 1 uge", other: "cirka {{count}} uger" }, xWeeks: { one: "1 uge", other: "{{count}} uger" }, aboutXMonths: { one: "cirka 1 m\u00E5ned", other: "cirka {{count}} m\u00E5neder" }, xMonths: { one: "1 m\u00E5ned", other: "{{count}} m\u00E5neder" }, aboutXYears: { one: "cirka 1 \u00E5r", other: "cirka {{count}} \u00E5r" }, xYears: { one: "1 \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "over 1 \u00E5r", other: "over {{count}} \u00E5r" }, almostXYears: { one: "n\u00E6sten 1 \u00E5r", other: "n\u00E6sten {{count}} \u00E5r" } };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof table[arg0] === "y") {
+  if (typeof table[arg0] === "string") {
     let tmp6 = tmp;
     if (null != addSuffix) {
       tmp6 = tmp;
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
-          let text = `há ${tmp}`;
+          let text = `${tmp} siden`;
         }
-        text = `em ${tmp}`;
+        text = `om ${tmp}`;
       }
     }
     return tmp6;

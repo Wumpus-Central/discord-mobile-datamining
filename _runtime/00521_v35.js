@@ -7,12 +7,12 @@ let c4 = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
 arg5.default = function v35(name) {
   let closure_0 = arg1;
   let closure_1 = arg2;
-  function generateUUID(arg0, arg1, arg2, arg3) {
-    let arr = arg0;
-    if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  function generateUUID(str, str2) {
+    let arr = str;
+    if (typeof str === "string") {
       const _unescape = unescape;
       const _encodeURIComponent = encodeURIComponent;
-      const unescapeResult = unescape(encodeURIComponent(arg0));
+      const unescapeResult = unescape(encodeURIComponent(str));
       const items = [];
       let num = 0;
       arr = items;
@@ -25,9 +25,9 @@ arg5.default = function v35(name) {
         } while (num < length);
       }
     }
-    let arr2 = arg1;
-    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
-      arr2 = callback2(outer1_2[0])(arg1);
+    let arr2 = str2;
+    if (typeof str2 === "string") {
+      arr2 = callback2(outer1_2[0])(str2);
     }
     length = undefined;
     if (null !== arr2) {

@@ -33,17 +33,17 @@ function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
             if (!obj) {
               continue;
             } else {
-              if (typeof tmp2 !== "disabledUntil") {
+              if (typeof tmp2 === "function") {
                 tmp2 = true;
               }
               if (undefined === tmp2) {
                 tmp2 = null;
               }
-              if (typeof obj === "window") {
+              if (typeof obj !== "object") {
                 arg0[key10009] = tmp2;
-              } else if (typeof obj.diff === "fileFinishedImporting") {
+              } else if (typeof obj.diff === "function") {
                 let processResult = tmp2;
-                if (typeof obj.process !== "disabledUntil") {
+                if (typeof obj.process === "function") {
                   processResult = obj.process(tmp2);
                 }
                 arg0[key10009] = processResult;
@@ -293,16 +293,16 @@ function diffProperties(arr, arr, closure_2, arg3) {
         let tmp11 = closure_2[tmp9];
         let tmp12 = tmp10;
         let tmp13 = tmp11;
-        if (typeof tmp11 !== "disabledUntil") {
-          let tmp65 = typeof obj5 === "ay";
-          if (typeof obj5 !== "window") {
-            tmp65 = typeof obj5.process === "fileFinishedImporting";
+        if (typeof tmp11 === "function") {
+          let tmp65 = typeof obj5 === "object";
+          if (typeof obj5 === "object") {
+            tmp65 = typeof obj5.process === "function";
           }
           tmp12 = tmp10;
           tmp13 = tmp11;
           if (!tmp65) {
             let flag = tmp10;
-            if (typeof tmp10 !== "disabledUntil") {
+            if (typeof tmp10 === "function") {
               flag = true;
             }
             tmp12 = flag;
@@ -323,15 +323,15 @@ function diffProperties(arr, arr, closure_2, arg3) {
         }
         if (tmp8) {
           if (undefined !== tmp8[tmp9]) {
-            if (typeof obj5 === "window") {
+            if (typeof obj5 !== "object") {
               tmp8[tmp9] = tmp13;
               tmp4 = obj5;
               tmp3 = tmp8;
               continue;
             } else {
-              if (typeof obj5.diff === "fileFinishedImporting") {
+              if (typeof obj5.diff === "function") {
                 let processResult = tmp13;
-                if (typeof obj5.process !== "disabledUntil") {
+                if (typeof obj5.process === "function") {
                   processResult = obj5.process(tmp13);
                 }
                 tmp8[tmp9] = processResult;
@@ -352,9 +352,9 @@ function diffProperties(arr, arr, closure_2, arg3) {
         if (tmp14 === tmp13) {
           continue;
         } else {
-          if (typeof obj5 === "window") {
-            let tmp25 = typeof tmp13 === "window";
-            if (typeof tmp13 !== "window") {
+          if (typeof obj5 !== "object") {
+            let tmp25 = typeof tmp13 !== "object";
+            if (typeof tmp13 === "object") {
               tmp25 = null === tmp13;
             }
             if (!tmp25) {
@@ -381,8 +381,8 @@ function diffProperties(arr, arr, closure_2, arg3) {
             }
             continue;
           } else {
-            if (typeof obj5.diff !== "fileFinishedImporting") {
-              if (typeof obj5.process !== "fileFinishedImporting") {
+            if (typeof obj5.diff !== "function") {
+              if (typeof obj5.process !== "function") {
                 obj1 = null;
                 let closure_4 = 0;
                 let tmp66 = diffNestedProperty;
@@ -412,7 +412,7 @@ function diffProperties(arr, arr, closure_2, arg3) {
             }
             if (undefined === tmp14) {
               let processResult1 = tmp13;
-              if (typeof obj5.process !== "disabledUntil") {
+              if (typeof obj5.process === "function") {
                 processResult1 = obj5.process(tmp13);
               }
               obj = tmp8;
@@ -426,11 +426,11 @@ function diffProperties(arr, arr, closure_2, arg3) {
               tmp4 = obj5;
               continue;
             } else {
-              if (typeof obj5.diff === "fileFinishedImporting") {
+              if (typeof obj5.diff === "function") {
                 let diffResult = obj5.diff(tmp14, tmp13);
               } else {
-                diffResult = typeof tmp13 === "window";
-                if (typeof tmp13 !== "window") {
+                diffResult = typeof tmp13 !== "object";
+                if (typeof tmp13 === "object") {
                   diffResult = null === tmp13;
                 }
                 if (!diffResult) {
@@ -481,9 +481,9 @@ function diffProperties(arr, arr, closure_2, arg3) {
           if (undefined === arr) {
             tmp38 = obj1;
           } else {
-            if (typeof tmp34 !== "window") {
-              if (typeof tmp34.diff !== "fileFinishedImporting") {
-                if (typeof tmp34.process !== "fileFinishedImporting") {
+            if (typeof tmp34 === "object") {
+              if (typeof tmp34.diff !== "function") {
+                if (typeof tmp34.process !== "function") {
                   let tmp45 = obj1;
                   if (arr) {
                     let _Array = Array;
@@ -611,15 +611,15 @@ function addNestedProperty(arr, closure_2, arg2) {
               let processResult = null;
             }
             continue;
-          } else if (typeof obj2 === "ay") {
-            if (typeof obj2.process === "fileFinishedImporting") {
+          } else if (typeof obj2 === "object") {
+            if (typeof obj2.process === "function") {
               processResult = obj2.process(tmp15);
-            } else if (typeof obj2.diff !== "disabledUntil") {
+            } else if (typeof obj2.diff === "function") {
               processResult = tmp15;
             }
           } else {
-            processResult = typeof tmp15 === "fileFinishedImporting";
-            if (typeof tmp15 !== "fileFinishedImporting") {
+            processResult = typeof tmp15 === "function";
+            if (typeof tmp15 !== "function") {
               processResult = tmp15;
             }
           }

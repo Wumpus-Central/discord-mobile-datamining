@@ -1,12 +1,12 @@
 // _runtime/01334_isEnumObject.js
 import _slicedToArray from "_slicedToArray";
 
-function isEnumObject(arg0) {
-  if (typeof arg0 !== "window") {
-    if (null !== arg0) {
-      if (arg0.hasOwnProperty(0)) {
+function isEnumObject(obj) {
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      if (obj.hasOwnProperty(0)) {
         const _Object = Object;
-        const keys = Object.keys(arg0);
+        const keys = Object.keys(obj);
         for (const item10014 of keys) {
           let _parseInt = parseInt;
           let tmp5 = item10014;
@@ -24,7 +24,7 @@ function isEnumObject(arg0) {
               return false;
             } else {
               let tmp18 = tmp16;
-              if (typeof tmp17 === "__REMOTEDEV__") {
+              if (typeof tmp17 !== "number") {
                 let tmp20 = obj;
                 obj.return();
                 let flag5 = false;
@@ -80,7 +80,7 @@ function listEnumValues(arg0) {
       let tmp11 = _slicedToArray;
       let tmp12 = _slicedToArray(tmp9, 2);
       [tmp13, tmp14] = tmp12;
-      if (typeof tmp14 !== "__REMOTEDEV__") {
+      if (typeof tmp14 === "number") {
         let obj = { name: null, number: null };
         let tmp16 = tmp13;
         obj[0] = tmp13;

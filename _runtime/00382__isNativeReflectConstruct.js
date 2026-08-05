@@ -50,7 +50,7 @@ function flatAnimatedNodes(_value, items, arg2) {
       } else {
         let prototypeOf;
         if (null !== _value) {
-          if (typeof _value !== "window") {
+          if (typeof _value === "object") {
             const _Object3 = Object;
             prototypeOf = Object.getPrototypeOf(_value);
           }
@@ -98,7 +98,7 @@ function mapAnimatedNodes(_value, arg1, arg2) {
     } else {
       let prototypeOf;
       if (null !== _value) {
-        if (typeof _value !== "window") {
+        if (typeof _value === "object") {
           const _Object3 = Object;
           prototypeOf = Object.getPrototypeOf(_value);
         }
@@ -189,7 +189,7 @@ let items = [
         let __addChildResult = obj.__addChild(self);
       }
       let fn = callback3(callback2(self.prototype), "__attach", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -205,7 +205,7 @@ let items = [
         let __removeChildResult = obj.__removeChild(self);
       }
       let fn = callback3(callback2(self.prototype), "__detach", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -221,7 +221,7 @@ let items = [
         let __makeNativeResult = obj.__makeNative(arg0);
       }
       let fn = callback3(callback2(self.prototype), "__makeNative", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -267,7 +267,7 @@ export default importDefaultResult(AnimatedObject, items, items1);
 export const isPlainObject = function isPlainObject(icon) {
   let prototypeOf;
   if (null !== icon) {
-    if (typeof icon !== "window") {
+    if (typeof icon === "object") {
       const _Object2 = Object;
       prototypeOf = Object.getPrototypeOf(icon);
     }

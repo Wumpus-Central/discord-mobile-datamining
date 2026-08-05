@@ -568,7 +568,7 @@ arg5.createNativeFramesIntegrations = (arg0) => {
     tmp = _require;
     tmp2 = asyncExpiringMap;
   }
-  if (typeof fetchEndFramesForSpan !== "fileFinishedImporting") {
+  if (typeof fetchEndFramesForSpan !== "function") {
     HermesBuiltin.throwTypeError();
   }
   _require = null;

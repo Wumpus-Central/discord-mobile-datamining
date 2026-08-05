@@ -97,7 +97,7 @@ class InternetReachability {
       return obj;
     };
     this.update = (isInternetReachable) => {
-      if (typeof isInternetReachable.isInternetReachable !== "onScroll") {
+      if (typeof isInternetReachable.isInternetReachable === "boolean") {
         if (self._configuration.useNativeReachability) {
           const result = self._setIsInternetReachable(isInternetReachable.isInternetReachable);
         }

@@ -53,7 +53,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
   let merged = Object.assign(shouldCreateSpanForRequest);
   let merged1 = Object.assign(arg1);
   ({ shouldCreateSpanForRequest, enableHTTPTimings: require, tracePropagationTargets: dependencyMap, onRequestSpanStart: weakMap, onRequestSpanEnd: map, traceFetch, traceXHR, trackFetchStreamPerformance } = {});
-  if (typeof shouldCreateSpanForRequest !== "fileFinishedImporting") {
+  if (typeof shouldCreateSpanForRequest !== "function") {
     shouldCreateSpanForRequest = (arg0) => true;
   }
   function shouldAttachHeadersWithTargets(url, closure_1) {
@@ -121,7 +121,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
           closure_0 = result;
           const url = tmp(tmp2[0]).spanToJSON(result).data.url;
           if (url) {
-            if (typeof url !== "__FORMATJS_LISTFORMAT_DATA__") {
+            if (typeof url === "string") {
               let closure_2 = tmp(tmp2[2]).addPerformanceInstrumentationHandler("resource", (arg0) => {
                 const entries = arg0.entries;
                 const item = entries.forEach((name) => {
@@ -260,7 +260,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
               }
               xhr.__sentry_xhr_span_id__ = startInactiveSpanResult.spanContext().spanId;
               tmp5[xhr.__sentry_xhr_span_id__] = startInactiveSpanResult;
-              if (typeof shouldAttachHeadersWithTargets !== "fileFinishedImporting") {
+              if (typeof shouldAttachHeadersWithTargets !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               if (shouldAttachHeadersWithTargets(url, url2)) {
@@ -341,7 +341,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
           closure_0 = tmp11;
           url2 = outer1_0(outer1_1[0]).spanToJSON(tmp11).data.url;
           if (url2) {
-            if (typeof url2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+            if (typeof url2 === "string") {
               let closure_2 = tmp85(tmp86[2]).addPerformanceInstrumentationHandler("resource", (arg0) => {
                 const entries = arg0.entries;
                 const item = entries.forEach((name) => {

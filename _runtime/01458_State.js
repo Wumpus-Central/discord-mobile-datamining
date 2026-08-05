@@ -6,7 +6,7 @@ import _createClass from "_createClass";
 class State {
   constructor(arg0) {
     self = this;
-    f102400 = this;
+    f102687 = this;
     tmp = _classCallCheck(this, State);
     this._nativeEventSubscription = null;
     set = new Set();
@@ -31,77 +31,25 @@ class State {
         const item = _subscriptions.forEach((arg0) => arg0(obj));
       }
     };
-    f102400 = undefined;
-    f102400 = module_1462((arg0) => {
+    f102687 = undefined;
+    f102687 = module_1462((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
       return (function*(arg0) {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_2 = tmp5;
-                let closure_1 = tmp2;
-                closure_1 = undefined;
-                closure_2 = undefined;
-                let obj2 = lib(outer2_2[3]);
-                c3 = 1;
-                c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = obj2.getCurrentState(lib);
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_1 = arg1;
-              const _internetReachability = lib._internetReachability;
-              _internetReachability.update(closure_1);
-              closure_2 = lib._convertState(closure_1);
-              if (!lib) {
-                lib._latestState = closure_2;
-                const _subscriptions = lib._subscriptions;
-                const item = _subscriptions.forEach((arg0) => arg0(closure_2));
-              }
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = closure_2;
-              return obj;
-            }
-          } catch (tmp16) {
-            c4 = tmp;
-            throw tmp16;
-          }
+        let closure_2 = tmp5;
+        let closure_1 = tmp2;
+        const obj2 = lib(outer2_2[3]);
+        closure_1 = yield obj2.getCurrentState(lib);
+        const _internetReachability = lib._internetReachability;
+        _internetReachability.update(closure_1);
+        closure_2 = lib._convertState(closure_1);
+        if (!lib) {
+          lib._latestState = closure_2;
+          const _subscriptions = lib._subscriptions;
+          const item = _subscriptions.forEach((arg0) => arg0(closure_2));
         }
+        return closure_2;
       })();
     });
     this._fetchCurrentState = function(arg0) {
@@ -116,7 +64,7 @@ class State {
     };
     this._convertState = (isInternetReachable) => {
       let tmp = isInternetReachable;
-      if (typeof isInternetReachable.isInternetReachable !== "T") {
+      if (typeof isInternetReachable.isInternetReachable !== "boolean") {
         const obj = {};
         const merged = Object.assign(isInternetReachable);
         const _internetReachability = self._internetReachability;

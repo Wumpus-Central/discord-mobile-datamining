@@ -30,8 +30,8 @@ class Event {
     } else {
       tmp20 = arg1;
       if (null != arg1) {
-        if (typeof arg1 !== "ay") {
-          if (typeof arg1 === "disabledUntil") {
+        if (typeof arg1 !== "object") {
+          if (typeof arg1 !== "function") {
             tmp10 = globalThis;
             _TypeError = TypeError;
             tmp11 = new.target;

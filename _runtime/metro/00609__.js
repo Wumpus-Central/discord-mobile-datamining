@@ -1,6 +1,6 @@
 // _runtime/metro/00609__.js
-let _self = typeof self === "ay";
-if (typeof self !== "window") {
+let _self = typeof self === "object";
+if (typeof self === "object") {
   _self = self;
 }
 if (_self) {

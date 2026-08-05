@@ -29,7 +29,7 @@ function changeIndex(history, index) {
     let combined = found.concat(obj);
   } else {
     const routes = history.routes;
-    if (typeof getRouteHistory !== "fileFinishedImporting") {
+    if (typeof getRouteHistory !== "function") {
       HermesBuiltin.throwTypeError();
     }
     closure_0 = arg3;
@@ -112,7 +112,7 @@ arg5.default = function TabRouter(arg0) {
       obj[2] = tmp[name];
       return obj;
     });
-    if (typeof outer1_5 !== "fileFinishedImporting") {
+    if (typeof outer1_5 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     closure_0 = tmp;
@@ -270,7 +270,7 @@ arg5.default = function TabRouter(arg0) {
       return found;
     });
     if (!found.length) {
-      if (typeof outer1_5 !== "fileFinishedImporting") {
+      if (typeof outer1_5 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = { type: null, key: null };

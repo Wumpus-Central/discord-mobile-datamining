@@ -7,16 +7,16 @@ const map = new Map();
 const map1 = new Map();
 arg5.customBubblingEventTypes = obj;
 arg5.customDirectEventTypes = obj;
-arg5.register = function register(arg0, arg1) {
+arg5.register = function register(arg0, fn) {
   module(38)(!map.has(arg0), "Tried to register two views with the same name %s", arg0);
   let str = "null";
   const obj = map;
   const tmp = module(38);
-  if (null !== arg1) {
-    str = typeof arg1;
+  if (null !== fn) {
+    str = typeof fn;
   }
-  module(38)(typeof arg1 === "fileFinishedImporting", "View config getter callback for component `%s` must be a function (received `%s`)", arg0, str);
-  const result = obj.set(arg0, arg1);
+  module(38)(typeof fn === "function", "View config getter callback for component `%s` must be a function (received `%s`)", arg0, str);
+  const result = obj.set(arg0, fn);
   return arg0;
 };
 arg5.get = function get(arg0) {
@@ -25,13 +25,13 @@ arg5.get = function get(arg0) {
   let value = map1.get(arg0);
   if (null == value) {
     value = map.get(arg0);
-    if (typeof value !== "fileFinishedImporting") {
+    if (typeof value !== "function") {
       let str = "null";
       if (null !== value) {
         str = typeof value;
       }
       let str3 = "";
-      if (typeof arg0[0] !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof arg0[0] === "string") {
         str3 = "";
         if (obj3.test(arg0[0])) {
           str3 = " Make sure to start component names with a capital letter.";

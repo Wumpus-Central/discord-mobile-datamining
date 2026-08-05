@@ -14,12 +14,12 @@ arg5.default = {
     const promise = new Promise((arg0) => {
       let closure_0 = arg0;
       const immediate = setImmediate(() => {
-        if (typeof callback !== "window") {
+        if (typeof callback === "object") {
           if (null !== obj) {
-            if (typeof obj.gen === "fileFinishedImporting") {
+            if (typeof obj.gen === "function") {
               obj.gen().then(callback, outer2_2);
               const genResult = obj.gen();
-            } else if (typeof obj.run === "fileFinishedImporting") {
+            } else if (typeof obj.run === "function") {
               try {
                 obj.run();
                 callback();
@@ -35,7 +35,7 @@ arg5.default = {
             }
           }
         }
-        if (typeof callback === "fileFinishedImporting") {
+        if (typeof callback === "function") {
           try {
             obj();
             callback();

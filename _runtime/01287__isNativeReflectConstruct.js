@@ -30,7 +30,7 @@ function formatToMarkdownString(_1Ww0Hi, arg1) {
     tmp = closure_5;
   }
   let first = _1Ww0Hi;
-  if (typeof _1Ww0Hi !== "y") {
+  if (typeof _1Ww0Hi !== "string") {
     const self = this;
     first = this.bindFormatValues(tmp, _1Ww0Hi, arg1)[0];
   }

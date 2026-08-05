@@ -21,7 +21,7 @@ export const extractTargetInfo = function extractTargetInfo(method, params) {
       if (params != null) {
         tmp5 = params[tmp.targetField];
       }
-      if (typeof tmp5 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof tmp5 === "string") {
         tmp2 = params[tmp.targetField];
       }
     }
@@ -53,7 +53,7 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
           tmp4 = uri[tmp.argumentsField];
         }
         if (tmp4) {
-          if (typeof uri[tmp.argumentsField] !== "window") {
+          if (typeof uri[tmp.argumentsField] === "object") {
             if (null !== tmp5) {
               const _Object = Object;
               const entries = Object.entries(tmp5);

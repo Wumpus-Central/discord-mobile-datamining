@@ -12,7 +12,7 @@ function checkIfSnapshotChanged(arg0) {
     return true;
   }
 }
-if (typeof Object.is === "fileFinishedImporting") {
+if (typeof Object.is === "function") {
   const _Object = Object;
 } else {
   is = function is(arg0, arg1) {

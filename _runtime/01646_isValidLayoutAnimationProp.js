@@ -33,7 +33,7 @@ assertEasingIsWorklet.__closure = obj;
 assertEasingIsWorklet.__workletHash = 8431488219943;
 assertEasingIsWorklet.__initData = { code: "function assertEasingIsWorklet_Pnpm_utilTs2(easing){const{SHOULD_BE_USE_WEB,isWorkletFunction}=this.__closure;if(_WORKLET){return;}if(SHOULD_BE_USE_WEB){return;}if(easing!==null&&easing!==void 0&&easing.factory){return;}if(!isWorkletFunction(easing)){throw new ReanimatedError('The easing function is not a worklet. Please make sure you import `Easing` from react-native-reanimated.');}}" };
 function recognizePrefixSuffix(current) {
-  if (typeof current === "y") {
+  if (typeof current === "string") {
     const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
     if (match) {
       let str2 = match[3];
@@ -74,7 +74,7 @@ getReduceMotionFromConfig.__workletHash = 7977910521960;
 getReduceMotionFromConfig.__initData = { code: "function getReduceMotionFromConfig_Pnpm_utilTs4(config){const{ReduceMotion,isReduceMotionOnUI}=this.__closure;return!config||config===ReduceMotion.System?isReduceMotionOnUI.value:config===ReduceMotion.Always;}" };
 function getReduceMotionForAnimation(reduceMotion) {
   if (reduceMotion) {
-    if (typeof getReduceMotionFromConfig !== "fileFinishedImporting") {
+    if (typeof getReduceMotionFromConfig !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (reduceMotion) {
@@ -111,7 +111,7 @@ function decorateAnimation(isHigherOrder) {
   if (isHigherOrder.isHigherOrder) {
     isHigherOrder.onStart = (reduceMotion) => {
       if (undefined === reduceMotion.reduceMotion) {
-        if (typeof arrayOnFrame !== "fileFinishedImporting") {
+        if (typeof arrayOnFrame !== "function") {
           HermesBuiltin.throwTypeError();
         }
         reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
@@ -172,7 +172,7 @@ function decorateAnimation(isHigherOrder) {
       const items = [];
       const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
       const item = items1.forEach((arg0, arg1) => {
-        if (typeof outer1_8 !== "fileFinishedImporting") {
+        if (typeof outer1_8 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const obj = lib(1648);
@@ -184,7 +184,7 @@ function decorateAnimation(isHigherOrder) {
       const items3 = ["x", "y", "z"];
       [tmp3, tmp4, tmp5] = items;
       const item1 = items3.forEach((arg0, arg1) => {
-        if (typeof outer1_9 !== "fileFinishedImporting") {
+        if (typeof outer1_9 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const sum = tmp2 + dependencyMap * (lib.stopMatrices["r" + arg0] - tmp2);
@@ -242,7 +242,7 @@ function decorateAnimation(isHigherOrder) {
       let prefix;
       let strippedValue;
       if (undefined === reduceMotion.reduceMotion) {
-        if (typeof arrayOnFrame !== "fileFinishedImporting") {
+        if (typeof arrayOnFrame !== "function") {
           HermesBuiltin.throwTypeError();
         }
         reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
@@ -338,11 +338,11 @@ function decorateAnimation(isHigherOrder) {
               HermesBuiltin.arraySpread(current, 0);
               reduceMotion.current = items1;
               reduceMotion.onFrame = arrayOnFrame;
-            } else if (typeof current === "y") {
-              if (typeof colorOnFrame !== "fileFinishedImporting") {
+            } else if (typeof current === "string") {
+              if (typeof colorOnFrame !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof current === "y") {
+              if (typeof current === "string") {
                 const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                 if (match) {
                   let str2 = match[3];
@@ -364,10 +364,10 @@ function decorateAnimation(isHigherOrder) {
               }
               ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj);
               reduceMotion.strippedCurrent = strippedValue;
-              if (typeof colorOnFrame !== "fileFinishedImporting") {
+              if (typeof colorOnFrame !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof reduceMotion.toValue === "y") {
+              if (typeof reduceMotion.toValue === "string") {
                 const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                 if (match1) {
                   let str5 = match1[3];
@@ -393,10 +393,10 @@ function decorateAnimation(isHigherOrder) {
               reduceMotion.toValue = obj2.strippedValue;
               if (current2) {
                 if (current2 !== reduceMotion) {
-                  if (typeof tmp21 !== "fileFinishedImporting") {
+                  if (typeof tmp21 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof current2.current === "y") {
+                  if (typeof current2.current === "string") {
                     const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                     if (match2) {
                       let str8 = match2[3];
@@ -450,7 +450,7 @@ function decorateAnimation(isHigherOrder) {
               }
               reduceMotion.onFrame = closure_3;
             } else {
-              if (typeof current !== "window") {
+              if (typeof current === "object") {
                 if (null !== current) {
                   for (const key10034 in arg1) {
                     let tmp78 = key10034;
@@ -505,14 +505,14 @@ function defineAnimation(toValue, fn) {
       let closure_0;
       let closure_1;
       const tmp3 = callback();
-      if (typeof outer1_10 !== "fileFinishedImporting") {
+      if (typeof outer1_10 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       ({ onStart: closure_0, onFrame: closure_1 } = tmp3);
       if (tmp3.isHigherOrder) {
         tmp3.onStart = (reduceMotion) => {
           if (undefined === reduceMotion.reduceMotion) {
-            if (typeof arrayOnFrame !== "fileFinishedImporting") {
+            if (typeof arrayOnFrame !== "function") {
               HermesBuiltin.throwTypeError();
             }
             reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
@@ -573,7 +573,7 @@ function defineAnimation(toValue, fn) {
           const items = [];
           const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
           const item = items1.forEach((arg0, arg1) => {
-            if (typeof outer1_8 !== "fileFinishedImporting") {
+            if (typeof outer1_8 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             const obj = lib(1648);
@@ -585,7 +585,7 @@ function defineAnimation(toValue, fn) {
           const items3 = ["x", "y", "z"];
           [tmp3, tmp4, tmp5] = items;
           const item1 = items3.forEach((arg0, arg1) => {
-            if (typeof outer1_9 !== "fileFinishedImporting") {
+            if (typeof outer1_9 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             const sum = tmp2 + dependencyMap * (lib.stopMatrices["r" + arg0] - tmp2);
@@ -643,7 +643,7 @@ function defineAnimation(toValue, fn) {
           let prefix;
           let strippedValue;
           if (undefined === reduceMotion.reduceMotion) {
-            if (typeof arrayOnFrame !== "fileFinishedImporting") {
+            if (typeof arrayOnFrame !== "function") {
               HermesBuiltin.throwTypeError();
             }
             reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
@@ -739,11 +739,11 @@ function defineAnimation(toValue, fn) {
                   HermesBuiltin.arraySpread(current, 0);
                   reduceMotion.current = items1;
                   reduceMotion.onFrame = arrayOnFrame;
-                } else if (typeof current === "y") {
-                  if (typeof colorOnFrame !== "fileFinishedImporting") {
+                } else if (typeof current === "string") {
+                  if (typeof colorOnFrame !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof current === "y") {
+                  if (typeof current === "string") {
                     const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                     if (match) {
                       let str2 = match[3];
@@ -765,10 +765,10 @@ function defineAnimation(toValue, fn) {
                   }
                   ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj);
                   reduceMotion.strippedCurrent = strippedValue;
-                  if (typeof colorOnFrame !== "fileFinishedImporting") {
+                  if (typeof colorOnFrame !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof reduceMotion.toValue === "y") {
+                  if (typeof reduceMotion.toValue === "string") {
                     const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                     if (match1) {
                       let str5 = match1[3];
@@ -794,10 +794,10 @@ function defineAnimation(toValue, fn) {
                   reduceMotion.toValue = obj2.strippedValue;
                   if (current2) {
                     if (current2 !== reduceMotion) {
-                      if (typeof tmp21 !== "fileFinishedImporting") {
+                      if (typeof tmp21 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
-                      if (typeof current2.current === "y") {
+                      if (typeof current2.current === "string") {
                         const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                         if (match2) {
                           let str8 = match2[3];
@@ -851,7 +851,7 @@ function defineAnimation(toValue, fn) {
                   }
                   reduceMotion.onFrame = closure_3;
                 } else {
-                  if (typeof current !== "window") {
+                  if (typeof current === "object") {
                     if (null !== current) {
                       for (const key10034 in arg1) {
                         let tmp78 = key10034;
@@ -904,14 +904,14 @@ function defineAnimation(toValue, fn) {
       return fn;
     }
     const tmp7 = fn();
-    if (typeof tmp3 !== "fileFinishedImporting") {
+    if (typeof tmp3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     ({ onStart: closure_0, onFrame: dependencyMap } = tmp7);
     if (tmp7.isHigherOrder) {
       tmp7.onStart = (reduceMotion) => {
         if (undefined === reduceMotion.reduceMotion) {
-          if (typeof arrayOnFrame !== "fileFinishedImporting") {
+          if (typeof arrayOnFrame !== "function") {
             HermesBuiltin.throwTypeError();
           }
           reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
@@ -973,7 +973,7 @@ function defineAnimation(toValue, fn) {
         const items = [];
         const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
         const item = items1.forEach((arg0, arg1) => {
-          if (typeof outer1_8 !== "fileFinishedImporting") {
+          if (typeof outer1_8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const obj = lib(1648);
@@ -985,7 +985,7 @@ function defineAnimation(toValue, fn) {
         const items3 = ["x", "y", "z"];
         [tmp3, tmp4, tmp5] = items;
         const item1 = items3.forEach((arg0, arg1) => {
-          if (typeof outer1_9 !== "fileFinishedImporting") {
+          if (typeof outer1_9 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const sum = tmp2 + dependencyMap * (lib.stopMatrices["r" + arg0] - tmp2);
@@ -1043,7 +1043,7 @@ function defineAnimation(toValue, fn) {
         let prefix;
         let strippedValue;
         if (undefined === reduceMotion.reduceMotion) {
-          if (typeof arrayOnFrame !== "fileFinishedImporting") {
+          if (typeof arrayOnFrame !== "function") {
             HermesBuiltin.throwTypeError();
           }
           reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
@@ -1139,11 +1139,11 @@ function defineAnimation(toValue, fn) {
                 HermesBuiltin.arraySpread(current, 0);
                 reduceMotion.current = items1;
                 reduceMotion.onFrame = arrayOnFrame;
-              } else if (typeof current === "y") {
-                if (typeof colorOnFrame !== "fileFinishedImporting") {
+              } else if (typeof current === "string") {
+                if (typeof colorOnFrame !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof current === "y") {
+                if (typeof current === "string") {
                   const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                   if (match) {
                     let str2 = match[3];
@@ -1165,10 +1165,10 @@ function defineAnimation(toValue, fn) {
                 }
                 ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj);
                 reduceMotion.strippedCurrent = strippedValue;
-                if (typeof colorOnFrame !== "fileFinishedImporting") {
+                if (typeof colorOnFrame !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof reduceMotion.toValue === "y") {
+                if (typeof reduceMotion.toValue === "string") {
                   const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                   if (match1) {
                     let str5 = match1[3];
@@ -1194,10 +1194,10 @@ function defineAnimation(toValue, fn) {
                 reduceMotion.toValue = obj2.strippedValue;
                 if (current2) {
                   if (current2 !== reduceMotion) {
-                    if (typeof tmp21 !== "fileFinishedImporting") {
+                    if (typeof tmp21 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    if (typeof current2.current === "y") {
+                    if (typeof current2.current === "string") {
                       const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
                       if (match2) {
                         let str8 = match2[3];
@@ -1251,7 +1251,7 @@ function defineAnimation(toValue, fn) {
                 }
                 reduceMotion.onFrame = closure_3;
               } else {
-                if (typeof current !== "window") {
+                if (typeof current === "object") {
                   if (null !== current) {
                     for (const key10034 in arg1) {
                       let tmp78 = key10034;

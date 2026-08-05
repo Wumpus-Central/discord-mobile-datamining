@@ -12,9 +12,9 @@ function valueSetter(iter, value, flag) {
     _animation.cancelled = true;
     iter._animation = null;
   }
-  if (typeof value === "fileFinishedImporting") {
+  if (typeof value === "function") {
     obj = value;
-    if (typeof value !== "disabledUntil") {
+    if (typeof value === "function") {
       obj = value();
     }
     if (iter._value === obj.current) {

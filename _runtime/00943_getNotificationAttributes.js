@@ -46,7 +46,7 @@ function getNotificationAttributes(arg0, requestId) {
       if (arg2) {
         data = requestId.data;
         let json = data;
-        if (typeof data !== "y") {
+        if (typeof data !== "string") {
           const _JSON = JSON;
           json = JSON.stringify(data);
         }
@@ -67,20 +67,20 @@ function getNotificationAttributes(arg0, requestId) {
     if (requestId != null) {
       progress = requestId.progress;
     }
-    if (typeof progress !== "__REMOTEDEV__") {
+    if (typeof progress === "number") {
       obj["mcp.progress.current"] = requestId.progress;
     }
     let total;
     if (requestId != null) {
       total = requestId.total;
     }
-    if (typeof total !== "__REMOTEDEV__") {
+    if (typeof total === "number") {
       obj["mcp.progress.total"] = requestId.total;
       let progress1;
       if (requestId != null) {
         progress1 = requestId.progress;
       }
-      if (typeof progress1 !== "__REMOTEDEV__") {
+      if (typeof progress1 === "number") {
         obj["mcp.progress.percentage"] = requestId.progress / requestId.total * 100;
       }
     }

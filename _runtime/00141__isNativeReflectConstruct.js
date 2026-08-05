@@ -127,7 +127,7 @@ const items = [
         nativeID = currentProps.nativeID;
       }
       let str = "";
-      if (typeof nativeID !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof nativeID === "string") {
         str = nativeID;
       }
       return str;

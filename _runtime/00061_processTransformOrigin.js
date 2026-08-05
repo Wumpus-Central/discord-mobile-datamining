@@ -3,17 +3,17 @@ import "_slicedToArray";
 
 const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
 
-export default function processTransformOrigin(arg0) {
-  let tmp = arg0;
-  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+export default function processTransformOrigin(str) {
+  let tmp = str;
+  if (typeof str === "string") {
     regex.lastIndex = 0;
     const items = ["50%", "50%", 0];
-    let match = regex.exec(arg0);
+    let match = regex.exec(str);
     let num4 = 0;
     tmp = items;
     if (match) {
       while (true) {
-        let str = match[0];
+        str = match[0];
         let formatted = str.toLowerCase();
         let tmp3 = num4;
         let sum = num4 + 1;
@@ -48,7 +48,7 @@ export default function processTransformOrigin(arg0) {
             num = sum;
             if (0 === num4) {
               let tmp20 = regex;
-              let match1 = regex.exec(arg0);
+              let match1 = regex.exec(str);
               tmp = items;
               if (null == match1) {
                 break;
@@ -65,7 +65,7 @@ export default function processTransformOrigin(arg0) {
                   items[0] = "50%";
                   num = 2;
                 } else {
-                  let tmp11 = tmp8(38)(false, "Could not parse transform-origin: %s", arg0);
+                  let tmp11 = tmp8(38)(false, "Could not parse transform-origin: %s", str);
                   num = 2;
                 }
               }
@@ -73,7 +73,7 @@ export default function processTransformOrigin(arg0) {
             break;
           }
           let tmp15 = regex;
-          match = regex.exec(arg0);
+          match = regex.exec(str);
           num4 = num;
           tmp = items;
           if (!match) {

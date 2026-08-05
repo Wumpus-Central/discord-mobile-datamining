@@ -26,11 +26,11 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatReact(arg0, arg1, arg2) {
-  let bindFormatValuesResult = arg0;
-  if (typeof arg0 !== "y") {
+function formatReact(str) {
+  let bindFormatValuesResult = str;
+  if (typeof str !== "string") {
     const self = this;
-    bindFormatValuesResult = this.bindFormatValues(arg2, arg0, arg1);
+    bindFormatValuesResult = this.bindFormatValues(arg2, str, arg1);
   }
   return bindFormatValuesResult;
 }
@@ -66,7 +66,7 @@ let items = [
     key: "pushLiteralText",
     value: function pushLiteralText(arg0) {
       const self = this;
-      if (typeof this.result[this.result.length - 1] === "y") {
+      if (typeof this.result[this.result.length - 1] === "string") {
         let result = self.result;
         const diff = self.result.length - 1;
         result[diff] = result[diff] + arg0;
@@ -126,7 +126,7 @@ export const makeReactFormatter = function makeReactFormatter(arg0) {
       key: "pushLiteralText",
       value: function pushLiteralText(arg0) {
         const self = this;
-        if (typeof this.result[this.result.length - 1] === "y") {
+        if (typeof this.result[this.result.length - 1] === "string") {
           let result = self.result;
           const diff = self.result.length - 1;
           result[diff] = result[diff] + arg0;

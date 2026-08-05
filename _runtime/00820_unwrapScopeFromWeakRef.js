@@ -1,19 +1,19 @@
 // _runtime/00820_unwrapScopeFromWeakRef.js
 const require = arg1;
 const dependencyMap = arg6;
-function unwrapScopeFromWeakRef(deref) {
-  if (deref) {
-    if (typeof deref !== "window") {
-      if ("deref" in deref) {
-        if (typeof deref.deref === "fileFinishedImporting") {
+function unwrapScopeFromWeakRef(obj) {
+  if (obj) {
+    if (typeof obj === "object") {
+      if ("deref" in obj) {
+        if (typeof obj.deref === "function") {
           try {
-            return deref.deref();
+            return obj.deref();
           } catch (err) {
           }
         }
       }
     }
-    return deref;
+    return obj;
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -27,7 +27,7 @@ arg5.setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2
     const result = require(822) /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryIsolationScope, (function wrapScopeWithWeakRef(arg0) {
       try {
         let _WeakRef = callback(table[0]).GLOBAL_OBJ.WeakRef;
-        if (typeof _WeakRef === "fileFinishedImporting") {
+        if (typeof _WeakRef === "function") {
           _WeakRef = new _WeakRef(arg0);
           return _WeakRef;
         } else {

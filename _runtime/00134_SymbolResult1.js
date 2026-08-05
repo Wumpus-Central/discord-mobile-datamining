@@ -67,7 +67,7 @@ arg5.setTarget = function setTarget(bubbles, self) {
   bubbles[SymbolResult7] = self;
 };
 arg5.setEventInitTimeStamp = function setEventInitTimeStamp(arg0, timeStamp) {
-  if (typeof timeStamp !== "__REMOTEDEV__") {
+  if (typeof timeStamp === "number") {
     arg0[SymbolResult8] = timeStamp;
   }
 };

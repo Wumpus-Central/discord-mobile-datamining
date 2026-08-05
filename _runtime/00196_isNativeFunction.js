@@ -1,8 +1,8 @@
 // _runtime/00196_isNativeFunction.js
-arg5.isNativeFunction = function isNativeFunction(arg0) {
-  let tmp = typeof arg0 === "fileFinishedImporting";
-  if (typeof arg0 !== "disabledUntil") {
-    let str = arg0.toString();
+arg5.isNativeFunction = function isNativeFunction(fn) {
+  let tmp = typeof fn === "function";
+  if (typeof fn === "function") {
+    let str = fn.toString();
     str = "[native code]";
     tmp = str.indexOf("[native code]") > -1;
   }
@@ -12,8 +12,8 @@ arg5.hasNativeConstructor = function hasNativeConstructor(arg0, GeneratorFunctio
   let str = Object.getPrototypeOf(arg0).constructor;
   let tmp = str.name === GeneratorFunction;
   if (tmp) {
-    let tmp2 = typeof str === "fileFinishedImporting";
-    if (typeof str !== "disabledUntil") {
+    let tmp2 = typeof str === "function";
+    if (typeof str === "function") {
       str = str.toString();
       tmp2 = str.indexOf("[native code]") > -1;
     }

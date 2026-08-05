@@ -159,7 +159,7 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
         globalThis.requestAnimationFrame = tmp(1621).mockedRequestAnimationFrame;
       }
       const fn = function o() {
-        if (typeof closure_8 !== "fileFinishedImporting") {
+        if (typeof closure_8 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         requestAnimationFrame.__callGuardDEV = closure_7;
@@ -173,7 +173,7 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
         callback2();
         if (!closure_4) {
           callback(table[2]).setupMicrotasks();
-          if (typeof closure_11 !== "fileFinishedImporting") {
+          if (typeof closure_11 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           requestAnimationFrame = tmp.requestAnimationFrame;

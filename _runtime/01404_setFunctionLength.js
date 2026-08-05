@@ -2,22 +2,22 @@
 let closure_2 = require("hasPropertyDescriptors")();
 let closure_3 = require("getEvalledConstructor")("%Math.floor%");
 
-export default function setFunctionLength(arg0, arg1) {
-  if (typeof arg0 === "disabledUntil") {
+export default function setFunctionLength(fn, num) {
+  if (typeof fn !== "function") {
     const tmp25 = new require(541)("`fn` is not a function");
     throw tmp25;
   } else {
-    if (typeof arg1 !== "__REMOTEDEV__") {
-      if (arg1 >= 0) {
-        if (arg1 <= 4294967295) {
-          if (callback(arg1) === arg1) {
+    if (typeof num === "number") {
+      if (num >= 0) {
+        if (num <= 4294967295) {
+          if (callback(num) === num) {
             let flag = true;
             let flag2 = true;
-            if ("length" in arg0) {
+            if ("length" in fn) {
               flag = true;
               flag2 = true;
               if (require(542)) {
-                const tmp4 = tmp2(542)(arg0, "length");
+                const tmp4 = tmp2(542)(fn, "length");
                 let tmp5 = tmp4;
                 if (tmp4) {
                   tmp5 = !tmp4.configurable;
@@ -48,12 +48,12 @@ export default function setFunctionLength(arg0, arg1) {
             if (flag2) {
               const tmp10 = require(1406) /* defineDataProperty */;
               if (closure_2) {
-                tmp10(arg0, "length", arg1, true, true);
+                tmp10(fn, "length", num, true, true);
               } else {
-                tmp10(arg0, "length", arg1);
+                tmp10(fn, "length", num);
               }
             }
-            return arg0;
+            return fn;
           }
         }
       }

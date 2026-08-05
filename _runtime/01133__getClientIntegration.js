@@ -30,7 +30,7 @@ if (!fn) {
     }
     if (null != obj) {
       const _Object3 = Object;
-      if (typeof Object.getOwnPropertySymbols !== "disabledUntil") {
+      if (typeof Object.getOwnPropertySymbols === "function") {
         const _Object4 = Object;
         const ownPropertySymbols = Object.getOwnPropertySymbols(obj);
         let num = 0;
@@ -91,7 +91,7 @@ arg5.feedbackIntegration = (D) => {
   return obj;
 };
 arg5.getFeedbackOptions = () => {
-  if (typeof _getClientIntegration !== "fileFinishedImporting") {
+  if (typeof _getClientIntegration !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
@@ -104,7 +104,7 @@ arg5.getFeedbackOptions = () => {
   return integrationByName ? integrationByName.options : {};
 };
 arg5.getFeedbackButtonOptions = () => {
-  if (typeof _getClientIntegration !== "fileFinishedImporting") {
+  if (typeof _getClientIntegration !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
@@ -117,7 +117,7 @@ arg5.getFeedbackButtonOptions = () => {
   return integrationByName ? integrationByName.buttonOptions : {};
 };
 arg5.getScreenshotButtonOptions = () => {
-  if (typeof _getClientIntegration !== "fileFinishedImporting") {
+  if (typeof _getClientIntegration !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
@@ -130,7 +130,7 @@ arg5.getScreenshotButtonOptions = () => {
   return integrationByName ? integrationByName.screenshotButtonOptions : {};
 };
 arg5.getColorScheme = () => {
-  if (typeof _getClientIntegration !== "fileFinishedImporting") {
+  if (typeof _getClientIntegration !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
@@ -151,7 +151,7 @@ arg5.getColorScheme = () => {
   return str;
 };
 arg5.getFeedbackLightTheme = () => {
-  if (typeof _getClientIntegration !== "fileFinishedImporting") {
+  if (typeof _getClientIntegration !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const client = require(817) /* registerSpanErrorInstrumentation */.getClient();
@@ -164,7 +164,7 @@ arg5.getFeedbackLightTheme = () => {
   return integrationByName ? integrationByName.themeLight : {};
 };
 arg5.getFeedbackDarkTheme = () => {
-  if (typeof _getClientIntegration !== "fileFinishedImporting") {
+  if (typeof _getClientIntegration !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const client = require(817) /* registerSpanErrorInstrumentation */.getClient();

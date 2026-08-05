@@ -8,7 +8,7 @@ export default function _default() {
       let tmp = item10007;
       if (item10007) {
         let tmp2 = item10007;
-        if (typeof tmp === "fileFinishedImporting") {
+        if (typeof tmp === "function") {
           let tmp3 = item10007;
           let tmpResult = tmp(arg0);
         } else {

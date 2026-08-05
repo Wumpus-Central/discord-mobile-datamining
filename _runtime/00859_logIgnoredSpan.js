@@ -31,7 +31,7 @@ arg5.shouldIgnoreSpan = function shouldIgnoreSpan(result, ignoreSpans) {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp8 = nextResult;
-        if (typeof nextResult !== "y") {
+        if (typeof nextResult !== "string") {
           let tmp37 = nextResult;
           let _RegExp = RegExp;
           if (!(tmp9 instanceof RegExp)) {

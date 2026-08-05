@@ -160,13 +160,13 @@ arg5.addResponsesApiAttributes = function addResponsesApiAttributes(setAttribute
     if (Array.isArray(created_at.output)) {
       if (created_at.output.length > 0) {
         const output = created_at.output;
-        const found = output.filter((type) => {
-          let tmp = typeof type === "ay";
-          if (typeof type !== "window") {
-            tmp = null !== type;
+        const found = output.filter((obj) => {
+          let tmp = typeof obj === "object";
+          if (typeof obj === "object") {
+            tmp = null !== obj;
           }
           if (tmp) {
-            tmp = "function_call" === type.type;
+            tmp = "function_call" === obj.type;
           }
           return tmp;
         });
@@ -217,7 +217,7 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
     obj[tmp(958).GEN_AI_REQUEST_DIMENSIONS_ATTRIBUTE] = first.dimensions;
   }
   if ("conversation" in first) {
-    if (typeof first.conversation === "y") {
+    if (typeof first.conversation === "string") {
       let previous_response_id = first.conversation;
     }
     if (previous_response_id) {
@@ -226,7 +226,7 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
     return obj;
   }
   if ("previous_response_id" in first) {
-    if (typeof first.previous_response_id !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof first.previous_response_id === "string") {
       previous_response_id = first.previous_response_id;
     }
   }
@@ -235,45 +235,45 @@ arg5.getOperationName = getOperationName;
 arg5.getSpanOperation = function getSpanOperation(outer1_1) {
   return "gen_ai." + getOperationName(outer1_1);
 };
-arg5.isChatCompletionChunk = function isChatCompletionChunk(object) {
-  let tmp = null !== object && typeof object === "ay";
+arg5.isChatCompletionChunk = function isChatCompletionChunk(obj) {
+  let tmp = null !== obj && typeof obj === "object";
   if (tmp) {
-    tmp = "object" in object;
+    tmp = "object" in obj;
   }
   if (tmp) {
-    tmp = "chat.completion.chunk" === object.object;
-  }
-  return tmp;
-};
-arg5.isChatCompletionResponse = function isChatCompletionResponse(object) {
-  let tmp = null !== object && typeof object === "ay";
-  if (tmp) {
-    tmp = "object" in object;
-  }
-  if (tmp) {
-    tmp = "chat.completion" === object.object;
+    tmp = "chat.completion.chunk" === obj.object;
   }
   return tmp;
 };
-arg5.isConversationResponse = function isConversationResponse(object) {
-  let tmp = null !== object && typeof object === "ay";
+arg5.isChatCompletionResponse = function isChatCompletionResponse(closure_1) {
+  let tmp = null !== closure_1 && typeof closure_1 === "object";
   if (tmp) {
-    tmp = "object" in object;
+    tmp = "object" in closure_1;
   }
   if (tmp) {
-    tmp = "conversation" === object.object;
+    tmp = "chat.completion" === closure_1.object;
   }
   return tmp;
 };
-arg5.isEmbeddingsResponse = function isEmbeddingsResponse(object) {
-  if (null !== object) {
-    if (typeof object !== "window") {
-      if ("object" in object) {
-        let hasItem = "list" === object.object && typeof object.model === "y";
+arg5.isConversationResponse = function isConversationResponse(closure_1) {
+  let tmp = null !== closure_1 && typeof closure_1 === "object";
+  if (tmp) {
+    tmp = "object" in closure_1;
+  }
+  if (tmp) {
+    tmp = "conversation" === closure_1.object;
+  }
+  return tmp;
+};
+arg5.isEmbeddingsResponse = function isEmbeddingsResponse(closure_1) {
+  if (null !== closure_1) {
+    if (typeof closure_1 === "object") {
+      if ("object" in closure_1) {
+        let hasItem = "list" === closure_1.object && typeof closure_1.model === "string";
         if (hasItem) {
-          const formatted = object.model.toLowerCase();
+          const formatted = closure_1.model.toLowerCase();
           hasItem = formatted.includes("embedding");
-          const str2 = object.model;
+          const str2 = closure_1.model;
         }
         return hasItem;
       }
@@ -281,26 +281,26 @@ arg5.isEmbeddingsResponse = function isEmbeddingsResponse(object) {
   }
   return false;
 };
-arg5.isResponsesApiResponse = function isResponsesApiResponse(object) {
-  let tmp = null !== object && typeof object === "ay";
+arg5.isResponsesApiResponse = function isResponsesApiResponse(closure_1) {
+  let tmp = null !== closure_1 && typeof closure_1 === "object";
   if (tmp) {
-    tmp = "object" in object;
+    tmp = "object" in closure_1;
   }
   if (tmp) {
-    tmp = "response" === object.object;
+    tmp = "response" === closure_1.object;
   }
   return tmp;
 };
-arg5.isResponsesApiStreamEvent = function isResponsesApiStreamEvent(type) {
-  let startsWithResult = null !== type && typeof type === "ay";
+arg5.isResponsesApiStreamEvent = function isResponsesApiStreamEvent(obj) {
+  let startsWithResult = null !== obj && typeof obj === "object";
   if (startsWithResult) {
-    startsWithResult = "type" in type;
+    startsWithResult = "type" in obj;
   }
   if (startsWithResult) {
-    startsWithResult = typeof type.type === "y";
+    startsWithResult = typeof obj.type === "string";
   }
   if (startsWithResult) {
-    type = type.type;
+    const type = obj.type;
     startsWithResult = type.startsWith("response.");
   }
   return startsWithResult;

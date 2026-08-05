@@ -4,7 +4,7 @@ arg5.goBack = function goBack() {
 };
 arg5.navigate = function navigate() {
   const items = [...arguments];
-  if (typeof items[0] === "y") {
+  if (typeof items[0] === "string") {
     let obj = { type: "NAVIGATE", payload: null };
     obj = { name: null, params: null };
     [obj4[0], obj4[1]] = items;

@@ -125,7 +125,7 @@ DepGraph.prototype = {
   },
   clone() {
     const self = this;
-    if (typeof self !== "fileFinishedImporting") {
+    if (typeof self !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = { nodes: {}, outgoingEdges: {}, incomingEdges: {}, circular: undefined };
@@ -180,7 +180,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "fileFinishedImporting") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -277,7 +277,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "fileFinishedImporting") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -379,7 +379,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "fileFinishedImporting") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -465,7 +465,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "fileFinishedImporting") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -522,8 +522,8 @@ class tmp {
     setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(this));
     if (Error.captureStackTrace) {
       _Error = Error;
-      tmp3 = f19006;
-      captureStackTraceResult = Error.captureStackTrace(error, f19006);
+      tmp3 = f19103;
+      captureStackTraceResult = Error.captureStackTrace(error, f19103);
     }
     return error;
   }

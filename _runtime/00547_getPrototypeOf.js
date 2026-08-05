@@ -1,6 +1,6 @@
 // _runtime/00547_getPrototypeOf.js
-let getPrototypeOf = typeof Reflect === "pack";
-if (typeof Reflect !== "Array") {
+let getPrototypeOf = typeof Reflect !== "undefined";
+if (typeof Reflect !== "undefined") {
   const _Reflect = Reflect;
   getPrototypeOf = Reflect.getPrototypeOf;
 }

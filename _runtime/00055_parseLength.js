@@ -26,7 +26,7 @@ arg5.default = function processBoxShadow(str) {
     return items;
   } else {
     let tmp48 = str;
-    if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof str === "string") {
       tmp48 = (function parseBoxShadowString(str) {
         const items = [];
         const parts = str.split(closure_2);
@@ -178,7 +178,7 @@ arg5.default = function processBoxShadow(str) {
         let tmp50 = key10025;
         if ("offsetX" === key10025) {
           let tmp39 = nextResult;
-          if (typeof tmp5.offsetX === "y") {
+          if (typeof tmp5.offsetX === "string") {
             let tmp40 = parseLength;
             let tmp41 = nextResult;
             let offsetX = parseLength(tmp5.offsetX);
@@ -200,7 +200,7 @@ arg5.default = function processBoxShadow(str) {
         } else {
           if ("offsetY" === key10025) {
             let tmp32 = nextResult;
-            if (typeof tmp5.offsetY === "y") {
+            if (typeof tmp5.offsetY === "string") {
               let tmp33 = parseLength;
               let tmp34 = nextResult;
               let offsetY = parseLength(tmp5.offsetY);
@@ -222,7 +222,7 @@ arg5.default = function processBoxShadow(str) {
           } else {
             if ("spreadDistance" === key10025) {
               let tmp25 = nextResult;
-              if (typeof tmp5.spreadDistance === "y") {
+              if (typeof tmp5.spreadDistance === "string") {
                 let tmp26 = parseLength;
                 let tmp27 = nextResult;
                 let spreadDistance = parseLength(tmp5.spreadDistance);
@@ -244,7 +244,7 @@ arg5.default = function processBoxShadow(str) {
             } else {
               if ("blurRadius" === key10025) {
                 let tmp17 = nextResult;
-                if (typeof tmp5.blurRadius === "y") {
+                if (typeof tmp5.blurRadius === "string") {
                   let tmp18 = parseLength;
                   let tmp19 = nextResult;
                   let blurRadius = parseLength(tmp5.blurRadius);

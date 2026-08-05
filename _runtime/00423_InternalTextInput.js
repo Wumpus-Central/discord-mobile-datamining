@@ -45,9 +45,9 @@ function InternalTextInput(value) {
     obj[1] = selection.start;
     tmp9 = obj;
   }
-  if (typeof value.value === "y") {
+  if (typeof value.value === "string") {
     let defaultValue = value.value;
-  } else if (typeof value.defaultValue !== "__FORMATJS_LISTFORMAT_DATA__") {
+  } else if (typeof value.defaultValue === "string") {
     defaultValue = value.defaultValue;
   }
   if (!Commands) {
@@ -343,7 +343,7 @@ function InternalTextInput(value) {
       fontWeight = tmp36.fontWeight;
     }
     let tmp39 = null;
-    if (typeof fontWeight !== "__REMOTEDEV__") {
+    if (typeof fontWeight === "number") {
       obj = { fontWeight: tmp36.fontWeight.toString() };
       tmp39 = obj;
       const str7 = tmp36.fontWeight;

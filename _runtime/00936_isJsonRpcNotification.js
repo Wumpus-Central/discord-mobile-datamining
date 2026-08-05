@@ -3,8 +3,8 @@ const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.isJsonRpcNotification = function isJsonRpcNotification(closure_2) {
-  let tmp = typeof closure_2 === "ay";
-  if (typeof closure_2 !== "window") {
+  let tmp = typeof closure_2 === "object";
+  if (typeof closure_2 === "object") {
     tmp = null !== closure_2;
   }
   if (tmp) {
@@ -21,28 +21,28 @@ arg5.isJsonRpcNotification = function isJsonRpcNotification(closure_2) {
   }
   return tmp;
 };
-arg5.isJsonRpcRequest = function isJsonRpcRequest(jsonrpc) {
-  let tmp = typeof jsonrpc === "ay";
-  if (typeof jsonrpc !== "window") {
-    tmp = null !== jsonrpc;
+arg5.isJsonRpcRequest = function isJsonRpcRequest(method) {
+  let tmp = typeof method === "object";
+  if (typeof method === "object") {
+    tmp = null !== method;
   }
   if (tmp) {
-    tmp = "jsonrpc" in jsonrpc;
+    tmp = "jsonrpc" in method;
   }
   if (tmp) {
-    tmp = "2.0" === jsonrpc.jsonrpc;
+    tmp = "2.0" === method.jsonrpc;
   }
   if (tmp) {
-    tmp = "method" in jsonrpc;
+    tmp = "method" in method;
   }
   if (tmp) {
-    tmp = "id" in jsonrpc;
+    tmp = "id" in method;
   }
   return tmp;
 };
 arg5.isJsonRpcResponse = function isJsonRpcResponse(closure_2) {
-  let tmp = typeof closure_2 === "ay";
-  if (typeof closure_2 !== "window") {
+  let tmp = typeof closure_2 === "object";
+  if (typeof closure_2 === "object") {
     tmp = null !== closure_2;
   }
   if (tmp) {
@@ -64,24 +64,24 @@ arg5.isJsonRpcResponse = function isJsonRpcResponse(closure_2) {
   return tmp;
 };
 arg5.isValidContentItem = function isValidContentItem(clientInfo) {
-  return null != clientInfo && typeof clientInfo === "ay";
+  return null != clientInfo && typeof clientInfo === "object";
 };
-arg5.validateMcpServerInstance = function validateMcpServerInstance(arg0) {
-  let flag = typeof arg0 === "ay";
-  if (typeof arg0 !== "window") {
-    flag = null !== arg0;
+arg5.validateMcpServerInstance = function validateMcpServerInstance(obj) {
+  let flag = typeof obj === "object";
+  if (typeof obj === "object") {
+    flag = null !== obj;
   }
   if (flag) {
-    flag = "resource" in arg0;
+    flag = "resource" in obj;
   }
   if (flag) {
-    flag = "tool" in arg0;
+    flag = "tool" in obj;
   }
   if (flag) {
-    flag = "prompt" in arg0;
+    flag = "prompt" in obj;
   }
   if (flag) {
-    flag = "connect" in arg0;
+    flag = "connect" in obj;
   }
   if (!flag) {
     flag = false;

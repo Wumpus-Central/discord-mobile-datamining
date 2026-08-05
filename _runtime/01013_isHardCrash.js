@@ -1,7 +1,7 @@
 // _runtime/01013_isHardCrash.js
 arg5.isHardCrash = function isHardCrash(outer1_0) {
   let str = outer1_0;
-  if (typeof outer1_0 !== "y") {
+  if (typeof outer1_0 !== "string") {
     if ("exception" in str) {
       const exception = str.exception;
       let values;

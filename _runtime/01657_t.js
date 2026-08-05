@@ -43,7 +43,7 @@ let fn = function t(toValue, userConfig, callback) {
                 ({ startTime: arg0.startTime, startValue: arg0.startValue } = type);
               }
               arg0.current = current;
-              if (typeof obj.easing === "ay") {
+              if (typeof obj.easing === "object") {
                 const easing = tmp2.easing;
                 arg0.easing = easing.factory();
               } else {

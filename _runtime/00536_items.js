@@ -27,18 +27,18 @@ function arrayToObject(arg0, plainObjects) {
   obj = {};
 }
 let c6 = 1024;
-function merge(arr, arr2, plainObjects) {
+function merge(arr, obj, plainObjects) {
   let closure_0 = arr;
-  let closure_1 = arr2;
+  let closure_1 = obj;
   let closure_2 = plainObjects;
-  if (arr2) {
-    if (typeof arr2 !== "ay") {
-      if (typeof arr2 === "disabledUntil") {
+  if (obj) {
+    if (typeof obj !== "object") {
+      if (typeof obj !== "function") {
         if (isArray(arr)) {
-          arr.push(arr2);
+          arr.push(obj);
         } else {
           if (arr) {
-            if (typeof arr !== "window") {
+            if (typeof arr === "object") {
               let tmp11 = plainObjects;
               if (plainObjects) {
                 tmp11 = plainObjects.plainObjects || plainObjects.allowPrototypes;
@@ -46,32 +46,32 @@ function merge(arr, arr2, plainObjects) {
               }
               if (tmp11) {
                 if (tmp11) {
-                  arr[arr2] = true;
+                  arr[obj] = true;
                 }
               } else {
                 let call = closure_2.call;
                 const _Object2 = Object;
-                !(typeof call === "unknown" ? closure_2(arr2) : call(prototype, arr2));
+                !(typeof call === "unknown" ? closure_2(obj) : call(prototype, obj));
                 const tmp12 = closure_2;
               }
             }
           }
-          const items = [arr, arr2];
+          const items = [arr, obj];
           return items;
         }
         return arr;
       }
     }
     if (arr) {
-      if (typeof arr !== "window") {
+      if (typeof arr === "object") {
         let tmp2 = arr;
         if (tmp) {
-          if (typeof arrayToObject !== "fileFinishedImporting") {
+          if (typeof arrayToObject !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (plainObjects) {
             if (plainObjects.plainObjects) {
-              let obj = Object.create(null);
+              obj = Object.create(null);
             }
             let num = 0;
             tmp2 = obj;
@@ -89,23 +89,23 @@ function merge(arr, arr2, plainObjects) {
           obj = {};
         }
         if (isArray(arr)) {
-          if (tmp16(arr2)) {
-            const item = arr2.forEach((arg0, arg1) => {
+          if (tmp16(obj)) {
+            const item = obj.forEach((obj) => {
               const call = closure_2.call;
               let arr = closure_0;
               if (typeof call === "unknown" ? closure_2(arg1) : call(arr, arg1)) {
                 if (arr[arg1]) {
-                  if (typeof tmp2 !== "window") {
-                    if (arg0) {
-                      if (typeof arg0 === "ay") {
-                        arr[arg1] = outer1_7(tmp2, arg0, closure_2);
+                  if (typeof tmp2 === "object") {
+                    if (obj) {
+                      if (typeof obj === "object") {
+                        arr[arg1] = outer1_7(tmp2, obj, closure_2);
                       }
                     }
                   }
                 }
-                arr = arr.push(arg0);
+                arr = arr.push(obj);
               } else {
-                arr[arg1] = arg0;
+                arr[arg1] = obj;
               }
             });
             let reduced = arr;
@@ -113,7 +113,7 @@ function merge(arr, arr2, plainObjects) {
           return reduced;
         }
         const _Object = Object;
-        const keys = Object.keys(arr2);
+        const keys = Object.keys(obj);
         reduced = keys.reduce((arg0, arg1) => {
           const call = closure_2.call;
           if (typeof call === "unknown" ? closure_2(arg1) : call(arg0, arg1)) {
@@ -123,11 +123,11 @@ function merge(arr, arr2, plainObjects) {
           }
           return arg0;
         }, tmp2);
-        tmp = isArray(arr) && !isArray(arr2);
+        tmp = isArray(arr) && !isArray(obj);
       }
     }
     const items1 = [arr];
-    return items1.concat(arr2);
+    return items1.concat(obj);
   } else {
     return arr;
   }
@@ -160,9 +160,9 @@ export default {
       for (let num2 = 0; num2 < keys.length; num2 = num2 + 1) {
         let tmp4 = keys[num2];
         let tmp5 = tmp2[tmp4];
-        let tmp6 = typeof tmp5 === "ay";
+        let tmp6 = typeof tmp5 === "object";
         let tmp7 = num2;
-        if (typeof tmp5 !== "window") {
+        if (typeof tmp5 === "object") {
           tmp6 = null !== tmp5;
         }
         if (tmp6) {
@@ -210,18 +210,18 @@ export default {
       }
     }
   },
-  encode(arg0, arg1, arg2, arg3, arg4) {
-    if (0 === arg0.length) {
-      return arg0;
-    } else if (typeof arg0 === "e") {
+  encode(str) {
+    if (0 === str.length) {
+      return str;
+    } else if (typeof str === "symbol") {
       const _Symbol = Symbol;
       const call = toString.call;
-      typeof call === "unknown" ? toString() : call(arg0);
+      typeof call === "unknown" ? toString() : call(str);
     } else {
-      let StringResult = arg0;
-      if (typeof arg0 !== "y") {
+      let StringResult = str;
+      if (typeof str !== "string") {
         const _String = String;
-        StringResult = String(arg0);
+        StringResult = String(str);
       }
       if ("iso-8859-1" === arg2) {
         const _escape = escape;
@@ -302,17 +302,17 @@ export default {
       }
     }
   },
-  isBuffer(arg0) {
-    let tmp = !arg0;
-    if (arg0) {
-      tmp = typeof arg0 === "window";
+  isBuffer(obj) {
+    let tmp = !obj;
+    if (obj) {
+      tmp = typeof obj !== "object";
     }
     let tmp2 = !tmp;
     if (!tmp) {
-      let isBufferResult = arg0.constructor && arg0.constructor.isBuffer;
+      let isBufferResult = obj.constructor && obj.constructor.isBuffer;
       if (isBufferResult) {
-        const constructor = arg0.constructor;
-        isBufferResult = constructor.isBuffer(arg0);
+        const constructor = obj.constructor;
+        isBufferResult = constructor.isBuffer(obj);
       }
       tmp2 = isBufferResult;
     }

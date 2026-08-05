@@ -5,7 +5,7 @@ function noop() {
 class Promise {
   constructor(arg0) {
     self = this;
-    if (typeof this === "window") {
+    if (typeof this !== "object") {
       tmp8 = globalThis;
       _TypeError2 = TypeError;
       tmp9 = new.target;
@@ -16,7 +16,7 @@ class Promise {
       throw typeError;
     } else {
       tmp13 = global;
-      if (typeof global === "disabledUntil") {
+      if (typeof global !== "function") {
         tmp3 = globalThis;
         _TypeError = TypeError;
         tmp4 = new.target;
@@ -50,7 +50,7 @@ class Promise {
       tmp14 = new.target;
       constructor = new self.constructor((arg0, arg1) => {
         let obj = Object.create(outer1_3.prototype);
-        if (typeof obj === "window") {
+        if (typeof obj !== "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("Promises must be constructed via new");
           throw typeError;
@@ -64,12 +64,12 @@ class Promise {
           obj = Object.create(outer1_6.prototype);
           obj = {};
           let tmp11 = null;
-          if (typeof closure_1 !== "disabledUntil") {
+          if (typeof closure_1 === "function") {
             tmp11 = closure_1;
           }
           obj.onFulfilled = tmp11;
           let tmp12 = null;
-          if (typeof closure_2 !== "disabledUntil") {
+          if (typeof closure_2 === "function") {
             tmp12 = tmp9;
           }
           obj.onRejected = tmp12;
@@ -82,7 +82,7 @@ class Promise {
     } else {
       tmp17 = self;
       obj = Object.create(tmp.prototype);
-      if (typeof obj === "window") {
+      if (typeof obj !== "object") {
         tmp8 = globalThis;
         _TypeError = TypeError;
         tmp9 = new.target;
@@ -104,12 +104,12 @@ class Promise {
         obj1 = Object.create(Handler.prototype);
         obj = {};
         tmp5 = null;
-        if (typeof global !== "disabledUntil") {
+        if (typeof global === "function") {
           tmp5 = global;
         }
         obj.onFulfilled = tmp5;
         tmp6 = null;
-        if (typeof require !== "disabledUntil") {
+        if (typeof require === "function") {
           tmp6 = require;
         }
         obj.onRejected = tmp6;
@@ -229,12 +229,12 @@ function handle(_65, _72) {
   }
   obj = Promise;
 }
-function resolve(_40, _55) {
+function resolve(_40, self) {
   let length;
   let length2;
   let length3;
   let length4;
-  if (_55 === _40) {
+  if (self === _40) {
     const _TypeError = TypeError;
     const typeError = new TypeError("A promise cannot be resolved with itself.");
     _40._65 = 2;
@@ -259,16 +259,16 @@ function resolve(_40, _55) {
       _40._72 = null;
     }
   } else {
-    if (_55) {
-      if (typeof _55 === "ay") {
-        const obj = (function getThen(_55) {
+    if (self) {
+      if (typeof self === "object") {
+        const obj = (function getThen(self) {
           try {
-            return _55.then;
+            return self.then;
           } catch (tmp2) {
             let closure_1 = tmp2;
             return closure_2;
           }
-        })(_55);
+        })(self);
         if (obj === closure_2) {
           _40._65 = 2;
           _40._55 = c1;
@@ -293,9 +293,9 @@ function resolve(_40, _55) {
           }
         } else {
           if (obj === _40.then) {
-            if (_55 instanceof Promise) {
+            if (self instanceof Promise) {
               _40._65 = 3;
-              _40._55 = _55;
+              _40._55 = self;
               if (1 === _40._40) {
                 handle(_40, _40._72);
                 _40._72 = null;
@@ -314,14 +314,14 @@ function resolve(_40, _55) {
               }
             }
           }
-          if (typeof obj === "fileFinishedImporting") {
-            doResolve(obj.bind(_55), _40);
+          if (typeof obj === "function") {
+            doResolve(obj.bind(self), _40);
           }
         }
       }
     }
     _40._65 = 1;
-    _40._55 = _55;
+    _40._55 = self;
     if (1 === _40._40) {
       handle(_40, _40._72);
       _40._72 = null;
@@ -340,16 +340,16 @@ function resolve(_40, _55) {
     }
   }
 }
-function Handler(arg0, arg1, promise) {
+function Handler(fn, fn2, promise) {
   const obj = {};
   let tmp = null;
-  if (typeof arg0 !== "disabledUntil") {
-    tmp = arg0;
+  if (typeof fn === "function") {
+    tmp = fn;
   }
   obj.onFulfilled = tmp;
   let tmp2 = null;
-  if (typeof arg1 !== "disabledUntil") {
-    tmp2 = arg1;
+  if (typeof fn2 === "function") {
+    tmp2 = fn2;
   }
   obj.onRejected = tmp2;
   obj.promise = promise;

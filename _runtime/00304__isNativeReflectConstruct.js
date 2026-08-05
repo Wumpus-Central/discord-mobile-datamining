@@ -112,7 +112,7 @@ let items1 = [
       StatusBar._defaultProps.backgroundColor.value = value;
       const tmp3 = StatusBar(50)(value);
       if (null != tmp3) {
-        tmp(38)(typeof tmp3 === "Object", "Unexpected color given for StatusBar.setBackgroundColor");
+        tmp(38)(typeof tmp3 === "number", "Unexpected color given for StatusBar.setBackgroundColor");
         tmp(305).setColor(tmp3, flag);
         const tmpResult = tmp(305);
       } else {
@@ -308,7 +308,7 @@ importDefaultResultResult._updatePropsStack = () => {
       const _HermesInternal = HermesInternal;
       console.warn("`StatusBar._updatePropsStack`: Color " + reduced.backgroundColor.value + " parsed to null or undefined");
     } else {
-      tmp4(38)(typeof tmp7 === "Object", "Unexpected color given in StatusBar._updatePropsStack");
+      tmp4(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
       let tmp4Result = tmp4(305);
       tmp4Result.setColor(tmp7, reduced.backgroundColor.animated);
     }

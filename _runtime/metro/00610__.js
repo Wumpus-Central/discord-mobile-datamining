@@ -1,6 +1,6 @@
 // _runtime/metro/00610__.js
-let tmp = typeof global === "ay";
-if (typeof global !== "window") {
+let tmp = typeof global === "object";
+if (typeof global === "object") {
   tmp = global;
 }
 if (tmp) {

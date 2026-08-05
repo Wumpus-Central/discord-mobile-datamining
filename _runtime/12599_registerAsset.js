@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 64, height: 64, scales: [1], hash: "7820559d802b687a2589b1c9f32203ab", name: "img_wumpus_nitro_boost", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300.5, height: 175, scales: [2, 3], hash: "034593f3dac51b7d85899e7191ac5a9f", name: "client_theme", type: "png" });

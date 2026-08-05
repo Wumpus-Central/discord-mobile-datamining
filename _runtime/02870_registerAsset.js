@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/application_account_linking", scales: [1], hash: "7bd1d391e8b9022004489c52afb85bf3", name: "AccountLinking.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3ByZW1pdW1fZ3JvdXA=", scales: [1], hash: "600bddaf996145466d93572b2e190e8a", name: "da.messages.600bddaf996145466d93572b2e190e8a.compiled.messages", type: "jsona" });

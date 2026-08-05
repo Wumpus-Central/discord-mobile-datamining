@@ -37,10 +37,10 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
     } else {
       obj = substr(1646);
       const fn = function s() {
-        mapped = mapped.map((arg0) => {
-          let tmp = arg0;
-          if (typeof arg0 !== "disabledUntil") {
-            tmp = arg0();
+        mapped = mapped.map((fn) => {
+          let tmp = fn;
+          if (typeof fn === "function") {
+            tmp = fn();
           }
           tmp.finished = false;
           return tmp;
@@ -119,8 +119,8 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
             if (!arg0) {
               const item = mapped.forEach((callback) => {
                 callback = callback.callback;
-                let finished = typeof callback === "disabledUntil";
-                if (typeof callback !== "disabledUntil") {
+                let finished = typeof callback !== "function";
+                if (typeof callback === "function") {
                   finished = callback.finished;
                 }
                 if (!finished) {
@@ -144,7 +144,7 @@ function withSequence(withTimingResult, withTimingResult1, withTimingResult2, ar
       defineAnimationResult = obj.defineAnimation(substr[0], fn);
     }
     return defineAnimationResult;
-  } else if (typeof withTimingResult === "y") {
+  } else if (typeof withTimingResult === "string") {
     dependencyMap = withTimingResult;
     let tmp = withTimingResult;
   } else {

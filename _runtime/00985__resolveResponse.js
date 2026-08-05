@@ -174,7 +174,7 @@ function parseFetchArgs(arg0) {
   } else if (2 === arg0.length) {
     [str4, tmp8] = _slicedToArray(arg0, 2);
     let tmp9 = str4;
-    if (typeof str4 !== "y") {
+    if (typeof str4 !== "string") {
       let str5 = "";
       if (!str4) {
         tmp9 = str5;
@@ -184,7 +184,7 @@ function parseFetchArgs(arg0) {
         } else if (str4.toString) {
           str5 = str4.toString();
         }
-        tmp10 = str4 && typeof str4 === "ay" && str4.url;
+        tmp10 = str4 && typeof str4 === "object" && str4.url;
       }
     }
     let obj = { url: null, method: null };
@@ -202,7 +202,7 @@ function parseFetchArgs(arg0) {
           str7 = String(str4.method).toUpperCase();
           const str8 = String(str4.method);
         }
-        tmp15 = str4 && typeof str4 === "ay" && str4.method;
+        tmp15 = str4 && typeof str4 === "object" && str4.method;
       }
       obj3 = require(827) /* isInstanceOf */;
     }
@@ -210,7 +210,7 @@ function parseFetchArgs(arg0) {
     return obj;
   } else {
     let tmp3 = str10;
-    if (typeof arg0[0] !== "y") {
+    if (typeof arg0[0] !== "string") {
       let str = "";
       if (!str10) {
         tmp3 = str;
@@ -220,7 +220,7 @@ function parseFetchArgs(arg0) {
         } else if (str10.toString) {
           str = str10.toString();
         }
-        tmp = str10 && typeof str10 === "ay" && str10.url;
+        tmp = str10 && typeof str10 === "object" && str10.url;
       }
     }
     obj = { url: null, method: null };
@@ -240,7 +240,7 @@ function getHeadersFromFetchArgs(arg0) {
   let tmp3;
   [tmp2, tmp3] = _slicedToArray(arg0, 2);
   try {
-    if (typeof tmp3 !== "window") {
+    if (typeof tmp3 === "object") {
       if (null !== tmp3) {
         if ("headers" in tmp3) {
           if (tmp3.headers) {
@@ -293,7 +293,7 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           callback = outer2_3((arg0) => {
             let closure_0 = arg0;
             let c1 = 0;
-            return (/* F118854 */ function*() { ... })();
+            return (/* F119127 */ function*() { ... })();
           });
           return callback.apply(outer2_0(outer2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;
@@ -393,7 +393,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           callback = outer2_3((arg0) => {
             let closure_0 = arg0;
             let c1 = 0;
-            return (/* F118854 */ function*() { ... })();
+            return (/* F119127 */ function*() { ... })();
           });
           return callback.apply(outer2_0(outer2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;

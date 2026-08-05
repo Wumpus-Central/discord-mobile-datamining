@@ -94,7 +94,7 @@ arg5.reactNavigationIntegration = () => {
       const debug = num(flag[2]).debug;
       const _HermesInternal = HermesInternal;
       debug.log("" + flag2 + " A transaction was detected that turned out to be a noop, discarding.");
-      if (typeof _discardLatestTransaction !== "fileFinishedImporting") {
+      if (typeof _discardLatestTransaction !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (_undefined3) {
@@ -108,7 +108,7 @@ arg5.reactNavigationIntegration = () => {
       if (c9) {
         c9 = undefined;
       }
-      if (typeof clearStateChangeTimeout !== "fileFinishedImporting") {
+      if (typeof clearStateChangeTimeout !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (undefined !== timeout) {
@@ -179,7 +179,7 @@ arg5.reactNavigationIntegration = () => {
               const debug4 = tmp(tmp2[2]).debug;
               const _HermesInternal6 = HermesInternal;
               debug4.log("[" + flag2 + "] Navigation state changed, but route is the same as previous.");
-              if (typeof pushRecentRouteKey !== "fileFinishedImporting") {
+              if (typeof pushRecentRouteKey !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               arr = arr.push(currentRoute.key);
@@ -268,7 +268,7 @@ arg5.reactNavigationIntegration = () => {
           obj[num(flag[7]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
           obj[num(flag[2]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
           _undefined3.setAttributes(obj);
-          if (typeof clearStateChangeTimeout !== "fileFinishedImporting") {
+          if (typeof clearStateChangeTimeout !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (undefined !== c10) {
@@ -293,7 +293,7 @@ arg5.reactNavigationIntegration = () => {
           if (null != _undefined2) {
             _undefined2.setCurrentRoute(name);
           }
-          if (typeof pushRecentRouteKey !== "fileFinishedImporting") {
+          if (typeof pushRecentRouteKey !== "function") {
             HermesBuiltin.throwTypeError();
           }
           arr.push(currentRoute.key);

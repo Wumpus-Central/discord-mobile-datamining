@@ -30,10 +30,10 @@ const arrayBuffer = new ArrayBuffer(8);
 const dataView = new DataView(arrayBuffer);
 let tmp6;
 if (undefined !== BigInt) {
-  if (typeof dataView.getBigInt64 !== "disabledUntil") {
-    if (typeof dataView.getBigUint64 !== "disabledUntil") {
-      if (typeof dataView.setBigInt64 !== "disabledUntil") {
-        if (typeof dataView.setBigUint64 !== "disabledUntil") {
+  if (typeof dataView.getBigInt64 === "function") {
+    if (typeof dataView.getBigUint64 === "function") {
+      if (typeof dataView.setBigInt64 === "function") {
+        if (typeof dataView.setBigUint64 === "function") {
           let obj = { MIN: null, MAX: null, UMIN: null, UMAX: null, C: null, V: null };
           const _BigInt = BigInt;
           obj[0] = BigInt("-9223372036854775808");

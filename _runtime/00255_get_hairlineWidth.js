@@ -24,7 +24,7 @@ obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0,
   if (true === importDefault(26)[arg0]) {
     let obj = { process: null };
     obj[0] = process;
-  } else if (typeof tmp(26)[arg0] === "window") {
+  } else if (typeof tmp(26)[arg0] !== "object") {
     const _console = console;
     const _HermesInternal = HermesInternal;
     console.error("" + arg0 + " is not a valid style attribute");

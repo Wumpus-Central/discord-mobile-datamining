@@ -8,7 +8,7 @@ let fn = function n(config, _animationToClamp) {
   let obj = _require(1646);
   const fn = function u() {
     let tmpResult = strippedValue;
-    if (typeof strippedValue !== "disabledUntil") {
+    if (typeof strippedValue === "function") {
       tmpResult = tmp();
     }
     const config = tmpResult;
@@ -47,7 +47,7 @@ let fn = function n(config, _animationToClamp) {
             tmp5 = tmp4;
           }
           let combined = tmp5;
-          if (typeof tmp.current !== "Object") {
+          if (typeof tmp.current !== "number") {
             let str = "";
             if (undefined !== prefix) {
               str = prefix;

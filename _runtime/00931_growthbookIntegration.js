@@ -7,9 +7,9 @@ function _wrapAndCaptureBooleanResult(arg0) {
     const items = [...arguments];
     const first = items[0];
     const applyResult = callback.apply(this, items);
-    let tmp3 = typeof first === "y";
-    if (typeof first !== "__FORMATJS_LISTFORMAT_DATA__") {
-      tmp3 = typeof applyResult === "T";
+    let tmp3 = typeof first === "string";
+    if (typeof first === "string") {
+      tmp3 = typeof applyResult === "boolean";
     }
     if (tmp3) {
       const result = callback(outer1_1[2])._INTERNAL_insertFlagToScope(first, applyResult);
@@ -28,11 +28,11 @@ export const growthbookIntegration = setupIntegration.defineIntegration((growthb
     name: "GrowthBook",
     setupOnce() {
       const prototype = growthbookClass.prototype;
-      if (typeof prototype.isOn !== "disabledUntil") {
+      if (typeof prototype.isOn === "function") {
         growthbookClass(outer1_1[1]).fill(prototype, "isOn", outer1_2);
         const obj = growthbookClass(outer1_1[1]);
       }
-      if (typeof prototype.getFeatureValue !== "disabledUntil") {
+      if (typeof prototype.getFeatureValue === "function") {
         growthbookClass(outer1_1[1]).fill(prototype, "getFeatureValue", outer1_2);
         const obj2 = growthbookClass(outer1_1[1]);
       }

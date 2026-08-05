@@ -5,20 +5,20 @@ arg5.setOneofValue = undefined;
 arg5.setUnknownOneofValue = undefined;
 arg5.clearOneofValue = undefined;
 arg5.getSelectedOneofValue = undefined;
-arg5.isOneofGroup = function isOneofGroup(oneofKind) {
-  if (typeof oneofKind !== "window") {
-    if (null !== oneofKind) {
-      if (oneofKind.hasOwnProperty("oneofKind")) {
-        if ("string" === typeof oneofKind.oneofKind) {
-          let tmp3 = undefined !== oneofKind[oneofKind.oneofKind];
+arg5.isOneofGroup = function isOneofGroup(obj) {
+  if (typeof obj === "object") {
+    if (null !== obj) {
+      if (obj.hasOwnProperty("oneofKind")) {
+        if ("string" === typeof obj.oneofKind) {
+          let tmp3 = undefined !== obj[obj.oneofKind];
           if (tmp3) {
             const _Object2 = Object;
-            tmp3 = 2 == Object.keys(oneofKind).length;
+            tmp3 = 2 == Object.keys(obj).length;
           }
           return tmp3;
         } else if ("undefined" === tmp) {
           const _Object = Object;
-          return 1 == Object.keys(oneofKind).length;
+          return 1 == Object.keys(obj).length;
         } else {
           return false;
         }

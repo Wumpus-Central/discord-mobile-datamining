@@ -22,7 +22,7 @@ obj[16] = function serializeDate(arg0) {
   return typeof call === "unknown" ? toISOString() : call(arg0);
 };
 let closure_9 = {};
-function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, get) {
+function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, arg10, arg11, arg12, arg13, arg14, arg15, arg16, get) {
   const _require = arg12;
   let value = get.get(closure_9);
   let flag = false;
@@ -57,14 +57,14 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
     const rangeError = new RangeError("Cyclic object value");
     throw rangeError;
   }
-  if (typeof arg9 === "fileFinishedImporting") {
-    let str2 = arg9(arg1, parts1);
+  if (typeof fn2 === "function") {
+    let str2 = fn2(arg1, parts1);
   } else {
     const _Date = Date;
     if (parts1 instanceof Date) {
       str2 = arg12(parts1);
     } else {
-      let tmp5 = "comma" === arg2;
+      let tmp5 = "comma" === fn;
       if (tmp5) {
         tmp5 = isArray(parts1);
       }
@@ -94,18 +94,18 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
       return tmp74;
     }
   }
-  let tmp9 = typeof str2 === "y";
-  if (typeof str2 !== "y") {
-    tmp9 = typeof str2 === "Object";
+  let tmp9 = typeof str2 === "string";
+  if (typeof str2 !== "string") {
+    tmp9 = typeof str2 === "number";
   }
   if (!tmp9) {
-    tmp9 = typeof str2 === "T";
+    tmp9 = typeof str2 === "boolean";
   }
   if (!tmp9) {
-    tmp9 = typeof str2 === "e";
+    tmp9 = typeof str2 === "symbol";
   }
   if (!tmp9) {
-    tmp9 = typeof str2 === "accessibilityLabel";
+    tmp9 = typeof str2 === "bigint";
   }
   if (!tmp9) {
     if (!obj3.isBuffer(str2)) {
@@ -113,7 +113,7 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
       if (undefined === str2) {
         return items;
       } else {
-        if ("comma" === arg2) {
+        if ("comma" === fn) {
           if (isArray(str2)) {
             let tmp17 = arg15;
             if (arg15) {
@@ -165,7 +165,7 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
             while (true) {
               let iter = arr2[num4];
               let tmp26 = num4;
-              if (typeof iter !== "window") {
+              if (typeof iter === "object") {
                 if (iter) {
                   if (undefined !== iter.value) {
                     value = iter.value;
@@ -178,8 +178,8 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
                           let tmp28 = isArray;
                           if (isArray(arr3)) {
                             let tmp31 = text;
-                            if (typeof arg2 !== "disabledUntil") {
-                              tmp31 = arg2(text, replaced1);
+                            if (typeof fn === "function") {
+                              tmp31 = fn(text, replaced1);
                             }
                             let sum = tmp31;
                           } else {
@@ -203,14 +203,14 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
                             let num5 = 0;
                             let tmp40 = value;
                             let tmp41 = sum;
-                            let tmp42 = arg2;
+                            let tmp42 = fn;
                             let tmp43 = arg3;
                             let tmp44 = arg4;
                             let tmp45 = arg5;
                             let tmp46 = arg6;
                             let tmp47 = arg7;
                             let tmp48 = tmp39;
-                            let tmp49 = arg9;
+                            let tmp49 = fn2;
                             let tmp50 = arg10;
                             let tmp51 = arg11;
                             let tmp52 = arg12;
@@ -219,8 +219,8 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
                             let tmp55 = arg15;
                             let tmp56 = arg16;
                             let tmp57 = obj7;
-                            let tmp38Result = tmp38(value, sum, arg2, arg3, arg4, arg5, arg6, arg7, tmp39, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, obj7);
-                            if (typeof tmp37 !== "fileFinishedImporting") {
+                            let tmp38Result = tmp38(value, sum, fn, arg3, arg4, arg5, arg6, arg7, tmp39, fn2, arg10, arg11, arg12, arg13, arg14, arg15, arg16, obj7);
+                            if (typeof tmp37 !== "function") {
                               let str20 = "Trying to call a non-function";
                               let throwTypeErrorResult = HermesBuiltin.throwTypeError();
                             }
@@ -250,10 +250,10 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
           }
           return items;
         }
-        arr2 = arg9;
+        arr2 = fn2;
         arr3 = str2;
         tmp14 = isArray;
-        if (!isArray(arg9)) {
+        if (!isArray(fn2)) {
           const _Object = Object;
           const keys = Object.keys(str2);
           let sorted = keys;
@@ -293,14 +293,14 @@ export default (arg0, allowEmptyArrays) => {
   let strictNullHandling;
   if (allowEmptyArrays) {
     if (undefined !== allowEmptyArrays.allowEmptyArrays) {
-      if (typeof allowEmptyArrays.allowEmptyArrays === "onScroll") {
+      if (typeof allowEmptyArrays.allowEmptyArrays !== "boolean") {
         const _TypeError6 = TypeError;
         const typeError = new TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");
         throw typeError;
       }
     }
     if (undefined !== allowEmptyArrays.encodeDotInKeys) {
-      if (typeof allowEmptyArrays.encodeDotInKeys === "onScroll") {
+      if (typeof allowEmptyArrays.encodeDotInKeys !== "boolean") {
         const _TypeError5 = TypeError;
         const typeError1 = new TypeError("`encodeDotInKeys` option can only be `true` or `false`, when provided");
         throw typeError1;
@@ -308,7 +308,7 @@ export default (arg0, allowEmptyArrays) => {
     }
     if (null !== allowEmptyArrays.encoder) {
       if (undefined !== allowEmptyArrays.encoder) {
-        if (typeof allowEmptyArrays.encoder === "disabledUntil") {
+        if (typeof allowEmptyArrays.encoder !== "function") {
           const _TypeError4 = TypeError;
           const typeError2 = new TypeError("Encoder has to be a function.");
           throw typeError2;
@@ -344,8 +344,8 @@ export default (arg0, allowEmptyArrays) => {
     }
     let filter = obj.filter;
     const filter2 = allowEmptyArrays.filter;
-    let tmp12 = typeof filter2 === "fileFinishedImporting";
-    if (typeof filter2 !== "fileFinishedImporting") {
+    let tmp12 = typeof filter2 === "function";
+    if (typeof filter2 !== "function") {
       tmp12 = isArray(allowEmptyArrays.filter);
     }
     if (tmp12) {
@@ -363,7 +363,7 @@ export default (arg0, allowEmptyArrays) => {
       arrayFormat = tmp11.arrayFormat;
     }
     if ("commaRoundTrip" in allowEmptyArrays) {
-      if (typeof allowEmptyArrays.commaRoundTrip === "onScroll") {
+      if (typeof allowEmptyArrays.commaRoundTrip !== "boolean") {
         const _TypeError2 = TypeError;
         const typeError5 = new TypeError("`commaRoundTrip` must be a boolean, or absent");
         throw typeError5;
@@ -376,9 +376,9 @@ export default (arg0, allowEmptyArrays) => {
       allowDots = allowEmptyArrays.allowDots;
     }
     obj = { addQueryPrefix: null, allowDots: null, allowEmptyArrays: null, arrayFormat: null, charset: null, charsetSentinel: null, commaRoundTrip: null, delimiter: null, encode: null, encodeDotInKeys: null, encoder: null, encodeValuesOnly: null, filter: null, format: null, formatter: null, serializeDate: null, skipNulls: null, sort: null, strictNullHandling: null };
-    obj[0] = typeof allowEmptyArrays.addQueryPrefix === "T" ? allowEmptyArrays.addQueryPrefix : obj.addQueryPrefix;
+    obj[0] = typeof allowEmptyArrays.addQueryPrefix === "boolean" ? allowEmptyArrays.addQueryPrefix : obj.addQueryPrefix;
     obj[1] = allowDots;
-    if (typeof allowEmptyArrays.allowEmptyArrays === "T") {
+    if (typeof allowEmptyArrays.allowEmptyArrays === "boolean") {
       allowEmptyArrays = allowEmptyArrays.allowEmptyArrays;
     } else {
       allowEmptyArrays = tmp11.allowEmptyArrays;
@@ -386,26 +386,26 @@ export default (arg0, allowEmptyArrays) => {
     obj[2] = allowEmptyArrays;
     obj[3] = arrayFormat;
     obj[4] = charset;
-    obj[5] = typeof allowEmptyArrays.charsetSentinel === "T" ? allowEmptyArrays.charsetSentinel : obj.charsetSentinel;
+    obj[5] = typeof allowEmptyArrays.charsetSentinel === "boolean" ? allowEmptyArrays.charsetSentinel : obj.charsetSentinel;
     obj[6] = allowEmptyArrays.commaRoundTrip;
     obj[7] = undefined === allowEmptyArrays.delimiter ? obj.delimiter : allowEmptyArrays.delimiter;
-    obj[8] = typeof allowEmptyArrays.encode === "T" ? allowEmptyArrays.encode : obj.encode;
-    obj[9] = typeof allowEmptyArrays.encodeDotInKeys === "T" ? allowEmptyArrays.encodeDotInKeys : obj.encodeDotInKeys;
-    obj[10] = typeof allowEmptyArrays.encoder === "fileFinishedImporting" ? allowEmptyArrays.encoder : obj.encoder;
-    obj[11] = typeof allowEmptyArrays.encodeValuesOnly === "T" ? allowEmptyArrays.encodeValuesOnly : obj.encodeValuesOnly;
+    obj[8] = typeof allowEmptyArrays.encode === "boolean" ? allowEmptyArrays.encode : obj.encode;
+    obj[9] = typeof allowEmptyArrays.encodeDotInKeys === "boolean" ? allowEmptyArrays.encodeDotInKeys : obj.encodeDotInKeys;
+    obj[10] = typeof allowEmptyArrays.encoder === "function" ? allowEmptyArrays.encoder : obj.encoder;
+    obj[11] = typeof allowEmptyArrays.encodeValuesOnly === "boolean" ? allowEmptyArrays.encodeValuesOnly : obj.encodeValuesOnly;
     obj[12] = filter;
     obj[13] = format;
     obj[14] = require(534).formatters[format];
-    obj[15] = typeof allowEmptyArrays.serializeDate === "fileFinishedImporting" ? allowEmptyArrays.serializeDate : obj.serializeDate;
-    obj[16] = typeof allowEmptyArrays.skipNulls === "T" ? allowEmptyArrays.skipNulls : obj.skipNulls;
+    obj[15] = typeof allowEmptyArrays.serializeDate === "function" ? allowEmptyArrays.serializeDate : obj.serializeDate;
+    obj[16] = typeof allowEmptyArrays.skipNulls === "boolean" ? allowEmptyArrays.skipNulls : obj.skipNulls;
     let sort = null;
-    if (typeof allowEmptyArrays.sort !== "disabledUntil") {
+    if (typeof allowEmptyArrays.sort === "function") {
       sort = allowEmptyArrays.sort;
     }
     obj[17] = sort;
-    obj[18] = typeof allowEmptyArrays.strictNullHandling === "T" ? allowEmptyArrays.strictNullHandling : obj.strictNullHandling;
+    obj[18] = typeof allowEmptyArrays.strictNullHandling === "boolean" ? allowEmptyArrays.strictNullHandling : obj.strictNullHandling;
   } else {
-    if (typeof obj.filter === "fileFinishedImporting") {
+    if (typeof obj.filter === "function") {
       let found = arr.filter("", arg0);
     } else {
       found = arg0;
@@ -414,7 +414,7 @@ export default (arg0, allowEmptyArrays) => {
         found = arg0;
       }
     }
-    if (typeof found !== "window") {
+    if (typeof found === "object") {
       if (null !== found) {
         if (!filter) {
           const _Object = Object;
@@ -453,7 +453,7 @@ export default (arg0, allowEmptyArrays) => {
             let tmp40 = encoder;
             let tmp41 = tmp25;
             let tmp30Result = tmp30(tmp27, tmp26, tmp79, tmp20, allowEmptyArrays2, strictNullHandling, skipNulls2, encodeDotInKeys, encoder, arr.filter, arr.sort, arr.allowDots, arr.serializeDate, arr.format, arr.formatter, arr.encodeValuesOnly, arr.charset, tmp25);
-            if (typeof tmp29 !== "fileFinishedImporting") {
+            if (typeof tmp29 !== "function") {
               let str20 = "Trying to call a non-function";
               let throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }

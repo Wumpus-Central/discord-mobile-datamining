@@ -13,7 +13,7 @@ function configure(arg0) {
   const merged1 = Object.assign(arg0);
   if (c8) {
     c8.tearDown();
-    if (typeof createState !== "fileFinishedImporting") {
+    if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp10 = new importDefault(1458)(obj);
@@ -23,7 +23,7 @@ function configure(arg0) {
 function fetch(arg0) {
   let obj = c8;
   if (!c8) {
-    if (typeof createState !== "fileFinishedImporting") {
+    if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp7 = new importDefault(1458)(module_1457);
@@ -35,7 +35,7 @@ function fetch(arg0) {
 function refresh() {
   let obj = c8;
   if (!c8) {
-    if (typeof createState !== "fileFinishedImporting") {
+    if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp7 = new importDefault(1458)(module_1457);
@@ -68,7 +68,7 @@ function addEventListener(arg0) {
   const importDefault = arg0;
   let obj = c8;
   if (!c8) {
-    if (typeof createState !== "fileFinishedImporting") {
+    if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp7 = new importDefault(1458)(module_1457);
@@ -78,7 +78,7 @@ function addEventListener(arg0) {
   obj.add(arg0);
   return () => {
     if (outer1_8) {
-      outer1_8.remove(f69354);
+      outer1_8.remove(f69537);
     }
   };
 }
@@ -89,7 +89,7 @@ function useNetInfo(arg0) {
     const merged1 = Object.assign(arg0);
     if (c8) {
       obj2.tearDown();
-      if (typeof createState !== "fileFinishedImporting") {
+      if (typeof createState !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const tmp13 = new tmp(1458)(obj);
@@ -104,25 +104,25 @@ function useNetInfo(arg0) {
   callback3(() => {
     let obj = closure_8;
     if (!closure_8) {
-      if (typeof outer1_9 !== "fileFinishedImporting") {
+      if (typeof outer1_9 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const tmp8 = new callback(outer1_2[4])(obj);
       closure_8 = tmp8;
       obj = tmp8;
     }
-    obj.add(f69354);
-    f69354 = () => {
+    obj.add(f69537);
+    f69537 = () => {
       if (outer1_8) {
-        outer1_8.remove(f69354);
+        outer1_8.remove(f69537);
       }
     };
     return () => {
-      if (typeof f69354 !== "fileFinishedImporting") {
+      if (typeof f69537 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (outer1_8) {
-        outer1_8.remove(f69354);
+        outer1_8.remove(f69537);
       }
     };
   }, []);

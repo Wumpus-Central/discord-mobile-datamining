@@ -1970,12 +1970,7 @@ export const createTimeToFullDisplay = function createTimeToFullDisplay(useFocus
     constructor(arg0) {
       tmp = outer1_2(outer1_4(false), 2);
       [record, useFocusEffect] = tmp;
-      tmp2 = useFocusEffect(() => {
-        callback(true);
-        return () => {
-          callback(false);
-        };
-      });
+      tmp2 = useFocusEffect(() => { ... });
       tmp3 = outer1_3;
       tmp4 = closure_1;
       if (record) {
@@ -1994,12 +1989,7 @@ export const createTimeToInitialDisplay = function createTimeToInitialDisplay(us
     constructor(arg0) {
       tmp = outer1_2(outer1_4(false), 2);
       [record, useFocusEffect] = tmp;
-      tmp2 = useFocusEffect(() => {
-        callback(true);
-        return () => {
-          callback(false);
-        };
-      });
+      tmp2 = useFocusEffect(() => { ... });
       tmp3 = outer1_3;
       tmp4 = closure_1;
       if (record) {

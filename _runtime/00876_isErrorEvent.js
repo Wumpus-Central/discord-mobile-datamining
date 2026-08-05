@@ -24,32 +24,32 @@ function estimateMetricSizeInBytes(name) {
     c0 = 0;
     const _Object = Object;
     const values = Object.values(attributes);
-    const item = values.forEach((arg0) => {
-      if (Array.isArray(arg0)) {
-        let first = arg0[0];
-        if (typeof first === "y") {
+    const item = values.forEach((str) => {
+      if (Array.isArray(str)) {
+        let first = str[0];
+        if (typeof first === "string") {
           first = first.length;
           let num4 = 2 * first;
         } else {
           num4 = 8;
-          if (typeof first !== "Object") {
+          if (typeof first !== "number") {
             let num7 = 0;
-            if (typeof first !== "onScroll") {
+            if (typeof first === "boolean") {
               num7 = 4;
             }
             num4 = num7;
           }
         }
-        closure_0 = closure_0 + arg0.length * num4;
+        closure_0 = closure_0 + str.length * num4;
         const tmp4 = closure_0;
-      } else if (obj.isPrimitive(arg0)) {
-        if (typeof arg0 === "y") {
-          let num2 = 2 * arg0.length;
+      } else if (obj.isPrimitive(str)) {
+        if (typeof str === "string") {
+          let num2 = 2 * str.length;
         } else {
           num2 = 8;
-          if (typeof arg0 !== "Object") {
+          if (typeof str !== "number") {
             let num6 = 0;
-            if (typeof arg0 !== "onScroll") {
+            if (typeof str === "boolean") {
               num6 = 4;
             }
             num2 = num6;
@@ -76,32 +76,32 @@ function estimateLogSizeInBytes(message) {
     c0 = 0;
     const _Object = Object;
     const values = Object.values(attributes);
-    const item = values.forEach((arg0) => {
-      if (Array.isArray(arg0)) {
-        let first = arg0[0];
-        if (typeof first === "y") {
+    const item = values.forEach((str) => {
+      if (Array.isArray(str)) {
+        let first = str[0];
+        if (typeof first === "string") {
           first = first.length;
           let num4 = 2 * first;
         } else {
           num4 = 8;
-          if (typeof first !== "Object") {
+          if (typeof first !== "number") {
             let num7 = 0;
-            if (typeof first !== "onScroll") {
+            if (typeof first === "boolean") {
               num7 = 4;
             }
             num4 = num7;
           }
         }
-        closure_0 = closure_0 + arg0.length * num4;
+        closure_0 = closure_0 + str.length * num4;
         const tmp4 = closure_0;
-      } else if (obj.isPrimitive(arg0)) {
-        if (typeof arg0 === "y") {
-          let num2 = 2 * arg0.length;
+      } else if (obj.isPrimitive(str)) {
+        if (typeof str === "string") {
+          let num2 = 2 * str.length;
         } else {
           num2 = 8;
-          if (typeof arg0 !== "Object") {
+          if (typeof str !== "number") {
             let num6 = 0;
-            if (typeof arg0 !== "onScroll") {
+            if (typeof str === "boolean") {
               num6 = 4;
             }
             num2 = num6;
@@ -128,15 +128,15 @@ _classCallCheck = undefined;
 class Client {
   constructor(arg0) {
     self = this;
-    tmp = f67392(this, c4);
+    tmp = f67575(this, c4);
     this._options = global;
     this._integrations = {};
     this._numProcessing = 0;
     this._outcomes = {};
     this._hooks = {};
     this._eventProcessors = [];
-    tmp2 = f67410;
-    tmp3 = f67406;
+    tmp2 = f67593;
+    tmp3 = f67589;
     obj = require("makePromiseBuffer");
     transportOptions = global.transportOptions;
     bufferSize = undefined;
@@ -431,91 +431,20 @@ _classCallCheck = asyncGeneratorStep(function(arg0) {
   let c3 = 0;
   let c4 = 0;
   return (function*(arg0) {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === closure_3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_2 = tmp2;
-            const _self = _transport;
-            _transport = undefined;
-            closure_2 = undefined;
-            closure_3 = undefined;
-            _transport = _self._transport;
-            if (_transport) {
-              obj8.emit("flush");
-              closure_3 = 1;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj8._isClientDoneProcessing(tmp18);
-              return obj1;
-            } else {
-              c4 = 3;
-              return { value: true, done: true };
-            }
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_2 = arg1;
-            closure_3 = 2;
-            c4 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = _transport.flush(_self);
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          closure_3 = arg1;
-          let tmp7 = closure_2;
-          if (closure_2) {
-            tmp7 = closure_3;
-          }
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = tmp7;
-          return obj;
-        }
-      } catch (tmp12) {
-        c4 = tmp;
-        throw tmp12;
-      }
+    let closure_2 = tmp2;
+    const _self = _transport;
+    _transport = _self._transport;
+    if (!_transport) {
+      return true;
     }
+    obj8.emit("flush");
+    closure_2 = yield obj8._isClientDoneProcessing(tmp18);
+    let closure_3 = yield _transport.flush(_self);
+    let tmp7 = closure_2;
+    if (closure_2) {
+      tmp7 = closure_3;
+    }
+    return tmp7;
   })();
 });
 obj[1] = function flush(arg0) {
@@ -536,63 +465,12 @@ _slicedToArray = asyncGeneratorStep(function(arg0) {
   let c4 = 0;
   let c5 = 0;
   return (function*(arg0) {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_3 = _self;
-            let closure_2 = tmp2;
-            _self = undefined;
-            c4 = 1;
-            c5 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = _self.flush(closure_1);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          _self = arg1;
-          closure_3.getOptions().enabled = false;
-          closure_3.emit("close");
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = _self;
-          return obj;
-        }
-      } catch (tmp11) {
-        c5 = tmp;
-        throw tmp11;
-      }
-    }
+    let closure_3 = _self;
+    let closure_2 = tmp2;
+    _self = yield _self.flush(closure_1);
+    closure_3.getOptions().enabled = false;
+    closure_3.emit("close");
+    return _self;
   })();
 });
 obj[1] = function close(arg0) {
@@ -1121,26 +999,26 @@ items[26] = {
       const tmp10 = tmp7(888).getPossibleEventMessages(type)[0] || "<unknown>";
     }
     tmp9 = callback(823).DEBUG_BUILD && undefined === type.type;
-    return this._processEvent(type, obj, currentScope, isolationScope).then((event_id) => event_id.event_id, (message) => {
+    return this._processEvent(type, obj, currentScope, isolationScope).then((event_id) => event_id.event_id, (obj) => {
       if (callback(table[7]).DEBUG_BUILD) {
-        let tmp4 = message && typeof message === "ay";
+        let tmp4 = obj && typeof obj === "object";
         if (tmp4) {
-          tmp4 = closure_7 in message;
+          tmp4 = closure_7 in obj;
         }
         if (tmp4) {
           const debug2 = tmp(tmp2[8]).debug;
-          debug2.log(message.message);
+          debug2.log(obj.message);
         } else {
-          let tmp6 = message && typeof message === "ay";
+          let tmp6 = obj && typeof obj === "object";
           if (tmp6) {
-            tmp6 = closure_6 in message;
+            tmp6 = closure_6 in obj;
           }
           const debug = tmp(tmp2[8]).debug;
           const warn = debug.warn;
           if (tmp6) {
-            warn(message.message);
+            warn(obj.message);
           } else {
-            warn(message);
+            warn(obj);
           }
         }
       }
@@ -1166,7 +1044,7 @@ items[27] = {
       const parseSampleRateResult = obj.parseSampleRate(sampleRate);
     }
     if (undefined === type.type) {
-      if (typeof parseSampleRateResult !== "__REMOTEDEV__") {
+      if (typeof parseSampleRateResult === "number") {
         if (obj4.safeMathRandom() > parseSampleRateResult) {
           self.recordDroppedEvent("sample_rate", "error");
           let _HermesInternal = HermesInternal;
@@ -1562,30 +1440,30 @@ items[27] = {
         self.sendEvent(sdkProcessingMetadata, closure_2);
         return sdkProcessingMetadata;
       }
-    }).then(null, (arg0) => {
-      let tmp = arg0 && typeof arg0 === "ay";
+    }).then(null, (obj) => {
+      let tmp = obj && typeof obj === "object";
       if (tmp) {
-        tmp = closure_7 in arg0;
+        tmp = closure_7 in obj;
       }
       if (!tmp) {
-        let tmp3 = arg0 && typeof arg0 === "ay";
+        let tmp3 = obj && typeof obj === "object";
         if (tmp3) {
-          tmp3 = closure_6 in arg0;
+          tmp3 = closure_6 in obj;
         }
         if (!tmp3) {
-          let obj = { mechanism: null, data: null, originalException: null };
+          obj = { mechanism: null, data: null, originalException: null };
           obj[0] = { handled: false, type: "internal" };
           obj[1] = { __sentry__: true };
-          obj[2] = arg0;
-          self.captureException(arg0, obj);
+          obj[2] = obj;
+          self.captureException(obj, obj);
           const _HermesInternal = HermesInternal;
           obj = { message: null };
-          obj[0] = "Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.\nReason: " + arg0;
+          obj[0] = "Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.\nReason: " + obj;
           obj[closure_6] = true;
           throw obj;
         }
       }
-      throw arg0;
+      throw obj;
     });
   }
 };

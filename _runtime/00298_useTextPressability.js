@@ -172,7 +172,7 @@ class TextImpl {
         tmp26 = style;
         if (null != tmp24) {
           tmp58 = null;
-          if (typeof tmp24.fontWeight !== "__REMOTEDEV__") {
+          if (typeof tmp24.fontWeight === "number") {
             obj = {};
             tmp59 = globalThis;
             _String = String;
@@ -346,7 +346,7 @@ class TextImpl {
                   if (null == item10136) {
                   } else {
                     tmp46 = item10136;
-                    if (typeof tmp45 === "ay") {
+                    if (typeof tmp45 === "object") {
                       flag7 = true;
                       tmp47 = obj12;
                       obj12.return();
@@ -367,7 +367,7 @@ class TextImpl {
               obj10[1] = tmp35Result;
               return jsx(require("noop"), obj10);
             }
-            if (typeof children !== "ay") {
+            if (typeof children !== "object") {
               return tmp35Result;
             }
           }

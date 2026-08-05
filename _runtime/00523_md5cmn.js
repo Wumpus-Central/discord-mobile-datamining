@@ -9,15 +9,15 @@ function md5cmn(arg0, uint8Array, uint8Array2, arg3, arg4, arg5) {
   const sum3 = (65535 & tmp7) + (65535 & uint8Array2);
   return ((tmp6 << arg4 | tmp6 >>> 32 - arg4) >> 16) + (uint8Array2 >> 16) + (sum3 >> 16) << 16 | 65535 & sum3;
 }
-arg5.default = function md5(arg0) {
+arg5.default = function md5(str) {
   let length;
   let length2;
-  let arr = arg0;
-  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  let arr = str;
+  if (typeof str === "string") {
     let uint8Array = globalThis;
     const _unescape = unescape;
     const _encodeURIComponent = encodeURIComponent;
-    const unescapeResult = unescape(encodeURIComponent(arg0));
+    const unescapeResult = unescape(encodeURIComponent(str));
     const _Uint8Array = Uint8Array;
     uint8Array = new.target;
     uint8Array = new.target;

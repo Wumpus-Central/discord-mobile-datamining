@@ -11,14 +11,14 @@ try {
   }
   const _Object2 = Object;
   if (_module) {
-    if (typeof _module.get === "fileFinishedImporting") {
+    if (typeof _module.get === "function") {
       const items = [_module.get];
       let getDunder = require("callBindBasic")(items);
     }
     module.exports = getDunder;
   }
-  getDunder = typeof getPrototypeOf === "fileFinishedImporting";
-  if (typeof getPrototypeOf !== "disabledUntil") {
+  getDunder = typeof getPrototypeOf === "function";
+  if (typeof getPrototypeOf === "function") {
     getDunder = function getDunder(arg0) {
       let tmp2 = arg0;
       if (null != arg0) {

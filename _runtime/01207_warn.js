@@ -14,7 +14,7 @@ function warn(arg0) {
 }
 class MaskFallback {
   constructor(arg0) {
-    if (typeof warn !== "fileFinishedImporting") {
+    if (typeof warn !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -39,7 +39,7 @@ if (!isHermesEnabled.isExpoGo()) {
   }
   class UnmaskFallback {
     constructor(arg0) {
-      if (typeof warn !== "fileFinishedImporting") {
+      if (typeof warn !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -64,7 +64,7 @@ if (!isHermesEnabled.isExpoGo()) {
     }
     class UnmaskFallback {
       constructor(arg0) {
-        if (typeof warn !== "fileFinishedImporting") {
+        if (typeof warn !== "function") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }

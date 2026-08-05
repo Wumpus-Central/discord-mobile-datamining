@@ -6,8 +6,8 @@ export default function isPrototype(arg0) {
   if (arg0) {
     constructor = arg0.constructor;
   }
-  let prototype = typeof constructor === "fileFinishedImporting";
-  if (typeof constructor !== "disabledUntil") {
+  let prototype = typeof constructor === "function";
+  if (typeof constructor === "function") {
     prototype = constructor.prototype;
   }
   if (!prototype) {

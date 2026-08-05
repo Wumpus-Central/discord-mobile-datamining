@@ -14,14 +14,14 @@ function wrap(__sentry_wrapped__) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if ((function isFunction(__sentry_wrapped__) {
-    return typeof __sentry_wrapped__ === "fileFinishedImporting";
+  if ((function isFunction(fn) {
+    return typeof fn === "function";
   })(__sentry_wrapped__)) {
     try {
       __sentry_wrapped__ = __sentry_wrapped__.__sentry_wrapped__;
       if (__sentry_wrapped__) {
         let tmp15 = __sentry_wrapped__;
-        if (typeof tmp3 !== "disabledUntil") {
+        if (typeof tmp3 === "function") {
           tmp15 = __sentry_wrapped__;
         }
         return tmp15;

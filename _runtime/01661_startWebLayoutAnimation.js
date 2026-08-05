@@ -18,7 +18,7 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
     if (tmp5) {
       let tmpResult = tmp(1694);
       let presetName = tmpResult.createCustomKeyFrameAnimation(entering.definitions);
-    } else if (typeof entering === "fileFinishedImporting") {
+    } else if (typeof entering === "function") {
       presetName = entering.presetName;
     } else {
       presetName = entering.constructor.presetName;

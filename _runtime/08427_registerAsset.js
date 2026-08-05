@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 93.33333333333333, height: 65, scales: [3], hash: "c4946770ab3c50ce3672b0e2087496ae", name: "asset_ruby_badge_small", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "6186005757c9a6da5db2aeedc6cf425e", name: "wumpus-wizard", type: "png" });

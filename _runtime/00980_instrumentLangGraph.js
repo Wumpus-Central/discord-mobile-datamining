@@ -35,7 +35,7 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
             name = first.name;
           }
           if (name) {
-            name = typeof tmp7.name === "y";
+            name = typeof tmp7.name === "string";
           }
           if (name) {
             let attr = setAttribute.setAttribute(obj(outer2_1[4]).GEN_AI_AGENT_NAME_ATTRIBUTE, tmp7.name);
@@ -44,7 +44,7 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
           }
           let invoke = applyResult.invoke;
           if (invoke) {
-            invoke = typeof obj3 === "fileFinishedImporting";
+            invoke = typeof obj3 === "function";
           }
           if (invoke) {
             applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, closure_0) {
@@ -64,7 +64,7 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
                   obj[applyResult(958).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj[2] = obj;
                   applyResult = undefined;
-                  applyResult = callback(/* F119218 */ function() { ... });
+                  applyResult = callback(/* F119490 */ function() { ... });
                   return obj.startSpan(obj, () => { ... });
                 }
               });
@@ -116,7 +116,7 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
             name = first.name;
           }
           if (name) {
-            name = typeof tmp7.name === "y";
+            name = typeof tmp7.name === "string";
           }
           if (name) {
             let attr = setAttribute.setAttribute(obj(outer2_1[4]).GEN_AI_AGENT_NAME_ATTRIBUTE, tmp7.name);
@@ -125,7 +125,7 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
           }
           let invoke = applyResult.invoke;
           if (invoke) {
-            invoke = typeof obj3 === "fileFinishedImporting";
+            invoke = typeof obj3 === "function";
           }
           if (invoke) {
             applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, closure_0) {
@@ -145,7 +145,7 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
                   obj[applyResult(958).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj[2] = obj;
                   applyResult = undefined;
-                  applyResult = callback(/* F119218 */ function() { ... });
+                  applyResult = callback(/* F119490 */ function() { ... });
                   return obj.startSpan(obj, () => { ... });
                 }
               });

@@ -1,8 +1,8 @@
 // _runtime/01069_serializeFormData.js
 import _slicedToArray from "_slicedToArray";
 
-function serializeFormData(size) {
-  return new URLSearchParams(size).toString();
+function serializeFormData(fetchRequestArgBody) {
+  return new URLSearchParams(fetchRequestArgBody).toString();
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("sentry__originalRequestBody");
@@ -15,7 +15,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, closure
     debug = require(817) /* registerSpanErrorInstrumentation */.debug;
   }
   try {
-    if (typeof fetchRequestArgBody === "y") {
+    if (typeof fetchRequestArgBody === "string") {
       const items = [fetchRequestArgBody];
       return items;
     } else {
@@ -55,7 +55,7 @@ export const getFetchRequestArgBody = function getFetchRequestArgBody(input) {
   }
   if (items.length >= 2) {
     if (items[1]) {
-      if (typeof items[1] !== "window") {
+      if (typeof items[1] === "object") {
         if ("body" in items[1]) {
           return items[1].body;
         }

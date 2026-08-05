@@ -16,12 +16,12 @@ arg5.getFramesToPop = function getFramesToPop(closure_3) {
   return num;
 };
 arg5.isErrorLike = function isErrorLike(cause) {
-  let tmp = null !== cause && typeof cause === "ay";
+  let tmp = null !== cause && typeof cause === "object";
   if (tmp) {
     tmp = "stack" in cause;
   }
   if (tmp) {
-    tmp = typeof cause.stack === "y";
+    tmp = typeof cause.stack === "string";
   }
   return tmp;
 };

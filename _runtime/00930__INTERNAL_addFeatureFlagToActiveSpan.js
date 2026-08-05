@@ -10,7 +10,7 @@ arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToA
   if (arg2 === undefined) {
     num = 10;
   }
-  if (typeof value !== "onScroll") {
+  if (typeof value === "boolean") {
     const activeSpan = require(819) /* spanToJSON */.getActiveSpan();
     if (activeSpan) {
       const data = tmp6(819).spanToJSON(activeSpan).data;
@@ -64,7 +64,7 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
   }
   const values = contexts.flags.values;
   _require = first;
-  if (typeof value !== "onScroll") {
+  if (typeof value === "boolean") {
     if (values.length > num) {
       if (tmp(823).DEBUG_BUILD) {
         const debug = tmp(824).debug;
@@ -86,9 +86,9 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
     }
   }
 };
-arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr) {
+arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, arg1, flag) {
   const _require = arg1;
-  if (typeof arg2 !== "onScroll") {
+  if (typeof flag === "boolean") {
     if (arr.length > arg3) {
       if (_require(823).DEBUG_BUILD) {
         const debug = tmp5(824).debug;
@@ -106,7 +106,7 @@ arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr) {
       }
       const obj = { flag: null, result: null };
       obj[0] = arg1;
-      obj[1] = arg2;
+      obj[1] = flag;
       arr.push(obj);
     }
   }

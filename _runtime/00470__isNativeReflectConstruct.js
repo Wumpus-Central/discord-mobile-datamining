@@ -92,7 +92,7 @@ let items = [
   {
     key: "_validateURL",
     value: function _validateURL(closure_0) {
-      LinkingImpl(38)(typeof closure_0 === "y", `Invalid URL: should be a string. Was: ${closure_0}`);
+      LinkingImpl(38)(typeof closure_0 === "string", `Invalid URL: should be a string. Was: ${closure_0}`);
       LinkingImpl(38)(closure_0, "Invalid URL: cannot be empty");
     }
   }

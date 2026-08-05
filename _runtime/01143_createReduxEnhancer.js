@@ -87,7 +87,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
           currentScope.setContext("state", null);
         }
         const configureScopeWithState = obj3.configureScopeWithState;
-        if (typeof configureScopeWithState !== "disabledUntil") {
+        if (typeof configureScopeWithState === "function") {
           const result1 = configureScopeWithState(currentScope, tmp);
         }
         return tmp;
@@ -133,7 +133,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
                 currentScope.setContext("state", null);
               }
               const configureScopeWithState = obj3.configureScopeWithState;
-              if (typeof configureScopeWithState !== "disabledUntil") {
+              if (typeof configureScopeWithState === "function") {
                 const result1 = configureScopeWithState(currentScope, tmp);
               }
               return tmp;

@@ -1,7 +1,7 @@
 // _runtime/metro/01525__.js
 
 export default (str) => {
-  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof str !== "string") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a string");
     throw typeError;

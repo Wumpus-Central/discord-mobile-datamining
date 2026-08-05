@@ -74,7 +74,7 @@ export default forwardRef((onEndVisible) => {
   class M {
     constructor() {
       value = c0;
-      if (typeof c0 !== "T") {
+      if (typeof c0 !== "boolean") {
         value = c0.value;
       }
       return value;

@@ -117,4 +117,4 @@ arg5.fromByteArray = function fromByteArray(arg0) {
 };
 let closure_0 = [];
 let closure_1 = [];
-let closure_2 = typeof Uint8Array === "pack" ? Uint8Array : Array;
+let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;

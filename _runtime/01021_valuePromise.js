@@ -47,10 +47,10 @@ require("noop").resolve = (self) => {
   } else if ("" === self) {
     return noop;
   } else {
-    if (typeof self === "ay") {
+    if (typeof self === "object") {
       try {
         const then = self.then;
-        if (typeof then === "fileFinishedImporting") {
+        if (typeof then === "function") {
           let tmp4Result = tmp4(1019);
           tmp4Result = new tmp4Result(obj.bind(self));
           return tmp4Result;
@@ -74,15 +74,16 @@ require("noop").all = (arg0) => {
   return new _require(1019)((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
-    function res(arg0, _65) {
+    function res(arg0, self) {
+      let _65;
       const callback = arg0;
-      if (_65) {
-        if (typeof _65 === "ay") {
-          if (_65 instanceof callback(outer2_1[0])) {
-            if (_65.then === tmp(tmp2[0]).prototype.then) {
-              let tmp13 = _65;
-              let promise2 = _65;
-              if (3 === _65._65) {
+      if (self) {
+        if (typeof self === "object") {
+          if (self instanceof callback(outer2_1[0])) {
+            if (self.then === tmp(tmp2[0]).prototype.then) {
+              let tmp13 = self;
+              let promise2 = self;
+              if (3 === self._65) {
                 do {
                   let _55 = tmp13._55;
                   tmp13 = _55;
@@ -103,17 +104,17 @@ require("noop").all = (arg0) => {
               return tmp18;
             }
           }
-          const then = _65.then;
-          if (typeof then === "fileFinishedImporting") {
+          const then = self.then;
+          if (typeof then === "function") {
             let tmpResult = tmp(tmp2[0]);
-            tmpResult = new tmpResult(then.bind(_65));
+            tmpResult = new tmpResult(then.bind(self));
             tmpResult.then((arg0) => {
               outer1_3(closure_0, arg0);
             }, callback2);
           }
         }
       }
-      callback[arg0] = _65;
+      callback[arg0] = self;
       diff = diff - 1;
       if (0 == diff) {
         callback(tmp3);

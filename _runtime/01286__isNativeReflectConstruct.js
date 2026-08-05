@@ -24,16 +24,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatToAst(arg0, arg1) {
-  if (typeof arg0 === "y") {
+function formatToAst(str) {
+  if (typeof str === "string") {
     const obj = { type: null, content: null };
     obj[0] = AstBuilder.Text;
-    obj[1] = arg0;
+    obj[1] = str;
     const items = [obj];
     let bindFormatValuesResult = items;
   } else {
     const self = this;
-    bindFormatValuesResult = this.bindFormatValues(closure_6, arg0, arg1);
+    bindFormatValuesResult = this.bindFormatValues(closure_6, str, arg1);
   }
   return bindFormatValuesResult;
 }

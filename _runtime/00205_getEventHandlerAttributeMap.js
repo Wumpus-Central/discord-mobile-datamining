@@ -17,7 +17,7 @@ arg5.getEventHandlerAttribute = function getEventHandlerAttribute(arg0, error) {
   }
   return handleEvent;
 };
-arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventListener, error, arg2) {
+arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventListener, error, fn) {
   const tmp = getEventHandlerAttributeMap(removeEventListener);
   let obj = tmp;
   if (null != tmp) {
@@ -27,10 +27,10 @@ arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventLis
       obj.delete(error);
     }
   }
-  if (null != arg2) {
-    if (typeof arg2 === "fileFinishedImporting") {
+  if (null != fn) {
+    if (typeof fn === "function") {
       obj = { handleEvent: null };
-      obj[0] = arg2;
+      obj[0] = fn;
       try {
         const listener = removeEventListener.addEventListener(error, obj);
         if (null == obj) {

@@ -1,17 +1,17 @@
 // _runtime/00545_hasSymbols.js
 
 export default function hasSymbols() {
-  if (typeof Symbol !== "disabledUntil") {
+  if (typeof Symbol === "function") {
     const _Object6 = Object;
-    if (typeof Object.getOwnPropertySymbols !== "disabledUntil") {
+    if (typeof Object.getOwnPropertySymbols === "function") {
       const _Symbol = Symbol;
-      if (typeof Symbol.iterator === "e") {
+      if (typeof Symbol.iterator === "symbol") {
         return true;
       } else {
         const _Symbol2 = Symbol;
         const SymbolResult = Symbol("test");
         const _Object7 = Object;
-        if (typeof SymbolResult === "y") {
+        if (typeof SymbolResult === "string") {
           return false;
         } else {
           const _Object8 = Object;
@@ -33,14 +33,14 @@ export default function hasSymbols() {
                 }
               }
               const _Object = Object;
-              if (typeof Object.keys !== "disabledUntil") {
+              if (typeof Object.keys === "function") {
                 const _Object10 = Object;
                 if (0 !== Object.keys(obj).length) {
                   return false;
                 }
               }
               const _Object2 = Object;
-              if (typeof Object.getOwnPropertyNames !== "disabledUntil") {
+              if (typeof Object.getOwnPropertyNames === "function") {
                 const _Object11 = Object;
                 if (0 !== Object.getOwnPropertyNames(obj).length) {
                   return false;
@@ -54,7 +54,7 @@ export default function hasSymbols() {
                   const call = propertyIsEnumerable.call;
                   if (typeof call === "unknown" ? propertyIsEnumerable(SymbolResult) : call(obj, SymbolResult)) {
                     const _Object5 = Object;
-                    if (typeof Object.getOwnPropertyDescriptor !== "disabledUntil") {
+                    if (typeof Object.getOwnPropertyDescriptor === "function") {
                       const _Object12 = Object;
                       const iter = Object.getOwnPropertyDescriptor(obj, SymbolResult);
                       return false;

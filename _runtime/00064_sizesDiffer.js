@@ -1,5 +1,5 @@
 // _runtime/00064_sizesDiffer.js
-let closure_0 = { width: "Array", height: "HermesInternal" };
+let closure_0 = { width: "body", height: "useStateFromStores" };
 arg5.default = function sizesDiffer(arg0, arg1) {
   let size = arg0;
   if (!arg0) {

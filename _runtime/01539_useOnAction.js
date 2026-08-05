@@ -39,7 +39,7 @@ export default function useOnAction(router) {
       return false;
     } else {
       set.add(tmp4.key);
-      if (typeof target.target === "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof target.target !== "string") {
         const stateForAction = router.getStateForAction(tmp4, target, ref.current);
         let tmp10 = stateForAction;
         if (null === stateForAction) {

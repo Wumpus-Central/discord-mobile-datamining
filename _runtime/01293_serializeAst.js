@@ -9,7 +9,7 @@ function serializeAst(ast, value) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    if (typeof nextResult === "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof nextResult !== "string") {
       let tmp3 = nextResult;
       let first = tmp2[0];
       let tmp5 = InternalIntlMessage;
@@ -152,7 +152,7 @@ const items = [
     key: "reserialize",
     value: function reserialize() {
       const self = this;
-      if (typeof this.ast === "y") {
+      if (typeof this.ast === "string") {
         return self.ast;
       } else {
         const obj = { value: "" };

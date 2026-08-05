@@ -93,8 +93,8 @@ let items = [
               let tmp88 = dependencyMap;
               let obj5 = ReflectionBinaryWriter(1316);
               let tmp89 = tmp4;
-              let tmp90 = typeof tmp4 === "ay";
-              if (typeof tmp4 !== "window") {
+              let tmp90 = typeof tmp4 === "object";
+              if (typeof tmp4 === "object") {
                 let tmp91 = tmp4;
                 tmp90 = null !== tmp4;
               }

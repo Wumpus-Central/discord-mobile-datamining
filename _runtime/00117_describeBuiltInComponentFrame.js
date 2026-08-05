@@ -4,9 +4,9 @@ import { __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE } from 
 import closure_158 from "setUpDefaltReactNativeEnvironment";
 import closure_162 from "setUpDefaltReactNativeEnvironment";
 
-function describeBuiltInComponentFrame(Activity) {
+function describeBuiltInComponentFrame(type) {
   if (undefined !== str3) {
-    return "\n" + str3 + Activity + str5;
+    return "\n" + str3 + type + str5;
   } else {
     try {
       const _Error = Error;
@@ -35,10 +35,10 @@ function describeBuiltInComponentFrame(Activity) {
     }
   }
 }
-function describeNativeComponentFrame(displayName) {
-  let closure_0 = displayName;
+function describeNativeComponentFrame(type, arg1) {
+  let closure_0 = type;
   let closure_1 = arg1;
-  if (displayName) {
+  if (type) {
     if (!c8) {
       c8 = true;
       const _Error = Error;
@@ -61,7 +61,7 @@ function describeNativeComponentFrame(displayName) {
               };
               Object.defineProperty(Fake.prototype, "props", obj);
               const _Reflect = Reflect;
-              if (typeof Reflect !== "window") {
+              if (typeof Reflect === "object") {
                 class Fake {
                   constructor() {
                     throw Error();
@@ -232,13 +232,13 @@ function describeNativeComponentFrame(displayName) {
                   }
                   let str11 = `
   ${str8.replace(" at new ", " at ")}`;
-                  displayName = displayName.displayName;
+                  let displayName = type.displayName;
                   if (displayName) {
                     displayName = `
   ${str8.replace(" at new ", " at ")}`.includes("<anonymous>");
                   }
                   if (displayName) {
-                    str11 = str11.replace("<anonymous>", displayName.displayName);
+                    str11 = str11.replace("<anonymous>", type.displayName);
                   }
                   c8 = false;
                   const _Error4 = Error;
@@ -254,10 +254,10 @@ function describeNativeComponentFrame(displayName) {
         Error.prepareStackTrace = prepareStackTrace;
         let str6 = "";
         let str7 = "";
-        if (displayName) {
-          let name = displayName.displayName;
+        if (type) {
+          let name = type.displayName;
           if (!name) {
-            name = displayName.name;
+            name = type.name;
           }
           str7 = name;
         }
@@ -275,7 +275,86 @@ function describeNativeComponentFrame(displayName) {
   return "";
 }
 function describeFiber(_return, arg1) {
-  return describeBuiltInComponentFrame("Activity");
+  switch (_return.tag) {
+    case 0:
+      let tmp5 = describeNativeComponentFrame(_return.type, false);
+      return tmp5;
+    case 1:
+      return describeNativeComponentFrame(_return.type, true);
+    case 2:
+      return "";
+    case 3:
+      return "";
+    case 4:
+      return "";
+    case 5:
+      let tmp14 = describeBuiltInComponentFrame(_return.type);
+      return tmp14;
+    case 6:
+      return "";
+    case 7:
+      return "";
+    case 8:
+      return "";
+    case 9:
+      return "";
+    case 10:
+      return "";
+    case 11:
+      return describeNativeComponentFrame(_return.type.render, false);
+    case 12:
+      return "";
+    case 13:
+      if (_return.child !== arg1) {
+        if (null !== arg1) {
+          let tmp10 = describeBuiltInComponentFrame("Suspense Fallback");
+        }
+        return tmp10;
+      }
+      tmp10 = describeBuiltInComponentFrame("Suspense");
+    break;
+    case 14:
+      return "";
+    case 15:
+      tmp5 = describeNativeComponentFrame(_return.type, false);
+      return tmp5;
+    case 16:
+      return describeBuiltInComponentFrame("Lazy");
+    case 17:
+      return "";
+    case 18:
+      return "";
+    case 19:
+      return describeBuiltInComponentFrame("SuspenseList");
+    case 20:
+      return "";
+    case 21:
+      return "";
+    case 22:
+      return "";
+    case 23:
+      return "";
+    case 24:
+      return "";
+    case 25:
+      return "";
+    case 26:
+      tmp14 = describeBuiltInComponentFrame(_return.type);
+      return tmp14;
+    case 27:
+      tmp14 = describeBuiltInComponentFrame(_return.type);
+      return tmp14;
+    case 28:
+      return "";
+    case 29:
+      return "";
+    case 30:
+      return "";
+    case 31:
+      return describeBuiltInComponentFrame("Activity");
+    default:
+      return "";
+  }
 }
 function getStackByFiberInDevAndProd(current) {
   let _return = current;
@@ -301,14 +380,14 @@ function getComponentNameFromType(type) {
   let render;
   if (null == type) {
     return null;
-  } else if (typeof type === "fileFinishedImporting") {
+  } else if (typeof type === "function") {
     let tmp13 = null;
     if (type.$$typeof !== closure_28) {
       tmp13 = type.displayName || type.name || null;
       const tmp14 = type.displayName || type.name || null;
     }
     return tmp13;
-  } else if (typeof type === "y") {
+  } else if (typeof type === "string") {
     return type;
   } else if (closure_15 === type) {
     return "Fragment";
@@ -323,7 +402,7 @@ function getComponentNameFromType(type) {
   } else if (closure_25 === type) {
     return "Activity";
   } else {
-    if (typeof type !== "window") {
+    if (typeof type === "object") {
       const $$typeof = type.$$typeof;
       if (closure_14 === $$typeof) {
         return "Portal";
@@ -521,7 +600,7 @@ function accumulateDirectionalDispatches$1(stateNode, arg1, _dispatchListeners) 
   stateNode = stateNode.stateNode;
   let tmp2 = null;
   if (null !== stateNode) {
-    if (typeof z !== "fileFinishedImporting") {
+    if (typeof z !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const currentProps = stateNode.canonical.currentProps;
@@ -530,7 +609,7 @@ function accumulateDirectionalDispatches$1(stateNode, arg1, _dispatchListeners) 
       tmp2 = tmp3;
       if (currentProps[tmp]) {
         tmp2 = tmp3;
-        if (typeof tmp3 !== "fileFinishedImporting") {
+        if (typeof tmp3 !== "function") {
           const _Error3 = Error;
           const _HermesInternal = HermesInternal;
           throw Error("Expected `" + tmp + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -602,7 +681,7 @@ function accumulateDirectDispatchesSingle$1(dispatchConfig) {
             const stateNode = _targetInst.stateNode;
             let tmp2 = null;
             if (null !== stateNode) {
-              if (typeof z !== "fileFinishedImporting") {
+              if (typeof z !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const currentProps = stateNode.canonical.currentProps;
@@ -611,7 +690,7 @@ function accumulateDirectDispatchesSingle$1(dispatchConfig) {
                 tmp2 = tmp3;
                 if (currentProps[registrationName]) {
                   tmp2 = tmp3;
-                  if (typeof tmp3 !== "fileFinishedImporting") {
+                  if (typeof tmp3 !== "function") {
                     const _Error3 = Error;
                     const _HermesInternal = HermesInternal;
                     throw Error("Expected `" + registrationName + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -785,7 +864,7 @@ function accumulateDirectionalDispatches(stateNode, arg1, _dispatchListeners) {
   stateNode = stateNode.stateNode;
   let tmp2 = null;
   if (null !== stateNode) {
-    if (typeof z !== "fileFinishedImporting") {
+    if (typeof z !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const currentProps = stateNode.canonical.currentProps;
@@ -794,7 +873,7 @@ function accumulateDirectionalDispatches(stateNode, arg1, _dispatchListeners) {
       tmp2 = tmp3;
       if (currentProps[tmp]) {
         tmp2 = tmp3;
-        if (typeof tmp3 !== "fileFinishedImporting") {
+        if (typeof tmp3 !== "function") {
           const _Error3 = Error;
           const _HermesInternal = HermesInternal;
           throw Error("Expected `" + tmp + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -912,7 +991,7 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
             const stateNode = _targetInst.stateNode;
             let tmp2 = null;
             if (null !== stateNode) {
-              if (typeof z !== "fileFinishedImporting") {
+              if (typeof z !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const currentProps = stateNode.canonical.currentProps;
@@ -921,7 +1000,7 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
                 tmp2 = tmp3;
                 if (currentProps[registrationName]) {
                   tmp2 = tmp3;
-                  if (typeof tmp3 !== "fileFinishedImporting") {
+                  if (typeof tmp3 !== "function") {
                     const _Error3 = Error;
                     const _HermesInternal = HermesInternal;
                     throw Error("Expected `" + registrationName + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -1021,12 +1100,12 @@ function executeDispatchesAndReleaseTopLevel(isPropagationStopped) {
   }
 }
 function setIsStrictModeForDevtools(arg0) {
-  if (typeof require(287) /* peek */.log !== "disabledUntil") {
+  if (typeof require(287) /* peek */.log === "function") {
     const result = require(287) /* peek */.unstable_setDisableYieldValue(arg0);
     const tmpResult = require(287) /* peek */;
   }
   if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-    if (typeof obj.setStrictMode !== "disabledUntil") {
+    if (typeof obj.setStrictMode === "function") {
       try {
         obj.setStrictMode(closure_72, arg0);
       } catch (err) {
@@ -1580,7 +1659,7 @@ function findCurrentHostFiberImpl(sibling) {
   return sibling;
 }
 function createCapturedValueAtFiber(value, current) {
-  if (typeof value !== "window") {
+  if (typeof value === "object") {
     if (null !== value) {
       value = weakMap.get(value);
       if (undefined === value) {
@@ -1600,8 +1679,8 @@ function createCapturedValueAtFiber(value, current) {
 function pushHostContainer(current, current2) {
   const sum = sum3 + 1;
   sum3 = sum;
-  closure_85[sum] = closure_95.current;
-  closure_95.current = current2;
+  closure_85[sum] = ref3.current;
+  ref3.current = current2;
   const sum1 = sum3 + 1;
   sum3 = sum1;
   closure_85[sum1] = ref2.current;
@@ -1645,8 +1724,8 @@ function popHostContainer() {
     closure_86 = closure_86 - 1;
   }
 }
-function popHostContext(text) {
-  if (ref2.current === text) {
+function popHostContext(arg0) {
+  if (ref2.current === arg0) {
     let tmp4 = closure_86;
     if (0 <= closure_86) {
       tmp2.current = dependencyMap3[tmp3];
@@ -1661,7 +1740,7 @@ function popHostContext(text) {
       closure_86 = closure_86 - 1;
     }
   }
-  if (ref3.current === text) {
+  if (ref4.current === arg0) {
     if (0 <= closure_86) {
       tmp14.current = dependencyMap3[tmp15];
       dependencyMap3[closure_86] = null;
@@ -1860,9 +1939,9 @@ function propagateParentContextChanges(arg0, flags, c286, arg3) {
           }
         }
       } else {
-        let tmp21 = ref3;
+        let tmp21 = ref4;
         tmp6 = tmp;
-        if (_return === ref3.current) {
+        if (_return === ref4.current) {
           let alternate2 = _return.alternate;
           if (null === alternate2) {
             let tmp10 = globalThis;
@@ -2276,18 +2355,18 @@ function pingEngtangledActionScope() {
     }
   }
 }
-function shallowEqual(arg0, arg1) {
-  if (is(arg0, arg1)) {
+function shallowEqual(obj, obj2) {
+  if (is(obj, obj2)) {
     return true;
   } else {
-    if (typeof arg0 !== "window") {
-      if (null !== arg0) {
-        if (typeof arg1 !== "window") {
-          if (null !== arg1) {
+    if (typeof obj === "object") {
+      if (null !== obj) {
+        if (typeof obj2 === "object") {
+          if (null !== obj2) {
             const _Object = Object;
-            const keys = Object.keys(arg0);
+            const keys = Object.keys(obj);
             const _Object2 = Object;
-            if (keys.length !== Object.keys(arg1).length) {
+            if (keys.length !== Object.keys(obj2).length) {
               return false;
             } else {
               let num = 0;
@@ -2297,11 +2376,11 @@ function shallowEqual(arg0, arg1) {
                   let tmp2 = hasOwnProperty;
                   let call = hasOwnProperty.call;
                   let tmp3 = num;
-                  if (!(typeof call === "unknown" ? tmp2(tmp) : call(arg1, tmp))) {
+                  if (!(typeof call === "unknown" ? tmp2(tmp) : call(obj2, tmp))) {
                     break;
                   } else {
                     let tmp4 = is;
-                    if (!is(arg0[tmp], arg1[tmp])) {
+                    if (!is(obj[tmp], obj2[tmp])) {
                       break;
                     } else {
                       num = num + 1;
@@ -2353,7 +2432,7 @@ function trackUsedThenable(arr, first, arg2) {
     const _Error3 = Error;
     throw Error("Hooks are not supported inside an async component. This error is often caused by accidentally adding `'use client'` to a module that was originally written for the server.");
   } else {
-    if (typeof iter.status === "y") {
+    if (typeof iter.status === "string") {
       iter.then(noop, noop);
     } else {
       if (null !== _null6) {
@@ -2397,8 +2476,8 @@ function resolveLazy(_init) {
     return _init._init(_init._payload);
   } catch (promise) {
     if (null !== promise) {
-      if (typeof promise !== "window") {
-        if (typeof promise.then === "fileFinishedImporting") {
+      if (typeof promise === "object") {
+        if (typeof promise.then === "function") {
           throw closure_130;
         }
       }
@@ -2784,7 +2863,7 @@ function processUpdateQueue(updateQueue, memoizedProps, stateNode, c280) {
         if (1 === tag) {
           let payload2 = iter2.payload;
           let tmp21 = payload2;
-          if (typeof payload2 !== "disabledUntil") {
+          if (typeof payload2 === "function") {
             let call2 = payload2.call;
             let tmp25 = typeof call2 === "unknown" ? payload2(baseState, memoizedProps) : call2(stateNode, baseState, memoizedProps);
           }
@@ -2800,7 +2879,7 @@ function processUpdateQueue(updateQueue, memoizedProps, stateNode, c280) {
           }
           payload = iter2.payload;
           let tmp22 = payload;
-          if (typeof payload !== "disabledUntil") {
+          if (typeof payload === "function") {
             break;
           } else {
             tmp21 = baseState;
@@ -2896,14 +2975,14 @@ function processUpdateQueue(updateQueue, memoizedProps, stateNode, c280) {
     typeof call === "unknown" ? payload(baseState, memoizedProps) : call(stateNode, baseState, memoizedProps);
   }
 }
-function callCallback(call) {
-  if (typeof call === "disabledUntil") {
+function callCallback(fn) {
+  if (typeof fn !== "function") {
     const _Error = Error;
-    throw Error("Invalid argument passed as callback. Expected a function. Instead received: " + call);
+    throw Error("Invalid argument passed as callback. Expected a function. Instead received: " + fn);
   } else {
-    call = call.call;
+    const call = fn.call;
     if (typeof call === "unknown") {
-      call();
+      fn();
     } else {
       call(arg1);
     }
@@ -2915,7 +2994,7 @@ function commitCallbacks(updateQueue, arg1) {
     updateQueue.callbacks = null;
     let num = 0;
     if (0 < callbacks.length) {
-      while (typeof callbacks[num] !== "disabledUntil") {
+      while (typeof callbacks[num] === "function") {
         let call = tmp.call;
         if (typeof call === "unknown") {
           let tmpResult = tmp();
@@ -3115,7 +3194,7 @@ function TransitionAwareHostComponent() {
   const H = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H;
   const first = H.useState()[0];
   let tmp2 = first;
-  if (typeof first.then !== "disabledUntil") {
+  if (typeof first.then === "function") {
     closure_171 = closure_171 + 1;
     let tmp3 = items;
     if (null === items) {
@@ -3237,10 +3316,10 @@ function useThenable(first) {
     tmp5 = closure_210;
   }
 }
-function basicStateReducer(arg0, arg1) {
-  let tmp = arg1;
-  if (typeof arg1 !== "disabledUntil") {
-    tmp = arg1(arg0);
+function basicStateReducer(arg0, fn) {
+  let tmp = fn;
+  if (typeof fn === "function") {
+    tmp = fn(arg0);
   }
   return tmp;
 }
@@ -3446,16 +3525,16 @@ function checkIfSnapshotChanged(arg0) {
     return true;
   }
 }
-function mountStateImpl(arg0) {
+function mountStateImpl(fn) {
   const tmp3 = mountWorkInProgressHook();
-  let tmp4 = arg0;
-  if (typeof arg0 !== "disabledUntil") {
-    const tmp11 = arg0();
+  let tmp4 = fn;
+  if (typeof fn === "function") {
+    const tmp11 = fn();
     tmp4 = tmp11;
     if (c170) {
       setIsStrictModeForDevtools(true);
       try {
-        arg0();
+        fn();
         tmp5(false);
         tmp4 = tmp11;
       } catch (tmp9) {
@@ -3558,8 +3637,8 @@ function handleActionReturnValue(pending, listeners, actionResult) {
   let closure_0 = pending;
   let closure_1 = listeners;
   if (null !== actionResult) {
-    if (typeof actionResult !== "window") {
-      if (typeof actionResult.then === "fileFinishedImporting") {
+    if (typeof actionResult === "object") {
+      if (typeof actionResult.then === "function") {
         actionResult.then((value) => {
           let length;
           listeners.status = "fulfilled";
@@ -3657,9 +3736,9 @@ function actionStateReducer(arg0, arg1) {
 }
 function updateActionStateImpl(queue, c166, memoizedState) {
   const first = updateReducerImpl(queue, c166, actionStateReducer)[0];
-  if (typeof first !== "window") {
+  if (typeof first === "object") {
     if (null !== first) {
-      if (typeof first.then === "fileFinishedImporting") {
+      if (typeof first.then === "function") {
         try {
           let tmp2 = useThenable(first);
         } catch (tmp14) {
@@ -3779,19 +3858,19 @@ function updateEffectImpl(arg0, arg1, imperativeHandleEffect, combined) {
   }
   tmp.memoizedState = obj;
 }
-function imperativeHandleEffect(arg0, arg1) {
-  let closure_0 = arg1;
-  if (typeof arg1 === "fileFinishedImporting") {
-    let closure_1 = arg1(arg0());
+function imperativeHandleEffect(arg0, fn) {
+  let closure_0 = fn;
+  if (typeof fn === "function") {
+    let closure_1 = fn(arg0());
     return () => {
-      if (typeof closure_1 === "fileFinishedImporting") {
+      if (typeof closure_1 === "function") {
         tmp();
       } else {
         callback(null);
       }
     };
-  } else if (null != arg1) {
-    arg1.current = arg0();
+  } else if (null != fn) {
+    fn.current = arg0();
     return () => {
       closure_0.current = null;
     };
@@ -3884,8 +3963,8 @@ function startTransition(alternate, pending, action, action) {
       tmp9(obj, promise);
     }
     if (null !== promise) {
-      if (typeof promise !== "window") {
-        if (typeof promise.then === "fileFinishedImporting") {
+      if (typeof promise === "object") {
+        if (typeof promise.then === "function") {
           dispatchSetStateInternal(alternate, pending, (function chainThenableValue(promise, action) {
             let closure_0 = action;
             let closure_1 = [];
@@ -4196,9 +4275,9 @@ function entangleTransitionUpdate(pendingLanes, lanes, lane) {
     }
   }
 }
-function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps, memoizedState, memoizedState2, arg6) {
+function checkShouldComponentUpdate(stateNode, defaultProps, obj, memoizedProps, memoizedState, memoizedState2, arg6) {
   stateNode = stateNode.stateNode;
-  if (typeof stateNode.shouldComponentUpdate === "fileFinishedImporting") {
+  if (typeof stateNode.shouldComponentUpdate === "function") {
     let result = stateNode.shouldComponentUpdate(memoizedProps, memoizedState2, arg6);
   } else {
     const prototype = defaultProps.prototype;
@@ -4208,17 +4287,17 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
     }
     if (!result) {
       let flag = true;
-      if (!is(arg2, memoizedProps)) {
+      if (!is(obj, memoizedProps)) {
         flag = false;
-        if (typeof arg2 !== "window") {
+        if (typeof obj === "object") {
           flag = false;
-          if (null !== arg2) {
+          if (null !== obj) {
             flag = false;
-            if (typeof memoizedProps !== "window") {
+            if (typeof memoizedProps === "object") {
               flag = false;
               if (null !== memoizedProps) {
                 const _Object = Object;
-                const keys = Object.keys(arg2);
+                const keys = Object.keys(obj);
                 const _Object2 = Object;
                 flag = false;
                 if (keys.length === Object.keys(memoizedProps).length) {
@@ -4236,7 +4315,7 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
                       } else {
                         let tmp7 = is;
                         flag = false;
-                        if (!is(arg2[tmp4], memoizedProps[tmp4])) {
+                        if (!is(obj[tmp4], memoizedProps[tmp4])) {
                           break;
                         } else {
                           let sum = num + 1;
@@ -4260,11 +4339,11 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
         let flag2 = true;
         if (!is(memoizedState, memoizedState2)) {
           flag2 = false;
-          if (typeof memoizedState !== "window") {
+          if (typeof memoizedState === "object") {
             flag2 = false;
             if (null !== memoizedState) {
               flag2 = false;
-              if (typeof memoizedState2 !== "window") {
+              if (typeof memoizedState2 === "object") {
                 flag2 = false;
                 if (null !== memoizedState2) {
                   const _Object3 = Object;
@@ -4315,8 +4394,8 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
 function constructClassInstance(_reactInternals, contextType, memoizedProps) {
   let tmp = closure_87;
   contextType = contextType.contextType;
-  let tmp2 = typeof contextType === "ay";
-  if (typeof contextType !== "window") {
+  let tmp2 = typeof contextType === "object";
+  if (typeof contextType === "object") {
     tmp2 = null !== contextType;
   }
   if (tmp2) {
@@ -4361,7 +4440,7 @@ function mountClassInstance(baseState, contextType, props, c280) {
   stateNode.refs = {};
   baseState.updateQueue = { baseState: baseState.memoizedState, firstBaseUpdate: null, lastBaseUpdate: null, shared: { pending: null, lanes: 0, hiddenCallbacks: null }, callbacks: null };
   contextType = contextType.contextType;
-  if (typeof contextType !== "window") {
+  if (typeof contextType === "object") {
     if (null !== contextType) {
       const _currentValue2 = contextType._currentValue2;
       let obj = { context: null, memoizedValue: null, next: null };
@@ -4386,7 +4465,7 @@ function mountClassInstance(baseState, contextType, props, c280) {
     stateNode.context = tmp;
     stateNode.state = baseState.memoizedState;
     const getDerivedStateFromProps = contextType.getDerivedStateFromProps;
-    if (typeof getDerivedStateFromProps !== "disabledUntil") {
+    if (typeof getDerivedStateFromProps === "function") {
       const memoizedState = baseState.memoizedState;
       const derivedStateFromProps = getDerivedStateFromProps(props, memoizedState);
       let tmp5 = memoizedState;
@@ -4400,23 +4479,23 @@ function mountClassInstance(baseState, contextType, props, c280) {
       stateNode.state = baseState.memoizedState;
     }
     const getDerivedStateFromProps2 = contextType.getDerivedStateFromProps;
-    let tmp6 = typeof getDerivedStateFromProps2 === "fileFinishedImporting";
-    if (typeof getDerivedStateFromProps2 !== "fileFinishedImporting") {
-      tmp6 = typeof stateNode.getSnapshotBeforeUpdate === "fileFinishedImporting";
+    let tmp6 = typeof getDerivedStateFromProps2 === "function";
+    if (typeof getDerivedStateFromProps2 !== "function") {
+      tmp6 = typeof stateNode.getSnapshotBeforeUpdate === "function";
     }
     if (!tmp6) {
       const UNSAFE_componentWillMount = stateNode.UNSAFE_componentWillMount;
-      let tmp7 = typeof UNSAFE_componentWillMount === "disabledUntil";
-      if (typeof UNSAFE_componentWillMount !== "fileFinishedImporting") {
-        tmp7 = typeof stateNode.componentWillMount === "disabledUntil";
+      let tmp7 = typeof UNSAFE_componentWillMount !== "function";
+      if (typeof UNSAFE_componentWillMount !== "function") {
+        tmp7 = typeof stateNode.componentWillMount !== "function";
       }
       tmp6 = tmp7;
     }
     if (!tmp6) {
-      if (typeof stateNode.componentWillMount !== "disabledUntil") {
+      if (typeof stateNode.componentWillMount === "function") {
         stateNode.componentWillMount();
       }
-      if (typeof stateNode.UNSAFE_componentWillMount !== "disabledUntil") {
+      if (typeof stateNode.UNSAFE_componentWillMount === "function") {
         const result = stateNode.UNSAFE_componentWillMount();
       }
       if (stateNode.state !== stateNode.state) {
@@ -4430,7 +4509,7 @@ function mountClassInstance(baseState, contextType, props, c280) {
       }
       stateNode.state = baseState.memoizedState;
     }
-    if (typeof stateNode.componentDidMount !== "disabledUntil") {
+    if (typeof stateNode.componentDidMount === "function") {
       baseState.flags = baseState.flags | 4194308;
     }
   }
@@ -4561,7 +4640,7 @@ function updateForwardRef(updateQueue, dependencies, render, pendingProps, c280)
 function updateMemoComponent(child, mode, type, pendingProps, c280) {
   if (null === child) {
     type = type.type;
-    if (typeof type !== "disabledUntil") {
+    if (typeof type === "function") {
       const prototype = type.prototype;
       let tmp8 = !prototype;
       if (prototype) {
@@ -4632,11 +4711,11 @@ function updateSimpleMemoComponent(memoizedProps, ref, type, pendingProps, c280)
     let flag = true;
     if (!is(memoizedProps, pendingProps)) {
       flag = false;
-      if (typeof memoizedProps !== "window") {
+      if (typeof memoizedProps === "object") {
         flag = false;
         if (null !== memoizedProps) {
           flag = false;
-          if (typeof pendingProps !== "window") {
+          if (typeof pendingProps === "object") {
             flag = false;
             if (null !== pendingProps) {
               const _Object = Object;
@@ -5100,8 +5179,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     stateNode.props = tmp59;
     const contextType2 = defaultProps.contextType;
     let tmp65 = closure_87;
-    let tmp66 = typeof contextType2 === "ay";
-    if (typeof contextType2 !== "window") {
+    let tmp66 = typeof contextType2 === "object";
+    if (typeof contextType2 === "object") {
       tmp66 = null !== contextType2;
     }
     if (tmp66) {
@@ -5128,16 +5207,16 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
       }
     }
     const getDerivedStateFromProps2 = defaultProps.getDerivedStateFromProps;
-    let tmp69 = typeof getDerivedStateFromProps2 === "fileFinishedImporting";
-    if (typeof getDerivedStateFromProps2 !== "fileFinishedImporting") {
-      tmp69 = typeof stateNode.getSnapshotBeforeUpdate === "fileFinishedImporting";
+    let tmp69 = typeof getDerivedStateFromProps2 === "function";
+    if (typeof getDerivedStateFromProps2 !== "function") {
+      tmp69 = typeof stateNode.getSnapshotBeforeUpdate === "function";
     }
     let tmp70 = tmp69;
     if (!tmp69) {
       const UNSAFE_componentWillReceiveProps2 = stateNode.UNSAFE_componentWillReceiveProps;
-      let tmp71 = typeof UNSAFE_componentWillReceiveProps2 === "disabledUntil";
-      if (typeof UNSAFE_componentWillReceiveProps2 !== "fileFinishedImporting") {
-        tmp71 = typeof stateNode.componentWillReceiveProps === "disabledUntil";
+      let tmp71 = typeof UNSAFE_componentWillReceiveProps2 !== "function";
+      if (typeof UNSAFE_componentWillReceiveProps2 !== "function") {
+        tmp71 = typeof stateNode.componentWillReceiveProps !== "function";
       }
       tmp70 = tmp71;
     }
@@ -5147,10 +5226,10 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
         tmp73 = stateNode.context !== tmp65;
       }
       if (tmp73) {
-        if (typeof stateNode.componentWillReceiveProps !== "disabledUntil") {
+        if (typeof stateNode.componentWillReceiveProps === "function") {
           result = stateNode.componentWillReceiveProps(memoizedProps, tmp65);
         }
-        if (typeof stateNode.UNSAFE_componentWillReceiveProps !== "disabledUntil") {
+        if (typeof stateNode.UNSAFE_componentWillReceiveProps === "function") {
           result = stateNode.UNSAFE_componentWillReceiveProps(memoizedProps, tmp65);
         }
         if (stateNode.state !== stateNode.state) {
@@ -5172,14 +5251,14 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
       if (memoizedState3 === memoizedState4) {
         if (!c150) {
           flag3 = false;
-          if (typeof stateNode.componentDidMount !== "disabledUntil") {
+          if (typeof stateNode.componentDidMount === "function") {
             dependencies.flags = dependencies.flags | 4194308;
             flag3 = false;
           }
         }
       }
     }
-    if (typeof getDerivedStateFromProps2 !== "disabledUntil") {
+    if (typeof getDerivedStateFromProps2 === "function") {
       const memoizedState6 = dependencies.memoizedState;
       result = getDerivedStateFromProps2(memoizedProps, memoizedState6);
       let tmp85 = memoizedState6;
@@ -5199,25 +5278,25 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     if (tmp86) {
       if (!tmp69) {
         const UNSAFE_componentWillMount = stateNode.UNSAFE_componentWillMount;
-        let tmp95 = typeof UNSAFE_componentWillMount === "disabledUntil";
-        if (typeof UNSAFE_componentWillMount !== "fileFinishedImporting") {
-          tmp95 = typeof stateNode.componentWillMount === "disabledUntil";
+        let tmp95 = typeof UNSAFE_componentWillMount !== "function";
+        if (typeof UNSAFE_componentWillMount !== "function") {
+          tmp95 = typeof stateNode.componentWillMount !== "function";
         }
         tmp69 = tmp95;
       }
       if (!tmp69) {
-        if (typeof stateNode.componentWillMount !== "disabledUntil") {
+        if (typeof stateNode.componentWillMount === "function") {
           result = stateNode.componentWillMount();
         }
-        if (typeof stateNode.UNSAFE_componentWillMount !== "disabledUntil") {
+        if (typeof stateNode.UNSAFE_componentWillMount === "function") {
           result = stateNode.UNSAFE_componentWillMount();
         }
       }
-      if (typeof stateNode.componentDidMount !== "disabledUntil") {
+      if (typeof stateNode.componentDidMount === "function") {
         dependencies.flags = dependencies.flags | 4194308;
       }
     } else {
-      if (typeof stateNode.componentDidMount !== "disabledUntil") {
+      if (typeof stateNode.componentDidMount === "function") {
         dependencies.flags = dependencies.flags | 4194308;
       }
       dependencies.memoizedProps = memoizedProps;
@@ -5282,8 +5361,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     const pendingProps = dependencies.pendingProps;
     const contextType = defaultProps.contextType;
     let tmp12 = closure_87;
-    let tmp13 = typeof contextType === "ay";
-    if (typeof contextType !== "window") {
+    let tmp13 = typeof contextType === "object";
+    if (typeof contextType === "object") {
       tmp13 = null !== contextType;
     }
     if (tmp13) {
@@ -5308,25 +5387,25 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
       }
     }
     const getDerivedStateFromProps = defaultProps.getDerivedStateFromProps;
-    let tmp16 = typeof getDerivedStateFromProps === "fileFinishedImporting";
-    if (typeof getDerivedStateFromProps !== "fileFinishedImporting") {
-      tmp16 = typeof stateNode2.getSnapshotBeforeUpdate === "fileFinishedImporting";
+    let tmp16 = typeof getDerivedStateFromProps === "function";
+    if (typeof getDerivedStateFromProps !== "function") {
+      tmp16 = typeof stateNode2.getSnapshotBeforeUpdate === "function";
     }
     let tmp17 = tmp16;
     if (!tmp16) {
       const UNSAFE_componentWillReceiveProps = stateNode2.UNSAFE_componentWillReceiveProps;
-      let tmp18 = typeof UNSAFE_componentWillReceiveProps === "disabledUntil";
-      if (typeof UNSAFE_componentWillReceiveProps !== "fileFinishedImporting") {
-        tmp18 = typeof stateNode2.componentWillReceiveProps === "disabledUntil";
+      let tmp18 = typeof UNSAFE_componentWillReceiveProps !== "function";
+      if (typeof UNSAFE_componentWillReceiveProps !== "function") {
+        tmp18 = typeof stateNode2.componentWillReceiveProps !== "function";
       }
       tmp17 = tmp18;
     }
     if (!tmp17) {
       if (tmp19) {
-        if (typeof stateNode2.componentWillReceiveProps !== "disabledUntil") {
+        if (typeof stateNode2.componentWillReceiveProps === "function") {
           result = stateNode2.componentWillReceiveProps(memoizedProps, tmp12);
         }
-        if (typeof stateNode2.UNSAFE_componentWillReceiveProps !== "disabledUntil") {
+        if (typeof stateNode2.UNSAFE_componentWillReceiveProps === "function") {
           result = stateNode2.UNSAFE_componentWillReceiveProps(memoizedProps, tmp12);
         }
         if (stateNode2.state !== stateNode2.state) {
@@ -5366,8 +5445,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
             }
           }
           const componentDidUpdate = stateNode2.componentDidUpdate;
-          let tmp31 = typeof componentDidUpdate === "disabledUntil";
-          if (typeof componentDidUpdate !== "disabledUntil") {
+          let tmp31 = typeof componentDidUpdate !== "function";
+          if (typeof componentDidUpdate === "function") {
             tmp31 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
             const tmp32 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
           }
@@ -5375,8 +5454,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
             dependencies.flags = dependencies.flags | 4;
           }
           const getSnapshotBeforeUpdate = stateNode2.getSnapshotBeforeUpdate;
-          let tmp33 = typeof getSnapshotBeforeUpdate === "disabledUntil";
-          if (typeof getSnapshotBeforeUpdate !== "disabledUntil") {
+          let tmp33 = typeof getSnapshotBeforeUpdate !== "function";
+          if (typeof getSnapshotBeforeUpdate === "function") {
             tmp33 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
             const tmp34 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
           }
@@ -5388,7 +5467,7 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
         }
       }
     }
-    if (typeof getDerivedStateFromProps !== "disabledUntil") {
+    if (typeof getDerivedStateFromProps === "function") {
       const memoizedState5 = dependencies.memoizedState;
       result = getDerivedStateFromProps(memoizedProps, memoizedState5);
       let tmp36 = memoizedState5;
@@ -5427,30 +5506,30 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     if (tmp37) {
       if (!tmp16) {
         const UNSAFE_componentWillUpdate = stateNode2.UNSAFE_componentWillUpdate;
-        let tmp53 = typeof UNSAFE_componentWillUpdate === "disabledUntil";
-        if (typeof UNSAFE_componentWillUpdate !== "fileFinishedImporting") {
-          tmp53 = typeof stateNode2.componentWillUpdate === "disabledUntil";
+        let tmp53 = typeof UNSAFE_componentWillUpdate !== "function";
+        if (typeof UNSAFE_componentWillUpdate !== "function") {
+          tmp53 = typeof stateNode2.componentWillUpdate !== "function";
         }
         tmp16 = tmp53;
       }
       if (!tmp16) {
-        if (typeof stateNode2.componentWillUpdate !== "disabledUntil") {
+        if (typeof stateNode2.componentWillUpdate === "function") {
           result = stateNode2.componentWillUpdate(memoizedProps, memoizedState2, tmp12);
         }
-        if (typeof stateNode2.UNSAFE_componentWillUpdate !== "disabledUntil") {
+        if (typeof stateNode2.UNSAFE_componentWillUpdate === "function") {
           result = stateNode2.UNSAFE_componentWillUpdate(memoizedProps, memoizedState2, tmp12);
         }
       }
-      if (typeof stateNode2.componentDidUpdate !== "disabledUntil") {
+      if (typeof stateNode2.componentDidUpdate === "function") {
         dependencies.flags = dependencies.flags | 4;
       }
-      if (typeof stateNode2.getSnapshotBeforeUpdate !== "disabledUntil") {
+      if (typeof stateNode2.getSnapshotBeforeUpdate === "function") {
         dependencies.flags = dependencies.flags | 1024;
       }
     } else {
       const componentDidUpdate2 = stateNode2.componentDidUpdate;
-      let tmp49 = typeof componentDidUpdate2 === "disabledUntil";
-      if (typeof componentDidUpdate2 !== "disabledUntil") {
+      let tmp49 = typeof componentDidUpdate2 !== "function";
+      if (typeof componentDidUpdate2 === "function") {
         tmp49 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
         const tmp50 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
       }
@@ -5458,8 +5537,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
         dependencies.flags = dependencies.flags | 4;
       }
       const getSnapshotBeforeUpdate2 = stateNode2.getSnapshotBeforeUpdate;
-      let tmp51 = typeof getSnapshotBeforeUpdate2 === "disabledUntil";
-      if (typeof getSnapshotBeforeUpdate2 !== "disabledUntil") {
+      let tmp51 = typeof getSnapshotBeforeUpdate2 !== "function";
+      if (typeof getSnapshotBeforeUpdate2 === "function") {
         tmp51 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
         const tmp52 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
       }
@@ -5484,8 +5563,8 @@ function finishClassComponent(updateQueue, ref, getDerivedStateFromError, flag3,
     }
     tmp4 = null !== tmp && null !== tmp.ref;
   } else {
-    if (typeof ref !== "fileFinishedImporting") {
-      if (typeof ref === "window") {
+    if (typeof ref !== "function") {
+      if (typeof ref !== "object") {
         const _Error = Error;
         throw Error("Expected ref to be a function, an object returned by React.createRef(), or undefined/null.");
       }
@@ -6128,7 +6207,7 @@ function updateSuspenseListComponent(child, pendingProps) {
           if ("together" === revealOrder) {
             const memoizedState = pendingProps.memoizedState;
             if (null === memoizedState) {
-              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "description", treeForkCount: false };
+              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "disabled", treeForkCount: false };
             } else {
               memoizedState.isBackwards = false;
               memoizedState.rendering = null;
@@ -6357,7 +6436,7 @@ function appendAllChildren(node, child, arg2, arg3) {
     throw Error("Not yet implemented.");
   }
 }
-function appendAllChildrenToContainer(text, child, arg2, arg3) {
+function appendAllChildrenToContainer(arg0, child, arg2, arg3) {
   let sibling;
   child = child.child;
   let flag = false;
@@ -6385,7 +6464,7 @@ function appendAllChildrenToContainer(text, child, arg2, arg3) {
           tmp11 = obj;
         }
         let tmp15 = appendChildToSet;
-        let tmp16 = appendChildToSet(text, tmp11.node);
+        let tmp16 = appendChildToSet(arg0, tmp11.node);
         let flag3 = flag;
       } else if (6 === child.tag) {
         if (arg2) {
@@ -6394,7 +6473,7 @@ function appendAllChildrenToContainer(text, child, arg2, arg3) {
           }
         }
         let tmp7 = appendChildToSet;
-        let tmp8 = appendChildToSet(text, child.stateNode.node);
+        let tmp8 = appendChildToSet(arg0, child.stateNode.node);
         flag3 = flag;
       } else {
         flag3 = flag;
@@ -6407,11 +6486,11 @@ function appendAllChildrenToContainer(text, child, arg2, arg3) {
               }
               let tmp3 = appendAllChildrenToContainer;
               let num = 0;
-              let tmp4 = text;
+              let tmp4 = arg0;
               let tmp5 = child;
               let flag4 = true;
               let flag5 = true;
-              let tmp6 = appendAllChildrenToContainer(text, tmp, true, true);
+              let tmp6 = appendAllChildrenToContainer(arg0, tmp, true, true);
               flag3 = true;
             }
           }
@@ -6453,9 +6532,9 @@ function appendAllChildrenToContainer(text, child, arg2, arg3) {
   }
   return flag2;
 }
-function bubbleProperties(text) {
-  let sibling = text.child;
-  if (null !== text.alternate && text.alternate.child === text.child) {
+function bubbleProperties(alternate) {
+  let sibling = alternate.child;
+  if (null !== alternate.alternate && alternate.alternate.child === alternate.child) {
     let num6 = 0;
     let num7 = 0;
     let num3 = 0;
@@ -6464,7 +6543,7 @@ function bubbleProperties(text) {
       do {
         num7 = num7 | (sibling.lanes | sibling.childLanes);
         num6 = num6 | 65011712 & sibling.subtreeFlags | 65011712 & sibling.flags;
-        sibling.return = text;
+        sibling.return = alternate;
         sibling = sibling.sibling;
         num3 = num6;
         num4 = num7;
@@ -6480,16 +6559,16 @@ function bubbleProperties(text) {
       do {
         num2 = num2 | (sibling2.lanes | sibling2.childLanes);
         num = num | sibling2.subtreeFlags | sibling2.flags;
-        sibling2.return = text;
+        sibling2.return = alternate;
         sibling2 = sibling2.sibling;
         num3 = num;
         num4 = num2;
       } while (null !== sibling2);
     }
   }
-  text.subtreeFlags = text.subtreeFlags | num3;
-  text.childLanes = num4;
-  return null !== text.alternate && text.alternate.child === text.child;
+  alternate.subtreeFlags = alternate.subtreeFlags | num3;
+  alternate.childLanes = num4;
+  return null !== alternate.alternate && alternate.alternate.child === alternate.child;
 }
 function unwindInterruptedWork(alternate, _return) {
   closure_107._currentValue2 = closure_101.current;
@@ -6585,7 +6664,7 @@ function safelyAttachRef(ref, _reactInternals) {
           if (5 !== tag) {
             let stateNode = ref.stateNode;
           }
-          if (typeof tmp2 === "fileFinishedImporting") {
+          if (typeof tmp2 === "function") {
             ref.refCleanup = ref(stateNode);
           } else {
             tmp2.current = stateNode;
@@ -6603,7 +6682,7 @@ function safelyDetachRef(sibling, arg1) {
   let refCleanup;
   ({ ref, refCleanup } = sibling);
   if (null !== ref) {
-    if (typeof refCleanup === "fileFinishedImporting") {
+    if (typeof refCleanup === "function") {
       try {
         refCleanup();
         sibling.refCleanup = null;
@@ -6619,7 +6698,7 @@ function safelyDetachRef(sibling, arg1) {
         }
         throw tmp10;
       }
-    } else if (typeof ref === "fileFinishedImporting") {
+    } else if (typeof ref === "function") {
       try {
         ref(null);
       } catch (tmp6) {
@@ -6693,7 +6772,7 @@ function recursivelyTraverseDeletionEffects(arg0, deletions, child) {
 }
 function commitDeletionEffectsOnFiber(arg0, deletions, sibling) {
   if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-    if (typeof obj.onCommitFiberUnmount !== "disabledUntil") {
+    if (typeof obj.onCommitFiberUnmount === "function") {
       try {
         obj.onCommitFiberUnmount(closure_72, sibling);
       } catch (err) {
@@ -6861,7 +6940,7 @@ function recursivelyTraverseDisappearLayoutEffects(sibling) {
                 let tmp8 = safelyDetachRef;
                 let tmp9 = safelyDetachRef(sibling, sibling.return);
                 let stateNode = sibling.stateNode;
-                if (typeof stateNode.componentWillUnmount !== "disabledUntil") {
+                if (typeof stateNode.componentWillUnmount === "function") {
                   let tmp18 = safelyCallComponentWillUnmount;
                   let tmp19 = safelyCallComponentWillUnmount(sibling, sibling.return, stateNode);
                 }
@@ -8268,9 +8347,9 @@ function handleThrow(current, arg1) {
           let num3 = 1;
           if (null !== promise) {
             num3 = 1;
-            if (typeof promise !== "window") {
+            if (typeof promise === "object") {
               num3 = 1;
-              if (typeof promise.then !== "disabledUntil") {
+              if (typeof promise.then === "function") {
                 num3 = 6;
               }
             }
@@ -8283,7 +8362,7 @@ function handleThrow(current, arg1) {
     if (null === c279) {
       let c287 = 1;
       current = current.current;
-      if (typeof promise === "window") {
+      if (typeof promise !== "object") {
         let obj = { value: null, source: null, stack: null };
         obj[0] = promise;
         obj[1] = current;
@@ -8521,14 +8600,14 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
   let c139 = 0;
   const _return = memoizedState.return;
   try {
-    if ((function throwException(pingCache, _return, flags, promise, c280) {
+    if ((function throwException(pingCache, _return, flags, cache, c280) {
       flags.flags = flags.flags | 32768;
-      let set4 = promise;
-      if (null !== promise) {
-        set4 = promise;
-        if (typeof promise !== "window") {
-          set4 = promise;
-          if (typeof promise.then !== "disabledUntil") {
+      let set4 = cache;
+      if (null !== cache) {
+        set4 = cache;
+        if (typeof cache === "object") {
+          set4 = cache;
+          if (typeof cache.then === "function") {
             if (null !== flags.alternate) {
               callback2(0, flags, c280, true);
             }
@@ -8561,14 +8640,14 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                   if (22 === tag2) {
                     if (1 & current.mode) {
                       current.flags = current.flags | 65536;
-                      if (promise === closure_133) {
+                      if (cache === closure_133) {
                         current.flags = current.flags | 16384;
                       } else {
                         const updateQueue = current.updateQueue;
                         if (null === updateQueue) {
                           let obj = { transitions: null, markerInstances: null, retryQueue: null };
                           const _Set4 = Set;
-                          const items = [promise];
+                          const items = [cache];
                           const set = new Set(items);
                           obj[2] = set;
                           current.updateQueue = obj;
@@ -8576,11 +8655,11 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                           const retryQueue = updateQueue.retryQueue;
                           if (null === retryQueue) {
                             const _Set3 = Set;
-                            const items1 = [promise];
+                            const items1 = [cache];
                             const set1 = new Set(items1);
                             updateQueue.retryQueue = set1;
                           } else {
-                            retryQueue.add(promise);
+                            retryQueue.add(cache);
                           }
                         }
                         const pingCache2 = pingCache.pingCache;
@@ -8589,22 +8668,22 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                           pingCache.pingCache = obj11;
                           const _Set6 = Set;
                           const set2 = new Set();
-                          const result = obj11.set(promise, set2);
+                          const result = obj11.set(cache, set2);
                           let value = set2;
                         } else {
-                          value = pingCache2.get(promise);
+                          value = pingCache2.get(cache);
                           if (undefined === value) {
                             const _Set5 = Set;
                             const set3 = new Set();
-                            const result1 = pingCache2.set(promise, set3);
+                            const result1 = pingCache2.set(cache, set3);
                             value = set3;
                           }
                         }
                         if (!value.has(c280)) {
                           let c285 = true;
                           value.add(c280);
-                          const bindResult = callback5.bind(null, pingCache, promise, c280);
-                          promise.then(bindResult, bindResult);
+                          const bindResult = callback5.bind(null, pingCache, cache, c280);
+                          cache.then(bindResult, bindResult);
                         }
                       }
                       return false;
@@ -8683,21 +8762,21 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                 flags.lanes = flags.lanes | 2;
               }
               set4 = closure_133;
-              if (promise === closure_133) {
+              if (cache === closure_133) {
                 current.flags = current.flags | 16384;
               } else {
                 const updateQueue2 = current.updateQueue;
                 if (null === updateQueue2) {
                   set4 = globalThis;
                   const _Set7 = Set;
-                  const items2 = [promise];
+                  const items2 = [cache];
                   set4 = new.target;
                   set4 = new.target;
                   set4 = items2;
                   set4 = new Set(items2);
                   current.updateQueue = set4;
                 } else {
-                  set4 = updateQueue2.add(promise);
+                  set4 = updateQueue2.add(cache);
                 }
                 if (1 & current.mode) {
                   const pingCache3 = pingCache.pingCache;
@@ -8713,17 +8792,17 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                     set4 = new.target;
                     set4 = new.target;
                     set4 = new Set();
-                    set4 = obj14.set(promise, set4);
+                    set4 = obj14.set(cache, set4);
                     value = set4;
                   } else {
-                    value = pingCache3.get(promise);
+                    value = pingCache3.get(cache);
                     if (undefined === value) {
                       set4 = globalThis;
                       const _Set8 = Set;
                       set4 = new.target;
                       set4 = new.target;
                       set4 = new Set();
-                      set4 = pingCache3.set(promise, set4);
+                      set4 = pingCache3.set(cache, set4);
                       value = set4;
                     }
                   }
@@ -8734,10 +8813,10 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                     set4 = callback5;
                     set4 = null;
                     set4 = pingCache;
-                    set4 = promise;
+                    set4 = cache;
                     set4 = c280;
-                    set4 = callback5.bind(null, pingCache, promise, c280);
-                    set4 = promise.then(set4, set4);
+                    set4 = callback5.bind(null, pingCache, cache, c280);
+                    set4 = cache.then(set4, set4);
                   }
                 }
               }
@@ -8749,22 +8828,22 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                 pingCache.pingCache = obj8;
                 const _Set2 = Set;
                 const set5 = new Set();
-                const result2 = obj8.set(promise, set5);
+                const result2 = obj8.set(cache, set5);
                 let value1 = set5;
               } else {
-                value1 = pingCache.get(promise);
+                value1 = pingCache.get(cache);
                 if (undefined === value1) {
                   const _Set = Set;
                   const set6 = new Set();
-                  const result3 = pingCache.set(promise, set6);
+                  const result3 = pingCache.set(cache, set6);
                   value1 = set6;
                 }
               }
               if (!value1.has(c280)) {
                 c285 = true;
                 value1.add(c280);
-                const bindResult1 = callback5.bind(null, pingCache, promise, c280);
-                promise.then(bindResult1, bindResult1);
+                const bindResult1 = callback5.bind(null, pingCache, cache, c280);
+                cache.then(bindResult1, bindResult1);
               }
               c287 = 4;
               let tmp46 = c283;
@@ -8795,7 +8874,7 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
         }
       }
       const ErrorResult = Error("There was an error during concurrent rendering but React was able to recover by instead synchronously rendering the entire root.", { cause: set4 });
-      if (typeof ErrorResult !== "window") {
+      if (typeof ErrorResult === "object") {
         if (null !== ErrorResult) {
           let obj1 = store;
           let value2 = store.get(ErrorResult);
@@ -8821,7 +8900,7 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
         if (null === _return) {
           return true;
         } else {
-          if (typeof set4 === "window") {
+          if (typeof set4 !== "object") {
             const obj2 = { value: null, source: null, stack: null };
             obj2[0] = set4;
             obj2[1] = flags;
@@ -8894,1963 +8973,52 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
   }
 }
 function completeUnitOfWork(pendingProps) {
-  let _return;
-  let alternate;
-  let dependencies;
-  let memoizedProps;
-  let stateNode;
-  let text = pendingProps;
-  while (!(32768 & text.flags)) {
-    ({ return: _return, alternate } = text);
-    let tmp3 = current4;
-    pendingProps = text.pendingProps;
-    let child = null;
-    switch (text.tag) {
-      case 0:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          let c279 = child;
-        } else {
-          let sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
+  let tmp2 = pendingProps;
+  while (!(32768 & tmp2.flags)) {
+    let cache = null;
+    if (null !== sibling) {
+      cache = sibling.memoizedState.cache;
+    }
+    if (tmp2.memoizedState.cache !== cache) {
+      tmp2.flags = tmp2.flags | 2048;
+    }
+    let tmp4 = closure_107;
+    closure_107._currentValue2 = closure_101.current;
+    if (0 <= closure_86) {
+      let tmp7 = dependencyMap3;
+      tmp5.current = dependencyMap3[tmp6];
+      let tmp8 = closure_86;
+      dependencyMap3[closure_86] = null;
+      let tmp9 = closure_86;
+      closure_86 = closure_86 - 1;
+    }
+    let tmp10 = bubbleProperties;
+    let tmp11 = bubbleProperties(tmp2);
+    let tmp12 = null;
+    while (true) {
+      if (null !== tmp12) {
+        sibling = tmp12;
+      } else {
+        sibling = tmp2.sibling;
+        if (null === sibling) {
+          sibling = tmp;
+          tmp2 = tmp;
+          if (null !== tmp) {
+            continue label0;
           } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                let num8 = 5;
-                c287 = 5;
-              }
+            let tmp14 = c287;
+            if (0 === c287) {
+              let num = 5;
+              c287 = 5;
             }
           }
         }
-      break;
-      case 1:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 2:
-        text = globalThis;
-        let _Error6 = Error;
-        let tag = text.tag;
-        let str8 = "Unknown unit of work tag (";
-        text = `Unknown unit of work tag (${tag}`;
-        let str9 = "). This error is likely caused by a bug in React. Please file an issue.";
-        text = `Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`;
-        text = Error(`Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`);
-        throw text;
-      case 3:
-        let stateNode2 = text.stateNode;
-        text = null !== alternate;
-        text = null;
-        if (text) {
-          text = alternate.memoizedState.cache;
-        }
-        if (text.memoizedState.cache !== text) {
-          text.flags = text.flags | 2048;
-        }
-        text = closure_107;
-        closure_107._currentValue2 = closure_101.current;
-        if (0 <= c86) {
-          text = dependencyMap3;
-          text.current = dependencyMap3[text];
-          text = c86;
-          dependencyMap3[c86] = null;
-          text = c86;
-          c86 = c86 - 1;
-        }
-        text = popHostContainer;
-        text = popHostContainer();
-        if (stateNode2.pendingContext) {
-          stateNode2.context = stateNode2.pendingContext;
-          stateNode2.pendingContext = null;
-        }
-        if (text) {
-          text = null !== alternate.child;
-        }
-        if (!text) {
-          text = null === alternate;
-        }
-        if (!text) {
-          let isDehydrated = alternate.memoizedState.isDehydrated;
-          if (isDehydrated) {
-            isDehydrated = !(256 & text.flags);
-          }
-          text = isDehydrated;
-        }
-        if (!text) {
-          text.flags = text.flags | 1024;
-          text = c100;
-          if (null !== c100) {
-            if (null === c294) {
-              c294 = text;
-            } else {
-              let push3 = arr3.push;
-              text = c294;
-              text = push3.apply(c294, text);
-            }
-            c100 = null;
-          }
-        }
-        if (!text) {
-          let flag11 = true;
-          if (!(16 & text.flags)) {
-            let sibling15 = text.child;
-            flag11 = false;
-            if (null !== sibling15) {
-              text = sibling15;
-              flag11 = true;
-              while (!(8218 & sibling15.flags)) {
-                flag11 = true;
-                if (8218 & sibling15.subtreeFlags) {
-                  break;
-                } else {
-                  sibling15 = sibling15.sibling;
-                  flag11 = false;
-                  if (null === sibling15) {
-                    break;
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          flag11 = false;
-        }
-        if (flag11) {
-          text = createChildSet;
-          text = createChildSet();
-          text = appendAllChildrenToContainer;
-          let num7 = 0;
-          let flag12 = false;
-          let flag13 = false;
-          text = appendAllChildrenToContainer(text, tmp2, false, false);
-          text.stateNode.pendingChildren = text;
-          text.flags = text.flags | 4;
-        }
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-      break;
-      case 4:
-        text = popHostContainer;
-        text = popHostContainer();
-        if (null === alternate) {
-          let flag3 = true;
-          if (!(16 & text.flags)) {
-            let sibling13 = text.child;
-            flag3 = false;
-            if (null !== sibling13) {
-              text = sibling13;
-              flag3 = true;
-              while (!(8218 & sibling13.flags)) {
-                flag3 = true;
-                if (8218 & sibling13.subtreeFlags) {
-                  break;
-                } else {
-                  sibling13 = sibling13.sibling;
-                  flag3 = false;
-                  if (null === sibling13) {
-                    break;
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          flag3 = false;
-        }
-        if (flag3) {
-          text = createChildSet;
-          text = createChildSet();
-          text = appendAllChildrenToContainer;
-          let num4 = 0;
-          let flag4 = false;
-          let flag5 = false;
-          text = appendAllChildrenToContainer(text, tmp2, false, false);
-          text.stateNode.pendingChildren = text;
-          text.flags = text.flags | 4;
-        }
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-      break;
-      case 5:
-        text = popHostContext;
-        text = popHostContext(text);
-        text = null !== alternate;
-        if (text) {
-          if (null != text.stateNode) {
-            ({ stateNode, memoizedProps } = alternate);
-            if (!text) {
-              text = 16 & text.flags;
-              let flag10 = true;
-              if (!text) {
-                let sibling14 = text.child;
-                flag10 = false;
-                if (null !== sibling14) {
-                  text = 8218 & sibling14.flags;
-                  text = sibling14;
-                  flag10 = true;
-                  while (!text) {
-                    text = 8218 & sibling14.subtreeFlags;
-                    flag10 = true;
-                    if (text) {
-                      break;
-                    } else {
-                      sibling14 = sibling14.sibling;
-                      flag10 = false;
-                      if (null === sibling14) {
-                        break;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              flag10 = false;
-            }
-            if (!flag10) {
-              if (memoizedProps === pendingProps) {
-                text.stateNode = stateNode;
-              }
-              text = bubbleProperties;
-              text = bubbleProperties(text);
-              text = text.flags & -16777217;
-              text.flags = text;
-              child = null;
-            }
-            text = require;
-            text = dependencyMap;
-            let obj11 = require(272) /* get BatchedBridge */;
-            text = obj11.diffAttributePayloads(memoizedProps, pendingProps, stateNode.canonical.viewConfig.validAttributes);
-            stateNode.canonical.currentProps = pendingProps;
-            let node = stateNode.node;
-            if (!flag10) {
-              text = stateNode;
-              if (null === text) {
-                text.stateNode = stateNode;
-              } else {
-                text = cloneNodeWithNewProps;
-                text = cloneNodeWithNewProps(node, text);
-                let obj = { node: null, canonical: null };
-                obj[0] = text;
-                obj[1] = stateNode.canonical;
-                text = obj;
-              }
-            }
-            if (null !== text) {
-              text = callback5;
-              text = callback5(node, text);
-            } else {
-              text = cloneNodeWithNewChildren;
-              text = cloneNodeWithNewChildren(node);
-            }
-          }
-        }
-        if (pendingProps) {
-          text = closure_95;
-          let current3 = closure_95.current;
-          text = c360;
-          text = c360 + 2;
-          c360 = text;
-          text = get;
-          text = get(text.type);
-          text = require;
-          text = dependencyMap;
-          let obj8 = require(272) /* get BatchedBridge */;
-          text = obj8.createAttributePayload(pendingProps, text.validAttributes);
-          obj = { node: null, canonical: null };
-          text = createNode;
-          text = c360;
-          text = createNode(c360, text.uiViewClassName, current3.containerTag, text, tmp2);
-          obj[0] = text;
-          let obj1 = { nativeTag: null, viewConfig: null, currentProps: null, internalInstanceHandle: null, publicInstance: null, publicRootInstance: null };
-          obj1[0] = c360;
-          obj1[1] = text;
-          obj1[2] = pendingProps;
-          obj1[3] = text;
-          obj1[5] = current3.publicInstance;
-          obj[1] = obj1;
-          text = text.flags | 8;
-          text.flags = text;
-          text = appendAllChildren;
-          let num6 = 0;
-          text = obj;
-          let flag8 = false;
-          let flag9 = false;
-          text = appendAllChildren(obj, tmp2, false, false);
-          text.stateNode = obj;
-        } else if (null === text.stateNode) {
-          text = globalThis;
-          let _Error5 = Error;
-          let str7 = "We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.";
-          text = Error("We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.");
-          throw text;
-        } else {
-          text = bubbleProperties;
-          text = bubbleProperties(text);
-          child = null;
-        }
-      break;
-      case 6:
-        if (alternate) {
-          if (null != text.stateNode) {
-            if (alternate.memoizedProps !== pendingProps) {
-              text = closure_95;
-              text = ref;
-              let current2 = ref.current;
-              text.flags = text.flags | 8;
-              text = c360;
-              c360 = c360 + 2;
-              let obj2 = { node: null };
-              text = createNode;
-              let obj3 = { text: null };
-              obj3[0] = pendingProps;
-              text = c360;
-              let str6 = "RCTRawText";
-              text = obj3;
-              obj2[0] = createNode(c360, "RCTRawText", closure_95.current.containerTag, obj3, tmp2);
-              text.stateNode = obj2;
-            } else {
-              text.stateNode = alternate.stateNode;
-            }
-            text = bubbleProperties;
-            text = bubbleProperties(text);
-            child = null;
-          }
-        }
-        if (typeof pendingProps !== "y") {
-          if (null === text.stateNode) {
-            text = globalThis;
-            let _Error4 = Error;
-            let str5 = "We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.";
-            throw Error("We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.");
-          }
-        }
-        text = closure_95;
-        text = ref;
-        let current = ref.current;
-        text.flags = text.flags | 8;
-        text = c360;
-        c360 = c360 + 2;
-        let obj4 = { node: null };
-        text = createNode;
-        let obj5 = { text: null };
-        obj5[0] = pendingProps;
-        text = c360;
-        let str4 = "RCTRawText";
-        text = obj5;
-        obj4[0] = createNode(c360, "RCTRawText", closure_95.current.containerTag, obj5, tmp2);
-        text.stateNode = obj4;
-      break;
-      case 7:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 8:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 9:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 10:
-        text.type._currentValue2 = closure_101.current;
-        if (0 <= c86) {
-          text = dependencyMap3;
-          text.current = dependencyMap3[text];
-          text = c86;
-          dependencyMap3[c86] = null;
-          text = c86;
-          c86 = c86 - 1;
-        }
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-      break;
-      case 11:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 12:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 13:
-        let memoizedState2 = text.memoizedState;
-        text = null === alternate;
-        if (text) {
-          if (null !== memoizedState2) {
-            if (null !== memoizedState2.dehydrated) {
-              if (text) {
-                text = globalThis;
-                let _Error = Error;
-                let str = "A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.";
-                throw Error("A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.");
-              } else {
-                if (!(128 & text.flags)) {
-                  text.memoizedState = null;
-                }
-                text.flags = text.flags | 4;
-                text = bubbleProperties;
-                text = bubbleProperties(text);
-                let flag6 = false;
-                if (!flag6) {
-                  text = closure_159;
-                  text = c86;
-                  if (256 & text.flags) {
-                    if (0 <= text) {
-                      text = dependencyMap3;
-                      text.current = dependencyMap3[text];
-                      text = c86;
-                      dependencyMap3[c86] = null;
-                      text = c86;
-                      text = c86 - 1;
-                      c86 = text;
-                    }
-                    text = c160;
-                    if (c160 === text) {
-                      c160 = null;
-                    }
-                    if (0 <= text) {
-                      text = dependencyMap3;
-                      text.current = dependencyMap3[text];
-                      text = c86;
-                      dependencyMap3[c86] = null;
-                      text = c86;
-                      c86 = c86 - 1;
-                    }
-                  } else {
-                    if (0 <= text) {
-                      text = dependencyMap3;
-                      text.current = dependencyMap3[text];
-                      text = c86;
-                      dependencyMap3[c86] = null;
-                      text = c86;
-                      text = c86 - 1;
-                      c86 = text;
-                    }
-                    text = c160;
-                    if (c160 === text) {
-                      c160 = null;
-                    }
-                    text = null;
-                    if (0 <= text) {
-                      text = dependencyMap3;
-                      text.current = dependencyMap3[text];
-                      text = c86;
-                      dependencyMap3[c86] = null;
-                      text = c86;
-                      c86 = c86 - 1;
-                      text = null;
-                    }
-                  }
-                  child = text;
-                }
-              }
-            }
-          }
-          text = c100;
-          if (null === c100) {
-            text = null !== alternate;
-            if (text) {
-              text = null !== alternate.memoizedState;
-            }
-            flag6 = true;
-            if (text) {
-              alternate.memoizedState.hydrationErrors = text;
-              flag6 = true;
-            }
-          } else {
-            if (null === c294) {
-              c294 = text;
-            } else {
-              let push = arr.push;
-              text = c294;
-              text = push.apply(c294, text);
-            }
-            c100 = null;
-          }
-        }
-        text = c86;
-        if (0 <= c86) {
-          text = dependencyMap3;
-          text.current = dependencyMap3[text];
-          text = c86;
-          dependencyMap3[c86] = null;
-          text = c86;
-          text = c86 - 1;
-          c86 = text;
-        }
-        text = c160;
-        if (c160 === text) {
-          c160 = null;
-        }
-        if (0 <= text) {
-          text = dependencyMap3;
-          text.current = dependencyMap3[text];
-          text = c86;
-          dependencyMap3[c86] = null;
-          text = c86;
-          c86 = c86 - 1;
-        }
-        if (128 & text.flags) {
-          text.lanes = tmp3;
-        } else {
-          text = null !== alternate;
-          if (text) {
-            text = null !== alternate.memoizedState;
-          }
-          text = null !== memoizedState2;
-          if (text) {
-            child = text.child;
-            text = null !== child.alternate;
-            if (text) {
-              text = null !== child.alternate.memoizedState;
-            }
-            if (text) {
-              text = null !== child.alternate.memoizedState.cachePool;
-            }
-            text = null;
-            if (text) {
-              text = child.alternate.memoizedState.cachePool.pool;
-            }
-            text = null !== child.memoizedState;
-            if (text) {
-              text = null !== child.memoizedState.cachePool;
-            }
-            text = null;
-            if (text) {
-              text = child.memoizedState.cachePool.pool;
-            }
-            if (text !== text) {
-              child.flags = child.flags | 2048;
-            }
-          }
-          text = text !== text;
-          if (text) {
-            let child2 = text.child;
-            child2.flags = child2.flags | 8192;
-          }
-          if (null !== text.updateQueue) {
-            text.flags = text.flags | 4;
-          }
-          if (16384 & text.flags) {
-            let num5 = 536870912;
-            if (22 !== text.tag) {
-              text = c80 << 1;
-              c80 = text;
-              num5 = c80;
-              if (!(62914560 & text)) {
-                c80 = 4194304;
-                num5 = text;
-              }
-            }
-            text.lanes = text.lanes | num5;
-            text = c292;
-            c292 = c292 | num5;
-          }
-          text = bubbleProperties;
-          text = bubbleProperties(text);
-          text = null;
-        }
-        child = text;
-      break;
-      case 14:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 15:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 16:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 17:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 18:
-        text = globalThis;
-        _Error6 = Error;
-        tag = text.tag;
-        str8 = "Unknown unit of work tag (";
-        text = `Unknown unit of work tag (${tag}`;
-        str9 = "). This error is likely caused by a bug in React. Please file an issue.";
-        text = `Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`;
-        text = Error(`Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`);
-        throw text;
-      case 19:
-        if (0 <= c86) {
-          let tmp72 = dependencyMap3;
-          tmp70.current = dependencyMap3[tmp71];
-          let tmp73 = c86;
-          dependencyMap3[c86] = null;
-          let tmp74 = c86;
-          c86 = c86 - 1;
-        }
-        let memoizedState = text.memoizedState;
-        if (null === memoizedState) {
-          text = bubbleProperties;
-          text = bubbleProperties(text);
-          child = null;
-        } else {
-          text = 128 & text.flags;
-          let rendering = memoizedState.rendering;
-          if (null === rendering) {
-            if (text) {
-              let tailMode5 = memoizedState.tailMode;
-              if ("hidden" === tailMode5) {
-                let sibling12 = memoizedState.tail;
-                text = null;
-                text = null;
-                while (null !== sibling12) {
-                  text = sibling12;
-                  if (null !== sibling12.alternate) {
-                    text = sibling12;
-                  }
-                  sibling12 = sibling12.sibling;
-                }
-                if (null === text) {
-                  memoizedState.tail = null;
-                  let flag2 = text;
-                } else {
-                  text.sibling = null;
-                  flag2 = text;
-                }
-              } else {
-                flag2 = text;
-                if ("collapsed" === tailMode5) {
-                  let sibling11 = memoizedState.tail;
-                  text = null;
-                  text = null;
-                  while (null !== sibling11) {
-                    text = sibling11;
-                    if (null !== sibling11.alternate) {
-                      text = sibling11;
-                    }
-                    sibling11 = sibling11.sibling;
-                  }
-                  if (null === text) {
-                    if (null === memoizedState.tail) {
-                      memoizedState.tail = null;
-                      flag2 = text;
-                    } else {
-                      memoizedState.tail.sibling = null;
-                      flag2 = text;
-                    }
-                  } else {
-                    text.sibling = null;
-                    flag2 = text;
-                  }
-                }
-              }
-            } else {
-              let tmp99 = c287;
-              if (0 !== c287) {
-                let sibling5 = text.child;
-                if (null !== sibling5) {
-                  text = findFirstSuspended;
-                  text = findFirstSuspended(sibling5);
-                  text = sibling5;
-                  while (null === text) {
-                    sibling5 = sibling5.sibling;
-                  }
-                  text.flags = text.flags | 128;
-                  let tailMode4 = memoizedState.tailMode;
-                  if ("hidden" === tailMode4) {
-                    let sibling9 = memoizedState.tail;
-                    text = null;
-                    text = null;
-                    while (null !== sibling9) {
-                      text = sibling9;
-                      if (null !== sibling9.alternate) {
-                        text = sibling9;
-                      }
-                      sibling9 = sibling9.sibling;
-                    }
-                    if (null === text) {
-                      memoizedState.tail = null;
-                    } else {
-                      text.sibling = null;
-                    }
-                  } else if ("collapsed" === tailMode4) {
-                    let sibling8 = memoizedState.tail;
-                    text = null;
-                    text = null;
-                    while (null !== sibling8) {
-                      text = sibling8;
-                      if (null !== sibling8.alternate) {
-                        text = sibling8;
-                      }
-                      sibling8 = sibling8.sibling;
-                    }
-                    if (null === text) {
-                      if (null === memoizedState.tail) {
-                        memoizedState.tail = null;
-                      } else {
-                        memoizedState.tail.sibling = null;
-                      }
-                    } else {
-                      text.sibling = null;
-                    }
-                  }
-                  let updateQueue3 = text.updateQueue;
-                  text.updateQueue = updateQueue3;
-                  if (null !== updateQueue3) {
-                    text.flags = text.flags | 4;
-                  }
-                  if (16384 & text.flags) {
-                    let num3 = 536870912;
-                    if (22 !== text.tag) {
-                      text = c80 << 1;
-                      c80 = text;
-                      num3 = c80;
-                      if (!(62914560 & text)) {
-                        c80 = 4194304;
-                        num3 = text;
-                      }
-                    }
-                    text.lanes = text.lanes | num3;
-                    text = c292;
-                    c292 = c292 | num3;
-                  }
-                  text.subtreeFlags = 0;
-                  let sibling10 = text.child;
-                  while (null !== sibling10) {
-                    sibling10.flags = sibling10.flags & 65011714;
-                    let alternate2 = sibling10.alternate;
-                    text = sibling10;
-                    if (null === alternate2) {
-                      sibling10.childLanes = 0;
-                      sibling10.lanes = tmp3;
-                      sibling10.child = null;
-                      sibling10.subtreeFlags = 0;
-                      sibling10.memoizedProps = null;
-                      sibling10.memoizedState = null;
-                      sibling10.updateQueue = null;
-                      sibling10.dependencies = null;
-                      sibling10.stateNode = null;
-                    } else {
-                      ({ childLanes: sibling10.childLanes, lanes: sibling10.lanes, child: sibling10.child } = alternate2);
-                      sibling10.subtreeFlags = 0;
-                      sibling10.deletions = null;
-                      ({ memoizedProps: sibling10.memoizedProps, memoizedState: sibling10.memoizedState, updateQueue: sibling10.updateQueue, type: sibling10.type, dependencies } = alternate2);
-                      text = null;
-                      if (null !== dependencies) {
-                        let obj6 = { lanes: null, firstContext: null };
-                        ({ lanes: obj2[0], firstContext: obj2[1] } = dependencies);
-                        text = obj6;
-                      }
-                      sibling10.dependencies = text;
-                    }
-                    sibling10 = sibling10.sibling;
-                  }
-                  text = closure_162;
-                  text = c86;
-                  text = c86 + 1;
-                  c86 = text;
-                  text = dependencyMap3;
-                  dependencyMap3[text] = closure_162.current;
-                  closure_162.current = 1 & closure_162.current | 2;
-                  child = text.child;
-                }
-              }
-              text = null !== memoizedState.tail;
-              if (text) {
-                text = require;
-                text = dependencyMap;
-                obj = require(287) /* peek */;
-                text = Infinity;
-                text = obj.unstable_now() > Infinity;
-              }
-              flag2 = text;
-              if (text) {
-                text.flags = text.flags | 128;
-                let tailMode3 = memoizedState.tailMode;
-                if ("hidden" === tailMode3) {
-                  let sibling7 = memoizedState.tail;
-                  text = null;
-                  text = null;
-                  while (null !== sibling7) {
-                    text = sibling7;
-                    if (null !== sibling7.alternate) {
-                      text = sibling7;
-                    }
-                    sibling7 = sibling7.sibling;
-                  }
-                  if (null === text) {
-                    memoizedState.tail = null;
-                  } else {
-                    text.sibling = null;
-                  }
-                } else if ("collapsed" === tailMode3) {
-                  let sibling6 = memoizedState.tail;
-                  text = null;
-                  text = null;
-                  while (null !== sibling6) {
-                    text = sibling6;
-                    if (null !== sibling6.alternate) {
-                      text = sibling6;
-                    }
-                    sibling6 = sibling6.sibling;
-                  }
-                  if (null === text) {
-                    if (null === memoizedState.tail) {
-                      memoizedState.tail = null;
-                    } else {
-                      memoizedState.tail.sibling = null;
-                    }
-                  } else {
-                    text.sibling = null;
-                  }
-                }
-                text.lanes = 4194304;
-                flag2 = true;
-              }
-            }
-          } else {
-            let flag = text;
-            if (!text) {
-              let tmp75 = findFirstSuspended;
-              let tmp76 = findFirstSuspended(rendering);
-              if (null !== tmp76) {
-                text.flags = text.flags | 128;
-                let updateQueue2 = tmp76.updateQueue;
-                text.updateQueue = updateQueue2;
-                if (null !== updateQueue2) {
-                  text.flags = text.flags | 4;
-                }
-                if (16384 & text.flags) {
-                  let num2 = 536870912;
-                  if (22 !== text.tag) {
-                    let tmp87 = c80 << 1;
-                    c80 = tmp87;
-                    num2 = c80;
-                    if (!(62914560 & tmp87)) {
-                      c80 = 4194304;
-                      num2 = tmp86;
-                    }
-                  }
-                  text.lanes = text.lanes | num2;
-                  let tmp88 = c292;
-                  c292 = c292 | num2;
-                }
-                let tailMode2 = memoizedState.tailMode;
-                if ("hidden" === tailMode2) {
-                  let sibling4 = memoizedState.tail;
-                  let tmp93 = null;
-                  let tmp94 = null;
-                  while (null !== sibling4) {
-                    let tmp95 = tmp93;
-                    let tmp96 = sibling4;
-                    if (null !== sibling4.alternate) {
-                      tmp95 = sibling4;
-                    }
-                    sibling4 = sibling4.sibling;
-                    tmp93 = tmp95;
-                    tmp94 = tmp95;
-                  }
-                  if (null === tmp94) {
-                    memoizedState.tail = null;
-                  } else {
-                    tmp94.sibling = null;
-                  }
-                } else if ("collapsed" === tailMode2) {
-                  let sibling3 = memoizedState.tail;
-                  let tmp91 = null;
-                  let tmp92 = null;
-                  while (null !== sibling3) {
-                    let tmp89 = tmp91;
-                    let tmp90 = sibling3;
-                    if (null !== sibling3.alternate) {
-                      tmp89 = sibling3;
-                    }
-                    sibling3 = sibling3.sibling;
-                    tmp91 = tmp89;
-                    tmp92 = tmp89;
-                  }
-                  if (null === tmp92) {
-                    memoizedState.tail = null;
-                  } else {
-                    tmp92.sibling = null;
-                  }
-                }
-                flag = true;
-                if (null === memoizedState.tail) {
-                  flag = true;
-                  if ("hidden" === memoizedState.tailMode) {
-                    flag = true;
-                    if (!rendering.alternate) {
-                      let tmp97 = bubbleProperties;
-                      let tmp98 = bubbleProperties(text);
-                      child = null;
-                    }
-                  }
-                }
-              } else {
-                text = require;
-                text = dependencyMap;
-                let obj13 = require(287) /* peek */;
-                text = Infinity;
-                let tmp77 = 2 * obj13.unstable_now() - memoizedState.renderingStartTime > Infinity;
-                if (tmp77) {
-                  tmp77 = 536870912 !== tmp3;
-                }
-                flag = text;
-                if (tmp77) {
-                  text.flags = text.flags | 128;
-                  let tailMode = memoizedState.tailMode;
-                  if ("hidden" === tailMode) {
-                    let sibling2 = memoizedState.tail;
-                    let tmp82 = null;
-                    let tmp83 = null;
-                    while (null !== sibling2) {
-                      let tmp84 = tmp82;
-                      let tmp85 = sibling2;
-                      if (null !== sibling2.alternate) {
-                        tmp84 = sibling2;
-                      }
-                      sibling2 = sibling2.sibling;
-                      tmp82 = tmp84;
-                      tmp83 = tmp84;
-                    }
-                    if (null === tmp83) {
-                      memoizedState.tail = null;
-                    } else {
-                      tmp83.sibling = null;
-                    }
-                  } else if ("collapsed" === tailMode) {
-                    let sibling = memoizedState.tail;
-                    let tmp80 = null;
-                    let tmp81 = null;
-                    while (null !== sibling) {
-                      let tmp78 = tmp80;
-                      let tmp79 = sibling;
-                      if (null !== sibling.alternate) {
-                        tmp78 = sibling;
-                      }
-                      sibling = sibling.sibling;
-                      tmp80 = tmp78;
-                      tmp81 = tmp78;
-                    }
-                    if (null === tmp81) {
-                      if (null === memoizedState.tail) {
-                        memoizedState.tail = null;
-                      } else {
-                        memoizedState.tail.sibling = null;
-                      }
-                    } else {
-                      tmp81.sibling = null;
-                    }
-                  }
-                  text.lanes = 4194304;
-                  flag = true;
-                }
-              }
-            }
-            if (memoizedState.isBackwards) {
-              rendering.sibling = text.child;
-              text.child = rendering;
-              flag2 = flag;
-            } else {
-              let last = memoizedState.last;
-              if (null !== last) {
-                last.sibling = rendering;
-              } else {
-                text.child = rendering;
-              }
-              memoizedState.last = rendering;
-              flag2 = flag;
-            }
-          }
-          if (null !== memoizedState.tail) {
-            let tail = memoizedState.tail;
-            memoizedState.rendering = tail;
-            memoizedState.tail = tail.sibling;
-            text = require;
-            text = dependencyMap;
-            obj2 = require(287) /* peek */;
-            memoizedState.renderingStartTime = obj2.unstable_now();
-            tail.sibling = null;
-            text = closure_162;
-            text = 1 & closure_162.current;
-            if (flag2) {
-              text = text | 2;
-            }
-            text = c86;
-            text = c86 + 1;
-            c86 = text;
-            text = dependencyMap3;
-            dependencyMap3[text] = text.current;
-            text.current = text;
-            text = tail;
-          } else {
-            text = bubbleProperties;
-            text = bubbleProperties(text);
-            text = null;
-            child = null;
-          }
-        }
-      break;
-      case 20:
-        text = globalThis;
-        _Error6 = Error;
-        tag = text.tag;
-        str8 = "Unknown unit of work tag (";
-        text = `Unknown unit of work tag (${tag}`;
-        str9 = "). This error is likely caused by a bug in React. Please file an issue.";
-        text = `Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`;
-        text = Error(`Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`);
-        throw text;
-      case 21:
-        text = globalThis;
-        _Error6 = Error;
-        tag = text.tag;
-        str8 = "Unknown unit of work tag (";
-        text = `Unknown unit of work tag (${tag}`;
-        str9 = "). This error is likely caused by a bug in React. Please file an issue.";
-        text = `Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`;
-        text = Error(`Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`);
-        throw text;
-      case 22:
-        let tmp14 = closure_159;
-        let tmp15 = c86;
-        let tmp16 = c86;
-        if (0 <= c86) {
-          let tmp17 = dependencyMap3;
-          tmp14.current = dependencyMap3[tmp15];
-          let tmp18 = c86;
-          dependencyMap3[c86] = null;
-          let tmp19 = c86;
-          let diff = c86 - 1;
-          c86 = diff;
-          tmp16 = diff;
-        }
-        let tmp21 = c160;
-        if (c160 === text) {
-          c160 = null;
-        }
-        let tmp22 = closure_162;
-        if (0 <= tmp16) {
-          let tmp23 = dependencyMap3;
-          tmp22.current = dependencyMap3[tmp16];
-          let tmp24 = c86;
-          dependencyMap3[c86] = null;
-          let tmp25 = c86;
-          let diff1 = c86 - 1;
-          c86 = diff1;
-        }
-        let tmp27 = closure_158;
-        current4 = closure_158.current;
-        let tmp28 = closure_157;
-        let tmp29 = c86;
-        let tmp30 = c86;
-        if (0 <= c86) {
-          let tmp31 = dependencyMap3;
-          tmp28.current = dependencyMap3[tmp29];
-          let tmp32 = c86;
-          dependencyMap3[c86] = null;
-          let tmp33 = c86;
-          let diff2 = c86 - 1;
-          c86 = diff2;
-          tmp30 = diff2;
-        }
-        if (0 <= tmp30) {
-          let tmp35 = dependencyMap3;
-          tmp27.current = dependencyMap3[tmp30];
-          let tmp36 = c86;
-          dependencyMap3[c86] = null;
-          let tmp37 = c86;
-          let diff3 = c86 - 1;
-          c86 = diff3;
-        }
-        let tmp39 = null !== text.memoizedState;
-        let tmp40 = null !== alternate;
-        if (tmp40) {
-          let tmp42 = null !== alternate.memoizedState;
-          if (tmp42 !== tmp39) {
-            let tmp43 = text.flags | 8192;
-            text.flags = tmp43;
-          }
-        } else if (tmp39) {
-          let tmp41 = text.flags | 8192;
-          text.flags = tmp41;
-        }
-        if (tmp39) {
-          let tmp44 = 1 & text.mode;
-          if (tmp44) {
-            let tmp47 = 536870912 & tmp3;
-            let tmp48 = !tmp47;
-            let tmp49 = !tmp48;
-            if (tmp49) {
-              let tmp50 = 128 & text.flags;
-              tmp49 = !tmp50;
-            }
-            if (tmp49) {
-              let tmp51 = bubbleProperties;
-              let tmp52 = bubbleProperties(text);
-              let tmp53 = 6 & text.subtreeFlags;
-              if (tmp53) {
-                let tmp54 = text.flags | 8192;
-                text.flags = tmp54;
-              }
-            }
-            let updateQueue = text.updateQueue;
-            if (null !== updateQueue) {
-              if (null !== updateQueue.retryQueue) {
-                let tmp55 = text.flags | 4;
-                text.flags = tmp55;
-              }
-              let tmp56 = 16384 & text.flags;
-              if (tmp56) {
-                let num = 536870912;
-                if (22 !== text.tag) {
-                  let tmp57 = c80;
-                  let tmp58 = c80 << 1;
-                  c80 = tmp58;
-                  let tmp59 = 62914560 & tmp58;
-                  num = c80;
-                  if (!tmp59) {
-                    c80 = 4194304;
-                    num = tmp57;
-                  }
-                }
-                let tmp60 = text.lanes | num;
-                text.lanes = tmp60;
-                let tmp61 = c292;
-                let tmp62 = c292 | num;
-                c292 = tmp62;
-              }
-            }
-            let tmp63 = tmp40;
-            if (tmp40) {
-              tmp63 = null !== alternate.memoizedState;
-            }
-            if (tmp63) {
-              tmp63 = null !== alternate.memoizedState.cachePool;
-            }
-            let pool = null;
-            if (tmp63) {
-              pool = alternate.memoizedState.cachePool.pool;
-            }
-            let tmp65 = null !== text.memoizedState;
-            if (tmp65) {
-              tmp65 = null !== text.memoizedState.cachePool;
-            }
-            let pool1 = null;
-            if (tmp65) {
-              pool1 = text.memoizedState.cachePool.pool;
-            }
-            if (pool1 !== pool) {
-              let tmp67 = text.flags | 2048;
-              text.flags = tmp67;
-            }
-            child = null;
-            if (tmp40) {
-              let tmp68 = closure_128;
-              let tmp69 = c86;
-              child = null;
-              if (0 <= c86) {
-                text = dependencyMap3;
-                tmp68.current = dependencyMap3[tmp69];
-                text = c86;
-                dependencyMap3[c86] = null;
-                text = c86;
-                text = c86 - 1;
-                c86 = text;
-                child = null;
-              }
-            }
-          }
-        }
-        let tmp45 = bubbleProperties;
-        let tmp46 = bubbleProperties(text);
-      break;
-      case 23:
-        tmp14 = closure_159;
-        tmp15 = c86;
-        tmp16 = c86;
-        if (0 <= c86) {
-          tmp17 = dependencyMap3;
-          tmp14.current = dependencyMap3[tmp15];
-          tmp18 = c86;
-          dependencyMap3[c86] = null;
-          tmp19 = c86;
-          diff = c86 - 1;
-          c86 = diff;
-          tmp16 = diff;
-        }
-        tmp21 = c160;
-        if (c160 === text) {
-          c160 = null;
-        }
-        tmp22 = closure_162;
-        if (0 <= tmp16) {
-          tmp23 = dependencyMap3;
-          tmp22.current = dependencyMap3[tmp16];
-          tmp24 = c86;
-          dependencyMap3[c86] = null;
-          tmp25 = c86;
-          diff1 = c86 - 1;
-          c86 = diff1;
-        }
-        tmp27 = closure_158;
-        current4 = closure_158.current;
-        tmp28 = closure_157;
-        tmp29 = c86;
-        tmp30 = c86;
-        if (0 <= c86) {
-          tmp31 = dependencyMap3;
-          tmp28.current = dependencyMap3[tmp29];
-          tmp32 = c86;
-          dependencyMap3[c86] = null;
-          tmp33 = c86;
-          diff2 = c86 - 1;
-          c86 = diff2;
-          tmp30 = diff2;
-        }
-        if (0 <= tmp30) {
-          tmp35 = dependencyMap3;
-          tmp27.current = dependencyMap3[tmp30];
-          tmp36 = c86;
-          dependencyMap3[c86] = null;
-          tmp37 = c86;
-          diff3 = c86 - 1;
-          c86 = diff3;
-        }
-        tmp39 = null !== text.memoizedState;
-        tmp40 = null !== alternate;
-        if (tmp40) {
-          tmp42 = null !== alternate.memoizedState;
-          if (tmp42 !== tmp39) {
-            tmp43 = text.flags | 8192;
-            text.flags = tmp43;
-          }
-        } else if (tmp39) {
-          tmp41 = text.flags | 8192;
-          text.flags = tmp41;
-        }
-        if (tmp39) {
-          tmp44 = 1 & text.mode;
-          if (tmp44) {
-            tmp47 = 536870912 & tmp3;
-            tmp48 = !tmp47;
-            tmp49 = !tmp48;
-            if (tmp49) {
-              tmp50 = 128 & text.flags;
-              tmp49 = !tmp50;
-            }
-            if (tmp49) {
-              tmp51 = bubbleProperties;
-              tmp52 = bubbleProperties(text);
-              tmp53 = 6 & text.subtreeFlags;
-              if (tmp53) {
-                tmp54 = text.flags | 8192;
-                text.flags = tmp54;
-              }
-            }
-            updateQueue = text.updateQueue;
-            if (null !== updateQueue) {
-              if (null !== updateQueue.retryQueue) {
-                tmp55 = text.flags | 4;
-                text.flags = tmp55;
-              }
-              tmp56 = 16384 & text.flags;
-              if (tmp56) {
-                num = 536870912;
-                if (22 !== text.tag) {
-                  tmp57 = c80;
-                  tmp58 = c80 << 1;
-                  c80 = tmp58;
-                  tmp59 = 62914560 & tmp58;
-                  num = c80;
-                  if (!tmp59) {
-                    c80 = 4194304;
-                    num = tmp57;
-                  }
-                }
-                tmp60 = text.lanes | num;
-                text.lanes = tmp60;
-                tmp61 = c292;
-                tmp62 = c292 | num;
-                c292 = tmp62;
-              }
-            }
-            tmp63 = tmp40;
-            if (tmp40) {
-              tmp63 = null !== alternate.memoizedState;
-            }
-            if (tmp63) {
-              tmp63 = null !== alternate.memoizedState.cachePool;
-            }
-            pool = null;
-            if (tmp63) {
-              pool = alternate.memoizedState.cachePool.pool;
-            }
-            tmp65 = null !== text.memoizedState;
-            if (tmp65) {
-              tmp65 = null !== text.memoizedState.cachePool;
-            }
-            pool1 = null;
-            if (tmp65) {
-              pool1 = text.memoizedState.cachePool.pool;
-            }
-            if (pool1 !== pool) {
-              tmp67 = text.flags | 2048;
-              text.flags = tmp67;
-            }
-            child = null;
-            if (tmp40) {
-              tmp68 = closure_128;
-              tmp69 = c86;
-              child = null;
-              if (0 <= c86) {
-                text = dependencyMap3;
-                tmp68.current = dependencyMap3[tmp69];
-                text = c86;
-                dependencyMap3[c86] = null;
-                text = c86;
-                text = c86 - 1;
-                c86 = text;
-                child = null;
-              }
-            }
-          }
-        }
-        tmp45 = bubbleProperties;
-        tmp46 = bubbleProperties(text);
-      break;
-      case 24:
-        let cache = null;
-        if (null !== alternate) {
-          cache = alternate.memoizedState.cache;
-        }
-        if (text.memoizedState.cache !== cache) {
-          text.flags = text.flags | 2048;
-        }
-        let tmp6 = closure_107;
-        closure_107._currentValue2 = closure_101.current;
-        if (0 <= c86) {
-          let tmp9 = dependencyMap3;
-          tmp7.current = dependencyMap3[tmp8];
-          let tmp10 = c86;
-          dependencyMap3[c86] = null;
-          let tmp11 = c86;
-          c86 = c86 - 1;
-        }
-        let tmp12 = bubbleProperties;
-        let tmp13 = bubbleProperties(text);
-        child = null;
-      break;
-      case 25:
-      break;
-      case 26:
-        text = popHostContext;
-        text = popHostContext(text);
-        text = null !== alternate;
-        if (text) {
-          if (null != text.stateNode) {
-            ({ stateNode, memoizedProps } = alternate);
-            if (!text) {
-              text = 16 & text.flags;
-              flag10 = true;
-              if (!text) {
-                sibling14 = text.child;
-                flag10 = false;
-                if (null !== sibling14) {
-                  text = 8218 & sibling14.flags;
-                  text = sibling14;
-                  flag10 = true;
-                  while (!text) {
-                    text = 8218 & sibling14.subtreeFlags;
-                    flag10 = true;
-                    if (text) {
-                      break;
-                    } else {
-                      sibling14 = sibling14.sibling;
-                      flag10 = false;
-                      if (null === sibling14) {
-                        break;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              flag10 = false;
-            }
-            if (!flag10) {
-              if (memoizedProps === pendingProps) {
-                text.stateNode = stateNode;
-              }
-              text = bubbleProperties;
-              text = bubbleProperties(text);
-              text = text.flags & -16777217;
-              text.flags = text;
-              child = null;
-            }
-            text = require;
-            text = dependencyMap;
-            obj11 = require(272) /* get BatchedBridge */;
-            text = obj11.diffAttributePayloads(memoizedProps, pendingProps, stateNode.canonical.viewConfig.validAttributes);
-            stateNode.canonical.currentProps = pendingProps;
-            node = stateNode.node;
-            if (!flag10) {
-              text = stateNode;
-              if (null === text) {
-                text.stateNode = stateNode;
-              } else {
-                text = cloneNodeWithNewProps;
-                text = cloneNodeWithNewProps(node, text);
-                obj = { node: null, canonical: null };
-                obj[0] = text;
-                obj[1] = stateNode.canonical;
-                text = obj;
-              }
-            }
-            if (null !== text) {
-              text = callback5;
-              text = callback5(node, text);
-            } else {
-              text = cloneNodeWithNewChildren;
-              text = cloneNodeWithNewChildren(node);
-            }
-          }
-        }
-        if (pendingProps) {
-          text = closure_95;
-          current3 = closure_95.current;
-          text = c360;
-          text = c360 + 2;
-          c360 = text;
-          text = get;
-          text = get(text.type);
-          text = require;
-          text = dependencyMap;
-          obj8 = require(272) /* get BatchedBridge */;
-          text = obj8.createAttributePayload(pendingProps, text.validAttributes);
-          obj = { node: null, canonical: null };
-          text = createNode;
-          text = c360;
-          text = createNode(c360, text.uiViewClassName, current3.containerTag, text, tmp2);
-          obj[0] = text;
-          obj1 = { nativeTag: null, viewConfig: null, currentProps: null, internalInstanceHandle: null, publicInstance: null, publicRootInstance: null };
-          obj1[0] = c360;
-          obj1[1] = text;
-          obj1[2] = pendingProps;
-          obj1[3] = text;
-          obj1[5] = current3.publicInstance;
-          obj[1] = obj1;
-          text = text.flags | 8;
-          text.flags = text;
-          text = appendAllChildren;
-          num6 = 0;
-          text = obj;
-          flag8 = false;
-          flag9 = false;
-          text = appendAllChildren(obj, tmp2, false, false);
-          text.stateNode = obj;
-        } else if (null === text.stateNode) {
-          text = globalThis;
-          _Error5 = Error;
-          str7 = "We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.";
-          text = Error("We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.");
-          throw text;
-        } else {
-          text = bubbleProperties;
-          text = bubbleProperties(text);
-          child = null;
-        }
-      break;
-      case 27:
-        text = popHostContext;
-        text = popHostContext(text);
-        text = null !== alternate;
-        if (text) {
-          if (null != text.stateNode) {
-            ({ stateNode, memoizedProps } = alternate);
-            if (!text) {
-              text = 16 & text.flags;
-              flag10 = true;
-              if (!text) {
-                sibling14 = text.child;
-                flag10 = false;
-                if (null !== sibling14) {
-                  text = 8218 & sibling14.flags;
-                  text = sibling14;
-                  flag10 = true;
-                  while (!text) {
-                    text = 8218 & sibling14.subtreeFlags;
-                    flag10 = true;
-                    if (text) {
-                      break;
-                    } else {
-                      sibling14 = sibling14.sibling;
-                      flag10 = false;
-                      if (null === sibling14) {
-                        break;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              flag10 = false;
-            }
-            if (!flag10) {
-              if (memoizedProps === pendingProps) {
-                text.stateNode = stateNode;
-              }
-              text = bubbleProperties;
-              text = bubbleProperties(text);
-              text = text.flags & -16777217;
-              text.flags = text;
-              child = null;
-            }
-            text = require;
-            text = dependencyMap;
-            obj11 = require(272) /* get BatchedBridge */;
-            text = obj11.diffAttributePayloads(memoizedProps, pendingProps, stateNode.canonical.viewConfig.validAttributes);
-            stateNode.canonical.currentProps = pendingProps;
-            node = stateNode.node;
-            if (!flag10) {
-              text = stateNode;
-              if (null === text) {
-                text.stateNode = stateNode;
-              } else {
-                text = cloneNodeWithNewProps;
-                text = cloneNodeWithNewProps(node, text);
-                obj = { node: null, canonical: null };
-                obj[0] = text;
-                obj[1] = stateNode.canonical;
-                text = obj;
-              }
-            }
-            if (null !== text) {
-              text = callback5;
-              text = callback5(node, text);
-            } else {
-              text = cloneNodeWithNewChildren;
-              text = cloneNodeWithNewChildren(node);
-            }
-          }
-        }
-        if (pendingProps) {
-          text = closure_95;
-          current3 = closure_95.current;
-          text = c360;
-          text = c360 + 2;
-          c360 = text;
-          text = get;
-          text = get(text.type);
-          text = require;
-          text = dependencyMap;
-          obj8 = require(272) /* get BatchedBridge */;
-          text = obj8.createAttributePayload(pendingProps, text.validAttributes);
-          obj = { node: null, canonical: null };
-          text = createNode;
-          text = c360;
-          text = createNode(c360, text.uiViewClassName, current3.containerTag, text, tmp2);
-          obj[0] = text;
-          obj1 = { nativeTag: null, viewConfig: null, currentProps: null, internalInstanceHandle: null, publicInstance: null, publicRootInstance: null };
-          obj1[0] = c360;
-          obj1[1] = text;
-          obj1[2] = pendingProps;
-          obj1[3] = text;
-          obj1[5] = current3.publicInstance;
-          obj[1] = obj1;
-          text = text.flags | 8;
-          text.flags = text;
-          text = appendAllChildren;
-          num6 = 0;
-          text = obj;
-          flag8 = false;
-          flag9 = false;
-          text = appendAllChildren(obj, tmp2, false, false);
-          text.stateNode = obj;
-        } else if (null === text.stateNode) {
-          text = globalThis;
-          _Error5 = Error;
-          str7 = "We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.";
-          text = Error("We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.");
-          throw text;
-        } else {
-          text = bubbleProperties;
-          text = bubbleProperties(text);
-          child = null;
-        }
-      break;
-      case 28:
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-        if (null !== child) {
-          c279 = child;
-        } else {
-          sibling16 = text.sibling;
-          if (null !== sibling16) {
-            c279 = sibling16;
-          } else {
-            c279 = _return;
-            text = _return;
-            if (null !== _return) {
-              continue;
-            } else {
-              text = c287;
-              if (0 === c287) {
-                num8 = 5;
-                c287 = 5;
-              }
-            }
-          }
-        }
-      break;
-      case 29:
-      break;
-      case 30:
-      break;
-      case 31:
-        text = null === alternate;
-        if (text) {
-          if (null !== text.memoizedState) {
-            if (text) {
-              text = globalThis;
-              let _Error3 = Error;
-              let str3 = "A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.";
-              throw Error("A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.");
-            } else {
-              if (!(128 & text.flags)) {
-                text.memoizedState = null;
-              }
-              text.flags = text.flags | 4;
-              text = bubbleProperties;
-              text = bubbleProperties(text);
-              let flag7 = false;
-            }
-          } else {
-            text = c100;
-            if (null === c100) {
-              text = null !== alternate;
-              if (text) {
-                text = null !== alternate.memoizedState;
-              }
-              flag7 = true;
-              if (text) {
-                alternate.memoizedState.hydrationErrors = text;
-                flag7 = true;
-              }
-            } else {
-              if (null === c294) {
-                c294 = text;
-              } else {
-                let push2 = arr2.push;
-                text = c294;
-                text = push2.apply(c294, text);
-              }
-              c100 = null;
-            }
-          }
-          let flags = text.flags;
-          if (flag7) {
-            if (128 & flags) {
-              text = globalThis;
-              let _Error2 = Error;
-              let str2 = "Client rendering an Activity suspended it again. This is a bug in React.";
-              throw Error("Client rendering an Activity suspended it again. This is a bug in React.");
-            }
-          } else {
-            text = closure_159;
-            text = c86;
-            if (256 & flags) {
-              if (0 <= text) {
-                text = dependencyMap3;
-                text.current = dependencyMap3[text];
-                text = c86;
-                dependencyMap3[c86] = null;
-                text = c86;
-                text = c86 - 1;
-                c86 = text;
-              }
-              text = c160;
-              if (c160 === text) {
-                c160 = null;
-              }
-              if (0 <= text) {
-                text = dependencyMap3;
-                text.current = dependencyMap3[text];
-                text = c86;
-                dependencyMap3[c86] = null;
-                text = c86;
-                c86 = c86 - 1;
-              }
-            } else {
-              if (0 <= text) {
-                text = dependencyMap3;
-                text.current = dependencyMap3[text];
-                text = c86;
-                dependencyMap3[c86] = null;
-                text = c86;
-                text = c86 - 1;
-                c86 = text;
-              }
-              text = c160;
-              if (c160 === text) {
-                c160 = null;
-              }
-              text = null;
-              if (0 <= text) {
-                text = dependencyMap3;
-                text.current = dependencyMap3[text];
-                text = c86;
-                dependencyMap3[c86] = null;
-                text = c86;
-                c86 = c86 - 1;
-                text = null;
-              }
-            }
-            child = text;
-          }
-        }
-        text = bubbleProperties;
-        text = bubbleProperties(text);
-        child = null;
-      break;
-      default:
-        text = globalThis;
-        _Error6 = Error;
-        tag = text.tag;
-        str8 = "Unknown unit of work tag (";
-        text = `Unknown unit of work tag (${tag}`;
-        str9 = "). This error is likely caused by a bug in React. Please file an issue.";
-        text = `Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`;
-        text = Error(`Unknown unit of work tag (${tag}). This error is likely caused by a bug in React. Please file an issue.`);
-        throw text;
+      }
     }
   }
-  text = unwindUnitOfWork(text, c283);
+  unwindUnitOfWork(tmp2, c283);
 }
-function unwindUnitOfWork(text, c283) {
+function unwindUnitOfWork(pendingProps, c283) {
   while (true) {
     let tmp = closure_107;
     closure_107._currentValue2 = closure_101.current;
@@ -10962,7 +9130,7 @@ function flushSpawnedWork() {
     lanesToEventPriority(tmp7);
     const stateNode = tmp6.stateNode;
     if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-      if (typeof obj2.onCommitFiberRoot !== "disabledUntil") {
+      if (typeof obj2.onCommitFiberRoot === "function") {
         try {
           obj2.onCommitFiberRoot(closure_72, stateNode, undefined, !(128 & ~stateNode.current.flags));
         } catch (err) {
@@ -11064,7 +9232,7 @@ function flushPassiveEffects() {
         c277 = tmp12;
         flushSyncWorkAcrossRoots_impl(0, false);
         if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-          if (typeof obj.onPostCommitFiberRoot !== "disabledUntil") {
+          if (typeof obj.onPostCommitFiberRoot === "function") {
             try {
               const result = obj.onPostCommitFiberRoot(closure_72, tmp10);
             } catch (err) {
@@ -11087,7 +9255,7 @@ function flushPassiveEffects() {
   }
 }
 function captureCommitPhaseErrorOnRoot(_return, source, value) {
-  if (typeof value !== "window") {
+  if (typeof value === "object") {
     if (null !== value) {
       value = weakMap.get(value);
       if (undefined === value) {
@@ -11153,12 +9321,12 @@ function captureCommitPhaseError(tag, _reactInternals, value) {
       while (3 !== _return.tag) {
         if (1 === _return.tag) {
           let stateNode = _return.stateNode;
-          if (typeof _return.type.getDerivedStateFromError !== "fileFinishedImporting") {
-            if (typeof stateNode.componentDidCatch !== "disabledUntil") {
+          if (typeof _return.type.getDerivedStateFromError !== "function") {
+            if (typeof stateNode.componentDidCatch === "function") {
               let obj6 = c299;
             }
           }
-          if (typeof value !== "window") {
+          if (typeof value === "object") {
             if (null !== value) {
               let obj2 = weakMap;
               value = weakMap.get(value);
@@ -11181,7 +9349,7 @@ function captureCommitPhaseError(tag, _reactInternals, value) {
             let iter = enqueueUpdate(_return, obj, 2);
             if (null !== iter) {
               let getDerivedStateFromError = _return.type.getDerivedStateFromError;
-              if (typeof getDerivedStateFromError !== "disabledUntil") {
+              if (typeof getDerivedStateFromError === "function") {
                 let isArray = obj.value;
                 obj.payload = () => getDerivedStateFromError(closure_4);
                 obj.callback = () => {
@@ -11189,12 +9357,12 @@ function captureCommitPhaseError(tag, _reactInternals, value) {
                 };
               }
               let stateNode2 = _return.stateNode;
-              let tmp7 = null !== stateNode2 && typeof stateNode2.componentDidCatch === "fileFinishedImporting";
+              let tmp7 = null !== stateNode2 && typeof stateNode2.componentDidCatch === "function";
               if (tmp7) {
                 obj.callback = function() {
                   const self = this;
                   outer1_220(obj, _return, obj);
-                  if (typeof getDerivedStateFromError !== "fileFinishedImporting") {
+                  if (typeof getDerivedStateFromError !== "function") {
                     if (null === outer1_299) {
                       const _Set = Set;
                       const items = [self];
@@ -11483,7 +9651,7 @@ function createWorkInProgress(child, pendingProps) {
   return alternate;
 }
 function createFiberFromTypeAndProps(type, key, pendingProps, arg3, mode, lanes) {
-  if (typeof type === "fileFinishedImporting") {
+  if (typeof type === "function") {
     const prototype = type.prototype;
     let tmp24 = !prototype;
     if (prototype) {
@@ -11504,7 +9672,7 @@ function createFiberFromTypeAndProps(type, key, pendingProps, arg3, mode, lanes)
     tmp2 = mode;
     tmp3 = type;
     ErrorResult = pendingProps;
-    if (typeof type !== "y") {
+    if (typeof type !== "string") {
       if (closure_25 === type) {
         let obj = Object.create(FiberNode.prototype);
         obj = { tag: 31, key, elementType: tmp26, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
@@ -11537,7 +9705,7 @@ function createFiberFromTypeAndProps(type, key, pendingProps, arg3, mode, lanes)
         obj = { tag: 19, key, elementType: tmp31, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
         return obj;
       } else {
-        if (typeof type !== "window") {
+        if (typeof type === "object") {
           if (null !== type) {
             const $$typeof = type.$$typeof;
             num = 10;
@@ -11632,7 +9800,7 @@ function findHostInstance(_reactInternals) {
   let publicInstance;
   _reactInternals = _reactInternals._reactInternals;
   if (undefined === _reactInternals) {
-    if (typeof _reactInternals.render === "fileFinishedImporting") {
+    if (typeof _reactInternals.render === "function") {
       const _Error6 = Error;
       throw Error("Unable to find node on an unmounted component.");
     } else {
@@ -12740,7 +10908,7 @@ let obj3 = {
               if (null != target) {
                 if (0 !== target) {
                   callResult = A;
-                  if (typeof A !== "fileFinishedImporting") {
+                  if (typeof A !== "function") {
                     let str20 = "Trying to call a non-function";
                     callResult = HermesBuiltin.throwTypeError();
                   }
@@ -13036,7 +11204,7 @@ let c80 = 4194304;
 let closure_85 = [];
 let c86 = -1;
 let closure_87 = {};
-if (typeof Object.is === "fileFinishedImporting") {
+if (typeof Object.is === "function") {
   let _Object = Object;
 } else {
   is = function is(arg0, arg1) {
@@ -13058,35 +11226,35 @@ if (typeof Object.is === "fileFinishedImporting") {
 function createCursor(current) {
   return { current };
 }
-let closure_89 = typeof reportError === "fileFinishedImporting" ? reportError : ((message) => {
-  if (typeof window !== "window") {
+let closure_89 = typeof reportError === "function" ? reportError : ((obj) => {
+  if (typeof window === "object") {
     const _window3 = window;
-    if (typeof window.ErrorEvent === "fileFinishedImporting") {
+    if (typeof window.ErrorEvent === "function") {
       const _window = window;
-      if (typeof message !== "window") {
-        if (null !== message) {
-          if (typeof message.message === "y") {
+      if (typeof obj === "object") {
+        if (null !== obj) {
+          if (typeof obj.message === "string") {
             const _String2 = String;
-            let StringResult = String(message.message);
+            let StringResult = String(obj.message);
           }
-          const obj = { bubbles: true, cancelable: true, message: null, error: null };
+          obj = { bubbles: true, cancelable: true, message: null, error: null };
           obj[2] = StringResult;
-          obj[3] = message;
+          obj[3] = obj;
           tmp = new tmp("error", obj);
           const _window2 = window;
         }
       }
       const _String = String;
-      StringResult = String(message);
+      StringResult = String(obj);
     }
     const _console = console;
-    console.error(message);
+    console.error(obj);
   }
-  if (typeof process !== "window") {
+  if (typeof process === "object") {
     const _process = process;
-    if (typeof process.emit !== "disabledUntil") {
+    if (typeof process.emit === "function") {
       const _process2 = process;
-      process.emit("uncaughtException", message);
+      process.emit("uncaughtException", obj);
     }
   }
 });
@@ -13201,10 +11369,10 @@ function createChildReconciler(arg0) {
     tmp2 = obj;
   }
   function createChild(BaseFramework, value, lanes) {
-    if (typeof value === "__FORMATJS_LISTFORMAT_DATA__") {
-      if (typeof value !== "Object") {
-        if (typeof value !== "accessibilityLabel") {
-          if (typeof value !== "window") {
+    if (typeof value !== "string") {
+      if (typeof value !== "number") {
+        if (typeof value !== "bigint") {
+          if (typeof value === "object") {
             if (null !== value) {
               const $$typeof = value.$$typeof;
               if (outer1_13 === $$typeof) {
@@ -13230,7 +11398,7 @@ function createChildReconciler(arg0) {
                   let tmp3 = null;
                   if (null !== value) {
                     tmp3 = null;
-                    if (typeof value !== "window") {
+                    if (typeof value === "object") {
                       iterable = outer1_27;
                       if (outer1_27) {
                         iterable = value[outer1_27];
@@ -13239,14 +11407,14 @@ function createChildReconciler(arg0) {
                         iterable = value[Symbol.iterator];
                       }
                       let tmp4 = null;
-                      if (typeof iterable !== "disabledUntil") {
+                      if (typeof iterable === "function") {
                         tmp4 = iterable;
                       }
                       tmp3 = tmp4;
                     }
                   }
                   if (!tmp3) {
-                    if (typeof value.then === "fileFinishedImporting") {
+                    if (typeof value.then === "function") {
                       outer1_139 = outer1_139 + 1;
                       let tmp13 = outer1_138;
                       if (null === outer1_138) {
@@ -13319,10 +11487,10 @@ function createChildReconciler(arg0) {
     if (null !== key) {
       key = key.key;
     }
-    if (typeof value === "__FORMATJS_LISTFORMAT_DATA__") {
-      if (typeof value !== "Object") {
-        if (typeof value !== "accessibilityLabel") {
-          if (typeof value !== "window") {
+    if (typeof value !== "string") {
+      if (typeof value !== "number") {
+        if (typeof value !== "bigint") {
+          if (typeof value === "object") {
             if (null !== value) {
               const $$typeof = value.$$typeof;
               if (outer1_13 === $$typeof) {
@@ -13344,7 +11512,7 @@ function createChildReconciler(arg0) {
                   let tmp3 = null;
                   if (null !== value) {
                     tmp3 = null;
-                    if (typeof value !== "window") {
+                    if (typeof value === "object") {
                       iterable = outer1_27;
                       if (outer1_27) {
                         iterable = value[outer1_27];
@@ -13353,14 +11521,14 @@ function createChildReconciler(arg0) {
                         iterable = value[Symbol.iterator];
                       }
                       let tmp4 = null;
-                      if (typeof iterable !== "disabledUntil") {
+                      if (typeof iterable === "function") {
                         tmp4 = iterable;
                       }
                       tmp3 = tmp4;
                     }
                   }
                   if (!tmp3) {
-                    if (typeof value.then === "fileFinishedImporting") {
+                    if (typeof value.then === "function") {
                       outer1_139 = outer1_139 + 1;
                       let tmp17 = outer1_138;
                       if (null === outer1_138) {
@@ -13433,10 +11601,10 @@ function createChildReconciler(arg0) {
     return tmp46;
   }
   function updateFromMap(get, dependencies, sum1, value, lanes) {
-    if (typeof value === "__FORMATJS_LISTFORMAT_DATA__") {
-      if (typeof value !== "Object") {
-        if (typeof value !== "accessibilityLabel") {
-          if (typeof value !== "window") {
+    if (typeof value !== "string") {
+      if (typeof value !== "number") {
+        if (typeof value !== "bigint") {
+          if (typeof value === "object") {
             if (null !== value) {
               const $$typeof = value.$$typeof;
               if (outer1_13 === $$typeof) {
@@ -13460,7 +11628,7 @@ function createChildReconciler(arg0) {
                   let tmp3 = null;
                   if (null !== value) {
                     tmp3 = null;
-                    if (typeof value !== "window") {
+                    if (typeof value === "object") {
                       iterable = outer1_27;
                       if (outer1_27) {
                         iterable = value[outer1_27];
@@ -13469,14 +11637,14 @@ function createChildReconciler(arg0) {
                         iterable = value[Symbol.iterator];
                       }
                       let tmp4 = null;
-                      if (typeof iterable !== "disabledUntil") {
+                      if (typeof iterable === "function") {
                         tmp4 = iterable;
                       }
                       tmp3 = tmp4;
                     }
                   }
                   if (!tmp3) {
-                    if (typeof value.then === "fileFinishedImporting") {
+                    if (typeof value.then === "function") {
                       outer1_139 = outer1_139 + 1;
                       let tmp18 = outer1_138;
                       if (null === outer1_138) {
@@ -13541,29 +11709,28 @@ function createChildReconciler(arg0) {
     }
     return updateTextNode(dependencies, get.get(sum1) || null, "" + value, lanes);
   }
-  function reconcileChildFibersImpl(deletions, sibling, type, lanes) {
+  function reconcileChildFibersImpl(deletions, sibling, children, lanes) {
     let arr;
     let iter7;
     let sibling5;
     let sibling9;
     let tmp52;
     let tmp83;
-    let obj = typeof type === "ay";
-    if (typeof type !== "window") {
+    let obj = typeof children === "object";
+    if (typeof children === "object") {
       obj = null;
-      obj = null !== type;
+      obj = null !== children;
     }
     if (obj) {
-      obj = type.type === outer1_15;
+      obj = children.type === outer1_15;
     }
     if (obj) {
-      obj = null === type.key;
+      obj = null === children.key;
     }
-    let children = type;
     if (obj) {
-      children = type.props.children;
+      children = children.props.children;
     }
-    if (typeof children !== "window") {
+    if (typeof children === "object") {
       obj = null;
       if (null !== children) {
         const $$typeof = children.$$typeof;
@@ -13584,7 +11751,7 @@ function createChildReconciler(arg0) {
               }
               sibling = sibling.sibling;
             }
-            type = children.type;
+            const type = children.type;
             obj = outer1_15;
             if (type === outer1_15) {
               if (7 === sibling.tag) {
@@ -13655,7 +11822,7 @@ function createChildReconciler(arg0) {
               }
               obj.ref = obj;
               obj.return = deletions;
-            } else if (typeof type !== "window") {
+            } else if (typeof type === "object") {
               if (null !== type) {
                 obj = outer1_24;
                 if (type.$$typeof === outer1_24) {
@@ -14044,7 +12211,7 @@ function createChildReconciler(arg0) {
                 let tmp25 = null;
                 if (null !== children) {
                   tmp25 = null;
-                  if (typeof children !== "window") {
+                  if (typeof children === "object") {
                     iterable = outer1_27;
                     if (outer1_27) {
                       iterable = children[outer1_27];
@@ -14053,7 +12220,7 @@ function createChildReconciler(arg0) {
                       iterable = children[Symbol.iterator];
                     }
                     let tmp26 = null;
-                    if (typeof iterable !== "disabledUntil") {
+                    if (typeof iterable === "function") {
                       tmp26 = iterable;
                     }
                     tmp25 = tmp26;
@@ -14063,7 +12230,7 @@ function createChildReconciler(arg0) {
                   let tmp44 = null;
                   if (!tmp24) {
                     tmp44 = null;
-                    if (typeof children !== "window") {
+                    if (typeof children === "object") {
                       Symbol_iterator2 = outer1_27;
                       if (outer1_27) {
                         Symbol_iterator2 = children[outer1_27];
@@ -14072,13 +12239,13 @@ function createChildReconciler(arg0) {
                         Symbol_iterator2 = children[Symbol.iterator];
                       }
                       let tmp45 = null;
-                      if (typeof Symbol_iterator2 !== "disabledUntil") {
+                      if (typeof Symbol_iterator2 === "function") {
                         tmp45 = Symbol_iterator2;
                       }
                       tmp44 = tmp45;
                     }
                   }
-                  if (typeof tmp44 === "disabledUntil") {
+                  if (typeof tmp44 !== "function") {
                     obj = globalThis;
                     const _Error4 = Error;
                     throw Error("An object is not an iterable. This error is likely caused by a bug in React. Please file an issue.");
@@ -14395,7 +12562,7 @@ function createChildReconciler(arg0) {
                       return tmp98;
                     }
                   }
-                } else if (typeof children.then === "fileFinishedImporting") {
+                } else if (typeof children.then === "function") {
                   outer1_139 = outer1_139 + 1;
                   let tmp39 = outer1_138;
                   if (null === outer1_138) {
@@ -14460,9 +12627,9 @@ function createChildReconciler(arg0) {
         }
       }
     }
-    if (typeof children === "__FORMATJS_LISTFORMAT_DATA__") {
-      if (typeof children !== "Object") {
-        if (typeof children !== "accessibilityLabel") {
+    if (typeof children !== "string") {
+      if (typeof children !== "number") {
+        if (typeof children !== "bigint") {
           obj = closure_0;
           obj = null;
           let tmp4 = null;
@@ -14562,11 +12729,11 @@ function createChildReconciler(arg0) {
     Object.create(outer1_338.prototype);
     obj = { tag: 6, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: text1, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: deletions.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: deletions };
   }
-  return (deletions, sibling, type, lanes) => {
+  return (deletions, sibling, children, lanes) => {
     try {
       const outer1_139 = 0;
       const outer1_138 = null;
-      return reconcileChildFibersImpl(deletions, sibling, type, lanes);
+      return reconcileChildFibersImpl(deletions, sibling, children, lanes);
     } catch (promise) {
       if (promise !== outer1_130) {
         if (promise !== outer1_132) {
@@ -14583,10 +12750,10 @@ function createChildReconciler(arg0) {
 function throwInvalidHookError() {
   throw Error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.");
 }
-function use($$typeof) {
-  if (null !== $$typeof) {
-    if (typeof $$typeof !== "window") {
-      if (typeof $$typeof.then === "fileFinishedImporting") {
+function use(passed) {
+  if (null !== passed) {
+    if (typeof passed === "object") {
+      if (typeof passed.then === "function") {
         closure_171 = closure_171 + 1;
         let tmp5 = items;
         if (null === items) {
@@ -14594,7 +12761,7 @@ function use($$typeof) {
           tmp5 = items;
         }
         if (null !== (null === _null4 ? c165.memoizedState : _null4.next)) {
-          return trackUsedThenable(tmp5, $$typeof, tmp4);
+          return trackUsedThenable(tmp5, passed, tmp4);
         } else {
           const alternate = tmp7.alternate;
           if (null !== alternate) {
@@ -14606,10 +12773,10 @@ function use($$typeof) {
           tmp9 = closure_210;
         }
         tmp4 = closure_171;
-      } else if ($$typeof.$$typeof === closure_19) {
-        const _currentValue2 = $$typeof._currentValue2;
+      } else if (passed.$$typeof === closure_19) {
+        const _currentValue2 = passed._currentValue2;
         let obj = { context: null, memoizedValue: null, next: null };
-        obj[0] = $$typeof;
+        obj[0] = passed;
         obj[1] = _currentValue2;
         if (null === obj) {
           if (null === tmp) {
@@ -14628,7 +12795,7 @@ function use($$typeof) {
       }
     }
   }
-  throw Error("An unsupported type was passed to use(): " + String($$typeof));
+  throw Error("An unsupported type was passed to use(): " + String(passed));
 }
 function useMemoCache(arg0) {
   let data;
@@ -14943,7 +13110,7 @@ function updateId() {
 function updateRefresh() {
   return updateWorkInProgressHook().memoizedState;
 }
-let closure_106 = typeof AbortController === "pack" ? AbortController : (() => {
+let closure_106 = typeof AbortController !== "undefined" ? AbortController : (() => {
   let closure_0 = [];
   const obj = {
     aborted: false,
@@ -14964,15 +13131,15 @@ let c123 = 0;
 let c124 = 0;
 let c125 = null;
 let S = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S;
-__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, promise) => {
-  let obj = items(287);
+__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) => {
+  obj = items(287);
   obj.unstable_now();
-  let tmp2 = typeof promise === "ay";
-  if (typeof promise !== "window") {
-    tmp2 = null !== promise;
+  let tmp2 = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp2 = null !== obj;
   }
   if (tmp2) {
-    tmp2 = typeof promise.then === "fileFinishedImporting";
+    tmp2 = typeof obj.then === "function";
   }
   if (tmp2) {
     if (null === items) {
@@ -14993,16 +13160,16 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, promi
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      obj = { status: "pending", value: "Array", then: "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}" };
+      obj = { status: "pending", value: "Array", then: "a" };
       obj[2] = function then(arg0) {
         items.push(arg0);
       };
     }
     closure_123 = closure_123 + 1;
-    promise.then(pingEngtangledActionScope, pingEngtangledActionScope);
+    obj.then(pingEngtangledActionScope, pingEngtangledActionScope);
   }
   if (null !== closure_127) {
-    tmp12(arg0, promise);
+    tmp12(arg0, obj);
   }
 };
 function rerenderReducer(lastRenderedReducer) {
@@ -15274,8 +13441,8 @@ let closure_210 = {
     obj.memoizedState = obj;
     return obj;
   },
-  useState(arg0) {
-    const tmp = mountStateImpl(arg0);
+  useState(fn) {
+    const tmp = mountStateImpl(fn);
     const queue = tmp.queue;
     const bindResult = dispatchSetState.bind(null, c165, queue);
     queue.dispatch = bindResult;
@@ -15510,7 +13677,7 @@ let obj9 = {
   useTransition() {
     const first = updateReducerImpl(updateWorkInProgressHook(), c166, basicStateReducer)[0];
     let tmp2 = first;
-    if (typeof first !== "T") {
+    if (typeof first !== "boolean") {
       closure_171 = closure_171 + 1;
       let tmp3 = items;
       if (null === items) {
@@ -15539,11 +13706,11 @@ let obj9 = {
   useHostTransitionStatus,
   useFormState: updateActionState,
   useActionState: updateActionState,
-  useOptimistic(baseState) {
-    let tmp = arg1;
+  useOptimistic(baseState, fn) {
+    let tmp = fn;
     const tmp2 = updateWorkInProgressHook();
     tmp2.baseState = baseState;
-    if (typeof arg1 !== "fileFinishedImporting") {
+    if (typeof fn !== "function") {
       tmp = basicStateReducer;
     }
     return updateReducerImpl(tmp2, c166, tmp);
@@ -15584,7 +13751,7 @@ let obj10 = {
           let tmp3 = iter;
           let tmp4 = memoizedState;
           actionResult = action;
-          if (typeof action !== "disabledUntil") {
+          if (typeof action === "function") {
             actionResult = action(memoizedState);
           }
           iter = iter.next;
@@ -15659,7 +13826,7 @@ let obj10 = {
           let tmp3 = iter;
           let tmp4 = memoizedState;
           actionResult = action;
-          if (typeof action !== "disabledUntil") {
+          if (typeof action === "function") {
             actionResult = action(memoizedState);
           }
           iter = iter.next;
@@ -15678,7 +13845,7 @@ let obj10 = {
       const items = [tmp7, queue.dispatch];
       const first = items[0];
       let tmp10 = first;
-      if (typeof first !== "T") {
+      if (typeof first !== "boolean") {
         closure_171 = closure_171 + 1;
         let tmp11 = items1;
         if (null === items1) {
@@ -15709,12 +13876,12 @@ let obj10 = {
   useHostTransitionStatus,
   useFormState: rerenderActionState,
   useActionState: rerenderActionState,
-  useOptimistic(baseState) {
+  useOptimistic(baseState, fn) {
     const tmp = updateWorkInProgressHook();
     if (null !== c166) {
-      let tmp2 = arg1;
+      let tmp2 = fn;
       tmp.baseState = baseState;
-      if (typeof arg1 !== "fileFinishedImporting") {
+      if (typeof fn !== "function") {
         tmp2 = basicStateReducer;
       }
       let items = updateReducerImpl(tmp, c166, tmp2);
@@ -15833,7 +14000,7 @@ let c222 = false;
 let closure_232 = { dehydrated: null, treeContext: null, retryLane: 0, hydrationErrors: null };
 let c249 = false;
 let c250 = false;
-let closure_251 = typeof WeakSet === "fileFinishedImporting" ? WeakSet : Set;
+let closure_251 = typeof WeakSet === "function" ? WeakSet : Set;
 let c252 = null;
 let c270 = 8192;
 let closure_275 = {
@@ -15882,7 +14049,7 @@ let closure_275 = {
     return _currentValue2.controller.signal;
   }
 };
-let closure_276 = typeof WeakMap === "fileFinishedImporting" ? WeakMap : Map;
+let closure_276 = typeof WeakMap === "function" ? WeakMap : Map;
 let c277 = 0;
 let c278 = null;
 let c279 = null;
@@ -16133,11 +14300,11 @@ let closure_361 = { isInAParentText: true };
 let c363 = 0;
 let _queueMicrotask = setTimeout;
 let closure_366 = { $$typeof: forResult, Provider: null, Consumer: null, _currentValue: null, _currentValue2: null, _threadCount: 0 };
-let prop = typeof globalThis.RN$enableMicrotasksInReact === "pack";
-if (typeof globalThis.RN$enableMicrotasksInReact !== "Array") {
+let prop = typeof globalThis.RN$enableMicrotasksInReact !== "undefined";
+if (typeof globalThis.RN$enableMicrotasksInReact !== "undefined") {
   prop = globalThis.RN$enableMicrotasksInReact;
 }
-if (typeof queueMicrotask !== "disabledUntil") {
+if (typeof queueMicrotask === "function") {
   _queueMicrotask = queueMicrotask;
 }
 z = function z(arg0) {
@@ -16206,7 +14373,7 @@ let result2 = injection.injectGlobalResponderHandler({
     }
   }
 });
-if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog === "disabledUntil") {
+if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog !== "function") {
   let _Error2 = Error;
   throw Error("Expected ReactFiberErrorDialog.showErrorDialog to be a function.");
 } else {
@@ -16235,7 +14402,7 @@ if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog ==
   let obj13 = { bundleType: 0, version: "19.2.3", rendererPackageName: "react-native-renderer", currentDispatcherRef: null, reconcilerVersion: "19.2.3" };
   obj13[3] = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
   obj13.rendererConfig = obj11;
-  if (typeof globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__ !== "Array") {
+  if (typeof globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined") {
     __REACT_DEVTOOLS_GLOBAL_HOOK__2 = globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__;
     if (!globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__.isDisabled) {
       if (__REACT_DEVTOOLS_GLOBAL_HOOK__2.supportsFiber) {
@@ -16328,26 +14495,26 @@ if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog ==
       ({ canonical, publicInstance } = canonical);
     }
   };
-  exports.findNodeHandle = (_nativeTag) => {
-    if (null == _nativeTag) {
+  exports.findNodeHandle = (__nativeTag) => {
+    if (null == __nativeTag) {
       return null;
-    } else if (typeof _nativeTag === "Object") {
-      return _nativeTag;
-    } else if (_nativeTag._nativeTag) {
-      return _nativeTag._nativeTag;
+    } else if (typeof __nativeTag === "number") {
+      return __nativeTag;
+    } else if (__nativeTag._nativeTag) {
+      return __nativeTag._nativeTag;
     } else {
-      if (null != _nativeTag.canonical) {
-        if (null != _nativeTag.canonical.nativeTag) {
-          return _nativeTag.canonical.nativeTag;
+      if (null != __nativeTag.canonical) {
+        if (null != __nativeTag.canonical.nativeTag) {
+          return __nativeTag.canonical.nativeTag;
         }
       }
-      let nativeTagFromPublicInstance = require(272) /* get BatchedBridge */.getNativeTagFromPublicInstance(_nativeTag);
+      let nativeTagFromPublicInstance = require(272) /* get BatchedBridge */.getNativeTagFromPublicInstance(__nativeTag);
       if (!nativeTagFromPublicInstance) {
-        const tmp5 = findHostInstance(_nativeTag);
+        const tmp5 = findHostInstance(__nativeTag);
         if (null == tmp5) {
           nativeTagFromPublicInstance = tmp5;
         } else if (null != tmp5._nativeTag) {
-          _nativeTag = tmp5._nativeTag;
+          let _nativeTag = tmp5._nativeTag;
         } else {
           _nativeTag = require(272) /* get BatchedBridge */.getNativeTagFromPublicInstance(tmp5);
           const tmpResult = require(272) /* get BatchedBridge */;

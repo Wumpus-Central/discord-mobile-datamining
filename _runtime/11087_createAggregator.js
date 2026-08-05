@@ -1,7 +1,0 @@
-// _runtime/11087_createAggregator.js
-import createAggregator from "createAggregator";
-
-
-export default createAggregator((arg0, arg1, arg2) => {
-  require(804) /* baseAssignValue */(arg0, arg2, arg1);
-});

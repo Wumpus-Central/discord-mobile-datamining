@@ -44,17 +44,17 @@ let items = [
         let tmp2;
         [tmp, tmp2] = arg0;
         let obj = { "content-disposition": `form-data; name="${tmp}"` };
-        if (typeof tmp2 !== "window") {
+        if (typeof tmp2 === "object") {
           const _Array = Array;
           if (!Array.isArray(tmp2)) {
             if (tmp2) {
-              if (typeof tmp2.name !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof tmp2.name === "string") {
                 const _encodeURIComponent = encodeURIComponent;
                 const _HermesInternal = HermesInternal;
                 obj["content-disposition"] = obj["content-disposition"] + "; filename=\"" + encodeURIComponent(tmp2.name.replace(/\//g, "_")) + "\"";
                 const str = tmp2.name;
               }
-              if (typeof tmp2.type !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof tmp2.type === "string") {
                 obj["content-type"] = tmp2.type;
               }
               obj = {};

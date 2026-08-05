@@ -260,24 +260,24 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
     }
   }
 };
-export const keyExtractor = function keyExtractor(key) {
-  if (typeof key !== "window") {
-    key = undefined;
-    if (key != null) {
-      key = key.key;
+export const keyExtractor = function keyExtractor(obj) {
+  if (typeof obj === "object") {
+    let key;
+    if (obj != null) {
+      key = obj.key;
     }
     if (null != key) {
-      let id = key.key;
+      let id = obj.key;
     }
     return id;
   }
-  if (typeof key !== "window") {
+  if (typeof obj === "object") {
     id = undefined;
-    if (key != null) {
-      id = key.id;
+    if (obj != null) {
+      id = obj.id;
     }
     if (null != id) {
-      id = key.id;
+      id = obj.id;
     }
   }
   id = String(arg1);

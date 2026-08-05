@@ -78,8 +78,8 @@ let items = [
   },
   {
     key: "is",
-    value: function is(arg0, arg1) {
-      let closure_0 = arg0;
+    value: function is(obj) {
+      let closure_0 = obj;
       let closure_1 = arg1;
       let flag = arg2;
       if (arg2 === undefined) {
@@ -93,11 +93,11 @@ let items = [
       if (arg1 < 0) {
         return true;
       } else {
-        if (null != arg0) {
-          if (typeof arg0 !== "window") {
+        if (null != obj) {
+          if (typeof obj === "object") {
             self.prepare();
             const _Object = Object;
-            keys = Object.keys(arg0);
+            keys = Object.keys(obj);
             data = self.data;
             if (keys.length >= data.req.length) {
               const req = data.req;
@@ -191,7 +191,7 @@ let items = [
         }
       } else {
         if ("map" === kind) {
-          if (typeof keys !== "window") {
+          if (typeof keys === "object") {
             if (null !== keys) {
               if (arg3 < 2) {
                 return true;
@@ -273,34 +273,34 @@ let items = [
   },
   {
     key: "scalar",
-    value: function scalar(arg0, arg1, arg2) {
+    value: function scalar(flag) {
       if (ReflectionTypeCheck(1320).ScalarType.UINT64 !== arg1) {
         if (tmp(1320).ScalarType.FIXED64 !== arg1) {
           if (tmp(1320).ScalarType.INT64 !== arg1) {
             if (tmp(1320).ScalarType.SFIXED64 !== arg1) {
               if (tmp(1320).ScalarType.SINT64 !== arg1) {
                 if (tmp(1320).ScalarType.BOOL === arg1) {
-                  return typeof arg0 === "T";
+                  return typeof flag === "boolean";
                 } else if (tmp(1320).ScalarType.STRING === arg1) {
-                  return typeof arg0 === "y";
+                  return typeof flag === "string";
                 } else if (tmp(1320).ScalarType.BYTES === arg1) {
                   const _Uint8Array = Uint8Array;
-                  return arg0 instanceof Uint8Array;
+                  return flag instanceof Uint8Array;
                 } else {
                   if (tmp(1320).ScalarType.DOUBLE !== arg1) {
                     if (tmp(1320).ScalarType.FLOAT !== arg1) {
-                      let isIntegerResult = typeof arg0 === "Object";
-                      if (typeof arg0 !== "__REMOTEDEV__") {
+                      let isIntegerResult = typeof flag === "number";
+                      if (typeof flag === "number") {
                         const _Number = Number;
-                        isIntegerResult = Number.isInteger(arg0);
+                        isIntegerResult = Number.isInteger(flag);
                       }
                       return isIntegerResult;
                     }
                   }
-                  let tmp4 = typeof arg0 === "Object";
-                  if (typeof arg0 !== "__REMOTEDEV__") {
+                  let tmp4 = typeof flag === "number";
+                  if (typeof flag === "number") {
                     const _isNaN = isNaN;
-                    tmp4 = !isNaN(arg0);
+                    tmp4 = !isNaN(flag);
                   }
                   return tmp4;
                 }
@@ -310,16 +310,16 @@ let items = [
         }
       }
       if (ReflectionTypeCheck(1320).LongType.BIGINT === arg2) {
-        return typeof arg0 === "accessibilityLabel";
+        return typeof flag === "bigint";
       } else if (tmp(1320).LongType.NUMBER === arg2) {
-        let tmp6 = typeof arg0 === "Object";
-        if (typeof arg0 !== "__REMOTEDEV__") {
+        let tmp6 = typeof flag === "number";
+        if (typeof flag === "number") {
           const _isNaN2 = isNaN;
-          tmp6 = !isNaN(arg0);
+          tmp6 = !isNaN(flag);
         }
         return tmp6;
       } else {
-        return typeof arg0 === "y";
+        return typeof flag === "string";
       }
     }
   },

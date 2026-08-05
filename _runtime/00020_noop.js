@@ -10,8 +10,8 @@ class Component {
     return;
   }
   setState(arg0, arg1) {
-    if (typeof arg0 !== "ay") {
-      if (typeof arg0 !== "fileFinishedImporting") {
+    if (typeof arg0 !== "object") {
+      if (typeof arg0 !== "function") {
         tmp3 = null;
         if (null != arg0) {
           tmp2 = globalThis;
@@ -51,9 +51,9 @@ function noop() {
 
 }
 function mapIntoArray(element, items, arg2, arg3, arg4) {
-  let tmp = typeof element === "pack";
-  if (typeof element !== "Array") {
-    tmp = typeof element === "onScroll";
+  let tmp = typeof element !== "undefined";
+  if (typeof element !== "undefined") {
+    tmp = typeof element !== "boolean";
   }
   let tmp2 = element;
   if (!tmp) {
@@ -89,8 +89,8 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
       if (isArray(element)) {
         mapIntoArray(element, items, `${arg3.replace(closure_15, "$&/")}/`, "", (arg0) => arg0);
       } else if (null != element) {
-        let tmp50 = typeof element === "ay";
-        if (typeof element !== "window") {
+        let tmp50 = typeof element === "object";
+        if (typeof element === "object") {
           tmp50 = null !== element;
         }
         if (tmp50) {
@@ -125,7 +125,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
       }
       return 1;
     } else {
-      if (typeof tmp2 !== "window") {
+      if (typeof tmp2 === "object") {
         if (null !== tmp2) {
           const text1 = `.${tmp45}`;
         }
@@ -149,7 +149,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
           let tmp35 = tmp2[num12];
           let tmp36 = num12;
           let tmp37 = num13;
-          if (typeof tmp35 !== "window") {
+          if (typeof tmp35 === "object") {
             if (null !== tmp35) {
               if (null != tmp35.key) {
                 let text4 = `${tmp35.key}`;
@@ -176,7 +176,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
       let tmp14 = null;
       if (!tmp3) {
         tmp14 = null;
-        if (typeof tmp2 !== "window") {
+        if (typeof tmp2 === "object") {
           iterable = iterator;
           if (iterator) {
             iterable = tmp2[iterator];
@@ -185,13 +185,13 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
             iterable = tmp2[Symbol.iterator];
           }
           let tmp15 = null;
-          if (typeof iterable !== "disabledUntil") {
+          if (typeof iterable === "function") {
             tmp15 = iterable;
           }
           tmp14 = tmp15;
         }
       }
-      if (typeof tmp14 === "fileFinishedImporting") {
+      if (typeof tmp14 === "function") {
         const call = tmp14.call;
         const iter = typeof call === "unknown" ? tmp14() : call(tmp2);
         let iter2 = iter.next();
@@ -203,7 +203,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
             let value = iter2.value;
             let tmp26 = num5;
             let tmp27 = num6;
-            if (typeof value !== "window") {
+            if (typeof value === "object") {
               if (null !== value) {
                 if (null != value.key) {
                   let text6 = `${value2.key}`;
@@ -230,8 +230,8 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
         }
       } else {
         num7 = 0;
-        if (typeof element !== "window") {
-          if (typeof tmp2.then === "fileFinishedImporting") {
+        if (typeof element === "object") {
+          if (typeof tmp2.then === "function") {
             closure_0 = tmp2;
             const status = tmp2.status;
             if ("fulfilled" === status) {
@@ -239,7 +239,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
             } else if ("rejected" === status) {
               throw tmp2.reason;
             } else {
-              if (typeof tmp2.status === "y") {
+              if (typeof tmp2.status === "string") {
                 tmp2.then(noop, noop);
               } else {
                 tmp2.status = "pending";
@@ -350,35 +350,35 @@ obj = assign(obj, Component.prototype);
 obj.isPureReactComponent = true;
 obj = { H: null, A: null, T: null, S: null };
 const re15 = /\/+/g;
-let closure_18 = typeof reportError === "fileFinishedImporting" ? reportError : ((message) => {
-  if (typeof window !== "window") {
+let closure_18 = typeof reportError === "function" ? reportError : ((obj) => {
+  if (typeof window === "object") {
     const _window3 = window;
-    if (typeof window.ErrorEvent === "fileFinishedImporting") {
+    if (typeof window.ErrorEvent === "function") {
       const _window = window;
-      if (typeof message !== "window") {
-        if (null !== message) {
-          if (typeof message.message === "y") {
+      if (typeof obj === "object") {
+        if (null !== obj) {
+          if (typeof obj.message === "string") {
             const _String2 = String;
-            let StringResult = String(message.message);
+            let StringResult = String(obj.message);
           }
-          const obj = { bubbles: true, cancelable: true, message: null, error: null };
+          obj = { bubbles: true, cancelable: true, message: null, error: null };
           obj[2] = StringResult;
-          obj[3] = message;
+          obj[3] = obj;
           tmp = new tmp("error", obj);
           const _window2 = window;
         }
       }
       const _String = String;
-      StringResult = String(message);
+      StringResult = String(obj);
     }
     const _console = console;
-    console.error(message);
+    console.error(obj);
   }
-  if (typeof process !== "window") {
+  if (typeof process === "object") {
     const _process = process;
-    if (typeof process.emit !== "disabledUntil") {
+    if (typeof process.emit === "function") {
       const _process2 = process;
-      process.emit("uncaughtException", message);
+      process.emit("uncaughtException", obj);
     }
   }
 });
@@ -393,17 +393,17 @@ arg5.Children = {
       const items = [];
       let c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f65269.call;
+        const call = f65450.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65269(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f65450(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element) {
-    const f65267 = function() {
+    const f65448 = function() {
       const self = this;
-      const apply = f65267.apply;
+      const apply = f65448.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -414,36 +414,36 @@ arg5.Children = {
     if (null != element) {
       let c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f65269.call;
+        const call = f65450.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65269(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f65450(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
     }
   },
   count(element) {
-    const f65268 = () => {
+    const f65449 = () => {
       closure_0 = closure_0 + 1;
     };
     if (null != element) {
       let c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f65269.call;
+        const call = f65450.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65269(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f65450(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
     }
-    return f65268;
+    return f65449;
   },
   toArray(element) {
-    const f65269 = (arg0) => arg0;
+    const f65450 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       const items = [];
       let c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f65269.call;
+        const call = f65450.call;
         let closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f65269(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f65450(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
       items1 = items;
     }
@@ -453,8 +453,8 @@ arg5.Children = {
     return items1;
   },
   only(children, optional, forbidden, ignore) {
-    let tmp = typeof children === "ay";
-    if (typeof children !== "window") {
+    let tmp = typeof children === "object";
+    if (typeof children === "object") {
       tmp = null !== children;
     }
     if (tmp) {
@@ -476,8 +476,8 @@ arg5.StrictMode = forResult1;
 arg5.Suspense = forResult3;
 arg5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = obj;
 function isValidElement(icon) {
-  let tmp = typeof icon === "ay";
-  if (typeof icon !== "window") {
+  let tmp = typeof icon === "object";
+  if (typeof icon === "object") {
     tmp = null !== icon;
   }
   if (tmp) {
@@ -680,12 +680,12 @@ arg5.startTransition = (arg0) => {
     if (null !== S) {
       tmp6(obj, promise);
     }
-    let tmp12 = typeof promise === "ay";
-    if (typeof promise !== "window") {
+    let tmp12 = typeof promise === "object";
+    if (typeof promise === "object") {
       tmp12 = null !== promise;
     }
     if (tmp12) {
-      tmp12 = typeof promise.then === "fileFinishedImporting";
+      tmp12 = typeof promise.then === "function";
     }
     if (tmp12) {
       promise.then(noop, closure_18);

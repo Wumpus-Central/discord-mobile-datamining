@@ -160,7 +160,7 @@ let items = [
         opacity = tmp.opacity;
       }
       let num = 1;
-      if (typeof opacity !== "__REMOTEDEV__") {
+      if (typeof opacity === "number") {
         num = opacity;
       }
       return num;

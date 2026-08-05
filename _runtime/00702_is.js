@@ -5,7 +5,7 @@ let c3;
 let c4;
 let c5;
 let closure_6;
-if (typeof Object.is === "fileFinishedImporting") {
+if (typeof Object.is === "function") {
   const _Object = Object;
 } else {
   is = function is(arg0, arg1) {

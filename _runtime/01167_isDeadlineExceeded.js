@@ -91,490 +91,394 @@ arg5.timeToDisplayIntegration = () => {
     processEvent(arg0) {
       let closure_0 = arg0;
       return outer1_2(undefined, undefined, undefined, function*() {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
+        let timestamp2 = 0;
+        let tmp = outer1_0;
+        if ("transaction" !== outer1_0.type) {
+          return outer1_0;
+        }
+        tmp = outer1_0;
+        let contexts = outer1_0.contexts;
+        tmp = null;
+        if (null !== contexts) {
+          if (undefined !== contexts) {
+            let trace = contexts.trace;
           }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === timestamp) {
+        }
+        if (null !== trace) {
+          if (undefined !== trace) {
+            const span_id = trace.span_id;
+          }
+        }
+        if (!span_id) {
+          let debug = callback(outer2_1[1]).debug;
+          let _HermesInternal = HermesInternal;
+          debug.warn("[" + outer2_3 + "] No root span id found in transaction.");
+          return outer1_0;
+        }
+        let start_timestamp = outer1_0.start_timestamp;
+        if (!start_timestamp) {
+          let debug2 = callback(outer2_1[1]).debug;
+          let _HermesInternal2 = HermesInternal;
+          debug2.warn("[" + outer2_3 + "] No transaction start timestamp found in transaction.");
+          return outer1_0;
+        }
+        let spans = outer1_0.spans;
+        if (!spans) {
+          spans = [];
+        }
+        outer1_0.spans = spans;
+        let measurements = outer1_0.measurements;
+        if (!measurements) {
+          measurements = {};
+        }
+        outer1_0.measurements = measurements;
+        let obj2 = { event: null, rootSpanId: null, transactionStartTimestampSeconds: null, enableTimeToInitialDisplayForPreloadedRoutes: null };
+        obj2[0] = outer1_0;
+        obj2[1] = span_id;
+        obj2[2] = start_timestamp;
+        obj2[3] = outer1_0;
+        let closure_5 = yield (function addTimeToInitialDisplay(arg0) {
+          let c3;
+          let timestamp;
+          let timestamp2;
+          let timestamp3;
+          ({ event: timestamp2, rootSpanId: timestamp3, transactionStartTimestampSeconds: timestamp, enableTimeToInitialDisplayForPreloadedRoutes: c3 } = arg0);
+          let c4;
+          return timestamp(undefined, undefined, undefined, function*() {
+            if (c3 === 2) {
+              c3 = 3;
+              HermesBuiltin.throwTypeError();
+            } else if (tmp4 === 3) {
               if (arg0 === 1) {
-                c3 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
+                let obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
               } else {
-                let timestamp3 = tmp3;
-                let timestamp2 = 0;
-                timestamp2 = undefined;
-                timestamp3 = undefined;
-                timestamp = undefined;
-                c3 = undefined;
-                let start_timestamp;
-                let closure_5;
-                let closure_6;
-                let closure_7;
-                let closure_8;
-                let tmp = outer1_0;
-                if ("transaction" !== outer1_0.type) {
+                return { value: "HermesInternal", done: null };
+              }
+            } else {
+              try {
+                c3 = 2;
+                if (0 === c2) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    let closure_1 = tmp5;
+                    let closure_0 = tmp2;
+                    closure_0 = undefined;
+                    closure_1 = undefined;
+                    let NATIVE = outer1_0(outer1_1[2]).NATIVE;
+                    const _HermesInternal5 = HermesInternal;
+                    c2 = 1;
+                    c3 = 1;
+                    let obj1 = { value: null, done: false };
+                    obj1[0] = NATIVE.popTimeToDisplayFor("ttid-" + outer1_1);
+                    return obj1;
+                  }
+                } else if (arg0 === 1) {
                   c3 = 3;
-                  let obj1 = { value: null, done: true };
-                  obj1[0] = outer1_0;
-                  return obj1;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  let obj2 = { value: null, done: true };
+                  obj2[0] = arg1;
+                  return obj2;
                 } else {
-                  tmp = outer1_0;
-                  let contexts = outer1_0.contexts;
-                  tmp = null;
-                  let trace;
-                  if (null !== contexts) {
-                    if (undefined !== contexts) {
-                      trace = contexts.trace;
+                  closure_0 = arg1;
+                  let spans = closure_0.spans;
+                  if (!spans) {
+                    spans = [];
+                  }
+                  closure_0.spans = spans;
+                  spans = closure_0.spans;
+                  let debug;
+                  let found;
+                  if (null !== spans) {
+                    if (debug !== spans) {
+                      found = spans.find(() => { ... });
                     }
                   }
-                  let span_id;
-                  if (null !== trace) {
-                    if (undefined !== trace) {
-                      span_id = trace.span_id;
+                  outer1_1 = found;
+                  if (outer1_1) {
+                    if (debug === outer1_1.status) {
+                      if (!outer1_0) {
+                        debug = outer1_0(outer1_1[1]).debug;
+                        let _HermesInternal = HermesInternal;
+                        debug.log("[" + c3 + "] Ttid span already exists and is ok.", outer1_1);
+                        c3 = 3;
+                      }
                     }
                   }
-                  c3 = span_id;
-                  if (span_id) {
-                    start_timestamp = outer1_0.start_timestamp;
-                    if (start_timestamp) {
-                      let spans = outer1_0.spans;
+                  if (!closure_0) {
+                    let str2 = outer1_0(outer1_1[1]).debug;
+                    let _HermesInternal2 = HermesInternal;
+                    str2.log("[" + c3 + "] No manual ttid end timestamp found for span " + outer1_1 + ".");
+                    obj = { event: null, rootSpanId: null, transactionStartTimestampSeconds: null, enableTimeToInitialDisplayForPreloadedRoutes: null };
+                    obj[0] = outer1_0;
+                    obj[1] = outer1_1;
+                    obj[2] = c2;
+                    obj[3] = c3;
+                    (function addAutomaticTimeToInitialDisplay() { ... })(obj);
+                  }
+                  let status;
+                  if (null != closure_1) {
+                    status = closure_1.status;
+                  }
+                  if (!status) {
+                    obj1 = outer1_0(outer1_1[4]);
+                    let obj3 = { op: null, description: "Time To Initial Display", start_timestamp: null, timestamp: null, origin: null, parent_span_id: null, data: null };
+                    obj3[0] = outer1_0(outer1_1[3]).UI_LOAD_INITIAL_DISPLAY;
+                    obj3[2] = c2;
+                    obj3[3] = closure_0;
+                    obj3[4] = outer1_0(outer1_1[5]).SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY;
+                    obj3[5] = closure_1;
+                    let obj4 = {};
+                    obj4[outer1_0(outer1_1[6]).SPAN_THREAD_NAME] = outer1_0(outer1_1[6]).SPAN_THREAD_NAME_JAVASCRIPT;
+                    obj3[6] = obj4;
+                    closure_1 = obj1.createSpanJSON(obj3);
+                    let debug2 = outer1_0(outer1_1[1]).debug;
+                    let _HermesInternal3 = HermesInternal;
+                    debug2.log("[" + c3 + "] Added ttid span to transaction.", closure_1);
+                    const spans1 = closure_0.spans;
+                    spans1.push(closure_1);
+                    let tmp73 = closure_1;
+                  } else {
+                    str2 = "ok";
+                  }
+                  closure_1.status = str2;
+                  closure_1.timestamp = closure_0;
+                  debug = outer1_0(outer1_1[1]).debug;
+                  str2 = debug.log;
+                  let _HermesInternal4 = HermesInternal;
+                  str2("[" + c3 + "] Updated existing ttid span.", closure_1);
+                  tmp73 = closure_1;
+                  const tmp95 = closure_0;
+                }
+              } catch (tmp87) {
+                c3 = tmp;
+                throw tmp87;
+              }
+            }
+          });
+        })(obj2);
+        const obj7 = { event: null, rootSpanId: null, transactionStartTimestampSeconds: null, ttidSpan: null };
+        obj7[0] = callback;
+        obj7[1] = c3;
+        obj7[2] = start_timestamp;
+        obj7[3] = closure_5;
+        let closure_6 = yield (function addTimeToFullDisplay(arg0) {
+          let c3;
+          let timestamp;
+          let timestamp2;
+          let timestamp3;
+          ({ event: timestamp2, rootSpanId: timestamp3, transactionStartTimestampSeconds: timestamp, ttidSpan: c3 } = arg0);
+          let c4;
+          return timestamp(undefined, undefined, undefined, function*() {
+            if (c3 === 2) {
+              c3 = 3;
+              HermesBuiltin.throwTypeError();
+            } else if (tmp5 === 3) {
+              if (arg0 === 1) {
+                throw arg1;
+              } else if (arg0 === 2) {
+                let obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
+            } else {
+              try {
+                c3 = 2;
+                if (0 === timestamp) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    let found = tmp2;
+                    let closure_0 = tmp3;
+                    closure_0 = undefined;
+                    found = undefined;
+                    timestamp = undefined;
+                    c3 = undefined;
+                    const NATIVE = outer1_0(outer1_1[2]).NATIVE;
+                    const _HermesInternal3 = HermesInternal;
+                    timestamp = 1;
+                    c3 = 1;
+                    const obj1 = { value: null, done: false };
+                    obj1[0] = NATIVE.popTimeToDisplayFor("ttfd-" + outer1_1);
+                    return obj1;
+                  }
+                } else if (arg0 === 1) {
+                  c3 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = arg1;
+                  return obj2;
+                } else {
+                  closure_0 = arg1;
+                  if (c3) {
+                    if (closure_0) {
+                      let spans = closure_0.spans;
                       if (!spans) {
                         spans = [];
                       }
-                      outer1_0.spans = spans;
-                      let measurements = outer1_0.measurements;
-                      if (!measurements) {
-                        measurements = {};
-                      }
-                      outer1_0.measurements = measurements;
-                      let obj2 = { event: null, rootSpanId: null, transactionStartTimestampSeconds: null, enableTimeToInitialDisplayForPreloadedRoutes: null };
-                      obj2[0] = outer1_0;
-                      obj2[1] = span_id;
-                      obj2[2] = start_timestamp;
-                      obj2[3] = outer1_0;
-                      timestamp = 1;
-                      c3 = 1;
-                      let obj3 = { value: null, done: false };
-                      obj3[0] = (function addTimeToInitialDisplay(arg0) {
-                        let c3;
-                        let timestamp;
-                        let timestamp2;
-                        let timestamp3;
-                        ({ event: timestamp2, rootSpanId: timestamp3, transactionStartTimestampSeconds: timestamp, enableTimeToInitialDisplayForPreloadedRoutes: c3 } = arg0);
-                        let c4;
-                        return timestamp(undefined, undefined, undefined, function*() {
-                          if (c3 === 2) {
-                            c3 = 3;
-                            HermesBuiltin.throwTypeError();
-                          } else if (tmp4 === 3) {
-                            if (arg0 === 1) {
-                              throw arg1;
-                            } else if (arg0 === 2) {
-                              let obj = { value: null, done: true };
-                              obj[0] = arg1;
-                              return obj;
-                            } else {
-                              return { value: "HermesInternal", done: null };
-                            }
-                          } else {
-                            try {
-                              c3 = 2;
-                              if (0 === c2) {
-                                if (arg0 === 1) {
-                                  c3 = 3;
-                                  throw arg1;
-                                } else if (arg0 === 2) {
-                                  c3 = 3;
-                                  obj = { value: null, done: true };
-                                  obj[0] = arg1;
-                                  return obj;
-                                } else {
-                                  let closure_1 = tmp5;
-                                  let closure_0 = tmp2;
-                                  closure_0 = undefined;
-                                  closure_1 = undefined;
-                                  let NATIVE = outer1_0(outer1_1[2]).NATIVE;
-                                  const _HermesInternal5 = HermesInternal;
-                                  c2 = 1;
-                                  c3 = 1;
-                                  let obj1 = { value: null, done: false };
-                                  obj1[0] = NATIVE.popTimeToDisplayFor("ttid-" + outer1_1);
-                                  return obj1;
-                                }
-                              } else if (arg0 === 1) {
-                                c3 = 3;
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                c3 = 3;
-                                let obj2 = { value: null, done: true };
-                                obj2[0] = arg1;
-                                return obj2;
-                              } else {
-                                closure_0 = arg1;
-                                let spans = closure_0.spans;
-                                if (!spans) {
-                                  spans = [];
-                                }
-                                closure_0.spans = spans;
-                                spans = closure_0.spans;
-                                let debug;
-                                let found;
-                                if (null !== spans) {
-                                  if (debug !== spans) {
-                                    found = spans.find(() => { ... });
-                                  }
-                                }
-                                outer1_1 = found;
-                                if (outer1_1) {
-                                  if (debug === outer1_1.status) {
-                                    if (!outer1_0) {
-                                      debug = outer1_0(outer1_1[1]).debug;
-                                      let _HermesInternal = HermesInternal;
-                                      debug.log("[" + c3 + "] Ttid span already exists and is ok.", outer1_1);
-                                      c3 = 3;
-                                    }
-                                  }
-                                }
-                                if (!closure_0) {
-                                  let str2 = outer1_0(outer1_1[1]).debug;
-                                  let _HermesInternal2 = HermesInternal;
-                                  str2.log("[" + c3 + "] No manual ttid end timestamp found for span " + outer1_1 + ".");
-                                  obj = { event: null, rootSpanId: null, transactionStartTimestampSeconds: null, enableTimeToInitialDisplayForPreloadedRoutes: null };
-                                  obj[0] = outer1_0;
-                                  obj[1] = outer1_1;
-                                  obj[2] = c2;
-                                  obj[3] = c3;
-                                  (function addAutomaticTimeToInitialDisplay() { ... })(obj);
-                                }
-                                let status;
-                                if (null != closure_1) {
-                                  status = closure_1.status;
-                                }
-                                if (!status) {
-                                  obj1 = outer1_0(outer1_1[4]);
-                                  let obj3 = { op: null, description: "Time To Initial Display", start_timestamp: null, timestamp: null, origin: null, parent_span_id: null, data: null };
-                                  obj3[0] = outer1_0(outer1_1[3]).UI_LOAD_INITIAL_DISPLAY;
-                                  obj3[2] = c2;
-                                  obj3[3] = closure_0;
-                                  obj3[4] = outer1_0(outer1_1[5]).SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY;
-                                  obj3[5] = closure_1;
-                                  let obj4 = {};
-                                  obj4[outer1_0(outer1_1[6]).SPAN_THREAD_NAME] = outer1_0(outer1_1[6]).SPAN_THREAD_NAME_JAVASCRIPT;
-                                  obj3[6] = obj4;
-                                  closure_1 = obj1.createSpanJSON(obj3);
-                                  let debug2 = outer1_0(outer1_1[1]).debug;
-                                  let _HermesInternal3 = HermesInternal;
-                                  debug2.log("[" + c3 + "] Added ttid span to transaction.", closure_1);
-                                  const spans1 = closure_0.spans;
-                                  spans1.push(closure_1);
-                                  let tmp73 = closure_1;
-                                } else {
-                                  str2 = "ok";
-                                }
-                                closure_1.status = str2;
-                                closure_1.timestamp = closure_0;
-                                debug = outer1_0(outer1_1[1]).debug;
-                                str2 = debug.log;
-                                let _HermesInternal4 = HermesInternal;
-                                str2("[" + c3 + "] Updated existing ttid span.", closure_1);
-                                tmp73 = closure_1;
-                                const tmp95 = closure_0;
-                              }
-                            } catch (tmp87) {
-                              c3 = tmp;
-                              throw tmp87;
-                            }
-                          }
-                        });
-                      })(obj2);
-                      return obj3;
-                    } else {
-                      let debug2 = callback(outer2_1[1]).debug;
-                      let _HermesInternal2 = HermesInternal;
-                      debug2.warn("[" + outer2_3 + "] No transaction start timestamp found in transaction.");
-                      c3 = 3;
-                      let obj4 = { value: null, done: true };
-                      obj4[0] = outer1_0;
-                      return obj4;
-                    }
-                  } else {
-                    let debug = callback(outer2_1[1]).debug;
-                    let _HermesInternal = HermesInternal;
-                    debug.warn("[" + outer2_3 + "] No root span id found in transaction.");
-                    c3 = 3;
-                    let obj5 = { value: null, done: true };
-                    obj5[0] = outer1_0;
-                    return obj5;
-                  }
-                }
-              }
-            } else if (1 === tmp4) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                let obj6 = { value: null, done: true };
-                obj6[0] = arg1;
-                return obj6;
-              } else {
-                closure_5 = arg1;
-                const obj7 = { event: null, rootSpanId: null, transactionStartTimestampSeconds: null, ttidSpan: null };
-                obj7[0] = callback;
-                obj7[1] = c3;
-                obj7[2] = start_timestamp;
-                obj7[3] = closure_5;
-                timestamp = 2;
-                c3 = 1;
-                const obj8 = { value: null, done: false };
-                obj8[0] = (function addTimeToFullDisplay(arg0) {
-                  let c3;
-                  let timestamp;
-                  let timestamp2;
-                  let timestamp3;
-                  ({ event: timestamp2, rootSpanId: timestamp3, transactionStartTimestampSeconds: timestamp, ttidSpan: c3 } = arg0);
-                  let c4;
-                  return timestamp(undefined, undefined, undefined, function*() {
-                    if (c3 === 2) {
-                      c3 = 3;
-                      HermesBuiltin.throwTypeError();
-                    } else if (tmp5 === 3) {
-                      if (arg0 === 1) {
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        let obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      } else {
-                        return { value: "HermesInternal", done: null };
-                      }
-                    } else {
-                      try {
-                        c3 = 2;
-                        if (0 === timestamp) {
-                          if (arg0 === 1) {
-                            c3 = 3;
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            c3 = 3;
-                            obj = { value: null, done: true };
-                            obj[0] = arg1;
-                            return obj;
-                          } else {
-                            let found = tmp2;
-                            let closure_0 = tmp3;
-                            closure_0 = undefined;
-                            found = undefined;
-                            timestamp = undefined;
-                            c3 = undefined;
-                            const NATIVE = outer1_0(outer1_1[2]).NATIVE;
-                            const _HermesInternal3 = HermesInternal;
-                            timestamp = 1;
-                            c3 = 1;
-                            const obj1 = { value: null, done: false };
-                            obj1[0] = NATIVE.popTimeToDisplayFor("ttfd-" + outer1_1);
-                            return obj1;
-                          }
-                        } else if (arg0 === 1) {
-                          c3 = 3;
-                          throw arg1;
-                        } else if (arg0 === 2) {
-                          c3 = 3;
-                          const obj2 = { value: null, done: true };
-                          obj2[0] = arg1;
-                          return obj2;
-                        } else {
-                          closure_0 = arg1;
-                          if (c3) {
-                            if (closure_0) {
-                              let spans = closure_0.spans;
-                              if (!spans) {
-                                spans = [];
-                              }
-                              closure_0.spans = spans;
-                              spans = closure_0.spans;
-                              let debug;
-                              found = undefined;
-                              if (null !== spans) {
-                                if (debug !== spans) {
-                                  found = spans.find(() => { ... });
-                                }
-                              }
-                              timestamp = closure_0;
-                              timestamp = c3.timestamp;
-                              if (timestamp) {
-                                timestamp = closure_0 < c3.timestamp;
-                              }
-                              if (timestamp) {
-                                timestamp = c3.timestamp;
-                              }
-                              if (timestamp) {
-                                timestamp = c3.timestamp;
-                              }
-                              let str = c2 - timestamp;
-                              c3 = 1000 * str;
-                              let status;
-                              if (null != outer1_1) {
-                                status = found.status;
-                              }
-                              if (!status) {
-                                obj = outer1_0(outer1_1[4]);
-                                let str2 = "ok";
-                                if (outer1_4(c3)) {
-                                  str2 = "deadline_exceeded";
-                                }
-                                const obj3 = { status: null, op: null, description: "Time To Full Display", start_timestamp: null, timestamp: null, origin: null, parent_span_id: null, data: null };
-                                obj3[0] = str2;
-                                obj3[1] = outer1_0(outer1_1[3]).UI_LOAD_FULL_DISPLAY;
-                                obj3[3] = c2;
-                                obj3[4] = c2;
-                                obj3[5] = outer1_0(outer1_1[5]).SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY;
-                                obj3[6] = outer1_1;
-                                const obj4 = {};
-                                obj4[outer1_0(outer1_1[6]).SPAN_THREAD_NAME] = outer1_0(outer1_1[6]).SPAN_THREAD_NAME_JAVASCRIPT;
-                                obj3[7] = obj4;
-                                outer1_1 = obj.createSpanJSON(obj3);
-                                debug = outer1_0(outer1_1[1]).debug;
-                                const _HermesInternal = HermesInternal;
-                                debug.log("[" + c3 + "] Added ttfd span to transaction.", outer1_1);
-                                const spans1 = outer1_0.spans;
-                                spans1.push(outer1_1);
-                                c3 = 3;
-                              } else {
-                                str = "ok";
-                              }
-                              outer1_1.status = str;
-                              outer1_1.timestamp = c2;
-                              debug = outer1_0(outer1_1[1]).debug;
-                              str = debug.log;
-                              const _HermesInternal2 = HermesInternal;
-                              str("[" + c3 + "] Updated existing ttfd span.", outer1_1);
-                              const tmp8 = closure_0;
-                            }
-                          }
-                          c3 = 3;
-                          return { value: "HermesInternal", done: null };
+                      closure_0.spans = spans;
+                      spans = closure_0.spans;
+                      let debug;
+                      found = undefined;
+                      if (null !== spans) {
+                        if (debug !== spans) {
+                          found = spans.find(() => { ... });
                         }
-                      } catch (tmp83) {
-                        c3 = tmp;
-                        throw tmp83;
                       }
+                      timestamp = closure_0;
+                      timestamp = c3.timestamp;
+                      if (timestamp) {
+                        timestamp = closure_0 < c3.timestamp;
+                      }
+                      if (timestamp) {
+                        timestamp = c3.timestamp;
+                      }
+                      if (timestamp) {
+                        timestamp = c3.timestamp;
+                      }
+                      let str = c2 - timestamp;
+                      c3 = 1000 * str;
+                      let status;
+                      if (null != outer1_1) {
+                        status = found.status;
+                      }
+                      if (!status) {
+                        obj = outer1_0(outer1_1[4]);
+                        let str2 = "ok";
+                        if (outer1_4(c3)) {
+                          str2 = "deadline_exceeded";
+                        }
+                        const obj3 = { status: null, op: null, description: "Time To Full Display", start_timestamp: null, timestamp: null, origin: null, parent_span_id: null, data: null };
+                        obj3[0] = str2;
+                        obj3[1] = outer1_0(outer1_1[3]).UI_LOAD_FULL_DISPLAY;
+                        obj3[3] = c2;
+                        obj3[4] = c2;
+                        obj3[5] = outer1_0(outer1_1[5]).SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY;
+                        obj3[6] = outer1_1;
+                        const obj4 = {};
+                        obj4[outer1_0(outer1_1[6]).SPAN_THREAD_NAME] = outer1_0(outer1_1[6]).SPAN_THREAD_NAME_JAVASCRIPT;
+                        obj3[7] = obj4;
+                        outer1_1 = obj.createSpanJSON(obj3);
+                        debug = outer1_0(outer1_1[1]).debug;
+                        const _HermesInternal = HermesInternal;
+                        debug.log("[" + c3 + "] Added ttfd span to transaction.", outer1_1);
+                        const spans1 = outer1_0.spans;
+                        spans1.push(outer1_1);
+                        c3 = 3;
+                      } else {
+                        str = "ok";
+                      }
+                      outer1_1.status = str;
+                      outer1_1.timestamp = c2;
+                      debug = outer1_0(outer1_1[1]).debug;
+                      str = debug.log;
+                      const _HermesInternal2 = HermesInternal;
+                      str("[" + c3 + "] Updated existing ttfd span.", outer1_1);
+                      const tmp8 = closure_0;
                     }
-                  });
-                })(obj7);
-                return obj8;
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj9 = { value: null, done: true };
-              obj9[0] = arg1;
-              return obj9;
-            } else {
-              closure_6 = arg1;
-              tmp = closure_5;
-              tmp = null;
-              start_timestamp = undefined;
-              if (null != closure_5) {
-                start_timestamp = closure_5.start_timestamp;
-              }
-              if (start_timestamp) {
-                timestamp = undefined;
-                if (null != closure_5) {
-                  timestamp = closure_5.timestamp;
-                }
-                start_timestamp = timestamp;
-              }
-              if (start_timestamp) {
-                obj = { value: null, unit: "millisecond" };
-                obj[0] = 1000 * (closure_5.timestamp - closure_5.start_timestamp);
-                timestamp2.measurements.time_to_initial_display = obj;
-              }
-              let start_timestamp1;
-              if (null != closure_6) {
-                start_timestamp1 = closure_6.start_timestamp;
-              }
-              if (start_timestamp1) {
-                let timestamp1;
-                if (null != closure_6) {
-                  timestamp1 = closure_6.timestamp;
-                }
-                if (timestamp1) {
-                  closure_7 = 1000 * (closure_6.timestamp - closure_6.start_timestamp);
-                  if (outer2_4(closure_7)) {
-                    if (timestamp2.measurements.time_to_initial_display) {
-                      timestamp2.measurements.time_to_full_display = timestamp2.measurements.time_to_initial_display;
-                    }
-                  } else {
-                    const obj10 = { value: null, unit: "millisecond" };
-                    obj10[0] = closure_7;
-                    timestamp2.measurements.time_to_full_display = obj10;
                   }
+                  c3 = 3;
+                  return { value: "HermesInternal", done: null };
                 }
+              } catch (tmp83) {
+                c3 = tmp;
+                throw tmp83;
               }
-              timestamp2 = undefined;
-              if (null != closure_5) {
-                timestamp2 = closure_5.timestamp;
-              }
-              let num6 = -1;
-              if (null !== timestamp2) {
-                num6 = -1;
-                if (undefined !== timestamp2) {
-                  num6 = timestamp2;
-                }
-              }
-              timestamp3 = undefined;
-              if (null != closure_6) {
-                timestamp3 = closure_6.timestamp;
-              }
-              let num7 = -1;
-              if (null !== timestamp3) {
-                num7 = -1;
-                if (undefined !== timestamp3) {
-                  num7 = timestamp3;
-                }
-              }
-              timestamp = timestamp2.timestamp;
-              let num8 = -1;
-              if (null !== timestamp) {
-                num8 = -1;
-                if (undefined !== timestamp) {
-                  num8 = timestamp;
-                }
-              }
-              closure_8 = Math.max(num6, num7, num8);
-              if (-1 !== closure_8) {
-                callback.timestamp = closure_8;
-              }
-              c3 = 3;
-              const obj11 = { value: null, done: true };
-              obj11[0] = timestamp2;
-              return obj11;
             }
-          } catch (tmp93) {
-            c3 = tmp;
-            throw tmp93;
+          });
+        })(obj7);
+        tmp = closure_5;
+        tmp = null;
+        if (null != closure_5) {
+          start_timestamp = closure_5.start_timestamp;
+        }
+        if (start_timestamp) {
+          let timestamp;
+          if (null != closure_5) {
+            timestamp = closure_5.timestamp;
+          }
+          start_timestamp = timestamp;
+        }
+        if (start_timestamp) {
+          let obj = { value: null, unit: "millisecond" };
+          obj[0] = 1000 * (closure_5.timestamp - closure_5.start_timestamp);
+          timestamp2.measurements.time_to_initial_display = obj;
+        }
+        if (null != closure_6) {
+          const start_timestamp1 = closure_6.start_timestamp;
+        }
+        if (start_timestamp1) {
+          let timestamp1;
+          if (null != closure_6) {
+            timestamp1 = closure_6.timestamp;
+          }
+          if (timestamp1) {
+            let closure_7 = 1000 * (closure_6.timestamp - closure_6.start_timestamp);
+            if (outer2_4(closure_7)) {
+              if (timestamp2.measurements.time_to_initial_display) {
+                timestamp2.measurements.time_to_full_display = timestamp2.measurements.time_to_initial_display;
+              }
+            } else {
+              const obj10 = { value: null, unit: "millisecond" };
+              obj10[0] = closure_7;
+              timestamp2.measurements.time_to_full_display = obj10;
+            }
           }
         }
+        if (null != closure_5) {
+          timestamp2 = closure_5.timestamp;
+        }
+        let num6 = -1;
+        if (null !== timestamp2) {
+          num6 = -1;
+          if (undefined !== timestamp2) {
+            num6 = timestamp2;
+          }
+        }
+        if (null != closure_6) {
+          const timestamp3 = closure_6.timestamp;
+        }
+        let num7 = -1;
+        if (null !== timestamp3) {
+          num7 = -1;
+          if (undefined !== timestamp3) {
+            num7 = timestamp3;
+          }
+        }
+        let num8 = -1;
+        if (null !== timestamp) {
+          num8 = -1;
+          if (undefined !== timestamp) {
+            num8 = timestamp;
+          }
+        }
+        let closure_8 = Math.max(num6, num7, num8);
+        if (-1 !== closure_8) {
+          callback.timestamp = closure_8;
+        }
+        return timestamp2;
       });
     }
   };

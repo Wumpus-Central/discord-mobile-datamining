@@ -219,7 +219,7 @@ obj = {
         return null;
       } else {
         let tmp8 = null;
-        if (typeof currentProps[eventTypePropName] !== "disabledUntil") {
+        if (typeof currentProps[eventTypePropName] === "function") {
           tmp8 = tmp7;
         }
         return tmp8;

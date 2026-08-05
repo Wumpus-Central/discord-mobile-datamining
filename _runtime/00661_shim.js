@@ -9,7 +9,7 @@ function shim(obj) {
   return items;
 }
 let keys = shim;
-if (typeof Object.keys !== "disabledUntil") {
+if (typeof Object.keys === "function") {
   const _Object = Object;
   keys = Object.keys;
 }

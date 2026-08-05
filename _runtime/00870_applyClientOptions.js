@@ -122,16 +122,16 @@ arg5.applyDebugMeta = function applyDebugMeta(exception) {
     });
   }
 };
-arg5.parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(arg0) {
-  if (arg0) {
+arg5.parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(fn) {
+  if (fn) {
     if (tmp3) {
       const obj = { captureContext: null };
-      obj[0] = arg0;
+      obj[0] = fn;
       let tmp5 = obj;
     } else {
       const _Object = Object;
-      const keys = Object.keys(arg0);
-      tmp5 = arg0;
+      const keys = Object.keys(fn);
+      tmp5 = fn;
     }
     return tmp5;
   }
@@ -275,7 +275,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
         }
       }
       let tmp6 = exception;
-      if (typeof obj !== "__REMOTEDEV__") {
+      if (typeof obj === "number") {
         tmp6 = exception;
         if (tmp5 > 0) {
           obj = tmp5;

@@ -6,7 +6,7 @@ function addConsoleBreadcrumb(arg0, arguments) {
   obj = { arguments, logger: "console" };
   obj[2] = require(920) /* severityLevelFromString */.severityLevelFromString(arg0);
   if ("util" in require(821).GLOBAL_OBJ) {
-    if (typeof tmp(821).GLOBAL_OBJ.util.format === "fileFinishedImporting") {
+    if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(821).GLOBAL_OBJ.util;
       const format = util.format;
       const items = [];

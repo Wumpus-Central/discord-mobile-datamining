@@ -4,9 +4,9 @@ if (require("getPrototypeOf")) {
     return require(547) /* getPrototypeOf */(arg0);
   }
 } else if (require("module_548")) {
-  getProto = function getProto(arg0) {
-    if (arg0) {
-      return require(548)(arg0);
+  getProto = function getProto(obj) {
+    if (obj) {
+      return require(548)(obj);
     }
     const typeError = new TypeError("getProto: not an object");
     throw typeError;

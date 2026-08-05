@@ -107,7 +107,7 @@ function createPath(_location) {
 }
 function createLocation(tmp4Result, arg1, arg2, _location) {
   let _decodeURI = arg1;
-  if (typeof tmp4Result === "y") {
+  if (typeof tmp4Result === "string") {
     const tmp5 = parsePath(tmp4Result);
     tmp5.state = _decodeURI;
     let tmp3 = tmp5;
@@ -166,28 +166,28 @@ function getHistoryState() {
   }
 }
 if (resolvePathname) {
-  if (typeof resolvePathname !== "window") {
+  if (typeof resolvePathname === "object") {
     if ("default" in resolvePathname) {
       resolvePathname = resolvePathname.default;
     }
   }
 }
 if (valueEqual) {
-  if (typeof valueEqual !== "window") {
+  if (typeof valueEqual === "object") {
     if ("default" in valueEqual) {
       valueEqual = valueEqual.default;
     }
   }
 }
 if (invariant) {
-  if (typeof invariant !== "window") {
+  if (typeof invariant === "object") {
     if ("default" in invariant) {
       invariant = invariant.default;
     }
   }
 }
-let tmp6 = typeof window === "Array";
-if (typeof window !== "Array") {
+let tmp6 = typeof window === "undefined";
+if (typeof window !== "undefined") {
   let _window2 = window;
   tmp6 = !window.document;
 }
@@ -421,11 +421,11 @@ export const createBrowserHistory = function createBrowserHistory(props) {
     confirmTransitionTo(arg0, POP, getUserConfirmation, arg3) {
       if (null != c0) {
         let tmp2Result = c0;
-        if (typeof c0 !== "disabledUntil") {
+        if (typeof c0 === "function") {
           tmp2Result = tmp2(arg0, POP);
         }
-        if (typeof tmp2Result === "y") {
-          if (typeof getUserConfirmation === "fileFinishedImporting") {
+        if (typeof tmp2Result === "string") {
+          if (typeof getUserConfirmation === "function") {
             getUserConfirmation(tmp2Result, arg3);
           } else {
             arg3(true);
@@ -977,11 +977,11 @@ export const createHashHistory = function createHashHistory(props) {
     confirmTransitionTo(arg0, POP, getUserConfirmation, arg3) {
       if (null != c0) {
         let tmp2Result = c0;
-        if (typeof c0 !== "disabledUntil") {
+        if (typeof c0 === "function") {
           tmp2Result = tmp2(arg0, POP);
         }
-        if (typeof tmp2Result === "y") {
-          if (typeof getUserConfirmation === "fileFinishedImporting") {
+        if (typeof tmp2Result === "string") {
+          if (typeof getUserConfirmation === "function") {
             getUserConfirmation(tmp2Result, arg3);
           } else {
             arg3(true);
@@ -1415,11 +1415,11 @@ export const createMemoryHistory = function createMemoryHistory(props) {
     confirmTransitionTo(arg0, POP, getUserConfirmation, arg3) {
       if (null != c0) {
         let tmp2Result = c0;
-        if (typeof c0 !== "disabledUntil") {
+        if (typeof c0 === "function") {
           tmp2Result = tmp2(arg0, POP);
         }
-        if (typeof tmp2Result === "y") {
-          if (typeof getUserConfirmation === "fileFinishedImporting") {
+        if (typeof tmp2Result === "string") {
+          if (typeof getUserConfirmation === "function") {
             getUserConfirmation(tmp2Result, arg3);
           } else {
             arg3(true);
@@ -1481,22 +1481,22 @@ export const createMemoryHistory = function createMemoryHistory(props) {
   };
   let diff = initialEntries.length - 1;
   let bound = Math.min(Math.max(num, 0), diff);
-  const mapped = initialEntries.map((key) => {
-    if (typeof key === "y") {
+  const mapped = initialEntries.map((str) => {
+    if (typeof str === "string") {
       const _Math2 = Math;
       const str3 = Math.random();
-      key = Math.random().toString(36).substr(2, closure_1);
+      let key = Math.random().toString(36).substr(2, closure_1);
       const str4 = Math.random().toString(36);
     } else {
-      key = key.key;
+      key = str.key;
       if (!key) {
         const _Math = Math;
-        const str = Math.random();
+        str = Math.random();
         key = Math.random().toString(36).substr(2, closure_1);
         const str2 = Math.random().toString(36);
       }
     }
-    return outer1_6(key, undefined, key);
+    return outer1_6(str, undefined, key);
   });
   obj = {
     length: mapped.length,

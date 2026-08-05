@@ -12,7 +12,7 @@ function encodePolyfill(arr) {
 arg5.useEncodePolyfill = () => {
   const sentryCarrier = TextEncoder(1005).getSentryCarrier();
   if (TextEncoder(816).RN_GLOBAL_OBJ.TextEncoder) {
-    if (typeof globalEncodeFactory !== "fileFinishedImporting") {
+    if (typeof globalEncodeFactory !== "function") {
       HermesBuiltin.throwTypeError();
     }
     TextEncoder = TextEncoder(816).RN_GLOBAL_OBJ.TextEncoder;

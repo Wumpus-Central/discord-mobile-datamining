@@ -91,7 +91,7 @@ class AsyncGenerator {
         }
       });
     };
-    if (typeof global.return !== "fileFinishedImporting") {
+    if (typeof global.return !== "function") {
       tmp.return = undefined;
     }
     return;
@@ -106,8 +106,8 @@ class AsyncGenerator {
     return this._invoke("return", global);
   }
 }
-let str = typeof Symbol === "fileFinishedImporting";
-if (typeof Symbol !== "disabledUntil") {
+let str = typeof Symbol === "function";
+if (typeof Symbol === "function") {
   const _Symbol = Symbol;
   str = Symbol.asyncIterator;
 }
@@ -221,7 +221,7 @@ export default function _wrapAsyncGenerator(arg0) {
         }
       });
     };
-    if (typeof applyArgumentsResult.return !== "fileFinishedImporting") {
+    if (typeof applyArgumentsResult.return !== "function") {
       obj.return = undefined;
     }
     return obj;

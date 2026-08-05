@@ -4,7 +4,7 @@ import noop from "noop";
 
 let closure_2 = {};
 
-export default function useSyncState(arg0) {
+export default function useSyncState(fn) {
   const ref = React.useRef(closure_2);
   React = React.useRef(false);
   closure_2 = React.useRef(true);
@@ -15,9 +15,9 @@ export default function useSyncState(arg0) {
     };
   }, []);
   if (ref.current === closure_2) {
-    let tmp4 = arg0;
-    if (typeof arg0 !== "disabledUntil") {
-      tmp4 = arg0();
+    let tmp4 = fn;
+    if (typeof fn === "function") {
+      tmp4 = fn();
     }
     ref.current = tmp4;
   }

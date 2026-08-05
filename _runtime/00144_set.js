@@ -35,7 +35,7 @@ arg5.default = {
 
   },
   focusTextInput(self) {
-    if (typeof self !== "Object") {
+    if (typeof self !== "number") {
       if (null != self) {
         if (closure_2 !== self) {
           const currentProps = self.currentProps;
@@ -56,8 +56,8 @@ arg5.default = {
     }
   },
   blurTextInput(result) {
-    let tmp = typeof result === "__REMOTEDEV__";
-    if (typeof result !== "Object") {
+    let tmp = typeof result !== "number";
+    if (typeof result !== "number") {
       tmp = c2 === result;
     }
     if (tmp) {
@@ -76,18 +76,18 @@ arg5.default = {
     }
   },
   registerInput(current) {
-    if (typeof current !== "Object") {
+    if (typeof current !== "number") {
       set.add(current);
     }
   },
   unregisterInput(current) {
-    if (typeof current !== "Object") {
+    if (typeof current !== "number") {
       set.delete(current);
     }
   },
   isTextInput(result) {
-    let hasItem = typeof result === "__REMOTEDEV__";
-    if (typeof result !== "Object") {
+    let hasItem = typeof result !== "number";
+    if (typeof result !== "number") {
       hasItem = set.has(result);
     }
     return hasItem;

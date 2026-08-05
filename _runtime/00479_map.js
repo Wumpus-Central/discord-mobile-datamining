@@ -304,11 +304,11 @@ const items1 = [
   },
   {
     key: "checkPermissions",
-    value: function checkPermissions(arg0) {
-      PushNotificationIOS(38)(typeof arg0 === "fileFinishedImporting", "Must provide a valid callback");
+    value: function checkPermissions(fn) {
+      PushNotificationIOS(38)(typeof fn === "function", "Must provide a valid callback");
       PushNotificationIOS(38)(PushNotificationIOS(480), "PushNotificationManager is not available.");
       const tmp2 = PushNotificationIOS(38);
-      PushNotificationIOS(480).checkPermissions(arg0);
+      PushNotificationIOS(480).checkPermissions(fn);
     }
   },
   {

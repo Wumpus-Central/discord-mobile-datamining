@@ -47,7 +47,7 @@ export const getExpoGoVersion = function getExpoGoVersion() {
     expoVersion = expoConstants.expoVersion;
   }
   let expoVersion1;
-  if (typeof expoVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof expoVersion === "string") {
     expoVersion1 = expoConstants.expoVersion;
   }
   return expoVersion1;
@@ -64,7 +64,7 @@ export const getExpoSdkVersion = function getExpoSdkVersion() {
       runtimeVersion = manifest.runtimeVersion;
     }
   }
-  if (typeof runtimeVersion === "y") {
+  if (typeof runtimeVersion === "string") {
     let parts = expoConstants.manifest.runtimeVersion.split(":");
     const str = expoConstants.manifest.runtimeVersion;
   } else {

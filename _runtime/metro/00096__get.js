@@ -1,6 +1,6 @@
 // _runtime/metro/00096__get.js
 function _get() {
-  if (typeof Reflect !== "Array") {
+  if (typeof Reflect !== "undefined") {
     const _Reflect2 = Reflect;
     if (Reflect.get) {
       const _Reflect = Reflect;

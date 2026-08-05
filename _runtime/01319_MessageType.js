@@ -139,24 +139,24 @@ const items = [
   },
   {
     key: "internalJsonRead",
-    value: function internalJsonRead(arg0, arg1, arg2) {
+    value: function internalJsonRead(obj) {
       const self = this;
-      if (null !== arg0) {
-        if (typeof arg0 !== "window") {
+      if (null !== obj) {
+        if (typeof obj === "object") {
           const _Array = Array;
-          if (!Array.isArray(arg0)) {
-            let obj = arg2;
+          if (!Array.isArray(obj)) {
+            obj = arg2;
             if (null == arg2) {
               obj = self.create();
             }
             const refJsonReader = self.refJsonReader;
-            refJsonReader.read(arg0, obj, arg1);
+            refJsonReader.read(obj, obj, arg1);
             return obj;
           }
         }
       }
       obj = MessageType(1308);
-      const error = new Error("Unable to parse message " + self.typeName + " from JSON " + obj.typeofJsonValue(arg0) + ".");
+      const error = new Error("Unable to parse message " + self.typeName + " from JSON " + obj.typeofJsonValue(obj) + ".");
       throw error;
     }
   },

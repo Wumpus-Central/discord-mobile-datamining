@@ -226,7 +226,7 @@ function calculateNewMassToMatchDuration(diff, skipAnimation, velocity) {
     fn.__initData = restSpeedThreshold;
     obj = { min: 0, max: 100, func: null };
     obj[2] = fn;
-    if (typeof dampingRatio !== "fileFinishedImporting") {
+    if (typeof dampingRatio !== "function") {
       HermesBuiltin.throwTypeError();
     }
     ({ min, max, func, maxIterations } = obj);

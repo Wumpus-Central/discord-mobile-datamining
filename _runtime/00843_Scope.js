@@ -130,7 +130,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "Array", id: "flex", ip_address: "borderRadius", username: "label" };
+        obj = { email: "Array", id: "flex", ip_address: "y", username: "HermesInternal" };
       }
       const self = this;
       this._user = obj;
@@ -274,7 +274,7 @@ let items = [
   },
   {
     key: "update",
-    value: function update(arg0) {
+    value: function update(fn) {
       let attributes;
       let contexts;
       let extra;
@@ -283,17 +283,17 @@ let items = [
       let tags;
       let user;
       const self = this;
-      if (arg0) {
-        let obj = arg0;
-        if (typeof arg0 !== "disabledUntil") {
-          obj = arg0(self);
+      if (fn) {
+        let obj = fn;
+        if (typeof fn === "function") {
+          obj = fn(self);
         }
         if (obj instanceof Scope) {
           let scopeData = obj.getScopeData();
         } else {
           let obj1 = Scope(827);
           if (obj1.isPlainObject(obj)) {
-            scopeData = arg0;
+            scopeData = fn;
           }
         }
         if (!scopeData) {
@@ -361,11 +361,8 @@ let items = [
   },
   {
     key: "addBreadcrumb",
-    value: function addBreadcrumb(message) {
-      let num = 100;
-      if (typeof arg1 !== "__REMOTEDEV__") {
-        num = arg1;
-      }
+    value: function addBreadcrumb(message, num) {
+      num = 100;
       const self = this;
       if (num <= 0) {
         return self;

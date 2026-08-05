@@ -74,7 +74,7 @@ class FlatList {
     tmp3Result._getItemCount = (arg0) => {
       if (null != arg0) {
         const _Object = Object;
-        if (typeof Object(arg0).length === "Object") {
+        if (typeof Object(arg0).length === "number") {
           let num = tmp3Result.props.numColumns;
           if (num == null) {
             num = 1;
@@ -135,7 +135,7 @@ class FlatList {
           obj[0] = callback(num[12]).default.compose(outer1_12.row, closure_2);
           obj[1] = item.map((item) => {
             let obj = { item, index: closure_1 * outer1_3 + arg1, separators: separators.separators };
-            if (typeof outer1_4 !== "fileFinishedImporting") {
+            if (typeof outer1_4 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (separators) {
@@ -158,7 +158,7 @@ class FlatList {
           });
           return outer1_10(tmp16, obj);
         } else {
-          if (typeof render !== "fileFinishedImporting") {
+          if (typeof render !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (callback) {

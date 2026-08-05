@@ -135,7 +135,7 @@ let items = [
         let __addChildResult = obj.__addChild(self);
       }
       let fn = callback4(callback3(self.prototype), "__attach", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -151,7 +151,7 @@ let items = [
         let __removeChildResult = obj.__removeChild(self);
       }
       let fn = callback4(callback3(self.prototype), "__detach", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -167,7 +167,7 @@ let items = [
         let __makeNativeResult = obj.__makeNative(arg0);
       }
       let fn = callback4(callback3(self.prototype), "__makeNative", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];

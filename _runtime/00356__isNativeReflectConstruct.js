@@ -42,7 +42,7 @@ class AnimatedValue {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    if (typeof global === "__REMOTEDEV__") {
+    if (typeof global !== "number") {
       tmp7 = globalThis;
       _Error = Error;
       tmp8 = new.target;
@@ -87,7 +87,7 @@ let items = [
       self.stopAnimation();
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -105,7 +105,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -121,7 +121,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "addListener", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -138,7 +138,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "removeListener", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -162,7 +162,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "removeAllListeners", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -373,14 +373,14 @@ let items = [
           const _Set = Set;
           const set = new Set();
           function findAnimatedStyles(update) {
-            if (typeof update.update === "fileFinishedImporting") {
+            if (typeof update.update === "function") {
               set.add(update);
             } else {
               const item = update.__getChildren().forEach(findAnimatedStyles);
               const __getChildrenResult = update.__getChildren();
             }
           }
-          if (typeof self.update === "fileFinishedImporting") {
+          if (typeof self.update === "function") {
             set.add(self);
           } else {
             let item = self.__getChildren().forEach(findAnimatedStyles);
@@ -403,14 +403,14 @@ export default importDefaultResult(AnimatedValue, items);
 export const flushValue = function flushValue(self) {
   const set = new Set();
   function findAnimatedStyles(update) {
-    if (typeof update.update === "fileFinishedImporting") {
+    if (typeof update.update === "function") {
       set.add(update);
     } else {
       const item = update.__getChildren().forEach(findAnimatedStyles);
       const __getChildrenResult = update.__getChildren();
     }
   }
-  if (typeof self.update === "fileFinishedImporting") {
+  if (typeof self.update === "function") {
     set.add(self);
   } else {
     const item = self.__getChildren().forEach(findAnimatedStyles);

@@ -59,8 +59,8 @@ export const getBrowserPerformanceAPI = function getBrowserPerformanceAPI() {
   return require(1039) /* WINDOW */.WINDOW.addEventListener && require(1039) /* WINDOW */.WINDOW.performance;
 };
 export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
-  let isFiniteResult = typeof deviceMemory === "Object";
-  if (typeof deviceMemory !== "__REMOTEDEV__") {
+  let isFiniteResult = typeof deviceMemory === "number";
+  if (typeof deviceMemory === "number") {
     const _isFinite = isFinite;
     isFiniteResult = isFinite(deviceMemory);
   }
@@ -118,7 +118,7 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
       tmp = start_timestamp > sum;
     }
     if (tmp) {
-      tmp = typeof activeSpan.updateStartTime === "fileFinishedImporting";
+      tmp = typeof activeSpan.updateStartTime === "function";
     }
     if (tmp) {
       activeSpan.updateStartTime(sum);

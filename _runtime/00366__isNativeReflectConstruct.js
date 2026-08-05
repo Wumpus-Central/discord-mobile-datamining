@@ -67,7 +67,7 @@ let items = [
         }
       }
       let fn = callback2(callback(self.prototype), "__makeNative", self);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -125,7 +125,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback2(callback(self.prototype), "__callListeners", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];

@@ -13,7 +13,7 @@ function parseQueryStringKeys(arg0, arg1, arg2, arg3) {
 export default (str, allowEmptyArrays) => {
   if (allowEmptyArrays) {
     if (undefined !== allowEmptyArrays.allowEmptyArrays) {
-      if (typeof allowEmptyArrays.allowEmptyArrays === "onScroll") {
+      if (typeof allowEmptyArrays.allowEmptyArrays !== "boolean") {
         let typeError = globalThis;
         const _TypeError6 = TypeError;
         typeError = new.target;
@@ -23,7 +23,7 @@ export default (str, allowEmptyArrays) => {
       }
     }
     if (undefined !== allowEmptyArrays.decodeDotInKeys) {
-      if (typeof allowEmptyArrays.decodeDotInKeys === "onScroll") {
+      if (typeof allowEmptyArrays.decodeDotInKeys !== "boolean") {
         typeError = globalThis;
         const _TypeError5 = TypeError;
         typeError = new.target;
@@ -35,7 +35,7 @@ export default (str, allowEmptyArrays) => {
     typeError = null;
     if (null !== allowEmptyArrays.decoder) {
       if (undefined !== allowEmptyArrays.decoder) {
-        if (typeof allowEmptyArrays.decoder === "disabledUntil") {
+        if (typeof allowEmptyArrays.decoder !== "function") {
           typeError = globalThis;
           const _TypeError4 = TypeError;
           typeError = new.target;
@@ -58,7 +58,7 @@ export default (str, allowEmptyArrays) => {
       }
     }
     if (undefined !== allowEmptyArrays.throwOnLimitExceeded) {
-      if (typeof allowEmptyArrays.throwOnLimitExceeded === "onScroll") {
+      if (typeof allowEmptyArrays.throwOnLimitExceeded !== "boolean") {
         typeError = globalThis;
         const _TypeError2 = TypeError;
         typeError = new.target;
@@ -99,28 +99,28 @@ export default (str, allowEmptyArrays) => {
     }
     obj = { allowDots: null, allowEmptyArrays: null, allowPrototypes: null, allowSparse: null, arrayLimit: null, charset: null, charsetSentinel: null, comma: null, decodeDotInKeys: null, decoder: null, delimiter: null, depth: null, duplicates: null, ignoreQueryPrefix: null, interpretNumericEntities: null, parameterLimit: null, parseArrays: null, plainObjects: null, strictDepth: null, strictNullHandling: null, throwOnLimitExceeded: null };
     obj[0] = allowDots;
-    if (typeof allowEmptyArrays.allowEmptyArrays === "T") {
+    if (typeof allowEmptyArrays.allowEmptyArrays === "boolean") {
       allowEmptyArrays = allowEmptyArrays.allowEmptyArrays;
     } else {
       typeError = obj;
       allowEmptyArrays = obj.allowEmptyArrays;
     }
     obj[1] = allowEmptyArrays;
-    if (typeof allowEmptyArrays.allowPrototypes === "T") {
+    if (typeof allowEmptyArrays.allowPrototypes === "boolean") {
       let allowPrototypes = allowEmptyArrays.allowPrototypes;
     } else {
       typeError = obj;
       allowPrototypes = obj.allowPrototypes;
     }
     obj[2] = allowPrototypes;
-    if (typeof allowEmptyArrays.allowSparse === "T") {
+    if (typeof allowEmptyArrays.allowSparse === "boolean") {
       let allowSparse = allowEmptyArrays.allowSparse;
     } else {
       typeError = obj;
       allowSparse = obj.allowSparse;
     }
     obj[3] = allowSparse;
-    if (typeof allowEmptyArrays.arrayLimit === "Object") {
+    if (typeof allowEmptyArrays.arrayLimit === "number") {
       let arrayLimit = allowEmptyArrays.arrayLimit;
     } else {
       typeError = obj;
@@ -128,56 +128,56 @@ export default (str, allowEmptyArrays) => {
     }
     obj[4] = arrayLimit;
     obj[5] = charset;
-    if (typeof allowEmptyArrays.charsetSentinel === "T") {
+    if (typeof allowEmptyArrays.charsetSentinel === "boolean") {
       let charsetSentinel = allowEmptyArrays.charsetSentinel;
     } else {
       typeError = obj;
       charsetSentinel = obj.charsetSentinel;
     }
     obj[6] = charsetSentinel;
-    if (typeof allowEmptyArrays.comma === "T") {
+    if (typeof allowEmptyArrays.comma === "boolean") {
       let comma = allowEmptyArrays.comma;
     } else {
       typeError = obj;
       comma = obj.comma;
     }
     obj[7] = comma;
-    if (typeof allowEmptyArrays.decodeDotInKeys === "T") {
+    if (typeof allowEmptyArrays.decodeDotInKeys === "boolean") {
       let decodeDotInKeys = allowEmptyArrays.decodeDotInKeys;
     } else {
       typeError = obj;
       decodeDotInKeys = obj.decodeDotInKeys;
     }
     obj[8] = decodeDotInKeys;
-    if (typeof allowEmptyArrays.decoder === "fileFinishedImporting") {
+    if (typeof allowEmptyArrays.decoder === "function") {
       let decoder = allowEmptyArrays.decoder;
     } else {
       typeError = obj;
       decoder = obj.decoder;
     }
     obj[9] = decoder;
-    if (typeof allowEmptyArrays.delimiter !== "y") {
+    if (typeof allowEmptyArrays.delimiter !== "string") {
       typeError = obj;
       typeError = dependencyMap;
       if (!obj11.isRegExp(allowEmptyArrays.delimiter)) {
         let delimiter = obj.delimiter;
       }
       obj[10] = delimiter;
-      if (typeof allowEmptyArrays.depth !== "Object") {
+      if (typeof allowEmptyArrays.depth !== "number") {
         if (false !== allowEmptyArrays.depth) {
           let depth = obj.depth;
         }
         obj[11] = depth;
         obj[12] = duplicates;
         obj[13] = true === allowEmptyArrays.ignoreQueryPrefix;
-        if (typeof allowEmptyArrays.interpretNumericEntities === "T") {
+        if (typeof allowEmptyArrays.interpretNumericEntities === "boolean") {
           let interpretNumericEntities = allowEmptyArrays.interpretNumericEntities;
         } else {
           typeError = obj;
           interpretNumericEntities = obj.interpretNumericEntities;
         }
         obj[14] = interpretNumericEntities;
-        if (typeof allowEmptyArrays.parameterLimit === "Object") {
+        if (typeof allowEmptyArrays.parameterLimit === "number") {
           let parameterLimit = allowEmptyArrays.parameterLimit;
         } else {
           typeError = obj;
@@ -185,21 +185,21 @@ export default (str, allowEmptyArrays) => {
         }
         obj[15] = parameterLimit;
         obj[16] = false !== allowEmptyArrays.parseArrays;
-        if (typeof allowEmptyArrays.plainObjects === "T") {
+        if (typeof allowEmptyArrays.plainObjects === "boolean") {
           let plainObjects = allowEmptyArrays.plainObjects;
         } else {
           typeError = obj;
           plainObjects = obj.plainObjects;
         }
         obj[17] = plainObjects;
-        if (typeof allowEmptyArrays.strictDepth === "T") {
+        if (typeof allowEmptyArrays.strictDepth === "boolean") {
           let strictDepth = allowEmptyArrays.strictDepth;
         } else {
           typeError = obj;
           strictDepth = obj.strictDepth;
         }
         obj[18] = strictDepth;
-        if (typeof allowEmptyArrays.strictNullHandling === "T") {
+        if (typeof allowEmptyArrays.strictNullHandling === "boolean") {
           let strictNullHandling = allowEmptyArrays.strictNullHandling;
         } else {
           typeError = obj;
@@ -207,8 +207,8 @@ export default (str, allowEmptyArrays) => {
         }
         obj[19] = strictNullHandling;
         const throwOnLimitExceeded = allowEmptyArrays.throwOnLimitExceeded;
-        let throwOnLimitExceeded2 = typeof throwOnLimitExceeded === "T";
-        if (typeof throwOnLimitExceeded !== "onScroll") {
+        let throwOnLimitExceeded2 = typeof throwOnLimitExceeded === "boolean";
+        if (typeof throwOnLimitExceeded === "boolean") {
           throwOnLimitExceeded2 = allowEmptyArrays.throwOnLimitExceeded;
         }
         obj[20] = throwOnLimitExceeded2;
@@ -222,7 +222,7 @@ export default (str, allowEmptyArrays) => {
     typeError = null;
     if (null != str) {
       let tmp20 = str;
-      if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof str === "string") {
         let str6 = str;
         if (obj.ignoreQueryPrefix) {
           str6 = str.replace(/^\?/, "");
@@ -319,12 +319,12 @@ export default (str, allowEmptyArrays) => {
                 if (isArray(obj[typeError])) {
                   num11 = obj[typeError].length;
                 }
-                if (typeof typeError !== "fileFinishedImporting") {
+                if (typeof typeError !== "function") {
                   let str58 = "Trying to call a non-function";
                   typeError = HermesBuiltin.throwTypeError();
                 }
                 if (substr) {
-                  if (typeof substr !== "__FORMATJS_LISTFORMAT_DATA__") {
+                  if (typeof substr === "string") {
                     if (obj.comma) {
                       if (substr.indexOf(",") > -1) {
                         let parts1 = substr.split(",");
@@ -354,7 +354,7 @@ export default (str, allowEmptyArrays) => {
                 let tmp38 = interpretNumericEntities;
                 let _String = String;
                 let str30 = String(maybeMapResult);
-                if (typeof interpretNumericEntities !== "fileFinishedImporting") {
+                if (typeof interpretNumericEntities !== "function") {
                   let str59 = "Trying to call a non-function";
                   typeError = HermesBuiltin.throwTypeError();
                 }
@@ -415,7 +415,7 @@ export default (str, allowEmptyArrays) => {
           let arr5 = tmp20[str38];
           let tmp51 = num16;
           let tmp52 = mergeResult;
-          if (typeof parseQueryStringKeys !== "fileFinishedImporting") {
+          if (typeof parseQueryStringKeys !== "function") {
             let str60 = "Trying to call a non-function";
             typeError = HermesBuiltin.throwTypeError();
           }
@@ -509,14 +509,14 @@ export default (str, allowEmptyArrays) => {
               }
             }
             let tmp66 = arr5;
-            if (typeof str !== "y") {
+            if (typeof str !== "string") {
               typeError = parseArrayValue;
-              if (typeof parseArrayValue !== "fileFinishedImporting") {
+              if (typeof parseArrayValue !== "function") {
                 let str61 = "Trying to call a non-function";
                 typeError = HermesBuiltin.throwTypeError();
               }
               if (arr5) {
-                if (typeof arr5 !== "__FORMATJS_LISTFORMAT_DATA__") {
+                if (typeof arr5 === "string") {
                   if (obj.comma) {
                     if (arr5.indexOf(",") > -1) {
                       let parts2 = arr5.split(",");

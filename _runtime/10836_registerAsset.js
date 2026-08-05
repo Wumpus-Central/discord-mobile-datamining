@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 20, height: 20, scales: [1, 2, 3], hash: "e0680d70864324adcf08b4b59ecd7a41", name: "ic_minimize", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/application_streaming", width: 310, height: 124, scales: [2, 3], hash: "727e4438447317963db343e286b23476", name: "img_preview_not_available_light", type: "png" });

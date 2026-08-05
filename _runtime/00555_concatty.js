@@ -9,7 +9,7 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
   self = this;
   const toString = self;
   self = this;
-  if (typeof this !== "disabledUntil") {
+  if (typeof this === "function") {
     if ("[object Function]" === toString.apply(self)) {
       let items = [];
       let num2 = 0;
@@ -50,7 +50,7 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
         let self = this;
         const apply = self.apply;
         if (this instanceof closure_2) {
-          if (typeof closure_2 !== "fileFinishedImporting") {
+          if (typeof closure_2 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const items = [];
@@ -77,7 +77,7 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
           }
           return self;
         } else {
-          if (typeof closure_2 !== "fileFinishedImporting") {
+          if (typeof closure_2 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const items1 = [];

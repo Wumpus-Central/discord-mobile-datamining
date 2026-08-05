@@ -23,7 +23,7 @@ const fn2 = function n(alpha) {
   let g;
   let r;
   ({ r, g, b } = alpha);
-  if (typeof fn !== "fileFinishedImporting") {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (r === undefined) {
@@ -39,7 +39,7 @@ const fn2 = function n(alpha) {
     result = 12.92 * r;
   }
   const obj = { r: result, g: null, b: null, alpha: null };
-  if (typeof fn !== "fileFinishedImporting") {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (g === undefined) {
@@ -55,7 +55,7 @@ const fn2 = function n(alpha) {
     result1 = 12.92 * g;
   }
   obj[1] = result1;
-  if (typeof fn !== "fileFinishedImporting") {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (b === undefined) {
@@ -101,7 +101,7 @@ const fn4 = function o(alpha) {
   let g;
   let r;
   ({ r, g, b } = alpha);
-  if (typeof fn3 !== "fileFinishedImporting") {
+  if (typeof fn3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (r === undefined) {
@@ -117,7 +117,7 @@ const fn4 = function o(alpha) {
     const tmp3 = Math.sign(r) || 1;
   }
   const obj = { r: result, g: null, b: null, alpha: null };
-  if (typeof fn3 !== "fileFinishedImporting") {
+  if (typeof fn3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (g === undefined) {
@@ -133,7 +133,7 @@ const fn4 = function o(alpha) {
     const tmp6 = Math.sign(g) || 1;
   }
   obj[1] = result1;
-  if (typeof fn3 !== "fileFinishedImporting") {
+  if (typeof fn3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (b === undefined) {

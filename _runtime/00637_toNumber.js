@@ -3,17 +3,17 @@ const re2 = /^[-+]0x[0-9a-f]+$/i;
 const re3 = /^0b[01]+$/i;
 const re4 = /^0o[0-7]+$/i;
 
-export default function toNumber(arg0) {
-  if (typeof arg0 === "Object") {
-    return arg0;
-  } else if (require(638) /* isSymbol */(arg0)) {
+export default function toNumber(num) {
+  if (typeof num === "number") {
+    return num;
+  } else if (require(638) /* isSymbol */(num)) {
     return NaN;
   } else {
-    let tmp = arg0;
-    if (tmp10(606)(arg0)) {
-      let valueOfResult = arg0;
-      if (typeof arg0.valueOf !== "disabledUntil") {
-        valueOfResult = arg0.valueOf();
+    let tmp = num;
+    if (tmp10(606)(num)) {
+      let valueOfResult = num;
+      if (typeof num.valueOf === "function") {
+        valueOfResult = num.valueOf();
       }
       let text = valueOfResult;
       if (tmp10(606)(valueOfResult)) {
@@ -21,7 +21,7 @@ export default function toNumber(arg0) {
       }
       tmp = text;
     }
-    if (typeof tmp === "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof tmp !== "string") {
       let tmp9 = tmp;
       if (0 !== tmp) {
         tmp9 = +tmp;
@@ -32,7 +32,7 @@ export default function toNumber(arg0) {
       const isMatch = regex2.test(arr);
       if (!isMatch) {
         if (!regex3.test(arr)) {
-          let num = NaN;
+          num = NaN;
           if (!regex.test(arr)) {
             num = +arr;
           }

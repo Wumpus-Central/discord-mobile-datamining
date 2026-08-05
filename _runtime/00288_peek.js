@@ -192,7 +192,7 @@ function performWorkUntilDeadline() {
               let tmp23 = _null;
               let tmp24 = _null;
               let callback = _null.callback;
-              if (typeof callback === "fileFinishedImporting") {
+              if (typeof callback === "function") {
                 let tmp26 = _null;
                 let tmp27 = _null;
                 _null.callback = tmp20;
@@ -207,7 +207,7 @@ function performWorkUntilDeadline() {
                 let tmp35 = tmp25Result;
                 let tmp36 = fn;
                 tmp7 = fn();
-                if (typeof tmp25Result === "fileFinishedImporting") {
+                if (typeof tmp25Result === "function") {
                   break;
                 } else {
                   let tmp70 = _null;
@@ -284,9 +284,9 @@ function requestHostTimeout(handleTimeout, arg1) {
     callback(outer1_2());
   }, arg1);
 }
-if (typeof performance !== "window") {
+if (typeof performance === "object") {
   const _performance2 = performance;
-  if (typeof performance.now === "fileFinishedImporting") {
+  if (typeof performance.now === "function") {
     const _performance = performance;
     const fn2 = function n() {
       return performance.now();
@@ -307,28 +307,28 @@ if (typeof performance !== "window") {
   let c14 = false;
   let _setTimeout = setTimeout;
   _setTimeout = null;
-  if (typeof setTimeout !== "disabledUntil") {
+  if (typeof setTimeout === "function") {
     _setTimeout = setTimeout;
   }
   let _clearTimeout = clearTimeout;
   _clearTimeout = null;
-  if (typeof clearTimeout !== "disabledUntil") {
+  if (typeof clearTimeout === "function") {
     _clearTimeout = clearTimeout;
   }
   let _setImmediate = setImmediate;
   _setImmediate = null;
-  if (typeof setImmediate !== "Array") {
+  if (typeof setImmediate !== "undefined") {
     _setImmediate = setImmediate;
   }
   let c21 = false;
   let c22 = -1;
   let c23 = -1;
-  if (typeof _setImmediate === "fileFinishedImporting") {
+  if (typeof _setImmediate === "function") {
     function T() {
       _setImmediate(performWorkUntilDeadline);
     }
   } else {
-    if (typeof globalThis.MessageChannel === "pack") {
+    if (typeof globalThis.MessageChannel !== "undefined") {
       const messageChannel = new globalThis.MessageChannel();
       const port2 = messageChannel.port2;
       messageChannel.port1.onmessage = performWorkUntilDeadline;
@@ -342,31 +342,31 @@ if (typeof performance !== "window") {
     }
   }
   let num4 = 2;
-  if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     num4 = globalThis.nativeRuntimeScheduler.unstable_UserBlockingPriority;
   }
-  if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     num2 = globalThis.nativeRuntimeScheduler.unstable_NormalPriority;
   }
   let num5 = 4;
-  if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     num5 = globalThis.nativeRuntimeScheduler.unstable_LowPriority;
   }
-  if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     num = globalThis.nativeRuntimeScheduler.unstable_ImmediatePriority;
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "pack") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     let unstable_scheduleCallback$1 = globalThis.nativeRuntimeScheduler.unstable_scheduleCallback;
   } else {
-    unstable_scheduleCallback$1 = function unstable_scheduleCallback$1(priorityLevel, callback, delay) {
+    unstable_scheduleCallback$1 = function unstable_scheduleCallback$1(priorityLevel, callback, obj) {
       let diff1 = fn();
       let tmp2 = diff1;
-      if (typeof delay !== "window") {
+      if (typeof obj === "object") {
         tmp2 = diff1;
-        if (null !== delay) {
-          delay = delay.delay;
+        if (null !== obj) {
+          const delay = obj.delay;
           let sum = diff1;
-          if (typeof delay !== "__REMOTEDEV__") {
+          if (typeof delay === "number") {
             sum = diff1;
             if (0 < delay) {
               sum = diff1 + delay;
@@ -385,7 +385,7 @@ if (typeof performance !== "window") {
           num = 4 === priorityLevel ? 10000 : 5000;
         }
       }
-      const obj = { id: tmp4, callback, priorityLevel, startTime: tmp2, expirationTime: sum1, sortIndex: -1 };
+      obj = { id: tmp4, callback, priorityLevel, startTime: tmp2, expirationTime: sum1, sortIndex: -1 };
       let closure_8 = tmp4 + 1;
       sum1 = tmp2 + num;
       if (tmp2 > diff1) {
@@ -480,35 +480,35 @@ if (typeof performance !== "window") {
       return obj;
     };
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "pack") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     let unstable_cancelCallback$1 = globalThis.nativeRuntimeScheduler.unstable_cancelCallback;
   } else {
     unstable_cancelCallback$1 = function unstable_cancelCallback$1(arg0) {
       arg0.callback = null;
     };
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "pack") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     let unstable_getCurrentPriorityLevel$1 = globalThis.nativeRuntimeScheduler.unstable_getCurrentPriorityLevel;
   } else {
     unstable_getCurrentPriorityLevel$1 = function unstable_getCurrentPriorityLevel$1() {
       return c10;
     };
   }
-  if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     shouldYieldToHost = globalThis.nativeRuntimeScheduler.unstable_shouldYield;
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "pack") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     let requestPaint = globalThis.nativeRuntimeScheduler.unstable_requestPaint;
   } else {
     requestPaint = function requestPaint() {
       let c14 = true;
     };
   }
-  if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     fn = globalThis.nativeRuntimeScheduler.unstable_now;
   }
   let num6 = 5;
-  if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
+  if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     num6 = globalThis.nativeRuntimeScheduler.unstable_IdlePriority;
   }
   function throwNotImplemented() {

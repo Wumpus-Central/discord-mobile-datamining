@@ -10,12 +10,12 @@ export default (str, SEPARATOR, arg2, maxKeys) => {
     str2 = "=";
   }
   const obj = {};
-  if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof str === "string") {
     if (0 !== str.length) {
       const parts = str.split(str);
       let tmp = maxKeys;
       if (maxKeys) {
-        tmp = typeof maxKeys.maxKeys === "Object";
+        tmp = typeof maxKeys.maxKeys === "number";
       }
       let num = 1000;
       if (tmp) {

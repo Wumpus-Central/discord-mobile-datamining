@@ -6,7 +6,7 @@ function merge(arg0, obj) {
     num = 2;
   }
   if (obj) {
-    if (typeof obj !== "window") {
+    if (typeof obj === "object") {
       if (num > 0) {
         if (arg0) {
           const _Object = Object;

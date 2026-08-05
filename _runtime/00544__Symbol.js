@@ -1,22 +1,22 @@
 // _runtime/00544__Symbol.js
-let _Symbol = typeof Symbol === "pack";
-if (typeof Symbol !== "Array") {
+let _Symbol = typeof Symbol !== "undefined";
+if (typeof Symbol !== "undefined") {
   _Symbol = Symbol;
 }
 
 export default function hasNativeSymbols() {
-  let tmp2 = typeof _Symbol === "fileFinishedImporting";
-  if (typeof _Symbol !== "disabledUntil") {
+  let tmp2 = typeof _Symbol === "function";
+  if (typeof _Symbol === "function") {
     _Symbol = Symbol;
-    let tmp4 = typeof Symbol === "fileFinishedImporting";
-    if (typeof Symbol !== "disabledUntil") {
+    let tmp4 = typeof Symbol === "function";
+    if (typeof Symbol === "function") {
       const tmpResult = tmp("foo");
-      let tmp3 = typeof tmpResult === "e";
-      if (typeof tmpResult !== "ta") {
+      let tmp3 = typeof tmpResult === "symbol";
+      if (typeof tmpResult === "symbol") {
         const _Symbol2 = Symbol;
         const SymbolResult = Symbol("bar");
-        let tmp8 = typeof SymbolResult === "e";
-        if (typeof SymbolResult !== "ta") {
+        let tmp8 = typeof SymbolResult === "symbol";
+        if (typeof SymbolResult === "symbol") {
           tmp8 = require(545) /* hasSymbols */();
         }
         tmp3 = tmp8;

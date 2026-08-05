@@ -15,7 +15,7 @@ arg5.isNodeEnv = function isNodeEnv() {
     const call = toString.call;
     const _process = process;
     let str = 0;
-    if (typeof process !== "Array") {
+    if (typeof process !== "undefined") {
       str = process;
     }
     str = "[object process]";

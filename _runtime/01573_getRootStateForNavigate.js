@@ -37,7 +37,7 @@ export default function useLinkBuilder() {
         obj[1] = arg1;
         const items = [obj];
         obj[1] = items;
-        if (typeof outer1_4 !== "fileFinishedImporting") {
+        if (typeof outer1_4 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const parent = obj.getParent();
@@ -50,7 +50,7 @@ export default function useLinkBuilder() {
           obj2.state = obj;
           const items1 = [obj2];
           obj1[1] = items1;
-          if (typeof tmp5 !== "fileFinishedImporting") {
+          if (typeof tmp5 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const parent1 = parent.getParent();

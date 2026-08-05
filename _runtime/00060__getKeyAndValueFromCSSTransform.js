@@ -2,19 +2,19 @@
 function _getKeyAndValueFromCSSTransform(arg0, arg1) {
 
 }
-arg5.default = function processTransform(arg0) {
-  let tmp = arg0;
-  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+arg5.default = function processTransform(str) {
+  let tmp = str;
+  if (typeof str === "string") {
     const _RegExp2 = RegExp;
     const regExp = new RegExp(/(\w+)\(([^)]+)\)/g);
     const items = [];
-    let match = regExp.exec(arg0);
+    let match = regExp.exec(str);
     tmp = items;
     while (match) {
       let tmp2 = _getKeyAndValueFromCSSTransform;
       let tmp3 = match[1];
-      let str = match[2];
-      if (typeof _getKeyAndValueFromCSSTransform !== "fileFinishedImporting") {
+      str = match[2];
+      if (typeof _getKeyAndValueFromCSSTransform !== "function") {
         let str10 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -64,7 +64,7 @@ arg5.default = function processTransform(arg0) {
               obj1[1] = Number(match2[1]);
               obj = obj1;
             } else {
-              let obj2 = { key: null, value: "Array" };
+              let obj2 = { key: null, value: "a" };
               obj2[0] = tmp3;
               obj = obj2;
             }
@@ -96,7 +96,7 @@ arg5.default = function processTransform(arg0) {
         obj4[tmp15] = value;
         let arr2 = items.push(obj4);
       }
-      match = regExp.exec(arg0);
+      match = regExp.exec(str);
       tmp = items;
     }
   }

@@ -22,7 +22,7 @@ export const useKeyboardState = function useKeyboardState(arg0) {
   const require = tmp;
   let closure_1;
   const tmp2 = callback(callback3(() => {
-    if (typeof outer1_6 !== "fileFinishedImporting") {
+    if (typeof outer1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = {};
@@ -37,7 +37,7 @@ export const useKeyboardState = function useKeyboardState(arg0) {
     let tmp = outer1_5.map((arg0) => {
       const KeyboardEvents = lib(outer1_1[3]).KeyboardEvents;
       return KeyboardEvents.addListener(arg0, () => {
-        if (typeof outer1_6 !== "fileFinishedImporting") {
+        if (typeof outer1_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const obj = {};
@@ -49,7 +49,7 @@ export const useKeyboardState = function useKeyboardState(arg0) {
       });
     });
     tmp = dependencyMap;
-    if (typeof outer1_6 !== "fileFinishedImporting") {
+    if (typeof outer1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = {};

@@ -2,8 +2,8 @@
 const exports = arg5;
 function _createForOfIteratorHelper(iterable) {
   let closure_0 = iterable;
-  iterable = typeof Symbol === "pack";
-  if (typeof Symbol !== "Array") {
+  iterable = typeof Symbol !== "undefined";
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     iterable = iterable[Symbol.iterator];
   }
@@ -54,7 +54,7 @@ function _createForOfIteratorHelper(iterable) {
     if (!Array.isArray(iterable)) {
       arr = undefined;
       if (iterable) {
-        if (typeof iterable === "y") {
+        if (typeof iterable === "string") {
           const _Array4 = Array;
           let array = new Array(length2);
           class F {
@@ -236,7 +236,7 @@ arg5.cleanHeader = (arg0, arg1) => {
   }
   return arg0;
 };
-arg5.isObject = (arg0) => null !== arg0 && typeof arg0 === "ay";
+arg5.isObject = (obj) => null !== obj && typeof obj === "object";
 arg5.hasOwn = Object.hasOwn || ((arg0, key10009) => {
   if (null == arg0) {
     const _TypeError = TypeError;

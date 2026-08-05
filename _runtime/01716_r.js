@@ -1,14 +1,14 @@
 // _runtime/01716_r.js
 const require = arg1;
 const dependencyMap = arg6;
-const fn = function r(arg0) {
-  let tmp = typeof arg0 === "ay";
-  if (typeof arg0 !== "window") {
-    tmp = null !== arg0;
+const fn = function r(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
   if (tmp) {
     const _Array = Array;
-    tmp = !Array.isArray(arg0);
+    tmp = !Array.isArray(obj);
   }
   return tmp;
 };
@@ -32,24 +32,24 @@ let obj = { IS_IOS: require("JEST_WORKER_ID").IS_IOS };
 PlatformColor.__closure = obj;
 PlatformColor.__workletHash = 12890406291275;
 PlatformColor.__initData = { code: "function PlatformColor_Pnpm_colorsTs2(...names){const{IS_IOS}=this.__closure;return IS_IOS?{semantic:names}:{resource_paths:names};}" };
-function isPlatformColorObject(semantic) {
-  if (typeof fn !== "fileFinishedImporting") {
+function isPlatformColorObject(obj) {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let tmp = typeof semantic === "ay";
-  if (typeof semantic !== "window") {
-    tmp = null !== semantic;
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
   if (tmp) {
     const _Array = Array;
-    tmp = !Array.isArray(semantic);
+    tmp = !Array.isArray(obj);
   }
   if (tmp) {
     const _Array2 = Array;
-    let isArray = Array.isArray(semantic.semantic);
+    let isArray = Array.isArray(obj.semantic);
     if (!isArray) {
       const _Array3 = Array;
-      isArray = Array.isArray(semantic.resource_paths);
+      isArray = Array.isArray(obj.resource_paths);
     }
     tmp = isArray;
   }
@@ -67,25 +67,25 @@ class DynamicColorIOS {
 DynamicColorIOS.__closure = {};
 DynamicColorIOS.__workletHash = 593421129931;
 DynamicColorIOS.__initData = { code: "function DynamicColorIOS_Pnpm_colorsTs4(tuple){return{dynamic:{light:tuple.light,dark:tuple.dark,highContrastLight:tuple.highContrastLight,highContrastDark:tuple.highContrastDark}};}" };
-function isDynamicColorObjectIOS(dynamic) {
-  if (typeof fn !== "fileFinishedImporting") {
+function isDynamicColorObjectIOS(arr) {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let tmp2 = typeof dynamic === "ay";
-  if (typeof dynamic !== "window") {
-    tmp2 = null !== dynamic;
+  let tmp2 = typeof arr === "object";
+  if (typeof arr === "object") {
+    tmp2 = null !== arr;
   }
   if (tmp2) {
     const _Array = Array;
-    tmp2 = !Array.isArray(dynamic);
+    tmp2 = !Array.isArray(arr);
   }
   if (tmp2) {
-    dynamic = dynamic.dynamic;
-    if (typeof fn !== "fileFinishedImporting") {
+    const dynamic = arr.dynamic;
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let tmp4 = typeof dynamic === "ay";
-    if (typeof dynamic !== "window") {
+    let tmp4 = typeof dynamic === "object";
+    if (typeof dynamic === "object") {
       tmp4 = null !== dynamic;
     }
     if (tmp4) {
@@ -95,10 +95,10 @@ function isDynamicColorObjectIOS(dynamic) {
     tmp2 = tmp4;
   }
   if (tmp2) {
-    tmp2 = "light" in dynamic.dynamic;
+    tmp2 = "light" in arr.dynamic;
   }
   if (tmp2) {
-    tmp2 = "dark" in dynamic.dynamic;
+    tmp2 = "dark" in arr.dynamic;
   }
   return tmp2;
 }
@@ -124,8 +124,8 @@ fn4 = function o() {
 fn4.__closure = {};
 fn4.__workletHash = 13235944247491;
 fn4.__initData = { code: "function pnpm_colorsTs8(){return'DynamicColorIOS is not available on this platform.';}" };
-function processColorNumber(semantic) {
-  const result = require(1649) /* call */.processColorInitially(semantic);
+function processColorNumber(arr) {
+  const result = require(1649) /* call */.processColorInitially(arr);
   const obj = require(1649) /* call */;
   let tmp3 = result;
   if (tmp2) {
@@ -144,16 +144,16 @@ unprocessColorNumber.__closure = {};
 unprocessColorNumber.__workletHash = 5518391320995;
 unprocessColorNumber.__initData = { code: "function unprocessColorNumber_Pnpm_colorsTs10(value){const a=(value>>>24)/255;const r=value<<8>>>24;const g=value<<16>>>24;const b=value<<24>>>24;return\"rgba(\"+r+\",\"+g+\",\"+b+\",\"+a+\")\";}" };
 let items = ["light", "dark", "highContrastLight", "highContrastDark"];
-function processDynamicColorObjectIOS(semantic) {
+function processDynamicColorObjectIOS(arr) {
   const dynamic = {};
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    if (undefined !== semantic.dynamic[nextResult]) {
+    if (undefined !== arr.dynamic[nextResult]) {
       let tmp4 = processColorNumber;
       let tmp5 = nextResult;
-      let tmp6 = processColorNumber(semantic.dynamic[tmp3]);
+      let tmp6 = processColorNumber(arr.dynamic[tmp3]);
       if (null === tmp6) {
         let tmp10 = iter;
         iter.return();
@@ -187,12 +187,12 @@ function unprocessDynamicColorObjectIOS(arr) {
 unprocessDynamicColorObjectIOS.__closure = { DynamicColorIOSProperties: items, unprocessColorNumber };
 unprocessDynamicColorObjectIOS.__workletHash = 3217615757982;
 unprocessDynamicColorObjectIOS.__initData = { code: "function unprocessDynamicColorObjectIOS_Pnpm_colorsTs12(value){const{DynamicColorIOSProperties,unprocessColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]!==undefined){result[property]=unprocessColorNumber(value.dynamic[property]);}}return{dynamic:result};}" };
-function processColor(semantic, target) {
-  if (typeof processColorNumber !== "fileFinishedImporting") {
+function processColor(arr, target) {
+  if (typeof processColorNumber !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = require(1649) /* call */;
-  const result = obj.processColorInitially(semantic);
+  const result = obj.processColorInitially(arr);
   let tmp5 = result;
   if (tmp4) {
     tmp5 = result | 0;
@@ -206,77 +206,77 @@ function processColor(semantic, target) {
     }
     let tmp28 = target !== tmp(1718).ValueProcessorTarget.CSS;
     if (!tmp28) {
-      tmp28 = "transparent" !== semantic;
+      tmp28 = "transparent" !== arr;
     }
     if (tmp28) {
       tmp28 = tmp5;
     }
     return tmp28;
   } else {
-    if (typeof isPlatformColorObject !== "fileFinishedImporting") {
+    if (typeof isPlatformColorObject !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof fn !== "fileFinishedImporting") {
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let tmp7 = typeof semantic === "ay";
-    if (typeof semantic !== "window") {
-      tmp7 = null !== semantic;
+    let tmp7 = typeof arr === "object";
+    if (typeof arr === "object") {
+      tmp7 = null !== arr;
     }
     if (tmp7) {
       const _Array = Array;
-      tmp7 = !Array.isArray(semantic);
+      tmp7 = !Array.isArray(arr);
     }
     if (tmp7) {
       const _Array2 = Array;
-      let isArray = Array.isArray(semantic.semantic);
+      let isArray = Array.isArray(arr.semantic);
       if (!isArray) {
         const _Array3 = Array;
-        isArray = Array.isArray(semantic.resource_paths);
+        isArray = Array.isArray(arr.resource_paths);
       }
       tmp7 = isArray;
     }
     if (tmp7) {
-      return semantic;
+      return arr;
     } else {
       let tmp12 = tmp5;
-      if (isDynamicColorObjectIOS(semantic)) {
+      if (isDynamicColorObjectIOS(arr)) {
         if (tmp(1717).IS_IOS) {
-          tmp12 = processDynamicColorObjectIOS(semantic);
+          tmp12 = processDynamicColorObjectIOS(arr);
         } else {
           const reanimatedError = new tmp(1617).ReanimatedError(obj.dynamicNotAvailableOnPlatform());
           throw reanimatedError;
         }
       }
       if (null === tmp12) {
-        const reanimatedError1 = new tmp(1617).ReanimatedError(obj.invalidColor(semantic));
+        const reanimatedError1 = new tmp(1617).ReanimatedError(obj.invalidColor(arr));
         throw reanimatedError1;
       } else {
         return tmp12;
       }
     }
   }
-  tmp4 = require(1717) /* JEST_WORKER_ID */.IS_ANDROID && typeof result === "Object";
+  tmp4 = require(1717) /* JEST_WORKER_ID */.IS_ANDROID && typeof result === "number";
 }
 processColor.__closure = { processColorNumber, ValueProcessorTarget: require("module_1718").ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: require("JEST_WORKER_ID").IS_IOS, ERROR_MESSAGES: obj, processDynamicColorObjectIOS };
 processColor.__workletHash = 3532980737440;
 processColor.__initData = { code: "function processColor_Pnpm_colorsTs13(value,context){const{processColorNumber,ValueProcessorTarget,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,processDynamicColorObjectIOS}=this.__closure;let result=processColorNumber(value);if(result){return result;}if(result===0){if((context===null||context===void 0?void 0:context.target)===ValueProcessorTarget.CSS&&value==='transparent'){return false;}return result;}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}result=processDynamicColorObjectIOS(value);}if(result===null){throw new ReanimatedError(ERROR_MESSAGES.invalidColor(value));}return result;}" };
 function unprocessColor(arr) {
-  if (typeof arr === "Object") {
-    if (typeof unprocessColorNumber !== "fileFinishedImporting") {
+  if (typeof arr === "number") {
+    if (typeof unprocessColorNumber !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _HermesInternal = HermesInternal;
     return "rgba(" + arr << 8 >>> 24 + "," + arr << 16 >>> 24 + "," + arr << 24 >>> 24 + "," + (arr >>> 24) / 255 + ")";
   } else {
-    if (typeof isPlatformColorObject !== "fileFinishedImporting") {
+    if (typeof isPlatformColorObject !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof fn !== "fileFinishedImporting") {
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let tmp2 = typeof arr === "ay";
-    if (typeof arr !== "window") {
+    let tmp2 = typeof arr === "object";
+    if (typeof arr === "object") {
       tmp2 = null !== arr;
     }
     if (tmp2) {

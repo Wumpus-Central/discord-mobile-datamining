@@ -5,7 +5,7 @@ arg5.resolveFormatConfigOptions = function resolveFormatConfigOptions(list, form
   if (null != format) {
     format = format.format;
   }
-  if (typeof format === "y") {
+  if (typeof format === "string") {
     const _Object = Object;
     const _Object2 = Object;
     return Object.assign(Object.assign({}, list[format.format]), format);

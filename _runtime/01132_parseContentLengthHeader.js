@@ -13,30 +13,30 @@ arg5.parseContentLengthHeader = function parseContentLengthHeader(responseHeader
     return tmp3;
   }
 };
-arg5.getBodySize = function getBodySize(size) {
-  if (size) {
+arg5.getBodySize = function getBodySize(json) {
+  if (json) {
     try {
-      if (typeof size === "y") {
-        return require(1004) /* encodeUTF8 */.encodeUTF8(size).length;
+      if (typeof json === "string") {
+        return require(1004) /* encodeUTF8 */.encodeUTF8(json).length;
       } else {
         const _URLSearchParams = URLSearchParams;
-        if (size instanceof URLSearchParams) {
-          return require(1004) /* encodeUTF8 */.encodeUTF8(size.toString()).length;
+        if (json instanceof URLSearchParams) {
+          return require(1004) /* encodeUTF8 */.encodeUTF8(json.toString()).length;
         } else {
           const _FormData = FormData;
-          if (size instanceof FormData) {
-            const tmp = (function _serializeFormData(size) {
-              return new URLSearchParams(size).toString();
-            })(size);
+          if (json instanceof FormData) {
+            const tmp = (function _serializeFormData(json) {
+              return new URLSearchParams(json).toString();
+            })(json);
             return require(1004) /* encodeUTF8 */.encodeUTF8(tmp).length;
           } else {
             const _Blob = Blob;
-            if (size instanceof Blob) {
-              return size.size;
+            if (json instanceof Blob) {
+              return json.size;
             } else {
               const _ArrayBuffer = ArrayBuffer;
-              if (size instanceof ArrayBuffer) {
-                return size.byteLength;
+              if (json instanceof ArrayBuffer) {
+                return json.byteLength;
               }
             }
           }

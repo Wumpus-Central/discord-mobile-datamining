@@ -31,7 +31,7 @@ export default function forEach(str, call) {
           num4 = num4 + 1;
         } while (num4 < length2);
       }
-    } else if (typeof str === "y") {
+    } else if (typeof str === "string") {
       let num2 = 0;
       if (0 < str.length) {
         do {

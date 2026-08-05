@@ -210,24 +210,24 @@ let items = [
   },
   {
     key: "addEvent",
-    value: function addEvent(name) {
+    value: function addEvent(name, num) {
       if (SentrySpan(823).DEBUG_BUILD) {
         const debug = tmp(824).debug;
         debug.log("[Tracing] Adding an event to span:", name);
       }
-      let isArray = arg1;
-      if (arg1) {
-        isArray = typeof arg1 === "Object";
+      let isArray = num;
+      if (num) {
+        isArray = typeof num === "number";
       }
       if (!isArray) {
         const _Date = Date;
-        isArray = arg1 instanceof Date;
+        isArray = num instanceof Date;
       }
       if (!isArray) {
         const _Array = Array;
-        isArray = Array.isArray(arg1);
+        isArray = Array.isArray(num);
       }
-      let tmp7 = arg1;
+      let tmp7 = num;
       if (!isArray) {
         let timestampInSecondsResult = arg2;
         if (!arg2) {
@@ -236,23 +236,23 @@ let items = [
         }
         tmp7 = timestampInSecondsResult;
       }
-      let isArray1 = arg1;
-      if (arg1) {
-        isArray1 = typeof arg1 === "Object";
+      let isArray1 = num;
+      if (num) {
+        isArray1 = typeof num === "number";
       }
       if (!isArray1) {
         const _Date2 = Date;
-        isArray1 = arg1 instanceof Date;
+        isArray1 = num instanceof Date;
       }
       if (!isArray1) {
         const _Array2 = Array;
-        isArray1 = Array.isArray(arg1);
+        isArray1 = Array.isArray(num);
       }
       if (isArray1) {
         let obj = {};
       } else {
-        obj = arg1;
-        if (!arg1) {
+        obj = num;
+        if (!num) {
           obj = {};
         }
       }

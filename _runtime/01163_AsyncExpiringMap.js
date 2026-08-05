@@ -28,20 +28,20 @@ class AsyncExpiringMap {
 const items = [
   {
     key: "set",
-    value: function set(arg0, promise) {
+    value: function set(arg0, value) {
       let self = this;
       self = this;
       if (!this._cleanupInterval) {
         self.startCleanup();
       }
-      if (typeof promise !== "window") {
-        if (promise) {
-          if ("then" in promise) {
+      if (typeof value === "object") {
+        if (value) {
+          if ("then" in value) {
             let obj = { value: "r", expiresAt: "PX_16", promise: "TRANSPARENT" };
-            obj[2] = promise;
+            obj[2] = value;
             const _map2 = self._map;
             const result = _map2.set(arg0, obj);
-            promise.then((value) => {
+            value.then((value) => {
               obj.value = value;
               obj.expiresAt = Date.now() + self._ttl;
               obj.promise = null;
@@ -53,7 +53,7 @@ const items = [
         }
       }
       const _map = self._map;
-      obj = { value: promise, expiresAt: Date.now() + self._ttl, promise: null };
+      obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
       const result1 = _map.set(arg0, obj);
     }
   },

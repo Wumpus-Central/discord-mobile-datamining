@@ -53,7 +53,7 @@ arg5.getSpanOperation = function getSpanOperation(arr) {
   return "gen_ai." + str;
 };
 arg5.getTruncatedJsonString = function getTruncatedJsonString(arr) {
-  if (typeof arr === "y") {
+  if (typeof arr === "string") {
     return require(961) /* truncateTextByBytes */.truncateGenAiStringInput(arr);
   } else {
     const _Array = Array;

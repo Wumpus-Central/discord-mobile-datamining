@@ -129,20 +129,21 @@ export const extractOrgIdFromDsnHost = function extractOrgIdFromDsnHost(str) {
   }
   return tmp2;
 };
-export const makeDsn = function makeDsn(protocol) {
+export const makeDsn = function makeDsn(str) {
   let port;
   let projectId;
-  if (typeof protocol === "y") {
-    let obj = dsnFromString(protocol);
+  let protocol;
+  if (typeof str === "string") {
+    let obj = dsnFromString(str);
   } else {
     obj = { protocol: null, publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
-    obj[0] = protocol.protocol;
-    obj[1] = protocol.publicKey || "";
-    obj[2] = protocol.pass || "";
-    obj[3] = protocol.host;
-    obj[4] = protocol.port || "";
-    obj[5] = protocol.path || "";
-    obj[6] = protocol.projectId;
+    obj[0] = str.protocol;
+    obj[1] = str.publicKey || "";
+    obj[2] = str.pass || "";
+    obj[3] = str.host;
+    obj[4] = str.port || "";
+    obj[5] = str.path || "";
+    obj[6] = str.projectId;
   }
   if (obj) {
     let error = obj;

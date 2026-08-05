@@ -63,11 +63,11 @@ const items = [
   },
   {
     key: "update",
-    value: function update(arg0) {
-      let encodeResult = arg0;
-      if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    value: function update(str) {
+      let encodeResult = str;
+      if (typeof str === "string") {
         let subarrayResult = textEncoder;
-        encodeResult = textEncoder.encode(arg0);
+        encodeResult = textEncoder.encode(str);
       }
       const self = this;
       subarrayResult = length;

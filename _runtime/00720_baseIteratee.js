@@ -1,13 +1,13 @@
 // _runtime/00720_baseIteratee.js
 
-export default function baseIteratee(arg0) {
+export default function baseIteratee(fn) {
   let tmp;
   let tmp3;
-  if (typeof arg0 === "fileFinishedImporting") {
+  if (typeof fn === "function") {
     return tmp;
   } else if (null == tmp) {
     let tmp8 = require(634) /* identity */;
-  } else if (typeof tmp === "ay") {
+  } else if (typeof tmp === "object") {
     let tmp2 = require;
     if (require(599)(tmp)) {
       tmp2 = tmp2(721);

@@ -124,16 +124,16 @@ function _shift(arg0) {
 function createIndexedDbStore(arg0) {
   let closure_0 = arg0;
   function getStore() {
-    if (null == f68208) {
+    if (null == f68391) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
       }
       dbName = dbName.storeName || "queue";
       const openResult = globalThis.indexedDB.open(str);
-      f68208 = openResult;
+      f68391 = openResult;
       openResult.onupgradeneeded = () => {
-        const result = f68208.result;
+        const result = f68391.result;
         return result.createObjectStore(closure_0);
       };
       dbName = openResult;
@@ -147,13 +147,13 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f68208 = (arg0) => {
+      f68391 = (arg0) => {
         let closure_0 = arg0;
         return promise.then((transaction) => callback(transaction.transaction(callback, "readwrite").objectStore(callback)));
       };
       const tmp7 = dbName;
     }
-    return f68208;
+    return f68391;
   }
   let obj = { push: null, unshift: null, shift: null };
   let closure_4 = asyncGeneratorStep((arg0) => {
@@ -162,90 +162,43 @@ function createIndexedDbStore(arg0) {
     let c5 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let closure_2 = tmp3;
+      let c3 = 1;
+      let obj3 = lib(outer1_1[1]);
+      yield obj3.serializeEnvelope(lib);
+      if (1 === tmp7) {
+        c3 = 0;
+        let v0 = 3;
+      } else if (2 === tmp7) {
         if (arg0 === 1) {
+          v0 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c3 = 0;
+          v0 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
-              let lib;
-              let c3 = 1;
-              let obj3 = lib(outer1_1[1]);
-              c4 = 2;
-              v0 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj3.serializeEnvelope(lib);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              v0 = 3;
-            } else if (2 === tmp7) {
-              if (arg0 === 1) {
-                v0 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 0;
-                v0 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                lib = arg1;
-                let num4 = lib.maxQueueSize;
-                if (!num4) {
-                  num4 = 30;
-                }
-                c4 = 3;
-                v0 = 1;
-                obj3 = { value: null, done: false };
-                obj3[0] = c3(v0(), lib, num4);
-                return obj3;
-              }
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c3 = 0;
-            }
-            c3 = 0;
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+          lib = arg1;
+          let num4 = lib.maxQueueSize;
+          if (!num4) {
+            num4 = 30;
           }
-        } catch (tmp18) {
-          if (tmp4 === c3) {
-            v0 = tmp2;
-            throw tmp18;
-          } else {
-            c4 = tmp;
-          }
+          let c4 = 3;
+          v0 = 1;
+          obj3 = { value: null, done: false };
+          obj3[0] = c3(v0(), lib, num4);
+          return obj3;
         }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     })();
   });
   obj[0] = function push(arg0) {
@@ -264,90 +217,43 @@ function createIndexedDbStore(arg0) {
     let c5 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let closure_2 = tmp3;
+      let c3 = 1;
+      let obj3 = lib(outer1_1[1]);
+      yield obj3.serializeEnvelope(lib);
+      if (1 === tmp7) {
+        c3 = 0;
+        let v0 = 3;
+      } else if (2 === tmp7) {
         if (arg0 === 1) {
+          v0 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c3 = 0;
+          v0 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
-              let lib;
-              let c3 = 1;
-              let obj3 = lib(outer1_1[1]);
-              c4 = 2;
-              v0 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj3.serializeEnvelope(lib);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              v0 = 3;
-            } else if (2 === tmp7) {
-              if (arg0 === 1) {
-                v0 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 0;
-                v0 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                lib = arg1;
-                let num4 = lib.maxQueueSize;
-                if (!num4) {
-                  num4 = 30;
-                }
-                c4 = 3;
-                v0 = 1;
-                obj3 = { value: null, done: false };
-                obj3[0] = c4(v0(), lib, num4);
-                return obj3;
-              }
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c3 = 0;
-            }
-            c3 = 0;
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+          lib = arg1;
+          let num4 = lib.maxQueueSize;
+          if (!num4) {
+            num4 = 30;
           }
-        } catch (tmp18) {
-          if (tmp4 === c3) {
-            v0 = tmp2;
-            throw tmp18;
-          } else {
-            c4 = tmp;
-          }
+          let c4 = 3;
+          v0 = 1;
+          obj3 = { value: null, done: false };
+          obj3[0] = c4(v0(), lib, num4);
+          return obj3;
         }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     })();
   });
   obj[1] = function unshift(props) {
@@ -361,77 +267,30 @@ function createIndexedDbStore(arg0) {
     return applyArgumentsResult;
   };
   asyncGeneratorStep = asyncGeneratorStep(function*() {
-    if (c4 === 2) {
+    let closure_1 = tmp3;
+    let c2 = 1;
+    yield outer1_5(outer1_5());
+    if (1 === tmp7) {
+      c2 = 0;
+      let c4 = 3;
+    } else if (arg0 === 1) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+      throw arg1;
+    } else if (arg0 === 2) {
+      c2 = 0;
+      c4 = 3;
+      const obj2 = { value: null, done: true };
+      obj2[0] = arg1;
+      return obj2;
     } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp3;
-            let closure_0 = tmp7;
-            closure_0 = undefined;
-            let c2 = 1;
-            c3 = 2;
-            c4 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_5(outer1_5());
-            return obj1;
-          }
-        } else {
-          if (1 === tmp7) {
-            c2 = 0;
-            c4 = 3;
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 0;
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            if (!closure_0) {
-              c2 = 0;
-            }
-          }
-          obj = outer1_0(outer1_1[1]);
-          c2 = 0;
-          c4 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = obj.parseEnvelope(closure_0);
-          return obj3;
-        }
-      } catch (tmp16) {
-        if (tmp4 === c2) {
-          c4 = tmp2;
-          throw tmp16;
-        } else {
-          c3 = tmp;
-        }
+      let closure_0 = arg1;
+      if (!closure_0) {
+        c2 = 0;
       }
     }
+    const obj = outer1_0(outer1_1[1]);
+    c2 = 0;
+    return obj.parseEnvelope(closure_0);
   });
   obj[2] = function shift(arg0) {
     const self = this;
@@ -452,7 +311,7 @@ export const createStore = function createStore(arg0, arg1) {
   const openResult = globalThis.indexedDB.open(arg0);
   const dependencyMap = openResult;
   openResult.onupgradeneeded = () => {
-    const result = f68208.result;
+    const result = f68391.result;
     return result.createObjectStore(closure_0);
   };
   closure_0 = openResult;

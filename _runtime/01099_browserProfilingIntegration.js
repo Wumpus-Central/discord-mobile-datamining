@@ -90,7 +90,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
                 }
               }
               let tmp23 = profile_id;
-              if (typeof tmp20 === "y") {
+              if (typeof tmp20 === "string") {
                 let tmp27 = profile_id;
                 if (tmp20) {
                   let tmp35 = contexts;

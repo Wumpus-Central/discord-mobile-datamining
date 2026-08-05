@@ -6,11 +6,11 @@ arg5.default = function setAndForwardRef(arg0) {
   return function forwardRef(BottomSheet) {
     const tmp = callback();
     callback2(BottomSheet);
-    if (typeof tmp === "fileFinishedImporting") {
+    if (typeof tmp === "function") {
       tmp(BottomSheet);
     } else {
-      let tmp4 = typeof tmp === "ay";
-      if (typeof tmp !== "window") {
+      let tmp4 = typeof tmp === "object";
+      if (typeof tmp === "object") {
         tmp4 = null != tmp;
       }
       if (tmp4) {
